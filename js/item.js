@@ -1437,7 +1437,7 @@ ItemOBJ = [
 ,[1423,51,0,1,0,0,10,70,"Filir Wings","","",12,2,73,-2,0]
 ,[1424,50,0,2,0,0,10,0,"Chicken Of Love hat","",0,1,3,13,100,52,7,57,7,0]
 ,[1425,50,1001,5,0,1,100,0,"Minor Valkyrian Helm","",0,19,5,0]
-,[1426,50,0,2,0,1,20,30,"Deviruchi Headphones","","<b>[Mage, Archer, Acolyte Class]</b><br>When combined with Deviruchi Pet, add additional 5% [Stun] resistance (not calced)<br>If Deviruchi Pet is loyal, add an additional 15% [Stun] resistance (not calced)",19,4,151,30,0]
+,[1426,50,0,2,0,1,20,30,"Deviruchi Headphones","","<b>[Mage, Archer, Acolyte Class]</b><br>When combined with Deviruchi Pet, add additional 5% [Stun] resistance (not calced)<br>If Deviruchi Pet is loyal, add an additional 10% [Stun] resistance (not calced)",19,4,151,30,0]
 ,[1427,50,0,1,0,0,30,40,"Black Feather Beret","",0,3,1,19,1,57,10,0]
 ,[1428,50,0,5,0,0,30,1,"Cat Ear Beret","","<b>[Refine Rate 5~10]</b><br>Increase physical damage against [Demi-Human] race monsters by 2% per refine level over 5<br>Decrease damage from [Demi-Human] race monsters by 2% per refine level over 5",0]
 ,[1429,50,0,2,0,1,50,33,"Knit Rabbit Ear Hat","","<b>[Base LUK > 55]</b><br>HP Regen + 30%<br>SP Regen + 30%",75,20,76,20,0]

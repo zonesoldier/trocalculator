@@ -1313,6 +1313,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Alnoldi Card: +5 MDEF if refined above +9
 	if(n_A_LEFT_DEF_PLUS >= 9 && CardNumSearch(518))
 		n_A_MDEF += 5;
+	
+	//[Custom TalonRO - Fix Deviruchi Headphones's MDEF from 4 (idk where this 4 comes but oh meh) to 1 (1426)] [Kato]
+	if(EquipNumSearch(1426))
+		n_A_MDEF += 1;
 
 	if(SkillSearch(196))
 		n_A_MDEF = 90;
@@ -1653,7 +1657,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	C_ATK = 0;
 	H_ATK = 0;
-	//cartas de armas que d„o atk
+	//cartas de armas que d√£o atk
 	//For que verifica cartas de n_A_card[0 a 7] aka cartas nas armas
 	for(var i=0;i<=7;i++){
 		if(n_A_card[i] == 6){C_ATK += 3;}
@@ -1667,7 +1671,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	}
 
-	//n„o s„o cartas de armas
+	//n√£o s√£o cartas de armas
 	if(CardNumSearch(235) && CardNumSearch(306)){C_ATK += 20;}
 	if(SU_STR >= 80 && CardNumSearch(267)){C_ATK += 20;}
 	if(CardNumSearch(184)){C_ATK += -25;}
@@ -1701,7 +1705,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	
 	C_ATK += n_A_PassSkill9[40];
 
-	//armas+gears que est„o nos effects especiais
+	//armas+gears que est√£o nos effects especiais
 	if(SU_STR >= 95 && EquipNumSearch(621)){C_ATK += 340;}
 
 	for(var i=8;i<12;i++){
@@ -1718,7 +1722,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_PassSkill8[i] == 50 && EquipNumSearch(1538)){C_ATK += 100;}
 	}
 
-	//outros gears que d„o atk
+	//outros gears que d√£o atk
 	if(EquipNumSearch(953)){C_ATK += ((n_A_JobLV*2)/7);}
 	if(EquipNumSearch(1261)){C_ATK += ((n_A_JobLV*2)/7);}
 	if(EquipNumSearch(666) && EquipNumSearch(721) && EquipNumSearch(701) && EquipNumSearch(722)){C_ATK += 18;}
@@ -1741,7 +1745,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1282)){C_ATK += 15;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1291)){C_ATK += 5;}
 
-	//skils que d„o atk[parte 1]
+	//skils que d√£o atk[parte 1]
 	if (SkillSearch(146)){C_ATK +=3;}
 	if(n_A_PassSkill3[9]){C_ATK += 50+(25*(n_A_PassSkill3[9]-1));}
 	if(n_A_PassSkill6[0] == 0 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==3){C_ATK += n_A_PassSkill6[1] *10;}
@@ -1788,7 +1792,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		P_ATK2 = P_ATK+(P_ATK*0.32);
 		P_ATK = P_ATK2;}
 
-	//items que d„o atk
+	//items que d√£o atk
 	if(n_A_PassSkill7[9]){P_ATK += 20;}
 	if(n_A_PassSkill8[31]){P_ATK += 15;}//BGFOOD DE ATK
 	if(n_A_PassSkill6[5]){P_ATK += Math.floor((.02+(.03*n_A_PassSkill6[5]))*P_ATK);}
@@ -2434,6 +2438,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Knit Rabbit Ear Hat
 	if(EquipNumSearch(1429) && SU_LUK > 55)
 		w += 10;
+	
+	//[Custom TalonRO - Deviruchi Headphones (1426) -1% MHP] [Kato]
+	if(EquipNumSearch(1426))
+		w -= 1;
 
 	n_A_HPR = Math.floor(n_A_HPR * w /100);
 
@@ -3165,7 +3173,7 @@ function StPlusCalc()
 		if(51 <= wHSE && wHSE <= 59)
 			wSPC_LUK -= w1;
 	}*/
-	//E l· se foi todo o headgear calc e etc...
+	//E l√° se foi todo o headgear calc e etc...
 	if(n_A_PassSkill8[17]){
 		 if(n_Tensei && 1<= n_A_JOB && n_A_JOB <= 6 && n_A_BaseLV < 70){
 			if(n_A_STR + wSPC_STR <= 50)
@@ -4132,8 +4140,8 @@ function KakutyouKansuu(){
 			if(n_A_card[i] == 31){B_MOD += 25;}
 		}
 		if(EquipNumSearch(835)){SM_MOD += 10;}//Diabolus Manteau
-		if(n_A_Equip[9] == 844){SM_MOD += 10;}//1∫ Diabolus Ring
-		if(n_A_Equip[10] == 844){SM_MOD += 10;}//2∫ Diabolus Ring
+		if(n_A_Equip[9] == 844){SM_MOD += 10;}//1¬∫ Diabolus Ring
+		if(n_A_Equip[10] == 844){SM_MOD += 10;}//2¬∫ Diabolus Ring
 
 		//custom TalonRO ID_ARG - Satan Morroc damage modifier
 		for(i=22;i<30;i+=2)
@@ -4421,10 +4429,10 @@ function KakutyouKansuu(){
 			if(n_A_card[i] == 513){H_Bonus += 0.03;}//Rhyncho Card[30%]
 		}
 		if(EquipNumSearch(1162)){H_Bonus += 0.1;}//Erde
-		if(n_A_Equip[9] == 844){H_Bonus += 0.05;}//1∫ Diabolus Ring
-		if(n_A_Equip[10] == 844){H_Bonus += 0.05;}//2∫ Diabolus Ring
-		if(n_A_Equip[9] == 1111){H_Bonus += 0.05;}//1∫ Glorious Ring
-		if(n_A_Equip[10] == 1111){H_Bonus += 0.05;}//2∫ Glorious Ring
+		if(n_A_Equip[9] == 844){H_Bonus += 0.05;}//1¬∫ Diabolus Ring
+		if(n_A_Equip[10] == 844){H_Bonus += 0.05;}//2¬∫ Diabolus Ring
+		if(n_A_Equip[9] == 1111){H_Bonus += 0.05;}//1¬∫ Glorious Ring
+		if(n_A_Equip[10] == 1111){H_Bonus += 0.05;}//2¬∫ Glorious Ring
 		if(EquipNumSearch(1258)){H_Bonus += 0.1;}//anubis hat
 		if(EquipNumSearch(1194)){H_Bonus += 0.05;}//life tree wooden shoes
 		if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1276)){H_Bonus += 0.03;}//cancer crown
@@ -4435,7 +4443,7 @@ function KakutyouKansuu(){
 		if(EquipNumSearch(959) && EquipNumSearch(965) && EquipNumSearch(968)){H_Bonus += 0.1;}//merc bg set gear[10%]
 		/*if(EquipNumSearch(958) && EquipNumSearch(965) && EquipNumSearch(968)){H_Bonus += 0.1;}//sword bg set gear[10%][Impossivel usar lawl] mas devia adicionar uma key de on/off disto*/
 
-		//slims n„o s„o afectadas por rank bonus em pitch nem heal stuff como bacso card
+		//slims n√£o s√£o afectadas por rank bonus em pitch nem heal stuff como bacso card
 
 		H_HEALS = 1+irp*.1;//Increase Recuperative Power (10%xlv da skill que se tem, max 10)
 		S_HEALS = 1+isp*.1;//Increase Spiritual Power(2%xlv da skill que se tem, max 10)
