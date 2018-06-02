@@ -207,7 +207,7 @@ function StAllCalc()
 	}
 
 	n_A_Weapon2_ATKplus = 0;
-	
+
 	//custom TalonRO Kris Enchantment
 	Click_KrisEnchantment();
 
@@ -998,7 +998,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += Math.floor(n_A_BaseLV / 3) + n_A_SHOULDER_DEF_PLUS * 10;
 	if(EquipNumSearch(1058)){
 		w += n_A_BaseLV*2;}
-	
+
 	//custom TalonRO Kris enchant SP
 	var KEbonus = [A_KE11.value,A_KE12.value,A_KE21.value,A_KE22.value];
 	for (i=0;i<4;i++){
@@ -1313,10 +1313,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Alnoldi Card: +5 MDEF if refined above +9
 	if(n_A_LEFT_DEF_PLUS >= 9 && CardNumSearch(518))
 		n_A_MDEF += 5;
-	
-	//[Custom TalonRO - Fix Deviruchi Headphones's MDEF from 4 (idk where this 4 comes but oh meh) to 1 (1426)] [Kato]
-	if(EquipNumSearch(1426))
-		n_A_MDEF += 1;
 
 	if(SkillSearch(196))
 		n_A_MDEF = 90;
@@ -1701,8 +1697,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Pirate Dagger
 	if(EquipNumSearch(1250))
 		C_ATK += 5;
-	
-	
+
+
 	C_ATK += n_A_PassSkill9[40];
 
 	//armas+gears que estão nos effects especiais
@@ -2074,7 +2070,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_ASPD += (200 - n_A_ASPD) * (SkillSearch(224) /2 / 100);
 		n_A_ASPD = Math.floor(n_A_ASPD * 10) / 10;
 	}
-	
+
 	w=0;
 	ASPDch = 0;
 	if(n_A_IJYOU[0] == 0 && n_A_IJYOU[1] == 0){
@@ -2240,7 +2236,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//Thief Ring & Cold Heart aspd boost fix
 	if(EquipNumSearch(1003)& EquipNumSearch(442)){
 		w += (n_A_Weapon_ATKplus/2);}
-	
+
 	//custom TalonRO Imperial Feather
 	if(SU_AGI >= 90 && EquipNumSearch(1475))
 		w += 1;
@@ -2261,7 +2257,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_ASPD += 1;
 	if (EquipNumSearch(1525))
 		n_A_ASPD += 1;
-	
+
 	//alert("agi:"+n_A_AGI+"dex:"+n_A_DEX+"n_A_ASPD:"+n_A_ASPD);
 
 	if(n_A_ASPD > 190)
@@ -2342,8 +2338,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Lapine Staff
 	if(EquipNumSearch(1486))
 			w -= n_A_Weapon_ATKplus;
-	//custom TalonRO Little Feather Hat & Falken Blitz combo: -15% cast time for Sharp Shooting		
-	if(EquipNumSearch(1489) && n_A_ActiveSkill == 272)	
+	//custom TalonRO Little Feather Hat & Falken Blitz combo: -15% cast time for Sharp Shooting
+	if(EquipNumSearch(1489) && n_A_ActiveSkill == 272)
 		w -= 15;
 	//custom TalonRO Lacrima Stick: 8% cast reduction with Storm Gust
 	if(n_A_ActiveSkill == 131 && EquipNumSearch(1169) && n_A_Weapon_ATKplus == 10)
@@ -2413,7 +2409,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[74] += w * 5 + n_A_PassSkill3[32] *2 + Math.floor(n_A_PassSkill3[29] /5);
 		else
 			n_tok[74] += w * 3 + n_A_PassSkill3[32] *2 + Math.floor(n_A_PassSkill3[29] /5);
-		
+
 	}
 	if(n_tok[74] > 100)
 		n_tok[74] = 100;
@@ -2438,7 +2434,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Knit Rabbit Ear Hat
 	if(EquipNumSearch(1429) && SU_LUK > 55)
 		w += 10;
-	
+
 	//[Custom TalonRO - Deviruchi Headphones (1426) -1% MHP] [Kato]
 	if(EquipNumSearch(1426))
 		w -= 1;
@@ -2527,7 +2523,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(n_A_Weapon_ATKplus >= 10)
 				n_tok[37] += 49;
 		}
-		
+
 	}
 	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS >= 5)
 		n_tok[37] += 2*(n_A_HEAD_DEF_PLUS-4);
@@ -2551,10 +2547,15 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[25] += n_A_HEAD_DEF_PLUS;
 	if(n_A_HEAD_DEF_PLUS >= 9 &&EquipNumSearch(1288)){
 		n_tok[25] += 5;}//sagittarius crown
-	
+
 	//custom TalonRO Evil Marching Hat: if refine rate >=9 +5% ranged damage
 	if(n_A_HEAD_DEF_PLUS >= 9 &&EquipNumSearch(1539)){
 		n_tok[25] += 5;}
+
+	//[Custom TalonRO - 2018-06-01 - Palace Guard if refine rate >=6 add -1% ranged reduction] [Kato]
+	if(n_A_HEAD_DEF_PLUS >= 6 &&EquipNumSearch(1545)){
+			n_tok[25] -= (n_A_HEAD_DEF_PLUS - 5);
+	}
 
 	if(n_A_HEAD_DEF_PLUS >= 9 && EquipNumSearch(1285)){
 		n_tok[80] += 3;}//libra diadem
@@ -2578,7 +2579,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Evil Marching Hat: if refine rate >=7 +10% critical damage
 	if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 7)
 		n_tok[70] += 10;
-	
+
 	if(EquipNumSearch(1083)){
 		if(n_A_Weapon_ATKplus >= 6)
 			n_tok[177] += 2 * (n_A_Weapon_ATKplus - 5);
@@ -2655,7 +2656,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_HEAD_DEF_PLUS >= 5)
 			n_tok[79] -= 5;
 	}
-	
+
 	if(SkillSearch(421))
 		n_tok[78] += 20;
 
@@ -2902,7 +2903,7 @@ function StPlusCalc()
 		if (n_A_HEAD_DEF_PLUS == 10)
 			wSPC_DEX += 1;
 	}
-	
+
 	wSPC_STR += StPlusCard(1) + wSPCall;
 	wSPC_AGI += StPlusCard(2) + wSPCall;
 	wSPC_VIT += StPlusCard(3) + wSPCall;
@@ -3509,7 +3510,7 @@ function WeaponSet()
 		if(ItemOBJ[i][1] == n_A_WeaponType && JobEquipItemSearch(ItemOBJ[i][2]) == 1){
 			work[j] = i;
 			j++;
-		
+
 		}
 		//custom TalonRO fix showing lv 4 weapon on active Super Novice Link
 		//old stuff showed much more than lv 4 weaps only, like Stunner (lv 3)
@@ -4524,13 +4525,13 @@ function KakutyouKansuu(){
 			homunevolved = eval(document.calcForm.A_HomunEvolved.value);
 			//end
 			potrate = Potion_Type[selpot][1];
-			
+
 			//custom TalonRO Update 2014-09-29
 			pharmacyboost = homunlevel * 0.025;
 			if (homunevolved)
 				pharmacyboost *= 2;
-			
-			
+
+
 			adopted = eval(document.calcForm.A_youshi.checked);
 
 			srate = Math.floor((potionr*0.5 + preparep*3 + n_A_JobLV*0.2 + (n_A_DEX +n_A_LUK + (n_A_INT/2)) * 0.1 + potrate + pharmacyboost)*100)/100;
@@ -5022,7 +5023,7 @@ function KakutyouKansuu2(){
 			potiontext += "<tr><td>Pharmacy:</td>" + '<td><select name="A_PreparePLevel" onChange="StAllCalc()"></select></td></tr>';
 			potiontext +=  "<tr><td>Homunculi Level:</td>" + '<td><select name="A_HomunLevel" onChange="StAllCalc()"></select></td>';
 			potiontext +=  "<td>Homunculi Evolved:</td>" + '<td><select name="A_HomunEvolved" onChange="StAllCalc()"></select></td></tr></table>';
-			
+
 			myInnerHtml("A_KakutyouSel",potiontext + "<br>",0);
 			for(i=0;i<Potion_Max;i++)
 				document.calcForm.A_KakutyouSelNum.options[i] = new Option(Potion_Type[i][2],i);
@@ -5587,11 +5588,11 @@ with(document.calcForm){
 	}
 	if(SaveData[88] == "u" || SaveData[88] == "und")
 		SaveData[88] = 0;
-	
+
 	//custom TalonRO
 	//to make sure cookies created before kris/sqi save feature can be loaded
 	for(i=89;i<=96;i++){
-		if (typeof(SaveData[i]) == "undefined"){		
+		if (typeof(SaveData[i]) == "undefined"){
 			SaveData[i] = 0;
 		}
 	}
@@ -6100,7 +6101,7 @@ with(document.calcForm){
 	}
 
 	x+=1;
-	
+
 	checkHIT = [0,0,0,0,0];
 
 	for(var i=0;i<=36 && n_A_PassSkill3[i]==0;i++);
@@ -6118,7 +6119,7 @@ with(document.calcForm){
 	for(i=0;i<=15 && n_A_PassSkill7[i]==0;i++);
 	if(i!=16)
 		checkHIT[4] = 1;
-	
+
 	SaveData[x] = NtoS01(checkHIT[0],checkHIT[1],checkHIT[2],checkHIT[3],checkHIT[4]);
 
 	if(checkHIT[0]){
@@ -6229,7 +6230,7 @@ with(document.calcForm){
 		SaveData[x+4] = NtoS2(SQI_Bonus_Effect[3],2);
 		x+=4;
 	}
-	
+
 	wStr = "" +SaveData[0];
 	for(i=1;i<=x;i++){
 		wStr += ""+SaveData[i];
