@@ -2552,9 +2552,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS >= 9 &&EquipNumSearch(1539)){
 		n_tok[25] += 5;}
 
-	//[Custom TalonRO - 2018-06-01 - Palace Guard if refine rate >=6 add -1% ranged reduction] [Kato]
-	if(n_A_HEAD_DEF_PLUS >= 6 &&EquipNumSearch(1545)){
-			n_tok[25] -= (n_A_HEAD_DEF_PLUS - 5);
+	//[Custom TalonRO - 2018-06-01 - Palace Guard if refine rate >=7 add -1% ranged reduction] [Kato]
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1545)){
+		n_tok[25] -= (n_A_HEAD_DEF_PLUS - 5);
 	}
 
 	if(n_A_HEAD_DEF_PLUS >= 9 && EquipNumSearch(1285)){
@@ -4133,6 +4133,7 @@ function KakutyouKansuu(){
 		G_MOD = 0;
 		B_MOD = 0;
 		SM_MOD = 0;
+		TU_MOD = 0; //[Custom TalonRO - 2018-06-02 - New Attack Modifier for Turtles] [Kato]
 
 		B_MOD += n_tok[80];
 
@@ -4152,6 +4153,8 @@ function KakutyouKansuu(){
 		for(i=22;i<30;i+=2)
 			if(n_A_PassSkill9[i]==4)
 				G_MOD += n_A_PassSkill9[i+1];
+
+		if(EquipNumSearch(1547)){TU_MOD += 20;}  //[Custom TalonRO - 2018-06-02 - New Attack Modifier for Turtles - Item Droping Permeter] [Kato]
 
 		F_M1 = eval(document.calcForm.R_OBJ.value);
 		F_M2 = eval(document.calcForm.S_OBJ.value);
@@ -4233,7 +4236,8 @@ function KakutyouKansuu(){
 		CBIstr += "<tr><td><b>" + "Goblin</b></td><td><b>"+ n_tok[81] +" %" + "</b></td>";
 		CBIstr += "<td><b>" + "Golem</b></td><td><b>"+ n_tok[84] +" %" + "</b></td>";
 		CBIstr += "<td><b>" + "Kobold</b></td><td><b>"+ n_tok[82] +" %" + "</b></td>";
-		CBIstr += "<td><b>" + "Orc</b></td><td><b>"+ n_tok[83] +" %" + "</b></td></tr>";
+		CBIstr += "<td><b>" + "Orc</b></td><td><b>"+ n_tok[83] +" %" + "</b></td>";
+		CBIstr += "<td><b>" + "Turtle</b></td><td><b>"+ TU_MOD +" %" + "</b></td></tr>"; //[Custom TalonRO - 2018-06-02 - New Attack Modifier for Turtles] [Kato]
 		CBIstr += "<tr><td><b>" + "Guardian</b></td><td><b>"+ G_MOD +" %" + "</b></td>";
 		CBIstr += "<td><b>" + "Satan Morroc</b></td><td><b>"+ SM_MOD +" %" + "</b></td>";
 		CBIstr += "<td><b>" + "Boss</b></td><td><b>"+ B_MOD +" %" + "</b></td>";

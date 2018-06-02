@@ -1568,7 +1568,11 @@ ItemOBJ = [
 ,[1542,62,0,0,0,1,20,1,"Bayani Buwaya Skin Clothes","","DEF value unkown<br>Healing capacity and healing item effect increases 1% per 3 refines",61,3,62,3,63,3,64,3,0]
 ,[1543,61,0,3,0,1,40,1,"Bayani Kalasag","","For every 3 refines, decreases Boss monster damage by 1%",0]
 ,[1544,63,0,2,0,1,60,1,"Bayani Nightmare Bangungot Boots","","For every refine, MDEF + 1<br><b>[Refine Rate 7-10]</b><br>Increases walking speed",0]
+//[Custom TalonRO 2016-06-02]
 ,[1545,50,0,3,0,1,100,50,"Palace Guard Cap","","Increase resistance against long range physical and magic attacks by +5%.<br /><br />Increase resistance to neutral attacks by +5%.<br /><br />Indestructible (except in upgrade attempts).<br /><br /><b>[Refine Rate 7~10]</b><br />For every refine, additional increased resistance against long range physical and magic attacks by 1%.",0,78,5,60,5,0]
+,[1546,51,124,0,0,0,10,60,"Hawk Eye","","<b>[Slottable at Chiqita NPC]</b>",5,1,25,3,0]
+,[1547,50,0,8,0,1,100,10,"Drooping Permeter","","Increases physical attack against Solider, Permeter, Freezer, Assaulter, Heater and Turtle General by 20%.",0]
+
 ];
 
 //[ id, display location, job that can use,(atk; def),lvl equip, slots, weight, lvl required to use, "name of item",  ?, "description", effect1, effect2, ..., 0 =?]
