@@ -4,4 +4,4 @@
 [Update 2016-06-02]
 - Issue #9: Added Mob Spirit of Lord Kaho; [Kato]
 - Issue #10: Added Hawk Eye; [Kato]
-- Issue #11: Added Dropping Permeter, also added a new Attack Modifier for Turtles;
+- Issue #11: Added Dropping Permeter, also added a new Attack Modifier for Turtle; [Kato]
