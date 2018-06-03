@@ -1912,6 +1912,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//dress hat
 	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(565)){
 		w += 1;}
+//Entweihen Hairband - Eden equipment - zonesoldier - 6/2/2018
+//Increase MATK + 1% per upgrade past 5th upgrade
+	if(n_A_HEAD_DEF_PLUS >= 5 && EquipNumSearch(1605))
+	{
+		w += 1;
+	}
 	if(EquipNumSearch(1173))
 		w += Math.floor(n_A_Weapon_ATKplus);
 	if(n_A_JOB==14 || n_A_JOB==28){
@@ -3028,7 +3034,8 @@ function StPlusCalc()
 	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(565)){
 		n_tok[80] += 1;
 		n_tok[91] += 1;
-		n_tok[94] += 1;}
+		n_tok[94] += 1;
+	}
 
 	if(EquipNumSearch(1268))wSPC_INT += Math.floor(SU_INT/24);
 
