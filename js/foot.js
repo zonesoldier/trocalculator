@@ -1912,30 +1912,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//dress hat
 	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(565)){
 		w += 1;}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 		//Entweihen Hairband - Eden equipment - zonesoldier - 6/2/2018
 		//Increase MATK + 1% per upgrade past 5th upgrade
-=======
-//Entweihen Hairband - Eden equipment - zonesoldier - 6/2/2018
-//Increase MATK + 1% per upgrade past 5th upgrade
->>>>>>> 61b84e818d5b5d41dd54cc9e270a4c3de76f0a6e
-=======
-//Entweihen Hairband - Eden equipment - zonesoldier - 6/2/2018
-//Increase MATK + 1% per upgrade past 5th upgrade
->>>>>>> 61b84e818d5b5d41dd54cc9e270a4c3de76f0a6e
 	if(n_A_HEAD_DEF_PLUS >= 5 && EquipNumSearch(1605))
 	{
 		w += 1;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
-=======
->>>>>>> 61b84e818d5b5d41dd54cc9e270a4c3de76f0a6e
-=======
->>>>>>> 61b84e818d5b5d41dd54cc9e270a4c3de76f0a6e
+
 	if(EquipNumSearch(1173))
 		w += Math.floor(n_A_Weapon_ATKplus);
 	if(n_A_JOB==14 || n_A_JOB==28){
