@@ -3,6 +3,22 @@
 //items deletados ou trocados:
 //Corrigido conflito de dois cute ribbon, alterei o nome do cute ribbon com data de kawaii ribbon
 
+/*
+  ZoneSoldier - 6/2/208
+   id, display location, job that can use,(atk; def),lvl equip, slots, weight, lvl required to use, "name of item",  ?, "description", effect1, effect2, ..., 0 =?]
+   Example : [1535 = ID,62 = Location,0 = all jobs,0 = def(atk if its a weapon),0-default = equipment level,1 = slots, 0 = weight, 60 = Level required to use item,0 = ,"Beach Manteau" = Name of object,"" = ?,0 = description(No info added so left at 0),1 = STR,1 = 1 next to str value,4 = Int,1 = Int value 1 on site,63 = Fire resistance,10 = 10% resistance,0= end]
+   Location values:
+   Weapons: 1 = Dagger, 2 = One-handed Sword, 3 = Two-handed Sword, 4 = One-handed Spear, 5 = Two-handed Spear, 6 = One-handed Axe, 7 = Two-handed Axe, 8 = Mace, 9 = Staff/Rod, 10 = Bow/CrossBow, 11 = 	Katar, 12 = Book, 13 = Knuckles, 	Instrument = 14, 15 = Whip, 16 = Shuriken, 17 = Revolver, 18 = Rifle, 19 = Shotgun, 20 = Gatling Gun, 21 = Gernade Launcher.
+   Headgear: 50 = Upper Headgear, 51 = Middle Headgear, 52 = Lower Headgear
+   Armor: 60 = 	Armor
+   Shield: 61 = Shield
+   Garment: 62 = Garment
+   Footgear: 63 = Footgear
+   Accessory: 64 = Accessory
+   Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
+   After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP,14 MSP,15 MHP,16 MSP,17 ATK,18 DEF,19 MDEF
+*/
+
 ItemOBJ = [
 [0,0,0,0,1,0,0,0,"(Unarmed)","",0,0]
 ,[1,1,0,17,1,"3 / 4",40,0,"Knife","",0,0]
@@ -1586,10 +1602,69 @@ ItemOBJ = [
 ,[1559,8,0,130,3,2,50,50,"Red Square Bag","","If user's base Str is 90 or higher: Causes Stun effect to enemies by 5% chance.<BR>Every time you kill a monster, low chance to drop random Potion.",13,200,5244,20,5248,20,0]
 ,[1560,50,0,2,0,0,0,0,"Reforged Lord Kaho's Horns","","<br />Reforged Horns Of Lord Kaho. You feel a strange power emitting from them but they are not quite complete yet.",1,5,4,5,5,5,19,5,193,1,0]
 ,[1561,51,51,2,0,65,30,65,"Advanced Fin Helm","","Additional Maximum HP + 6 * Base Level.",13,300,0]
+,[1562,50,0,2,0,1,10,0,"Blue Pajamas Hat","","A cute blue pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.<br /><br />Increases damage by 5%. MATK + 5%.",17,5,89,5,0]
+,[1563,50,0,2,0,1,10,0,"Pink Pajamas Hat","","A cute pink pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.<br /><br />Increases damage by 5%. MATK + 5%.",17,5,89,5,0]
+//Eden Gear
+,[1564,63,0,3,0,0,0,12,"Eden Group Boots I","","Boots that are provided only for members of the Eden Group. These are designed to fit comfortably throughout long-walks.<br /><br />Recovery HP + 10%. Recovery SP + 2%.<br />Impossible to refine this item.",75,10,76,2,0]
+,[1565,63,0,3,0,0,0,26,"Eden Group Boots II","","Boots that are provided only for members of the Eden Group. These are designed to fit comfortably throughout long-walks.<br /><br />Recovery HP + 12%. Recovery SP + 4%<br />Impossible to refine this item.",75,12,76,4,0]
+,[1566,63,0,4,0,0,0,40,"Eden Group Boots III","","Boots that are provided only for members of the Eden Group. These are designed to fit comfortably throughout long-walks.<br /><br />Recovery HP + 14%. Recovery SP + 6%.<br />Impossible to refine this item.",75,14,76,6,0]
+,[1567,63,0,4,0,0,0,60,"Eden Group Boots IV","","Boots that are provided only for members of the Eden Group. These are designed to fit comfortably throughout long-walks.<br /><br />Recovery HP + 28%. Recovery SP + 12%..<br /><br />Vit+1,Agi+1<br /><br />Impossible to refine this item.",75,14,76,6,3,1,2,1,0]
+,[1568,10,0,82,2,0,0,26,"Eden Group Bow I","","A bow that is made by the Eden Group. It's been remodeled for beginning Archers.<br /><br />Impossible to refine this item.",0]
+,[1569,10,0,120,2,0,0,40,"Eden Group Bow II","","A bow that is made by the Eden Group. It's been remodeled for beginning Archers.<br /><br />Impossible to refine this item.",0]
+,[1570,10,0,140,3,0,0,60,"Eden Group Bow III","","A bow that is made by the Eden Group. It's been remodeled for beginning Archers.<br /><br />Impossible to refine this item.",0]
+,[1571,1,0,124,2,0,0,26,"Eden Group Dagger I","","A practical dagger that is made by the Eden Group. This dagger is very useful for beginning adventurers.<br/><br/>MATK+5%<br /><br />Impossible to refine this item.",89,5,0]
+,[1572,1,0,158,2,0,0,40,"Eden Group Dagger II","","A practical dagger that is made by the Eden Group. This dagger is very useful for beginning adventurers.<br/><br/>MATK+7%<br /><br />Impossible to refine this item.",89,7,0]
+,[1573,1,0,165,3,0,0,60,"Eden Group Dagger II","","A practical dagger that is made by the Eden Group. This dagger is very useful for beginning adventurers.<br/><br/>MATK+7%<br /><br />Impossible to refine this item.",89,10,0]
+,[1574,12,0,135,3,0,0,60,"Eden Group Dictonary I","","A book that is made by the Eden Group. It is suitable for those who have more advanced experience handling magic books.<br/><br/>MATK+15%<br /><br />Impossible to refine this item.",89,15,0]
+,[1575,14,0,150,3,0,0,60,"Eden Group Guitar I","","A book that is made by the Eden Group. It is suitable for those who have more advanced experience handling magic books.<br /><br />Impossible to refine this item.",0]
+,[1576,50,0,1,0,0,0,12,"Eden Group Hat","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.<br /><br />Impossible to refine this item.",0]
+,[1577,50,0,1,1,0,0,60,"Eden Group Hat II","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.<br/><br/>When dealing physical damage there's a high chance that for 5 seconds you will gain ATK + 10.<br/><br/>When dealing magic damage there's a high chance that for 5 seconds you will gain MATK + 10.<br /><br />Impossible to refine this item.",0]
+,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.<br/><br/>MATK+15%<br /><br />Impossible to refine this item.",89,15,0]
+,[1579,12,0,155,3,0,0,60,"Eden Group Katar I","","A katar that is made by the Eden Group. It is suitable for those who have more advanced experience handling katars.<br/><br/>CRIT+5<br /><br />Impossible to refine this item.",10,5,0]
+,[1580,12,0,155,3,0,0,60,"Eden Group Knuckle I","","A claw that is made by the Eden Group. It is suitable for those who have more advanced experience as Champions.<br/><br/>ASPD+10%<br /><br />Impossible to refine this item.",12,10,0]
+,[1581,8,0,142,2,0,0,26,"Eden Group Mace I","","A beginner's mace that is made exclusively by the Eden Group.<br /><br />Impossible to refine this item.",0]
+,[1582,8,0,163,2,0,0,40,"Eden Group Mace II","","A mace that is made by the Eden Group.<br /><br />Impossible to refine this item.",0]
+,[1583,8,0,172,3,0,0,60,"Eden Group Mace III","","A mace that is made by the Eden Group. It's suitable for an experienced mace wielder.<br /><br />Impossible to refine this item.",0]
+//TODO:Figure out the the Neutral Property ID
+,[1584,62,0,3,0,0,0,12,"Eden Group Manteau","","A manteau which is only for Eden Group members. It is designed to flatter anyone's backside.<br/><br/>Increase resistance to Neutral Property attacks by 10%.<br /><br />Impossible to refine this item.",0]
+,[1585,62,0,4,0,0,0,60,"Eden Group Manteau II","","A manteau which is only for Eden Group members. It is designed to flatter anyone's backside.<br/><br/>Increase resistance to Neutral Property attacks by 10%.<br /><br />Impossible to refine this item.",0]
+,[1586,17,0,40,2,0,0,26,"Eden Group Revolver I","","A revolver that is made by the Eden Group. This is easy for beginning Gunslingers to weild.<br/><br/>HIT-5.<br /><br />Impossible to refine this item.",8,-5,0]
+,[1587,17,0,60,2,0,0,40,"Eden Group Revolver II","","A revolver that is made by the Eden Group. It's suitable for an intermediate gun handler.<br/><br/>HIT-5.<br /><br />Impossible to refine this item.",8,-5,0]
+,[1588,17,0,76,3,0,0,60,"Eden Group Revolver III","","A revolver that is made by the Eden Group. It's suitable for an advanced gun handler.<br/><br/>HIT-5.<br /><br />Impossible to refine this item.",8,-5,0]
+,[1589,2,0,147,2,0,0,26,"Eden Group Saber I","","A one-handed sword that is made by the Eden Group. A weapon that can be used by anyone easily.<br /><br />Impossible to refine this item.",0]
+,[1590,2,0,170,2,0,0,40,"Eden Group Saber II","","A one-handed sword that is made by the Eden Group. A weapon that can be used by anyone easily.<br /><br />Impossible to refine this item.",0]
+,[1591,2,0,185,3,0,0,60,"Eden Group Saber III","","A one-handed sword that is made by the Eden Group. It's suitable for an experienced sword handler.<br /><br />Impossible to refine this item.",0]
+,[1592,3,0,162,2,0,0,26,"Eden Group Slayer I","","A Two-Handed Sword that is made by the Eden Group for a beginner Swordman.<br /><br />Impossible to refine this item.",0]
+,[1593,3,0,185,2,0,0,40,"Eden Group Slayer II","","A Two-Handed Sword that is made by the Eden Group. It is suitable for intermediates who have more experience handling Two-Handed Swords.<br /><br />Impossible to refine this item.",0]
+,[1594,3,0,200,3,0,0,60,"Eden Group Slayer III","","A Two-Handed Sword that is made by the Eden Group. It is suitable for those who have more advanced experience handling Two-Handed Swords.<br /><br />Impossible to refine this item.",0]
+,[1595,4,0,165,3,0,0,60,"Eden Group Spear I","","A spear that is made by the Eden Group. It is suitable for those who have more advanced experience handling spears.<br /><br />Impossible to refine this item.",0]
+,[1596,9,0,60,2,0,0,26,"Eden Group Staff I","","A staff that is made by the Eden Group. A basic item for a beginning Mage.<br/><br/>+15% MATK,INT+1<br /><br />Impossible to refine this item.",89,15,4,1,0]
+,[1597,9,0,60,2,0,0,40,"Eden Group Staff II","","A staff that is made by the Eden Group. A basic item for an intermediate Mage.<br/><br/>+15% MATK,INT+2<br /><br />Impossible to refine this item.",89,15,4,2,0]
+,[1598,9,0,60,2,0,0,60,"Eden Group Staff III","","A staff that is made by the Eden Group. An advanced item for an experienced magic practitioner.<br/><br/>+16% MATK,INT+1<br /><br />Impossible to refine this item.",89,16,4,3,0]
+,[1599,7,0,250,3,0,0,60,"Eden Group Two Handed Axe I","","An axe that is made by the Eden Group. It is suitable for those who have more advanced experience handling Two-Handed Axes.<br /><br />Impossible to refine this item.",0]
+,[1600,60,0,4,0,0,0,12,"Eden Group Uniform I","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br/><br/>MaxHP + 100, MaxSP + 10.<br /><br />Impossible to refine this item.",13,100,14,10,0]
+,[1601,60,0,6,0,0,0,26,"Eden Group Uniform II","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br/><br/>MaxHP + 200, MaxSP + 20.<br /><br />Impossible to refine this item.",13,200,14,20,0]
+,[1602,60,0,8,0,0,0,40,"Eden Group Uniform III","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br/><br/>MaxHP + 300, MaxSP + 30 MDEF + 5.<br /><br />Impossible to refine this item.",13,300,14,30,19,5,0]
+,[1603,60,0,10,0,0,0,60,"Eden Group Uniform IV","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br/><br/>MaxHP + 500, MaxSP + 50.<br/><br/>Str+1,Dex+1,Int+1<br/><br/>Mdef+5<br /><br />Impossible to refine this item.",13,500,14,50,19,5,1,1,5,1,4,1,0]
+,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.<br /><br />Impossible to refine this item.",0]
+,[1605,3,0,162,2,0,0,26,"Entweihen Hairband","","	It grows only on the top floor of the endless tower.<br/><br/>This magic-filled hairband was made from the thorns.<br /><br />Impossible to refine this item.",0]
 ];
 
-//,[265,51,51,2,0,0,30,65,"Fin Helm","",0,0]
-//[ id, display location, job that can use,(atk; def),lvl equip, slots, weight, lvl required to use, "name of item",  ?, "description", effect1, effect2, ..., 0 =?]
+/*
+  ZoneSoldier - 6/2/208
+   id, display location, job that can use,(atk; def),lvl equip, slots, weight, lvl required to use, "name of item",  ?, "description", effect1, effect2, ..., 0 =?]
+   Example : [1535 = ID,62 = Location,0 = all jobs,0 = def(atk if its a weapon),0-default = equipment level,1 = slots, 0 = weight, 60 = Level required to use item,0 = ,"Beach Manteau" = Name of object,"" = ?,0 = description(No info added so left at 0),1 = STR,1 = 1 next to str value,4 = Int,1 = Int value 1 on site,63 = Fire resistance,10 = 10% resistance,0= end]
+   Location values:
+   Weapons: 1 = Dagger, 2 = One-handed Sword, 3 = Two-handed Sword, 4 = One-handed Spear, 5 = Two-handed Spear, 6 = One-handed Axe, 7 = Two-handed Axe, 8 = Mace, 9 = Staff/Rod, 10 = Bow/CrossBow, 11 = 	Katar, 12 = Book, 13 = Knuckles, 	Instrument = 14, 15 = Whip, 16 = Shuriken, 17 = Revolver, 18 = Rifle, 19 = Shotgun, 20 = Gatling Gun, 21 = Gernade Launcher.
+   Headgear: 50 = Upper Headgear, 51 = Middle Headgear, 52 = Lower Headgear
+   Armor: 60 = 	Armor
+   Shield: 61 = Shield
+   Garment: 62 = Garment
+   Footgear: 63 = Footgear
+   Accessory: 64 = Accessory
+   Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
+   After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP,14 MSP,15 MHP,16 MSP,17 ATK,18 DEF,19 MDEF
+*/
 
 ItemMax = ItemOBJ.length -1;
 
