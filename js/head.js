@@ -4617,6 +4617,45 @@ with(document.calcForm){
 		A_KE22.value = 0;
 	}
 }}
+/*[Custom TalonRO - 2018-06-03
+Function to populate combos by using definitions from etc.js;
+Definitions are: +0 to +10, Kris/HS Enchants, Extended Info and Card Shorcuts] [Kato]
+*/
+function tRO_PopulateCombos() {
+	with(document.calcForm){
+		for(var i=0;i< EXTENDED_INFO.length; i++) {
+			A_Kakutyou.options[i] = new Option(EXTENDED_INFO[i][1],EXTENDED_INFO[i][0]);
+		}
+		for(var i=0;i<11;i++){
+			A_HEAD_DEF_PLUS.options[i] = new Option("+"+i,i);
+			A_Weapon_ATKplus.options[i] = new Option("+"+i,i);
+			A_BODY_DEF_PLUS.options[i] = new Option("+"+i,i);
+			A_LEFT_DEF_PLUS.options[i] = new Option("+"+i,i);
+			A_SHOULDER_DEF_PLUS.options[i] = new Option("+"+i,i);
+			A_SHOES_DEF_PLUS.options[i] = new Option("+"+i,i);
+		}
+
+		for(i=0; i<CARD_SHORTCUT.length; i++) {
+			A_cardshort.options[i] = new Option(CARD_SHORTCUT[i][1],CARD_SHORTCUT[i][0]);
+		}
+
+		A_KE11.options[0] = new Option("(Kris Enchantment "+ A_KE11.name.substr(-1) +")",0);
+		A_KE12.options[0] = new Option("(Kris Enchantment "+ A_KE12.name.substr(-1) +")",0);
+		A_KE21.options[0] = new Option("(Kris Enchantment 2-"+ A_KE21.name.substr(-1) +")",0);
+		A_KE22.options[0] = new Option("(Kris Enchantment 2-"+ A_KE22.name.substr(-1) +")",0);
+
+		for(i=0; i<KRIS_ENCHANTMENT.length; i++) {
+				A_KE11.options[i+1] = new Option(KRIS_ENCHANTMENT[i][1],KRIS_ENCHANTMENT[i][0]);
+				A_KE12.options[i+1] = new Option(KRIS_ENCHANTMENT[i][1],KRIS_ENCHANTMENT[i][0]);
+				A_KE21.options[i+1] = new Option(KRIS_ENCHANTMENT[i][1],KRIS_ENCHANTMENT[i][0]);
+				A_KE22.options[i+1] = new Option(KRIS_ENCHANTMENT[i][1],KRIS_ENCHANTMENT[i][0]);
+		}
+
+		for(var i=0; i<HS_ENCHANTS.length; i++) {
+			A_HSE.options[i] = new Option(HS_ENCHANTS[i][1],HS_ENCHANTS[i][0]);
+		}
+	}
+}
 
 function Click_Skill9SW(){
 with(document.calcForm){

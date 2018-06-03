@@ -74,7 +74,7 @@ NameCalc = ["Base Stats",
 0,
 0,
 0,
-"Minimum Delay Between Active Skills:",
+0, //[Custom TalonRO 2018-06-03 - Needed to fix the looping to add into index.html, added manually] [Kato]
 "Adopted",
 0,
 "Item Data",

@@ -1912,6 +1912,22 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//dress hat
 	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(565)){
 		w += 1;}
+<<<<<<< HEAD
+
+		//Entweihen Hairband - Eden equipment - zonesoldier - 6/2/2018
+		//Increase MATK + 1% per upgrade past 5th upgrade
+=======
+//Entweihen Hairband - Eden equipment - zonesoldier - 6/2/2018
+//Increase MATK + 1% per upgrade past 5th upgrade
+>>>>>>> 61b84e818d5b5d41dd54cc9e270a4c3de76f0a6e
+	if(n_A_HEAD_DEF_PLUS >= 5 && EquipNumSearch(1605))
+	{
+		w += 1;
+	}
+<<<<<<< HEAD
+	
+=======
+>>>>>>> 61b84e818d5b5d41dd54cc9e270a4c3de76f0a6e
 	if(EquipNumSearch(1173))
 		w += Math.floor(n_A_Weapon_ATKplus);
 	if(n_A_JOB==14 || n_A_JOB==28){
@@ -3028,7 +3044,8 @@ function StPlusCalc()
 	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(565)){
 		n_tok[80] += 1;
 		n_tok[91] += 1;
-		n_tok[94] += 1;}
+		n_tok[94] += 1;
+	}
 
 	if(EquipNumSearch(1268))wSPC_INT += Math.floor(SU_INT/24);
 
@@ -5851,7 +5868,7 @@ function LoadCookie3(){
 
 		if(1<= SaveData[0] && SaveData[0] <=45){
 			if(SaveData[63]==0)
-				document.calcForm.A_SaveSlot.options[k-1] = new Option("Save"+k +": " + JobName[SaveData[0]],cookieNum);
+				document.calcForm.A_SaveSlot.options[k-1] = new Option("Save "+k +": " + JobName[SaveData[0]],cookieNum);
 			else
 				document.calcForm.A_SaveSlot.options[k-1] = new Option("Save"+k +": Baby "+JobName[SaveData[0]],cookieNum);
 		}
@@ -5859,7 +5876,7 @@ function LoadCookie3(){
 			document.calcForm.A_SaveSlot.options[k-1] = new Option("Save"+k +": Novice",cookieNum);
 		}
 		else
-			document.calcForm.A_SaveSlot.options[k-1] = new Option("Save"+k +": No Data",cookieNum);
+			document.calcForm.A_SaveSlot.options[k-1] = new Option("Save "+k +": No Data",cookieNum);
 	}
 }
 
@@ -5893,7 +5910,7 @@ function LoadCookieConf(){
 		}
 	}
 
-	if(wLCF == 1){
+	/*if(wLCF == 1){
 		if(wStr.substr(0,1) == "0"){
 			document.calcForm.Conf01.value = wStr.substr(1,2);
 			SaveCookieConf();
@@ -5901,7 +5918,7 @@ function LoadCookieConf(){
 			document.calcForm.Conf01.value = StoN2(wStr.substr(1,2));
 	}else{
 		document.calcForm.Conf01.value = 33;
-	}
+	}*/
 }
 
 function SaveCookieChangelogDisplay(){
@@ -6876,3 +6893,5 @@ Click_A2();
 Click_Skill9SW();
 //custom TalonRO SQI-Bonus calculation
 Click_SQI_Bonus_SW();
+//[Custom TalonRO - 2018-06-03 - Populate combos in index] [Kato]
+tRO_PopulateCombos();

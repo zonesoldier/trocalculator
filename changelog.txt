@@ -17,3 +17,6 @@
 - Removed all the old changelogs; [Kato]
 - Issue #22: Added Reforged Lord Kaho's Horns; [Kato]
 - Issue #24: Added Advanced Fin Helm; [Kato]
+[Update 2018-06-03]
+- Fixed the delays, set all to 0.33 default, taken out the save in cookie; [Kato]
+- Revamp in index.html, nixed the changelog, fixed html selects, indented the code (at least a little bit), fixed link to tRO's mobDB and etcetera; [Kato]
