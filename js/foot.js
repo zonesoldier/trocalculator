@@ -735,6 +735,12 @@ function StAllCalc()
 	}
 
 
+//[Custom TalonRO 2018-06-02 - Advanced Fin Helm Gives Maximum HP + 6 * Base Level] [Kato]
+if(EquipNumSearch(1561)) {
+	n_A_MaxHP += 6 * n_A_BaseLV;
+}
+
+
 n_A_MaxHP += SkillSearch(156) * 200;
 
 	w=0;
@@ -844,6 +850,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += Math.floor(SU_AGI / 8);
 	if(SU_VIT >= 80 && EquipNumSearch(1526))
 		w += 5;
+
+		//[Custom TalonRO - Deviruchi Headphones (1426) -1% MHP] [Kato]
+		if(EquipNumSearch(1426))
+			w -= 1;
 
 	n_A_MaxHP = n_A_MaxHP * (100 + w)/100;
 
@@ -1630,6 +1640,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Halloween Midas Whisper
 	if(SU_LUK >= 80 && EquipNumSearch(1526))
 		w += 5;
+
+
+	//[Custom TalonRO - 2018-06-02 - Aegir shoes + helm combo(CRIT + 1% * refinement for Fish type monsters)] [Kato/Nattwara]
+	if(n_B[2] == 5 && EquipNumSearch(1554)){ // Race = 5 (Fish)
+		w += n_A_SHOES_DEF_PLUS * EquipNumSearch(1554);
+	}
 
 	n_A_CRI += w;
 
@@ -2435,9 +2451,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1429) && SU_LUK > 55)
 		w += 10;
 
-	//[Custom TalonRO - Deviruchi Headphones (1426) -1% MHP] [Kato]
-	if(EquipNumSearch(1426))
-		w -= 1;
+	//[Custom TalonRO - 2018-06-02 - Aegir Helm + Cloak - Increases natural HP recovery by 5% per refinement rate of Aegir Cloak.] [Kato/Nattwara]
+	if(EquipNumSearch(1555))
+		w += 5 * n_A_SHOULDER_DEF_PLUS;
 
 	n_A_HPR = Math.floor(n_A_HPR * w /100);
 
@@ -2607,6 +2623,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[59] -= 200;
 		}
 	}
+
+	//[Custom TalonRO - 2018-06-02 - Aegir Helm + Armor Combo - 1% * html refinement less damage taken from fish] [Kato/Nattwara]
+	if(EquipNumSearch(1556))
+		n_tok[55] += n_A_BODY_DEF_PLUS;
+
 	if(EquipNumSearch(737))
 		n_tok[60] += n_A_SHOULDER_DEF_PLUS * 3;
 	if(EquipNumSearch(957)){

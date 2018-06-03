@@ -1262,7 +1262,7 @@ ItemOBJ = [
 ,[1255,999,0,1,0,0,20,70,"Fairy Ears [bRO]","",0,11,3,0]
 ,[1256,52,0,1,0,0,10,1,"4 Leaf Clover In Mouth","",0,89,1,0] //custom TalonRO
 ,[1257,50,51,5,0,1,300,65,"Sphinx Hat","","",1,5,0]
-,[1258,50,0,3,0,0,80,70,"Anubis Hat",0,0,77,10,91,10,0]
+,[1258,50,0,3,0,0,0,70,"Anubis Hat",0,0,77,3,91,3,0]
 ,[1259,64,0,0,0,1,10,1,"Skull Ring [1]","","",51,1,0]
 ,[1260,50,0,0,0,1,10,0,"Wild Rose Hat",0,0,2,3,0]
 ,[1261,999,0,5,0,0,80,50,"Large Bapho Horns [DEF Version]","","As your JOB Level increases,the helm grants additional ATK",57,12,0]
@@ -1568,13 +1568,27 @@ ItemOBJ = [
 ,[1542,62,0,0,0,1,20,1,"Bayani Buwaya Skin Clothes","","DEF value unkown<br>Healing capacity and healing item effect increases 1% per 3 refines",61,3,62,3,63,3,64,3,0]
 ,[1543,61,0,3,0,1,40,1,"Bayani Kalasag","","For every 3 refines, decreases Boss monster damage by 1%",0]
 ,[1544,63,0,2,0,1,60,1,"Bayani Nightmare Bangungot Boots","","For every refine, MDEF + 1<br><b>[Refine Rate 7-10]</b><br>Increases walking speed",0]
-//[Custom TalonRO 2016-06-02]
+//[Custom TalonRO Updates 2018-06-02] [Kato]
 ,[1545,50,0,3,0,1,100,50,"Palace Guard Cap","","Increase resistance against long range physical and magic attacks by +5%.<br /><br />Increase resistance to neutral attacks by +5%.<br /><br />Indestructible (except in upgrade attempts).<br /><br /><b>[Refine Rate 7~10]</b><br />For every refine, additional increased resistance against long range physical and magic attacks by 1%.",0,78,5,60,5,0]
 ,[1546,51,124,0,0,0,10,60,"Hawk Eye","","<b>[Slottable at Chiqita NPC]</b>",5,1,25,3,0]
 ,[1547,50,0,8,0,1,100,10,"Drooping Permeter","","Increases physical attack against Solider, Permeter, Freezer, Assaulter, Heater and Turtle General by 20%.",0]
-
+,[1548,50,0,3,0,0,50,1,"Burning Crown","","Add a 1.5% chance of auto casting Level 3 Bash on an enemy when doing Physical damage.",63,20,42,20,0]
+,[1549,11,1,190,4,1,150,95,"Guillotine Katar","",0,37,25,9,-30,5,2,5083,15,0]
+,[1550,63,0,3,0,1,30,40,"Aegir Shoes","",0,13,500,14,50,194,1,0]
+,[1551,62,0,2,0,1,30,40,"Aegir Cloak","",0,13,500,14,50,194,1,0]
+,[1552,60,0,5,0,1,160,40,"Aegir Armor","",0,13,500,14,50,194,1,0]
+,[1553,50,0,2,0,1,80,40,"Aegir Helm","",0,3,3,0]
+,[1554,100,0,0,0,0,0,0,"Aegir Helm + Aegir Shoes","","Increases CRIT against Fish type monster by 1% per refinement of Aegir Shoes",115,10,0] //Aegir Helm + Aegir Shoes
+,[1555,100,0,0,0,0,0,0,"Aegir Helm + Aegir Cloak","","Recovers 10 SP every time you kill a Fish type monster.<BR><BR>Add a chance to drop Sushi or Raw Fish when killing a Fish type monster, which increases per refinement rate of Aegir Cloak.<BR><BR>Increases natural HP recovery by 5% per refinement rate of Aegir Cloak.<BR><BR>Sushi and Raw Fish's HP recovery increase by 5%.",0] //Aegir Helm + Aegir Cloak
+,[1556,100,0,0,0,0,0,0,"Aegir Helm + Aegir Armor","","Decreases damage from [Fish] race monsters by 1% per refinement of Aegir Armor",55,10,0] //Aegir Helm + Aegir Armor
+,[1557,100,0,0,0,0,0,0,"Aegir Helm + Aegir Armor + Aegir Cloak + Aegir Shoes","","",13,1000,14,100,125,20,35,50,175,50,61,30,0] //Aegir Set
+,[1558,52,0,0,0,0,10,0,"Blood Sucker","","When doing a physical attack, add a chance to absorb 5% of your damage dealt as HP.",75,-100,76,-100,0]
+,[1559,8,0,130,3,2,50,50,"Red Square Bag","","If user's base Str is 90 or higher: Causes Stun effect to enemies by 5% chance.<BR>Every time you kill a monster, low chance to drop random Potion.",13,200,5244,20,5248,20,0]
+,[1560,50,0,2,0,0,0,0,"Reforged Lord Kaho's Horns","","<br />Reforged Horns Of Lord Kaho. You feel a strange power emitting from them but they are not quite complete yet.",1,5,4,5,5,5,19,5,193,1,0]
+,[1561,51,51,2,0,65,30,65,"Advanced Fin Helm","","Additional Maximum HP + 6 * Base Level.",13,300,0]
 ];
 
+//,[265,51,51,2,0,0,30,65,"Fin Helm","",0,0]
 //[ id, display location, job that can use,(atk; def),lvl equip, slots, weight, lvl required to use, "name of item",  ?, "description", effect1, effect2, ..., 0 =?]
 
 ItemMax = ItemOBJ.length -1;
@@ -1971,6 +1985,10 @@ w_SE = [[737,436,475,"NULL"]
 ,[1524,1523,377,"NULL"] //custom TalonRO Evil Mask & Succubus Horn combo
 ,[1525,1523,374,"NULL"] //Custom TalonRO Evil Mask & Incubus Horn combo
 ,[1537,1535,1536,"NULL"] //Custom TalonRO Beach Manteau & Beach Sandals combo
+,[1554,1553,1550,"NULL"] //[Custom TalonRO - 2018-06-02 - Aegir helm + shoes] [Kato]
+,[1555,1553,1551,"NULL"] //[Custom TalonRO - 2018-06-02 -Aegir helm + cloak] [Kato]
+,[1556,1553,1552,"NULL"] //[Custom TalonRO - 2018-06-02 -Aegir helm + armor] [Kato]
+,[1557,1550,1551,1552,1553,"NULL"] //[Custom TalonRO - 2018-06-02 - All Aegir Set] [Kato]
 ];
 SE_MAXnum = w_SE.length -1;
 for(var i=0;i<=SE_MAXnum;i++){

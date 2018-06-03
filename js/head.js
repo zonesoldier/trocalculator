@@ -280,7 +280,7 @@ function BattleCalc999()
 			w_left_Maxatk = w_left_Maxatk * (3 + SkillSearch(80)) /10;
 			w_left_Maxatk = Math.floor(w_left_Maxatk);
 
-			if(n_A_workDEX > n_A_Weapon2_ATK) 
+			if(n_A_workDEX > n_A_Weapon2_ATK)
 				n_A_workDEX = n_A_Weapon2_ATK;
 			w_left_Minatk = n_A_ATK + n_A_Weapon2LV_Minplus + Math.floor((n_A_workDEX + wImp) * wCSize);
 
@@ -303,14 +303,14 @@ function BattleCalc999()
 			w_left_Aveatk = tPlusDamCut(w_left_Aveatk);
 
 			ATKbai02(wbairitu,0);
-			
+
 			//custom TalonRO adjustment: Poem of Bragi reduces damage proportional to delay (PVM only)
 			if (n_A_PassSkill3[2]>0 && n_A_PassSkill3[45]==0) {
 				w_left_Minatk = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*w_left_Minatk/200);
 				w_left_Maxatk = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*w_left_Maxatk/200);
 				w_left_Aveatk = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*w_left_Aveatk/200);
 			}
-			
+
 			n_Min_DMG += w_left_Minatk;
 			n_Max_DMG += w_left_Maxatk;
 
@@ -319,7 +319,7 @@ function BattleCalc999()
 			if (n_A_PassSkill3[2]>0 && n_A_PassSkill3[45]==0)
 				w_DMG[0] = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*w_DMG[0]/200);
 			var wX = w_DMG[0] + EDP_DMG(0);
-			
+
 			Last_DMG_A[0] = Last_DMG_B[0] = wX + w_left_Minatk;
 			InnStr[0] += wX +" ("+ w_left_Minatk +")";
 			if(w998D){
@@ -875,7 +875,7 @@ function BattleCalc999()
 		if (n_A_PassSkill3[2]>0 && n_A_PassSkill3[45]==0)
 			wcustomtromod = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*wcustomtromod/200);
 		w_DMG[1] = (w_DMG[1] * w_HIT + wcustomtromod *(100-w_HIT))/100;
-		
+
 
 		EDPplus(1);
 
@@ -1251,7 +1251,7 @@ function BattleCalc999()
 		wSC2[0] = 100*/
 		for(var i=0;i<=2;i++){
 			//alert("atk:"+n_A_ATK+"+15"+",wbairitu2:"+wbairitu2+",n_B[14]:"+n_B[14]+",n_B_DEF2[i]:"+n_B_DEF2[i]+",wSBr:"+wSBr);
-			//ziemlich gut: (aber nur weil 2.07 fail war, korrekt wäre 2.093
+			//ziemlich gut: (aber nur weil 2.07 fail war, korrekt wï¿½re 2.093
 			//w_DMG[i] = Math.floor(((n_A_ATK+15) * 2.07 * wbairitu2 *5) * (100 - n_B[14]) /100 - n_B_DEF2[i]) + (wSBr * 10);
 			if (i==1) {
 				debug_dmg_avg=1;
@@ -1459,12 +1459,12 @@ function BattleCalc999()
 			w = BK_n_A_MATK[i] *(100 - n_B[15])/100 -n_B_MDEF2;
 			w *= (n_A_ActiveSkillLV * 0.4 +1);
 			w = Math.floor(w * zokusei[n_B[3]][6]);
-			
+
 			//custom TalonRO added bonus damage for Imperial Spear + Imperial Guard Combo
 			//works with every gear which has bonus for 5162 (5000+skillID)
 			wcustomtromod = 0;
 			wcustomtromod += StPlusCalc2(5000+n_A_ActiveSkill)+StPlusCard(5000+n_A_ActiveSkill);
-			//end damage calculation needed to be adjusted for above bonus	
+			//end damage calculation needed to be adjusted for above bonus
 			w_DMG[i] = tPlusDamCut(Math.floor((w+w_DMG[i])*((100+wcustomtromod) /100)*zokusei[n_B[3]][6]));
 			//original end damage calculation:
 			//w_DMG[i] = tPlusDamCut(Math.floor((w+w_DMG[i])*zokusei[n_B[3]][6]));
@@ -1669,7 +1669,7 @@ function BattleCalc999()
 		//n_Delay[2] = 15;
 		//custom TalonRO adjusted Asura delay to 10 sec
 		n_Delay[2] = 10;
-		
+
 		CastAndDelay();
 
 		BattleCalc998();
@@ -1698,7 +1698,7 @@ function BattleCalc999()
 		if (n_A_PassSkill3[2]>0 && n_A_PassSkill3[45]==0)
 			wcustomtromod = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*wcustomtromod/200);
 		w_DMG[1] = (w_DMG[1] * w_HIT + wcustomtromod * zokusei[n_B[3]][0] *(100-w_HIT))/100;
-		
+
 		n_PerHIT_DMG = BattleCalc2(0) * zokusei[n_B[3]][0];
 
 		CastAndDelay();
@@ -1767,7 +1767,7 @@ function BattleCalc999()
 		if (n_A_PassSkill3[2]>0 && n_A_PassSkill3[45]==0)
 			wcustomtromod = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*wcustomtromod/200);
 		w_DMG[1] = (w_DMG[1] * w_HIT + wcustomtromod* zokusei[n_B[3]][0] *(100-w_HIT))/100;
-		
+
 		n_PerHIT_DMG = BattleCalc2(0) * zokusei[n_B[3]][0];
 
 		CastAndDelay();
@@ -2350,7 +2350,7 @@ function BattleCalc999()
 				w_DMG[b] = Last_DMG_A[b];
 			}
 		}else{
-			for(var b=0;b<=2;b++){//magia especial - Dragon Fire Formation, não acho mais nenhuma skill que tenha esta formula em uso
+			for(var b=0;b<=2;b++){//magia especial - Dragon Fire Formation, nï¿½o acho mais nenhuma skill que tenha esta formula em uso
 				w_DMG[b] = Math.floor(BattleMagicCalc(n_A_MATK[b] * wbairitu) / wHITsuu);
 				//custom TalonRO adjustment: Poem of Bragi reduces damage proportional to delay (PVM only)
 				//skilllvb = skill level of Bragi
@@ -2408,7 +2408,7 @@ function ATKbai01()
 		//custom TalonRO Evil Marching Hat: if refine rate >=9 +5% ATK
 		if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 9)
 			wA01 += 5;
-		
+
 		if(n_A_IJYOU[3])
 			wA01 -= 25;
 	}
@@ -2699,7 +2699,7 @@ function BattleCalc998()
 
 }
 //EARTHQUAKE SKILL DMG Sem reduces de momento
-	//EQ LVL 1 - Incarnation of Morroc[Golem] e a sua versão de mega hp que é slave do wounded morroc que liberta constants
+	//EQ LVL 1 - Incarnation of Morroc[Golem] e a sua versï¿½o de mega hp que ï¿½ slave do wounded morroc que liberta constants
 	//EQ LVL 2 - Hardrock Mammoth
 	//EQ LVL 3 - Nidhoggr's Shadow
 	//EQ LVL 5 - Bapho/Orc Lord/RSX/Randgris/Ifrit
@@ -2815,7 +2815,7 @@ function BattleHiDam(){
 		for(i=0;i<=6;i++)
 			w_HiDam[i] -= Math.floor(w_HiDam[i] * wBHD /100);
 	}
-		
+
 	wBHD = n_tok[190+n_B[4]];
 	if(wBHD != 0){
 		for(i=0;i<=6;i++)
@@ -2961,7 +2961,7 @@ function BattleMagicCalc(wBMC)
 		//wBMC_MDEF = 0;
 		//n_B_MDEF2 = 0;
 	}
-		
+
 	if(n_A_ActiveSkill==122)
 		wBMC2 = Math.floor(wBMC + 50);
 	else{
@@ -5688,7 +5688,7 @@ function calc()
 	StAllCalc();
 
 	wCSize = weaponsize[n_A_WeaponType][n_B[4]];
-	
+
 	if(SkillSearch(78)){
 		if((n_A_WeaponType==4 || n_A_WeaponType==5) && n_B[4]==1)
 			wCSize = 1;
@@ -5869,7 +5869,7 @@ function calc()
 		if(n_A_DMG[0] > w)n_A_DMG[0] = w;
 	}
 	else{
-		if(n_A_workDEX >= n_A_Weapon_ATK) 
+		if(n_A_workDEX >= n_A_Weapon_ATK)
 			n_A_DMG[0] = n_A_ATK + n_A_WeaponLV_Minplus + Math.floor((n_A_Weapon_ATK + wImp) * wCSize);
 		else{
 
@@ -6596,9 +6596,9 @@ function EDPhyouzi(HitNum){
 		var w0 = n_A_EDP_DMG[0] * HitNum;
 		var w2 = n_A_EDP_DMG[2] * HitNum;
 		if(wE)
-			str_bSUB += w0 +"~"+ w2 +"(’add invocation rate(?)"+ w_HIT_EDP +"%)<BR>";
+			str_bSUB += w0 +"~"+ w2 +"(ï¿½add invocation rate(?)"+ w_HIT_EDP +"%)<BR>";
 		else
-			str_bSUB += w0 +"~"+ w2 +"(’add invocation rate(?)"+ (Math.floor(w_HIT * w_HIT_EDP) / 100) +"%)<BR>";
+			str_bSUB += w0 +"~"+ w2 +"(ï¿½add invocation rate(?)"+ (Math.floor(w_HIT * w_HIT_EDP) / 100) +"%)<BR>";
 	}*/
 }
 
@@ -6669,7 +6669,7 @@ function CastAndDelay(){
 		w = 3;
 	}
 	if(n_A_ActiveSkill != 0 && n_A_ActiveSkill != 284){
-		n_Delay[4] = eval(document.calcForm.Conf01.value) /100;
+		n_Delay[4] = 0.33; // [Custom TalonRO 2016-06-02 - Added fixed TRO's Minimun Delay for Skills] [Kato]
 
 
 	}

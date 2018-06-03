@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   padding: 0px;
   margin: 0px;
- 
+
   /*-moz-border-radius-topleft: 50px 50px;
   -moz-border-radius-topright: 50px 50px;
   border-top-left-radius: 20px 20px;
@@ -37,8 +37,8 @@ h3 {
   padding: 0.5em;
   font-variant: small-caps;
 }
-ol { 
-  list-style-type: decimal; 
+ol {
+  list-style-type: decimal;
 }
 td.top {
   vertical-align: top;
@@ -86,17 +86,17 @@ td.top {
   background: rgb(190,190,190);
 }
 
-.topic td.before { 
+.topic td.before {
   background: rgb(255,220,220);
 }
 
-.topic td.aftern { 
+.topic td.aftern {
 }
 
-.topic td.beforen { 
+.topic td.beforen {
 }
 
-.topic td.after { 
+.topic td.after {
   background: rgb(220,255,220);
 }
 .topic td.calc {
@@ -155,4 +155,28 @@ td.top {
 .topic td data {
   border: 1px dotted #999;
   border-right: 1px dotted #999;
+}
+
+div#ubernavi {
+	background: url(images/th.png) repeat-x;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	border-left: 1px solid #999;
+	display:inline-block;
+	top:0;
+	padding: 0.5em;
+	margin-left: 3px;
+	line-height: 100%;
+
+}
+div#ubernavi a {
+	text-decoration: none;
+	color:#000;
+}
+div#ubernavi a:hover {
+	text-decoration: underline;
+}
+span.navititle {
+
+	font-weight:bold;
 }
