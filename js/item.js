@@ -1646,7 +1646,7 @@ ItemOBJ = [
 ,[1602,60,0,8,0,0,0,40,"Eden Group Uniform III","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br />Impossible to refine this item.",13,300,14,30,19,5,0]
 ,[1603,60,0,10,0,0,0,60,"Eden Group Uniform IV","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br />Impossible to refine this item.",13,500,14,50,19,5,1,1,5,1,4,1,0]
 ,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.<br />Impossible to refine this item.",0]
-,[1605,50,0,2,,0,0,10,"Entweihen Hairband","","	It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/><br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK<br />Impossible to refine this item.",4,1,5,1,89,1,0]
+,[1605,50,0,2,0,1,0,10,"Entweihen Hairband","","	It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/><br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK<br />Impossible to refine this item.",4,1,5,1,89,1,0]
 ];
 
 /*
