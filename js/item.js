@@ -821,7 +821,7 @@ ItemOBJ = [
 ,[798,64,1,0,0,0,30,60,"Renown Archer's Gloves","",0,5,1,8,5,10,5,0]
 ,[799,1,52,100,4,0,80,55,"Holy Dagger","",0,20,6,5,1,0]
 ,[800,64,52,0,0,0,20,60,"Moonlight Ring","",0,10,3,12,3,0]
-,[801,64,1,0,0,0,20,75,"Scarf Belt","",0,5,2,4,1,0]
+,[801,64,1,0,0,0,20,75,"Belcarf","",0,5,2,4,1,0]
 ,[802,50,0,3,0,0,50,0,"Shark Hat","",0,19,1,1,1,2,2,41,5,331,10,0]
 ,[803,50,0,2,0,0,20,45,"Whickebine Black Cat Ears","",0,9,10,10,3,70,10,0] //custom TalonRO
 ,[804,50,0,3,0,0,50,1,"Ship Captain's Hat",0,0,5,1,25,7,13,100,0] //custom TalonRO
@@ -1646,7 +1646,8 @@ ItemOBJ = [
 ,[1602,60,0,8,0,0,0,40,"Eden Group Uniform III","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br />Impossible to refine this item.",13,300,14,30,19,5,0]
 ,[1603,60,0,10,0,0,0,60,"Eden Group Uniform IV","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br />Impossible to refine this item.",13,500,14,50,19,5,1,1,5,1,4,1,0]
 ,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.<br />Impossible to refine this item.",0]
-,[1605,50,0,2,0,1,0,10,"Entweihen Hairband","","	It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/><br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK<br />Impossible to refine this item.",4,1,5,1,89,1,0]
+,[1605,50,0,2,0,1,0,10,"Entweihen Hairband","","It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/><br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK<br />Impossible to refine this item.",4,1,5,1,89,1,0]
+,[1606,50,0,4,0,1,40,0,"Legionaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0 ]
 ];
 
 /*
