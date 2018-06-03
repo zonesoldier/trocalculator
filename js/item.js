@@ -1581,7 +1581,7 @@ ItemOBJ = [
 ,[1540,52,0,0,0,0,30,20,"Vajra","","",25,1,0]
 //custom TalonRO [Update 2016-11-02]
 ,[1541,60,0,6,0,1,50,1,"Bayani Bakonawa Scale Armor","","For every 2 refines, decreases Boss monster damage by 1%",7,1,0]
-,[1542,62,0,0,0,1,20,1,"Bayani Buwaya Skin Clothes","","DEF value unkown<br>Healing capacity and healing item effect increases 1% per 3 refines",61,3,62,3,63,3,64,3,0]
+,[1542,62,0,2,0,1,20,1,"Bayani Buwaya Skin Clothes","","Healing capacity and healing item effect increases 1% per 3 refines",61,7,62,7,63,7,64,7,0]
 ,[1543,61,0,3,0,1,40,1,"Bayani Kalasag","","For every 3 refines, decreases Boss monster damage by 1%",0]
 ,[1544,63,0,2,0,1,60,1,"Bayani Nightmare Bangungot Boots","","For every refine, MDEF + 1<br><b>[Refine Rate 7-10]</b><br>Increases walking speed",0]
 //[Custom TalonRO Updates 2018-06-02] [Kato]
@@ -1647,7 +1647,17 @@ ItemOBJ = [
 ,[1603,60,0,10,0,0,0,60,"Eden Group Uniform IV","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br />Impossible to refine this item.",13,500,14,50,19,5,1,1,5,1,4,1,0]
 ,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.<br />Impossible to refine this item.",0]
 ,[1605,50,0,2,0,1,0,10,"Entweihen Hairband","","It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/><br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK<br />Impossible to refine this item.",4,1,5,1,89,1,0]
-,[1606,50,0,4,0,1,40,0,"Legionaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0 ]
+//End of Eden Gear
+,[1606,50,0,4,0,1,40,0,"Legionaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0]
+,[1607,51,0,2,0,1,50,50,"Lude Mask","","A mask which resembles a Lude. However, you will never be as awesome as a real Lude.",17,1,89,2,57,1,0]
+,[1608,50,0,4,0,0,20,30,"Xmas Rudolph Hairband","","A Christmas hairband. Rudolf's excited mind for christmas is dwelled on it.<br/>You will feel like running faster.",1,3,5,2,6,3,2,3,12,5,0]
+,[1609,50,0,4,0,0,20,30,"Xmas Snowman Hat","","A Christmas Snowman Hat. Wearing this always makes you look forward to a White Christmas.<br/>Add a 3% chance of freezing an enemy when receiving Physical Damage.",4,3,5,2,3,3,2,3,73,-10,221,6,0]
+,[1610,50,0,2,0,0,20,1,"Xmas Rudolph Santa Hat","","Increase effectiveness of healing items by 5%.<br>A Santa Hat with antlers attached to it. Used to celebrate Xmas 2010.<br/>Gain a Christmas Firecracker when killing monsters of Non-Boss type by low chance.",7,1,73,-5,80,5,0]
+,[1611,64,0,0,0,0,10,1,"Bakonawa Agimat Tattoo","","Agimat Tattoo with a dragon swallowing the moon pattern. It is told that the one who owns this tattoo will possess extreme power.",87,5,12,5,0]
+,[1612,64,0,0,0,0,10,1,"Bangungot Agimat Tattoo","","Agimat Tattoo with a plump lady pattern. It is told that the one who owns this tattoo will possess extreme power.",92,7,91,4,0]
+,[1613,64,0,0,0,1,10,1,"Cat Hand Glove","","A souvenir from Malangdo, just by equpping it will give you a happy mood.",3,1,2,1,6,1,0]
+,[1614,64,0,0,0,0,10,1,"Buwaya Agimat Tattoo","","Agimat Tattoo with a huge Alligator pattern. It is told that the one who owns this tattoo will possess extreme power.",89,7,73,-8,0]
+,[1615,64,0,0,0,0,10,0,"Bunch of Carnations","","	A carnation bouquet given as gifts to mothers.",7,3,0]
 ];
 
 /*
@@ -1794,10 +1804,16 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Increases physical damage against bosstype monsters by "+ nC2 +"%<BR>";
 	if(27 <= nC1 && nC1 <=29)
 		CBIstr += "Increases physical damage against [" + SizeOBJ[nC1-27] +"] size monsters by "+ nC2 +"%<BR>";
+    //Increase damage against Race monsters
+    //37 = DemiHuman
 	if(30 <= nC1 && nC1 <=39)
 		CBIstr += "Increases physical damage against [" + SyuzokuOBJ[nC1-30] +"] race monsters by "+ nC2 +"%<BR>";
 	if(40 <= nC1 && nC1 <=49)
 		CBIstr += "Increases physical damage against [" + ZokuseiOBJ[nC1-40] +"] element monsters by "+ nC2 +"%<BR>";
+  /*
+    Decrease damage from race
+    57 =  Demihuman
+  */
 	if(50 <= nC1 && nC1 <=59){
 		if(nC2 > 0)
 			CBIstr += "Decreases damage from [" + SyuzokuOBJ[nC1-50] +"] race monsters by "+ nC2 +"%<BR>";
@@ -1805,8 +1821,10 @@ function Item_Setumei(nC1,nC2)
 			CBIstr += "Increases damage from [" + SyuzokuOBJ[nC1-50] +"] race monsters by "+ (-1 * nC2) +"%<BR>";
 	}
   /*
-  Elemental Resistance
+    Elemental Resistance
     60 = Neutral
+    67 = Shadow
+    68 = Ghost
   */
 	if(60 <= nC1 && nC1 <=69){
 		if(nC1 == 60){
@@ -1834,6 +1852,11 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Critical Damage +"+ nC2 +"%<BR>";
 	if(71 == nC1)
 		CBIstr += "Reflect Melee Physical Attacks by "+ nC2 +"%<BR>";
+    /*
+      Casting Time %
+      73,10 = Casting time +10%
+      73,-10 = Casting Time -10%
+    */
 	if(73 == nC1)
 		CBIstr += "Cast Time"+ wIS + nC2 +"%<BR>";
 	if(74 == nC1){
@@ -1852,6 +1875,10 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Adjusts your resistance to ranged attacks by "+ wIS + nC2 +"%<BR>";
 	if(79 == nC1)
 		CBIstr += "Adjusts your resistance to normal monsters by "+ wIS + nC2 +"%<BR>";
+    /*
+      Increase Damage on all monsters Boss/NonBoss
+      80,10 =
+    */
 	if(80 == nC1)
 		CBIstr += "Physical damage "+ wIS + nC2 +"% [versus Normal/Boss/Guardian]<BR>";
 	if(81 == nC1)
@@ -1866,11 +1893,13 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Lowers your defence rate by "+ nC2 +"%<BR>";
 	if(86 == nC1)
 		CBIstr += "Increases your chance to hit all targets by a fixed " + nC2 +"%<BR>";
+    //Increase ATK by %
 	if(87 == nC1)
 		CBIstr += "ATK"+ wIS + nC2 +"%<BR>";
 	if(88 == nC1)
 		CBIstr += "MATK"+ wIS + nC2 +"% (Staff Type)<BR>";
-	if(89 == nC1)
+//Increase MATK by %
+  if(89 == nC1)
 		CBIstr += "MATK"+ wIS + nC2 +"%<BR>";
 	if(91 == nC1)
 		CBIstr += "Heal amount increased by "+ wIS + nC2 +"%<BR>";
@@ -1910,8 +1939,17 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Armor becomes "+ ZokuseiOBJ[nC2] +" element<BR>";
 	if(212 <= nC1 && nC1 <= 215)
 		CBIstr += wNAME1[nC1 -210] + wIS + nC2 +"<BR>";
+    /*
+      Allows usage of the skill
+      Refer to Skill.js Each number after 220
+      220,1 = Basic attack
+    */
 	if(220 == nC1)
 		CBIstr += "Allows usage of the skill ["+ SkillOBJ[InsertSkill[nC2][2]][2] +"]Lv "+ InsertSkill[nC2][3] +"<BR>";
+    /*
+      When Performing an action it will activate a skill
+      221,6 = When performing a ATK based attack, there's a 10 % chance to cast the skill [Lightning Bolt]Lv 3
+    */
 	if(221 == nC1){
 		wNAME99 = [0,"When performing a ATK based attack, ","When performing a short-range ATK based attack, ","When performing a long-range ATK based attack, ","When performing a magical attack, ","When attacking, ","When recieving ATK based damage, ","When recieving short-range ATK based damage, ","When recieving long-range ATK based damage, ","When recieving magical damage, ","When recieving ATK based or magical damage, "];
 		wNAME98 = ["low","medium","high"];
@@ -1944,6 +1982,11 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += wIS + nC2 +"% damage from "+ ZokuseiOBJ[nC1-330] +" element monsters<BR>";
 	if(5000 <= nC1 && nC1 <= 6999)
 		CBIstr += "["+ SkillOBJ[nC1 -5000][2] +"] damage"+ wIS + nC2 +"%<BR>";
+    /*
+      Reduce Cast time of Skill - Refer to Skill.js Each number 7000 - 7439
+      7000 = Basic Attack
+      7001 = First Aid
+    */
 	if(7000 <= nC1 && nC1 <= 8999){
 		if(nC2 > 0)
 			CBIstr += "[" + SkillOBJ[nC1 -7000][2] +"] Cast Time "+ (-1 * nC2) +"%<BR>";

@@ -4453,6 +4453,8 @@ function KakutyouKansuu(){
 			prate4 = Potion_Type_3[pot2][2];}
 
 		//inserir aqui gears de boost de potion power
+		//insert here gears of potion power boost
+		if(EquipNumSearch(1610)){H_Bonus2 += 0.05;}//Xmas Rudolph Santa Hat - ZoneSoldier
 		if(EquipNumSearch(712)){H_Bonus2 += 0.2;}//Fricco's Shoes
 		if(EquipNumSearch(1194)){H_Bonus3 += 0.05;}//life tree wooden shoes
 		//inserir aqui gears de heal bonus
