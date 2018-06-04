@@ -601,24 +601,25 @@ InsertSkill = [
 
 
 AutoSpellSkill = [
-[0,0,0,0,0,0],
-[1,1,54,3,10,1],
-[2,1,51,3,10,1],
-[3,0,49,1,1,1],
-[4,1,57,3,10,1],
-[5,1,102,3,0,1],
-[6,1,56,3,10,1],
-[7,1,47,3,10,1],
-[8,1,52,3,10,1],
-[9,1,126,1,0,1],
-[10,0,8,1,3,1],
-[11,0,100,1,1,1],
-[12,0,25,1,5,6],
-[13,0,25,1,0,1],
-[14,1,52,5,0,1],
-[15,0,27,1,0,1],
-[16,1,128,3,3,1],
-[17,0,236,2,3,1],
+//ID - Gets called in second spot(221(effect),1(ID)), autocast id = 1 by default, skill Id,Skill Lvl, chance %, attacktype(1atkbased,2shortrange,3longrange,4magical,5attacking,6receivingATKbased,0 by default, 0=low chance, 1=medium chance, 2=high chance)
+[0,0,0,0,0,0], //there's a chance to cast the skill [Basic Attack]Lv 0
+[1,1,54,3,10,1], //When performing a ATK based attack, there's a 10 % chance to cast the skill [Cold Bolt]Lv 3
+[2,1,51,3,10,1], //When performing a ATK based attack, there's a 10 % chance to cast the skill [Fire Bolt]Lv 3
+[3,0,49,1,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Stone Curse]Lv 1
+[4,1,57,3,10,1], //When performing a ATK based attack, there's a 10 % chance to cast the skill [Thunder Storm]Lv 3
+[5,1,102,3,10,1,], //When performing a ATK based attack, there's a 10 % chance to cast the skill [Turn Undead]Lv 3
+[6,1,56,3,10,1], //When performing a ATK based attack, there's a 10 % chance to cast the skill [Lightning Bolt]Lv 3
+[7,1,47,3,10,1], //When performing a ATK based attack, there's a 10 % chance to cast the skill [Soul Strike]Lv 3
+[8,1,52,3,10,1], //When performing a ATK based attack, there's a 10 % chance to cast the skill [Fire Ball]Lv 3
+[9,1,126,1,0,1], //When performing a ATK based attack, there's a chance to cast the skill [Jupitel Thunder]Lv 1
+[10,0,8,1,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Provoke]Lv 1
+[11,0,100,1,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Gloria]Lv 1
+[12,0,25,1,5,6], //When recieving ATK based damage, there's a 5 % chance to cast the skill [Heal]Lv 1
+[13,0,25,1,0,1], //
+[14,1,52,5,0,1], //
+[15,0,27,1,0,1], //
+[16,1,128,3,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Water Ball]Lv 3
+[17,0,236,2,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Deluge]Lv 2
 [18,0,95,1,3,6],
 [19,0,30,5,0,6],
 [20,1,261,3,0,1],
@@ -729,4 +730,5 @@ AutoSpellSkill = [
 [124,1,40,5,2,5], //custom TalonRO Catapult lv5 Double Strafe (2%) on attacking
 [125,1,260,2,10,1], //custom TalonRO Cannon Spear lv 2 Head Crush (10%) on physical attack
 [126,1,83,1,0.5,2], //custom TalonRO Krishna Sonic Blow lv 1 (small/0.5%) on physical melee attack
+[127,1,51,5,0,1,0,0],
 ]

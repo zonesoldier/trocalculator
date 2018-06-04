@@ -193,7 +193,7 @@ JobEquipItemOBJ = [
 
 SyuzokuOBJ = ["Formless","Undead","Brute","Plant","Insect","Fish","Demon","Demi-Human","Angel","Dragon"];
 ZokuseiOBJ = ["<b><font color='#A8A682'>Neutral</font></b>","<b><font color='blue'>Water</font></b>","<b><font color='brown'>Earth</font></b>","<b><font color='red'>Fire</font></b>","<b><font color='green'>Wind</font></b>","<b><font color='#7B2488'>Poison</font></b>","<b><font color='#CDCD40'>Holy</font></b>","<b><font color='black'>Shadow</font></b>","<b><font color='#9F9E9B'>Ghost</font></b>","<b><font color='#252520'>Undead</font></b>"];
-ZokuseiOBJ2 =["Neutral ","Water ","Earth ","Fire ","Wind ","Poison ","Holy ","Shadow ","Ghost ","Undead "];
+ZokuseiOBJ2 =["Neutral","Water","Earth","Fire","Wind","Poison","Holy","Shadow","Ghost","Undead"];
 SizeOBJ = ["Small","Medium","Large"];
 IjyouOBJ = ["Poison","Stun","Freeze","Curse","Blind","Sleep","Silence","Chaos","Bleeding","Stone","Weapon Break","Armor Break"];
 EnergyCoatOBJ = ["0","6% Reduction","12% Reduction","18% Reduction","24% Reduction","30% Reduction"];

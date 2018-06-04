@@ -36,3 +36,18 @@
 - #Issue #41 Changed Name from Scarf Belt to Belcarf; [ZoneSoldier]
 - #Issue #42 Added Bunch of Carnations; [ZoneSoldier]
 - #Issue #43 Added Buwaya Agimat Tattoo; [ZoneSoldier]
+- #Issue #69 Changed name for Gust of Wind to Book of Gust of Wind; [ZoneSoldier]
+- Issue #71 Added End Sektura; [ZoneSoldier]
+- Issue #72 Added Ygnus Stale; [ZoneSoldier]
+- Issue #74 Added Ancient Dagger; [ZoneSoldier]
+- Issue #75 Added Alchemy Glove; [Zonesoldier]
+- Changed Status 221 in Item.js to search for the right variables in AutoSpellSKill array in skill.js when selecting low chance, medium chance and high chance when auto skill activates as well at % ; [ZoneSoldier]
+- Created these two statements to get Alchemy Gloves status effects to show up.; [ZoneSoldier]
+    if(340 <= nC1 && nC1 <=349)
+    CBIstr += "Increases damage of ["+ ZokuseiOBJ2[nC1-340] + "] magic by "+ nC2 +"%<BR>";
+    //Recieve more Damage of [element] by %
+    if(350 <= nC1 && nC1 <=359)
+    CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
+- Added some items and variables to Skill.js AutoSpellSkill array to show the correct values as well as comments for a few lines to explain what each object is.; [ZoneSoldier]
+- Changed Electric Guitar stats and removed autospells/spell from object; [ZoneSoldier]
+- Changed the spacing in Head.js for elements to give the proper spacing on the website.; [ZoneSoldier]

@@ -135,7 +135,7 @@ ItemOBJ = [
 ,[112,11,0,165,3,"0 / 1",150,33,"Jamadhar","",0,0]
 ,[113,11,0,140,4,"0 / 1",150,75,"Infiltrator","",0,37,50,18,3,9,5,11,2,0]
 ,[114,12,0,85,2,3,60,14,"Book","",0,0]
-,[115,12,0,90,3,"0 / 3",75,27," Gust of Wind","",0,20,4,0]
+,[115,12,0,90,3,"0 / 3",75,27," Book of Gust of Wind","",0,20,4,0]
 ,[116,12,0,90,3,"0 / 3",75,27,"Book of Billows","",0,20,1,0]
 ,[117,12,0,90,3,"0 / 3",75,27,"Book of Blazing Sun","",0,20,3,0]
 ,[118,12,0,90,3,"0 / 3",75,27,"Book of Mother Earth","",0,20,2,0]
@@ -471,7 +471,7 @@ ItemOBJ = [
 ,[448,999,0,3,0,0,30,0,"Aniversary Hat","",0,7,2,13,2,14,2,0]
 ,[449,999,0,0,0,0,10,0,"Christmas Ring","",0,6,1,0]
 ,[450,50,0,2,0,0,40,50,"Tiger Mask","","",1,3,13,100,193,1,0]
-,[451,14,0,110,4,0,180,70,"Electric Guitar","",0,20,4,2,1,4,2,220,9,221,9,0]
+,[451,14,0,110,4,0,180,70,"Electric Guitar","",0,20,4,5,5,4,4,3,4,0]
 ,[452,51,0,0,0,0,10,0,"Takius Blindfold","",0,0]
 ,[453,50,81,5,0,1,30,65,"Coif [1]","","<b>Mid and Upper Headgear</b>",14,100,0]
 ,[454,64,0,0,0,0,0,0,"The Sign","",0,80,5,89,5,0]
@@ -1658,7 +1658,14 @@ ItemOBJ = [
 ,[1613,64,0,0,0,1,10,1,"Cat Hand Glove","","A souvenir from Malangdo, just by equpping it will give you a happy mood.",3,1,2,1,6,1,0]
 ,[1614,64,0,0,0,0,10,1,"Buwaya Agimat Tattoo","","Agimat Tattoo with a huge Alligator pattern. It is told that the one who owns this tattoo will possess extreme power.",89,7,73,-8,0]
 ,[1615,64,0,0,0,0,10,0,"Bunch of Carnations","","	A carnation bouquet given as gifts to mothers.",7,3,0]
+,[1616,7,0,255,4,1,190,95,"End Sektura","","An axe made of artic ice.<br>Chance of inflicting Curse status when dealing physical damage. Risk of targeting yourself.<br>Indestructible (except in upgrade attempts).",20,1,0]
+,[1617,7,0,250,4,1,190,95,"Ygnus Stale","","A large axe made by a blacksmith from the fires of a volcano.<br>Chance of inflicting Bleeding status when dealing physical damage.<br>Risk of targeting yourself.",20,3,0]
+,[1618,1,0,107,4,0,60,93,"Ancient Dagger","","A dagger used in ancient rituals, it feels as though it holds a mysterious power.<br>When dealing physical or magical damage there's a low chance to receive the Curse status.",89,10,14,100,76,5,0]
+,[1619,64,0,1,0,1,10,93,"Alchemy Glove","","Magic gloves made for handling corrosive chemicals, smells a bit like charcoal.",4,1,19,2,343,10,221,127,351,25,0]
 ];
+
+//Test code for finding the values in Skill.js AutoSpellSkill
+//,[1620,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,17,0]
 
 /*
   ZoneSoldier - 6/2/208
@@ -1786,6 +1793,19 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += wNAME1[nC1] + wIS + nC2 +"%<BR>";
 	if(17 <= nC1 && nC1 <=19)
 		CBIstr += wNAME1[nC1] + wIS + nC2 +"<BR>";
+    /*ZoneSoldier - 6/3/2018
+      Elemental Weapon: 20,0 = Neutral
+      0 = Neutral
+      1 = Water
+      2 = Earth
+      3 = Fire
+      4 = Wind
+      5 = Poison
+      6 = Holy
+      7 = Shadow
+      8 = Ghost
+      9 = Undead
+    */
 	if(20 == nC1)
 		CBIstr += ZokuseiOBJ[nC2] +" Element Weapon<BR>";
 	if(22 == nC1){
@@ -1804,15 +1824,35 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Increases physical damage against bosstype monsters by "+ nC2 +"%<BR>";
 	if(27 <= nC1 && nC1 <=29)
 		CBIstr += "Increases physical damage against [" + SizeOBJ[nC1-27] +"] size monsters by "+ nC2 +"%<BR>";
-    //Increase damage against Race monsters
-    //37 = DemiHuman
+    /*ZoneSoldier - 6/3/2018
+      Increase damage against Race monsters: 30,5 = Increase physical damage against [formless] + 5%
+      30 = Formless
+      31 = Undead
+      32 = Brute
+      33 = Plant
+      34 = Insect
+      35 = Fish
+      36 = Demon
+      37 = Demi-Human
+      38 = Angel
+      39 = Dragon
+    */
 	if(30 <= nC1 && nC1 <=39)
 		CBIstr += "Increases physical damage against [" + SyuzokuOBJ[nC1-30] +"] race monsters by "+ nC2 +"%<BR>";
 	if(40 <= nC1 && nC1 <=49)
 		CBIstr += "Increases physical damage against [" + ZokuseiOBJ[nC1-40] +"] element monsters by "+ nC2 +"%<BR>";
-  /*
-    Decrease damage from race
-    57 =  Demihuman
+  /*ZoneSoldier - 6/3/2018
+    Decrease damage from race: 50,5 = Decrease damage from [Formless] + 5%
+    50 = Formless
+    51 = Undead
+    52 = Brute
+    53 = Plant
+    54 = Insect
+    55 = Fish
+    56 = Demon
+    57 =  Demi-Human
+    58 = Angel
+    59 = Dragon
   */
 	if(50 <= nC1 && nC1 <=59){
 		if(nC2 > 0)
@@ -1820,11 +1860,18 @@ function Item_Setumei(nC1,nC2)
 		else
 			CBIstr += "Increases damage from [" + SyuzokuOBJ[nC1-50] +"] race monsters by "+ (-1 * nC2) +"%<BR>";
 	}
-  /*
-    Elemental Resistance
+  /*ZoneSoldier - 6/3/2018
+    Elemental Resistance: 60,5 = [Neutral] element resistance + 5%
     60 = Neutral
+    61 = Water
+    62 = Earth
+    63 = Fire
+    64 = Wind
+    65 = Poison
+    66 = Holy
     67 = Shadow
     68 = Ghost
+    69 = Undead
   */
 	if(60 <= nC1 && nC1 <=69){
 		if(nC1 == 60){
@@ -1852,7 +1899,7 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Critical Damage +"+ nC2 +"%<BR>";
 	if(71 == nC1)
 		CBIstr += "Reflect Melee Physical Attacks by "+ nC2 +"%<BR>";
-    /*
+    /*ZoneSoldier - 6/3/2018
       Casting Time %
       73,10 = Casting time +10%
       73,-10 = Casting Time -10%
@@ -1875,9 +1922,8 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Adjusts your resistance to ranged attacks by "+ wIS + nC2 +"%<BR>";
 	if(79 == nC1)
 		CBIstr += "Adjusts your resistance to normal monsters by "+ wIS + nC2 +"%<BR>";
-    /*
-      Increase Damage on all monsters Boss/NonBoss
-      80,10 =
+    /*ZoneSoldier - 6/3/2018
+      Increase Damage on all monsters Boss/NonBoss by %
     */
 	if(80 == nC1)
 		CBIstr += "Physical damage "+ wIS + nC2 +"% [versus Normal/Boss/Guardian]<BR>";
@@ -1898,7 +1944,7 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "ATK"+ wIS + nC2 +"%<BR>";
 	if(88 == nC1)
 		CBIstr += "MATK"+ wIS + nC2 +"% (Staff Type)<BR>";
-//Increase MATK by %
+    //Increase MATK by %
   if(89 == nC1)
 		CBIstr += "MATK"+ wIS + nC2 +"%<BR>";
 	if(91 == nC1)
@@ -1939,14 +1985,14 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Armor becomes "+ ZokuseiOBJ[nC2] +" element<BR>";
 	if(212 <= nC1 && nC1 <= 215)
 		CBIstr += wNAME1[nC1 -210] + wIS + nC2 +"<BR>";
-    /*
+    /*ZoneSoldier - 6/3/2018
       Allows usage of the skill
       Refer to Skill.js Each number after 220
       220,1 = Basic attack
     */
 	if(220 == nC1)
 		CBIstr += "Allows usage of the skill ["+ SkillOBJ[InsertSkill[nC2][2]][2] +"]Lv "+ InsertSkill[nC2][3] +"<BR>";
-    /*
+    /*ZoneSoldier - 6/3/2018
       When Performing an action it will activate a skill
       221,6 = When performing a ATK based attack, there's a 10 % chance to cast the skill [Lightning Bolt]Lv 3
     */
@@ -1954,11 +2000,17 @@ function Item_Setumei(nC1,nC2)
 		wNAME99 = [0,"When performing a ATK based attack, ","When performing a short-range ATK based attack, ","When performing a long-range ATK based attack, ","When performing a magical attack, ","When attacking, ","When recieving ATK based damage, ","When recieving short-range ATK based damage, ","When recieving long-range ATK based damage, ","When recieving magical damage, ","When recieving ATK based or magical damage, "];
 		wNAME98 = ["low","medium","high"];
 		CBIstr += wNAME99[AutoSpellSkill[nC2][5]] +"there's a ";
-		if(AutoSpellSkill[nC2][4] == 0)
-			CBIstr += wNAME98[1];
-		else
+    //Checks the 6th line in the AutoSpellSKill array to see if its name should be wName98
+		if(AutoSpellSkill[nC2][6] == 0)
+			CBIstr += wNAME98[0];
+    else if(AutoSpellSkill[nC2][6] == 1)
+      CBIstr += wNAME98[1];
+    else if(AutoSpellSkill[nC2][6] == 2)
+      CBIstr += wNAME98[2];
+    //If the AutoSpellSKill 4th spot is greater than 0 give it a %
+		else if(AutoSpellSkill[nC2][4] > 0)
 			CBIstr += AutoSpellSkill[nC2][4] + " %";
-		CBIstr += " chance to cast the skill ["+ SkillOBJ[AutoSpellSkill[nC2][2]][2] +"]Lv "+ AutoSpellSkill[nC2][3] +"<BR>";
+		  CBIstr += " chance to cast the skill ["+ SkillOBJ[AutoSpellSkill[nC2][2]][2] +"]Lv "+ AutoSpellSkill[nC2][3] +"<BR>";
 	}
 	if(290 == nC1)
 		CBIstr += "On (all?) monsters, ignore "+ nC2 +"% DEF<BR>";
@@ -1980,6 +2032,25 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "On " + SyuzokuOBJ[nC1-320] +" race monster, +"+ nC2 +"% Critical Damage<BR>";
 	if(330 <= nC1 && nC1 <=339)
 		CBIstr += wIS + nC2 +"% damage from "+ ZokuseiOBJ[nC1-330] +" element monsters<BR>";
+    /*ZoneSoldier - 6/3/2018
+      Increase Damage of [Element] magic by %
+      Example: 343,5 = Increase Damge of [Fire] magic by 5%
+      440 = Neutral
+      441 = Water
+      442 = Earth
+      443 = Fire
+      444 = Wind
+      445 = Poison
+      446 = Holy
+      447 = Shadow
+      448 = Ghost
+      449 = Undead
+    */
+  if(340 <= nC1 && nC1 <=349)
+    CBIstr += "Increases damage of ["+ ZokuseiOBJ2[nC1-340] + "] magic by "+ nC2 +"%<BR>";
+    //Recieve more Damage of [element] by %
+  if(350 <= nC1 && nC1 <=359)
+    CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
 	if(5000 <= nC1 && nC1 <= 6999)
 		CBIstr += "["+ SkillOBJ[nC1 -5000][2] +"] damage"+ wIS + nC2 +"%<BR>";
     /*
