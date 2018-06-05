@@ -32,7 +32,7 @@ ItemOBJ = [
 ,[9,1,1,105,3,"2 / 3",70,24,"Gladius","",0,0]
 ,[10,1,1,118,3,"1 / 2",80,24,"Damascus","",0,194,1,0]
 ,[11,1,1,50,4,0,70,36,"Moonlight Dagger","","Regain 3 SP with each attack",16,10,0]
-,[12,1,1,90,4,0,50,36,"Fortune Sword","",0,6,5,11,20,0]
+,[12,1,0,90,4,0,50,36,"Fortune Sword","","A knife with a gold handle that is said to bring great fortune to whoever holds it.",6,5,11,20,0]
 ,[13,1,108,140,4,"0 / 1",60,36,"Assassin Dagger","",0,20,7,12,2,15,20,16,15,0]
 ,[14,1,1,140,4,"0 / 1",80,36,"Sucsamad","",0,42,10,44,10,194,1,0]
 ,[15,1,1,180,4,0,80,36,"Grimtooth","",0,9,10,11,5,24,2,0]
@@ -1510,7 +1510,7 @@ ItemOBJ = [
 ,[1478,61,1001,5,0,1,60,22,"Round Buckler","",0,0]
 ,[1479,61,0,4,0,1,30,22,"Silver Guard","",0,19,-1,0]
 ,[1480,61,1051,7,0,1,130,90,"Rosa Shield","",0,0]
-,[1481,8,71,175,3,2,150,90,"Carga Mace","",0,0]
+,[1481,8,1001,175,3,2,150,90,"Carga Mace","","Its name means 'Great Echo' in the Manuk tribe language, a rugged heavy mace with a sharp edge on one side.",0,0]
 ,[1482,11,122,180,3,1,120,90,"Dulga","",0,0]
 ,[1483,60,1051,11,0,1,450,90,"Ebone Armor","",0,0]
 ,[1484,60,1000,5,0,1,40,22,"Puente Robe","","Potion Pitcher effectiveness increased by + 3%",73,-1,91,3,0]
@@ -1610,44 +1610,44 @@ ItemOBJ = [
 ,[1566,63,0,4,0,0,0,40,"Eden Group Boots III","","Boots that are provided only for members of the Eden Group. These are designed to fit comfortably throughout long-walks.<br />Impossible to refine this item.",75,14,76,6,0]
 ,[1567,63,0,4,0,0,0,60,"Eden Group Boots IV","","Boots that are provided only for members of the Eden Group. These are designed to fit comfortably throughout long-walks.<br />Impossible to refine this item.",75,14,76,6,3,1,2,1,0]
 ,[1568,10,0,82,2,0,0,26,"Eden Group Bow I","","A bow that is made by the Eden Group. It's been remodeled for beginning Archers.<br /><br />Impossible to refine this item.",0]
-,[1569,10,0,120,2,0,0,40,"Eden Group Bow II","","A bow that is made by the Eden Group. It's been remodeled for beginning Archers.<br /><br />Impossible to refine this item.",0]
-,[1570,10,0,140,3,0,0,60,"Eden Group Bow III","","A bow that is made by the Eden Group. It's been remodeled for beginning Archers.<br /><br />Impossible to refine this item.",0]
-,[1571,1,0,124,2,0,0,26,"Eden Group Dagger I","","A practical dagger that is made by the Eden Group. This dagger is very useful for beginning adventurers.<br />Impossible to refine this item.",89,5,0]
-,[1572,1,0,158,2,0,0,40,"Eden Group Dagger II","","A practical dagger that is made by the Eden Group. This dagger is very useful for beginning adventurers.<br />Impossible to refine this item.",89,7,0]
-,[1573,1,0,165,3,0,0,60,"Eden Group Dagger II","","A practical dagger that is made by the Eden Group. This dagger is very useful for beginning adventurers.<br/><br />Impossible to refine this item.",89,10,0]
+,[1569,10,0,120,2,0,0,40,"Eden Group Bow II","","A rich bow that is made by the Eden Group. It is suitable for intermediates who have handled a bow before.<br /><br />Impossible to refine this item.",0]
+,[1570,10,0,140,3,0,0,60,"Eden Group Bow III","","A rich bow that is made by the Eden Group. It is suitable for advanced level adventurers who know how to handle a bow.<br /><br />Impossible to refine this item.",0]
+,[1571,1,0,124,2,0,0,26,"Eden Group Dagger I","","A practical dagger that is made by the Eden Group. This dagger is very useful for beginning adventurers.<br />Impossible to refine this item.",89,5,8,10,0]
+,[1572,1,0,158,2,0,0,40,"Eden Group Dagger II","","A practical dagger that is made by the Eden Group. It's suitable for an intermediate who has handled a dagger before.<br />Impossible to refine this item.",89,7,8,10,0]
+,[1573,1,0,165,3,0,0,60,"Eden Group Dagger III","","A practical dagger that is made by the Eden Group. It's suitable for those who have experience handling daggers.<br/>Impossible to refine this item.",89,10,8,10,0]
 ,[1574,12,0,135,3,0,0,60,"Eden Group Dictonary I","","A book that is made by the Eden Group. It is suitable for those who have more advanced experience handling magic books.<br />Impossible to refine this item.",89,15,0]
-,[1575,14,0,150,3,0,0,60,"Eden Group Guitar I","","A book that is made by the Eden Group. It is suitable for those who have more advanced experience handling magic books.<br />Impossible to refine this item.",0]
+,[1575,14,0,150,3,0,0,60,"Eden Group Guitar I","","An instrument that is made by the Eden Group. It is suitable for those who have more advanced experience as Bards.<br />Impossible to refine this item.",0]
 ,[1576,50,0,1,0,0,0,12,"Eden Group Hat","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.<br />Impossible to refine this item.",0]
 ,[1577,50,0,1,1,0,0,60,"Eden Group Hat II","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.<br/><br/>When dealing physical damage there's a high chance that for 5 seconds you will gain ATK + 10.<br/><br/>When dealing magic damage there's a high chance that for 5 seconds you will gain MATK + 10.<br /><br />Impossible to refine this item.",0]
-,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.<br />Impossible to refine this item.",89,15,0]
-,[1579,12,0,155,3,0,0,60,"Eden Group Katar I","","A katar that is made by the Eden Group. It is suitable for those who have more advanced experience handling katars.<br />Impossible to refine this item.",10,5,0]
-,[1580,12,0,155,3,0,0,60,"Eden Group Knuckle I","","A claw that is made by the Eden Group. It is suitable for those who have more advanced experience as Champions.<br />Impossible to refine this item.",12,10,0]
-,[1581,8,0,142,2,0,0,26,"Eden Group Mace I","","A beginner's mace that is made exclusively by the Eden Group.<br /><br />Impossible to refine this item.",0]
-,[1582,8,0,163,2,0,0,40,"Eden Group Mace II","","A mace that is made by the Eden Group.<br /><br />Impossible to refine this item.",0]
-,[1583,8,0,172,3,0,0,60,"Eden Group Mace III","","A mace that is made by the Eden Group. It's suitable for an experienced mace wielder.<br />Impossible to refine this item.",0]
+,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.<br />Impossible to refine this item.",89,15,,8,10,0]
+,[1579,12,0,155,3,0,0,60,"Eden Group Katar I","","A katar that is made by the Eden Group. It is suitable for those who have more advanced experience handling katars.<br />Impossible to refine this item.",10,5,8,10,0]
+,[1580,12,0,155,3,0,0,60,"Eden Group Knuckle I","","A claw that is made by the Eden Group. It is suitable for those who have more advanced experience as Champions.<br />Impossible to refine this item.",12,10,8,10,0]
+,[1581,8,0,142,2,0,0,26,"Eden Group Mace I","","A beginner's mace that is made exclusively by the Eden Group.<br /><br />Impossible to refine this item.",8,10,0]
+,[1582,8,0,163,2,0,0,40,"Eden Group Mace II","","A mace that is made by the Eden Group.<br /><br />Impossible to refine this item.",8,10,0]
+,[1583,8,0,172,3,0,0,60,"Eden Group Mace III","","A mace that is made by the Eden Group. It's suitable for an experienced mace wielder.<br />Impossible to refine this item.",8,10,0]
 ,[1584,62,0,3,0,0,0,12,"Eden Group Manteau","","A manteau which is only for Eden Group members. It is designed to flatter anyone's backside.<br />Impossible to refine this item.",60,10,0]
 ,[1585,62,0,4,0,0,0,60,"Eden Group Manteau II","","A manteau which is only for Eden Group members. It is designed to flatter anyone's backside.<br />Impossible to refine this item.",60,10,0]
 ,[1586,17,0,40,2,0,0,26,"Eden Group Revolver I","","A revolver that is made by the Eden Group. This is easy for beginning Gunslingers to weild.<br />Impossible to refine this item.",8,-5,0]
 ,[1587,17,0,60,2,0,0,40,"Eden Group Revolver II","","A revolver that is made by the Eden Group. It's suitable for an intermediate gun handler.<br />Impossible to refine this item.",8,-5,0]
 ,[1588,17,0,76,3,0,0,60,"Eden Group Revolver III","","A revolver that is made by the Eden Group. It's suitable for an advanced gun handler.<br />Impossible to refine this item.",8,-5,0]
-,[1589,2,0,147,2,0,0,26,"Eden Group Saber I","","A one-handed sword that is made by the Eden Group. A weapon that can be used by anyone easily.<br />Impossible to refine this item.",0]
-,[1590,2,0,170,2,0,0,40,"Eden Group Saber II","","A one-handed sword that is made by the Eden Group. A weapon that can be used by anyone easily.<br />Impossible to refine this item.",0]
-,[1591,2,0,185,3,0,0,60,"Eden Group Saber III","","A one-handed sword that is made by the Eden Group. It's suitable for an experienced sword handler.<br />Impossible to refine this item.",0]
-,[1592,3,0,162,2,0,0,26,"Eden Group Slayer I","","A Two-Handed Sword that is made by the Eden Group for a beginner Swordman.<br /><br />Impossible to refine this item.",0]
-,[1593,3,0,185,2,0,0,40,"Eden Group Slayer II","","A Two-Handed Sword that is made by the Eden Group. It is suitable for intermediates who have more experience handling Two-Handed Swords.<br />Impossible to refine this item.",0]
-,[1594,3,0,200,3,0,0,60,"Eden Group Slayer III","","A Two-Handed Sword that is made by the Eden Group. It is suitable for those who have more advanced experience handling Two-Handed Swords.<br />Impossible to refine this item.",0]
-,[1595,4,0,165,3,0,0,60,"Eden Group Spear I","","A spear that is made by the Eden Group. It is suitable for those who have more advanced experience handling spears.<br />Impossible to refine this item.",0]
+,[1589,2,0,147,2,0,0,26,"Eden Group Saber I","","A one-handed sword that is made by the Eden Group. A weapon that can be used by anyone easily.<br />Impossible to refine this item.",8,10,0]
+,[1590,2,0,170,2,0,0,40,"Eden Group Saber II","","A one-handed sword that is made by the Eden Group. It's suitable for an intermediate sword handler.<br />Impossible to refine this item.",8,10,0]
+,[1591,2,0,185,3,0,0,60,"Eden Group Saber III","","A one-handed sword that is made by the Eden Group. It's suitable for an experienced sword handler.<br />Impossible to refine this item.",8,10,0]
+,[1592,3,0,162,2,0,0,26,"Eden Group Slayer I","","A Two-Handed Sword that is made by the Eden Group for a beginner Swordman.<br /><br />Impossible to refine this item.",8,10,0]
+,[1593,3,0,185,2,0,0,40,"Eden Group Slayer II","","A Two-Handed Sword that is made by the Eden Group. It is suitable for intermediates who have more experience handling Two-Handed Swords.<br />Impossible to refine this item.",8,10,0]
+,[1594,3,0,200,3,0,0,60,"Eden Group Slayer III","","A Two-Handed Sword that is made by the Eden Group. It is suitable for those who have more advanced experience handling Two-Handed Swords.<br />Impossible to refine this item.",8,10,0]
+,[1595,4,0,165,3,0,0,60,"Eden Group Spear I","","A spear that is made by the Eden Group. It is suitable for those who have more advanced experience handling spears.<br />Impossible to refine this item.",8,10,0]
 ,[1596,9,0,60,2,0,0,26,"Eden Group Staff I","","A staff that is made by the Eden Group. A basic item for a beginning Mage.<br />Impossible to refine this item.",89,15,4,1,0]
 ,[1597,9,0,60,2,0,0,40,"Eden Group Staff II","","A staff that is made by the Eden Group. A basic item for an intermediate Mage.<br />Impossible to refine this item.",89,15,4,2,0]
 ,[1598,9,0,60,2,0,0,60,"Eden Group Staff III","","A staff that is made by the Eden Group. An advanced item for an experienced magic practitioner.<br />Impossible to refine this item.",89,16,4,3,0]
-,[1599,7,0,250,3,0,0,60,"Eden Group Two Handed Axe I","","An axe that is made by the Eden Group. It is suitable for those who have more advanced experience handling Two-Handed Axes.<br /><br />Impossible to refine this item.",0]
+,[1599,7,0,250,3,0,0,60,"Eden Group Two Handed Axe I","","An axe that is made by the Eden Group. It is suitable for those who have more advanced experience handling Two-Handed Axes.<br /><br />Impossible to refine this item.",8,10,0]
 ,[1600,60,0,4,0,0,0,12,"Eden Group Uniform I","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br />Impossible to refine this item.",13,100,14,10,0]
 ,[1601,60,0,6,0,0,0,26,"Eden Group Uniform II","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br />Impossible to refine this item.",13,200,14,20,0]
 ,[1602,60,0,8,0,0,0,40,"Eden Group Uniform III","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br />Impossible to refine this item.",13,300,14,30,19,5,0]
 ,[1603,60,0,10,0,0,0,60,"Eden Group Uniform IV","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.<br />Impossible to refine this item.",13,500,14,50,19,5,1,1,5,1,4,1,0]
 ,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.<br />Impossible to refine this item.",0]
-,[1605,50,0,2,0,1,0,10,"Entweihen Hairband","","It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/><br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK<br />Impossible to refine this item.",4,1,5,1,89,1,0]
 //End of Eden Gear
+,[1605,50,0,2,0,1,0,10,"Entweihen Hairband","","It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/><br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK<br />Impossible to refine this item.",4,1,5,1,89,1,0]
 ,[1606,50,0,4,0,1,40,0,"Legionaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0]
 ,[1607,51,0,2,0,1,50,50,"Lude Mask","","A mask which resembles a Lude. However, you will never be as awesome as a real Lude.",17,1,89,2,57,1,0]
 ,[1608,50,0,4,0,0,20,30,"Xmas Rudolph Hairband","","A Christmas hairband. Rudolf's excited mind for christmas is dwelled on it.<br/>You will feel like running faster.",1,3,5,2,6,3,2,3,12,5,0]
@@ -1658,10 +1658,12 @@ ItemOBJ = [
 ,[1613,64,0,0,0,1,10,1,"Cat Hand Glove","","A souvenir from Malangdo, just by equpping it will give you a happy mood.",3,1,2,1,6,1,0]
 ,[1614,64,0,0,0,0,10,1,"Buwaya Agimat Tattoo","","Agimat Tattoo with a huge Alligator pattern. It is told that the one who owns this tattoo will possess extreme power.",89,7,73,-8,0]
 ,[1615,64,0,0,0,0,10,0,"Bunch of Carnations","","	A carnation bouquet given as gifts to mothers.",7,3,0]
-,[1616,7,0,255,4,1,190,95,"End Sektura","","An axe made of artic ice.<br>Chance of inflicting Curse status when dealing physical damage. Risk of targeting yourself.<br>Indestructible (except in upgrade attempts).",20,1,0]
-,[1617,7,0,250,4,1,190,95,"Ygnus Stale","","A large axe made by a blacksmith from the fires of a volcano.<br>Chance of inflicting Bleeding status when dealing physical damage.<br>Risk of targeting yourself.",20,3,0]
+,[1616,7,1001,255,4,1,190,95,"End Sektura","","An axe made of artic ice.<br>Chance of inflicting Curse status when dealing physical damage. Risk of targeting yourself.<br>Indestructible (except in upgrade attempts).",20,1,0]
+,[1617,7,1001,250,4,1,190,95,"Ygnus Stale","","A large axe made by a blacksmith from the fires of a volcano.<br>Chance of inflicting Bleeding status when dealing physical damage.<br>Risk of targeting yourself.",20,3,0]
 ,[1618,1,0,107,4,0,60,93,"Ancient Dagger","","A dagger used in ancient rituals, it feels as though it holds a mysterious power.<br>When dealing physical or magical damage there's a low chance to receive the Curse status.",89,10,14,100,76,5,0]
 ,[1619,64,0,1,0,1,10,93,"Alchemy Glove","","Magic gloves made for handling corrosive chemicals, smells a bit like charcoal.",4,1,19,2,343,10,221,127,351,25,0]
+,[1620,62,0,2,0,0,40,95,"Loki's Muffler","","<br>A red scarf worn out from long use.<br>Unrefineable",2,1,1083,5,0]
+,[]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
@@ -1839,6 +1841,20 @@ function Item_Setumei(nC1,nC2)
     */
 	if(30 <= nC1 && nC1 <=39)
 		CBIstr += "Increases physical damage against [" + SyuzokuOBJ[nC1-30] +"] race monsters by "+ nC2 +"%<BR>";
+/*
+      [Kato] - 6/4/2018
+      Increase damage from element: 40,5 = Increase damage from [Neural] + 5%
+      40 = Neural
+      41 = Water
+      42 = Earth
+      43 = Fire
+      44 = Wind
+      45 = Poison
+      46 = Holy
+      47 = Shadow
+      48 = Ghost
+      49 = Undead
+    */
 	if(40 <= nC1 && nC1 <=49)
 		CBIstr += "Increases physical damage against [" + ZokuseiOBJ[nC1-40] +"] element monsters by "+ nC2 +"%<BR>";
   /*ZoneSoldier - 6/3/2018
@@ -2051,6 +2067,9 @@ function Item_Setumei(nC1,nC2)
     //Recieve more Damage of [element] by %
   if(350 <= nC1 && nC1 <=359)
     CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
+    //Incease Damage of skill by %
+  if(1000 <= nC1 && nC1 <=1439)
+    CBIstr += "Increases damage inflicted by skill " + SkillOBJ[nC1-1000][2] + " " + nC2 + " %<b>";
 	if(5000 <= nC1 && nC1 <= 6999)
 		CBIstr += "["+ SkillOBJ[nC1 -5000][2] +"] damage"+ wIS + nC2 +"%<BR>";
     /*
