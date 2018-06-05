@@ -471,7 +471,7 @@ ItemOBJ = [
 ,[448,999,0,3,0,0,30,0,"Aniversary Hat","",0,7,2,13,2,14,2,0]
 ,[449,999,0,0,0,0,10,0,"Christmas Ring","",0,6,1,0]
 ,[450,50,0,2,0,0,40,50,"Tiger Mask","","",1,3,13,100,193,1,0]
-,[451,14,0,110,4,0,180,70,"Electric Guitar","",0,20,4,5,5,4,4,3,4,0]
+,[451,50,0,3,0,1,20,10,"Bone Hat","","A weird corsage with a skeleton motif that symbolizes the death.<br>Add a chance of gaining 'Immortal Heart' each time a DemiHuman monster is killed.",19,3,177,5,37,5,57,5,0]
 ,[452,51,0,0,0,0,10,0,"Takius Blindfold","",0,0]
 ,[453,50,81,5,0,1,30,65,"Coif [1]","","<b>Mid and Upper Headgear</b>",14,100,0]
 ,[454,64,0,0,0,0,0,0,"The Sign","",0,80,5,89,5,0]
@@ -1405,7 +1405,7 @@ ItemOBJ = [
 ,[1378,15,117,190,4,3,70,0,"Belmont Whip","","<font color='blue'>SQI</font>",2,4,5,5,6,4,20,3,0] //custom TalonRO SQI
 ,[1379,1,50,150,4,3,150,0,"Blade of Angels","","<font color='blue'>SQI</font>",1,10,3,10,8,40,15,20,14,250,0] //custom TalonRO SQI
 ,[1380,6,119,250,4,3,600,0,"Djinn","","<font color='blue'>SQI</font>",3,3,5,5,6,5,20,2,194,1,0] //custom TalonRO SQI
-,[1381,50,0,3,0,1,20,10,"Bone Hat","","A weird corsage with a skeleton motif that symbolizes the death.<br>Add a chance of gaining 'Immortal Heart' each time a DemiHuman monster is killed.",19,3,177,5,37,5,57,5,0]
+,[1381,14,0,110,2,0,180,70,"Electric Guitar","","<font color='blue'>SQI</font>",0,20,4,5,5,4,4,3,4,0]
 ,[1382,8,109,250,4,3,150,0,"Evangelist","","<font color='blue'>SQI</font>",4,5,5,5,20,1,194,1,220,50,0] //custom TalonRO SQI
 ,[1383,63,150,4,0,1,150,0,"Eversong Greaves","","Movement speed increased (same as Increase AGI)<BR><font color='blue'>SQI</font><BR>[Taekwon]<BR>MaxHP + 10%<BR>HIT + 25<BR>[Taekwon Master]<BR>MaxHP + 20%",15,10,19,10,0] //custom TalonRO SQI
 ,[1384,9,143,225,4,3,150,0,"Ghostdancer Staff","","<font color='blue'>SQI</font>",4,5,5,5,89,15,0] //custom TalonRO SQI
