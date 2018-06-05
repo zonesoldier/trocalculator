@@ -2925,6 +2925,23 @@ function StPlusCalc()
 	//custom TalonRO pet Pinguicula + Poring Cake Hat combo
 	if(n_A_PassSkill8[0]==57 && EquipNumSearch(1059))
 		wSPCall += 1;
+
+	//[Custom TalonRO - 6/4/2018 - Pet Pandaring + Panda Hat combo] [Kato]
+	if(n_A_PassSkill8[0]==101 && EquipNumSearch(202))
+		wSPC_INT += 4;
+
+	//[Custom TalonRO - 6/4/2018 - Pet Galapago + Galapago Hat combo] [Kato]
+	if(n_A_PassSkill8[0]==93 && EquipNumSearch(502))
+		wSPC_LUK += 4;
+
+	//[Custom TalonRO - 6/4/2018 - Pet Jejeling + Baseball Cap combo] [Kato]
+	if(n_A_PassSkill8[0]==119 && EquipNumSearch(787))
+		wSPC_DEX += 4;
+
+	//[Custom TalonRO - 6/4/2018 - Pet Wild Rider  + Drooping Cat combo] [Kato]
+	if(n_A_PassSkill8[0]==131 && EquipNumSearch(355))
+		wSPC_DEX += 3;
+
 	//custom TalonRO Gentlemen Fez, Refine Rate 8-10 +1dex, Refine Rate 10 +1dex
 	if (EquipNumSearch(1531)){
 		if (n_A_HEAD_DEF_PLUS >= 8)
@@ -6813,6 +6830,9 @@ for(i=0;i<=15;i++)
 n_A_PassSkill8 = new Array();
 for(i=0;i<=27;i++)
 	n_A_PassSkill8[i] = 0;
+
+	n_A_PassSkill8[3] = 7; //[Custom TalonRO - 6/4/2018 - Fixed the default value for BaseEXP to 8x] [Kato]
+	n_A_PassSkill8[7] = 7; //[Custom TalonRO - 6/4/2018 - Fixed the default value for JobEXP to 8x] [Kato]
 
 n_A_PassSkill9 = new Array();
 for(i=0;i<=52;i++)
