@@ -32,7 +32,7 @@ ItemOBJ = [
 ,[9,1,1,105,3,"2 / 3",70,24,"Gladius","",0,0]
 ,[10,1,1,118,3,"1 / 2",80,24,"Damascus","",0,194,1,0]
 ,[11,1,1,50,4,0,70,36,"Moonlight Dagger","","Regain 3 SP with each attack",16,10,0]
-,[12,1,0,90,4,0,50,36,"Fortune Sword","","A knife with a gold handle that is said to bring great fortune to whoever holds it.",6,5,11,20,0]
+,[12,1,0,90,4,0,50,24,"Fortune Sword","","A knife with a gold handle that is said to bring great fortune to whoever holds it.",6,5,11,20,0]
 ,[13,1,108,140,4,"0 / 1",60,36,"Assassin Dagger","",0,20,7,12,2,15,20,16,15,0]
 ,[14,1,1,140,4,"0 / 1",80,36,"Sucsamad","",0,42,10,44,10,194,1,0]
 ,[15,1,1,180,4,0,80,36,"Grimtooth","",0,9,10,11,5,24,2,0]
