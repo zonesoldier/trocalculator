@@ -1405,7 +1405,7 @@ ItemOBJ = [
 ,[1378,15,117,190,4,3,70,0,"Belmont Whip","","<font color='blue'>SQI</font>",2,4,5,5,6,4,20,3,0] //custom TalonRO SQI
 ,[1379,1,50,150,4,3,150,0,"Blade of Angels","","<font color='blue'>SQI</font>",1,10,3,10,8,40,15,20,14,250,0] //custom TalonRO SQI
 ,[1380,6,119,250,4,3,600,0,"Djinn","","<font color='blue'>SQI</font>",3,3,5,5,6,5,20,2,194,1,0] //custom TalonRO SQI
-,[1381,14,0,190,4,3,100,0,"Electric Guitar (SQI)","","<font color='blue'>SQI</font>",3,4,4,4,5,5,20,4,0] //custom TalonRO SQI
+,[1381,50,0,3,0,1,20,10,"Bone Hat","","A weird corsage with a skeleton motif that symbolizes the death.<br>Add a chance of gaining 'Immortal Heart' each time a DemiHuman monster is killed.",19,3,177,5,37,5,57,5,0]
 ,[1382,8,109,250,4,3,150,0,"Evangelist","","<font color='blue'>SQI</font>",4,5,5,5,20,1,194,1,220,50,0] //custom TalonRO SQI
 ,[1383,63,150,4,0,1,150,0,"Eversong Greaves","","Movement speed increased (same as Increase AGI)<BR><font color='blue'>SQI</font><BR>[Taekwon]<BR>MaxHP + 10%<BR>HIT + 25<BR>[Taekwon Master]<BR>MaxHP + 20%",15,10,19,10,0] //custom TalonRO SQI
 ,[1384,9,143,225,4,3,150,0,"Ghostdancer Staff","","<font color='blue'>SQI</font>",4,5,5,5,89,15,0] //custom TalonRO SQI
@@ -1866,7 +1866,7 @@ function Item_Setumei(nC1,nC2)
     54 = Insect
     55 = Fish
     56 = Demon
-    57 =  Demi-Human
+    57 = Demi-Human
     58 = Angel
     59 = Dragon
   */
