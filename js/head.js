@@ -191,6 +191,107 @@ JobEquipItemOBJ = [
 [0, 1,145, 59, 83,145,999],
 ];
 
+/*
+	JobEquipItemOBJ values:
+
+		0 = all jobs
+		1 = every job except novice
+
+		50 = novice
+		51 = swordman class
+		52 = thief class
+		53 = acolyte class
+		54 = archer class
+		55 = mage class
+		56 = merchant class
+		58 = ninja
+		59 = gunslinger
+
+		61 = knight, crusader
+		62 = assassin, rogue
+		63 = priest, monk
+		64 = hunter, bard, dancer
+		65 = wizard, sage, soul linker
+		66 = blacksmith, alchemist
+
+		70 = swordman class, merchant class
+		71 = swordman class, mage class, acolyte class, merchant class, soul linker
+		72 = swordman class, merchant class, thief class
+		73 = acolyte class, merchant class
+		74 = swordman class, acolyte class, merchant class, thief class, bard/dancer
+		75 = swordman class, archer class, merchant class, thief class
+		76 = archer class, rogue
+		77 = mage class, acolyte class, soul linker
+		78 = swordman class, acolyte class, merchant class, thief class
+		79 = 2nd class or above
+		80 = thief, hunter, rogue
+		81 = priest, assassin
+		82 = rebirth 2nd class or above
+		83 = swordman class, archer class, merchant class, thief class, taekwon, star gladiator, gunslinger
+		84 = swordman class, merchant class, thief class, taekwon, star gladiator
+		85 = swordman class, acolyte class, merchant class, thief class, taekwon, star gladiator
+		86 = swordman class, merchant class, taekwon, star gladiator
+		87 = swordman class, star gladiator
+		88 = hunter, rogue
+		89 = mage class, acolyte class, archer class, soul linker
+		90 = novice, swordman class, merchant class, thief, assassin
+		91 = swordman class, merchant class, thief class, star gladiator, ninja
+
+		100 = novice ONLY
+		101 = swordman ONLY
+		102 = thief ONLY
+		103 = acolyte ONLY
+		104 = archer ONLY
+		105 = mage ONLY
+		106 = merchant ONLY
+
+		107 = knight
+		108 = assassin
+		109 = priest
+		110 = hunter
+		111 = wizard
+		112 = blacksmith
+		113 = crusader
+		114 = rogue
+		115 = monk
+		116 = bard
+		117 = dancer
+		118 = sage
+		119 = alchemist
+
+		120 = high novice
+		121 = lord knight
+		122 = assassin cross
+		123 = high priest
+		124 = sniper
+		125 = high wizard
+		126 = whitesmith
+		127 = paladin
+		128 = stalker
+		129 = champion
+		130 = clown
+		131 = gypsy
+		132 = professor
+		133 = creator
+
+		141 = taekwon ONLY
+		142 = star gladiator
+		143 = soul linker
+		144 = ninja
+		145 = gunslinger
+		150 = taekwon, star gladiator //for SQI
+
+	Unless otherwise stated, upper classes are included.
+		Example 1: 109 = priest //includes high priest
+		Example 2: 80 = thief, hunter, rogue //does not include assassin
+	Adding 1000 makes it rebirth classes only.
+		Example 1: 1 = every job except novice, 1001 = every rebirth job except high novice
+		Example 2: 51 = swordman class, 1051 = trans swordman class
+	If a class cannot equip an item type, even if the JobEquipItemOBJ value includes that class, it will not show up in the calculator
+		For example: the JobEquipItemOBJ value of Jamadhar (id:112) is 0 (all classes)
+		Since only assassins can equip katars, the item will only be an option for assassins in the calculator since no other classes can choose a katar as the weapon
+*/
+
 SyuzokuOBJ = ["Formless","Undead","Brute","Plant","Insect","Fish","Demon","Demi-Human","Angel","Dragon"];
 ZokuseiOBJ = ["<b><font color='#A8A682'>Neutral</font></b>","<b><font color='blue'>Water</font></b>","<b><font color='brown'>Earth</font></b>","<b><font color='red'>Fire</font></b>","<b><font color='green'>Wind</font></b>","<b><font color='#7B2488'>Poison</font></b>","<b><font color='#CDCD40'>Holy</font></b>","<b><font color='black'>Shadow</font></b>","<b><font color='#9F9E9B'>Ghost</font></b>","<b><font color='#252520'>Undead</font></b>"];
 ZokuseiOBJ2 =["Neutral","Water","Earth","Fire","Wind","Poison","Holy","Shadow","Ghost","Undead"];
