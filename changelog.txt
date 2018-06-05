@@ -55,3 +55,5 @@
 - Fixed mobdb link to tRO's website; [Kato]
 - Issue #4 Added all Evolved/New Pets(67) and fixed some old ones; [Kato]
 - Issue #8 Fixed the behavior for the combo in Aditional Effects for exp, setted the default Base/Job EXP for 8x; [Kato]
+[Update 6/5/2018]
+- Added Bone Hat in Electric Guitar (old normal) ID;[zoneSoldier/Kato];
