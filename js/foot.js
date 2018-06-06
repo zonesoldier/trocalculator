@@ -140,11 +140,11 @@ function StAllCalc()
 
 	n_A_Arrow = eval(A_Arrow.value);
 
-	n_A_HEAD_DEF_PLUS = eval(A_HEAD_DEF_PLUS.value);
-	n_A_BODY_DEF_PLUS = eval(A_BODY_DEF_PLUS.value);
-	n_A_LEFT_DEF_PLUS = eval(A_LEFT_DEF_PLUS.value);
-	n_A_SHOULDER_DEF_PLUS = eval(A_SHOULDER_DEF_PLUS.value);
-	n_A_SHOES_DEF_PLUS = eval(A_SHOES_DEF_PLUS.value);
+	n_A_HEAD_DEF_PLUS = ((A_HEAD_DEF_PLUS.value != "") ? eval(A_HEAD_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
+	n_A_BODY_DEF_PLUS = ((A_BODY_DEF_PLUS.value != "") ? eval(A_BODY_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
+	n_A_LEFT_DEF_PLUS = ((A_LEFT_DEF_PLUS.value != "") ? eval(A_LEFT_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
+	n_A_SHOULDER_DEF_PLUS = ((A_SHOULDER_DEF_PLUS.value != "") ? eval(A_SHOULDER_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
+	n_A_SHOES_DEF_PLUS = ((A_SHOES_DEF_PLUS.value != "") ? eval(A_SHOES_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
 	n_A_DEFplus = n_A_HEAD_DEF_PLUS + n_A_BODY_DEF_PLUS + n_A_LEFT_DEF_PLUS + n_A_SHOULDER_DEF_PLUS + n_A_SHOES_DEF_PLUS;
 
 	n_A_ActiveSkill = eval(A_ActiveSkill.value);
@@ -174,7 +174,7 @@ function StAllCalc()
 
 	n_A_WeaponLV = ItemOBJ[n_A_Equip[0]][4];
 	n_A_Weapon_ATK = ItemOBJ[n_A_Equip[0]][3];
-	n_A_Weapon_ATKplus = eval(A_Weapon_ATKplus.value);
+	n_A_Weapon_ATKplus = ((A_Weapon_ATKplus.value != "") ? eval(A_Weapon_ATKplus.value) : 0); // Changed after index revamp, default value to 0 [Kato]
 
 	W_REF = 0;
 	n_A_WeaponLV_seirenATK = 0;
@@ -1199,6 +1199,19 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_totalDEF = 0;
 		n_A_DEFVIT = 0;}
 
+		//[Grimtooth also reduces Vit Def by 1/2] [Kato]
+		if(EquipNumSearch(15)){
+			n_A_DEFVIT -= Math.floor(n_A_DEFVIT*.50);
+		}
+		//[Masamune also reduces Vit Def by 1/3] [Kato]
+		if(EquipNumSearch(47)){
+			n_A_DEFVIT -= Math.floor(n_A_DEFVIT*.67);
+		}
+	//[Spike 0/2 also reduces Vit Def by 1/3] [Kato]
+		if(EquipNumSearch(420)){
+			n_A_DEFVIT -= Math.floor(n_A_DEFVIT*.67);
+		}
+
 	myInnerHtml("A_totalDEF",n_A_totalDEF + "+" + n_A_DEFVIT,0);
 
 	n_A_VITDEF = new Array();
@@ -1253,7 +1266,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		for(i=0;i<=2;i++)
 			n_A_VITDEF[i] -= Math.floor(n_A_VITDEF[i] * (n_A_PassSkill8[12] - 2) * 5 / 100);
 	}
-
 
 	n_A_MDEF = n_tok[19];
 
