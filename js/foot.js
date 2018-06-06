@@ -2724,6 +2724,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[159] += 50 * CardNumSearch(176);
 		}
 	}
+
 	if(n_A_PassSkill8[0] == 42 && EquipNumSearch(1218))
 		n_tok[151] += 10;
 
@@ -2798,6 +2799,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[71] += 5;
 			n_tok[71] += n_A_SHOULDER_DEF_PLUS * 2;
 		}
+	}
+
+//[Custom TalonRO - 2018-06-05 - Detale + Aegir Set (all of them) combo, immunity to Freeze [Kato.]
+	if(CardNumSearch(532) && EquipNumSearch(1557)) {
+			n_tok[152] = 100;
+	}
+
+	//[Custom TalonRO = 2018-06-05 - Parus Card adds 2% for Acolyte-based jobs] [Kato]
+	if(CardNumSearch(536) && (n_A_JOB == 3 || n_A_JOB == 9 || n_A_JOB == 23 || n_A_JOB == 15 || n_A_JOB == 33)) {
+		n_tok[91] += 1 * Math.floor(n_A_HEAD_DEF_PLUS/2);
 	}
 
 	ClickB_Enemy();
@@ -3371,6 +3382,11 @@ function StPlusCalc()
 		wSPC_AGI -= (n_A_IJYOU[1] + 2);
 	if(n_A_IJYOU[3])
 		wSPC_LUK = -1 * n_A_LUK;
+
+		//[Custom TalonRO - 2018-06-05 - Siorava gives LUK+3 * refine for Merchant and Above Classes] [Kato]
+		if(CardNumSearch(535) && n_A_HEAD_DEF_PLUS > 3 && (n_A_JobSearch() == 6 || n_A_JobSearch() == 12 || n_A_JobSearch() == 26 || n_A_JobSearch() == 19 || n_A_JobSearch() == 33)) {
+			wSPC_LUK += Math.floor(n_A_HEAD_DEF_PLUS/3) * 1;
+		}
 
 	n_A_STR += wSPC_STR;
 	n_A_AGI += wSPC_AGI;
@@ -4496,7 +4512,6 @@ function KakutyouKansuu(){
 		if(EquipNumSearch(1104) && EquipNumSearch(1107) && EquipNumSearch(1110)){H_Bonus += 0.03;}//kvm set[3%]
 		if(EquipNumSearch(959) && EquipNumSearch(965) && EquipNumSearch(968)){H_Bonus += 0.1;}//merc bg set gear[10%]
 		/*if(EquipNumSearch(958) && EquipNumSearch(965) && EquipNumSearch(968)){H_Bonus += 0.1;}//sword bg set gear[10%][Impossivel usar lawl] mas devia adicionar uma key de on/off disto*/
-
 		//slims não são afectadas por rank bonus em pitch nem heal stuff como bacso card
 
 		H_HEALS = 1+irp*.1;//Increase Recuperative Power (10%xlv da skill que se tem, max 10)
