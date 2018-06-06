@@ -439,6 +439,7 @@ SkillOBJ = [
 [437,10,"Ground Drift"],
 [438,10,"Final Strike [Max HP-1]"],
 [439,5,"Tarot Card of Fate"],
+[440,1,"Wink of Charm"],
 ];
 
 JobSkillPassOBJ = [
@@ -732,5 +733,6 @@ AutoSpellSkill = [
 [126,1,83,1,0.5,2], //custom TalonRO Krishna Sonic Blow lv 1 (small/0.5%) on physical melee attack
 [127,1,51,5,0,1,0,0],
 [128,1,27,1,5,4],
-[129,1,27,1,5,1]
+[129,1,27,1,5,1],
+[130,1,440,1,0,1,0,1] //When dealing physical damage there is a chance to trigger Wink of Charm.
 ]

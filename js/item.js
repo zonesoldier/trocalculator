@@ -1484,7 +1484,7 @@ ItemOBJ = [
 //custom TalonRO [Update 2013-10-06]
 ,[1454,15,131,170,3,1,80,90,"Stem Whip","","MATK +50<br>When using Scream, add a 3% chance of casting Level 2 Wide Sleep<br>For every refine above +6, decrease SP cost of all skills by 2%",12,5,0]
 ,[1455,3,1051,280,3,0,340,90,"Alca Bringer","","Every 2 refines + 3% ASPD",0]
-,[1456,3,1101,280,3,0,40,90,"Chrome Metal Two-Handed Sword","",0,2,3,15,-10,194,1,0]
+,[1456,3,1051,280,3,0,40,90,"Chrome Metal Two-Handed Sword","","A cold blue color sword crafted from the other world mineral Bradium.",0,2,3,15,-10,194,1,0]
 ,[1457,10,1054,90,3,1,170,90,"Mystic Bow","","When using Arrow Shower, add a 5% chance of casting Level 2 Dragon Fear<br>Reduces the SP cost of all skills by 10%",4,4,5041,30,0]
 ,[1458,8,133,150,3,1,100,90,"Red Ether Bag","","MATK + 90",5248,25,0]
 ,[1459,61,127,4,0,1,250,90,"Imperial Guard","","Each refine above +6 increases [Shield Chain] attack power by an additional 2%",19,5,5324,5,0]
@@ -1664,7 +1664,13 @@ ItemOBJ = [
 ,[1619,64,0,1,0,1,10,93,"Alchemy Glove","","Magic gloves made for handling corrosive chemicals, smells a bit like charcoal.",4,1,19,2,343,10,221,127,351,25,0]
 ,[1620,50,0,2,0,1,0,10,"Entweihen Hairband","","It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/>",4,1,5,1,89,1,0]
 ,[1621,100,0,0,0,0,0,0,"Entweihen Hairband + Dark Thorn Staff","","<br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK",0]
-];
+,[1622,15,131,150,4,0,100,92,"Rosevine","","A whip created from a magically enchanted rose that radiates the smell of roses.",7,2,10,5,89,10,221,130,0]
+,[1623,2,0,180,3,0,220,90,"Chrome Metal Sword","","A cold blue dagger crafted from the other world mineral Bradium.<Br>Indestructible (except in upgrade attempts).",2,1,15,-5,0]
+,[1624,1,0,160,4,0,50,92,"Scarletto Nail","","Has a chance of activating Stone Curse status while physically attacking and increases the chance with each refine level.",89,5,0]
+,[1625,1,0,160,4,0,50,92,"Aztoe Nail","","A dagger that shines blue and enchanted with binding magic.<Br>Has a chance of activating Freeze status while physically attacking and increases the chance with each refine level.",89,5,0]
+,[1626,63,1001,3,0,1,50,85,"Enhanced Variant Shoes","","Shoes that seem to be wrong somewhere. The intention of the maker to perfect the shoes can be seen but it seems to be a failure.",15,12,16,12,0]
+,[1627,11,122,170,3,1,120,90,"Agent Katar","","Add 1 HIT for every 2 LUK.",0]
+]
 
 //Test code for finding the values in Skill.js AutoSpellSkill
 //,[1620,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,17,0]
@@ -1682,7 +1688,7 @@ ItemOBJ = [
    Footgear: 63 = Footgear
    Accessory: 64 = Accessory
    Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
-   After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP,14 MSP,15 MHP,16 MSP,17 ATK,18 DEF,19 MDEF
+   After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP= +/-,14 MSP= +/-,15 MHP = %,16 MSP = %,17 ATK,18 DEF,19 MDEF
 */
 
 ItemMax = ItemOBJ.length -1;
