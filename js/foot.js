@@ -1915,7 +1915,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	//Entweihen Hairband - Eden equipment - zonesoldier - 6/2/2018
 	//Increase MATK + 1% per upgrade past 5th upgrade
-	if(n_A_HEAD_DEF_PLUS >= 5 && EquipNumSearch(1605))
+	if(n_A_HEAD_DEF_PLUS >= 5 && EquipNumSearch(1620))
 	{
 		w += 1;
 	}
@@ -2022,6 +2022,17 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_MATK[0] += 5;
 		n_A_MATK[2] += 5;
 	}
+	/*
+		Custom =[Entweihen Hairband]+[Dark Thorn Staff] combo
+		[Refine Rate 5~10 Dark Thorn Staff]
+  	For every 2 refines on the Dark Thorn Staff, add +10 MATK
+		[ZoneSoldier] - 2018/05/06
+	*/
+	if(n_A_Weapon_ATKplus >= 5 && EquipNumSearch(1621))
+		if(n_A_Weapon_ATKplus * 2)
+			n_A_MATK[0] += 10;
+			n_A_MATK[2] += 10;
+
 
 	if(n_A_PassSkill7[2]){
 		n_A_MATK[0] += 10;
