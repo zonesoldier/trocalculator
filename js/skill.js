@@ -731,4 +731,6 @@ AutoSpellSkill = [
 [125,1,260,2,10,1], //custom TalonRO Cannon Spear lv 2 Head Crush (10%) on physical attack
 [126,1,83,1,0.5,2], //custom TalonRO Krishna Sonic Blow lv 1 (small/0.5%) on physical melee attack
 [127,1,51,5,0,1,0,0],
+[128,1,27,1,5,4],
+[129,1,27,1,5,1]
 ]
