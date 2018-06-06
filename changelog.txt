@@ -2,6 +2,19 @@
 - Issue #128: Added GMC Bosses; [Natwarra/Kato]
 - Issue #123: Added Valhalla Seal; [Kato]
 - Added new 2 Regions for mobs, Seals and GMC; [Kato] 
+- Issue #135: Proofreading
+		Jeweled Sword: updated item description
+		Gaia Sword: updated item description
+		Saber: name (Sabre -> Saber)
+		Cutlus: weight (30 -> 90)
+		Mysteltainn: attack (160 -> 170)
+		Katzbalger: effect (VIT+10 -> VIT+5)
+		Javelin: name (Javalin -> Javelin)
+		Gungnir: required lvl (48 -> 4)
+		Halberd: name (Hallberd -> Halberd) //to match itemdb
+		Axe: jobid (50 -> 0)
+		Orcish Axe: jobid (72 -> 0)
+		War Axe: attack (145 -> 140)
 
 [Update 2018-06-05]
 - Added Bone Hat in Electric Guitar (old normal) ID; [zoneSoldier/Kato];
