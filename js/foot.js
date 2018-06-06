@@ -2028,10 +2028,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
   	For every 2 refines on the Dark Thorn Staff, add +10 MATK
 		[ZoneSoldier] - 2018/05/06 
 	*/
-	if(n_A_Weapon_ATKplus >= 5 && EquipNumSearch(1621))
-		if(n_A_Weapon_ATKplus * 2)
-			n_A_MATK[0] += 10 * Math.floor((n_A_HEAD_DEF_PLUS - 4)/2);
-			n_A_MATK[2] += 10 * Math.floor((n_A_HEAD_DEF_PLUS - 4)/2);
+	if(n_A_Weapon_ATKplus >= 5 && EquipNumSearch(1621)) {
+			n_A_MATK[0] += 10 * Math.floor((n_A_Weapon_ATKplus - 4)/2);
+			n_A_MATK[2] += 10 * Math.floor((n_A_Weapon_ATKplus - 4)/2);
+	}
 
 
 	if(n_A_PassSkill7[2]){
