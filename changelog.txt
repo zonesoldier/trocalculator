@@ -1,3 +1,8 @@
+[Update 2018-06-06]
+- Issue #128: Added GMC Bosses; [Natwarra/Kato]
+- Issue #123: Added Valhalla Seal; [Kato]
+- Added new 2 Regions for mobs, Seals and GMC; [Kato] 
+
 [Update 2018-06-05]
 - Added Bone Hat in Electric Guitar (old normal) ID; [zoneSoldier/Kato];
 - Issue #85: Added Wild Rider Card; [Kato]
