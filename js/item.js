@@ -1334,8 +1334,8 @@ ItemOBJ = [
 ,[1311,100,0,0,0,0,0,0,"Dark Knight Set [Type A]",0,0,89,10,4,5,58,10,0]
 ,[1312,50,0,5,0,0,300,80,"Blue Night Cap","","ATK + 5%",89,5,0]
 ,[1313,52,0,1,0,0,10,90,"Spiked Scarf","","",3,1,0]  //custom TalonRO removed: 37,1,57,1,
-//,[1314,6,50,75,3,"0 / 4",150,3,"Orcish Axe","",0,0] //duplicate to be replaced
-//,[1315,6,72,38,1,"3 / 4",80,3,"Axe","",0,0] //duplicate to be replaced
+,[1314,6,50,75,3,"0 / 4",150,3,"Orcish Axe","",0,0] //duplicate to be replaced
+,[1315,6,72,38,1,"3 / 4",80,3,"Axe","",0,0] //duplicate to be replaced
 ,[1316,51,0,1,0,0,10,50,"Hockey Mask","","<b>Mid and Low Headgear</b>",37,5,0]
 ,[1317,50,0,4,0,1,25,25,"Jaguar Hat","","Allows usage of the skill [Loud Exclamation]Lv 1<br><b>Upper, Mid and Low Headgear</b>",19,2,0]
 ,[1318,50,0,5,0,0,25,1,"I Love China","","",5,3,57,10,0]
