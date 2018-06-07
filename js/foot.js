@@ -1415,6 +1415,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(654))
 		n_A_HIT += Math.floor(SU_AGI / 10);
 
+	/*
+		ZoneSoldier - 2018-06-06
+		Add 1 HIT for every 2 LUK.
+	*/
+	if(EquipNumSearch(1627)){
+		n_A_HIT += Math.floor(SU_LUK / 2);
+	}
+
 	if(n_A_ActiveSkill==324)
 		n_A_HIT += 20;
 
@@ -1845,6 +1853,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		else{
 			if(n_A_PassSkill2[12]){P_ATK += Math.floor(P_ATK*0.05);}
 		}
+		//Maiden Hat - ZoneSoldier - 6/6/2018
+		//Increase ATK + 1% per upgrade past 7.
+	if(n_A_HEAD_DEF_PLUS > 7 && EquipNumSearch(1628)){
+		p_ATK += 1 * (n_A_HEAD_DEF_PLUS - 7);
+	}
 
 	//custom TalonRO Chewing Bubblegum +1% atk
 	if(EquipNumSearch(1395))
@@ -1946,11 +1959,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(565)){
 		w += 1;}
 
-	//Entweihen Hairband - Eden equipment - zonesoldier - 6/2/2018
+	//Entweihen Hairband - zonesoldier - 6/2/2018
 	//Increase MATK + 1% per upgrade past 5th upgrade
 	if(n_A_HEAD_DEF_PLUS > 5 && EquipNumSearch(1620))
 	{
 		w += 1 * (n_A_HEAD_DEF_PLUS - 5);
+	}
+	//Maiden Hat - ZoneSoldier - 6/6/2018
+	//Increase MATK + 1% per upgrade past 7.
+	if(n_A_HEAD_DEF_PLUS > 7 && EquipNumSearch(1628)){
+		w += 1 * (n_A_HEAD_DEF_PLUS - 7);
 	}
 
 	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
@@ -2069,14 +2087,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		Custom =[Entweihen Hairband]+[Dark Thorn Staff] combo
 		[Refine Rate 5~10 Dark Thorn Staff]
   	For every 2 refines on the Dark Thorn Staff, add +10 MATK
-		[ZoneSoldier] - 2018/05/06 
+		[ZoneSoldier] - 2018/05/06
 	*/
 	if(n_A_Weapon_ATKplus >= 5 && EquipNumSearch(1621)) {
 			n_A_MATK[0] += 10 * Math.floor((n_A_Weapon_ATKplus - 4)/2);
 			n_A_MATK[2] += 10 * Math.floor((n_A_Weapon_ATKplus - 4)/2);
 	}
-
-
 	if(n_A_PassSkill7[2]){
 		n_A_MATK[0] += 10;
 		n_A_MATK[2] += 10;
@@ -2859,6 +2875,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_Weapon_ATKplus >= 6)
 			n_tok[317] += 5;
 	}
+	//Maiden Hat - ZoneSoldier - 6/6/2018
+	//Additional Heal effectiveness + 1% per upgrade past 7.
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1628)){
+		n_tok[317] =+ 1 * (n_A_HEAD_DEF_PLUS - 7);
+	}
+
 	if(EquipNumSearch(1083)){
 		if(n_A_Weapon_ATKplus >= 6)
 			n_tok[317] += 5 + (2 * (n_A_Weapon_ATKplus - 5));
