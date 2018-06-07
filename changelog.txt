@@ -13,13 +13,14 @@
 		Gungnir: required lvl (48 -> 4)
 		Halberd: name (Hallberd -> Halberd) //to match itemdb
 		Axe: jobid (50 -> 0)
+		Orcish Axe: jobid (72 -> 0)
 		War Axe: attack (145 -> 140)
 - Issue #67 Added Enhanced Variant Shoes; [ZoneSoldier]
 - Issue #78 Added Rosevine whip item, added Wink of Charm to skillOBJ and created a AutoSpellSKill # with comments; [ZoneSoldier]
 - Issue #80 Added Scarletto Nail; [ZoneSoldier]
 - Issue #82 Added Chrome Metal Sword [ZoneSoldier]
 - Issue #83 Changed a value Chrome Metal Two-Handed Sword; [ZoneSoldier]
--
+- Issue #79 Added Agent Katar[ZoneSoldier]
 
 [Update 2018-06-05]
 - Added Bone Hat in Electric Guitar (old normal) ID; [zoneSoldier/Kato];
