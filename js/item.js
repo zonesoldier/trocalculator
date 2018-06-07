@@ -1670,6 +1670,19 @@ ItemOBJ = [
 ,[1625,1,0,160,4,0,50,92,"Aztoe Nail","","A dagger that shines blue and enchanted with binding magic.<Br>Has a chance of activating Freeze status while physically attacking and increases the chance with each refine level.",89,5,0]
 ,[1626,63,1001,3,0,1,50,85,"Enhanced Variant Shoes","","Shoes that seem to be wrong somewhere. The intention of the maker to perfect the shoes can be seen but it seems to be a failure.",15,12,16,12,0]
 ,[1627,11,122,170,3,1,120,90,"Agent Katar","","Add 1 HIT for every 2 LUK.",0]
+,[1628,50,0,2,0,1,20,20,"Maiden Hat","","An adorable hat which is always worn on the side of head.<br>If the wearer carries an umbrella with this hat on, the wearer will look as if one is going for a picnic.<[Refine Rate 7~10]<br>Additional ATK + 1%<br>Additional MATK +1%<br>Additional Heal effectiveness + 1%",1,1,4,1,19,7,87,2,89,2,91,5,0]
+//Advanced Angel Gear - Set
+,[1629,50,100,6,0,1,30,99,"Advanced Angel's Kiss","","A hair ornament that was kissed by the Super Novice's Guardian Angel.",76,30,0]
+,[1630,63,100,2,0,1,30,99,"Advanced Angel's Reincarnation","","Heavenly sandals worn by the Guardian Angel of Super Novices.",14,500,16,100,0]
+,[1631,62,100,6,0,1,40,99,"Advanced Angelic Cardigan","","Super Novice Guardian Angel's warm and comfortable cardigan.",16,50,0]
+,[1632,61,100,6,0,1,40,99,"Advanced Angelic Guard","","Super Novice Guardian Angel's shield which contains holy power that can nullify evil.",56,5,61,5,62,5,63,5,64,5,65,5,66,5,67,5,68,5,69,5,0]
+,[1633,60,100,8,0,1,60,99,"Advanced Angelic Protection","","Super Novice Guardian Angel's robe.",19,20,0]
+,[1634,100,0,0,0,0,0,0,"Advanced Angels Kiss + Advanced Angelic Cardigan","","",17,10,0]
+,[1635,100,0,0,0,0,0,0,"Advanced Angels Reincarnation + Advanced Angels Kiss","","",89,5,0]
+,[1636,100,0,0,0,0,0,0,"Advanced Angelic Cardigan + Advanced Angelic Protection","","",2,5,9,10,0]
+,[1637,100,0,0,0,0,0,0,"Advanced Angelic Guard + Advanced Angel's Reincarnation","","",7,2,0]
+,[1638,100,0,0,0,0,0,0,"Advanced Angelic Protection + Advanced Angelic Cardigan","","",60,5,0]
+,[1639,100,0,0,0,0,0,0,"Advanced Angelic Protection, Advanced Angel's Reincarnation, Advanced Angelic Guard, Advanced Angelic Cardigan & Advanced Angel's Kiss Equip","","",13,900,14,100,221,131,0]
 ]
 
 //Test code for finding the values in Skill.js AutoSpellSkill
@@ -2207,7 +2220,13 @@ w_SE = [[737,436,475,"NULL"]
 ,[1555,1553,1551,"NULL"] //[Custom TalonRO - 2018-06-02 -Aegir helm + cloak] [Kato]
 ,[1556,1553,1552,"NULL"] //[Custom TalonRO - 2018-06-02 -Aegir helm + armor] [Kato]
 ,[1557,1550,1551,1552,1553,"NULL"] //[Custom TalonRO - 2018-06-02 - All Aegir Set] [Kato]
-,[1621,1620,936,"NULL"] //[Custom TalonRo - 2018-06-02 - Entweihen Hairband + Dark Thorn Staff]
+,[1621,1620,936,"NULL"] //[Custom TalonRO1 - 2018-06-02 - Entweihen Hairband + Dark Thorn Staff [ZoneSoldier]
+,[1634,1629,1631,"NULL"] //Custom TalonRO - 2018-06-06 - Advanced Angels Kiss + Advanced Angelic Cardigan [ZoneSoldier]
+,[1635,1630,1629,"NULL"] //Custom TalonRO - 2018-06-06 - Advanced Angels Reincarnation + Advanced Angels Kiss [ZoneSoldier]
+,[1636,1631,1633,"NULL"] //Custom TalonRO - 2018-06-06 - Advanced Angelic Cardigan + Advanced Angelic Protection [ZoneSoldier]
+,[1637,1632,1630,"NULL"] //Custom TalonRO - 2018-06-06 - Advanced Angelic Guard + Advanced Angel's Reincarnation [ZoneSoldier]
+,[1638,1633,1631,"NULL"] //Custom TalonRO - 2018-06-06 - Advanced Angelic Protection + Advanced Angelic Cardigan [ZoneSoldier]
+,[1639,1633,1630,1632,1631,1629,"NULL"] //Custom TalonRO - 2018-06-06 - Advanced Angelic Protection, Advanced Angel's Reincarnation, Advanced Angelic Guard, Advanced Angelic Cardigan & Advanced Angel's Kiss [ZoneSoldier]
 ];
 SE_MAXnum = w_SE.length -1;
 for(var i=0;i<=SE_MAXnum;i++){

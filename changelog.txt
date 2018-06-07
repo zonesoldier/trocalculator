@@ -17,12 +17,15 @@
 		War Axe: attack (145 -> 140)
 - Issue #134: Fixed some items about Vit Def; [Kato]
 - Issue #135: Added Malangdo Mobs; [Kato]
+-	Issue #37 Added Maiden Hat; [ZoneSoldier]
 - Issue #67 Added Enhanced Variant Shoes; [ZoneSoldier]
 - Issue #78 Added Rosevine whip item, added Wink of Charm to skillOBJ and created a AutoSpellSKill # with comments; [ZoneSoldier]
+- Issue #79 Added Agent Katar[ZoneSoldier]
 - Issue #80 Added Scarletto Nail; [ZoneSoldier]
 - Issue #82 Added Chrome Metal Sword [ZoneSoldier]
 - Issue #83 Changed a value Chrome Metal Two-Handed Sword; [ZoneSoldier]
-- Issue #79 Added Agent Katar[ZoneSoldier]
+- Issues #45,46,47,48,49,103,104,105,106,107 Added Advanced Angelic Full Set and items; [ZoneSoldier]
+
 
 [Update 2018-06-05]
 - Added Bone Hat in Electric Guitar (old normal) ID; [zoneSoldier/Kato];
