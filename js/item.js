@@ -1334,8 +1334,8 @@ ItemOBJ = [
 ,[1311,100,0,0,0,0,0,0,"Dark Knight Set [Type A]",0,0,89,10,4,5,58,10,0]
 ,[1312,50,0,5,0,0,300,80,"Blue Night Cap","","ATK + 5%",89,5,0]
 ,[1313,52,0,1,0,0,10,90,"Spiked Scarf","","",3,1,0]  //custom TalonRO removed: 37,1,57,1,
-,[1314,6,50,75,3,"0 / 4",150,3,"Orcish Axe","",0,0] //duplicate to be replaced
-,[1315,6,72,38,1,"3 / 4",80,3,"Axe","",0,0] //duplicate to be replaced
+,[1314,63,131,4,0,1,30,90,"Dance Shoes","","Reduces SP cost of all skills by 10%",2,1,12,2,0]
+,[1315,5,121,150,4,1,475,93,"Gigantic Lance","","When using Spiral Pierce, knock back your enemies 4 cells<br>When unequipping, you lose 500 sp<br>For every refine above +4, increase ASPD by 1%",12,-10,0]
 ,[1316,51,0,1,0,0,10,50,"Hockey Mask","","<b>Mid and Low Headgear</b>",37,5,0]
 ,[1317,50,0,4,0,1,25,25,"Jaguar Hat","","Allows usage of the skill [Loud Exclamation]Lv 1<br><b>Upper, Mid and Low Headgear</b>",19,2,0]
 ,[1318,50,0,5,0,0,25,1,"I Love China","","",5,3,57,10,0]
@@ -1664,6 +1664,11 @@ ItemOBJ = [
 ,[1619,64,0,1,0,1,10,93,"Alchemy Glove","","Magic gloves made for handling corrosive chemicals, smells a bit like charcoal.",4,1,19,2,343,10,221,127,351,25,0]
 ,[1620,50,0,2,0,1,0,10,"Entweihen Hairband","","It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/>",4,1,5,1,89,1,0]
 ,[1621,100,0,0,0,0,0,0,"Entweihen Hairband + Dark Thorn Staff","","<br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK",0]
+,[1622,9,1053,30,3,1,100,50,"Staff of Thea","","A chance to recover 200 SP after using Heal<br><b>For every two upgrades:</b><br>Increase MATK by 1%",89,15,4,6,3,2,195,1,0]
+,[1623,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
+,[1624,51,54,2,0,0,10,50,"Advanced Binoculars","",0,5,1,25,1,0]
+,[1625,52,81,1,0,0,10,70,"Advanced Assassin Mask","",0,10,1,70,1,0]
+,[1626,51,56,2,0,0,30,50,"Advanced Welding Mask","","<b>Mid and Low Headgear</b>",5,1,6,1,63,10,0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill

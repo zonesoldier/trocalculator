@@ -1120,6 +1120,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(809))
 		n_A_DEFplus -= n_A_HEAD_DEF_PLUS;
 
+	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1
+	if(EquipNumSearch(1623)){
+		n_A_DEF -= Math.floor(SU_VIT / 30);
+	}
+	
 	//custom TalonRO Armor enchant DEF
 	var wHSE = eval(A_HSE.value);
 	if(wHSE){
@@ -1932,6 +1937,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 1 * (n_A_HEAD_DEF_PLUS - 5);
 	}
 
+	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades
+	if(EquipNumSearch(1622)){
+		w += Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+
 	if(EquipNumSearch(1173))
 		w += Math.floor(n_A_Weapon_ATKplus);
 	if(n_A_JOB==14 || n_A_JOB==28){
@@ -2202,6 +2212,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Alca Bringer: +3% ASPD every 2 refines
 	if(EquipNumSearch(1455))
 		w += 3*Math.floor(n_A_Weapon_ATKplus/2);
+
+	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1%
+	if(EquipNumSearch(1315)){
+		if(n_A_Weapon_ATKplus>4){
+			w += n_A_Weapon_ATKplus - 4;
+		}
+	}
 
 	if(SkillSearch(258))
 		w += 30;

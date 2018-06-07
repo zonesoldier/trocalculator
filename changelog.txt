@@ -3,20 +3,28 @@
 - Issue #123: Added Valhalla Seal; [Kato]
 - Added new 2 Regions for mobs, Seals and GMC; [Kato]
 - Issue #135: Proofreading
-		Jeweled Sword: updated item description
-		Gaia Sword: updated item description
-		Saber: name (Sabre -> Saber)
-		Cutlus: weight (30 -> 90)
-		Mysteltainn: attack (160 -> 170)
-		Katzbalger: effect (VIT+10 -> VIT+5)
-		Javelin: name (Javalin -> Javelin)
-		Gungnir: required lvl (48 -> 4)
-		Halberd: name (Hallberd -> Halberd) //to match itemdb
-		Axe: jobid (50 -> 0)
-		Orcish Axe: jobid (72 -> 0)
-		War Axe: attack (145 -> 140)
-	- Issue #134: Fixed some items about Vit Def; [Kato]
-	- Issue #135: Added Malangdo Mobs; [Kato]
+	Jeweled Sword: updated item description
+	Gaia Sword: updated item description
+	Saber: name (Sabre -> Saber)
+	Cutlus: weight (30 -> 90)
+	Mysteltainn: attack (160 -> 170)
+	Katzbalger: effect (VIT+10 -> VIT+5)
+	Javelin: name (Javalin -> Javelin)
+	Gungnir: required lvl (48 -> 4)
+	Halberd: name (Hallberd -> Halberd) //to match itemdb
+	Axe: jobid (50 -> 0)
+	Orcish Axe: jobid (72 -> 0)
+	War Axe: attack (145 -> 140)
+- Issue #134: Fixed some items about Vit Def; [Kato]
+- Issue #135: Added Malangdo Mobs; [Kato]
+- Issue #73: Added Gigantic Lance
+- Issue #77: Added Dance Shoes
+- Issue #137: Replaced duplicate Axe and Orcish Axe in ItemOBJ
+- Issue #76: Added Staff of Thea
+- Issue #58: Added Advanced Binoculars
+- Issue #59: Added Advanced Assassin Mask
+- Issue #60: Added Advanced Welding Mask
+- Issue #61: Added Advanced Safety Ring
 
 [Update 2018-06-05]
 - Added Bone Hat in Electric Guitar (old normal) ID; [zoneSoldier/Kato];
