@@ -439,6 +439,7 @@ SkillOBJ = [
 [437,10,"Ground Drift"],
 [438,10,"Final Strike [Max HP-1]"],
 [439,5,"Tarot Card of Fate"],
+[440,1,"Wink of Charm"],
 ];
 
 JobSkillPassOBJ = [
@@ -730,7 +731,10 @@ AutoSpellSkill = [
 [124,1,40,5,2,5], //custom TalonRO Catapult lv5 Double Strafe (2%) on attacking
 [125,1,260,2,10,1], //custom TalonRO Cannon Spear lv 2 Head Crush (10%) on physical attack
 [126,1,83,1,0.5,2], //custom TalonRO Krishna Sonic Blow lv 1 (small/0.5%) on physical melee attack
-[127,1,51,5,0,1,0,0],
+[127,1,51,5,0,1,0,0], //When performing a ATK based attack, there's a low chance to cast the skill [Fire Bolt]Lv 5
 [128,1,27,1,5,4],
-[129,1,27,1,5,1]
+[129,1,27,1,5,1],
+[130,1,440,1,0,1,0,1], //When dealing physical damage there is a chance to trigger Wink of Charm.
+[131,1,267,2,3,6,0] //When recieving ATK based damage, there's a low chance to cast the skill [Assumptio]Lv 2
 ]
+//ID - Gets called in second spot(221(effect),1(ID)), autocast id = 1 by default, skill Id,Skill Lvl, chance %, attacktype(1atkbased,2shortrange,3longrange,4magical,5attacking,6receivingATKbased,0 by default, 0=low chance, 1=medium chance, 2=high chance)
