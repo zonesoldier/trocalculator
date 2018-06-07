@@ -16,7 +16,7 @@
    Footgear: 63 = Footgear
    Accessory: 64 = Accessory
    Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
-   After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP,14 MSP,15 MHP,16 MSP,17 ATK,18 DEF,19 MDEF
+   After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP,14 MSP,15 MHP%,16 MSP%,17 ATK,18 DEF,19 MDEF
 */
 
 ItemOBJ = [
@@ -339,7 +339,7 @@ ItemOBJ = [
 ,[316,62,84,4,0,"0 / 1",60,0,"Manteau","",0,0]
 ,[317,63,0,0,0,0,0,0,"(No Footgear)","",0,0]
 ,[318,63,1,0,0,0,10,0,"Crystal Pumps","",0,19,10,6,5,0]
-,[319,63,0,5,0,"0 / 1",350,94,"Sleipnir","","Movement speed increased (same as Increase AGI)",15,20,16,20,19,10,76,15,0] //custom TalonRO SQI - added slot
+,[319,63,0,5,0,"0 / 1",150,80,"Sleipnir","","Movement speed increased (same as Increase AGI)",15,20,16,20,19,10,76,15,0] //custom TalonRO SQI - added slot // Fixed weight and lvl required [NattWara]
 ,[320,63,0,1,0,"0 / 1",20,0,"Sandals","",0,0]
 ,[321,63,1,2,0,"0 / 1",40,0,"Shoes","",0,0]
 ,[322,63,1,2,0,"0 / 1",60,0,"High Heels","",0,19,5,0]
@@ -1006,7 +1006,7 @@ ItemOBJ = [
 ,[983,64,56,1,0,0,0,70,"Medal of Honor [Merchant]","","ATK + 5%<BR>Add 1% chance of auto casting Curse on the enemy when attacking",89,5,12,10,13,500,14,50,0]
 ,[984,64,145,1,0,0,0,70,"Sheriff Badge","","ATK + 5%<BR>Add 1% chance of auto casting Blind on the enemy when attacking",89,5,10,10,13,300,14,80,0]
 ,[985,62,1001,4,0,1,70,70,"Naght Sieger Burning Manteau","",0,15,5,89,1,19,2,43,2,0]
-,[986,60,1079,5,0,0,170,70,"Chameleon Armor","","[description translation missing - ItemID: 986]",0]
+,[986,60,1079,5,0,0,170,70,"Chameleon Armor","","A mysterious armor that can change its abilities depending on its owner.<br>Increases HP and SP depending by base level.<br>Adds a chance immune from all magic skill for 2 sec When receiving magical attack.<br><b>[Swordman, Merchant, Thief Class]</b><br>DEF + 3<br><b>[Mage, Archer, Acolyte Class]</b><br>MDEF + 5",0]
 ,[987,60,1079,3,0,1,100,0,"Sprint Mail","","[description translation missing - ItemID: 987]",3,1,75,5,92,3,0]
 ,[988,60,122,4,0,1,30,70,"Gandora","",0,2,1,9,5,12,2,0]
 ,[989,60,1079,5,0,1,100,0,"Armor of Naga","","[description translation missing - ItemID: 989]",19,2,0]
@@ -1189,7 +1189,7 @@ ItemOBJ = [
 ,[1166,7,126,210,4,0,270,75,"Bradium Stone Hammer","","Additional 5% chance to Stun when using the skill Hammer Fall<br>The chance to Stun with Hammer Fall increases by 2% per refine on the weapon",0]
 ,[1167,7,1070,330,3,1,400,50,"Giant Axe","","If user's base Str is 95 or higher: HIT + 10, ASPD + 3 %",5326,15,0]
 ,[1168,9,77,100,4,0,10,70,"Dead Tree Staff","","INT bonus increases if refined past + 6, at the cost of reduced Max HP and Max SP<br><b>[Refine Rate 6]</b><br>INT + 1, MaxHP - 200, MaxSP - 100<br><b>[Refine Rate 7]</b><br>INT + 2, MaxHP - 400, MaxSP - 200<br><b>[Refine Rate 8]</b><br>INT + 3, MaxHP - 600, MaxSP - 300<br><b>[Refine Rate 9]</b><br>INT + 4, MaxHP - 800, MaxSP - 400<br><b>[Refine Rate 10]</b><br>INT + 5, MaxHP - 1000, MaxSP - 500",89,15,4,4,0]
-,[1169,9,1055,30,3,2,50,50,"Lacrima Stick","","<b>For each upgrade:</b><br>MDef +1<br>Increases the damage inflicted with [Storm Gust] by 1%<br><b>[Refine Rate 10]</b><br>Reduces the cast time for [Storm Gust] by 8%",89,15,4,4,0]
+,[1169,9,1055,30,3,2,50,50,"Lacrima Stick","","<b>For each upgrade:</b><br>MDef +1<br>Increases the damage inflicted with [Storm Gust] by 1%<br><b>[Refine Rate 10]</b><br>Reduces the cast time for [Storm Gust] by 8%",89,15,4,4,19,1,0]
 ,[1170,9,1053,30,3,1,50,50,"Croce Staff","","Adds a chance of using [Blessing]Lv 1, or the user's level if its higher, on the target when [Heal] is used",20,6,89,15,4,4,0]
 ,[1171,9,1055,30,4,0,50,50,"Staff Of Bordeaux","","If character has learned [Dragonology], SP Cost is reduced by 1%, INT + 3",89,15,4,2,5,1,0]
 ,[1172,9,55,30,4,0,100,50,"Chronos","","Adds a chance for when dealing magic damage, the user will gain MAtk +12% and SP cost of skills will be increased by 20% for 5 seconds<br><b>For every two upgrades:</b><br> Int +1<br>Max HP +50",4,3,13,300,89,20,195,1,0]
@@ -1416,7 +1416,7 @@ ItemOBJ = [
 ,[1388,10,114,150,4,3,150,0,"Sherwood Bow","","Enable to use [Arrow Crafting]<BR><font color='blue'>SQI</font>",2,5,5,5,0] //custom TalonRO SQI
 ,[1389,9,111,250,4,3,50,0,"Staff of Magi","","<font color='blue'>SQI</font>",4,5,5,5,89,20,20,3,0] //custom TalonRO SQI
 ,[1390,13,115,150,4,3,60,0,"Suiken","","<font color='blue'>SQI</font>",1,5,2,3,5,5,20,1,0] //custom TalonRO SQI
-,[1391,12,118,250,4,3,80,0,"Tome of Ymir","","<font color='blue'>SQI</font>",3,3,4,4,5,5,194,1,0] //custom TalonRO rental
+,[1391,12,118,250,4,3,80,0,"Tome of Ymir","","<font color='blue'>SQI</font>",3,3,4,4,5,5,194,1,0] //custom TalonRO SQI
 //custom TalonRO equip combos
 ,[1392,100,0,0,0,0,0,0,0,0,0,60,25,89,5,0]
 //custom TalonRO etc (low/mid-headgears)
@@ -1696,6 +1696,12 @@ ItemOBJ = [
 ,[1650,50,0,5,0,1,30,0,"Improved Bongun Hat","","<b>If refine > 6:</b><br>Increases damage against [Demon] monster by 10%",56,10,0]
 ,[1651,51,1,2,0,0,20,20,"Improved Opera Phantom Mask","",0,17,5,89,3,0]
 ,[1652,50,1,2,0,1,30,0,"Improved Kitsune Mask","","<b>If refine > 6:</b><br>Perfect Dodge + 4",2,2,6,2,0]
+,[1653,12,132,100,4,2,100,90,"Chilly Spell Book","","The research of a great Sorcerer is detailed in this book. One of the 4 great elemental books (Cold Volume).<br>Add a chance of casting Storm Gust level 2 when doing a physical attack.<br>Each refine increases Cold Bolt and Storm Gust's attack power by 3%, and increases their SP cost by 5.",89,20,5,1,194,1,221,132,0]
+,[1654,50,79,4,0,1,240,70,"Enhanced Hat of the Sun God","","A hat that is said to have been worn by the god of the sun.<br>[Refine Rate 5~6+]<br>ATK + 4, MATK + 1%<br>[Refine Rate 7+]<br>ATK + 6, MATK + 1%<br>[Refine Rate 8+]<br>ATK + 6, MATK + 2%",1,3,4,2,17,10,89,5,0]
+,[1655,50,79,5,0,1,160,74,"Enhanced Helm of Angel","","A wondrous helmet adorned with angel wings that was made by a smithing genius.<br>[Refine Rate 5~6+]<br>AGI + 1, LUK + 1, MDEF + 1<br>[Refine Rate 7+]<br>ASPD + 1",2,1,6,1,19,3,12,5,0]
+,[1656,50,70,5,0,1,240,70,"Enhanced Bone Helm","","An incredibly heavy, yet almost impenetrable helmet constructed of bone.<br>Every refine level past +4 until +8 reduces DEF by 1 and decreases damage received from Neutral Property attacks by another 1%.",60,1,67,-15,0]
+,[1657,50,1,5,0,1,50,70,"Enhanced Corsair","","A flamboyant hat worn only by the strongest of pirates.<br>[Refine Rate 5~7+]<br>Maximum HP + 1%<br>[Refine Rate 8+]<br>Maximum HP + 2%<br>Reduce another 1% damage from Neutral type attacks.",3,1,15,5,60,1,0]
+,[1658,50,0,5,0,1,100,70,"Lord of the Dead Helm","","[Refine Rate 5~10]<br>Increase damage on Boss monster by 1% for every refine.<br><br>[+ Abysmal Knight Card]<br>Increase damage on Boss monster by 5%.<br><br>[Refine Rate 6~10]<br>Receive 1% more damage from all monsters for every refine.",19,5,26,10,77,-5,79,-5,0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
