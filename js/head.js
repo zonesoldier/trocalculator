@@ -3111,7 +3111,7 @@ function BattleMagicCalc(wBMC)
 		
 	//Custom TalonRO - 2018-06-07 - Chilly Spell Book - Storm Gust & Cold Bolt damage +3% per refine [Nattwara]
 	if(n_A_ActiveSkill==54 || n_A_ActiveSkill==131)
-		if(EquipNumSearch(1622))
+		if(EquipNumSearch(1653))
 			wX += (3 * n_A_Weapon_ATKplus);
 		
 	if(n_A_ActiveSkill==37||n_A_ActiveSkill==387){
