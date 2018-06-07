@@ -2730,13 +2730,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1627))
 		n_tok[26] += n_A_HEAD_DEF_PLUS;
 	
-	/*
-	if(EquipNumSearch(1627) && CardNumSearch(31)){
-		n_tok[26] += 5;
-		n_tok[26] += n_A_HEAD_DEF_PLUS;
-	}
-	*/
-
 	if(n_A_HEAD_DEF_PLUS >= 9 && EquipNumSearch(1285)){
 		n_tok[80] += 3;}//libra diadem
 	if(n_A_JOB==14 || n_A_JOB==28)
