@@ -1172,8 +1172,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	}
 	
 	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - +1 DEF each refine past +4 until +8 [Nattwara]
-	if(EquipNumSearch(1656))
-		n_A_DEFplus -= Math.max(n_A_HEAD_DEF_PLUS-4,4);
+	if(EquipNumSearch(1656) && n_A_HEAD_DEF_PLUS > 4)
+		n_A_DEFplus -= Math.min(n_A_HEAD_DEF_PLUS-4,4);
 	
 	//custom TalonRO Armor enchant DEF
 	var wHSE = eval(A_HSE.value);
@@ -2788,7 +2788,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[26] += 5;
 	
 	//Custom TalonRO - 2018-06-07 - Lord of the Dead Helm [1] - Refine 5+ +1% more damage on boss monsters for every refine.  [Nattwara]
-	if(EquipNumSearch(1658))
+	if(EquipNumSearch(1658) && n_A_HEAD_DEF_PLUS > 4)
 		n_tok[26] += n_A_HEAD_DEF_PLUS;
 
 	if(n_A_HEAD_DEF_PLUS >= 9 && EquipNumSearch(1285)){
@@ -2852,15 +2852,15 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[55] += n_A_BODY_DEF_PLUS;
 	
 	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - 1% less damage Neutral element attack for each refine past +4 until +8 [Nattwara]
-	if(EquipNumSearch(1656))
-		n_tok[60] += Math.max(n_A_HEAD_DEF_PLUS-4,4);
+	if(EquipNumSearch(1656) && n_A_HEAD_DEF_PLUS > 4)
+		n_tok[60] += Math.min(n_A_HEAD_DEF_PLUS-4,4);
 	
 	//Custom TalonRO - 2018-06-07 - Enhanced Corsair [1] - 1% less damage Neutral element attack if refine +8 or above [Nattwara]
 	if(EquipNumSearch(1657) && (n_A_HEAD_DEF_PLUS > 7))
 		n_tok[60] += 1;
 	
 	//Custom TalonRO - 2018-06-07 - Lord of the Dead Helm [1] + Abysmal Knight Card - Refine 6+ Receive 1% more damage from all monsters for every refine.  [Nattwara]
-	if(EquipNumSearch(1658) && CardNumSearch(31)) {
+	if(EquipNumSearch(1658) && CardNumSearch(31) && n_A_HEAD_DEF_PLUS > 5) {
 		n_tok[77] -= n_A_HEAD_DEF_PLUS;
 		n_tok[79] -= n_A_HEAD_DEF_PLUS;
 	}

@@ -735,7 +735,7 @@ AutoSpellSkill = [
 [128,1,27,1,5,4],
 [129,1,27,1,5,1],
 [130,1,440,1,0,1,0,1], //When dealing physical damage there is a chance to trigger Wink of Charm.
-[131,1,267,2,3,6,0] //When recieving ATK based damage, there's a low chance to cast the skill [Assumptio]Lv 2
+[131,1,267,2,3,6,0], //When recieving ATK based damage, there's a low chance to cast the skill [Assumptio]Lv 2
 [132,1,131,2,1,1] //custom TalonRO Chilly Spell Book lv 2 Storm Gust (1%) on physical attack [NattWara]
 ]
 //ID - Gets called in second spot(221(effect),1(ID)), autocast id = 1 by default, skill Id,Skill Lvl, chance %, attacktype(1atkbased,2shortrange,3longrange,4magical,5attacking,6receivingATKbased,0 by default, 0=low chance, 1=medium chance, 2=high chance)
