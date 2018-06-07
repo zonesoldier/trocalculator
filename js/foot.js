@@ -1976,7 +1976,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 
-	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
+	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
 	if(EquipNumSearch(1645)){
 		w += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
