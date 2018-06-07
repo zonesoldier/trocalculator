@@ -826,7 +826,7 @@ ItemOBJ = [
 ,[803,50,0,2,0,0,20,45,"Whickebine Black Cat Ears","",0,9,10,10,3,70,10,0] //custom TalonRO
 ,[804,50,0,3,0,0,50,1,"Ship Captain's Hat",0,0,5,1,25,7,13,100,0] //custom TalonRO
 ,[805,51,0,1,0,0,10,70,"Peco Wing Ears","",0,19,2,2,1,0]
-,[806,52,0,0,0,0,10,60,"Gangster Scarf",0,"<b>[Rogue Class]</b><br>Enables the use of the skill [Gangster's Paradise]Lv 1",17,5,0]
+,[806,52,0,0,0,0,10,60,"Gangster Scarf","","<b>[Rogue Class]</b><br>Enables the use of the skill [Gangster's Paradise]Lv 1",17,5,0]
 ,[807,52,0,0,0,0,20,60,"Ninja Scroll","",0,89,1,0]
 ,[808,60,0,5,0,0,100,1,"Angel dress","",0,6,4,193,1,0]
 ,[809,50,0,1,0,1,20,20,"Leaf Hat","","[description translation missing - ItemID: 809]",4,1,0]
@@ -1335,7 +1335,7 @@ ItemOBJ = [
 ,[1312,50,0,5,0,0,300,80,"Blue Night Cap","","ATK + 5%",89,5,0]
 ,[1313,52,0,1,0,0,10,90,"Spiked Scarf","","",3,1,0]  //custom TalonRO removed: 37,1,57,1,
 ,[1314,63,131,4,0,1,30,90,"Dance Shoes","","Reduces SP cost of all skills by 10%",2,1,12,2,0]
-,[1315,5,121,150,4,1,475,93,"Gigantic Lance","","When using Spiral Pierce, knock back your enemies 4 cells<br>When unequipping, you lose 500 sp<br>For every refine above +4, increase ASPD by 1%",12,-10,0]
+,[1315,5,121,150,4,1,475,93,"Gigantic Lance","","When using Spiral Pierce, knock back your enemies 4 cells<br>When unequipping, you lose 500 sp<br><b>For every refine > 4:</b><br>ASPD + 1%",12,-10,0]
 ,[1316,51,0,1,0,0,10,50,"Hockey Mask","","<b>Mid and Low Headgear</b>",37,5,0]
 ,[1317,50,0,4,0,1,25,25,"Jaguar Hat","","Allows usage of the skill [Loud Exclamation]Lv 1<br><b>Upper, Mid and Low Headgear</b>",19,2,0]
 ,[1318,50,0,5,0,0,25,1,"I Love China","","",5,3,57,10,0]
@@ -1669,6 +1669,14 @@ ItemOBJ = [
 ,[1642,51,54,2,0,0,10,50,"Advanced Binoculars","",0,5,1,25,1,0]
 ,[1643,52,81,1,0,0,10,70,"Advanced Assassin Mask","",0,10,1,70,1,0]
 ,[1644,51,56,2,0,0,30,50,"Advanced Welding Mask","","<b>Mid and Low Headgear</b>",5,1,6,1,63,10,0]
+,[1645,50,55,2,0,1,30,0,"Improved Mage Hat","","<b>For every 2 refines:</b><br>MATK +1%<br><b>For every refine > 6:</b><br>INT + 1",4,2,14,150,0]
+,[1646,50,77,6,0,1,50,50,"Improved Magician Hat","","<b>For every refine:</b><br>MSP + 5<br><b>For every refine > 6:</b><br>DEX + 1",5,1,2,1,14,50,0]
+,[1647,50,1,3,0,1,10,0,"Improved Joker Jester","","<b>If refine > 6:</b><br>Critical damage + 5%",6,2,19,5,0]
+,[1648,50,0,3,0,1,10,0,"Improved Bunny Band","","<b>If refine > 6:</b><br>CRIT + 5",6,2,0]
+,[1649,50,0,5,0,1,30,0,"Improved Munak Hat","","<b>If refine > 6:</b><br>Increases damage against [Undead] monster by 10%",51,10,0]
+,[1650,50,0,5,0,1,30,0,"Improved Bongun Hat","","<b>If refine > 6:</b><br>Increases damage against [Demon] monster by 10%",56,10,0]
+,[1651,51,1,2,0,0,20,20,"Improved Opera Phantom Mask","",0,17,5,89,3,0]
+,[1652,50,1,2,0,1,30,0,"Improved Kitsune Mask","","<b>If refine > 6:</b><br>Perfect Dodge + 4",2,2,6,2,0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
