@@ -140,11 +140,11 @@ function StAllCalc()
 
 	n_A_Arrow = eval(A_Arrow.value);
 
-	n_A_HEAD_DEF_PLUS = eval(A_HEAD_DEF_PLUS.value);
-	n_A_BODY_DEF_PLUS = eval(A_BODY_DEF_PLUS.value);
-	n_A_LEFT_DEF_PLUS = eval(A_LEFT_DEF_PLUS.value);
-	n_A_SHOULDER_DEF_PLUS = eval(A_SHOULDER_DEF_PLUS.value);
-	n_A_SHOES_DEF_PLUS = eval(A_SHOES_DEF_PLUS.value);
+	n_A_HEAD_DEF_PLUS = ((A_HEAD_DEF_PLUS.value != "") ? eval(A_HEAD_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
+	n_A_BODY_DEF_PLUS = ((A_BODY_DEF_PLUS.value != "") ? eval(A_BODY_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
+	n_A_LEFT_DEF_PLUS = ((A_LEFT_DEF_PLUS.value != "") ? eval(A_LEFT_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
+	n_A_SHOULDER_DEF_PLUS = ((A_SHOULDER_DEF_PLUS.value != "") ? eval(A_SHOULDER_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
+	n_A_SHOES_DEF_PLUS = ((A_SHOES_DEF_PLUS.value != "") ? eval(A_SHOES_DEF_PLUS.value) : 0); // Changed after index revamp, default value to 0 [Kato]
 	n_A_DEFplus = n_A_HEAD_DEF_PLUS + n_A_BODY_DEF_PLUS + n_A_LEFT_DEF_PLUS + n_A_SHOULDER_DEF_PLUS + n_A_SHOES_DEF_PLUS;
 
 	n_A_ActiveSkill = eval(A_ActiveSkill.value);
@@ -174,7 +174,7 @@ function StAllCalc()
 
 	n_A_WeaponLV = ItemOBJ[n_A_Equip[0]][4];
 	n_A_Weapon_ATK = ItemOBJ[n_A_Equip[0]][3];
-	n_A_Weapon_ATKplus = eval(A_Weapon_ATKplus.value);
+	n_A_Weapon_ATKplus = ((A_Weapon_ATKplus.value != "") ? eval(A_Weapon_ATKplus.value) : 0); // Changed after index revamp, default value to 0 [Kato]
 
 	W_REF = 0;
 	n_A_WeaponLV_seirenATK = 0;
@@ -845,7 +845,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 					w += 20;
 				break;
 			}
-	//custom TalonRO Lady Tanee Card: +1 Perfect Dodge per 8 base LUK
+	//custom TalonRO Lady Tanee Card: +1% HP per 8 base AGI
 	if(CardNumSearch(409))
 		w += Math.floor(SU_AGI / 8);
 	if(SU_VIT >= 80 && EquipNumSearch(1526))
@@ -1009,6 +1009,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1058)){
 		w += n_A_BaseLV*2;}
 
+	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - slaptro - 2018-06-07
+	if(EquipNumSearch(1646)){
+		w += n_A_HEAD_DEF_PLUS * 5;
+	}
+
 	//custom TalonRO Kris enchant SP
 	var KEbonus = [A_KE11.value,A_KE12.value,A_KE21.value,A_KE22.value];
 	for (i=0;i<4;i++){
@@ -1120,6 +1125,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(809))
 		n_A_DEFplus -= n_A_HEAD_DEF_PLUS;
 
+	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - slaptro - 2016-06-07
+	if(EquipNumSearch(1641)){
+		n_A_DEF -= Math.floor(SU_VIT / 30);
+	}
+	
 	//custom TalonRO Armor enchant DEF
 	var wHSE = eval(A_HSE.value);
 	if(wHSE){
@@ -1199,6 +1209,19 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_totalDEF = 0;
 		n_A_DEFVIT = 0;}
 
+		//[Grimtooth also reduces Vit Def by 1/2] [Kato]
+		if(EquipNumSearch(15)){
+			n_A_DEFVIT -= Math.floor(n_A_DEFVIT*.50);
+		}
+		//[Masamune also reduces Vit Def by 1/3] [Kato]
+		if(EquipNumSearch(47)){
+			n_A_DEFVIT -= Math.floor(n_A_DEFVIT*.67);
+		}
+	//[Spike 0/2 also reduces Vit Def by 1/3] [Kato]
+		if(EquipNumSearch(420)){
+			n_A_DEFVIT -= Math.floor(n_A_DEFVIT*.67);
+		}
+
 	myInnerHtml("A_totalDEF",n_A_totalDEF + "+" + n_A_DEFVIT,0);
 
 	n_A_VITDEF = new Array();
@@ -1253,7 +1276,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		for(i=0;i<=2;i++)
 			n_A_VITDEF[i] -= Math.floor(n_A_VITDEF[i] * (n_A_PassSkill8[12] - 2) * 5 / 100);
 	}
-
 
 	n_A_MDEF = n_tok[19];
 
@@ -1392,6 +1414,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	if(EquipNumSearch(654))
 		n_A_HIT += Math.floor(SU_AGI / 10);
+
+	/*
+		ZoneSoldier - 2018-06-06
+		Add 1 HIT for every 2 LUK.
+	*/
+	if(EquipNumSearch(1627)){
+		n_A_HIT += Math.floor(SU_LUK / 2);
+	}
 
 	if(n_A_ActiveSkill==324)
 		n_A_HIT += 20;
@@ -1552,6 +1582,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill8[20])
 		n_A_LUCKY += 20;
 
+	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - slaptro - 2016-06-07
+	if(EquipNumSearch(1652) && n_A_HEAD_DEF_PLUS > 6){
+		n_A_LUCKY += 4;
+	}
+
 	n_A_LUCKY = Math.round(n_A_LUCKY *10)/10;
 
 	myInnerHtml("A_LUCKY",n_A_LUCKY,0);
@@ -1586,6 +1621,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO rental Giant Encyclopedia +1crit each 5luk
 	if(EquipNumSearch(1324))
 		w += Math.floor(SU_LUK / 5);
+
+	//custom Talonro Improved Bunny Band: If refine > 6 CRIT + 5
+	if(EquipNumSearch(1648) && n_A_HEAD_DEF_PLUS > 6){
+		w += 5;
+	}
 
 	if(EquipNumSearch(689))
 		w += Math.floor(SU_LUK / 10);
@@ -1741,6 +1781,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(666)){C_ATK += 3;}
 	if(EquipNumSearch(721)){C_ATK += 5;}
 	if(EquipNumSearch(806)){C_ATK += 5;}
+	if(EquipNumSearch(1651)){C_ATK += 5;}
 	if(EquipNumSearch(676)){C_ATK += n_A_HEAD_DEF_PLUS*2;}
 	if(EquipNumSearch(323) && EquipNumSearch(725)){C_ATK += 50;}
 	if(EquipNumSearch(442) && SU_AGI > 89){C_ATK += 10;}
@@ -1812,6 +1853,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		else{
 			if(n_A_PassSkill2[12]){P_ATK += Math.floor(P_ATK*0.05);}
 		}
+		//Maiden Hat - ZoneSoldier - 6/6/2018
+		//Increase ATK + 1% per upgrade past 7.
+	if(n_A_HEAD_DEF_PLUS > 7 && EquipNumSearch(1628)){
+		p_ATK += 1 * (n_A_HEAD_DEF_PLUS - 7);
+	}
 
 	//custom TalonRO Chewing Bubblegum +1% atk
 	if(EquipNumSearch(1395))
@@ -1913,11 +1959,26 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(565)){
 		w += 1;}
 
-	//Entweihen Hairband - Eden equipment - zonesoldier - 6/2/2018
+	//Entweihen Hairband - zonesoldier - 6/2/2018
 	//Increase MATK + 1% per upgrade past 5th upgrade
-	if(n_A_HEAD_DEF_PLUS >= 5 && EquipNumSearch(1605))
+	if(n_A_HEAD_DEF_PLUS > 5 && EquipNumSearch(1620))
 	{
-		w += 1;
+		w += 1 * (n_A_HEAD_DEF_PLUS - 5);
+	}
+	//Maiden Hat - ZoneSoldier - 6/6/2018
+	//Increase MATK + 1% per upgrade past 7.
+	if(n_A_HEAD_DEF_PLUS > 7 && EquipNumSearch(1628)){
+		w += 1 * (n_A_HEAD_DEF_PLUS - 7);
+	}
+
+	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
+	if(EquipNumSearch(1640)){
+		w += Math.floor(n_A_Weapon_ATKplus / 2);
+	}
+
+	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
+	if(EquipNumSearch(1645)){
+		w += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
 
 	if(EquipNumSearch(1173))
@@ -2022,7 +2083,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_MATK[0] += 5;
 		n_A_MATK[2] += 5;
 	}
-
+	/*
+		Custom =[Entweihen Hairband]+[Dark Thorn Staff] combo
+		[Refine Rate 5~10 Dark Thorn Staff]
+  	For every 2 refines on the Dark Thorn Staff, add +10 MATK
+		[ZoneSoldier] - 2018/05/06
+	*/
+	if(n_A_Weapon_ATKplus >= 5 && EquipNumSearch(1621)) {
+			n_A_MATK[0] += 10 * Math.floor((n_A_Weapon_ATKplus - 4)/2);
+			n_A_MATK[2] += 10 * Math.floor((n_A_Weapon_ATKplus - 4)/2);
+	}
 	if(n_A_PassSkill7[2]){
 		n_A_MATK[0] += 10;
 		n_A_MATK[2] += 10;
@@ -2179,6 +2249,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Alca Bringer: +3% ASPD every 2 refines
 	if(EquipNumSearch(1455))
 		w += 3*Math.floor(n_A_Weapon_ATKplus/2);
+
+	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - slaptro - 2016-06-07
+	if(EquipNumSearch(1315) && n_A_Weapon_ATKplus>4){
+			w += n_A_Weapon_ATKplus - 4;
+	}
 
 	if(SkillSearch(258))
 		w += 30;
@@ -2552,6 +2627,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS >= 5)
 		n_tok[37] += 2*(n_A_HEAD_DEF_PLUS-4);
 
+	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - slaptro - 2018-06-07
+	if(EquipNumSearch(1649) && n_A_HEAD_DEF_PLUS > 6){
+		n_tok[31] += 10
+	}
+
+	//custom Talonro Imrpoved Bongun Hat: If refine > 6 increase damage against Demon monster by 10% - slaptro - 2018-06-07
+	if(EquipNumSearch(1650) && n_A_HEAD_DEF_PLUS > 6){
+		n_tok[36] += 10
+	}
+
 	if(EquipNumSearch(628) && n_A_Arrow == 4)
 		n_tok[25] += 25;
 	if(EquipNumSearch(626) && n_A_Arrow == 2)
@@ -2603,6 +2688,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Evil Marching Hat: if refine rate >=7 +10% critical damage
 	if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 7)
 		n_tok[70] += 10;
+
+	//custom TalonRO Improved Joker Jester: If refine rate >6 +5% critical damage - slaptro - 2018-06-07
+	if(EquipNumSearch(1647) && n_A_HEAD_DEF_PLUS > 6){
+		n_tok[70] += 5;
+	}
 
 	if(EquipNumSearch(1083)){
 		if(n_A_Weapon_ATKplus >= 6)
@@ -2785,6 +2875,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_Weapon_ATKplus >= 6)
 			n_tok[317] += 5;
 	}
+	//Maiden Hat - ZoneSoldier - 6/6/2018
+	//Additional Heal effectiveness + 1% per upgrade past 7.
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1628)){
+		n_tok[317] =+ 1 * (n_A_HEAD_DEF_PLUS - 7);
+	}
+
 	if(EquipNumSearch(1083)){
 		if(n_A_Weapon_ATKplus >= 6)
 			n_tok[317] += 5 + (2 * (n_A_Weapon_ATKplus - 5));
@@ -2959,6 +3055,16 @@ function StPlusCalc()
 			wSPC_DEX += 1;
 		if (n_A_HEAD_DEF_PLUS == 10)
 			wSPC_DEX += 1;
+	}
+
+	//custom TalonRo Improved Mage Hat: Every Refine level 7 or higher adds INT + 1 - slaptro - 2018-06-07
+	if(EquipNumSearch(1645) && n_A_HEAD_DEF_PLUS > 6){
+		wSPC_INT += n_A_HEAD_DEF_PLUS - 6;
+	}
+
+	//custom TalonRo Improved Magician Hat: Every Refine level 7 or higher adds DEX + 1 - slaptro - 2018-06-07
+	if(EquipNumSearch(1646) && n_A_HEAD_DEF_PLUS > 6){
+		wSPC_DEX += n_A_HEAD_DEF_PLUS - 6;
 	}
 
 	wSPC_STR += StPlusCard(1) + wSPCall;
