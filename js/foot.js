@@ -1370,9 +1370,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	
 	if(EquipNumSearch(809))
 		n_A_MDEF += n_A_HEAD_DEF_PLUS;
-	if(EquipNumSearch(1169)) // Fixed Lacrima Stick wrong effect. Only +1 MDEF, Not by refine rate
-		//n_A_MDEF += n_A_Weapon_ATKplus;
-		n_A_MDEF += 1;
 	if(CardNumSearch(199) && n_A_JobSearch()==5)
 		n_A_MDEF += 3;
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1277)){n_A_MDEF += 1;}
@@ -1870,6 +1867,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(721)){C_ATK += 5;}
 	if(EquipNumSearch(806)){C_ATK += 5;}
 	if(EquipNumSearch(1651)){C_ATK += 5;}
+	if(EquipNumSearch(1654)){C_ATK += 10;}
 	if(EquipNumSearch(676)){C_ATK += n_A_HEAD_DEF_PLUS*2;}
 	if(EquipNumSearch(323) && EquipNumSearch(725)){C_ATK += 50;}
 	if(EquipNumSearch(442) && SU_AGI > 89){C_ATK += 10;}
