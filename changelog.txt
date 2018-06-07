@@ -1,7 +1,7 @@
 [Update 2018-06-06]
 - Issue #128: Added GMC Bosses; [Natwarra/Kato]
 - Issue #123: Added Valhalla Seal; [Kato]
-- Added new 2 Regions for mobs, Seals and GMC; [Kato] 
+- Added new 2 Regions for mobs, Seals and GMC; [Kato]
 - Issue #135: Proofreading
 		Jeweled Sword: updated item description
 		Gaia Sword: updated item description
@@ -15,6 +15,8 @@
 		Axe: jobid (50 -> 0)
 		Orcish Axe: jobid (72 -> 0)
 		War Axe: attack (145 -> 140)
+	- Issue #134: Fixed some items about Vit Def; [Kato]
+	- Issue #135: Added Malangdo Mobs; [Kato]
 
 [Update 2018-06-05]
 - Added Bone Hat in Electric Guitar (old normal) ID; [zoneSoldier/Kato];
@@ -26,7 +28,7 @@
 - Issue #63: Added Detale Card; [Kato]
 - Issue #36: Added [Entweihen Hairband]+[Dark Thorn Staff] Combo with refine modifier; [ZoneSoldier]
 - Fixed all the "Unrefinable" descritions on Eden Items to show up as Red Font
-- 
+-
 
 [Update 2018-06-04]
 - Fixed mobdb link to tRO's website; [Kato]
