@@ -2,7 +2,7 @@
 - Issue #128: Added GMC Bosses; [Natwarra/Kato]
 - Issue #123: Added Valhalla Seal; [Kato]
 - Added new 2 Regions for mobs, Seals and GMC; [Kato]
-- Issue #135: Proofreading
+- Issue #135: Proofreading [Slap]
 	Jeweled Sword: updated item description
 	Gaia Sword: updated item description
 	Saber: name (Sabre -> Saber)
@@ -15,16 +15,18 @@
 	Axe: jobid (50 -> 0)
 	Orcish Axe: jobid (72 -> 0)
 	War Axe: attack (145 -> 140)
+	Golden Mace: name (Gold Mace -> Golden Mace)
+	Golden Mace: slot (0 -> "0 / 1")
 - Issue #134: Fixed some items about Vit Def; [Kato]
 - Issue #135: Added Malangdo Mobs; [Kato]
-- Issue #73: Added Gigantic Lance
-- Issue #77: Added Dance Shoes
-- Issue #137: Replaced duplicate Axe and Orcish Axe in ItemOBJ
-- Issue #76: Added Staff of Thea
-- Issue #58: Added Advanced Binoculars
-- Issue #59: Added Advanced Assassin Mask
-- Issue #60: Added Advanced Welding Mask
-- Issue #61: Added Advanced Safety Ring
+- Issue #73: Added Gigantic Lance [Slap]
+- Issue #77: Added Dance Shoes [Slap]
+- Issue #137: Replaced duplicate Axe and Orcish Axe in ItemOBJ [Slap]
+- Issue #76: Added Staff of Thea [Slap]
+- Issue #58: Added Advanced Binoculars [Slap]
+- Issue #59: Added Advanced Assassin Mask [Slap]
+- Issue #60: Added Advanced Welding Mask [Slap]
+- Issue #61: Added Advanced Safety Ring [Slap]
 
 [Update 2018-06-05]
 - Added Bone Hat in Electric Guitar (old normal) ID; [zoneSoldier/Kato];

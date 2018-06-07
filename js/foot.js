@@ -1120,8 +1120,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(809))
 		n_A_DEFplus -= n_A_HEAD_DEF_PLUS;
 
-	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1
-	if(EquipNumSearch(1623)){
+	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - slaptro - 2016-06-06
+	if(EquipNumSearch(1641)){
 		n_A_DEF -= Math.floor(SU_VIT / 30);
 	}
 	
@@ -1937,8 +1937,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 1 * (n_A_HEAD_DEF_PLUS - 5);
 	}
 
-	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades
-	if(EquipNumSearch(1622)){
+	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-06
+	if(EquipNumSearch(1640)){
 		w += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 
@@ -2213,7 +2213,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1455))
 		w += 3*Math.floor(n_A_Weapon_ATKplus/2);
 
-	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1%
+	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - slaptro - 2016-06-06
 	if(EquipNumSearch(1315)){
 		if(n_A_Weapon_ATKplus>4){
 			w += n_A_Weapon_ATKplus - 4;

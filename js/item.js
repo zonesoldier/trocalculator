@@ -101,7 +101,7 @@ ItemOBJ = [
 ,[78,8,1,130,3,"0 / 1",120,27,"Swordmace","",0,0]
 ,[79,8,53,140,3,"0 / 2",200,27,"Stunner","",0,131,10,0]
 ,[80,8,63,155,3,0,300,78,"Iron Driver","",0,0]
-,[81,8,53,110,4,1,80,40,"Gold Mace","",0,49,10,194,1,0]
+,[81,8,53,110,4,"1 / 2",80,40,"Golden Mace","",0,49,10,194,1,0]
 ,[82,8,53,135,4,0,80,40,"Long Mace","","Capable of damaging enemies 3 cells away from his owner",78,10,0]
 ,[83,8,53,140,4,"0 / 1",150,40,"Grand Cross","","Regain 1 SP for each attack on an Undead Monster<BR>Regain 3 SP for each killed Undead Monster",20,6,221,5,0]
 ,[84,8,112,220,4,3,600,0,"Mjolnir","","<font color='blue'>SQI</font>",1,5,5,5,6,5,20,4,0] //custom TalonRO SQI
@@ -1664,11 +1664,11 @@ ItemOBJ = [
 ,[1619,64,0,1,0,1,10,93,"Alchemy Glove","","Magic gloves made for handling corrosive chemicals, smells a bit like charcoal.",4,1,19,2,343,10,221,127,351,25,0]
 ,[1620,50,0,2,0,1,0,10,"Entweihen Hairband","","It grows only on the top floor of the endless tower.<br/>This magic-filled hairband was made from the thorns.<br/>",4,1,5,1,89,1,0]
 ,[1621,100,0,0,0,0,0,0,"Entweihen Hairband + Dark Thorn Staff","","<br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK",0]
-,[1622,9,1053,30,3,1,100,50,"Staff of Thea","","A chance to recover 200 SP after using Heal<br><b>For every two upgrades:</b><br>Increase MATK by 1%",89,15,4,6,3,2,195,1,0]
-,[1623,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
-,[1624,51,54,2,0,0,10,50,"Advanced Binoculars","",0,5,1,25,1,0]
-,[1625,52,81,1,0,0,10,70,"Advanced Assassin Mask","",0,10,1,70,1,0]
-,[1626,51,56,2,0,0,30,50,"Advanced Welding Mask","","<b>Mid and Low Headgear</b>",5,1,6,1,63,10,0]
+,[1640,9,1053,30,3,1,100,50,"Staff of Thea","","A chance to recover 200 SP after using Heal<br><b>For every two upgrades:</b><br>Increase MATK by 1%",89,15,4,6,3,2,195,1,0]
+,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
+,[1642,51,54,2,0,0,10,50,"Advanced Binoculars","",0,5,1,25,1,0]
+,[1643,52,81,1,0,0,10,70,"Advanced Assassin Mask","",0,10,1,70,1,0]
+,[1644,51,56,2,0,0,30,50,"Advanced Welding Mask","","<b>Mid and Low Headgear</b>",5,1,6,1,63,10,0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
