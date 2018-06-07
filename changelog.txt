@@ -2,6 +2,18 @@
 - Issue #128: Added GMC Bosses; [Natwarra/Kato]
 - Issue #123: Added Valhalla Seal; [Kato]
 - Added new 2 Regions for mobs, Seals and GMC; [Kato]
+- Issue #135: Proofreading
+		Jeweled Sword: updated item description
+		Gaia Sword: updated item description
+		Saber: name (Sabre -> Saber)
+		Cutlus: weight (30 -> 90)
+		Mysteltainn: attack (160 -> 170)
+		Katzbalger: effect (VIT+10 -> VIT+5)
+		Javelin: name (Javalin -> Javelin)
+		Gungnir: required lvl (48 -> 4)
+		Halberd: name (Hallberd -> Halberd) //to match itemdb
+		Axe: jobid (50 -> 0)
+		War Axe: attack (145 -> 140)
 - Issue #67 Added Enhanced Variant Shoes; [ZoneSoldier]
 - Issue #78 Added Rosevine whip item, added Wink of Charm to skillOBJ and created a AutoSpellSKill # with comments; [ZoneSoldier]
 - Issue #80 Added Scarletto Nail; [ZoneSoldier]
