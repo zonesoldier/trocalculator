@@ -101,7 +101,7 @@ ItemOBJ = [
 ,[78,8,1,130,3,"0 / 1",120,27,"Swordmace","",0,0]
 ,[79,8,53,140,3,"0 / 2",200,27,"Stunner","",0,131,10,0]
 ,[80,8,63,155,3,0,300,78,"Iron Driver","",0,0]
-,[81,8,53,110,4,1,80,40,"Gold Mace","",0,49,10,194,1,0]
+,[81,8,53,110,4,"1 / 2",80,40,"Golden Mace","",0,49,10,194,1,0]
 ,[82,8,53,135,4,0,80,40,"Long Mace","","Capable of damaging enemies 3 cells away from his owner",78,10,0]
 ,[83,8,53,140,4,"0 / 1",150,40,"Grand Cross","","Regain 1 SP for each attack on an Undead Monster<BR>Regain 3 SP for each killed Undead Monster",20,6,221,5,0]
 ,[84,8,112,220,4,3,600,0,"Mjolnir","","<font color='blue'>SQI</font>",1,5,5,5,6,5,20,4,0] //custom TalonRO SQI
@@ -826,7 +826,7 @@ ItemOBJ = [
 ,[803,50,0,2,0,0,20,45,"Whickebine Black Cat Ears","",0,9,10,10,3,70,10,0] //custom TalonRO
 ,[804,50,0,3,0,0,50,1,"Ship Captain's Hat",0,0,5,1,25,7,13,100,0] //custom TalonRO
 ,[805,51,0,1,0,0,10,70,"Peco Wing Ears","",0,19,2,2,1,0]
-,[806,52,0,0,0,0,10,60,"Gangster Scarf",0,"<b>[Rogue Class]</b><br>Enables the use of the skill [Gangster's Paradise]Lv 1",17,5,0]
+,[806,52,0,0,0,0,10,60,"Gangster Scarf","","<b>[Rogue Class]</b><br>Enables the use of the skill [Gangster's Paradise]Lv 1",17,5,0]
 ,[807,52,0,0,0,0,20,60,"Ninja Scroll","",0,89,1,0]
 ,[808,60,0,5,0,0,100,1,"Angel dress","",0,6,4,193,1,0]
 ,[809,50,0,1,0,1,20,20,"Leaf Hat","","[description translation missing - ItemID: 809]",4,1,0]
@@ -1334,8 +1334,8 @@ ItemOBJ = [
 ,[1311,100,0,0,0,0,0,0,"Dark Knight Set [Type A]",0,0,89,10,4,5,58,10,0]
 ,[1312,50,0,5,0,0,300,80,"Blue Night Cap","","ATK + 5%",89,5,0]
 ,[1313,52,0,1,0,0,10,90,"Spiked Scarf","","",3,1,0]  //custom TalonRO removed: 37,1,57,1,
-,[1314,6,50,75,3,"0 / 4",150,3,"Orcish Axe","",0,0] //duplicate to be replaced
-,[1315,6,72,38,1,"3 / 4",80,3,"Axe","",0,0] //duplicate to be replaced
+,[1314,63,131,4,0,1,30,90,"Dance Shoes","","Reduces SP cost of all skills by 10%",2,1,12,2,0]
+,[1315,5,121,150,4,1,475,93,"Gigantic Lance","","When using Spiral Pierce, knock back your enemies 4 cells<br>When unequipping, you lose 500 sp<br><b>For every refine > 4:</b><br>ASPD + 1%",12,-10,0]
 ,[1316,51,0,1,0,0,10,50,"Hockey Mask","","<b>Mid and Low Headgear</b>",37,5,0]
 ,[1317,50,0,4,0,1,25,25,"Jaguar Hat","","Allows usage of the skill [Loud Exclamation]Lv 1<br><b>Upper, Mid and Low Headgear</b>",19,2,0]
 ,[1318,50,0,5,0,0,25,1,"I Love China","","",5,3,57,10,0]
@@ -1672,18 +1672,31 @@ ItemOBJ = [
 ,[1627,11,122,170,3,1,120,90,"Agent Katar","","Add 1 HIT for every 2 LUK.",0]
 ,[1628,50,0,2,0,1,20,20,"Maiden Hat","","An adorable hat which is always worn on the side of head.<br>If the wearer carries an umbrella with this hat on, the wearer will look as if one is going for a picnic.<[Refine Rate 7~10]<br>Additional ATK + 1%<br>Additional MATK +1%<br>Additional Heal effectiveness + 1%",1,1,4,1,19,7,87,2,89,2,91,5,0]
 //Advanced Angel Gear - Set
-,[1629,50,100,6,0,1,30,99,"Advanced Angel's Kiss","","A hair ornament that was kissed by the Super Novice's Guardian Angel.",76,30,0]
-,[1630,63,100,2,0,1,30,99,"Advanced Angel's Reincarnation","","Heavenly sandals worn by the Guardian Angel of Super Novices.",14,500,16,100,0]
-,[1631,62,100,6,0,1,40,99,"Advanced Angelic Cardigan","","Super Novice Guardian Angel's warm and comfortable cardigan.",16,50,0]
-,[1632,61,100,6,0,1,40,99,"Advanced Angelic Guard","","Super Novice Guardian Angel's shield which contains holy power that can nullify evil.",56,5,61,5,62,5,63,5,64,5,65,5,66,5,67,5,68,5,69,5,0]
-,[1633,60,100,8,0,1,60,99,"Advanced Angelic Protection","","Super Novice Guardian Angel's robe.",19,20,0]
+,[1629,50,50,6,0,1,30,99,"Advanced Angel's Kiss","","A hair ornament that was kissed by the Super Novice's Guardian Angel.",76,30,0]
+,[1630,63,50,2,0,1,30,99,"Advanced Angel's Reincarnation","","Heavenly sandals worn by the Guardian Angel of Super Novices.",14,500,16,100,0]
+,[1631,62,50,6,0,1,40,99,"Advanced Angelic Cardigan","","Super Novice Guardian Angel's warm and comfortable cardigan.",16,50,0]
+,[1632,61,50,6,0,1,40,99,"Advanced Angelic Guard","","Super Novice Guardian Angel's shield which contains holy power that can nullify evil.",56,5,61,5,62,5,63,5,64,5,65,5,66,5,67,5,68,5,69,5,0]
+,[1633,60,50,8,0,1,60,99,"Advanced Angelic Protection","","Super Novice Guardian Angel's robe.",19,20,0]
 ,[1634,100,0,0,0,0,0,0,"Advanced Angels Kiss + Advanced Angelic Cardigan","","",17,10,0]
 ,[1635,100,0,0,0,0,0,0,"Advanced Angels Reincarnation + Advanced Angels Kiss","","",89,5,0]
 ,[1636,100,0,0,0,0,0,0,"Advanced Angelic Cardigan + Advanced Angelic Protection","","",2,5,9,10,0]
 ,[1637,100,0,0,0,0,0,0,"Advanced Angelic Guard + Advanced Angel's Reincarnation","","",7,2,0]
 ,[1638,100,0,0,0,0,0,0,"Advanced Angelic Protection + Advanced Angelic Cardigan","","",60,5,0]
 ,[1639,100,0,0,0,0,0,0,"Advanced Angelic Protection, Advanced Angel's Reincarnation, Advanced Angelic Guard, Advanced Angelic Cardigan & Advanced Angel's Kiss Equip","","",13,900,14,100,221,131,0]
-]
+,[1640,9,1053,30,3,1,100,50,"Staff of Thea","","A chance to recover 200 SP after using Heal<br><b>For every two upgrades:</b><br>Increase MATK by 1%",89,15,4,6,3,2,195,1,0]
+,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
+,[1642,51,54,2,0,0,10,50,"Advanced Binoculars","",0,5,1,25,1,0]
+,[1643,52,81,1,0,0,10,70,"Advanced Assassin Mask","",0,10,1,70,1,0]
+,[1644,51,56,2,0,0,30,50,"Advanced Welding Mask","","<b>Mid and Low Headgear</b>",5,1,6,1,63,10,0]
+,[1645,50,55,2,0,1,30,0,"Improved Mage Hat","","<b>For every 2 refines:</b><br>MATK +1%<br><b>For every refine > 6:</b><br>INT + 1",4,2,14,150,0]
+,[1646,50,77,6,0,1,50,50,"Improved Magician Hat","","<b>For every refine:</b><br>MSP + 5<br><b>For every refine > 6:</b><br>DEX + 1",5,1,2,1,14,50,0]
+,[1647,50,1,3,0,1,10,0,"Improved Joker Jester","","<b>If refine > 6:</b><br>Critical damage + 5%",6,2,19,5,0]
+,[1648,50,0,3,0,1,10,0,"Improved Bunny Band","","<b>If refine > 6:</b><br>CRIT + 5",6,2,0]
+,[1649,50,0,5,0,1,30,0,"Improved Munak Hat","","<b>If refine > 6:</b><br>Increases damage against [Undead] monster by 10%",51,10,0]
+,[1650,50,0,5,0,1,30,0,"Improved Bongun Hat","","<b>If refine > 6:</b><br>Increases damage against [Demon] monster by 10%",56,10,0]
+,[1651,51,1,2,0,0,20,20,"Improved Opera Phantom Mask","",0,17,5,89,3,0]
+,[1652,50,1,2,0,1,30,0,"Improved Kitsune Mask","","<b>If refine > 6:</b><br>Perfect Dodge + 4",2,2,6,2,0]
+];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
 //,[1620,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,17,0]

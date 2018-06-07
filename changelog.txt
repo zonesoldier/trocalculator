@@ -1,23 +1,46 @@
+[Update 2018-06-07]
+- Issue #73: Added Gigantic Lance [Slap]
+- Issue #77: Added Dance Shoes [Slap]
+- Issue #137: Replaced duplicate Axe and Orcish Axe in ItemOBJ [Slap]
+- Issue #76: Added Staff of Thea [Slap]
+- Issue #58: Added Advanced Binoculars [Slap]
+- Issue #59: Added Advanced Assassin Mask [Slap]
+- Issue #60: Added Advanced Welding Mask [Slap]
+- Issue #61: Added Advanced Safety Ring [Slap]
+- Issue #90: Added Miming Card [Slap]
+- Issue #91: Added Mini Octopus Card [Slap]
+- Issue #92: Added Pom Spider Card [Slap]
+- Issue #50: Added Improved Mage Hat [Slap]
+- Issue #51: Added Improved Magician Hat [Slap]
+- Issue #52: Added Improved Joker Jester [Slap]
+- Issue #53: Added Improved Bunny Band [Slap]
+- Issue #54: Added Improved Munak Hat [Slap]
+- Issue #55: Added Improved Bongun Hat [Slap]
+- Issue #56: Added Improved Opera Phantom Mask [Slap]
+- Issue #57: Added Improved Kitsune Mask [Slap]
+
 [Update 2018-06-06]
 - Issue #128: Added GMC Bosses; [Natwarra/Kato]
 - Issue #123: Added Valhalla Seal; [Kato]
 - Added new 2 Regions for mobs, Seals and GMC; [Kato]
-- Issue #135: Proofreading
-		Jeweled Sword: updated item description
-		Gaia Sword: updated item description
-		Saber: name (Sabre -> Saber)
-		Cutlus: weight (30 -> 90)
-		Mysteltainn: attack (160 -> 170)
-		Katzbalger: effect (VIT+10 -> VIT+5)
-		Javelin: name (Javalin -> Javelin)
-		Gungnir: required lvl (48 -> 4)
-		Halberd: name (Hallberd -> Halberd) //to match itemdb
-		Axe: jobid (50 -> 0)
-		Orcish Axe: jobid (72 -> 0)
-		War Axe: attack (145 -> 140)
+- Issue #135: Proofreading [Slap]
+	Jeweled Sword: updated item description
+	Gaia Sword: updated item description
+	Saber: name (Sabre -> Saber)
+	Cutlus: weight (30 -> 90)
+	Mysteltainn: attack (160 -> 170)
+	Katzbalger: effect (VIT+10 -> VIT+5)
+	Javelin: name (Javalin -> Javelin)
+	Gungnir: required lvl (48 -> 4)
+	Halberd: name (Hallberd -> Halberd) //to match itemdb
+	Axe: jobid (50 -> 0)
+	Orcish Axe: jobid (72 -> 0)
+	War Axe: attack (145 -> 140)
+	Golden Mace: name (Gold Mace -> Golden Mace)
+	Golden Mace: slot (0 -> "0 / 1")
 - Issue #134: Fixed some items about Vit Def; [Kato]
 - Issue #135: Added Malangdo Mobs; [Kato]
--	Issue #37 Added Maiden Hat; [ZoneSoldier]
+- Issue #37 Added Maiden Hat; [ZoneSoldier]
 - Issue #67 Added Enhanced Variant Shoes; [ZoneSoldier]
 - Issue #78 Added Rosevine whip item, added Wink of Charm to skillOBJ and created a AutoSpellSKill # with comments; [ZoneSoldier]
 - Issue #79 Added Agent Katar[ZoneSoldier]
@@ -25,7 +48,6 @@
 - Issue #82 Added Chrome Metal Sword [ZoneSoldier]
 - Issue #83 Changed a value Chrome Metal Two-Handed Sword; [ZoneSoldier]
 - Issues #45,46,47,48,49,103,104,105,106,107 Added Advanced Angelic Full Set and items; [ZoneSoldier]
-
 
 [Update 2018-06-05]
 - Added Bone Hat in Electric Guitar (old normal) ID; [zoneSoldier/Kato];
