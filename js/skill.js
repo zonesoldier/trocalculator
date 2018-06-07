@@ -731,7 +731,7 @@ AutoSpellSkill = [
 [124,1,40,5,2,5], //custom TalonRO Catapult lv5 Double Strafe (2%) on attacking
 [125,1,260,2,10,1], //custom TalonRO Cannon Spear lv 2 Head Crush (10%) on physical attack
 [126,1,83,1,0.5,2], //custom TalonRO Krishna Sonic Blow lv 1 (small/0.5%) on physical melee attack
-[127,1,51,5,0,1,0,0],
+[127,1,51,5,0,1,0,0], //Alchemist Gloves
 [128,1,27,1,5,4],
 [129,1,27,1,5,1],
 [130,1,440,1,0,1,0,1] //When dealing physical damage there is a chance to trigger Wink of Charm.

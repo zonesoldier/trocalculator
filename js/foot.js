@@ -1398,7 +1398,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		Add 1 HIT for every 2 LUK.
 	*/
 	if(EquipNumSearch(1627)){
-		n_A_Hit += Math.floor(SU_LUK / 2) * 1;
+		n_A_HIT += Math.floor(SU_LUK / 2);
 	}
 
 	if(n_A_ActiveSkill==324)
