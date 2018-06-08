@@ -7027,8 +7027,8 @@ CardShort =[
 ["Sage Set",10000,0,337,0,193,346,379,350,0,0], // # 68
 ["Alchemist Set",10000,326,175,0,281,0,388,104,0,0], // # 69
 ["+75% ASPD [DDD]",42,42,42,0], // # 70
-["12% All-Size Dmg. Reduc. [DrDrDr]",47,47,47,0], // # 71
-["16% All-Size Dmg. Reduc. [DrDrDrDr]",47,47,47,47], // # 72
+["12% All-Size Dmg. Reduc. [3Drac]",47,47,47,0], // # 71
+["16% All-Size Dmg. Reduc. [4Drac]",47,47,47,47], // # 72
 ["Test (for now)",0,0,0,0], // # 73
 ];
 for(i=0;i<=72;i++)

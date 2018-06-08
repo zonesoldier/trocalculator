@@ -727,8 +727,8 @@ CARD_SHORTCUT = [
  ,[68,"Sage Set"]
  ,[69,"Alchemist Set"]
  ,[70,"+75% ASPD [DDD]"]
- ,[71,"12% All-Size Dmg. Reduc. [DrDrDr]"]
- ,[72,"16% All-Size Dmg. Reduc. [DrDrDrDr]"]
+ ,[71,"12% All-Size Dmg. Reduc. [3Drac]"]
+ ,[72,"16% All-Size Dmg. Reduc. [4Drac]"]
 ];
 
 KRIS_ENCHANTMENT = [
