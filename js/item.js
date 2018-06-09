@@ -1648,7 +1648,7 @@ ItemOBJ = [
 ,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.",193,1,0]
 //End of Eden Gear
 ,[1605,62,0,2,0,0,40,95,"Loki's Muffler","","A red scarf worn out from long use.",2,1,1083,5,193,1,0]
-,[1606,50,0,4,0,1,40,0,"Legionaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0]
+,[1606,50,0,4,0,1,40,0,"Legionnaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0]
 ,[1607,51,0,2,0,1,50,50,"Lude Mask","","A mask which resembles a Lude. However, you will never be as awesome as a real Lude.",17,1,89,2,57,1,0]
 ,[1608,50,0,4,0,0,20,30,"Xmas Rudolph Hairband","","A Christmas hairband. Rudolf's excited mind for christmas is dwelled on it.<br/>You will feel like running faster.",1,3,5,2,6,3,2,3,12,5,0]
 ,[1609,50,0,4,0,0,20,30,"Xmas Snowman Hat","","A Christmas Snowman Hat. Wearing this always makes you look forward to a White Christmas.<br/>Add a 3% chance of freezing an enemy when receiving Physical Damage.",4,3,5,2,3,3,2,3,73,-10,221,6,0]
@@ -1882,18 +1882,18 @@ ItemID = [
 "###","###","###","###","###","###","###","###","###","###",
 "###","###","###","###","###","###","###","###","###","###",
 "###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","###","###","###","###","###","###","###","###",
-"###","###","Test Item ID Display - Chilly Spell Book",18767,18766,18768,18765,18574,"###","###", // ID for ItemOBJ[1651-1660]
+"###","###","###","###",18878,5516,18531,20175,1291,2474,
+2592,15138,19026,"###","###","###","###",18754,16001,8926,
+18773,5506,5507,2456,2457,2458,2473,1742,1748,18106, // ID for ItemOBJ[1561-1570]
+13050,13051,13066,1583,1931,21000,21000,13310,1289,1831, // ID for ItemOBJ[1571-1580]
+16004,16005,16014,2560,2571,13112,13113,13114,13423,13424, // ID for ItemOBJ[1581-1590]
+13434,1192,1193,1197,1434,1662,1663,1658,1391,15009, // ID for ItemOBJ[1591-1600]
+15010,15011,15031,1986,2568,5418,18649,20031,20030,8801, // ID for ItemOBJ[1601-1610]
+2910,2911,2873,2907,2646,1393,1392,13062,2854,"###", // ID for ItemOBJ[1611-1620]
+"###",1985,13431,13070,13069,22014,1295,5211,18776,22015, // ID for ItemOBJ[1621-1630]
+21001,2183,15068,"###","###","###","###","###","###",2005, // ID for ItemOBJ[1631-1640]
+2956,18772,18774,18775,18760,18761,18763,18764,18769,18770, // ID for ItemOBJ[1641-1650]
+18771,18762,1584,18767,18766,18768,18765,18574,18837,18819, // ID for ItemOBJ[1651-1660]
 "###" // ID for ItemOBJ[1661]
 ];
 
@@ -1930,7 +1930,12 @@ function ClickB_Item(CBI)
 	}
 	if(eval(document.calcForm.ITEM_SW.checked)==0)
 		return;
-	myInnerHtml("nm080",ItemOBJ[CBI][8] + " # Item ID : " + ItemID[CBI],0);
+
+    if(ItemID[CBI] != "###")
+	     myInnerHtml("nm080",ItemOBJ[CBI][8] + " # Item ID : <a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[CBI] + "/\" target=\"_blank\"><b>" + ItemID[CBI] + "</b></a>",0);
+      else
+        myInnerHtml("nm080",ItemOBJ[CBI][8],0);
+
 	myInnerHtml("ITEM1","Slot",0);
 	myInnerHtml("ITEM3","Req. Lvl",0);
 	myInnerHtml("ITEM4","Weight",0);
