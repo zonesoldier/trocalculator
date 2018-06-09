@@ -274,7 +274,8 @@ function StAllCalc()
 	n_A_Weapon_zokusei = eval(A_Weapon_zokusei.value);
 	n_A_Weapon2_zokusei = n_A_Weapon_zokusei;
 
-
+	// Custom TalonRO - 2018-06-09 - Added Item ID display [NattWara]
+	/*
 	if(n_A_Weapon_zokusei == 0){
 		for(j=0;ItemOBJ[n_A_Equip[0]][j +11] != 0;j += 2){
 			if(20 == ItemOBJ[n_A_Equip[0]][j +11])
@@ -282,6 +283,16 @@ function StAllCalc()
 		}
 		for(j=0;ItemOBJ[n_A_Equip[1]][j +11] != 0;j += 2){
 			if(20 == ItemOBJ[n_A_Equip[1]][j +11])
+				n_A_Weapon2_zokusei = ItemOBJ[n_A_Equip[1]][j +12];
+		}
+	*/
+	if(n_A_Weapon_zokusei == 0){
+		for(j=0;ItemOBJ[n_A_Equip[0]][j +12] != 0;j += 2){
+			if(20 == ItemOBJ[n_A_Equip[0]][j +12])
+				n_A_Weapon_zokusei = ItemOBJ[n_A_Equip[0]][j +12];
+		}
+		for(j=0;ItemOBJ[n_A_Equip[1]][j +12] != 0;j += 2){
+			if(20 == ItemOBJ[n_A_Equip[1]][j +12])
 				n_A_Weapon2_zokusei = ItemOBJ[n_A_Equip[1]][j +12];
 		}
 
@@ -3694,6 +3705,8 @@ function StPlusCalc()
 
 function StPlusCalc2(nSTP2)
 {
+	// Custom TalonRO - 2018-06-09 - Added Item ID display [NattWara]
+	/*
 	var w=0;
 	for(var i=0;i<=20;i++)
 	{
@@ -3701,6 +3714,17 @@ function StPlusCalc2(nSTP2)
 		{
 			if(nSTP2 == ItemOBJ[n_A_Equip[i]][j +11])
 				w += ItemOBJ[n_A_Equip[i]][j +12];
+		}
+	}
+	return w;
+	*/
+	var w=0;
+	for(var i=0;i<=20;i++)
+	{
+		for(var j=0;ItemOBJ[n_A_Equip[i]][j +12] != 0;j += 2)
+		{
+			if(nSTP2 == ItemOBJ[n_A_Equip[i]][j +12])
+				w += ItemOBJ[n_A_Equip[i]][j +13];
 		}
 	}
 	return w;
@@ -4177,6 +4201,8 @@ function ActiveSkillSetPlus()
 	}
 
 	j=0;
+	// Custom TalonRO - 2018-06-09 - Added Item ID display [NattWara]
+	/*
 	for(i=0;i<=20;i++){
 		for(j2=0;ItemOBJ[n_A_Equip[i]][11+j2] != 0;j2 += 2){
 			if(ItemOBJ[n_A_Equip[i]][11+j2] == 220){
@@ -4189,6 +4215,24 @@ function ActiveSkillSetPlus()
 				if(AutoSpellSkill[ItemOBJ[n_A_Equip[i]][12+j2]][1] == 1){
 					w_ASSP0[j] = AutoSpellSkill[ItemOBJ[n_A_Equip[i]][12+j2]][2];
 					w_ASSP9[j] = AutoSpellSkill[ItemOBJ[n_A_Equip[i]][12+j2]][0] + 2000;
+					j++;
+				}
+			}
+		}
+	}
+	*/
+	for(i=0;i<=20;i++){
+		for(j2=0;ItemOBJ[n_A_Equip[i]][12+j2] != 0;j2 += 2){
+			if(ItemOBJ[n_A_Equip[i]][12+j2] == 220){
+				if(InsertSkill[ItemOBJ[n_A_Equip[i]][13+j2]][1] == 1){
+					w_ASSP0[j] = InsertSkill[ItemOBJ[n_A_Equip[i]][13+j2]][2];
+					w_ASSP9[j] = InsertSkill[ItemOBJ[n_A_Equip[i]][13+j2]][0] + 3000;
+					j++;
+				}
+			}else if(ItemOBJ[n_A_Equip[i]][12+j2] == 221){
+				if(AutoSpellSkill[ItemOBJ[n_A_Equip[i]][13+j2]][1] == 1){
+					w_ASSP0[j] = AutoSpellSkill[ItemOBJ[n_A_Equip[i]][13+j2]][2];
+					w_ASSP9[j] = AutoSpellSkill[ItemOBJ[n_A_Equip[i]][13+j2]][0] + 2000;
 					j++;
 				}
 			}
