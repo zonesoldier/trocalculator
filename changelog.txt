@@ -8,12 +8,43 @@
 	・Lord of the Dead Helm
 	And Chilly Spell Book have "Test Item ID Display - Chilly Spell Book" in place of Item ID
 	Everything else have "###" as Item ID placeholder for now.
-	Updated link to reflect items with multiple slots [Slap]
-	Added first 251 items in ItemOBJ as test [Slap]
+	Added item links to TalonRO item database calculator [Kato/Slap]
+	Added first 251 items from ItemOBJ to ItemID as test [Slap]
 - Fixed EXP [Kato/NattWara]
 - Issue #149: Proofreading [Slap]
 	Machoman's Glasses: name (Machoman's Classes -> Machoman's Glasses)
 	Opera Masque: name (Opera Mask -> Opera Masque)
+	Jacket: name (Leather Jacket -> Jacket)
+	Adventurer's Suit: name (Adventure Suit -> Adventurer's Suit)
+	Saint's Robe: name (Saint Robe -> Saint's Robe)
+	Earring [1]: required lvl (90 -> 0)
+	Clip: weight (5 -> 10)
+	Critical Ring: weight (5 -> 10)
+	Glove [1]: required lvl (90 -> 0)
+	Eye of Dullahan: name (Dullahan's Eye -> Eye of Dullahan)
+	Necklace [1]: required lvl (90 -> 0)
+	Brooch [1]: required lvl (90 -> 0)
+	Ring [1]: required lvl (90 -> 0)
+	Rosary [1]: required lvl (90 -> 0)
+	Matyr's Leash: name (Martyr's Leash -> Matyr's Leash)
+	Brisingamen: name (Brisingamen [1] -> Brisingamen)
+	Brisingamen: required lvl (94 -> 0)
+	Megingjard: name (Meginjard -> Megingjard)
+	Megingjard: required lvl (94 -> 0)
+	Crown of Mistress: name (Mistress Crown -> Crown of Mistress)
+	Red Tailed Ribbon: name (Giant Ribbon -> Red Tailed Ribbon)
+	Kitsune Mask: name (Fox Mask -> Kitsune Mask)
+	Drooping Cat: job (0 -> 1)
+	Sea-Otter Hat: name (Sea Otter Hat -> Sea-Otter Hat)
+	Sea-Otter Hat: reqired lvl (0 -> 50)
+	Incubus Horn: name (Incubus Horns -> Incubus Horn)
+	Succubus Horn: name (Succubus Horns -> Succubus Horn)
+	Helmet of Orc Hero: name (Orc Hero Helm -> Helmet of Orc Hero)
+	Helmet of Orc Hero: updated description
+	Swordbreaker: name (Sword Breaker -> Swordbreaker)
+	Mailbreaker: name (Mail Breaker -> Mailbreaker)
+	Cursed Dagger: updated description/effects
+	Dagger of Counter: weight (50 -> 55)
 
 [Update 2018-06-08]
 - Issue #154: Card set selector not working properly [NattWara]
