@@ -815,7 +815,7 @@ var tiiki = ["All Regions","Seals","GMC","Abyss Lake Dungeon","Amatsu","Ant Hell
 "Guild Dungeon [Aldebaran]","Guild Dungeon [Arunafeltz]","Guild Dungeon [Geffen]","Guild Dungeon [Payon]","Guild Dungeon [Prontera]",
 "Guild Dungeon [Schwartzvald]","Hidden Temple","Hugel Fields","Ice Cave","Juperos Dungeon","Kiel Dungeon","Lighthalzen Fields",
 "Louyang","Lutie & Toy Factory","Magma Dungeon","Malangdo","Manuk","Morroc Fields","Moscovia","Mt. Mjolnir","Nameless Island","Nidhoggr's Nest",
-"Niflheim","Odins Shrine","Orc Dungeon","Payon Dungeon","Payon Fields","Poring Island","Port Malaya Instance","Prontera Fields","Pyramid","Rachel Fields",
+"Niflheim","Odins Shrine","Orc Dungeon","Payon Dungeon","Payon Fields","Poring Island","Port Malaya Instance","Prontera Fields","Pyramid","Pyramid [Nightmare]","Rachel Fields",
 "Rachel Sanctuary","Scaraba Hole","Sphinx","Splendide","Sunken Ship","Thanatos Tower","Thors Volcano","Turtle Island","Umbala Dungeon",
 "Umbala Fields","Veins Fields","War of Emperium","Yuno Fields"];
 
