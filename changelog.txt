@@ -1,3 +1,15 @@
+[Update 2018-06-09]
+- Issue #161: [Feature Request] ItemID Display [NattWara]
+	Currently only these item have correct ID in item.js
+	・Enhanced Hat of the Sun God
+	・Enhanced Helm of Angel
+	・Enhanced Bone Helm
+	・Enhanced Corsair
+	・Lord of the Dead Helm
+	And Chilly Spell Book have "Test Item ID Display - Chilly Spell Book" in place of Item ID
+	Everything else have "###" as Item ID placeholder for now.
+- Fixed EXP [Kato/NattWara]
+
 [Update 2018-06-08]
 - Issue #154: Card set selector not working properly [NattWara]
 - Issue #156: Added Missing Monster, Port Malaya Instance Monsters [NattWara]
@@ -73,6 +85,19 @@
 - Issue #55: Added Improved Bongun Hat [Slap]
 - Issue #56: Added Improved Opera Phantom Mask [Slap]
 - Issue #57: Added Improved Kitsune Mask [Slap]
+- Issue #109: Added Blue Pencil In Mouth; [ZoneSoldier]
+- Issue #110: Added Cheer Whistle; [ZoneSoldier]
+- Updated Hakujin item description and AutoSpellSKill % modifier and comments; [ZoneSoldier]
+- Updated Huuma Blaze Shuriken description, AutoSpellSKill % modifier and stat's to show up.; [ZoneSoldier]
+- Updated Moonlight Flower Hat description and AutoSpellSKill comment; [ZoneSoldier]
+- Updated Holy Marcher Hat description and AutoSpellSKill; [ZoneSoldier]
+- Updated Hunting Spear description and AutoSpellSKill comment; [ZoneSoldier]
+- Updated Gale Bow description and AutoSpellSkill Comment; [ZoneSoldier]
+- Updated Magma Fist description and AutoSpellSKill comment and % modifier; [ZoneSoldier]
+- Updated Electric Fist description and AutoSpellSKill comment and % modifier; [ZoneSoldier]
+- Updated Seismic Fist description and AutoSpellSKill comment and % modifier; [ZoneSoldier]
+- Updated Electric Eel description and AutoSpellSkill % modifier but not the passive skill for the refine rate; [ZoneSoldier]
+- Updated Foot of the Sea Witch description and AutoSpellSKill % modifier but not the 2nd AutoSpellSKill; [ZoneSoldier]
 - Added Changelog in index, fixed the loading from URL; [Kato]
 
 [Update 2018-06-06]
