@@ -1707,6 +1707,25 @@ ItemOBJ = [
 ,[1661,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,18,0]
 ];
 
+//Test code for finding the values in Skill.js AutoSpellSkill
+//,[1620,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,17,0]
+
+/*
+  ZoneSoldier - 6/2/208
+   id, display location, job that can use,(atk; def),lvl equip, slots, weight, lvl required to use, "name of item",  ?, "description", effect1, effect2, ..., 0 =?]
+   Example : [1535 = ID,62 = Location,0 = all jobs,0 = def(atk if its a weapon),0-default = equipment level,1 = slots, 0 = weight, 60 = Level required to use item,0 = ,"Beach Manteau" = Name of object,"" = ?,0 = description(No info added so left at 0),1 = STR,1 = 1 next to str value,4 = Int,1 = Int value 1 on site,63 = Fire resistance,10 = 10% resistance,0= end]
+   Location values:
+   Weapons: 1 = Dagger, 2 = One-handed Sword, 3 = Two-handed Sword, 4 = One-handed Spear, 5 = Two-handed Spear, 6 = One-handed Axe, 7 = Two-handed Axe, 8 = Mace, 9 = Staff/Rod, 10 = Bow/CrossBow, 11 = 	Katar, 12 = Book, 13 = Knuckles, 	Instrument = 14, 15 = Whip, 16 = Shuriken, 17 = Revolver, 18 = Rifle, 19 = Shotgun, 20 = Gatling Gun, 21 = Gernade Launcher.
+   Headgear: 50 = Upper Headgear, 51 = Middle Headgear, 52 = Lower Headgear
+   Armor: 60 = 	Armor
+   Shield: 61 = Shield
+   Garment: 62 = Garment
+   Footgear: 63 = Footgear
+   Accessory: 64 = Accessory
+   Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
+   After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP= +/-,14 MSP= +/-,15 MHP = %,16 MSP = %,17 ATK,18 DEF,19 MDEF
+*/
+
 ItemID = [
 "###", // ID for ItemOBJ[0]
 "###","###","###","###","###","###","###","###","###","###", // ID for ItemOBJ[1-10]
@@ -1877,25 +1896,6 @@ ItemID = [
 "###","###","Test Item ID Display - Chilly Spell Book",18767,18766,18768,18765,18574,"###","###", // ID for ItemOBJ[1651-1660]
 "###" // ID for ItemOBJ[1661]
 ];
-
-//Test code for finding the values in Skill.js AutoSpellSkill
-//,[1620,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,17,0]
-
-/*
-  ZoneSoldier - 6/2/208
-   id, display location, job that can use,(atk; def),lvl equip, slots, weight, lvl required to use, "name of item",  ?, "description", effect1, effect2, ..., 0 =?]
-   Example : [1535 = ID,62 = Location,0 = all jobs,0 = def(atk if its a weapon),0-default = equipment level,1 = slots, 0 = weight, 60 = Level required to use item,0 = ,"Beach Manteau" = Name of object,"" = ?,0 = description(No info added so left at 0),1 = STR,1 = 1 next to str value,4 = Int,1 = Int value 1 on site,63 = Fire resistance,10 = 10% resistance,0= end]
-   Location values:
-   Weapons: 1 = Dagger, 2 = One-handed Sword, 3 = Two-handed Sword, 4 = One-handed Spear, 5 = Two-handed Spear, 6 = One-handed Axe, 7 = Two-handed Axe, 8 = Mace, 9 = Staff/Rod, 10 = Bow/CrossBow, 11 = 	Katar, 12 = Book, 13 = Knuckles, 	Instrument = 14, 15 = Whip, 16 = Shuriken, 17 = Revolver, 18 = Rifle, 19 = Shotgun, 20 = Gatling Gun, 21 = Gernade Launcher.
-   Headgear: 50 = Upper Headgear, 51 = Middle Headgear, 52 = Lower Headgear
-   Armor: 60 = 	Armor
-   Shield: 61 = Shield
-   Garment: 62 = Garment
-   Footgear: 63 = Footgear
-   Accessory: 64 = Accessory
-   Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
-   After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP= +/-,14 MSP= +/-,15 MHP = %,16 MSP = %,17 ATK,18 DEF,19 MDEF
-*/
 
 ItemMax = ItemOBJ.length -1;
 
