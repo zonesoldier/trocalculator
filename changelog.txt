@@ -8,6 +8,8 @@
 	・Lord of the Dead Helm
 	And Chilly Spell Book have "Test Item ID Display - Chilly Spell Book" in place of Item ID
 	Everything else have "###" as Item ID placeholder for now.
+	Updated link to reflect items with multiple slots [Slap]
+	Added first 251 items in ItemOBJ as test [Slap]
 - Fixed EXP [Kato/NattWara]
 - Issue #149: Proofreading [Slap]
 	Machoman's Glasses: name (Machoman's Classes -> Machoman's Glasses)
