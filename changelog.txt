@@ -9,6 +9,9 @@
 	And Chilly Spell Book have "Test Item ID Display - Chilly Spell Book" in place of Item ID
 	Everything else have "###" as Item ID placeholder for now.
 - Fixed EXP [Kato/NattWara]
+- Issue #149: Proofreading [Slap]
+	Machoman's Glasses: name (Machoman's Classes -> Machoman's Glasses)
+	Opera Masque: name (Opera Mask -> Opera Masque)
 
 [Update 2018-06-08]
 - Issue #154: Card set selector not working properly [NattWara]
