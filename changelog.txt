@@ -2,6 +2,42 @@
 - Issue #154: Card set selector not working properly [NattWara]
 - Issue #156: Added Missing Monster, Port Malaya Instance Monsters [NattWara]
 - Issue #157: Added Shadow Bullet [NattWara]
+- Issue #149: Proofreading [Slap]
+	Glave: name (Glave -> Glaive)
+	Sword Mace: name (Swordmace -> Sword Mace)
+	Evil Bone Wand: name (Bone Wand -> Evil Bone Wand)
+	Hunter Bow: weight (110 -> 150)
+	Rudra Bow: name (Rudra's Bow -> Rudra Bow)
+	Rudra Bow: effect (added Holy element)
+	Book of Gust of Wind: name (removed extra space)
+	Book of the Blazing Sun: name (Book of Blazing Sun -> Book of the Blazing Sun)
+	Book of the Apocalypse: effect (added +5% damage to Holy Property)
+	Studded Knuckles: name (Hora -> Studded Knuckles)
+	Whip (Line): name (Line -> Whip (Line)) //There are 2 items in game named "Whip". "Line" is the iRO name for this item.
+	Wire Whip: name (Wire -> Wire Whip)
+	Tail Whip: name (Tail -> Tail Whip)
+	Rante Whip: name (Rante -> Rante Whip)
+	Chemeti Whip: name (Chemeti -> Chemeti Whip)
+	Heart Hairpin: name (Heart Hairbin -> Heart Hairpin)
+	Hair Band: name (Hairband -> Hair Band)
+	Hair Band: effect (added 1 DEF)
+	Bulb Band: name (Light Bulb Band -> Bulb Band)
+	Ph.D Hat: effect (2 DEF -> 3 DEF)
+	Ph.D Hat: weight (10 -> 20)
+	Evil Wing: name (Evin Wing -> Evil Wing)
+	Boys Cap: effect (3 DEF -> 2 DEF)
+	Boys Cap: weight (20 -> 10)
+	Safety Helmet: effect (added Indestructible)
+	Gemmed Sallet: name (Jewel Crown -> Gemmed Sallet)
+	Biretta: name (Bireta -> Biretta)
+	Army Cap: name (Army Hat -> Army Cap)
+	Nutshell: name (Nut Shell -> Nutshell)
+	Helm of Angel: name (Angel Helm -> Helm of Angel)
+	Goggles: updated description
+	Sphinx Hat: name (Sphinx Hat [1] -> Sphinx Hat) //Will remove the other Sphinx Hat as it is not obtainable and not in the wiki database.
+	Sphinx Hat: slots (0 -> "0 / 1")
+	Sphinx Hat: updated description
+	Zorro Masque: name (Zorro Mask -> Zorro Masque)
 
 [Update 2018-06-07]
 - Issue #124: Added Missing Monster, Nightmare Pyramid Monsters; [NattWara]
