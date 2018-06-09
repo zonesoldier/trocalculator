@@ -4,7 +4,7 @@
 //Corrigido conflito de dois cute ribbon, alterei o nome do cute ribbon com data de kawaii ribbon
 
 /*
-  ZoneSoldier - 6/2/208
+  ZoneSoldier - 6/2/2018
    id, display location, job that can use,(atk; def),lvl equip, slots, weight, lvl required to use, "name of item",  ?, "description", effect1, effect2, ..., 0 =?]
    Example : [1535 = ID,62 = Location,0 = all jobs,0 = def(atk if its a weapon),0-default = equipment level,1 = slots, 0 = weight, 60 = Level required to use item,0 = ,"Beach Manteau" = Name of object,"" = ?,0 = description(No info added so left at 0),1 = STR,1 = 1 next to str value,4 = Int,1 = Int value 1 on site,63 = Fire resistance,10 = 10% resistance,0= end]
    Location values:
@@ -562,11 +562,11 @@ ItemOBJ = [
 ,[539,1,58,50,1,"2 / 3",60,12,"Ashura","",0,89,10,0]
 ,[540,1,58,70,2,"0 / 1",40,35,"Jitte","","When attacking, adds a 5% chance of destroying the enemy's weapon",0]
 ,[541,1,58,95,2,"1 / 2",70,24,"Murasame","",0,20,1,117,10,0]
-,[542,1,58,120,3,"0 / 1",80,42,"Hakujin","",0,4,2,221,13,0]
+,[542,1,58,120,3,"0 / 1",80,42,"Hakujin","","A dagger that has a shining white blade crafted of bone, and is designed for stabbing, rather than slashing.",0,4,2,221,13,0]
 ,[543,1,58,150,3,0,60,65,"Gokurin","","When attacking, adds a 10% chance to inflict [Curse] on the enemy",20,7,0]
 ,[544,1,58,125,4,0,90,70,"Kamaitachi","","Weapon Range + 1",20,4,12,3,10,3,0]
 ,[545,16,58,50,4,"3 / 4",250,42,"Huuma Giant Wheel Shuriken","","When attacking, adds a 1% chance to inflict [External Bleeding] on the enemy",0]
-,[546,16,58,185,4,0,150,55,"Huuma Blaze Shuriken","",0,20,3,5,-2,221,14,0]
+,[546,16,58,185,4,0,150,55,"Huuma Blaze Shuriken","","<font color=blue>[SQI Ingredient]</font><br>A <font color=red>Fire</font> Property Huuma shuriken that sparks like a firecracker when it strikes enemies.",20,3,5,-2,221,14,0]
 ,[547,16,58,150,4,0,300,65,"Huuma Wing Shuriken","",0,20,4,2,-1,5,-2,0]
 ,[548,17,59,30,1,"1 / 2",40,10,"Six Shooter","",0,8,-10,0]
 ,[549,17,59,45,2,"1 / 2",45,35,"Crimson Bolt","",0,8,-10,0]
@@ -587,7 +587,7 @@ ItemOBJ = [
 ,[564,50,0,2,0,0,20,0,"Pumpkin Hat","",0,56,5,0]
 ,[565,50,0,2,0,1,20,20,"Dress Hat","","<b>[Refine Rate 6~10]</b><br>MATK + 1%<br>Physical damage + 1% (versus Normal/Boss/Guardian)<br>Heal amount increased by + 1%<br>Sanctuary effectiveness increased by + 1%",19,7,1,1,4,1,89,2,80,2,91,5,94,5,0]
 ,[566,50,0,3,0,1,100,30,"Satellite Hat","",0,13,50,14,10,220,10,0]
-,[567,50,0,3,0,0,20,0,"Moonlight Flower Hat","",0,5,2,221,15,0]
+,[567,50,0,3,0,0,20,0,"Moonlight Flower Hat","","A hat created with the monster Moonlight Flower in mind.<br>It is said that it uses 30% of Moonlight Flower's fur, and 70% of Nine Tails fur.<br>Note that you should only use hand washing to clean it.<br>Wear this with your Nine Tails scarf for the perfect winter fashion!",5,2,221,15,0]
 ,[568,50,0,2,0,0,20,0,"Bunny Hairband","",0,19,3,2,2,0]
 ,[569,50,0,1,0,0,30,10,"Flapping Angel Wings","",0,12,3,73,-3,2,1,4,1,0]
 ,[570,50,0,1,0,0,10,10,"Baby Chick","","Allows usage Level 2 Double Attack<br>If you already know a level higher than Level 2 Double Attack, the appropriate level will be used instead",6,2,13,50,14,50,57,3,193,1,0]
@@ -608,7 +608,7 @@ ItemOBJ = [
 ,[585,7,1,229,4,0,0,1,"Light Epsilon R","","Increases Movement Speed by 25%",20,6,1,10,36,3,193,1,220,4,0] //custom TalonRO Rental
 ,[586,10,76,185,4,0,0,1,"Rudra's Bow R","",0,20,6,4,5,193,1,220,5,220,6,0] //custom TalonRO Rental
 ,[587,50,0,9,0,0,0,0,"Bunny Band R","",0,19,5,57,10,193,1,0] //custom TalonRO Rental
-,[588,999,1,1,0,0,10,0,"Steel Flower R","",0,193,1,221,18,0]
+,[588,999,1,1,0,0,10,0,"Steel Flower R","",0,193,1,221,18,0] //No longer in Database, remove me.
 ,[589,999,1,5,0,0,80,0,"Majestic Goat R","",0,1,1,193,1,0]
 ,[590,50,1,7,0,0,0,1,"Apple of Archer R","",0,5,4,193,1,0] //custom TalonRO Rental
 ,[591,51,1,1,0,0,10,0,"Eye Of Darkness","",0,5,1,0]
@@ -620,7 +620,7 @@ ItemOBJ = [
 ,[597,64,1,0,0,0,0,1,"Brooch R","",0,2,4,0] //custom TalonRO Rental
 ,[598,64,1,0,0,0,0,1,"Ring R","",0,1,4,0] //custom TalonRO Rental
 ,[599,64,1,0,0,0,0,1,"Rosary R","",0,19,5,6,4,0] //custom TalonRO Rental
-,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","",0,19,2,1,2,221,19,151,10,0]
+,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","","A hat, when equipped, that plays holy music and refresh its wearer.<br>The wearer of this holy hat is guarded by an angel.",19,2,1,2,221,19,151,10,0]
 ,[601,999,0,1,0,1,20,30,"Resort Hat","",0,193,1,3,1,0]
 ,[602,50,0,0,0,1,20,30,"Lily Crown","",0,193,1,19,3,2,1,5,1,75,5,76,3,0]
 ,[603,60,1,4,0,1,220,45,"Claytos Cracking Earth Armor [1]","",0,198,2,0]
@@ -638,27 +638,27 @@ ItemOBJ = [
 ,[615,3,1001,160,4,2,220,55,"Muscle Cutter","","Add a 2% chance of auto casting Level 1 Decrease Agi on the enemy when attacking<br>Add a 1% chance of auto casting External Bleeding on the enemy when attacking",0]
 ,[616,4,1001,150,4,1,100,65,"Long Horn","","Enables the use of [Detoxify]Lv 1<br>Adds a 5% chance of inflicting [Bleeding] on the target when doing a melee attack",20,6,194,1,0]
 ,[617,4,1001,140,4,1,90,65,"Battle Hook","",0,37,20,131,5,220,11,0]
-,[618,4,1001,180,4,1,420,60,"Hunting Spear","","Adds a 10% chance of the Meat item dropping when killing a [Brute] race monster",182,1,221,20,0]
+,[618,4,1001,180,4,1,420,60,"Hunting Spear","","A spear designed specifically to hunt. The end tip looks like a leaf. This spear focused on using its weight to bring damage rather than to piercing the enemy.<br>Adds a 10% chance of the Meat item dropping when killing a [Brute] race monster",182,1,221,20,0]
 ,[619,5,1,170,4,"0 / 1",200,75,"Phantom Spear","","If the target enemy dies, Recovers 50 HP<BR>Small chance to cause Chaos on yourself",31,20,36,20,47,20,51,10,56,10,67,10,0]
-,[620,5,61,120,4,0,100,65,"Ahlspiess","",0,22,10,37,10,221,21,0]
+,[620,5,61,120,4,0,100,65,"Ahlspiess","","Auger shaped spear that is effective at attacking enemy's weak points.",22,10,37,10,221,21,0]
 ,[621,7,1,10,4,"0 / 1",600,80,"Doom Slayer","","Decrease Attack Speed by 40%<br>SP cost of All Skills is doubled<br>If user's base Str is 95 or higher: ATK + 340, Causes Stun effect to enemies by 30% chance when receiving damage and add a 5% chance of breaking the enemy's armor when attacking",0]
 ,[622,7,1001,200,3,2,250,70,"Bardiche","",0,191,13,192,15,0]
 ,[623,7,1001,175,4,1,200,70,"Heart Breaker","","Each upgrade gives Crit +1<br><b>[Whitesmith, Creator]</b><br>Add a chance of auto casting Level 3 Hammerfall on the enemy when attacking",10,20,12,5,0]
-,[624,7,1001,332,4,1,350,80,"Hurricane Fury","","<b>For each upgrade:</b><br>ASPD +1%<br>1% less damage from [Medium] size enemies",191,10,221,22,0]
+,[624,7,1001,332,4,1,350,80,"Hurricane Fury","","Hurricane shaped massive two handed axe. The power of hurricane lie hidden in an orb at the center of the axe.<b>For each upgrade:</b><br>ASPD +1%<br>1% less damage from [Medium] size enemies",191,10,221,22,0]
 ,[625,8,1,4,4,1,44,44,"Holgren's Refining Hammer","","Every time you attack the enemy, small chance to destroy their weapon or armor by 10%<br>If user's base Str is 44 or higher: Damage calculation becomes ATK + 44<br><br><b>When equipping [Holgren's Refining Hammer]+[Whitesmith Card] at the same time:<br>Very high chance to destroy enemy's equipment, and small chance to destroy your own by 1%</b>",0]
 ,[626,10,76,95,3,1,140,55,"Burning Bow","","If equipped together with Fire Arrow, increases damage by 25%",63,10,0]
 ,[627,10,76,100,3,1,140,55,"Freezing Bow","","If equipped together with Crystal Arrow, increases damage by 25%",132,1,0]
 ,[628,10,76,105,3,1,140,55,"Earthen Bow","","If equipped together with Stone Arrow, increases damage by 25%",134,1,0]
-,[629,10,76,95,3,1,140,55,"Gale Bow","","If equipped together with Wind Arrow, increases damage by 25%",221,23,0]
+,[629,10,76,95,3,1,140,55,"Gale Bow","","A light bow that seems to have a potential to cause a whirlwind.<br>If equipped together with [<font color=blue>+ Wind Arrow</font>],<br>This chance is increased when the wearer's INT is 40 or greater.<br> Increases damage by 25%",221,23,0]
 ,[630,10,76,120,3,0,160,65,"Orc Archer's Bow","","If equipped together with Steel Arrow, increases damage by 50%.",0]
 ,[631,11,122,160,4,1,145,55,"Ogre's Toenail","","[description translation missing - ItemID: 631]",0]
 ,[632,11,122,140,4,0,150,55,"Inverse Scare","","[description translation missing - ItemID: 632]",20,6,0]
 ,[633,11,122,110,4,1,140,55,"Drill Katar","","[description translation missing - ItemID: 633]",8,30,0]
 ,[634,11,122,120,4,2,170,55,"Bloody Blades","","[description translation missing - ItemID: 634]",0]
-,[635,13,0,80,3,3,65,75,"Magma Fist","",0,221,24,0]
-,[636,13,0,80,3,3,65,75,"Icicle Fist","",0,221,25,0]
-,[637,13,0,80,3,3,65,75,"Electric Fist","",0,221,26,0]
-,[638,13,0,80,3,3,65,75,"Seismic Fist","",0,221,27,0]
+,[635,13,0,80,3,3,65,75,"Magma Fist","","A knuckle made with magma. It appears like any other knuckles, but it sometimes gets very hot to the point it could melt anything in contact with it. However, the inside of this knuckle has been designed specifically so it won't burn the user's hands.",221,24,0]
+,[636,13,0,80,3,3,65,75,"Icicle Fist","","	A knuckle made with an icicle. It appears like any other knuckles, but it sometimes gets very cold to the point it could freeze anything in contact with it. However, it seems to have no effect at all to the user.",221,25,0]
+,[637,13,0,80,3,3,65,75,"Electric Fist","","A knuckle made with the power of lightning. It appears like any other knuckles, but it sometimes cause massive shock to the enemies. Due to the specifically designed components inside of the knuckles, the user is not affected.",221,26,0]
+,[638,13,0,80,3,3,65,75,"Seismic Fist","","A knuckle made with the spirit of the earth. It appears like any other knuckles, but it sometimes eminates powerful aura that could destroy any enemies in your way.<br>While the power of the earth shows absolute cruelty toward the enemies, the wielder will only feel the warmth and kindness of the goddess of the earth.",221,27,0]
 ,[639,13,0,30,3,4,50,60,"Barrage Fist","","",5187,15,5188,15,5189,20,0]
 ,[640,12,0,110,3,2,200,70,"Giant Encyclopedia","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,0]
 ,[641,12,0,137,4,2,100,85,"Book of the Dead","","Add a 0.1% chance of auto casting Coma effect on DemiHuman monster<br>Attack Speed increased depending on the refinement rate of this weapon<br><b>[Sage, Professor]</b><br>There is a 2% chance of using [Hell's Judgment]Lv 5 on the target when doing a physical attack",89,15,1,3,4,3,6,-20,0]
@@ -671,8 +671,8 @@ ItemOBJ = [
 ,[648,14,130,130,3,1,150,70,"Bass Guitar","","[description translation missing - ItemID: 648]",0]
 ,[649,14,130,10,4,0,180,70,"Spirited Guitar","","[description translation missing - ItemID: 649]",12,100,75,-100,0]
 ,[650,15,0,110,3,0,70,30,"Electric Wire","",0,20,4,0]
-,[651,15,131,100,4,2,200,70,"Electric Eel","","The skill level of the autocast Arrow Vulcan changes depending on the refinement rate of this weapon (not yet calculated!)",20,4,2,2,4,2,221,28,0]
-,[652,15,131,110,4,1,150,70,"Foot of the Sea Witch","","[description translation missing - ItemID: 652]",221,29,0]
+,[651,15,131,100,4,2,200,70,"Electric Eel","","Made of a creature that gives out electric energy. The surface is slippery and feels weird.<br>The skill level of the autocast Arrow Vulcan changes depending on the refinement rate of this weapon (not yet calculated!)",20,4,2,2,4,2,221,28,0]
+,[652,15,131,110,4,1,150,70,"Foot of the Sea Witch","","A whip made with a foot of the famous western sea witch. It says it steals your life essence, so be careful of the witch.<br>Whenever the enemy dies, <font color=blue>Recovers 5 SP</font><br>Every time you attack, small chance to cause Silence to all enemies within 5 x 5 (PBAoE) cells around you.",221,29,0]
 ,[653,15,131,185,4,0,130,70,"Carrot Whip","","[description translation missing - ItemID: 653]",0]
 ,[654,17,0,68,3,2,58,70,"Western Outlaw","","[description translation missing - ItemID: 654]",0]
 ,[655,18,0,150,3,"0 / 1",100,70,"Long Barrel","",0,10,20,12,-3,221,30,0]
@@ -1701,7 +1701,10 @@ ItemOBJ = [
 ,[1655,50,79,5,0,1,160,74,"Enhanced Helm of Angel","","A wondrous helmet adorned with angel wings that was made by a smithing genius.<br>[Refine Rate 5~6+]<br>AGI + 1, LUK + 1, MDEF + 1<br>[Refine Rate 7+]<br>ASPD + 1",2,1,6,1,19,3,12,5,0]
 ,[1656,50,70,5,0,1,240,70,"Enhanced Bone Helm","","An incredibly heavy, yet almost impenetrable helmet constructed of bone.<br>Every refine level past +4 until +8 reduces DEF by 1 and decreases damage received from Neutral Property attacks by another 1%.",60,1,67,-15,0]
 ,[1657,50,1,5,0,1,50,70,"Enhanced Corsair","","A flamboyant hat worn only by the strongest of pirates.<br>[Refine Rate 5~7+]<br>Maximum HP + 1%<br>[Refine Rate 8+]<br>Maximum HP + 2%<br>Reduce another 1% damage from Neutral type attacks.",3,1,15,5,60,1,0]
-,[1658,50,0,5,0,1,100,70,"Lord of the Dead Helm","","[Refine Rate 5~10]<br>Increase damage on Boss monster by 1% for every refine.<br><br>[+ Abysmal Knight Card]<br>Increase damage on Boss monster by 5%.<br><br>[Refine Rate 6~10]<br>Receive 1% more damage from all monsters for every refine.",19,5,26,10,77,-5,79,-5,0]
+,[1658,50,0,5,0,1,100,70,"Lord of the Dead Helm","","<b>Mid and Upper Headgear</b><br>[Refine Rate 5~10]<br>Increase damage on Boss monster by 1% for every refine.<br><br>[+ Abysmal Knight Card]<br>Increase damage on Boss monster by 5%.<br><br>[Refine Rate 6~10]<br>Receive 1% more damage from all monsters for every refine.",19,5,26,10,77,-5,79,-5,0]
+,[1659,52,0,0,0,0,10,1,"Cheer Whistle","","Blowing this whistle can drastically improve your team's morale.",1,1,0]
+,[1660,52,0,0,0,0,10,1,"Blue Pencil In Mouth","","A blue pencil full of teeth marks due to holding it in your mouth all the time.",8,3,0]
+,[1661,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,18,0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
@@ -1722,6 +1725,177 @@ ItemOBJ = [
    Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
    After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP= +/-,14 MSP= +/-,15 MHP = %,16 MSP = %,17 ATK,18 DEF,19 MDEF
 */
+
+ItemID = [
+"###", // ID for ItemOBJ[0]
+"###","###","###","###","###","###","###","###","###","###", // ID for ItemOBJ[1-10]
+"###","###","###","###","###","###","###","###","###","###", // ID for ItemOBJ[11-20]
+"###","###","###","###","###","###","###","###","###","###", // ID for ItemOBJ[21-30]
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","Test Item ID Display - Chilly Spell Book",18767,18766,18768,18765,18574,"###","###", // ID for ItemOBJ[1651-1660]
+"###" // ID for ItemOBJ[1661]
+];
 
 ItemMax = ItemOBJ.length -1;
 
@@ -1756,7 +1930,7 @@ function ClickB_Item(CBI)
 	}
 	if(eval(document.calcForm.ITEM_SW.checked)==0)
 		return;
-	myInnerHtml("nm080",ItemOBJ[CBI][8],0);
+	myInnerHtml("nm080",ItemOBJ[CBI][8] + " # Item ID : " + ItemID[CBI],0);
 	myInnerHtml("ITEM1","Slot",0);
 	myInnerHtml("ITEM3","Req. Lvl",0);
 	myInnerHtml("ITEM4","Weight",0);
