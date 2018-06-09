@@ -730,7 +730,7 @@ MonsterOBJ = [
 ,[624,"Garden Watcher",8,4,1,81,300000,56,74,126,145,114,1666,2609,55,55,0,0,,1,0,1933]
 ,[625,"Halion",6,74,1,95,3333333,30,110,65,200,65,9238,14040,90,37,0,0,,1,0,2800]
 ,[626,"Nokrah Shadow [Dragon] ",6,74,1,95,4444444,35,70,250,220,93,1250,3480,10,90,0,0,,1,0,2812]
-,[627,"Nokrah [Gunslinger]",7,74,1,99,1000000,30,60,220,220,30,7000,12000,20,67,875000,437500,,1,1,2802]
+,[627,"Nokrah [Gunslinger]",7,74,1,99,1000000,30,60,220,220,30,7000,12000,20,67,1000000,500000,,1,1,2802]
 ,[628,"Nokrah [Sorcerer]",7,81,1,99,2000000,20,50,150,220,30,7000,12000,50,50,2000000,100000,,1,0,2804]
 ,[629,"Nokrah [Warlock]",7,83,1,99,1500000,30,120,220,220,30,7000,12000,50,30,1500000,750000,,1,0,2803]
 ,[630,"Nokrah Shadow [Slave] ",6,94,2,77,103631,40,100,100,97,40,1300,1983,64,70,0,0,,1,0,2801]
@@ -788,13 +788,14 @@ MonsterOBJ = [
 ,[677,"Buwaya's Slave",3,21,0,102,27145,30,110,92,113,61,4102,7571,20,38,0,0,,0,0,2330]
 ];
 
-//id,name,race,element,size,level,hp,vit,agi,int,dex,luk,minatk,maxatk,def,mdef,bexp(/8),jexp(/8) ,,boss,archer,mobid
+//,[id, "name",race,element,size,lvl,hp,vit,agi,int,dex,luk,minatk,maxatk,def,mdef,baseexp@1x_rate,jobexp@1x_rate,,1 boss/0 non-boss,1 range/0 melee, monster ID]
+//id,name,race,element,size,level,hp,vit,agi,int,dex,luk,minatk,maxatk,def,mdef,bexp,jexp,,boss,archer,mobid
 
 
 /*[["None","Neutral 1","Neutral 2","Neutral 3","Neutral 4","Water 1","Water 2","Water 3","Water 4","Earth 1","Earth 2","Earth 3","Earth 4","Fire 1","Fire 2","Fire 3","Fire 4","Wind 1","Wind 2","Wind 3","Wind 4","Poison 1","Poison 2","Poison 3","Poison 4","Holy 1","Holy 2","Holy 3","Holy 4","Shadow 1","Shadow 2","Shadow 3","Shadow 4","Ghost 1","Ghost 2","Ghost 3","Ghost 4","Undead 1","Undead 2","Undead 3","Undead 4"],
 	[0,1,2,3,4,11,12,13,14,21,22,23,24,31,32,33,34,41,42,43,44,51,52,53,54,61,62,63,64,71,72,73,74,81,82,83,84,91,92,93,94]];
 	SyuzokuOBJ = ["Formless","Undead","Brute","Plant","Insect","Fish","Demon","Demi-Human","Angel","Dragon"];
-		*/
+*/
 
 EnemyNum = MonsterOBJ.length -1;
 
@@ -815,7 +816,7 @@ var tiiki = ["All Regions","Seals","GMC","Abyss Lake Dungeon","Amatsu","Ant Hell
 "Guild Dungeon [Aldebaran]","Guild Dungeon [Arunafeltz]","Guild Dungeon [Geffen]","Guild Dungeon [Payon]","Guild Dungeon [Prontera]",
 "Guild Dungeon [Schwartzvald]","Hidden Temple","Hugel Fields","Ice Cave","Juperos Dungeon","Kiel Dungeon","Lighthalzen Fields",
 "Louyang","Lutie & Toy Factory","Magma Dungeon","Malangdo","Manuk","Morroc Fields","Moscovia","Mt. Mjolnir","Nameless Island","Nidhoggr's Nest",
-"Niflheim","Odins Shrine","Orc Dungeon","Payon Dungeon","Payon Fields","Poring Island","Port Malaya Instance","Prontera Fields","Pyramid","Rachel Fields",
+"Niflheim","Odins Shrine","Orc Dungeon","Payon Dungeon","Payon Fields","Poring Island","Port Malaya Instance","Prontera Fields","Pyramid","Pyramid [Nightmare]","Rachel Fields",
 "Rachel Sanctuary","Scaraba Hole","Sphinx","Splendide","Sunken Ship","Thanatos Tower","Thors Volcano","Turtle Island","Umbala Dungeon",
 "Umbala Fields","Veins Fields","War of Emperium","Yuno Fields"];
 
