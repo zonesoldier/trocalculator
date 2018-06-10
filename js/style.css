@@ -172,5 +172,13 @@ div#ubernavi a:hover {
 span.navititle {
 	font-weight:bold;
 }
-.pad {padding: 8px;}
-ul li+b {font-size: 14px;}
+.pad {
+  padding: 8px;
+}
+ul li+b {
+  font-size: 14px;
+}
+.linkW {
+  color: #FFFFFF !important;
+  text-decoration: underline !important;
+}
