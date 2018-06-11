@@ -1,3 +1,61 @@
+[Update 2018-06-11]
+- Fixed Thief Ring attack bonus script [Slap]
+- Added Drooping Maya [Slap]
+- Issue #149: Proofreading [Slap]
+	Byeollungum: effect (26,50 -> 26,5)
+	Schweizersabel: name (Schweizer Sabel -> Schweizersabel)
+	Brocca: effects (22,10 -> 22,1)
+	Brionac: effect (26,5)
+	Slash: effect (49,15 -> 31,15)
+	Quadrille: effect (49,10 -> 31,10)
+	Kaiser Knuckle:
+		required lvl (46 -> 36)
+		effect (49,5 -> 31,5)
+	Berserk:
+		weight (36 -> 50)
+		required lvl (46 -> 36)
+	Lariat Whip: name (Lairat Whip -> Lariat Whip)
+	Lucius's Fierce Armor of Volcano: name (Luciu's Fierce Armor of Volcano -> Lucius's Fierce Armor of Volcano)
+	Sacred Mission: effect (6 DEF -> 5 DEF)
+	Thief Ring: name (Thief's Ring -> Thief Ring)
+	Neko Mimi: type (999 -> 50)
+	Takius's Blindfold: name (Takius Blindfold -> Takius's Blindfold)
+	Magic Eyes: jobid (0 -> 55)
+	Kabuki Mask:
+		jobid (0 -> 1)
+		updated description
+	Alice Doll:
+		jobid (0 -> 1)
+		updated description
+	Crescent Moon Helm:
+		name (Crescent Helm -> Crescent Moon Helm)
+		jobid (0 -> 70)
+		updated description
+	Cinquedea: required lvl (55 -> 30)
+	Star Dust Blade: name (Stardust Blade -> Star Dust Blade)
+	Hypnotist's Staff: slots ("1 / 2" -> 2) //Single slotted isn't obtainable and set only works with double slotted.
+	Bloody Roar:
+		fixed script
+		updated description
+	Red Flame Whip: weight (90 -> 70)
+	Breeze Whip: replaced with Drooping Maya //Item does not exist
+	Icicle Whip: weight (90 -> 70)
+	Gaia Whip: weight (90 -> 70)
+	Blade Whip: effect (added 138,3)
+	Puppy Headband: name (Puppy Hairband -> Puppy Headband)
+	Earring [0]: updated name to reflect slots
+	Glove [0]: updated name to reflect slots
+	Necklace [0]: updated name to reflect slots
+	Brooch [0]: updated name to reflect slots
+	Ring [0]: updated name to reflect slots
+	Rosary [0]: updated name to reflect slots
+	Coif [0]: updated name to reflect slots
+	Claytos Cracking Earth Armor [0]: updated name to reflect slots
+	Lucius's Fierce Armor of Volcano [0]: updated name to reflect slots
+	Saphien's Armor of Ocean [0]: updated name to reflect slots
+	Aebecee's Raging Typhoon Armor [0]: updated name to reflect slots
+	Skull Ring [0]: updated name to reflect slots
+
 [Update 2018-06-09]
 - Issue #161: [Feature Request] ItemID Display [NattWara]
 	Currently only these item have correct ID in item.js
@@ -27,20 +85,24 @@
 	Ring [1]: required lvl (90 -> 0)
 	Rosary [1]: required lvl (90 -> 0)
 	Matyr's Leash: name (Martyr's Leash -> Matyr's Leash)
-	Brisingamen: name (Brisingamen [1] -> Brisingamen)
-	Brisingamen: required lvl (94 -> 0)
-	Megingjard: name (Meginjard -> Megingjard)
-	Megingjard: required lvl (94 -> 0)
+	Brisingamen:
+		name (Brisingamen [1] -> Brisingamen)
+		required lvl (94 -> 0)
+	Megingjard:
+		name (Meginjard -> Megingjard)
+		required lvl (94 -> 0)
 	Crown of Mistress: name (Mistress Crown -> Crown of Mistress)
 	Red Tailed Ribbon: name (Giant Ribbon -> Red Tailed Ribbon)
 	Kitsune Mask: name (Fox Mask -> Kitsune Mask)
 	Drooping Cat: job (0 -> 1)
-	Sea-Otter Hat: name (Sea Otter Hat -> Sea-Otter Hat)
-	Sea-Otter Hat: reqired lvl (0 -> 50)
+	Sea-Otter Hat:
+		name (Sea Otter Hat -> Sea-Otter Hat)
+		reqired lvl (0 -> 50)
 	Incubus Horn: name (Incubus Horns -> Incubus Horn)
 	Succubus Horn: name (Succubus Horns -> Succubus Horn)
-	Helmet of Orc Hero: name (Orc Hero Helm -> Helmet of Orc Hero)
-	Helmet of Orc Hero: updated description
+	Helmet of Orc Hero:
+		name (Orc Hero Helm -> Helmet of Orc Hero)
+		updated description
 	Swordbreaker: name (Sword Breaker -> Swordbreaker)
 	Mailbreaker: name (Mail Breaker -> Mailbreaker)
 	Cursed Dagger: updated description/effects
@@ -55,8 +117,9 @@
 	Sword Mace: name (Swordmace -> Sword Mace)
 	Evil Bone Wand: name (Bone Wand -> Evil Bone Wand)
 	Hunter Bow: weight (110 -> 150)
-	Rudra Bow: name (Rudra's Bow -> Rudra Bow)
-	Rudra Bow: effect (added Holy element)
+	Rudra Bow:
+		name (Rudra's Bow -> Rudra Bow)
+		effect (added Holy element)
 	Book of Gust of Wind: name (removed extra space)
 	Book of the Blazing Sun: name (Book of Blazing Sun -> Book of the Blazing Sun)
 	Book of the Apocalypse: effect (added +5% damage to Holy Property)
@@ -67,14 +130,17 @@
 	Rante Whip: name (Rante -> Rante Whip)
 	Chemeti Whip: name (Chemeti -> Chemeti Whip)
 	Heart Hairpin: name (Heart Hairbin -> Heart Hairpin)
-	Hair Band: name (Hairband -> Hair Band)
-	Hair Band: effect (added 1 DEF)
+	Hair Band:
+		name (Hairband -> Hair Band)
+		effect (added 1 DEF)
 	Bulb Band: name (Light Bulb Band -> Bulb Band)
-	Ph.D Hat: effect (2 DEF -> 3 DEF)
-	Ph.D Hat: weight (10 -> 20)
+	Ph.D Hat:
+		effect (2 DEF -> 3 DEF)
+		weight (10 -> 20)
 	Evil Wing: name (Evin Wing -> Evil Wing)
-	Boys Cap: effect (3 DEF -> 2 DEF)
-	Boys Cap: weight (20 -> 10)
+	Boys Cap:
+		effect (3 DEF -> 2 DEF)
+		weight (20 -> 10)
 	Safety Helmet: effect (added Indestructible)
 	Gemmed Sallet: name (Jewel Crown -> Gemmed Sallet)
 	Biretta: name (Bireta -> Biretta)
@@ -82,9 +148,10 @@
 	Nutshell: name (Nut Shell -> Nutshell)
 	Helm of Angel: name (Angel Helm -> Helm of Angel)
 	Goggles: updated description
-	Sphinx Hat: name (Sphinx Hat [1] -> Sphinx Hat) //Will remove the other Sphinx Hat as it is not obtainable and not in the wiki database.
-	Sphinx Hat: slots (0 -> "0 / 1")
-	Sphinx Hat: updated description
+	Sphinx Hat:
+		name (Sphinx Hat [1] -> Sphinx Hat) //Will remove the other Sphinx Hat as it is not obtainable and not in the wiki database.
+		slots (0 -> "0 / 1")
+		updated description
 	Zorro Masque: name (Zorro Mask -> Zorro Masque)
 
 [Update 2018-06-07]
@@ -153,8 +220,9 @@
 	Axe: jobid (50 -> 0)
 	Orcish Axe: jobid (72 -> 0)
 	War Axe: attack (145 -> 140)
-	Golden Mace: name (Gold Mace -> Golden Mace)
-	Golden Mace: slot (0 -> "0 / 1")
+	Golden Mace:
+		name (Gold Mace -> Golden Mace)
+		slot (0 -> "0 / 1")
 - Issue #134: Fixed some items about Vit Def; [Kato]
 - Issue #135: Added Malangdo Mobs; [Kato]
 - Issue #37 Added Maiden Hat; [ZoneSoldier]

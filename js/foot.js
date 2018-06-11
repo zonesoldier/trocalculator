@@ -1533,8 +1533,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill6[0] == 2 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==4)
 		n_A_FLEE += n_A_PassSkill6[1] *3;
 
-	if(n_A_Equip[0]==483)
-		n_A_FLEE -= (n_A_BaseLV + SU_AGI);
+	//Bloody Roar FLEE -160 - slaptro - 2018-06-11
+	if(EquipNumSearch(483)){
+		if(n_A_FLEE < 160){
+			n_A_FLEE -= n_A_FLEE;
+		}
+		else{
+			n_A_FLEE -= 160;
+		}
+	}
+
 	if(n_A_JOB==8||n_A_JOB==14||n_A_JOB==22||n_A_JOB==28)
 		n_A_FLEE += 4 * SkillSearch(14);
 	else
@@ -1645,6 +1653,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - slaptro - 2016-06-07
 	if(EquipNumSearch(1652) && n_A_HEAD_DEF_PLUS > 6){
 		n_A_LUCKY += 4;
+	}
+
+	//Bloody Roar Perfect Dodge -160 - slaptro - 2018-06-11
+	if(EquipNumSearch(483)){
+		if(n_A_LUCKY < 160){
+			n_A_LUCKY -= n_A_LUCKY;
+		}
+		else{
+			n_A_LUCKY -= 160;
+		}
 	}
 
 	n_A_LUCKY = Math.round(n_A_LUCKY *10)/10;
@@ -1870,7 +1888,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1654)){C_ATK += 10;}
 	if(EquipNumSearch(676)){C_ATK += n_A_HEAD_DEF_PLUS*2;}
 	if(EquipNumSearch(323) && EquipNumSearch(725)){C_ATK += 50;}
-	if(EquipNumSearch(442) && SU_AGI > 89){C_ATK += 10;}
+	if(EquipNumSearch(442) && SU_AGI > 89){C_ATK += 10 * EquipNumSearch(442);}
 	if(EquipNumSearch(1165)){C_ATK += 10 * SkillSearch(311);}
 	if(EquipNumSearch(1164) && SU_LUK >=90){C_ATK += 20;}
 	if(EquipNumSearch(1160) && SU_STR >=95){C_ATK += 20;}
