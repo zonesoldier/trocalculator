@@ -4,7 +4,7 @@
 //Corrigido conflito de dois cute ribbon, alterei o nome do cute ribbon com data de kawaii ribbon
 
 /*
-  ZoneSoldier - 6/2/208
+  ZoneSoldier - 6/2/2018
    id, display location, job that can use,(atk; def),lvl equip, slots, weight, lvl required to use, "name of item",  ?, "description", effect1, effect2, ..., 0 =?]
    Example : [1535 = ID,62 = Location,0 = all jobs,0 = def(atk if its a weapon),0-default = equipment level,1 = slots, 0 = weight, 60 = Level required to use item,0 = ,"Beach Manteau" = Name of object,"" = ?,0 = description(No info added so left at 0),1 = STR,1 = 1 next to str value,4 = Int,1 = Int value 1 on site,63 = Fire resistance,10 = 10% resistance,0= end]
    Location values:
@@ -74,7 +74,7 @@ ItemOBJ = [
 ,[51,4,0,160,3,1,380,71,"Pole Axe","",0,1,1,4,2,5,1,0]
 ,[52,4,0,120,4,"0 / 2",50,4,"Gungnir","",0,8,30,20,4,86,25,0]
 ,[53,5,0,84,2,"2 / 3",100,18,"Guisarme","",0,0]
-,[54,5,0,104,2,"2 / 3",120,18,"Glave","",0,0]
+,[54,5,0,104,2,"2 / 3",120,18,"Glaive","",0,0]
 ,[55,5,0,124,2,"1 / 2",200,18,"Partizan","",0,0]
 ,[56,5,0,150,3,"2 / 3",120,33,"Trident","",0,0]
 ,[57,5,0,165,3,"1 / 2",250,33,"Halberd","",0,0]
@@ -98,7 +98,7 @@ ItemOBJ = [
 ,[75,8,1,84,2,"2 / 3",80,14,"Chain","",0,0]
 ,[76,8,1,110,3,"1 / 2",150,27,"Morning Star","",0,0]
 ,[77,8,53,115,3,0,250,55,"Wrench","","1% of randomly inflict Stun, Blind, Poison or Freeze Status with each melee attack",0]
-,[78,8,1,130,3,"0 / 1",120,27,"Swordmace","",0,0]
+,[78,8,1,130,3,"0 / 1",120,27,"Sword Mace","",0,0]
 ,[79,8,53,140,3,"0 / 2",200,27,"Stunner","",0,131,10,0]
 ,[80,8,63,155,3,0,300,78,"Iron Driver","",0,0]
 ,[81,8,53,110,4,"1 / 2",80,40,"Golden Mace","",0,49,10,194,1,0]
@@ -109,7 +109,7 @@ ItemOBJ = [
 ,[86,9,0,25,2,"2 / 3",40,12,"Wand","",0,4,1,89,15,0]
 ,[87,9,1,40,2,"2 / 3",40,12,"Staff","",0,4,2,89,15,0]
 ,[88,9,55,25,3,0,140,73,"Soul Staff","",0,4,5,2,2,89,15,195,1,0]
-,[89,9,1,40,3,0,70,24,"Bone Wand","",0,4,4,20,9,89,15,0]
+,[89,9,1,40,3,0,70,24,"Evil Bone Wand","",0,4,4,20,9,89,15,0]
 ,[90,9,1,60,3,"1 / 2",40,24,"Arc Wand","",0,4,3,89,15,0]
 ,[91,9,1,75,3,0,70,24,"Wand of Occult","",0,4,3,89,15,0]
 ,[92,9,55,120,4,0,240,90,"Wizardry Staff","",0,4,6,5,2,89,15,195,1,0]
@@ -121,10 +121,10 @@ ItemOBJ = [
 ,[98,10,0,90,3,"1 / 2",100,33,"Arbalest","",0,5,2,0]
 ,[99,10,80,95,3,1,200,65,"Repeating Crossbow","","Weapon Range +4",0]
 ,[100,10,0,100,3,"1 / 2",110,33,"Gakkung Bow","",0,0]
-,[101,10,110,125,3,"0 / 1",110,33,"Hunter Bow","","If equipped together with Hunting Arrow, increases damage by 50%",0]
+,[101,10,110,125,3,"0 / 1",150,33,"Hunter Bow","","If equipped together with Hunting Arrow, increases damage by 50%",0]
 ,[102,10,102,75,4,0,50,48,"Roguemaster's Bow","","Weapon Range +6",0]
 ,[103,10,64,145,4,"0 / 1",350,77,"Ballista","",0,0]
-,[104,10,76,150,4,0,120,48,"Rudra's Bow","",0,4,5,150,50,153,50,154,50,156,50,157,50,220,5,220,6,0]
+,[104,10,76,150,4,0,120,48,"Rudra Bow","",0,4,5,150,50,153,50,154,50,156,50,157,50,220,5,220,6,20,6,0]
 ,[105,11,0,125,2,"2 / 3",80,18,"Jur","",0,0]
 ,[106,11,0,105,3,"0 / 3",120,55,"Katar of Piercing Wind","",0,20,4,135,5,0]
 ,[107,11,0,105,3,"0 / 3",120,55,"Katar of Quaking","",0,20,2,134,5,0]
@@ -135,17 +135,17 @@ ItemOBJ = [
 ,[112,11,0,165,3,"0 / 1",150,33,"Jamadhar","",0,0]
 ,[113,11,0,140,4,"0 / 1",150,75,"Infiltrator","",0,37,50,18,3,9,5,11,2,0]
 ,[114,12,0,85,2,3,60,14,"Book","",0,0]
-,[115,12,0,90,3,"0 / 3",75,27," Book of Gust of Wind","",0,20,4,0]
+,[115,12,0,90,3,"0 / 3",75,27,"Book of Gust of Wind","",0,20,4,0]
 ,[116,12,0,90,3,"0 / 3",75,27,"Book of Billows","",0,20,1,0]
-,[117,12,0,90,3,"0 / 3",75,27,"Book of Blazing Sun","",0,20,3,0]
+,[117,12,0,90,3,"0 / 3",75,27,"Book of the Blazing Sun","",0,20,3,0]
 ,[118,12,0,90,3,"0 / 3",75,27,"Book of Mother Earth","",0,20,2,0]
 ,[119,12,0,115,3,2,100,27,"Bible","",0,4,2,0]
 ,[120,12,0,125,3,1,80,27,"Tablet","",0,0]
 ,[121,12,0,60,4,1,30,40,"Girl's Diary","","Increase damage on Bongun Monsters by 150%",1275,150,0]
-,[122,12,0,120,4,0,80,40,"Book of the Apocalypse","",0,20,7,41,7,42,7,43,7,44,7,0]
+,[122,12,0,120,4,0,80,40,"Book of the Apocalypse","",0,20,7,41,7,42,7,43,7,44,7,46,5,0]
 ,[123,13,0,30,1,"3 / 4",40,0,"Waghnak","",0,0]
 ,[124,13,0,50,2,"2 / 3",45,12,"Knuckle Duster","",0,0]
-,[125,13,0,65,2,"2 / 3",45,12,"Hora","",0,0]
+,[125,13,0,65,2,"2 / 3",45,12,"Studded Knuckles","",0,0]
 ,[126,13,0,86,3,"1 / 2",50,24,"Claw","",0,1,2,0]
 ,[127,13,0,97,3,"1 / 2",50,24,"Finger","",0,0]
 ,[128,13,0,115,3,"0 / 1",65,24,"Fist","",0,0]
@@ -156,24 +156,24 @@ ItemOBJ = [
 ,[133,14,0,126,3,"1 / 2",130,27,"Gumoongoh","",0,0]
 ,[134,14,0,142,3,"0 / 1",90,27,"Guitar","",0,0]
 ,[135,15,0,45,1,"3 / 4",40,3,"Rope","",0,0]
-,[136,15,0,80,2,"2 / 3",30,16,"Line","",0,0]
-,[137,15,0,95,2,"2 / 3",100,16,"Wire","",0,0]
-,[138,15,0,105,3,"1 / 2",70,30,"Tail","",0,6,3,0]
+,[136,15,0,80,2,"2 / 3",30,16,"Whip (Line)","",0,0]
+,[137,15,0,95,2,"2 / 3",100,16,"Wire Whip","",0,0]
+,[138,15,0,105,3,"1 / 2",70,30,"Tail Whip","",0,6,3,0]
 ,[139,15,0,120,3,"1 / 2",70,30,"Whip","",0,0]
-,[140,15,0,135,3,"0 / 1",90,30,"Rante","",0,0]
-,[141,15,0,135,4,0,70,44,"Chemeti","",0,10,5,9,10,11,2,0]
+,[140,15,0,135,3,"0 / 1",90,30,"Rante Whip","",0,0]
+,[141,15,0,135,4,0,70,44,"Chemeti Whip","",0,10,5,9,10,11,2,0]
 ,[142,50,0,0,0,0,0,0,"(No Upper Headgear)","",0,0]
 ,[143,50,0,0,0,0,70,0,"Poo Poo Hat","",0,57,10,193,1,0]
 ,[144,50,0,0,0,0,10,0,"Wedding Veil","",0,19,5,0]
 ,[145,50,1,0,0,0,15,14,"Bao Bao","",0,0]
-,[146,50,0,0,0,0,10,0,"Heart Hairbin","",0,0]
+,[146,50,0,0,0,0,10,0,"Heart Hairpin","",0,0]
 ,[147,50,1,0,0,0,10,0,"Fashionable Glasses","",0,0]
-,[148,50,0,0,0,0,10,0,"Hairband","",0,193,1,0]
+,[148,50,0,1,0,0,10,0,"Hair Band","",0,193,1,0]
 ,[149,50,0,0,0,0,15,0,"Candle","",0,0]
 ,[150,50,0,0,0,0,10,0,"Halo","",0,66,15,193,1,0]
 ,[151,50,0,0,0,0,10,0,"Crescent Hairpin","",0,0]
 ,[152,50,0,0,0,0,10,0,"Fancy Flower","",0,53,10,193,1,0]
-,[153,50,1,0,0,0,50,0,"Light Bulb Band","",0,0]
+,[153,50,1,0,0,0,50,0,"Bulb Band","",0,0]
 ,[154,50,56,0,0,0,100,0,"Parcel Hat","",0,0]
 ,[155,50,1,0,0,0,10,0,"Ghost Bandana","",0,2,2,68,10,0]
 ,[156,50,1,0,0,0,20,30,"Apple of Archer","",0,5,3,0]
@@ -203,7 +203,7 @@ ItemOBJ = [
 ,[180,50,0,2,0,0,10,0,"Red Bandana","",0,0]
 ,[181,50,1,2,0,0,70,38,"Poring Hat","",0,0]
 ,[182,50,0,2,0,0,10,0,"Flower Band","",0,0]
-,[183,50,1,2,0,"0 / 1",10,0,"Ph.D Hat","",0,0]
+,[183,50,1,3,0,"0 / 1",20,0,"Ph.D Hat","",0,0]
 ,[184,50,53,2,0,0,10,0,"Nurse Cap","",0,4,1,0]
 ,[185,50,1,2,0,0,80,64,"Deviruchi Hat","","",1,1,4,1,0]
 ,[186,50,0,2,0,0,10,0,"Unicorn Horn","",0,0]
@@ -225,13 +225,13 @@ ItemOBJ = [
 ,[202,50,1,3,0,0,80,40,"Panda Hat","",0,0]
 ,[203,50,1,3,0,0,20,0,"Headset","",0,153,10,0]
 ,[204,50,1,3,0,0,20,55,"Grand Circlet","",0,1,1,4,1,6,1,19,4,0]
-,[205,50,1,3,0,0,10,0,"Evin Wing","",0,1,1,19,2,58,3,0]
+,[205,50,1,3,0,0,10,0,"Evil Wing","",0,1,1,19,2,58,3,0]
 ,[206,50,1,3,0,0,10,0,"Doctor Band","",0,4,1,0]
 ,[207,50,1,3,0,"0 / 1",10,0,"Pirate Bandana","",0,1,1,0]
-,[208,50,1,3,0,"0 / 1",20,0,"Boys Cap","",0,0]
+,[208,50,1,2,0,"0 / 1",10,0,"Boys Cap","",0,0]
 ,[209,50,0,3,0,0,30,0,"Sakkat","",0,2,1,0]
 ,[210,50,1,3,0,"0 / 1",30,0,"Turban","",0,0]
-,[211,50,1,3,0,0,50,0,"Safety Helmet","",0,19,3,0]
+,[211,50,1,3,0,0,50,0,"Safety Helmet","",0,19,3,194,1,0]
 ,[212,50,0,3,0,0,20,0,"Ear Muffs","",0,153,10,0]
 ,[213,50,0,3,0,0,20,0,"Egg Shell","",0,193,1,0]
 ,[214,50,55,4,0,0,30,0,"Wizard Hat","",0,14,100,0]
@@ -239,27 +239,27 @@ ItemOBJ = [
 ,[216,50,75,4,0,"0 / 1",40,0,"Cap","",0,0]
 ,[217,50,1,4,0,0,40,45,"Crown","",0,4,2,0]
 ,[218,50,72,4,0,0,60,60,"Jewel Crown","",0,4,2,6,1,19,3,0]
-,[219,50,72,4,0,"0 / 1",50,0,"Jewel Helm","",0,19,3,0]
+,[219,50,72,4,0,"0 / 1",50,0,"Gemmed Sallet","",0,19,3,0]
 ,[220,50,1,4,0,0,40,45,"Tiara","",0,4,2,0]
-,[221,50,53,4,0,"0 / 1",10,0,"Bireta","",0,0]
-,[222,50,72,4,0,0,40,0,"Army Hat","",0,0]
+,[221,50,53,4,0,"0 / 1",10,0,"Biretta","",0,0]
+,[222,50,72,4,0,0,40,0,"Army Cap","",0,0]
 ,[223,50,0,4,0,0,40,19,"Rainbow Eggshell","",0,193,1,0]
 ,[224,50,54,4,0,0,30,0,"Feather Bonnet","",0,2,1,0]
 ,[225,50,78,4,0,0,150,55,"Mine Hat","",0,5,2,0]
 ,[226,50,1,4,0,0,50,0,"Antlers","",0,0]
-,[227,50,0,4,0,0,15,5,"Nut Shell","",0,193,1,0]
+,[227,50,0,4,0,0,15,5,"Nutshell","",0,193,1,0]
 ,[228,50,79,4,0,"0 / 1",240,0,"Hat of the Sun God","","",1,3,4,2,0]
 ,[229,50,72,5,0,"0 / 1",50,0,"Orc Helm","",0,0]
 ,[230,50,1,5,0,"0 / 1",50,0,"Corsair","",0,3,1,0]
 ,[231,50,86,5,0,"0 / 1",80,0,"Majestic Goat","",0,1,1,0]
 ,[232,50,0,5,0,0,30,30,"Wonder Nutshell","",0,193,1,0]
 ,[233,50,53,5,0,"0 / 1",10,0,"Monk Hat","",0,19,3,0]
-,[234,50,79,5,0,0,160,74,"Angel Helm","",0,2,1,6,1,19,3,0]
+,[234,50,79,5,0,0,160,74,"Helm of Angel","",0,2,1,6,1,19,3,0]
 ,[235,50,1,5,0,"0 / 1",90,40,"Golden Gear","",0,0]
-,[236,50,75,5,0,"0 / 1",30,0,"Goggles","","",0]
+,[236,50,75,5,0,"0 / 1",30,0,"Goggles","","<b>Upper and Mid Headgear</b>",0]
 ,[237,50,0,5,0,"0 / 1",30,0,"Bongun Hat","","",193,1,0]
 ,[238,50,0,5,0,"0 / 1",30,0,"Munak Hat","","",51,10,193,1,0]
-,[239,50,51,5,0,1,300,65,"Sphinx Hat [1]","","",1,2,193,1,0]
+,[239,50,51,5,0,"0 / 1",300,65,"Sphinx Hat","","<b>Upper and Lower Headgear</b>",1,2,193,1,0]
 ,[240,50,85,6,0,"0 / 1",100,50,"Spiky Band","",0,0]
 ,[241,50,51,6,0,"0 / 1",60,0,"Helm","",0,0]
 ,[242,50,70,7,0,"0 / 1",80,70,"Bone Helm","",0,67,-15,0]
@@ -269,13 +269,13 @@ ItemOBJ = [
 ,[246,51,0,0,0,0,10,0,"Diver Goggles","",0,0]
 ,[247,51,0,0,0,0,10,0,"Blush","",0,0]
 ,[248,51,0,0,0,0,10,0,"Eye Patch","",0,0]
-,[249,51,1,0,0,0,10,0,"Zorro Mask","",0,0]
+,[249,51,1,0,0,0,10,0,"Zorro Masque","",0,0]
 ,[250,51,1,0,0,0,10,0,"Masquerade","",0,37,3,0]
 ,[251,51,0,0,0,0,10,0,"Monocle","",0,0]
 ,[252,51,1,0,0,0,10,0,"Blinker","",0,154,100,0]
 ,[253,51,1,0,0,0,10,70,"Elven Ears","",0,0]
 ,[254,51,0,1,0,0,10,0,"Geek Glasses","",0,154,15,0]
-,[255,51,1,1,0,0,10,0,"Machoman's Classes","",0,0]
+,[255,51,1,1,0,0,10,0,"Machoman's Glasses","",0,0]
 ,[256,51,1,1,0,0,20,20,"Opera Phantom Mask","",0,0]
 ,[257,51,1,1,0,0,10,0,"Mini Glasses","",0,0]
 ,[258,51,0,1,0,0,10,0,"Purple Glasses","",0,154,10,0]
@@ -286,7 +286,7 @@ ItemOBJ = [
 ,[263,51,1,1,0,0,10,0,"Mr. Scream","","<b>Mid and Low Headgear</b>",0]
 ,[264,51,0,1,0,0,10,0,"Mr. Smile","","<b>Mid and Low Headgear</b>",0]
 ,[265,51,51,2,0,0,30,65,"Fin Helm","",0,0]
-,[266,51,1,2,0,0,20,0,"Opera Mask","","",0]
+,[266,51,1,2,0,0,20,0,"Opera Masque","","",0]
 ,[267,51,56,2,0,0,30,50,"Welding Mask","","<b>Mid and Low Headgear</b>",63,10,0]
 ,[268,52,0,0,0,0,0,0,"(No Lower Headgear)","",0,0]
 ,[269,52,1,0,0,0,10,0,"Cigarette","",0,54,3,0]
@@ -302,8 +302,8 @@ ItemOBJ = [
 ,[279,60,0,0,0,0,0,0,"(No Armor)","",0,0]
 ,[280,60,1,0,0,0,50,0,"Wedding Dress","",0,19,15,0]
 ,[281,60,0,1,0,"0 / 1",10,0,"Cotton Shirt","",0,0]
-,[282,60,0,2,0,"0 / 1",20,0,"Leather Jacket","",0,0]
-,[283,60,0,3,0,"0 / 1",30,0,"Adventure Suit","",0,0]
+,[282,60,0,2,0,"0 / 1",20,0,"Jacket","",0,0]
+,[283,60,0,3,0,"0 / 1",30,0,"Adventurer's Suit","",0,0]
 ,[284,60,71,3,0,"0 / 1",40,0,"Silk Robe","",0,19,10,0]
 ,[285,60,70,4,0,"0 / 1",100,0,"Wooden Mail","",0,0]
 ,[286,60,55,4,0,"0 / 1",70,0,"Silver Robe","",0,0]
@@ -315,7 +315,7 @@ ItemOBJ = [
 ,[292,60,55,5,0,"0 / 1",60,50,"Mage Coat","",0,19,5,4,1,0]
 ,[293,60,1,5,0,"0 / 1",120,0,"Coat","",0,0]
 ,[294,60,52,6,0,"0 / 1",10,0,"Thief Clothes","",0,2,1,0]
-,[295,60,73,6,0,"0 / 1",60,0,"Saint Robe","",0,19,5,0]
+,[295,60,73,6,0,"0 / 1",60,0,"Saint's Robe","",0,19,5,0]
 ,[296,60,54,6,0,"0 / 1",50,45,"Tights","",0,5,1,0]
 ,[297,60,1,6,0,1,230,30,"Mink Coat","",0,0]
 ,[298,60,72,7,0,"0 / 1",280,0,"Padded Armor","",0,0]
@@ -348,34 +348,34 @@ ItemOBJ = [
 ,[325,63,61,5,0,"0 / 1",75,65,"Greaves","",0,0]
 ,[326,64,0,0,0,0,0,0,"(No Accessory)","",0,0]
 ,[327,64,1,0,0,0,10,20,"Earring","",0,4,2,0]
-,[328,64,1,0,0,1,10,90,"Earring [1]","",0,4,1,0]
-,[329,64,0,0,0,1,5,0,"Clip","",0,14,10,0]
-,[330,64,1,0,0,0,5,40,"Critical Ring","",0,10,5,0]
+,[328,64,1,0,0,1,10,0,"Earring [1]","",0,4,1,0]
+,[329,64,0,0,0,1,10,0,"Clip","",0,14,10,0]
+,[330,64,1,0,0,0,10,40,"Critical Ring","",0,10,5,0]
 ,[331,64,1,0,0,0,10,20,"Glove","",0,5,2,0]
-,[332,64,1,0,0,1,10,90,"Glove [1]","",0,5,1,0]
-,[333,64,1,0,0,0,10,50,"Dullahan's Eye","",0,56,4,51,4,150,100,0]
+,[332,64,1,0,0,1,10,0,"Glove [1]","",0,5,1,0]
+,[333,64,1,0,0,0,10,50,"Eye of Dullahan","",0,56,4,51,4,150,100,0]
 ,[334,64,1,0,0,0,10,20,"Necklace","",0,3,2,0]
-,[335,64,1,0,0,1,10,90,"Necklace [1]","",0,3,1,0]
+,[335,64,1,0,0,1,10,0,"Necklace [1]","",0,3,1,0]
 ,[336,64,50,0,0,1,20,0,"Novice Armlet","",0,1,1,4,1,6,1,0]
 ,[337,64,1,0,0,0,10,20,"Brooch","",0,2,2,0]
-,[338,64,1,0,0,1,10,90,"Brooch [1]","",0,2,1,0]
+,[338,64,1,0,0,1,10,0,"Brooch [1]","",0,2,1,0]
 ,[339,64,0,0,0,1,120,25,"Belt","",0,0]
 ,[340,64,1,0,0,0,10,20,"Ring","",0,1,2,0]
-,[341,64,1,0,0,1,10,90,"Ring [1]","",0,1,1,0]
+,[341,64,1,0,0,1,10,0,"Ring [1]","",0,1,1,0]
 ,[342,64,1,0,0,0,10,20,"Rosary","",0,19,5,6,2,0]
-,[343,64,1,0,0,1,10,90,"Rosary [1]","",0,19,3,6,1,0]
+,[343,64,1,0,0,1,10,0,"Rosary [1]","",0,19,3,6,1,0]
 ,[344,64,54,0,0,"0 / 1",10,65,"Bow Thimble","",0,25,3,0]
-,[345,64,1,1,0,0,10,35,"Martyr's Leash","",0,2,1,0]
+,[345,64,1,1,0,0,10,35,"Matyr's Leash","",0,2,1,0]
 ,[346,64,1,1,0,0,10,35,"Celebrant's Mitten","",0,4,1,0]
-,[347,64,0,5,0,1,20,94,"Brisingamen [1]","",0,1,6,2,6,3,6,4,6,5,3,6,6,19,5,0]
-,[348,64,0,2,0,0,300,94,"Meginjard","","STR + 30<BR>[Assassin Class]<BR>STR bonus does not apply",19,7,5197,-10,5321,-10,0] //custom TalonRO str +30 instead of +40(will be added in foot.js cuz assa gets no bonus); weight 300 instead of 800
+,[347,64,0,5,0,1,20,0,"Brisingamen","",0,1,6,2,6,3,6,4,6,5,3,6,6,19,5,0]
+,[348,64,0,2,0,0,300,0,"Megingjard","","STR + 30<BR>[Assassin Class]<BR>STR bonus does not apply",19,7,5197,-10,5321,-10,0] //custom TalonRO str +30 instead of +40(will be added in foot.js cuz assa gets no bonus); weight 300 instead of 800
 ,[349,64,1,3,0,0,10,40,"Safety Ring","",0,19,3,0]
-,[350,50,1,0,0,0,10,75,"Mistress Crown","",0,4,2,14,100,0]
-,[351,50,0,1,0,0,20,45,"Giant Ribbon","",0,19,10,0]
+,[350,50,1,0,0,0,10,75,"Crown of Mistress","",0,4,2,14,100,0]
+,[351,50,0,1,0,0,20,45,"Red Tailed Ribbon","",0,19,10,0]
 ,[352,50,1,1,0,0,20,0,"Indian Headband","",0,5,1,0]
-,[353,50,1,1,0,0,30,0,"Fox Mask","",0,2,1,6,1,0]
+,[353,50,1,1,0,0,30,0,"Kitsune Mask","",0,2,1,6,1,0]
 ,[354,50,0,1,0,0,10,0,"X Hairpin","",0,0]
-,[355,50,0,1,0,0,50,0,"Drooping Cat","",0,19,15,153,30,0]
+,[355,50,1,1,0,0,50,0,"Drooping Cat","",0,19,15,153,30,0]
 ,[356,50,0,1,0,0,10,0,"Tulip Hairpin","",0,0]
 ,[357,50,1,1,0,0,10,0,"Hot-Blooded Headband","",0,1,2,0]
 ,[358,50,0,1,0,0,10,0,"Flower Hairpin","",0,0]
@@ -393,13 +393,13 @@ ItemOBJ = [
 ,[370,50,0,3,0,0,30,0,"Party Hat","",0,6,1,0]
 ,[371,50,0,3,0,0,80,50,"Teddybear Hat","",0,0]
 ,[372,50,0,3,0,0,20,50,"Straw Hat","",0,2,1,0]
-,[373,50,0,3,0,0,80,0,"Sea Otter Hat","",0,3,1,0]
-,[374,50,1,4,0,0,80,70,"Incubus Horns","",0,2,1,19,10,0]
+,[373,50,0,3,0,0,80,50,"Sea-Otter Hat","",0,3,1,0]
+,[374,50,1,4,0,0,80,70,"Incubus Horn","",0,2,1,19,10,0]
 ,[375,50,0,4,0,0,50,0,"Cowboy Hat","",0,0]
 ,[376,50,0,4,0,0,40,45,"Crown of Ancient Queen","",0,0]
-,[377,50,1,4,0,0,80,70,"Succubus Horns","",0,4,1,19,10,0]
+,[377,50,1,4,0,0,80,70,"Succubus Horn","",0,4,1,19,10,0]
 ,[378,50,1,4,0,0,35,0,"Sombrero","",0,2,1,0]
-,[379,50,1,5,0,0,90,55,"Orc Hero Helm","",0,1,2,3,1,0]
+,[379,50,1,5,0,0,90,55,"Helmet of Orc Hero","","<b>Upper, Middle, and Lower Headgear</b>",1,2,3,1,0]
 ,[380,50,81,5,0,0,30,65,"Coif","","<b>Mid and Upper Headgear</b>",0]
 ,[381,51,0,1,0,0,10,70,"Evil Wing Ears","",0,1,1,0]
 ,[382,51,0,1,0,0,10,0,"Surprised Mask","","<b>Mid and Low Headgear</b>",0]
@@ -410,15 +410,15 @@ ItemOBJ = [
 ,[387,1,1,75,4,0,50,36,"Kitchen Knife","","Adds a 50% additional chance of dropping Meat each time a Brute monster dies",37,3,10,30,0]
 ,[388,1,1,80,4,0,60,36,"Ice Pick","","-30% damage to Emperium<br>-30% damage to castle guardians",23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
 ,[389,1,1,84,4,0,40,0,"Princess Knife","",0,7,1,0]
-,[390,1,1,70,4,"0 / 3",100,36,"Sword Breaker","",0,140,5,0]
-,[391,1,1,70,4,"0 / 3",100,36,"Mail Breaker","",0,141,5,0]
+,[390,1,1,70,4,"0 / 3",100,36,"Swordbreaker","",0,140,5,0]
+,[391,1,1,70,4,"0 / 3",100,36,"Mailbreaker","",0,141,5,0]
 ,[392,1,1,80,4,0,40,36,"Weeder Knife","",0,183,1,33,15,53,15,0]
 ,[393,1,1,80,4,0,40,36,"Combat Knife","",0,57,10,56,-10,187,1,0]
 ,[394,1,1,90,4,0,70,36,"Exorciser","",0,56,5,57,-10,186,1,0]
 ,[395,1,1,70,4,0,50,36,"Bazerald","",0,20,3,4,5,89,10,0]
 ,[396,1,119,110,4,0,70,36,"Azoth","","When performing a physical attack, there's a 3% chance to transforming all monsters",0]
-,[397,1,55,55,4,0,40,85,"Cursed Dagger","","Curse an enemy by a 50% chance",0]
-,[398,1,55,140,4,0,50,55,"Dagger of Counter","",0,10,90,0]
+,[397,1,55,55,4,0,40,85,"Cursed Dagger","",0,133,50,0]
+,[398,1,55,140,4,0,55,55,"Dagger of Counter","",0,10,90,0]
 ,[399,2,1,120,4,0,50,40,"Nagan","","Enables use of the skill [Double Attack]Lv5",37,5,0]
 ,[400,2,1,115,4,0,70,40,"Edge","","When attacking, adds a 0.03% chance to inflict [Coma] on the enemy",133,3,0]
 ,[401,2,1,140,4,0,70,40,"Caesar's Sword","",0,33,25,183,1,0]
@@ -562,11 +562,11 @@ ItemOBJ = [
 ,[539,1,58,50,1,"2 / 3",60,12,"Ashura","",0,89,10,0]
 ,[540,1,58,70,2,"0 / 1",40,35,"Jitte","","When attacking, adds a 5% chance of destroying the enemy's weapon",0]
 ,[541,1,58,95,2,"1 / 2",70,24,"Murasame","",0,20,1,117,10,0]
-,[542,1,58,120,3,"0 / 1",80,42,"Hakujin","",0,4,2,221,13,0]
+,[542,1,58,120,3,"0 / 1",80,42,"Hakujin","","A dagger that has a shining white blade crafted of bone, and is designed for stabbing, rather than slashing.",0,4,2,221,13,0]
 ,[543,1,58,150,3,0,60,65,"Gokurin","","When attacking, adds a 10% chance to inflict [Curse] on the enemy",20,7,0]
 ,[544,1,58,125,4,0,90,70,"Kamaitachi","","Weapon Range + 1",20,4,12,3,10,3,0]
 ,[545,16,58,50,4,"3 / 4",250,42,"Huuma Giant Wheel Shuriken","","When attacking, adds a 1% chance to inflict [External Bleeding] on the enemy",0]
-,[546,16,58,185,4,0,150,55,"Huuma Blaze Shuriken","",0,20,3,5,-2,221,14,0]
+,[546,16,58,185,4,0,150,55,"Huuma Blaze Shuriken","","<font color=blue>[SQI Ingredient]</font><br>A <font color=red>Fire</font> Property Huuma shuriken that sparks like a firecracker when it strikes enemies.",20,3,5,-2,221,14,0]
 ,[547,16,58,150,4,0,300,65,"Huuma Wing Shuriken","",0,20,4,2,-1,5,-2,0]
 ,[548,17,59,30,1,"1 / 2",40,10,"Six Shooter","",0,8,-10,0]
 ,[549,17,59,45,2,"1 / 2",45,35,"Crimson Bolt","",0,8,-10,0]
@@ -587,7 +587,7 @@ ItemOBJ = [
 ,[564,50,0,2,0,0,20,0,"Pumpkin Hat","",0,56,5,0]
 ,[565,50,0,2,0,1,20,20,"Dress Hat","","<b>[Refine Rate 6~10]</b><br>MATK + 1%<br>Physical damage + 1% (versus Normal/Boss/Guardian)<br>Heal amount increased by + 1%<br>Sanctuary effectiveness increased by + 1%",19,7,1,1,4,1,89,2,80,2,91,5,94,5,0]
 ,[566,50,0,3,0,1,100,30,"Satellite Hat","",0,13,50,14,10,220,10,0]
-,[567,50,0,3,0,0,20,0,"Moonlight Flower Hat","",0,5,2,221,15,0]
+,[567,50,0,3,0,0,20,0,"Moonlight Flower Hat","","A hat created with the monster Moonlight Flower in mind.<br>It is said that it uses 30% of Moonlight Flower's fur, and 70% of Nine Tails fur.<br>Note that you should only use hand washing to clean it.<br>Wear this with your Nine Tails scarf for the perfect winter fashion!",5,2,221,15,0]
 ,[568,50,0,2,0,0,20,0,"Bunny Hairband","",0,19,3,2,2,0]
 ,[569,50,0,1,0,0,30,10,"Flapping Angel Wings","",0,12,3,73,-3,2,1,4,1,0]
 ,[570,50,0,1,0,0,10,10,"Baby Chick","","Allows usage Level 2 Double Attack<br>If you already know a level higher than Level 2 Double Attack, the appropriate level will be used instead",6,2,13,50,14,50,57,3,193,1,0]
@@ -608,7 +608,7 @@ ItemOBJ = [
 ,[585,7,1,229,4,0,0,1,"Light Epsilon R","","Increases Movement Speed by 25%",20,6,1,10,36,3,193,1,220,4,0] //custom TalonRO Rental
 ,[586,10,76,185,4,0,0,1,"Rudra's Bow R","",0,20,6,4,5,193,1,220,5,220,6,0] //custom TalonRO Rental
 ,[587,50,0,9,0,0,0,0,"Bunny Band R","",0,19,5,57,10,193,1,0] //custom TalonRO Rental
-,[588,999,1,1,0,0,10,0,"Steel Flower R","",0,193,1,221,18,0]
+,[588,999,1,1,0,0,10,0,"Steel Flower R","",0,193,1,221,18,0] //No longer in Database, remove me.
 ,[589,999,1,5,0,0,80,0,"Majestic Goat R","",0,1,1,193,1,0]
 ,[590,50,1,7,0,0,0,1,"Apple of Archer R","",0,5,4,193,1,0] //custom TalonRO Rental
 ,[591,51,1,1,0,0,10,0,"Eye Of Darkness","",0,5,1,0]
@@ -620,7 +620,7 @@ ItemOBJ = [
 ,[597,64,1,0,0,0,0,1,"Brooch R","",0,2,4,0] //custom TalonRO Rental
 ,[598,64,1,0,0,0,0,1,"Ring R","",0,1,4,0] //custom TalonRO Rental
 ,[599,64,1,0,0,0,0,1,"Rosary R","",0,19,5,6,4,0] //custom TalonRO Rental
-,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","",0,19,2,1,2,221,19,151,10,0]
+,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","","A hat, when equipped, that plays holy music and refresh its wearer.<br>The wearer of this holy hat is guarded by an angel.",19,2,1,2,221,19,151,10,0]
 ,[601,999,0,1,0,1,20,30,"Resort Hat","",0,193,1,3,1,0]
 ,[602,50,0,0,0,1,20,30,"Lily Crown","",0,193,1,19,3,2,1,5,1,75,5,76,3,0]
 ,[603,60,1,4,0,1,220,45,"Claytos Cracking Earth Armor [1]","",0,198,2,0]
@@ -638,27 +638,27 @@ ItemOBJ = [
 ,[615,3,1001,160,4,2,220,55,"Muscle Cutter","","Add a 2% chance of auto casting Level 1 Decrease Agi on the enemy when attacking<br>Add a 1% chance of auto casting External Bleeding on the enemy when attacking",0]
 ,[616,4,1001,150,4,1,100,65,"Long Horn","","Enables the use of [Detoxify]Lv 1<br>Adds a 5% chance of inflicting [Bleeding] on the target when doing a melee attack",20,6,194,1,0]
 ,[617,4,1001,140,4,1,90,65,"Battle Hook","",0,37,20,131,5,220,11,0]
-,[618,4,1001,180,4,1,420,60,"Hunting Spear","","Adds a 10% chance of the Meat item dropping when killing a [Brute] race monster",182,1,221,20,0]
+,[618,4,1001,180,4,1,420,60,"Hunting Spear","","A spear designed specifically to hunt. The end tip looks like a leaf. This spear focused on using its weight to bring damage rather than to piercing the enemy.<br>Adds a 10% chance of the Meat item dropping when killing a [Brute] race monster",182,1,221,20,0]
 ,[619,5,1,170,4,"0 / 1",200,75,"Phantom Spear","","If the target enemy dies, Recovers 50 HP<BR>Small chance to cause Chaos on yourself",31,20,36,20,47,20,51,10,56,10,67,10,0]
-,[620,5,61,120,4,0,100,65,"Ahlspiess","",0,22,10,37,10,221,21,0]
+,[620,5,61,120,4,0,100,65,"Ahlspiess","","Auger shaped spear that is effective at attacking enemy's weak points.",22,10,37,10,221,21,0]
 ,[621,7,1,10,4,"0 / 1",600,80,"Doom Slayer","","Decrease Attack Speed by 40%<br>SP cost of All Skills is doubled<br>If user's base Str is 95 or higher: ATK + 340, Causes Stun effect to enemies by 30% chance when receiving damage and add a 5% chance of breaking the enemy's armor when attacking",0]
 ,[622,7,1001,200,3,2,250,70,"Bardiche","",0,191,13,192,15,0]
 ,[623,7,1001,175,4,1,200,70,"Heart Breaker","","Each upgrade gives Crit +1<br><b>[Whitesmith, Creator]</b><br>Add a chance of auto casting Level 3 Hammerfall on the enemy when attacking",10,20,12,5,0]
-,[624,7,1001,332,4,1,350,80,"Hurricane Fury","","<b>For each upgrade:</b><br>ASPD +1%<br>1% less damage from [Medium] size enemies",191,10,221,22,0]
+,[624,7,1001,332,4,1,350,80,"Hurricane Fury","","Hurricane shaped massive two handed axe. The power of hurricane lie hidden in an orb at the center of the axe.<b>For each upgrade:</b><br>ASPD +1%<br>1% less damage from [Medium] size enemies",191,10,221,22,0]
 ,[625,8,1,4,4,1,44,44,"Holgren's Refining Hammer","","Every time you attack the enemy, small chance to destroy their weapon or armor by 10%<br>If user's base Str is 44 or higher: Damage calculation becomes ATK + 44<br><br><b>When equipping [Holgren's Refining Hammer]+[Whitesmith Card] at the same time:<br>Very high chance to destroy enemy's equipment, and small chance to destroy your own by 1%</b>",0]
 ,[626,10,76,95,3,1,140,55,"Burning Bow","","If equipped together with Fire Arrow, increases damage by 25%",63,10,0]
 ,[627,10,76,100,3,1,140,55,"Freezing Bow","","If equipped together with Crystal Arrow, increases damage by 25%",132,1,0]
 ,[628,10,76,105,3,1,140,55,"Earthen Bow","","If equipped together with Stone Arrow, increases damage by 25%",134,1,0]
-,[629,10,76,95,3,1,140,55,"Gale Bow","","If equipped together with Wind Arrow, increases damage by 25%",221,23,0]
+,[629,10,76,95,3,1,140,55,"Gale Bow","","A light bow that seems to have a potential to cause a whirlwind.<br>If equipped together with [<font color=blue>+ Wind Arrow</font>],<br>This chance is increased when the wearer's INT is 40 or greater.<br> Increases damage by 25%",221,23,0]
 ,[630,10,76,120,3,0,160,65,"Orc Archer's Bow","","If equipped together with Steel Arrow, increases damage by 50%.",0]
 ,[631,11,122,160,4,1,145,55,"Ogre's Toenail","","[description translation missing - ItemID: 631]",0]
 ,[632,11,122,140,4,0,150,55,"Inverse Scare","","[description translation missing - ItemID: 632]",20,6,0]
 ,[633,11,122,110,4,1,140,55,"Drill Katar","","[description translation missing - ItemID: 633]",8,30,0]
 ,[634,11,122,120,4,2,170,55,"Bloody Blades","","[description translation missing - ItemID: 634]",0]
-,[635,13,0,80,3,3,65,75,"Magma Fist","",0,221,24,0]
-,[636,13,0,80,3,3,65,75,"Icicle Fist","",0,221,25,0]
-,[637,13,0,80,3,3,65,75,"Electric Fist","",0,221,26,0]
-,[638,13,0,80,3,3,65,75,"Seismic Fist","",0,221,27,0]
+,[635,13,0,80,3,3,65,75,"Magma Fist","","A knuckle made with magma. It appears like any other knuckles, but it sometimes gets very hot to the point it could melt anything in contact with it. However, the inside of this knuckle has been designed specifically so it won't burn the user's hands.",221,24,0]
+,[636,13,0,80,3,3,65,75,"Icicle Fist","","	A knuckle made with an icicle. It appears like any other knuckles, but it sometimes gets very cold to the point it could freeze anything in contact with it. However, it seems to have no effect at all to the user.",221,25,0]
+,[637,13,0,80,3,3,65,75,"Electric Fist","","A knuckle made with the power of lightning. It appears like any other knuckles, but it sometimes cause massive shock to the enemies. Due to the specifically designed components inside of the knuckles, the user is not affected.",221,26,0]
+,[638,13,0,80,3,3,65,75,"Seismic Fist","","A knuckle made with the spirit of the earth. It appears like any other knuckles, but it sometimes eminates powerful aura that could destroy any enemies in your way.<br>While the power of the earth shows absolute cruelty toward the enemies, the wielder will only feel the warmth and kindness of the goddess of the earth.",221,27,0]
 ,[639,13,0,30,3,4,50,60,"Barrage Fist","","",5187,15,5188,15,5189,20,0]
 ,[640,12,0,110,3,2,200,70,"Giant Encyclopedia","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,0]
 ,[641,12,0,137,4,2,100,85,"Book of the Dead","","Add a 0.1% chance of auto casting Coma effect on DemiHuman monster<br>Attack Speed increased depending on the refinement rate of this weapon<br><b>[Sage, Professor]</b><br>There is a 2% chance of using [Hell's Judgment]Lv 5 on the target when doing a physical attack",89,15,1,3,4,3,6,-20,0]
@@ -671,8 +671,8 @@ ItemOBJ = [
 ,[648,14,130,130,3,1,150,70,"Bass Guitar","","[description translation missing - ItemID: 648]",0]
 ,[649,14,130,10,4,0,180,70,"Spirited Guitar","","[description translation missing - ItemID: 649]",12,100,75,-100,0]
 ,[650,15,0,110,3,0,70,30,"Electric Wire","",0,20,4,0]
-,[651,15,131,100,4,2,200,70,"Electric Eel","","The skill level of the autocast Arrow Vulcan changes depending on the refinement rate of this weapon (not yet calculated!)",20,4,2,2,4,2,221,28,0]
-,[652,15,131,110,4,1,150,70,"Foot of the Sea Witch","","[description translation missing - ItemID: 652]",221,29,0]
+,[651,15,131,100,4,2,200,70,"Electric Eel","","Made of a creature that gives out electric energy. The surface is slippery and feels weird.<br>The skill level of the autocast Arrow Vulcan changes depending on the refinement rate of this weapon (not yet calculated!)",20,4,2,2,4,2,221,28,0]
+,[652,15,131,110,4,1,150,70,"Foot of the Sea Witch","","A whip made with a foot of the famous western sea witch. It says it steals your life essence, so be careful of the witch.<br>Whenever the enemy dies, <font color=blue>Recovers 5 SP</font><br>Every time you attack, small chance to cause Silence to all enemies within 5 x 5 (PBAoE) cells around you.",221,29,0]
 ,[653,15,131,185,4,0,130,70,"Carrot Whip","","[description translation missing - ItemID: 653]",0]
 ,[654,17,0,68,3,2,58,70,"Western Outlaw","","[description translation missing - ItemID: 654]",0]
 ,[655,18,0,150,3,"0 / 1",100,70,"Long Barrel","",0,10,20,12,-3,221,30,0]
@@ -1648,7 +1648,7 @@ ItemOBJ = [
 ,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.",193,1,0]
 //End of Eden Gear
 ,[1605,62,0,2,0,0,40,95,"Loki's Muffler","","A red scarf worn out from long use.",2,1,1083,5,193,1,0]
-,[1606,50,0,4,0,1,40,0,"Legionaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0]
+,[1606,50,0,4,0,1,40,0,"Legionnaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0]
 ,[1607,51,0,2,0,1,50,50,"Lude Mask","","A mask which resembles a Lude. However, you will never be as awesome as a real Lude.",17,1,89,2,57,1,0]
 ,[1608,50,0,4,0,0,20,30,"Xmas Rudolph Hairband","","A Christmas hairband. Rudolf's excited mind for christmas is dwelled on it.<br/>You will feel like running faster.",1,3,5,2,6,3,2,3,12,5,0]
 ,[1609,50,0,4,0,0,20,30,"Xmas Snowman Hat","","A Christmas Snowman Hat. Wearing this always makes you look forward to a White Christmas.<br/>Add a 3% chance of freezing an enemy when receiving Physical Damage.",4,3,5,2,3,3,2,3,73,-10,221,6,0]
@@ -1701,7 +1701,10 @@ ItemOBJ = [
 ,[1655,50,79,5,0,1,160,74,"Enhanced Helm of Angel","","A wondrous helmet adorned with angel wings that was made by a smithing genius.<br>[Refine Rate 5~6+]<br>AGI + 1, LUK + 1, MDEF + 1<br>[Refine Rate 7+]<br>ASPD + 1",2,1,6,1,19,3,12,5,0]
 ,[1656,50,70,5,0,1,240,70,"Enhanced Bone Helm","","An incredibly heavy, yet almost impenetrable helmet constructed of bone.<br>Every refine level past +4 until +8 reduces DEF by 1 and decreases damage received from Neutral Property attacks by another 1%.",60,1,67,-15,0]
 ,[1657,50,1,5,0,1,50,70,"Enhanced Corsair","","A flamboyant hat worn only by the strongest of pirates.<br>[Refine Rate 5~7+]<br>Maximum HP + 1%<br>[Refine Rate 8+]<br>Maximum HP + 2%<br>Reduce another 1% damage from Neutral type attacks.",3,1,15,5,60,1,0]
-,[1658,50,0,5,0,1,100,70,"Lord of the Dead Helm","","[Refine Rate 5~10]<br>Increase damage on Boss monster by 1% for every refine.<br><br>[+ Abysmal Knight Card]<br>Increase damage on Boss monster by 5%.<br><br>[Refine Rate 6~10]<br>Receive 1% more damage from all monsters for every refine.",19,5,26,10,77,-5,79,-5,0]
+,[1658,50,0,5,0,1,100,70,"Lord of the Dead Helm","","<b>Mid and Upper Headgear</b><br>[Refine Rate 5~10]<br>Increase damage on Boss monster by 1% for every refine.<br><br>[+ Abysmal Knight Card]<br>Increase damage on Boss monster by 5%.<br><br>[Refine Rate 6~10]<br>Receive 1% more damage from all monsters for every refine.",19,5,26,10,77,-5,79,-5,0]
+,[1659,52,0,0,0,0,10,1,"Cheer Whistle","","Blowing this whistle can drastically improve your team's morale.",1,1,0]
+,[1660,52,0,0,0,0,10,1,"Blue Pencil In Mouth","","A blue pencil full of teeth marks due to holding it in your mouth all the time.",8,3,0]
+,[1661,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,18,0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
@@ -1722,6 +1725,152 @@ ItemOBJ = [
    Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
    After description values: 0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP= +/-,14 MSP= +/-,15 MHP = %,16 MSP = %,17 ATK,18 DEF,19 MDEF
 */
+
+ItemID = [
+'###',[1201,1202],[1204,1205],[1207,1208],[1210,1211],[1213,1214],[1216,1217],[1238],[1239],[1219,1220],[1222,1226],[1234],[1223],[1232,13033],[1236,13018],[1237],[1101,1102],[1104,1105],[1107,1108],[1110,1111],[1113,1114],[1122,1125],[1144],[1124],[1142],[1143],[1126,1127],[1123,1128],[1145],[1119,1120],[1129,1149],[1136],[1131],[1133],[1135,13400],[1138],[1139],[1116,1117],[1151,1152],[1154,1155],[1160,1162],[1157,1158],[1163,1172],[1169,1179],[1164],[1170],[1168,1171],[1165],[1401,1402],[1404,1405],[1407,1408],[1417],[1413,1418],[1451,1452],[1454,1455],[1457,1458],[1460,1461],[1463,1464],[1410],[1468,1481],[1466,1476],[1301,1302],[1304,1309],[1306],[1351,1352],[1354,1355],[1357,1358],[1360,1361],[1363],[1366],[1364],[1501,1502],[1504,1505],[1507,1508],[1510,1511],[1519,1520],[1513,1514],[1531],[1516,1517],[1522,1532],[1529],[1524,1539],[1525],[1528,1540],[1530],[1601,1602],[1604,1605],[1607,1608],[1472],[1615],[1610,1611],[1614],[1473],[1613],[1701,1702],[1704,1705],[1707,1708],[1710,1711],[1713,1715],[1721],[1714,1716],[1718,1726],[1719],[1722,1727],[1720],[1250,1251],[1259,1278],[1257,1276],[1258,1277],[1256,1275],[1252,1253],[1260],[1254,1255],[1261,1266],[1550],[1556,1571],[1553,1568],[1555,1570],[1554,1569],[1551],[1552],[1558],[1557],[1801,1802],[1803,1804],[1805,1806],[1809,1810],[1811,1812],[1807,1808],[1901,1902],[1903,1904],[1905,1906],[1909,1910],[1911,1912],[1907,1908],[1950,1951],[1952,1953],[1954,1955],[1958,1959],[1960,1961],[1956,1957],[1964],'###',[2289],[2206],[5042],[5041],[5047],[2210],[5028],[2282],[5048],[2207],[5034],[5023],[2274],[2285],[5032],[5024],[5026],[2236],[2294],[5027],[5003],[2259],[2208,2209],[2250],[2293],[5008],[5049],[5036],[5052],[2290],[2253,5351],[2272],[2271],[2211],[2279],[2214],[2220,2221],[2275],[5035],[2215],[5012,5347],[2277],[5038],[2257],[2244,5348],[2254],[2213],[2298],[5011],[5010],[2248],[2247],[5020],[2249],[2232,2233],[5045],[2245],[5029],[5033],[5030],[5001],[5007],[2255],[2273],[2287,5350],[5016,5349],[2280],[2222,2223],[5009],[2283],[5015],[2252],[5021],[2226,2227],[2235],[5002],[2230,2231],[2234],[2216,2217],[2261],[5039],[5018],[5031],[2284],[5037],[5022,5353],[2299,5157],[5019,5163],[2256,5160],[5050],[2251,5158],[5025],[2246,5159],[2224,2225],[5046,5168],[2264,5167],[5053,5166],[2258,5161],[2228,2229],[5017,5162],'###',[2203,2204],[2201,2202],[2205],[5040],[2212],[2263],[2291],
+"###","###","###","###","###","###","###","###","###","###", //251-260
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###","###","###","###","###","###","###",
+"###","###","###","###",[18878],[5516],[18531],[20175],[1291],[2474],
+[2592],[15138],[19026],"###","###","###","###",[18754],[16001],[8926],
+[18773],[5506],[5507],[2456],[2457],[2458],[2473],[1742],[1748],[18106], // ID for ItemOBJ[1561-1570]
+[13050],[13051],[13066],[1583],[1931],[21000],[21000],[13310],[1289],[1831], // ID for ItemOBJ[1571-1580]
+[16004],[16005],[16014],[2560],[2571],[13112],[13113],[13114],[13423],[13424], // ID for ItemOBJ[1581-1590]
+[13434],[1192],[1193],[1197],[1434],[1662],[1663],[1658],[1391],[15009], // ID for ItemOBJ[1591-1600]
+[15010],[15011],[15031],[1986],[2568],[5418],[18649],[20031],[20030],[8801], // ID for ItemOBJ[1601-1610]
+[2910],[2911],[2873],[2907],[2646],[1393],[1392],[13062],[2854],"###", // ID for ItemOBJ[1611-1620]
+"###",[1985],[13431],[13070],[13069],[22014],[1295],[5211],[18776],[22015], // ID for ItemOBJ[1621-1630]
+[21001],[2183],[15068],"###","###","###","###","###","###",[2005], // ID for ItemOBJ[1631-1640]
+[2956],[18772],[18774],[18775],[18760],[18761],[18763],[18764],[18769],[18770], // ID for ItemOBJ[1641-1650]
+[18771],[18762],[1584],[18767],[18766],[18768],[18765],[18574],[18837],[18819], // ID for ItemOBJ[1651-1660]
+"###" // ID for ItemOBJ[1661]
+];
 
 ItemMax = ItemOBJ.length -1;
 
@@ -1756,7 +1905,18 @@ function ClickB_Item(CBI)
 	}
 	if(eval(document.calcForm.ITEM_SW.checked)==0)
 		return;
-	myInnerHtml("nm080",ItemOBJ[CBI][8],0);
+
+   if(ItemID[CBI] != "###"){
+      var itemLink = "";
+      for(i = 0; i < ItemID[CBI].length; i++){
+         itemLink += " <a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[CBI][i] + "/\" target=\"_blank\"><b>" + ItemID[CBI][i] + "</b></a>";
+      }
+      myInnerHtml("nm080",ItemOBJ[CBI][8] + " # Item ID :" + itemLink,0);
+   }
+   else{
+        myInnerHtml("nm080",ItemOBJ[CBI][8],0);
+   }
+
 	myInnerHtml("ITEM1","Slot",0);
 	myInnerHtml("ITEM3","Req. Lvl",0);
 	myInnerHtml("ITEM4","Weight",0);

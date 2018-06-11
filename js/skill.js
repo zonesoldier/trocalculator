@@ -616,24 +616,24 @@ AutoSpellSkill = [
 [10,0,8,1,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Provoke]Lv 1
 [11,0,100,1,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Gloria]Lv 1
 [12,0,25,1,5,6], //When recieving ATK based damage, there's a 5 % chance to cast the skill [Heal]Lv 1
-[13,0,25,1,0,1], //
-[14,1,52,5,0,1], //
-[15,0,27,1,0,1], //
+[13,0,25,1,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Heal]Lv 1
+[14,1,52,5,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Fire Ball]Lv 5
+[15,0,27,1,0,1], //When performing a ATK based attack, there's a chance to cast the skill [Increase AGI]Lv 1
 [16,1,128,3,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Water Ball]Lv 3
 [17,0,236,2,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Deluge]Lv 2
-[18,0,95,1,3,6],
-[19,0,30,5,0,6],
-[20,1,261,3,0,1],
-[21,1,70,5,0,1],
-[22,1,303,5,0,1],
-[23,1,413,5,0,1],
-[24,0,230,5,0,1],
-[25,0,231,5,0,1],
-[26,0,232,5,0,1],
-[27,0,233,5,0,1],
-[28,1,126,3,0,1],
-[29,1,130,3,0,6],
-[30,1,430,5,0,1],
+[18,0,95,1,3,6], //When recieving ATK based damage, there's a 3 % chance to cast the skill [Status Recovery]Lv 1
+[19,0,30,5,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Angelus]Lv 5
+[20,1,261,3,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Joint Beat]Lv 3
+[21,1,70,5,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Pierce]Lv 5
+[22,1,303,5,0,1], //When performing a ATK based attack, there's a chance to cast the skill [Pulse Strike [Temp]]Lv 5
+[23,1,413,5,0,1], //When performing a ATK based attack, there's a chance to cast the skill [Wind Blade]Lv 5
+[24,0,230,5,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Flame Launcher]Lv 5
+[25,0,231,5,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Frost Weapon]Lv 5
+[26,0,232,5,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Lightning Loader]Lv 5
+[27,0,233,5,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Seismic Weapon]Lv 5
+[28,1,126,3,5,1], //When performing a ATK based attack, there's a chance 5 % to cast the skill [Jupitel Thunder]Lv 3
+[29,1,130,3,5,6], //When recieving ATK based damage, there's a chance 5 % to cast the skill [Frost Nova]Lv 3
+[30,1,430,5,0,1], //
 [31,1,436,6,0,1],
 [32,1,52,1,15,1],
 [33,1,76,5,2,1],

@@ -1,7 +1,91 @@
+[Update 2018-06-09]
+- Issue #161: [Feature Request] ItemID Display [NattWara]
+	Currently only these item have correct ID in item.js
+	・Enhanced Hat of the Sun God
+	・Enhanced Helm of Angel
+	・Enhanced Bone Helm
+	・Enhanced Corsair
+	・Lord of the Dead Helm
+	And Chilly Spell Book have "Test Item ID Display - Chilly Spell Book" in place of Item ID
+	Everything else have "###" as Item ID placeholder for now.
+	Added item links to TalonRO item database calculator [Kato/Slap]
+	Added first 251 items from ItemOBJ to ItemID as test [Slap]
+- Fixed EXP [Kato/NattWara]
+- Issue #149: Proofreading [Slap]
+	Machoman's Glasses: name (Machoman's Classes -> Machoman's Glasses)
+	Opera Masque: name (Opera Mask -> Opera Masque)
+	Jacket: name (Leather Jacket -> Jacket)
+	Adventurer's Suit: name (Adventure Suit -> Adventurer's Suit)
+	Saint's Robe: name (Saint Robe -> Saint's Robe)
+	Earring [1]: required lvl (90 -> 0)
+	Clip: weight (5 -> 10)
+	Critical Ring: weight (5 -> 10)
+	Glove [1]: required lvl (90 -> 0)
+	Eye of Dullahan: name (Dullahan's Eye -> Eye of Dullahan)
+	Necklace [1]: required lvl (90 -> 0)
+	Brooch [1]: required lvl (90 -> 0)
+	Ring [1]: required lvl (90 -> 0)
+	Rosary [1]: required lvl (90 -> 0)
+	Matyr's Leash: name (Martyr's Leash -> Matyr's Leash)
+	Brisingamen: name (Brisingamen [1] -> Brisingamen)
+	Brisingamen: required lvl (94 -> 0)
+	Megingjard: name (Meginjard -> Megingjard)
+	Megingjard: required lvl (94 -> 0)
+	Crown of Mistress: name (Mistress Crown -> Crown of Mistress)
+	Red Tailed Ribbon: name (Giant Ribbon -> Red Tailed Ribbon)
+	Kitsune Mask: name (Fox Mask -> Kitsune Mask)
+	Drooping Cat: job (0 -> 1)
+	Sea-Otter Hat: name (Sea Otter Hat -> Sea-Otter Hat)
+	Sea-Otter Hat: reqired lvl (0 -> 50)
+	Incubus Horn: name (Incubus Horns -> Incubus Horn)
+	Succubus Horn: name (Succubus Horns -> Succubus Horn)
+	Helmet of Orc Hero: name (Orc Hero Helm -> Helmet of Orc Hero)
+	Helmet of Orc Hero: updated description
+	Swordbreaker: name (Sword Breaker -> Swordbreaker)
+	Mailbreaker: name (Mail Breaker -> Mailbreaker)
+	Cursed Dagger: updated description/effects
+	Dagger of Counter: weight (50 -> 55)
+
 [Update 2018-06-08]
 - Issue #154: Card set selector not working properly [NattWara]
 - Issue #156: Added Missing Monster, Port Malaya Instance Monsters [NattWara]
 - Issue #157: Added Shadow Bullet [NattWara]
+- Issue #149: Proofreading [Slap]
+	Glave: name (Glave -> Glaive)
+	Sword Mace: name (Swordmace -> Sword Mace)
+	Evil Bone Wand: name (Bone Wand -> Evil Bone Wand)
+	Hunter Bow: weight (110 -> 150)
+	Rudra Bow: name (Rudra's Bow -> Rudra Bow)
+	Rudra Bow: effect (added Holy element)
+	Book of Gust of Wind: name (removed extra space)
+	Book of the Blazing Sun: name (Book of Blazing Sun -> Book of the Blazing Sun)
+	Book of the Apocalypse: effect (added +5% damage to Holy Property)
+	Studded Knuckles: name (Hora -> Studded Knuckles)
+	Whip (Line): name (Line -> Whip (Line)) //There are 2 items in game named "Whip". "Line" is the iRO name for this item.
+	Wire Whip: name (Wire -> Wire Whip)
+	Tail Whip: name (Tail -> Tail Whip)
+	Rante Whip: name (Rante -> Rante Whip)
+	Chemeti Whip: name (Chemeti -> Chemeti Whip)
+	Heart Hairpin: name (Heart Hairbin -> Heart Hairpin)
+	Hair Band: name (Hairband -> Hair Band)
+	Hair Band: effect (added 1 DEF)
+	Bulb Band: name (Light Bulb Band -> Bulb Band)
+	Ph.D Hat: effect (2 DEF -> 3 DEF)
+	Ph.D Hat: weight (10 -> 20)
+	Evil Wing: name (Evin Wing -> Evil Wing)
+	Boys Cap: effect (3 DEF -> 2 DEF)
+	Boys Cap: weight (20 -> 10)
+	Safety Helmet: effect (added Indestructible)
+	Gemmed Sallet: name (Jewel Crown -> Gemmed Sallet)
+	Biretta: name (Bireta -> Biretta)
+	Army Cap: name (Army Hat -> Army Cap)
+	Nutshell: name (Nut Shell -> Nutshell)
+	Helm of Angel: name (Angel Helm -> Helm of Angel)
+	Goggles: updated description
+	Sphinx Hat: name (Sphinx Hat [1] -> Sphinx Hat) //Will remove the other Sphinx Hat as it is not obtainable and not in the wiki database.
+	Sphinx Hat: slots (0 -> "0 / 1")
+	Sphinx Hat: updated description
+	Zorro Masque: name (Zorro Mask -> Zorro Masque)
 
 [Update 2018-06-07]
 - Issue #124: Added Missing Monster, Nightmare Pyramid Monsters; [NattWara]
@@ -37,6 +121,19 @@
 - Issue #55: Added Improved Bongun Hat [Slap]
 - Issue #56: Added Improved Opera Phantom Mask [Slap]
 - Issue #57: Added Improved Kitsune Mask [Slap]
+- Issue #109: Added Blue Pencil In Mouth; [ZoneSoldier]
+- Issue #110: Added Cheer Whistle; [ZoneSoldier]
+- Updated Hakujin item description and AutoSpellSKill % modifier and comments; [ZoneSoldier]
+- Updated Huuma Blaze Shuriken description, AutoSpellSKill % modifier and stat's to show up.; [ZoneSoldier]
+- Updated Moonlight Flower Hat description and AutoSpellSKill comment; [ZoneSoldier]
+- Updated Holy Marcher Hat description and AutoSpellSKill; [ZoneSoldier]
+- Updated Hunting Spear description and AutoSpellSKill comment; [ZoneSoldier]
+- Updated Gale Bow description and AutoSpellSkill Comment; [ZoneSoldier]
+- Updated Magma Fist description and AutoSpellSKill comment and % modifier; [ZoneSoldier]
+- Updated Electric Fist description and AutoSpellSKill comment and % modifier; [ZoneSoldier]
+- Updated Seismic Fist description and AutoSpellSKill comment and % modifier; [ZoneSoldier]
+- Updated Electric Eel description and AutoSpellSkill % modifier but not the passive skill for the refine rate; [ZoneSoldier]
+- Updated Foot of the Sea Witch description and AutoSpellSKill % modifier but not the 2nd AutoSpellSKill; [ZoneSoldier]
 - Added Changelog in index, fixed the loading from URL; [Kato]
 
 [Update 2018-06-06]
