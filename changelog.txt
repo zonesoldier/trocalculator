@@ -1,5 +1,6 @@
 [Update 2018-06-11]
 - Fixed Thief Ring attack bonus script [Slap]
+- Fixed Bloody Roar script [Slap]
 - Added Drooping Maya [Slap]
 - Issue #149: Proofreading [Slap]
 	Byeollungum: effect (26,50 -> 26,5)
@@ -34,9 +35,7 @@
 	Cinquedea: required lvl (55 -> 30)
 	Star Dust Blade: name (Stardust Blade -> Star Dust Blade)
 	Hypnotist's Staff: slots ("1 / 2" -> 2) //Single slotted isn't obtainable and set only works with double slotted.
-	Bloody Roar:
-		fixed script
-		updated description
+	Bloody Roar: updated description
 	Red Flame Whip: weight (90 -> 70)
 	Breeze Whip: replaced with Drooping Maya //Item does not exist
 	Icicle Whip: weight (90 -> 70)
