@@ -554,9 +554,9 @@ ItemOBJ = [
 ,[531,50,0,0,0,1,20,30,"Maiden's Twin Ribbon","",0,14,30,19,3,76,5,0]
 ,[532,50,0,1,0,0,50,30,"Decorative Geographer","",0,4,1,193,1,221,12,0]
 ,[533,50,0,2,0,0,50,10,"Bird's Nest Hat","",0,2,1,5,1,151,10,0]
-,[534,60,1001,6,0,1,280,0,"Valkyrian Armor","","<b>[Mage, Archer, Acolyte Class]</b><br>Status effect [Silence] resistance +50%<br><b>[Swordman, Merchant, Thief Class]</b><br>Status effect [Stun] resistance +50%",7,1,194,1,0]
-,[535,62,1001,3,0,1,50,0,"Valkyrian Manteau","","<b>[Mage, Archer, Acolyte Class]</b><br>Perfect Dodge + 5 + Refine Rate * 2<br><b>[Swordman, Merchant, Thief Class]</b><br>Reflect Melee Physical Attacks by 5% + Refine Rate * 2",194,1,0]
-,[536,63,1001,4,0,1,50,0,"Valkyrian Shoes","","<b>[Mage, Archer, Acolyte Class]</b><br>Maximum HP + 5 * Base Level<br><b>[Swordman, Merchant, Thief Class]</b><br>Maximum SP + 2 * Job Level",194,1,0]
+,[534,60,1001,6,0,1,280,0,"Valkyrja's Armor","","<b>[Mage, Archer, Acolyte Class]</b><br>Status effect [Silence] resistance +50%<br><b>[Swordman, Merchant, Thief Class]</b><br>Status effect [Stun] resistance +50%",7,1,194,1,0]
+,[535,62,1001,3,0,1,50,0,"Valkyrja's Manteau","","<b>[Mage, Archer, Acolyte Class]</b><br>Perfect Dodge + 5 + Refine Rate * 2<br><b>[Swordman, Merchant, Thief Class]</b><br>Reflect Melee Physical Attacks by 5% + Refine Rate * 2",194,1,0]
+,[536,63,1001,4,0,1,50,0,"Valkyrja's Shoes","","<b>[Mage, Archer, Acolyte Class]</b><br>Maximum HP + 5 * Base Level<br><b>[Swordman, Merchant, Thief Class]</b><br>Maximum SP + 2 * Job Level",194,1,0]
 ,[537,61,58,5,0,"0 / 1",15,20,"Arm Guard","",0,0]
 ,[538,61,58,4,0,"0 / 1",15,50,"Advanced Arm Guard","",0,19,5,0]
 ,[539,1,58,50,1,"2 / 3",60,12,"Ashura","",0,89,10,0]
@@ -690,7 +690,7 @@ ItemOBJ = [
 ,[667,50,1,5,0,0,50,54,"Goibne's Helm","",0,19,3,3,3,0]
 ,[668,50,1,0,0,1,40,30,"Marionette Doll","",0,1,1,0]
 ,[669,50,1,1,0,0,60,0,"Feather Beret","",0,19,1,57,10,0]
-,[670,50,0,7,0,1,10,0,"Valkyrie Helm","",0,2,20,3,20,6,20,19,20,57,10,0] //custom TalonRO SQI - original: ,[670,50,1001,5,0,1,100,0,"Valkyrian Helm","",0,19,5,0]
+,[670,50,0,7,0,1,10,0,"Valkyrie Helm","",0,2,20,3,20,6,20,19,20,57,10,0] //custom TalonRO SQI - original: ,[670,50,1001,5,0,1,100,0,"Valkyrie Helm","",0,19,5,0]
 ,[671,50,0,0,0,0,70,0,"Beret","",0,57,10,193,1,0]
 ,[672,50,0,3,0,1,40,60,"Magistrate Hat","","[description translation missing - ItemID: 672]",0]
 ,[673,50,0,3,0,1,40,60,"Ayam","","<b>[TaeKwon Class]</b><br>INT + 1, SP Recovery + 3%",0]
@@ -712,7 +712,7 @@ ItemOBJ = [
 ,[689,60,124,5,0,1,75,50,"Sniping Suit","","Bonus (LUK/10) Critical Rate depending on your LUK rate",19,5,10,6,74,23,0]
 ,[690,61,50,3,0,1,40,20,"Angelic Guard","",0,56,5,0]
 ,[691,61,1,3,0,1,150,65,"Stone Buckler","",0,192,5,0]
-,[692,61,1,3,0,1,50,65,"Valkyrian Shield","",0,19,5,61,20,63,20,67,20,69,20,0]
+,[692,61,1,3,0,1,50,65,"Valkyrja's Shield","",0,19,5,61,20,63,20,67,20,69,20,0]
 ,[693,61,1001,5,0,0,120,68,"Platinum Shield","","40% chance to reflect magic spells for 2 seconds",19,5,191,15,192,15,51,10,0]
 ,[694,61,1001,5,0,1,100,55,"Orlean's Server","","5% chance to reflect magic spells",19,2,0]
 ,[695,61,1001,5,0,1,100,55,"Thorn Shield","",0,19,2,0]
@@ -831,8 +831,8 @@ ItemOBJ = [
 ,[808,60,0,5,0,0,100,1,"Angel dress","",0,6,4,193,1,0]
 ,[809,50,0,1,0,1,20,20,"Leaf Hat","","[description translation missing - ItemID: 809]",4,1,0]
 ,[810,50,0,2,0,0,70,38,"Angeling Hat","",0,57,10,193,1,0]
-,[811,50,0,2,0,0,70,10,"Guildsman Cap","",0,0]
-,[812,50,0,2,0,0,70,10,"Guild recruit Cap","",0,0]
+,[811,50,0,2,0,0,0,10,"Guild Member Hat","",0,0]
+,[812,999,0,2,0,0,70,10,"Guild recruit Cap","",0,0]  //Duplicated, remove me. --> Duplicate with [811,50,0,2,0,0,0,10,"Guild Member Hat","",0,0]
 ,[813,50,0,3,0,0,70,0,"Angeling Heartpin","",0,9,5,0]
 ,[814,100,0,0,0,0,0,0,0,0,0,214,2,6,2,0]
 ,[815,50,0,1,0,1,50,0,"Classic Hat","",0,1,1,27,5,28,5,29,5,0]
@@ -871,8 +871,8 @@ ItemOBJ = [
 ,[848,64,0,0,0,1,10,0,"Marvelous Pendant","",0,51,2,56,2,57,1,55,1,52,1,0]
 ,[849,50,0,3,0,1,80,0,"Balloon Hat","","Each refine increases your MATK",89,2,19,2,0]
 ,[850,50,1,3,0,1,25,50,"Hunting Cap","",0,6,1,32,10,0]
-,[851,50,0,2,0,0,70,10,"Bf Recruiter Cap","",0,0]
-,[852,50,0,2,0,0,70,10,"Gf Recruiter Cap","",0,0]
+,[851,50,0,2,0,0,0,10,"Boyfriend Hat","",0,0]
+,[852,50,0,2,0,0,0,10,"Girlfriend Hat","",0,0]
 ,[853,10,124,70,3,3,90,70,"Double Bound","","[description translation missing - ItemID: 853]",0]
 ,[854,100,0,0,0,0,0,0,0,0,"",80,3,89,3,0]
 ,[855,100,0,0,0,0,0,0,"Tournament Shield System Set","","[Lord Knight]<br>Aspd -5%",18,2,80,4,0]
@@ -915,7 +915,7 @@ ItemOBJ = [
 ,[892,50,0,0,0,1,50,60,"Sorin Doll Hat","",0,193,1,5,2,57,5,0]
 ,[893,50,0,0,0,1,50,60,"W Doll Hat","",0,193,1,6,2,57,5,0]
 ,[894,50,1,1,0,0,10,20,"Yellow Ribbon","",0,3,2,6,2,78,10,0]
-,[895,50,0,2,0,0,70,10,"Friend Recruiter Hat","",0,0]
+,[895,50,0,2,0,0,0,10,"Friend Hat","",0,0]
 ,[896,50,0,2,0,0,30,0,"Jumping Poring","",0,6,1,193,1,194,1,0]
 ,[897,1,0,120,3,0,0,80,"Brave Assassin Damascus","","<b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%",194,1,1,1,2,1,37,75,307,20,0]
 ,[898,1,0,120,3,0,0,80,"Valorous Assassin Damascus","","When attacking, there is a chance that for 6 seconds, the weapon will be endowed with occult impaction/icepick effect<br><b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%",194,1,1,1,2,1,37,75,0]
@@ -1148,7 +1148,7 @@ ItemOBJ = [
 ,[1125,50,0,1,0,1,20,0,"Crown Parrot","",0,156,100,4,1,221,107,193,1,0]
 ,[1126,50,0,0,0,0,10,0,"Red Hat","","[description translation missing - ItemID: 1126]",0]
 ,[1127,50,0,4,0,0,50,30,"Crab Nipper Hairpin","","[description translation missing - ItemID: 1127]",221,104,0]
-,[1128,50,0,2,0,0,70,10,"Notice Board","",0,0]
+,[1128,50,0,2,0,0,0,10,"Notice Board","",0,0] 
 ,[1129,50,0,2,0,0,30,30,"Noble Hat","","0.7% chance of auto casting [Adrenaline Rush]Lv 1 when receiving ATK based damage",1,2,0]
 ,[1130,50,0,3,0,1,80,80,"Emperor's Laurel Crown","",0,7,1,19,3,0]
 ,[1131,50,79,0,0,0,75,75,"Lion Mask","","[description translation missing - ItemID: 1131]",19,1,0]
@@ -1206,8 +1206,8 @@ ItemOBJ = [
 ,[1183,50,0,3,0,1,60,70,"Baby Angel","","When receiving physical damage, chance to cast Level 1 Recovery on yourself",19,2,0]
 ,[1184,50,0,0,0,0,10,0,"Red Comb","",0,10,6,0]
 ,[1185,50,0,3,0,0,50,70,"Frog Hat","",0,19,1,34,12,174,12,0]
-,[1186,999,0,0,0,1,30,0,"Box of Fun [A]","","[description translation missing - ItemID: 1186]",0]
-,[1187,999,0,0,0,1,30,0,"Box of Fun [B]","","[description translation missing - ItemID: 1187]",0]
+,[1186,999,0,0,0,1,30,0,"Box of Fun [A]","","[description translation missing - ItemID: 1186]",0] //No longer in Database, remove me.
+,[1187,999,0,0,0,1,30,0,"Box of Fun [B]","","[description translation missing - ItemID: 1187]",0] //No longer in Database, remove me.
 ,[1188,52,0,0,0,0,10,0,"Stick Candy?","",0,14,5,0]
 ,[1189,60,1001,3,0,1,50,0,"Dragon Vest","",0,19,3,0]
 ,[1190,60,1072,7,0,1,100,85,"Bone Plate","","Adds a 1% chance to cause External Bleeding status ailment all players in a 5x5 area around you when taking ATK based damage",1,1,19,3,307,10,302,10,0]
@@ -1286,7 +1286,7 @@ ItemOBJ = [
 ,[1263,51,0,6,0,0,0,1,"Blush of Groom","","",57,3,0]
 ,[1264,50,0,0,0,1,10,0,"Purple Cowboy Hat",0,0,4,2,3,2,14,50,0]
 ,[1265,50,0,0,0,1,20,30,"Dark Randgris Helm","","<b>Upper and Mid Headgear</b>",5,4,19,1,0]
-,[1266,50,0,2,0,0,70,10,"AFK Hat","",0,0]
+,[1266,999,0,2,0,0,70,10,"AFK Hat","",0,0] //Duplicated (same with Notice Board TRO ID : 5474), remove me. --> Duplicate with [1128,50,0,2,0,0,0,10,"Notice Board","",0,0] 
 ,[1267,50,0,0,0,0,10,10,"Afro Wig","","Add a 30% chance of auto casting First Aid on the user when the user receives Physical Damage",60,1,0]
 ,[1268,50,0,0,0,0,10,0,"Angel Blessing","","",66,5,6,1,0,]
 ,[1269,51,1,0,0,0,20,30,"Angel of Ghost","",0,87,2,89,2,0]
@@ -1324,7 +1324,7 @@ ItemOBJ = [
 ,[1301,50,0,3,0,1,10,1,"Baby Dragon Hat",0,0,0]
 ,[1302,52,0,0,0,0,10,1,"Bandit Beard",0,0,0]
 ,[1303,50,0,3,0,0,50,1,"Bandit Hat",0,0,1,2,63,10,0]
-,[1304,50,0,2,0,0,0,10,"Bf Recruiter Hat","",0,0]
+,[1304,999,0,2,0,0,0,10,"Bf Recruiter Hat","",0,0] //Duplicated, remove me. --> Duplicate with [851,50,0,2,0,0,0,10,"Boyfriend Hat","",0,0]
 ,[1305,50,0,1,0,1,10,1,"Black Ribbon","",0,19,3,0]
 ,[1306,50,0,5,0,0,300,80,"Dark Knight Mask [Type B]","",0,5,3,0]
 ,[1307,50,1,1,0,0,10,0,"Cute Green Ribbon","",0,14,20,193,1,0]
@@ -1366,7 +1366,7 @@ ItemOBJ = [
 ,[1341,13,1,159,4,0,0,1,"Kaiser Knuckle R","",0,12,5,20,4,49,5,41,10,42,10,43,10,44,10,0] //custom TalonRO rental
 ,[1342,11,0,175,4,0,0,1,"Katar of Speed R","","[Sonic Blow] damage +25%",12,3,193,1,0] //custom TalonRO rental
 ,[1343,8,0,150,3,0,0,1,"Mace of Madness R","","[Cart Revolution] damage +25%",1,2,0] //custom TalonRO rental
-,[1344,1,1,105,4,0,0,1,"Mail Breaker R","",0,141,5,193,1,0] //custom TalonRO rental
+,[1344,1,1,105,4,0,0,1,"Mailbreaker R","",0,141,5,193,1,0] //custom TalonRO rental
 ,[1345,9,1,165,3,0,0,1,"Mighty Staff R","","Consume 1 SP with each physical attack",1,10,4,4,89,20,193,1,0] //custom TalonRO rental
 ,[1346,13,0,150,4,0,0,1,"Monk Knuckle R","","[Finger Offensive] damage +25%",4,2,0] //custom TalonRO rental
 ,[1347,3,0,204,4,0,0,1,"Muramasa R","",0,10,30,12,8,193,1,0] //custom TalonRO rental
@@ -1378,7 +1378,7 @@ ItemOBJ = [
 ,[1353,9,1,100,2,0,0,1,"Staff of Darkness R","",0,4,2,89,15,73,-5,0] //custom TalonRO rental
 ,[1354,9,53,10,3,0,0,1,"Staff of Healing R","","Increase 15% chance to heal yourself by [Heal] and [Sanctuary] (didn't really get the description...)",89,15,193,1,0] //custom TalonRO rental
 ,[1355,9,1,71,3,1,0,1,"Survivor's Rod (dex) R","",0,89,20,5,4,13,500,193,1,0] //custom TalonRO rental
-,[1356,1,1,105,4,0,0,1,"Sword Breaker R","",0,140,5,193,1,0] //custom TalonRO rental
+,[1356,1,1,105,4,0,0,1,"Swordbreaker R","",0,140,5,193,1,0] //custom TalonRO rental
 ,[1357,11,0,179,4,0,0,1,"Unholy Touch R","",0,20,7,133,5,193,1,194,1,0] //custom TalonRO rental
 ,[1358,64,1,1,0,0,10,0,"Vesper Core 01 R","",0,4,2,16,5,19,3,0] //custom TalonRO rental
 ,[1359,64,1,1,0,0,10,0,"Vesper Core 02 R","",0,1,3,17,10,19,3,0] //custom TalonRO rental
@@ -1388,7 +1388,7 @@ ItemOBJ = [
 ,[1363,63,0,9,0,0,0,0,"Refresh Shoes R","","Every 10 seconds, your HP goes up by 20, SP goes up by 3",15,17,16,8,0] //custom TalonRO rental
 ,[1364,62,0,9,0,0,0,0,"Silf Manteau R","",0,9,13,11,1,60,13,0] //custom TalonRO rental
 ,[1365,62,55,5,0,0,0,0,"Survivor's Manteau R","",0,3,10,19,10,193,1,0] //custom TalonRO rental
-,[1366,64,1,0,0,0,0,0,"Bloody Shackle Ball R","",0,17,30,0] //custom TalonRO rental
+,[1366,64,1,0,0,0,0,0,"Bloodied Shackle Ball R","",0,17,30,0] //custom TalonRO rental
 ,[1367,64,0,0,0,0,0,0,"Spiritual Ring R","",0,4,2,5,2,0] //custom TalonRO rental
 ,[1368,50,1,10,0,0,0,0,"Corsair R","",0,3,3,4,3,193,1,0] //custom TalonRO rental
 ,[1369,50,1,6,0,0,0,0,"Drooping Cat R","",0,19,15,151,10,153,40,193,1,0] //custom TalonRO rental
@@ -1452,7 +1452,7 @@ ItemOBJ = [
 ,[1422,50,0,0,0,1,100,30,"Chicken Hat","","Add a chance to autocast skill [Loud Exclamation]Lv 1",12,5,0]
 ,[1423,51,0,1,0,0,10,70,"Filir Wings","","",12,2,73,-2,0]
 ,[1424,50,0,2,0,0,10,0,"Chicken Of Love hat","",0,1,3,13,100,52,7,57,7,0]
-,[1425,50,1001,5,0,1,100,0,"Minor Valkyrian Helm","",0,19,5,0]
+,[1425,50,1001,5,0,1,100,0,"Minor Valkyrie Helm","",0,19,5,0]
 ,[1426,50,0,2,0,1,20,30,"Deviruchi Headphones","","MaxHP  -1%<br/ ><b>[Mage, Archer, Acolyte Class]</b><br>When combined with Deviruchi Pet, add additional 5% [Stun] resistance (not calced)<br>If Deviruchi Pet is loyal, add an additional 10% [Stun] resistance (not calced)",19,1,151,15,0]
 ,[1427,50,0,1,0,0,30,40,"Black Feather Beret","",0,3,1,19,1,57,10,0]
 ,[1428,50,0,5,0,0,30,1,"Cat Ear Beret","","<b>[Refine Rate 5~10]</b><br>Increase physical damage against [Demi-Human] race monsters by 2% per refine level over 5<br>Decrease damage from [Demi-Human] race monsters by 2% per refine level over 5",0]
@@ -1753,9 +1753,9 @@ ItemID = [
 [2216,2217],[2261],[5039],[5018],[5031],[2284],[5037],[5022,5353],[2299,5157],[5019,5163],
 [2256,5160],[5050],[2251,5158],[5025],[2246,5159],[2224,2225],[5046,5168],[2264,5167],[5053,5166],[2258,5161],
 [2228,2229],[5017,5162],"Empty",[2203,2204],[2201,2202],[2205],[5040],[2212],[2263],[2291],
-[2239],[2295],"###",[2243],[5006],[5043],[2260],[2242],[2296],[2276],
+[2239],[2295],[2286],[2243],[5006],[5043],[2260],[2242],[2296],[2276],
 [5005],[2297],[2288],[2278],[5014],[2281],[2292],"Empty",[2267],[2265],
-[2268],[2262],"###",[2269],[5004],[2270],[2241],[2266],"Empty",[2338],
+[2268],[2262],[2218],[2269],[5004],[2270],[2241],[2266],"Empty",[2338],
 "###","###","###","###","###","###","###","###","###",[2340],
 [2320],"###","###","###","###","###",[2311],"###","###","###",
 "###",[2318],"###","###","Empty","###","###","###","###",[2105], // ID for ItemOBJ[301-310]
@@ -1897,31 +1897,7 @@ ItemID = [
 "###" // ID for ItemOBJ[1661]
 ];
 
-var arr1 = [
-[1426,[18653],"Deviruchi Headphones"],[1427,[18561],"Black Feather Beret"],[1428,[18600],"Cat Ear Beret"],
-[1429,[18725],"Knit Rabbit Ear Hat"],[1430,[18720],"Magical Booster"],[1434,[18786],"Anemos Mask"],[1435,[5610],"Ice Ear Wing"],
-[1436,[18747],"Ifrit Eyes"],[1437,[18750],"Poker Card In Mouth"],[1438,[18745],"Choco Stick In Mouth"],[1439,[18746],"Cold Breath"],[1440,[18635],"Blue Poring Clip"],
-[1441,[18634],"Green Poring Clip"],[1442,[18633],"Pink Poring Clip"],[1443,[18632],"Yellow Poring Clip"],[1444,[18785],"King Poring Hat"],[1445,[18749],"Majoruros Horn"],
-[1446,[18748],"Gold Coin Poring Hat"],[1447,[18790],"Rainbow Poring Hat"],[1448,[18758],"Scrat Hat"],
-[1449,[18778],"Pink Bunny Band"],[1450,[18756],"Black Shiba Hat"],
-[1451,[18752],"Cursed Book"],[1452,[2732],"Death Medalion"],[1453,[2731],"Rune Spellstone"],[1454,[1984],"Stem Whip"],[1455,[1191],"Alca Bringer"],
-[1456,[1196],"Chrome Metal Two-Handed Sword"],[1457,[18103],"Mystic Bow"],[1458,[16010],"Red Ether Bag"],[1459,[2153],"Imperial Guard"],[1460,[1433],"Imperial Spear"],
-[1462,[1930],"Green Whistle"],[1463,[13061],"Black Wing"],[1465,[15032],"Tidung"],
-[1466,[18735],"Mother Elven Ears"],[1467,[18812],"Elder Crown"],[1468,[18821],"RWC Commemorative Pin"],[1469,[18838],"Angeling Fur Hat"],[1470,[18575],"Wunderkammer"],
-[1472,[13067],"Kris"],[1473,[18827],"Valkyrie Circlet"],[1474,[18846],"Patron of the Sea God"],[1475,[18823],"Imperial Feather"],
-[1477,[1747],"Elven Bow"],[1478,[2147],"Round Buckler"],[1479,[2146],"Silver Guard"],[1480,[2148],"Rosa Shield"],
-[1481,[16003],"Carga Mace"],[1482,[1287],"Durga"],[1483,[15014],"Ebone Armor"],[1484,[15012],"Puente Robe"],[1485,[15013],"Claire Suits"],
-[1486,[1649],"Laphine Staff"],[1487,[18534],"Fancy Phantom Mask"],[1488,[18541],"Little Feather Hat"],[1490,[5509],"Sting Hat"],
-[1491,[20055],"New Ascended Black Dragon Hat"],[1492,[20056],"Powerful Ascended Black Dragon Hat"],
-[1493,[20057],"Ultimate Ascended Black Dragon Hat"],[1495,[5388],"Snake Head Hat"],
-[1496,[2370],"Used Mage Coat"],[1497,[5654],"Holy Marching Hat"],[1498,[2582],"Salvage Cape"],[1499,[16017],"Bloody Cross"],[1500,[2160],"Giant Shield"],
-[1501,[18850],"Polar Bear Cap"],[1502,[18793],"Magician's Night Cap"],[1503,[18852],"Tasty Strawberry Hat"],
-[1504,[19806],"Full Bloom Hairpin"],[1505,[5875],"Diadem Of Bruenhild"],
-[1506,[18111],"Creeper Bow"],[1507,[2162],"Bible of Promise(2nd Vol.)"],[1508,[1654],"Mental Stick"],[1509,[2853],"Telekinetic Orb"]
-];
-
 ItemMax = ItemOBJ.length -1;
-
 
 function ClickB_Item(CBI)
 {
