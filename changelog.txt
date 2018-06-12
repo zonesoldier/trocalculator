@@ -1,4 +1,6 @@
 [Update 2018-06-12]
+- Fixed potion success rate in etc.js
+- Added items 501-530 to ItemID
 - Issue #149: Proofreading [Slap]
 	Renown Detective's Cap: name (Renown Detective Cap -> Renown Detective's Cap)
 	Banana Hat: autospell level (1 -> 3)
@@ -23,6 +25,7 @@
 		2 = Item Set
 		3 = Unknown
 		4 = Not yet proofread/Placeholder
+- Added items 0-500 to ItemID
 - Fixed Thief Ring attack bonus [Slap]
 - Fixed Bloody Roar effect [Slap]
 - Added Drooping Maya [Slap]
