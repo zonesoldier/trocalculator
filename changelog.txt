@@ -1,3 +1,18 @@
+[Update 2018-06-12]
+- Issue #149: Proofreading [Slap]
+	Renown Detective's Cap: name (Renown Detective Cap -> Renown Detective's Cap)
+	Banana Hat: autospell level (1 -> 3)
+	Zherlthsh Mask: name (Zealotus Mask -> Zherlthsh Mask)
+	Novice Guard: weight (1 -> 0.1)
+	Novice Shield: required lvl (30 -> 40)
+	Somber Novice Hood: weight (1 -> 0.1)
+	Novice Slippers: weight (1 -> 0.1)
+	Tattered Novice Ninja Suit: weight (1 -> 0.1)
+	Luna Bow: updated description
+	Heavenly Maiden Robe: name (Heavenly Maiden's Robe -> Heavenly Maiden Robe)
+	Helm of Darkness: updated description
+	Maiden's Twin Ribbon: effect (removed 76,5)
+
 [Update 2018-06-11]
 - Changed format of the ItemID array in item.js [Slap]
 	Work in progress ItemID table. Currently proofreading and adding to this array.
@@ -8,13 +23,13 @@
 		2 = Item Set
 		3 = Unknown
 		4 = Not yet proofread/Placeholder
-- Fixed Thief Ring attack bonus script [Slap]
-- Fixed Bloody Roar script [Slap]
+- Fixed Thief Ring attack bonus [Slap]
+- Fixed Bloody Roar effect [Slap]
 - Added Drooping Maya [Slap]
 - Issue #149: Proofreading [Slap]
 	Byeollungum: effect (26,50 -> 26,5)
 	Schweizersabel: name (Schweizer Sabel -> Schweizersabel)
-	Brocca: effects (22,10 -> 22,1)
+	Brocca: effect (22,10 -> 22,1)
 	Brionac: effect (added 26,5)
 	Slash: effect (49,15 -> 31,15)
 	Quadrille: effect (49,10 -> 31,10)

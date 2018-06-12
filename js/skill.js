@@ -613,7 +613,7 @@ AutoSpellSkill = [
 [7,1,47,3,10,1], //When performing a ATK based attack, there's a 10 % chance to cast the skill [Soul Strike]Lv 3
 [8,1,52,3,10,1], //When performing a ATK based attack, there's a 10 % chance to cast the skill [Fire Ball]Lv 3
 [9,1,126,1,0,1], //When performing a ATK based attack, there's a chance to cast the skill [Jupitel Thunder]Lv 1
-[10,0,8,1,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Provoke]Lv 1
+[10,0,8,3,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Provoke]Lv 1
 [11,0,100,1,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Gloria]Lv 1
 [12,0,25,1,5,6], //When recieving ATK based damage, there's a 5 % chance to cast the skill [Heal]Lv 1
 [13,0,25,1,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Heal]Lv 1
