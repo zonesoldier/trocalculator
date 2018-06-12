@@ -1511,7 +1511,7 @@ ItemOBJ = [
 ,[1479,61,0,4,0,1,30,22,"Silver Guard","",0,19,-1,0]
 ,[1480,61,1051,7,0,1,130,90,"Rosa Shield","",0,0]
 ,[1481,8,1001,175,3,2,150,90,"Carga Mace","","Its name means 'Great Echo' in the Manuk tribe language, a rugged heavy mace with a sharp edge on one side.",0,0]
-,[1482,11,122,180,3,1,120,90,"Dulga","",0,0]
+,[1482,11,122,180,3,1,120,90,"Durga","",0,0]
 ,[1483,60,1051,11,0,1,450,90,"Ebone Armor","",0,0]
 ,[1484,60,1000,5,0,1,40,22,"Puente Robe","","Potion Pitcher effectiveness increased by + 3%",73,-1,91,3,0]
 ,[1485,60,1001,7,0,1,280,22,"Claire Suits","",0,0]
