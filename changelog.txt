@@ -1,4 +1,13 @@
 [Update 2018-06-11]
+- Changed format of the ItemID array in item.js [Slap]
+	Work in progress ItemID table. Currently proofreading and adding to this array.
+	Format: [ItemOBJ index, type, item IDs...]
+	type:
+		0 = Unequipped
+		1 = Equipment
+		2 = Item Set
+		3 = Unknown
+		4 = Not yet proofread/Placeholder
 - Fixed Thief Ring attack bonus script [Slap]
 - Fixed Bloody Roar script [Slap]
 - Added Drooping Maya [Slap]
@@ -6,7 +15,7 @@
 	Byeollungum: effect (26,50 -> 26,5)
 	Schweizersabel: name (Schweizer Sabel -> Schweizersabel)
 	Brocca: effects (22,10 -> 22,1)
-	Brionac: effect (26,5)
+	Brionac: effect (added 26,5)
 	Slash: effect (49,15 -> 31,15)
 	Quadrille: effect (49,10 -> 31,10)
 	Kaiser Knuckle:
