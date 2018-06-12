@@ -1148,7 +1148,7 @@ ItemOBJ = [
 ,[1125,50,0,1,0,1,20,0,"Crown Parrot","",0,156,100,4,1,221,107,193,1,0]
 ,[1126,50,0,0,0,0,10,0,"Red Hat","","[description translation missing - ItemID: 1126]",0]
 ,[1127,50,0,4,0,0,50,30,"Crab Nipper Hairpin","","[description translation missing - ItemID: 1127]",221,104,0]
-,[1128,50,0,2,0,0,0,10,"Notice Board","",0,0] 
+,[1128,50,0,2,0,0,0,10,"Notice Board","",0,0]
 ,[1129,50,0,2,0,0,30,30,"Noble Hat","","0.7% chance of auto casting [Adrenaline Rush]Lv 1 when receiving ATK based damage",1,2,0]
 ,[1130,50,0,3,0,1,80,80,"Emperor's Laurel Crown","",0,7,1,19,3,0]
 ,[1131,50,79,0,0,0,75,75,"Lion Mask","","[description translation missing - ItemID: 1131]",19,1,0]
@@ -1286,7 +1286,7 @@ ItemOBJ = [
 ,[1263,51,0,6,0,0,0,1,"Blush of Groom","","",57,3,0]
 ,[1264,50,0,0,0,1,10,0,"Purple Cowboy Hat",0,0,4,2,3,2,14,50,0]
 ,[1265,50,0,0,0,1,20,30,"Dark Randgris Helm","","<b>Upper and Mid Headgear</b>",5,4,19,1,0]
-,[1266,999,0,2,0,0,70,10,"AFK Hat","",0,0] //Duplicated (same with Notice Board TRO ID : 5474), remove me. --> Duplicate with [1128,50,0,2,0,0,0,10,"Notice Board","",0,0] 
+,[1266,999,0,2,0,0,70,10,"AFK Hat","",0,0] //Duplicated (same with Notice Board TRO ID : 5474), remove me. --> Duplicate with [1128,50,0,2,0,0,0,10,"Notice Board","",0,0]
 ,[1267,50,0,0,0,0,10,10,"Afro Wig","","Add a 30% chance of auto casting First Aid on the user when the user receives Physical Damage",60,1,0]
 ,[1268,50,0,0,0,0,10,0,"Angel Blessing","","",66,5,6,1,0,]
 ,[1269,51,1,0,0,0,20,30,"Angel of Ghost","",0,87,2,89,2,0]
@@ -1479,8 +1479,8 @@ ItemOBJ = [
 ,[1449,50,0,3,0,0,10,1,"Pink Bunny Band","",0,6,2,0]
 ,[1450,50,0,0,0,1,40,1,"Black Shiba Hat","",0,37,10,0]
 ,[1451,50,1,3,0,1,30,90,"Cursed Book","","4% chance to absorb 4% HP on physical attack<br>For every 2 refines, increase the HP absorbed by 1%<br>1% chance to absorb 1% SP on physical attack<br>For every 3 refines, increase the SP absorbed by 1%<br>You lose the amount of refines in HP per 5 seconds when equipped (not calcled)",0]
-,[1452,64,1,0,0,1,5,80,"Death Medalion","",0,10,5,0]
-,[1453,64,1,0,0,1,5,80,"Rune Charm Stone","",0,14,50,73,-1,0]
+,[1452,64,1,0,0,1,5,80,"Death Loop","",0,10,5,0]
+,[1453,64,1,0,0,1,5,80,"Rune Spellstone","",0,14,50,73,-1,0]
 //custom TalonRO [Update 2013-10-06]
 ,[1454,15,131,170,3,1,80,90,"Stem Whip","","MATK +50<br>When using Scream, add a 3% chance of casting Level 2 Wide Sleep<br>For every refine above +6, decrease SP cost of all skills by 2%",12,5,0]
 ,[1455,3,1051,280,3,0,340,90,"Alca Bringer","","Every 2 refines + 3% ASPD",0]
@@ -1511,7 +1511,7 @@ ItemOBJ = [
 ,[1479,61,0,4,0,1,30,22,"Silver Guard","",0,19,-1,0]
 ,[1480,61,1051,7,0,1,130,90,"Rosa Shield","",0,0]
 ,[1481,8,1001,175,3,2,150,90,"Carga Mace","","Its name means 'Great Echo' in the Manuk tribe language, a rugged heavy mace with a sharp edge on one side.",0,0]
-,[1482,11,122,180,3,1,120,90,"Durga","",0,0]
+,[1482,11,122,180,3,1,120,90,"Dulga","",0,0]
 ,[1483,60,1051,11,0,1,450,90,"Ebone Armor","",0,0]
 ,[1484,60,1000,5,0,1,40,22,"Puente Robe","","Potion Pitcher effectiveness increased by + 3%",73,-1,91,3,0]
 ,[1485,60,1001,7,0,1,280,22,"Claire Suits","",0,0]
@@ -1601,7 +1601,7 @@ ItemOBJ = [
 ,[1558,52,0,0,0,0,10,0,"Blood Sucker","","When doing a physical attack, add a chance to absorb 5% of your damage dealt as HP.",75,-100,76,-100,0]
 ,[1559,8,0,130,3,2,50,50,"Red Square Bag","","If user's base Str is 90 or higher: Causes Stun effect to enemies by 5% chance.<BR>Every time you kill a monster, low chance to drop random Potion.",13,200,5244,20,5248,20,0]
 ,[1560,50,0,2,0,0,0,0,"Reforged Lord Kaho's Horns","","<br />Reforged Horns Of Lord Kaho. You feel a strange power emitting from them but they are not quite complete yet.",1,5,4,5,5,5,19,5,193,1,0]
-,[1561,51,51,2,0,65,30,65,"Advanced Fin Helm","","Additional Maximum HP + 6 * Base Level.",13,300,0]
+,[1561,51,51,2,0,1,30,65,"Advanced Fin Helm","","Additional Maximum HP + 6 * Base Level.",13,300,0]
 ,[1562,50,0,2,0,1,10,0,"Blue Pajamas Hat","","A cute blue pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.",17,5,89,5,0]
 ,[1563,50,0,2,0,1,10,0,"Pink Pajamas Hat","","A cute pink pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.",17,5,89,5,0]
 //Eden Gear
@@ -1704,7 +1704,7 @@ ItemOBJ = [
 ,[1658,50,0,5,0,1,100,70,"Lord of the Dead Helm","","<b>Mid and Upper Headgear</b><br>[Refine Rate 5~10]<br>Increase damage on Boss monster by 1% for every refine.<br><br>[+ Abysmal Knight Card]<br>Increase damage on Boss monster by 5%.<br><br>[Refine Rate 6~10]<br>Receive 1% more damage from all monsters for every refine.",19,5,26,10,77,-5,79,-5,0]
 ,[1659,52,0,0,0,0,10,1,"Cheer Whistle","","Blowing this whistle can drastically improve your team's morale.",1,1,0]
 ,[1660,52,0,0,0,0,10,1,"Blue Pencil In Mouth","","A blue pencil full of teeth marks due to holding it in your mouth all the time.",8,3,0]
-,[1661,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,18,0]
+,[1661,50,0,0,0,0,0,10,"Party Member Hat","","A helm with a Party Member wanted ad on it. Let's level up together!!",0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
@@ -3060,111 +3060,111 @@ ItemID = [
 [1318,4,0],
 [1319,4,0],
 [1320,4,0],
-[1321,4,0],
-[1322,4,0],
-[1323,4,0],
-[1324,4,0],
-[1325,4,0],
-[1326,4,0],
-[1327,4,0],
-[1328,4,0],
-[1329,4,0],
-[1330,4,0],
-[1331,4,0],
-[1332,4,0],
-[1333,4,0],
-[1334,4,0],
-[1335,4,0],
-[1336,4,0],
-[1337,4,0],
-[1338,4,0],
-[1339,4,0],
-[1340,4,0],
-[1341,4,0],
-[1342,4,0],
-[1343,4,0],
-[1344,4,0],
-[1345,4,0],
-[1346,4,0],
-[1347,4,0],
-[1348,4,0],
-[1349,4,0],
-[1350,4,0],
-[1351,4,0],
-[1352,4,0],
-[1353,4,0],
-[1354,4,0],
-[1355,4,0],
-[1356,4,0],
-[1357,4,0],
-[1358,4,0],
-[1359,4,0],
-[1360,4,0],
-[1361,4,0],
-[1362,4,0],
-[1363,4,0],
-[1364,4,0],
-[1365,4,0],
-[1366,4,0],
-[1367,4,0],
-[1368,4,0],
-[1369,4,0],
-[1370,4,0],
-[1371,4,0],
+[1321,1,1728],
+[1322,1,1388],
+[1323,1,1829],
+[1324,1,1580],
+[1325,1,1929],
+[1326,1,1286],
+[1327,1,1487],
+[1328,1,1983],
+[1329,1,16002],
+[1330,1,1373],
+[1331,1,1273],
+[1332,1,1744],
+[1333,1,1424],
+[1334,1,13021],
+[1335,1,13401],
+[1336,1,13408],
+[1337,1,1378],
+[1338,1,1567],
+[1339,1,13409],
+[1340,1,1267],
+[1341,1,1817],
+[1342,1,1283],
+[1343,1,1547],
+[1344,1,13025],
+[1345,1,1623],
+[1346,1,1828],
+[1347,1,1173],
+[1348,1,13407],
+[1349,1,1982],
+[1350,1,1578],
+[1351,1,1537],
+[1352,1,1427],
+[1353,1,1642],
+[1354,1,1638],
+[1355,1,1628],
+[1356,1,13024],
+[1357,1,1274],
+[1358,1,2696],
+[1359,1,2697],
+[1360,1,2698],
+[1361,1,2699],
+[1362,1,2385],
+[1363,1,2439],
+[1364,1,2543],
+[1365,1,2535],
+[1366,1,2710],
+[1367,1,2711],
+[1368,1,5331],
+[1369,1,5279],
+[1370,1,5279],
+[1371,1,5326],
 [1372,4,0],
 [1373,4,0],
 [1374,4,0],
-[1375,4,0],
-[1376,4,0],
-[1377,4,0],
-[1378,4,0],
-[1379,4,0],
-[1380,4,0],
-[1381,4,0],
-[1382,4,0],
-[1383,4,0],
-[1384,4,0],
-[1385,4,0],
-[1386,4,0],
-[1387,4,0],
-[1388,4,0],
-[1389,4,0],
-[1390,4,0],
-[1391,4,0],
+[1375,1,1290],
+[1376,1,2150],
+[1377,1,1745],
+[1378,1,1990],
+[1379,1,1190],
+[1380,1,1320],
+[1381,1,1913],
+[1382,1,1549],
+[1383,1,2480],
+[1384,1,1651],
+[1385,1,13320],
+[1386,1,1430],
+[1387,1,5600],
+[1388,1,1746],
+[1389,1,1650],
+[1390,1,1840],
+[1391,1,1590],
 [1392,4,0],
-[1393,4,0],
-[1394,4,0],
-[1395,4,0],
-[1396,4,0],
-[1397,4,0],
-[1398,4,0],
-[1399,4,0],
-[1400,4,0],
+[1393,1,5051],
+[1394,1,18643],
+[1395,1,5597],
+[1396,1,18566],
+[1397,1,18642],
+[1398,1,18644],
+[1399,1,5564],
+[1400,1,18677],
 [1401,4,0],
-[1402,4,0],
-[1403,4,0],
-[1404,4,0],
-[1405,4,0],
-[1406,4,0],
-[1407,4,0],
-[1408,4,0],
+[1402,1,5775],
+[1403,1,5594],
+[1404,1,18678],
+[1405,1,18670],
+[1406,1,5445],
+[1407,1,18564],
+[1408,1,18563],
 [1409,4,0],
-[1410,4,0],
-[1411,4,0],
-[1412,4,0],
-[1413,4,0],
-[1414,4,0],
-[1415,4,0],
-[1416,4,0],
-[1417,4,0],
+[1410,1,5210],
+[1411,1,18703],
+[1412,1,18536],
+[1413,1,5463],
+[1414,1,5548],
+[1415,1,5767],
+[1416,1,18683],
+[1417,1,5213],
 [1418,4,0],
-[1419,4,0],
-[1420,4,0],
+[1419,1,18648],
+[1420,1,18505],
 [1421,4,0],
-[1422,4,0],
-[1423,4,0],
-[1424,4,0],
-[1425,4,0],
+[1422,1,5431],
+[1423,1,5664],
+[1424,1,5822],
+[1425,1,5171],
 [1426,4,0],
 [1427,4,0],
 [1428,4,0],
@@ -3400,7 +3400,7 @@ ItemID = [
 [1658,4,0],
 [1659,4,0],
 [1660,4,0],
-[1661,4,0]
+[1661,1,5337]
 ];
 
 ItemMax = ItemOBJ.length -1;
