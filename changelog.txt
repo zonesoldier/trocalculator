@@ -1,4 +1,8 @@
 [Update 2018-06-12]
+- Issue #173: Fixed Luna Kaleet; [Kato]
+- Issue #172: Fixed some descriptions and other were OK; [Kato]
+- Issue #171: Added the ItemIDs, also added from 1527 to 1661; [Kato]
+- Issue #170: Added Party Member Hat ; [Kato]
 - Fixed potion success rate in etc.js
 - Added items 501-530 to ItemID
 - Issue #149: Proofreading [Slap]
