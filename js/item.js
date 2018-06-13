@@ -964,7 +964,7 @@ ItemOBJ = [
 ,[941,5,1001,160,3,1,100,50,"Ivory Lance","","[description translation missing - ItemID: 941]",2,2,12,3,220,15,0]
 ,[942,5,121,150,4,1,560,70,"Carled","","Every two upgrades made to the weapon gives Def +1",12,-10,0]
 ,[943,5,1001,112,2,4,70,50,"Battle Fork","",0,0]
-,[944,8,1053,110,3,3,70,50,"Luna Kaleet","","If user's base Str is 77 or higher: ASPD +4% and Causes Stun effect to enemies by 15% chance.<BR>When a Brute is killed, 15% chance to drop +4 STR Food<BR>When a Plant is killed, 15% chance to drop +5 DEX Food<BR>When a Fish is killed, 15% chance to drop +3 LUK Food",0]
+,[944,8,1053,110,3,3,70,50,"Luna Kaleet","","If user's base Str is 77 or higher: ASPD +4% and Causes Stun effect to enemies by 15% chance.<BR>When a Brute is killed, 5% chance to drop +3 STR Food<BR>When a Plant is killed,0.5% chance to drop +5 DEX Food<BR>When a Fish is killed, 5% chance to drop +4 LUK Food",0]
 ,[945,10,124,105,4,2,100,60,"Nepenthes Bow","","[description translation missing - ItemID: 945]",0]
 ,[946,10,1054,125,4,1,125,80,"Cursed Lyre","","[description translation missing - ItemID: 946]",6,-2,0]
 ,[947,13,129,95,3,3,60,60,"Soul of Hels Leon","","Adds a 3% chance of using [Joint Beat]Lv 1 on the target when doing a physical attack<br>Adds a 1% chance of using [Summon Spirit Sphere]Lv 5 when doing a physical attack<br>10% chance of using [Investigate]Lv 1 when [Palm Push Strike] is casted",0]
@@ -1619,11 +1619,7 @@ ItemOBJ = [
 ,[1575,14,0,150,3,0,0,60,"Eden Group Guitar I","","An instrument that is made by the Eden Group. It is suitable for those who have more advanced experience as Bards.",193,1,0]
 ,[1576,50,0,1,0,0,0,12,"Eden Group Hat","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.",193,1,0]
 ,[1577,50,0,1,1,0,0,60,"Eden Group Hat II","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.<br/><br/>When dealing physical damage there's a high chance that for 5 seconds you will gain ATK + 10.<br/><br/>When dealing magic damage there's a high chance that for 5 seconds you will gain MATK + 10.",193,1,0]
-<<<<<<< HEAD
-,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.",89,15,,8,10,193,1,0]
-=======
 ,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.",89,15,8,10,193,1,0]
->>>>>>> master
 ,[1579,11,0,155,3,0,0,60,"Eden Group Katar I","","A katar that is made by the Eden Group. It is suitable for those who have more advanced experience handling katars.",10,5,8,10,193,1,0]
 ,[1580,12,0,155,3,0,0,60,"Eden Group Knuckle I","","A claw that is made by the Eden Group. It is suitable for those who have more advanced experience as Champions.",12,10,8,10,193,1,0]
 ,[1581,8,0,142,2,0,0,26,"Eden Group Mace I","","A beginner's mace that is made exclusively by the Eden Group.",8,10,193,1,0]
@@ -3239,37 +3235,37 @@ ItemID = [
 [1493,4,0],
 [1494,4,0],
 [1495,4,0],
-[1496,4,0],
-[1497,4,0],
-[1498,4,0],
-[1499,4,0],
-[1500,4,0],
-[1501,4,0],
-[1502,4,0],
-[1503,4,0],
-[1504,4,0],
-[1505,4,0],
-[1506,4,0],
-[1507,4,0],
-[1508,4,0],
-[1509,4,0],
-[1510,4,0],
-[1511,4,0],
-[1512,4,0],
-[1513,4,0],
-[1514,4,0],
-[1515,4,0],
-[1516,4,0],
-[1517,4,0],
-[1518,4,0],
-[1519,4,0],
-[1520,4,0],
-[1521,4,0],
-[1522,4,0],
-[1523,4,0],
-[1524,4,0],
-[1525,4,0],
-[1526,4,0],
+[1496,1,2370],
+[1497,1,5654],
+[1498,1,2582],
+[1499,1,16017],
+[1500,1,2160],
+[1501,1,18850],
+[1502,1,18793],
+[1503,1,18852],
+[1504,1,19806],
+[1505,1,5875],
+[1506,1,18111],
+[1507,1,2162],
+[1508,1,1654],
+[1509,1,2853],
+[1510,2,2853,1654],
+[1511,1,1659],
+[1512,1,1830],
+[1513,1,15044],
+[1514,2,15044,13027],
+[1515,1,18109],
+[1516,1,1435],
+[1517,1,2892],
+[1518,2,2892,1284],
+[1519,2,2892,1285],
+[1520,1,2161],
+[1521,2,2161,1646],
+[1522,1,13175],
+[1523,1,18540],
+[1524,2,18540,5066],
+[1525,2,18540,5072],
+[1526,1,20159],
 [1527,1,20161],
 [1528,1,18664],
 [1529,1,18711],
@@ -3489,7 +3485,19 @@ function ClickB_Item(CBI)
 					check = 1;
 				}
 			}
-			CBIstr += " at the same time:<BR>";
+			CBIstr += " at the same time ";
+
+      // Item IDs with links to Talonro Item Database for Combos; [Kato]
+    	if(ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][1] == 2){
+    		var itemLink = "[";
+    		for(a = 2; a < ItemID[w_SE[ItemOBJ[CBI][i+1]][0]].length; a++){
+          itemLink += "<a href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][a] + "/\" target=\"_blank\"><b>" + ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][a] + "</b></a>" + ((a+1 < ItemID[w_SE[ItemOBJ[CBI][i+1]][0]].length) ? ", " : "");  //todo title
+    		}
+	       CBIstr += itemLink + "]";
+    	}
+
+
+    CBIstr += ": <BR>";
 			check = 0;
 			for(var j=11;ItemOBJ[w][j] != 0;j+=2)
 				Item_Setumei(ItemOBJ[w][j],ItemOBJ[w][j+1]);
