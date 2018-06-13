@@ -4899,6 +4899,27 @@ function KakutyouKansuu(){
 			if(adopted){
 				srate = Math.floor((srate * 0.7));}
 
+			/*
+				selpot:
+					0 = red pot
+					1 = yellow pot
+					2 = white pot
+					3 = blue pot
+					4 = slim red
+					5 = slim yellow
+					6 = slim thiw
+					7 = alcohol
+					8 = acid
+					9 = grenade
+					10 = plant
+					11 = marine sphere
+					12 = glisten
+					13 = anodyne
+					14 = aloevera
+					15 = embryo
+					16 = elemental
+			*/
+
 			if(selpot == 3 || selpot == 4 || selpot == 13 || selpot == 14 || selpot == 15 || selpot == 16){
 				brate = 0;}
 			if(selpot == 5){brate = 2.5;}
