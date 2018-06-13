@@ -1,10 +1,18 @@
 [Update 2018-06-12]
+- Removed extra comma in Eden Group Huuma Shuriken I that currently breaks the page [Slap]
+- Added items [Slap]:
+	Tanigumi Girl Doll
+	King Tiger Doll Hat
+	Drooping Bunny
+	Blue Tiger Mask
+	Red Tiger Mask
 - Issue #173: Fixed Luna Kaleet; [Kato]
 - Issue #172: Fixed some descriptions and other were OK; [Kato]
 - Issue #171: Added the ItemIDs, also added from 1527 to 1661; [Kato]
 - Issue #170: Added Party Member Hat ; [Kato]
-- Fixed potion success rate in etc.js
-- Added items 501-530 to ItemID
+- Fixed potion success rate in etc.js [Slap]
+- Added items 501-600 to ItemID [Slap]
+- Clarified rental item names (Ballista R -> Ballista [Rental]) [Slap]
 - Issue #149: Proofreading [Slap]
 	Renown Detective's Cap: name (Renown Detective Cap -> Renown Detective's Cap)
 	Banana Hat: autospell level (1 -> 3)
@@ -18,6 +26,53 @@
 	Heavenly Maiden Robe: name (Heavenly Maiden's Robe -> Heavenly Maiden Robe)
 	Helm of Darkness: updated description
 	Maiden's Twin Ribbon: effect (removed 76,5)
+	Nest Hat: name (Bird's Nest Hat -> Nest Hat)
+	Improved Arm Guard: name (Advanced Arm Guard -> Improved Arm Guard)
+	Jitte:
+		updated description
+		effect (added 140,2)
+	Hakujin: fixed effects
+	Gokurin: updated description/effects
+	Huuma Giant Wheel Shuriken:
+		updated description/effects
+		effect (added 194,1)
+	Huuma Blaze Shuriken: effect (added 194,1)
+	Huuma Wing Shuriken: effect (added 194,1)
+	Branch: effect (removed 8,10)
+	Gate Keeper: required lvl (55 -> 24)
+	Destroyer: effect (added 141,2)
+	Note Headphones:
+		updated description
+		required lvl (10 -> 0)
+	Wandering Minstrel Hat:
+		name (Legendary Minstrel Hat -> Wandering Minstrel Hat)
+		type (999 -> 50)
+	Pumpkin Hat: replaced with Tanigumi Girl Doll //Description of Pumpkin Hat items don't match their scripts; will add them back if they are reintroduced in-game
+	Dress Hat: replaced with King Tiger Doll Hat //Already present as Maiden Hat, which was recently added as a "missing" item
+	Satelite Hairclip: name (Satelite Hat -> Satelite Hairclip)
+	Moonowl Cap:
+		name (Moonlight Flower Hat -> Moonowl Cap)
+		updated description
+	Bunny Band (ID 568): replaced with Drooping Bunny //Already present as Sheila Hairnet
+	Flapping Angel Wings: replaced with Blue Tiger Mask //Already present as Flying Angel
+	Red Glasses:
+		weight (10 -> 0)
+		required lvl (10 -> 0)
+		effect (19,5 -> 4,1)
+	Peco Peco Hairband: weight (10 -> 0)
+	Pinwheel Hairpin:
+		name (Windmill Hairpin -> Pinwheel Hairpin)
+		effect (2 DEF -> 3 DEF)
+	Magic Kettle:
+		name (Kettle Hat-> Magic Kettle)
+		fixed autocast
+	Pole Axe [Rental]: ATK (195 -> 159)
+	Rudra Bow [Rental]: name (Rudra's Bow [Rental] -> Rudra Bow [Rental])
+	Steel Flower [Rental]: replaced with Red Tiger Mask //Item does not exist
+	Eye Of Darkness:
+		required lvl (0 -> 50)
+		effect (added 154,100)
+	Holy Marcher Hat: effect (removed 151,10)
 
 [Update 2018-06-11]
 - Changed format of the ItemID array in item.js [Slap]
@@ -179,7 +234,7 @@
 	Helm of Angel: name (Angel Helm -> Helm of Angel)
 	Goggles: updated description
 	Sphinx Hat:
-		name (Sphinx Hat [1] -> Sphinx Hat) //Will remove the other Sphinx Hat as it is not obtainable and not in the wiki database.
+		name (Sphinx Hat [1] -> Sphinx Hat) //Other Sphinx Hat not in game
 		slots (0 -> "0 / 1")
 		updated description
 	Zorro Masque: name (Zorro Mask -> Zorro Masque)
