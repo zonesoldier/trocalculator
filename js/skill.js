@@ -619,8 +619,8 @@ AutoSpellSkill = [
 [13,0,25,1,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Heal]Lv 1
 [14,1,52,5,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Fire Ball]Lv 5
 [15,0,27,1,0,1], //When performing a ATK based attack, there's a chance to cast the skill [Increase AGI]Lv 1
-[16,1,128,3,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Water Ball]Lv 3
-[17,0,236,2,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Deluge]Lv 2
+[16,1,128,3,1,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Water Ball]Lv 3
+[17,0,236,2,1,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Deluge]Lv 2
 [18,0,95,1,3,6], //When recieving ATK based damage, there's a 3 % chance to cast the skill [Status Recovery]Lv 1
 [19,0,30,5,3,1], //When performing a ATK based attack, there's a 3 % chance to cast the skill [Angelus]Lv 5
 [20,1,261,3,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Joint Beat]Lv 3

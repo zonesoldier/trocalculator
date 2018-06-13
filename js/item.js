@@ -427,7 +427,7 @@ ItemOBJ = [
 ,[404,2,1,140,4,0,90,40,"Immaterial Sword","","Drains 30% of target's SP by a low chance<br>Drain 1 SP from its owner on each attack",20,8,194,1,0]
 ,[405,3,1,150,4,"0 / 2",130,48,"Dragon Slayer","",0,39,15,189,1,0]
 ,[406,3,1,160,4,"0 / 2",160,48,"Schweizersabel","",0,18,1,20,4,221,6,0]
-,[407,999,1,250,4,0,100,48,"Balmung","",0,4,20,6,20,0]
+,[407,999,1,250,4,0,100,48,"Balmung","",0,20,6,4,20,6,20,0]
 ,[408,4,1,145,4,0,70,48,"Gelerdria","",0,20,2,13,800,14,-50,0]
 ,[409,4,1,100,4,0,85,48,"Brocca","",0,40,25,22,1,0]
 ,[410,4,1,95,4,0,100,48,"Tjungkuletti","","Regains 1 SP with each attack and 5 SP each time an enemy is killed",0]
@@ -463,7 +463,7 @@ ItemOBJ = [
 ,[440,64,0,0,0,0,10,0,"Gold Ring","",0,0]
 ,[441,64,0,0,0,0,10,0,"Diamond Ring","",0,0]
 ,[442,64,52,0,0,0,10,70,"Thief Ring","","If user's base STR is 90 or higher: HIT + 10, FLEE + 10<br>If user's base AGI is 90 or higher: ATK + 10, CRIT + 10",0]
-,[443,999,999,2,0,0,35,45,"Wing of Diablo","",0,0]
+,[443,999,0,2,0,0,35,45,"Wing of Diablo","",0,0]
 ,[444,50,0,6,0,0,10,0,"-Lord Kaho's Horn","",0,1,20,4,20,5,20,19,20,0]  //custom TalonRO
 ,[445,52,81,0,0,0,10,70,"Assassin Mask","",0,0]
 ,[446,999,0,0,0,0,1,0,"Aniversary Ring","",0,7,1,13,1,14,1,0]
@@ -553,74 +553,74 @@ ItemOBJ = [
 ,[530,50,72,3,0,1,200,50,"Helm of Darkness","","<b>Upper and Middle Headgear</b>",1,2,0]
 ,[531,50,0,0,0,1,20,30,"Maiden's Twin Ribbon","",0,14,30,19,3,0]
 ,[532,50,0,1,0,0,50,30,"Decorative Geographer","",0,4,1,193,1,221,12,0]
-,[533,50,0,2,0,0,50,10,"Bird's Nest Hat","",0,2,1,5,1,151,10,0]
+,[533,50,0,2,0,0,50,10,"Nest Hat","",0,2,1,5,1,151,10,0]
 ,[534,60,1001,6,0,1,280,0,"Valkyrja's Armor","","<b>[Mage, Archer, Acolyte Class]</b><br>Status effect [Silence] resistance +50%<br><b>[Swordman, Merchant, Thief Class]</b><br>Status effect [Stun] resistance +50%",7,1,194,1,0]
 ,[535,62,1001,3,0,1,50,0,"Valkyrja's Manteau","","<b>[Mage, Archer, Acolyte Class]</b><br>Perfect Dodge + 5 + Refine Rate * 2<br><b>[Swordman, Merchant, Thief Class]</b><br>Reflect Melee Physical Attacks by 5% + Refine Rate * 2",194,1,0]
 ,[536,63,1001,4,0,1,50,0,"Valkyrja's Shoes","","<b>[Mage, Archer, Acolyte Class]</b><br>Maximum HP + 5 * Base Level<br><b>[Swordman, Merchant, Thief Class]</b><br>Maximum SP + 2 * Job Level",194,1,0]
 ,[537,61,58,5,0,"0 / 1",15,20,"Arm Guard","",0,0]
-,[538,61,58,4,0,"0 / 1",15,50,"Advanced Arm Guard","",0,19,5,0]
+,[538,61,58,4,0,"0 / 1",15,50,"Improved Arm Guard","",0,19,5,0]
 ,[539,1,58,50,1,"2 / 3",60,12,"Ashura","",0,89,10,0]
-,[540,1,58,70,2,"0 / 1",40,35,"Jitte","","When attacking, adds a 5% chance of destroying the enemy's weapon",0]
+,[540,1,58,70,2,"0 / 1",40,35,"Jitte","",0,140,2,0]
 ,[541,1,58,95,2,"1 / 2",70,24,"Murasame","",0,20,1,117,10,0]
-,[542,1,58,120,3,"0 / 1",80,42,"Hakujin","","A dagger that has a shining white blade crafted of bone, and is designed for stabbing, rather than slashing.",0,4,2,221,13,0]
-,[543,1,58,150,3,0,60,65,"Gokurin","","When attacking, adds a 10% chance to inflict [Curse] on the enemy",20,7,0]
+,[542,1,58,120,3,"0 / 1",80,42,"Hakujin","","A dagger that has a shining white blade crafted of bone, and is designed for stabbing, rather than slashing.",4,2,221,13,0]
+,[543,1,58,150,3,0,60,65,"Gokurin","",0,20,7,133,10,0]
 ,[544,1,58,125,4,0,90,70,"Kamaitachi","","Weapon Range + 1",20,4,12,3,10,3,0]
-,[545,16,58,50,4,"3 / 4",250,42,"Huuma Giant Wheel Shuriken","","When attacking, adds a 1% chance to inflict [External Bleeding] on the enemy",0]
-,[546,16,58,185,4,0,150,55,"Huuma Blaze Shuriken","","<font color=blue>[SQI Ingredient]</font><br>A <font color=red>Fire</font> Property Huuma shuriken that sparks like a firecracker when it strikes enemies.",20,3,5,-2,221,14,0]
-,[547,16,58,150,4,0,300,65,"Huuma Wing Shuriken","",0,20,4,2,-1,5,-2,0]
+,[545,16,58,50,4,"3 / 4",250,42,"Huuma Giant Wheel Shuriken","",0,138,1,194,1,0]
+,[546,16,58,185,4,0,150,55,"Huuma Blaze Shuriken","","<font color=blue>[SQI Ingredient]</font><br>A <font color=red>Fire</font> Property Huuma shuriken that sparks like a firecracker when it strikes enemies.",20,3,5,-2,221,14,194,1,0]
+,[547,16,58,150,4,0,300,65,"Huuma Wing Shuriken","",0,20,4,2,-1,5,-2,194,1,0]
 ,[548,17,59,30,1,"1 / 2",40,10,"Six Shooter","",0,8,-10,0]
 ,[549,17,59,45,2,"1 / 2",45,35,"Crimson Bolt","",0,8,-10,0]
 ,[550,17,59,70,2,"1 / 2",50,55,"Garrison","",0,8,-10,0]
 ,[551,17,59,20,3,0,50,12,"Gold Lux","","Add a 10% chance of auto casting Flip Coin when the user receives Physical Damage<br>Autocast Coin Flip will be equal to the Coin Flip skill level that the user has learned",8,-10,0]
-,[552,18,59,50,1,3,50,0,"Branch","",0,8,10,0]
+,[552,18,59,50,1,3,50,0,"Branch","",0,0]
 ,[553,18,59,120,2,"1 / 2",70,24,"Cyclone","",0,8,10,10,10,0]
 ,[554,18,59,150,2,1,75,56,"Dusk","",0,8,10,10,10,0]
 ,[555,19,59,135,1,1,90,14,"Rolling Stone","","Inflicts Splash Damage[Baphomet MVP Card Effect]",0]
 ,[556,19,59,180,2,1,90,35,"Black Rose","","Inflicts Splash Damage[Baphomet MVP Card Effect]",0]
-,[557,19,59,210,2,0,100,55,"Gate Keeper","","Inflicts Splash Damage[Baphomet MVP Card Effect]",221,113,0]
+,[557,19,59,210,2,0,100,24,"Gate Keeper","","Inflicts Splash Damage[Baphomet MVP Card Effect]",221,113,0]
 ,[558,20,59,50,2,1,230,55,"Drifter","",0,0]
 ,[559,20,59,75,3,"0 / 1",250,68,"Butcher","",0,112,10,0]
-,[560,21,59,220,2,"0 / 1",120,52,"Destroyer","",0,0]
+,[560,21,59,220,2,"0 / 1",120,52,"Destroyer","",0,141,2,0]
 ,[561,21,59,280,2,1,125,65,"Inferno","",0,0]
-,[562,50,0,4,0,1,20,10,"Note Headphones","","",151,10,152,10,19,3,0]
-,[563,999,0,2,0,0,50,50,"Legendary Minstrel's Hat","",0,4,1,5,1,0]
-,[564,50,0,2,0,0,20,0,"Pumpkin Hat","",0,56,5,0]
-,[565,50,0,2,0,1,20,20,"Dress Hat","","<b>[Refine Rate 6~10]</b><br>MATK + 1%<br>Physical damage + 1% (versus Normal/Boss/Guardian)<br>Heal amount increased by + 1%<br>Sanctuary effectiveness increased by + 1%",19,7,1,1,4,1,89,2,80,2,91,5,94,5,0]
-,[566,50,0,3,0,1,100,30,"Satellite Hat","",0,13,50,14,10,220,10,0]
-,[567,50,0,3,0,0,20,0,"Moonlight Flower Hat","","A hat created with the monster Moonlight Flower in mind.<br>It is said that it uses 30% of Moonlight Flower's fur, and 70% of Nine Tails fur.<br>Note that you should only use hand washing to clean it.<br>Wear this with your Nine Tails scarf for the perfect winter fashion!",5,2,221,15,0]
-,[568,50,0,2,0,0,20,0,"Bunny Hairband","",0,19,3,2,2,0]
-,[569,50,0,1,0,0,30,10,"Flapping Angel Wings","",0,12,3,73,-3,2,1,4,1,0]
+,[562,50,0,4,0,1,20,0,"Note Headphones","","<b>Upper and Middle Headgear</b>",151,10,152,10,19,3,0]
+,[563,50,0,2,0,0,50,50,"Wandering Minstrel Hat","",0,4,1,5,1,0]
+,[564,50,0,2,0,0,30,60,"Tanigumi Girl Doll","","Every time you kill a monster, small chance to drop Banana",2,2,9,3,44,5,0]
+,[565,50,0,3,0,1,40,30,"King Tiger Doll Hat","",0,1,2,0]
+,[566,50,0,3,0,1,100,30,"Satelite Hairclip","",0,13,50,14,10,220,10,0]
+,[567,50,0,3,0,0,20,0,"Moonowl Cap","","A hat created with the monster Moonlight Flower in mind.<br>It is said that it uses 30% of Moonlight Flower's fur, and 70% of Nine Tails fur.<br>Note that you should only use hand washing to clean it.<br>Wear this with your Nine Tails scarf for the perfect winter fashion!<br><b>Upper and Lower Headgear</b>",5,2,221,15,0]
+,[568,50,0,1,0,0,10,0,"Drooping Bunny","",0,5,1,9,2,0]
+,[569,50,0,4,0,0,40,50,"Blue Tiger Mask","",0,12,3,13,100,193,1,0]
 ,[570,50,0,1,0,0,10,10,"Baby Chick","","Allows usage Level 2 Double Attack<br>If you already know a level higher than Level 2 Double Attack, the appropriate level will be used instead",6,2,13,50,14,50,57,3,193,1,0]
-,[571,51,0,1,0,0,10,10,"Red Glasses","",0,19,5,0]
-,[572,50,0,3,0,0,10,70,"Peco Peco Hairband","","Movement speed increased by 5%",12,5,73,-5,0] //custom TalonRO +5% aspd, -5% casting time
-,[573,50,0,2,0,1,30,30,"Windmill Hairpin","",0,2,2,193,1,0]
-,[574,50,0,4,0,0,60,30,"Kettle Hat","","",221,16,221,17,0]
-,[575,1,58,120,1,0,0,1,"Ashura R","",0,89,15,193,1,0] //custom TalonRO Rental
-,[576,3,51,190,4,0,0,1,"Executioner R","",0,20,7,187,1,37,20,57,-10,193,1,0] //custom TalonRO Rental
-,[577,1,55,209,4,0,0,1,"Dagger of Counter R","",0,10,90,193,1,0] //custom TalonRO Rental
-,[578,2,72,185,4,0,0,1,"Cutlus R","",0,1,2,18,1,193,1,220,3,0] //custom TalonRO Rental
-,[579,1,1,85,4,0,0,1,"Moonlight Dagger R","","Regain 3 SP with each attack",16,10,193,1,0] //custom TalonRO Rental
-,[580,12,0,135,3,0,0,1,"Sage's Diary R","",0,89,20,12,5,193,1,0] //custom TalonRO Rental
-,[581,8,53,150,3,0,0,1,"Wrench R","","Small chance of randomly inflict Stun, Blind, Poison or Freeze Status with each melee attack",193,1,0] //custom TalonRO Rental
-,[582,2,1,120,4,0,0,1,"Solar Sword R","","Regains 1% of the damage inflicted on his target as HP with each attack<BR>Drains 15 SP from his owner every 10 seconds",20,3,193,1,0] //custom TalonRO Rental
-,[583,7,1,200,4,0,0,1,"Tomahawk R","",0,20,4,193,1,220,8,0] //custom TalonRO Rental
-,[584,4,0,195,3,0,480,1,"Pole Axe R","",0,1,1,4,2,5,1,193,1,0] //custom TalonRO Rental
-,[585,7,1,229,4,0,0,1,"Light Epsilon R","","Increases Movement Speed by 25%",20,6,1,10,36,3,193,1,220,4,0] //custom TalonRO Rental
-,[586,10,76,185,4,0,0,1,"Rudra's Bow R","",0,20,6,4,5,193,1,220,5,220,6,0] //custom TalonRO Rental
-,[587,50,0,9,0,0,0,0,"Bunny Band R","",0,19,5,57,10,193,1,0] //custom TalonRO Rental
-,[588,999,1,1,0,0,10,0,"Steel Flower R","",0,193,1,221,18,0] //No longer in Database, remove me.
-,[589,999,1,5,0,0,80,0,"Majestic Goat R","",0,1,1,193,1,0]
-,[590,50,1,7,0,0,0,1,"Apple of Archer R","",0,5,4,193,1,0] //custom TalonRO Rental
-,[591,51,1,1,0,0,10,0,"Eye Of Darkness","",0,5,1,0]
-,[592,64,1,0,0,0,0,1,"Earring R","",0,4,3,0] //custom TalonRO Rental
-,[593,64,1,0,0,0,0,1,"Critical Ring R","",0,10,10,0] //custom TalonRO Rental
-,[594,64,1,0,0,0,0,1,"Glove R","",0,5,4,0] //custom TalonRO Rental
-,[595,64,1,5,0,0,0,1,"Safety Ring R","",0,19,5,0] //custom TalonRO Rental
-,[596,64,1,0,0,0,0,1,"Necklace R","",0,3,4,0] //custom TalonRO Rental
-,[597,64,1,0,0,0,0,1,"Brooch R","",0,2,4,0] //custom TalonRO Rental
-,[598,64,1,0,0,0,0,1,"Ring R","",0,1,4,0] //custom TalonRO Rental
-,[599,64,1,0,0,0,0,1,"Rosary R","",0,19,5,6,4,0] //custom TalonRO Rental
-,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","","A hat, when equipped, that plays holy music and refresh its wearer.<br>The wearer of this holy hat is guarded by an angel.",19,2,1,2,221,19,151,10,0]
+,[571,51,0,1,0,0,0,0,"Red Glasses","",0,4,1,0]
+,[572,50,0,3,0,0,0,70,"Peco Peco Hairband","","Movement speed increased by 5%",12,5,73,-5,0] //custom TalonRO +5% aspd, -5% casting time
+,[573,50,0,3,0,1,30,30,"Pinwheel Hairpin","",0,2,2,193,1,0]
+,[574,50,0,4,0,0,60,30,"Magic Kettle","","",221,16,221,17,0]
+,[575,1,58,120,1,0,0,0,"Ashura [Rental]","",0,89,15,193,1,0] //custom TalonRO Rental
+,[576,3,51,190,4,0,0,0,"Executioner [Rental]","",0,20,7,187,1,37,20,57,-10,193,1,0] //custom TalonRO Rental
+,[577,1,55,209,4,0,0,0,"Dagger of Counter [Rental]","",0,10,90,193,1,0] //custom TalonRO Rental
+,[578,2,72,185,4,0,0,0,"Cutlus [Rental]","",0,1,2,18,1,193,1,220,3,0] //custom TalonRO Rental
+,[579,1,1,85,4,0,0,0,"Moonlight Dagger [Rental]","","Regain 3 SP with each attack",16,10,193,1,0] //custom TalonRO Rental
+,[580,12,0,135,3,0,0,0,"Sage's Diary [Rental]","",0,89,20,12,5,193,1,0] //custom TalonRO Rental
+,[581,8,53,150,3,0,0,0,"Wrench [Rental]","","Small chance of randomly inflict Stun, Blind, Poison or Freeze Status with each melee attack",193,1,0] //custom TalonRO Rental
+,[582,2,1,120,4,0,0,0,"Solar Sword [Rental]","","Regains 1% of the damage inflicted on his target as HP with each attack<BR>Drains 15 SP from his owner every 10 seconds",20,3,193,1,0] //custom TalonRO Rental
+,[583,7,1,200,4,0,0,0,"Tomahawk [Rental]","",0,20,4,193,1,220,8,0] //custom TalonRO Rental
+,[584,4,0,159,3,0,480,0,"Pole Axe [Rental]","",0,1,1,4,2,5,1,193,1,0] //custom TalonRO Rental
+,[585,7,1,229,4,0,0,0,"Light Epsilon [Rental]","","Increases Movement Speed by 25%",20,6,1,10,36,3,193,1,220,4,0] //custom TalonRO Rental
+,[586,10,76,185,4,0,0,0,"Rudra Bow [Rental]","",0,20,6,4,5,193,1,220,5,220,6,0] //custom TalonRO Rental
+,[587,50,0,9,0,0,0,0,"Bunny Band [Rental]","",0,19,5,57,10,193,1,0] //custom TalonRO Rental
+,[588,50,0,4,0,0,40,50,"Red Tiger Mask","",0,1,4,13,200,193,1,0]
+,[589,999,0,5,0,0,0,0,"Majestic Goat [Rental]","",0,1,1,193,1,0]
+,[590,50,1,7,0,0,0,0,"Apple of Archer [Rental]","",0,5,4,193,1,0] //custom TalonRO Rental
+,[591,51,1,1,0,0,10,50,"Eye Of Darkness","",0,5,1,154,100,0]
+,[592,64,1,0,0,0,0,0,"Earring [Rental]","",0,4,3,0] //custom TalonRO Rental
+,[593,64,1,0,0,0,0,0,"Critical Ring [Rental]","",0,10,10,0] //custom TalonRO Rental
+,[594,64,1,0,0,0,0,0,"Glove [Rental]","",0,5,4,0] //custom TalonRO Rental
+,[595,64,1,5,0,0,0,0,"Safety Ring [Rental]","",0,19,5,0] //custom TalonRO Rental
+,[596,64,1,0,0,0,0,0,"Necklace [Rental]","",0,3,4,0] //custom TalonRO Rental
+,[597,64,1,0,0,0,0,0,"Brooch [Rental]","",0,2,4,0] //custom TalonRO Rental
+,[598,64,1,0,0,0,0,0,"Ring [Rental]","",0,1,4,0] //custom TalonRO Rental
+,[599,64,1,0,0,0,0,0,"Rosary [Rental]","",0,19,5,6,4,0] //custom TalonRO Rental
+,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","","A hat, when equipped, that plays holy music and refresh its wearer.<br>The wearer of this holy hat is guarded by an angel.",19,2,1,2,221,19,0]
 ,[601,999,0,1,0,1,20,30,"Resort Hat","",0,193,1,3,1,0]
 ,[602,50,0,0,0,1,20,30,"Lily Crown","",0,193,1,19,3,2,1,5,1,75,5,76,3,0]
 ,[603,60,1,4,0,1,220,45,"Claytos Cracking Earth Armor [1]","",0,198,2,0]
@@ -1343,57 +1343,57 @@ ItemOBJ = [
 //custom TalonRO
 ,[1320,64,0,0,0,0,1,0,"Celebration Ring",0,0,7,5,0] //custom TalonRO
 //custom TalonRO rental
-,[1321,10,64,194,4,0,0,1,"Ballista R","",0,25,20,193,1,0] //custom TalonRO rental
-,[1322,7,1,220,3,0,0,1,"Two-handed Axe R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1323,13,0,150,3,0,0,1,"Fist R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1324,12,0,145,3,0,0,0,"Giant Encyclopedia R","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1325,14,0,177,3,0,0,1,"Guitar R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1326,11,0,200,3,0,0,1,"Jamadhar R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1327,5,0,220,3,0,0,1,"Lance R","",0,27,50,28,50,29,50,0] //custom TalonRO rental
-,[1328,15,0,170,3,0,0,1,"Rante Whip R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1329,8,53,175,3,0,0,1,"Stunner R","",0,131,10,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1330,7,0,205,4,0,0,1,"Bloody Axe R","","Increases Movement Speed",1,20,12,5,193,1,0] //custom TalonRO rental
-,[1331,11,0,148,4,0,0,1,"Bloody Roar R","","Recovery 3 HP every 5 seconds",187,1,193,1,0] //custom TalonRO rental
-,[1332,10,75,170,4,0,0,0,"Bow of Evil R","","[Double Strafe] damage +25%",5,2,0] //custom TalonRO rental
-,[1333,4,1,149,4,0,0,1,"Brocca R","",0,28,20,22,1,193,1,0] //custom TalonRO rental //fixed 2016-05-05
-,[1334,1,1,129,4,0,0,1,"Combat Knife R","","Drain 3% SP",57,10,56,-10,187,1,16,10,193,1,0] //custom TalonRO rental
-,[1335,2,1,199,4,0,0,1,"Excalibur R","",0,20,6,4,10,6,10,193,1,0] //custom TalonRO rental
-,[1336,2,1,120,4,0,0,1,"Fireblend R","",0,20,3,4,2,220,47,221,114,193,1,0] //custom TalonRO rental
-,[1337,7,0,215,4,0,0,1,"Great Axe R","","Mammonite will shove his target back 5 cells",1,5,8,20,131,15,193,1,0] //custom TalonRO rental
-,[1338,12,0,168,4,0,0,1,"Hardcover Book R","",0,1,5,5,2,89,20,193,1,0] //custom TalonRO rental
-,[1339,2,1,160,4,0,0,1,"Immaterial Sword R","","Drains 45% of target's SP by a low chance<br>Drain 1 SP from its owner on each attack",20,8,193,1,194,1,0] //custom TalonRO rental
-,[1340,11,0,189,4,0,0,1,"Infiltrator R","",0,37,70,18,3,9,5,11,2,12,5,193,1,0] //custom TalonRO rental
-,[1341,13,1,159,4,0,0,1,"Kaiser Knuckle R","",0,12,5,20,4,49,5,41,10,42,10,43,10,44,10,0] //custom TalonRO rental
-,[1342,11,0,175,4,0,0,1,"Katar of Speed R","","[Sonic Blow] damage +25%",12,3,193,1,0] //custom TalonRO rental
-,[1343,8,0,150,3,0,0,1,"Mace of Madness R","","[Cart Revolution] damage +25%",1,2,0] //custom TalonRO rental
-,[1344,1,1,105,4,0,0,1,"Mailbreaker R","",0,141,5,193,1,0] //custom TalonRO rental
-,[1345,9,1,165,3,0,0,1,"Mighty Staff R","","Consume 1 SP with each physical attack",1,10,4,4,89,20,193,1,0] //custom TalonRO rental
-,[1346,13,0,150,4,0,0,1,"Monk Knuckle R","","[Finger Offensive] damage +25%",4,2,0] //custom TalonRO rental
-,[1347,3,0,204,4,0,0,1,"Muramasa R","",0,10,30,12,8,193,1,0] //custom TalonRO rental
-,[1348,2,1,148,4,0,0,1,"Nagan R","","Enables use of the skill [Double Attack]Lv5",37,10,193,1,0] //custom TalonRO rental
-,[1349,15,0,160,4,0,0,1,"Phenomena Whip R","","[Throw Arrow] damage +25%",5,2,0] //custom TalonRO rental
-,[1350,12,0,140,3,0,0,1,"Book of Prayer R","",0,3,2,19,10,16,10,0] //custom TalonRO rental
-,[1351,8,53,193,4,0,0,1,"Quadrille R","",0,31,40,36,40,37,30,193,1,0] //custom TalonRO rental
-,[1352,4,0,160,3,0,0,1,"Spear of Excellent R","","[Magnum Break] damage +25%",1,2,0] //custom TalonRO rental
-,[1353,9,1,100,2,0,0,1,"Staff of Darkness R","",0,4,2,89,15,73,-5,0] //custom TalonRO rental
-,[1354,9,53,10,3,0,0,1,"Staff of Healing R","","Increase 15% chance to heal yourself by [Heal] and [Sanctuary] (didn't really get the description...)",89,15,193,1,0] //custom TalonRO rental
-,[1355,9,1,71,3,1,0,1,"Survivor's Rod (dex) R","",0,89,20,5,4,13,500,193,1,0] //custom TalonRO rental
-,[1356,1,1,105,4,0,0,1,"Swordbreaker R","",0,140,5,193,1,0] //custom TalonRO rental
-,[1357,11,0,179,4,0,0,1,"Unholy Touch R","",0,20,7,133,5,193,1,194,1,0] //custom TalonRO rental
-,[1358,64,1,1,0,0,10,0,"Vesper Core 01 R","",0,4,2,16,5,19,3,0] //custom TalonRO rental
-,[1359,64,1,1,0,0,10,0,"Vesper Core 02 R","",0,1,3,17,10,19,3,0] //custom TalonRO rental
-,[1360,64,1,1,0,0,10,0,"Vesper Core 03 R","",0,2,3,9,5,19,3,0] //custom TalonRO rental
-,[1361,64,1,1,0,0,10,0,"Vesper Core 04 R","",0,5,3,8,10,19,3,0] //custom TalonRO rental
-,[1362,60,0,12,0,0,0,0,"Recuvative Armor R","","Reduces natural HP and SP recovery by 100%<BR>When unequipped, you lose 100 SP<BR>When a monster is defeated from Physical or Magical Attacks, it recover 60 HP and 6 SP",76,-100,75,-100,0] //custom TalonRO rental
-,[1363,63,0,9,0,0,0,0,"Refresh Shoes R","","Every 10 seconds, your HP goes up by 20, SP goes up by 3",15,17,16,8,0] //custom TalonRO rental
-,[1364,62,0,9,0,0,0,0,"Silf Manteau R","",0,9,13,11,1,60,13,0] //custom TalonRO rental
-,[1365,62,55,5,0,0,0,0,"Survivor's Manteau R","",0,3,10,19,10,193,1,0] //custom TalonRO rental
-,[1366,64,1,0,0,0,0,0,"Bloodied Shackle Ball R","",0,17,30,0] //custom TalonRO rental
-,[1367,64,0,0,0,0,0,0,"Spiritual Ring R","",0,4,2,5,2,0] //custom TalonRO rental
-,[1368,50,1,10,0,0,0,0,"Corsair R","",0,3,3,4,3,193,1,0] //custom TalonRO rental
-,[1369,50,1,6,0,0,0,0,"Drooping Cat R","",0,19,15,151,10,153,40,193,1,0] //custom TalonRO rental
-,[1370,50,1,10,0,0,0,0,"Grand Circlet R","",0,1,3,4,3,6,3,19,4,193,1,0] //custom TalonRO rental
-,[1371,51,1,1,0,0,0,0,"Masquerade R","",0,37,7,0] //custom TalonRO rental
+,[1321,10,64,194,4,0,0,1,"Ballista [Rental]","",0,25,20,193,1,0] //custom TalonRO rental
+,[1322,7,1,220,3,0,0,1,"Two-handed Axe [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1323,13,0,150,3,0,0,1,"Fist [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1324,12,0,145,3,0,0,0,"Giant Encyclopedia [Rental]","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1325,14,0,177,3,0,0,1,"Guitar [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1326,11,0,200,3,0,0,1,"Jamadhar [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1327,5,0,220,3,0,0,1,"Lance [Rental]","",0,27,50,28,50,29,50,0] //custom TalonRO rental
+,[1328,15,0,170,3,0,0,1,"Rante Whip [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1329,8,53,175,3,0,0,1,"Stunner [Rental]","",0,131,10,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1330,7,0,205,4,0,0,1,"Bloody Axe [Rental]","","Increases Movement Speed",1,20,12,5,193,1,0] //custom TalonRO rental
+,[1331,11,0,148,4,0,0,1,"Bloody Roar [Rental]","","Recovery 3 HP every 5 seconds",187,1,193,1,0] //custom TalonRO rental
+,[1332,10,75,170,4,0,0,0,"Bow of Evil [Rental]","","[Double Strafe] damage +25%",5,2,0] //custom TalonRO rental
+,[1333,4,1,149,4,0,0,1,"Brocca [Rental]","",0,28,20,22,1,193,1,0] //custom TalonRO rental //fixed 2016-05-05
+,[1334,1,1,129,4,0,0,1,"Combat Knife [Rental]","","Drain 3% SP",57,10,56,-10,187,1,16,10,193,1,0] //custom TalonRO rental
+,[1335,2,1,199,4,0,0,1,"Excalibur [Rental]","",0,20,6,4,10,6,10,193,1,0] //custom TalonRO rental
+,[1336,2,1,120,4,0,0,1,"Fireblend [Rental]","",0,20,3,4,2,220,47,221,114,193,1,0] //custom TalonRO rental
+,[1337,7,0,215,4,0,0,1,"Great Axe [Rental]","","Mammonite will shove his target back 5 cells",1,5,8,20,131,15,193,1,0] //custom TalonRO rental
+,[1338,12,0,168,4,0,0,1,"Hardcover Book [Rental]","",0,1,5,5,2,89,20,193,1,0] //custom TalonRO rental
+,[1339,2,1,160,4,0,0,1,"Immaterial Sword [Rental]","","Drains 45% of target's SP by a low chance<br>Drain 1 SP from its owner on each attack",20,8,193,1,194,1,0] //custom TalonRO rental
+,[1340,11,0,189,4,0,0,1,"Infiltrator [Rental]","",0,37,70,18,3,9,5,11,2,12,5,193,1,0] //custom TalonRO rental
+,[1341,13,1,159,4,0,0,1,"Kaiser Knuckle [Rental]","",0,12,5,20,4,49,5,41,10,42,10,43,10,44,10,0] //custom TalonRO rental
+,[1342,11,0,175,4,0,0,1,"Katar of Speed [Rental]","","[Sonic Blow] damage +25%",12,3,193,1,0] //custom TalonRO rental
+,[1343,8,0,150,3,0,0,1,"Mace of Madness [Rental]","","[Cart Revolution] damage +25%",1,2,0] //custom TalonRO rental
+,[1344,1,1,105,4,0,0,1,"Mailbreaker [Rental]","",0,141,5,193,1,0] //custom TalonRO rental
+,[1345,9,1,165,3,0,0,1,"Mighty Staff [Rental]","","Consume 1 SP with each physical attack",1,10,4,4,89,20,193,1,0] //custom TalonRO rental
+,[1346,13,0,150,4,0,0,1,"Monk Knuckle [Rental]","","[Finger Offensive] damage +25%",4,2,0] //custom TalonRO rental
+,[1347,3,0,204,4,0,0,1,"Muramasa [Rental]","",0,10,30,12,8,193,1,0] //custom TalonRO rental
+,[1348,2,1,148,4,0,0,1,"Nagan [Rental]","","Enables use of the skill [Double Attack]Lv5",37,10,193,1,0] //custom TalonRO rental
+,[1349,15,0,160,4,0,0,1,"Phenomena Whip [Rental]","","[Throw Arrow] damage +25%",5,2,0] //custom TalonRO rental
+,[1350,12,0,140,3,0,0,1,"Book of Prayer [Rental]","",0,3,2,19,10,16,10,0] //custom TalonRO rental
+,[1351,8,53,193,4,0,0,1,"Quadrille [Rental]","",0,31,40,36,40,37,30,193,1,0] //custom TalonRO rental
+,[1352,4,0,160,3,0,0,1,"Spear of Excellent [Rental]","","[Magnum Break] damage +25%",1,2,0] //custom TalonRO rental
+,[1353,9,1,100,2,0,0,1,"Staff of Darkness [Rental]","",0,4,2,89,15,73,-5,0] //custom TalonRO rental
+,[1354,9,53,10,3,0,0,1,"Staff of Healing [Rental]","","Increase 15% chance to heal yourself by [Heal] and [Sanctuary] (didn't really get the description...)",89,15,193,1,0] //custom TalonRO rental
+,[1355,9,1,71,3,1,0,1,"Survivor's Rod (dex) [Rental]","",0,89,20,5,4,13,500,193,1,0] //custom TalonRO rental
+,[1356,1,1,105,4,0,0,1,"Swordbreaker [Rental]","",0,140,5,193,1,0] //custom TalonRO rental
+,[1357,11,0,179,4,0,0,1,"Unholy Touch [Rental]","",0,20,7,133,5,193,1,194,1,0] //custom TalonRO rental
+,[1358,64,1,1,0,0,10,0,"Vesper Core 01 [Rental]","",0,4,2,16,5,19,3,0] //custom TalonRO rental
+,[1359,64,1,1,0,0,10,0,"Vesper Core 02 [Rental]","",0,1,3,17,10,19,3,0] //custom TalonRO rental
+,[1360,64,1,1,0,0,10,0,"Vesper Core 03 [Rental]","",0,2,3,9,5,19,3,0] //custom TalonRO rental
+,[1361,64,1,1,0,0,10,0,"Vesper Core 04 [Rental]","",0,5,3,8,10,19,3,0] //custom TalonRO rental
+,[1362,60,0,12,0,0,0,0,"Recuvative Armor [Rental]","","Reduces natural HP and SP recovery by 100%<BR>When unequipped, you lose 100 SP<BR>When a monster is defeated from Physical or Magical Attacks, it recover 60 HP and 6 SP",76,-100,75,-100,0] //custom TalonRO rental
+,[1363,63,0,9,0,0,0,0,"Refresh Shoes [Rental]","","Every 10 seconds, your HP goes up by 20, SP goes up by 3",15,17,16,8,0] //custom TalonRO rental
+,[1364,62,0,9,0,0,0,0,"Silf Manteau [Rental]","",0,9,13,11,1,60,13,0] //custom TalonRO rental
+,[1365,62,55,5,0,0,0,0,"Survivor's Manteau [Rental]","",0,3,10,19,10,193,1,0] //custom TalonRO rental
+,[1366,64,1,0,0,0,0,0,"Bloodied Shackle Ball [Rental]","",0,17,30,0] //custom TalonRO rental
+,[1367,64,0,0,0,0,0,0,"Spiritual Ring [Rental]","",0,4,2,5,2,0] //custom TalonRO rental
+,[1368,50,1,10,0,0,0,0,"Corsair [Rental]","",0,3,3,4,3,193,1,0] //custom TalonRO rental
+,[1369,50,1,6,0,0,0,0,"Drooping Cat [Rental]","",0,19,15,151,10,153,40,193,1,0] //custom TalonRO rental
+,[1370,50,1,10,0,0,0,0,"Grand Circlet [Rental]","",0,1,3,4,3,6,3,19,4,193,1,0] //custom TalonRO rental
+,[1371,51,1,1,0,0,0,0,"Masquerade [Rental]","",0,37,7,0] //custom TalonRO rental
 //custom TalonRO common mid-headgears
 ,[1372,51,0,1,0,1,10,0,"+1 STR [1]","",0,1,1,0] //custom TalonRO +1 str mid
 ,[1373,51,0,1,0,1,10,0,"+1 AGI [1]","",0,2,1,0] //custom TalonRO +1 agi mid
@@ -1553,7 +1553,7 @@ ItemOBJ = [
 ,[1519,100,0,0,0,0,0,0,0,0,0,10,2,15,-10,70,20,0] //Assassin's Glove & Chakram
 ,[1520,61,125,3,0,1,100,90,"Geffenia Water Book","","If Base INT is 99, adds MATK +1%, MaxHP + 800",4,1,19,2,0]
 ,[1521,100,0,0,0,0,0,0,0,0,"Reduces cast time of Storm Gust by 2% for every shield refine",0] //Geffenia Water Book & Lacrima Stick combo
-,[1522,18,0,170,3,2,0,70,"Lever Action Rifle R","",0,8,20,10,50,12,-5,80,30,0]
+,[1522,18,0,170,3,2,0,70,"Lever Action Rifle [Rental]","",0,8,20,10,50,12,-5,80,30,0]
 //custom TalonRO [Update 2014-09-02]
 ,[1523,51,0,3,0,0,100,10,"Evil Mask","","Drain 1 SP from user every 2 seconds<br><b>Mid and Low Headgear</b>",12,1,0]
 ,[1524,100,0,0,0,0,0,0,0,0,"ASPD +1<br>Drain 3 SP from user every 2 seconds",12,9,0] //Evil Mask & Succubus Horn
@@ -1619,7 +1619,11 @@ ItemOBJ = [
 ,[1575,14,0,150,3,0,0,60,"Eden Group Guitar I","","An instrument that is made by the Eden Group. It is suitable for those who have more advanced experience as Bards.",193,1,0]
 ,[1576,50,0,1,0,0,0,12,"Eden Group Hat","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.",193,1,0]
 ,[1577,50,0,1,1,0,0,60,"Eden Group Hat II","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.<br/><br/>When dealing physical damage there's a high chance that for 5 seconds you will gain ATK + 10.<br/><br/>When dealing magic damage there's a high chance that for 5 seconds you will gain MATK + 10.",193,1,0]
+<<<<<<< HEAD
 ,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.",89,15,,8,10,193,1,0]
+=======
+,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.",89,15,8,10,193,1,0]
+>>>>>>> master
 ,[1579,11,0,155,3,0,0,60,"Eden Group Katar I","","A katar that is made by the Eden Group. It is suitable for those who have more advanced experience handling katars.",10,5,8,10,193,1,0]
 ,[1580,12,0,155,3,0,0,60,"Eden Group Knuckle I","","A claw that is made by the Eden Group. It is suitable for those who have more advanced experience as Champions.",12,10,8,10,193,1,0]
 ,[1581,8,0,142,2,0,0,26,"Eden Group Mace I","","A beginner's mace that is made exclusively by the Eden Group.",8,10,193,1,0]
@@ -2269,77 +2273,77 @@ ItemID = [
 ,[527,1,2662]
 ,[528,1,5185]
 ,[529,1,5182]
-,[530,1,5181],
-[531,4,0],
-[532,4,0],
-[533,4,0],
-[534,4,0],
-[535,4,0],
-[536,4,0],
-[537,4,0],
-[538,4,0],
-[539,4,0],
-[540,4,0],
-[541,4,0],
-[542,4,0],
-[543,4,0],
-[544,4,0],
-[545,4,0],
-[546,4,0],
-[547,4,0],
-[548,4,0],
-[549,4,0],
-[550,4,0],
-[551,4,0],
-[552,4,0],
-[553,4,0],
-[554,4,0],
-[555,4,0],
-[556,4,0],
-[557,4,0],
-[558,4,0],
-[559,4,0],
-[560,4,0],
-[561,4,0],
-[562,4,0],
-[563,4,0],
-[564,4,0],
-[565,4,0],
-[566,4,0],
-[567,4,0],
-[568,4,0],
-[569,4,0],
-[570,4,0],
-[571,4,0],
-[572,4,0],
-[573,4,0],
-[574,4,0],
-[575,4,0],
-[576,4,0],
-[577,4,0],
-[578,4,0],
-[579,4,0],
-[580,4,0],
-[581,4,0],
-[582,4,0],
-[583,4,0],
-[584,4,0],
-[585,4,0],
-[586,4,0],
-[587,4,0],
-[588,4,0],
-[589,4,0],
-[590,4,0],
-[591,4,0],
-[592,4,0],
-[593,4,0],
-[594,4,0],
-[595,4,0],
-[596,4,0],
-[597,4,0],
-[598,4,0],
-[599,4,0],
-[600,4,0],
+,[530,1,5181]
+,[531,1,5187]
+,[532,1,5186]
+,[533,1,5183]
+,[534,1,2357]
+,[535,1,2524]
+,[536,1,2421]
+,[537,1,2117,2118]
+,[538,1,2119,2120]
+,[539,1,13010,13011]
+,[540,1,13007,13008]
+,[541,1,13012,13013]
+,[542,1,13014,13015]
+,[543,1,13006]
+,[544,1,13009]
+,[545,1,13301,13302]
+,[546,1,13303]
+,[547,1,13300]
+,[548,1,13100,13101]
+,[549,1,13102,13103]
+,[550,1,13104,13105]
+,[551,1,13106]
+,[552,1,13150]
+,[553,1,13151,13152]
+,[554,1,13153]
+,[555,1,13154]
+,[556,1,13155]
+,[557,1,13156]
+,[558,1,13157]
+,[559,1,13158,13159]
+,[560,1,13160,13161]
+,[561,1,13162]
+,[562,1,5151]
+,[563,1,5188]
+,[564,1,5526]
+,[565,1,5497]
+,[566,1,5212]
+,[567,1,5214]
+,[568,1,5198]
+,[569,1,18582]
+,[570,1,5283]
+,[571,1,5288]
+,[572,1,5286]
+,[573,1,5285]
+,[574,1,5291]
+,[575,1,13023]
+,[576,1,1174]
+,[577,1,13022]
+,[578,1,13402]
+,[579,1,13026]
+,[580,1,1563]
+,[581,1,1534]
+,[582,1,13403]
+,[583,1,1374]
+,[584,1,1419]
+,[585,1,1372]
+,[586,1,1729]
+,[587,1,5266]
+,[588,1,18581]
+,[589,3,5280] //Not in game
+,[590,1,5265]
+,[591,1,5470]
+,[592,1,2689]
+,[593,1,2688]
+,[594,1,2692]
+,[595,1,2695]
+,[596,1,2691]
+,[597,1,2693]
+,[598,1,2690]
+,[599,1,2694]
+,[600,1,5225],
 [601,4,0],
 [602,4,0],
 [603,4,0],
@@ -3357,7 +3361,7 @@ ItemID = [
 [1615,1,2646],
 [1616,1,1393],
 [1617,1,1392],
-[1618,1,2854],
+[1618,1,13062],
 [1619,1,2854],
 [1620,1,18804],
 [1621,2,18804,1636],
