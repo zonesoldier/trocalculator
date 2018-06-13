@@ -1,3 +1,8 @@
+[Update 2018-06-13]
+- Issue #182: Fixed regions for Seals mobs; [Kato]
+- Issue #183: Added links for combo items; [Kato]
+- Added ItemIDs from 1496 to 1526; [Kato]
+
 [Update 2018-06-12]
 - Removed extra comma in Eden Group Huuma Shuriken I that currently breaks the page [Slap]
 - Added items [Slap]:
