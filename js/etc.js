@@ -830,9 +830,171 @@ MALANGDO_ENCHANTS = [
 ,[266,"Spell 6"]
 ];
 
-ME_EXCEPTIONS = [
-	 [395,41,42,43,53,"NULL"] //Bazerald
-	,[936,43,"NULL"] //Dark Thorn
-	,[402,41,42,43,53,"NULL"] //Excalibur
-	,[393,53,"NULL"] // Combat Knife
+ME_ENCHANTABLE = [
+/* [Daggers] */
+	 [390,0] //Swordbreaker
+	,[391,0] //Mailbreaker
+	,[392,0] //Weeder Knife
+	,[387,0] //Kitchen Knife
+	,[12,0] //Assassin Dagger
+	,[394,0] //Exorciser
+	,[396,0] //Azoth
+	,[14,0] //Sucsamad
+	,[15,0] //Grimtooth
+	,[389,0] //Princess Knife
+	,[397,0] //Cursed Dagger
+	,[398,0] //Dagger of Counter
+	,[799,0] //Holy Dagger
+	,[1156,0] //Krieg
+	,[1463,0] //Black Wing
+	,[12,0] //Fortune Sword
+	,[393,53,0] //Combat Knife - Except DEX+3
+	,[11,0] //Moonlight Dagger
+	,[388,0] //Ice Pick
+	,[395,41,42,43,53,0] //Bazerald Except INT enchants or DEX+3
+	,[1618,0] //Ancient Dagger
+/* [Katars] */
+	,[634,0] //Bloody Blades [2]
+	,[482,0] //Unholy Touch
+	,[633,0] //Drill Katar [1]
+	,[1175,0] //Krishna [2]
+	,[1176,0] //Chakram [2]
+	,[631,0] //Ogre's Toenail [1]
+	,[632,0] //Inverse Scare
+	,[483,0] //Bloody Roar
+	,[113,0] //Infiltrator
+/* [One Handed Axes] */
+	,[415,0] //Cleaver
+	,[1164,0] //Berchel Axe [2]
+/* [Two Handed Axes] */
+	,[70,0] //Great Axe
+	,[416,0] //Sabbath
+	,[1166,0] //Bradium Stone Hammer
+	,[417,0] //Slaughter
+	,[418,0] //Tomahawk
+	,[1167,0] //Giant Axe [1]
+	,[419,0] //Guillotine
+	,[68,0] //Bloody Axe
+	,[623,0] //Heart Breaker [1]
+	,[624,0] //Hurricane Fury [1]
+	,[69,0] //Light Epsilon
+	,[621,0] //Doom Slayer
+/* [One Handed Swords] */
+	,[32,0] //Ice Falchion
+	,[33,0] //Fireblend
+	,[401,0] //Caesar's Sword
+	,[34,0] //Cutlus
+	,[31,0] //Solar Sword
+	,[35,0] //Mysteltainn
+	,[36,0] //Tirfing
+	,[403,0] //Byeollungum
+	,[405,0] //Immaterial Sword
+	,[470,0] //Star Dust Blade [1]
+	,[1158,0] //Roubel Sword [1]
+	,[1623,0] //Chrome Metal Sword
+	,[402,41,42,43,53,0] //Excalibur - Except INT Enchant and DEX+3
+	,[399,0] //Nagan
+	,[400,0] //Edge
+/* [Two Handed Swords] */
+	,[44,0] //Muramasa
+	,[405,0] //Dragon Slayer
+	,[406,0] //Schweizersabel
+	,[46,0] //Zweihander
+	,[45,0] //Katzbalger
+	,[615,0] //Muscle Cutter [2]
+	,[934,0] //Tae Goo Lyeon [2]
+	,[819,0] //Bloody Eater [2]
+	,[1159,0] //Veteran Sword [1]
+	,[1160,0] //Krasnaya [3]
+	,[1456,0] //Chrome Metal Two-Handed Sword
+	,[47,0] //Masamune
+	,[43,0] //Executioner
+	,[614,0] //Atroce's Blade [1]
+	,[935,0] //Violet Fear [2]
+	,[940,0] //Death Guidance [2]
+/* [One Handed Spears] */
+	,[616,0] //Long Horn [1]
+	,[52,0] //Gungnir
+	,[408,0] //Gelerdria
+	,[410,0] //Tjungkuletti
+	,[1460,0] //Imperial Spear [1]
+	,[409,0] //Brocca
+	,[617,0] //Battle Hook [1]
+	,[618,0] //Hunting Spear [1]
+/* [Two Handed Spears] */
+	,[60,0] //Crescent Scythe
+	,[411,0] //Bill Guisarme
+	,[59,0] //Zephyrus
+	,[412,0] //Longinus's Spear
+	,[413,0] //Brionac
+	,[414,0] //Hellfire
+	,[471,0] //Gae Bolg
+	,[619,0] //Phantom Spear
+	,[620,0] //Ahlspiess
+	,[942,0] //Carled [1]
+/* [One Handed Staves] - Staves Except DEX+2/+3 */
+	,[478,52,53,0] //Wing Staff
+	,[1041,52,53,0] //Gentleman Staff
+	,[863,52,53,0] //Holy Stick
+	,[1168,52,53,0] //Dead Tree Staff
+	,[1508,52,53,0] //Mental Stick
+	,[936,52,53,43,0] //Dark Thorn Staff - Except also INT+3
+	,[948,52,53,0] //Eraser
+/* [Two Handed Staves] - Staves Except DEX+2/+3 */
+	,[92,52,53,0] //Wizardry Staff
+	,[1172,52,53,0] //Chronos
+	,[1640,52,53,0] //Staff Of Thea [1]
+	,[647,52,53,0] //Divine Cross
+	,[646,52,53,0] //Staff of Destruction
+/* [Maces] */
+	,[81,0] //Golden Mace [1]
+	,[82,0] //Long Mace
+	,[422,0] //Quadrille
+	,[820,0] //Nemesis
+	,[1162,0] //Erde [2]
+	,[1559,0] //Red Square Bag [2]
+	,[1458,0] //Red Ether Bag [1]
+	,[420,0] //Spike
+	,[421,0] //Slash
+	,[83,0] //Grand Cross
+/* [Books] */
+	,[122,0] //Book of the Apocalypse
+	,[121,0] //Girl's Diary [1]
+	,[486,0] //Legacy of Dragon
+	,[485,0] //Hardcover Book [1]
+	,[812,0] //Battlefield Textbook [1]
+	,[641,0] //Book of the Dead  [2]
+/* [Knuckles] */
+	,[423,0] //Kaiser Knuckle
+	,[424,0] //Berserk
+	,[487,0] //Garm Claw [1]
+	,[1512,0] //Sura's Rampage
+/* [Bows] */
+	,[102,0] //Roguemaster's Bow
+	,[103,0] //Ballista
+	,[479,0] //Dragon Wing
+	,[1061,0] //Minstrel Bow [1]
+	,[821,0] //Ixion Wings [1]
+	,[945,0] //Nepenthes Bow [2]
+	,[946,0] //Cursed Lyre [1]
+	,[1174,0] //Falken Blitz [2]
+	,[1457,0] //Mystic Bow
+	,[104,0] //Rudra Bow
+/* [Instruments] */
+	,[492,0] //Oriental Lute
+	,[649,0] //Spirited Guitar
+	,[950,0] //Harp of Nepenthes [2]
+	,[1462,0] //Green Whistle [1]
+/* [Whips] */
+	,[425,0] //Lariat Whip
+	,[426,0] //Rapture Rose
+	,[141,0] //Chemeti Whip
+	,[498,0] //Blade Whip
+	,[499,0] //Queen's Whip
+	,[651,0] //Electric Eel [2]
+	,[652,0] //Foot of the Sea Witch [1]
+	,[653,0] //Carrot Whip
+	,[951,0] //Stem of Nepenthes [2]
+	,[1454,0] //Stem Whip [1]
+	,[1622,0] //Rosevine
 ];
