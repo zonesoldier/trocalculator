@@ -211,6 +211,9 @@ function StAllCalc()
 	//custom TalonRO Kris Enchantment
 	Click_KrisEnchantment();
 
+	//[Custom TalonRO 2018-06-14 - Malangdo Enchantment] [Kato]
+	tRO_Click_MalangdoEnchantment(n_A_Equip[0],n_A_Equip[1]);
+
 	if(n_Nitou){
 		W_REF2 = 0;
 		n_A_Weapon2LV = ItemOBJ[n_A_Equip[1]][4];
@@ -2963,7 +2966,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(wSPVS==3 || wSPVS==4 || wSPVS==5)
 			n_tok[19] += 5;
 	}
-	
+
 	if(EquipNumSearch(828)){
 		n_tok[151] += 2 * n_A_HEAD_DEF_PLUS;
 		n_tok[152] += 2 * n_A_HEAD_DEF_PLUS;
@@ -5752,7 +5755,7 @@ function SaveCookie(){
 with(document.calcForm){
 	SaveData = new Array();
 
-	for(i=0;i<=91;i++)
+	for(i=0;i<=100;i++)
 		SaveData[i]=0;
 
 	SaveData[0] = eval(A_JOB.value);
@@ -5891,14 +5894,28 @@ with(document.calcForm){
 		SaveData[96] = 0;
 	}
 
+	//[Custom TalonRO 2018-06-14 - Save Cookie for Malangdo] [Kato]
+
+	SaveData[97] = eval(A_ME11.value);
+	SaveData[98] = eval(A_ME12.value);
+
+	if (typeof(A_weapon2) != "undefined"){
+			SaveData[99] = eval(A_ME21.value);
+			SaveData[100] = eval(A_ME22.value);
+	}else{
+			SaveData[99] = 0;
+			SaveData[100] = 0;
+		}
+
 	//wak1="";
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
-	for(i=0;i<=96;i++)
+	for(i=0;i<=100;i++)
 		SaveData[i] = NtoS(SaveData[i],SaveStr1[i]);
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
 	//alert(wak1);
+
 	cookieNum = A_SaveSlot.value;
 
 	wDay = 99000;
@@ -5909,7 +5926,7 @@ with(document.calcForm){
 
 	wStr = "" +SaveData[0];
 
-	for(i=1;i<=96;i++){
+	for(i=1;i<=100;i++){
 		wStr += ""+SaveData[i];
 	}
 	document.cookie = cookieNum +"="+ wStr +"; expires="+ expDay;
@@ -5932,11 +5949,11 @@ with(document.calcForm){
 			break;
 		}
 	}
-	for(i=0;i<=96;i++)
+	for(i=0;i<=100;i++)
 		SaveData[i] = 0;
 
 	j=0;
-	for(i=0;i<=96;i++){
+	for(i=0;i<=100;i++){
 		if(SaveStr1[i] == 1){
 			SaveData[i] = wStr.substr(j,1);
 			j++;
@@ -5948,7 +5965,7 @@ with(document.calcForm){
 			j+=3;
 		}
 	}
-	for(i=0;i<=96;i++){
+	for(i=0;i<=100;i++){
 		if(SaveStr1[i] == 1)
 			SaveData[i] = StoN(SaveData[i]);
 		if(SaveStr1[i] == 2)
@@ -5956,7 +5973,8 @@ with(document.calcForm){
 		if(SaveStr1[i] == 3)
 			SaveData[i] = StoN(SaveData[i].substr(0,1)) + SaveData[i].substr(1,2);
 	}
-	for(i=0;i<=96;i++){
+
+	for(i=0;i<=100;i++){
 		if(SaveStr1[i] == 3 && SaveData[i].substr(0,2) == "00")
 			SaveData[i] = SaveData[i].substr(2,1);
 		else if(SaveStr1[i] == 3 && SaveData[i].substr(0,1) == "0")
@@ -5975,7 +5993,13 @@ with(document.calcForm){
 		}
 	}
 
-	for(i=0;i<=96;i++)
+	for(i=97;i<=100;i++){
+		if (typeof(SaveData[i]) == "undefined"){
+			SaveData[i] = 0;
+		}
+	}
+
+	for(i=0;i<=100;i++)
 		SaveData[i] = eval(SaveData[i]);
 
 	if(eval(SaveData[0]) == 20 && eval(SaveData[54]) == 1)
@@ -6123,6 +6147,11 @@ with(document.calcForm){
 	SQI_Bonus_Effect[1] = SaveData[94];
 	SQI_Bonus_Effect[2] = SaveData[95];
 	SQI_Bonus_Effect[3] = SaveData[96];
+
+	A_ME11.value = SaveData[97];
+	A_ME12.value = SaveData[98];
+	A_ME21.value = SaveData[99];
+	A_ME22.value = SaveData[100];
 
 	Click_SQI_Bonus(0);
 
@@ -7213,15 +7242,15 @@ for(i=0;i<ITEM_SP_TIME_OBJ.length;i++){
 	}
 }
 
+//[Custom TalonRO - 2018-06-03 - Populate combos in index] [Kato]
+tRO_PopulateCombos();
+
 document.calcForm.A_JOB.value = 0;
 ClickJob(0);
 if(Taijin==0)
 	EnemySort();
 StCalc();
 calc();
-
-//[Custom TalonRO - 2018-06-03 - Populate combos in index] [Kato]
-tRO_PopulateCombos();
 
 LoadCookie3();
 LoadCookieConf();
