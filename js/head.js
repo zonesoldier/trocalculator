@@ -60,6 +60,9 @@ EQB = [0,0,0];
 //custom TalonRO fix ignore effects on left/offhand like Ice Pick or Weeder Knife
 IgnoreEffectOnLeftHand = 0;
 
+//[Custom TalonRO 2018-06-15 - Global for Malangdo Enchants values] [Kato]
+tRO_MalangdoEnchantment = [0,0,0,0];
+
 function myInnerHtml(wIH1,wIH2,wIH3)
 {
 	if(wIH3 == 0){
@@ -4784,7 +4787,14 @@ function tRO_PopulateCombos() {
 	}
 }
 
+/*
+	[Custom TalonRO 2018-06-14 - Function to perform the click changes,
+	it's responsible for elements displays changes and enchant removal exceptions
+	Requires etc.js->arrays: ME_ENCHANTABLE and MALANGDO_ENCHANTS, index.html->select: A_ME11, A_ME12, A_ME21, A_ME22
+] [Kato]
+*/
 function tRO_Click_MalangdoEnchantment(w1,w2){
+
 	var bEnchant1 = bEnchant2 = false;
 	var kID1 = kID2 = 0;
 	if(w1) {
@@ -4806,14 +4816,10 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 			}
 	}
 
-	if(bEnchant1 == false && bEnchant2 == false) {
-		document.getElementById("T_ME1").style.display = "none";
-		document.getElementById("T_ME2").style.display = "none";
-		return;
-	}
+	document.getElementById("T_ME1").style.display = ((bEnchant1) ? "" : "none");
+	document.getElementById("T_ME2").style.display = ((bEnchant2) ? "" : "none");
 
-	((bEnchant1) ? document.getElementById("T_ME1").style.display = "" : document.getElementById("T_ME1").style.display = "none");
-	((bEnchant2) ? document.getElementById("T_ME2").style.display = "" : document.getElementById("T_ME2").style.display = "none");
+	if(bEnchant1 == false && bEnchant2 == false) return;
 
 	with(document.calcForm){
 			if(ME_ENCHANTABLE[kID1][1] != 0){
@@ -4835,28 +4841,29 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 								A_ME12.remove(j);
 							}
 					}
+		}
+
+		if(ME_ENCHANTABLE[kID2][1] != 0){
+			var arEx = [];
+			for(i=1;i< ME_ENCHANTABLE[kID2].length;i++){
+				if(ME_ENCHANTABLE[kID2][i] != 0)
+					arEx.push(ME_ENCHANTABLE[kID2][i].toString());
+				else break;
 			}
 
-			if(ME_ENCHANTABLE[kID2][1] != 0){
-				var arEx = [];
-				for(i=1;i< ME_ENCHANTABLE[kID2].length;i++){
-					if(ME_ENCHANTABLE[kID2][i] != 0)
-						arEx.push(ME_ENCHANTABLE[kID2][i].toString());
-					else break;
+				for (j = A_ME21.length - 1; j >= 0; j--) {
+					if(arEx.indexOf(A_ME21.options[j].value) != -1) {
+							A_ME21.remove(j);
+					}
 				}
-
-					for (j = A_ME21.length - 1; j >= 0; j--) {
-						if(arEx.indexOf(A_ME21.options[j].value) != -1) {
-								A_ME21.remove(j);
+				for (j = A_ME22.length - 1; j >= 0; j--) {
+						if(arEx.indexOf(A_ME22.options[j].value) != -1) {
+							A_ME22.remove(j);
 						}
-					}
-					for (j = A_ME22.length - 1; j >= 0; j--) {
-							if(arEx.indexOf(A_ME22.options[j].value) != -1) {
-								A_ME22.remove(j);
-							}
-					}
-			}
+				}
+		}
 	}
+	tRO_MalangdoEnchantment = [document.calcForm.A_ME11.value,document.calcForm.A_ME12.value,document.calcForm.A_ME21.value,document.calcForm.A_ME22.value];
 }
 
 function Click_Skill9SW(){
