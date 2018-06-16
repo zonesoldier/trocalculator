@@ -2645,7 +2645,7 @@ function HealCalc(HealLv,HealType)
 	if(HealType == 1)
 		wX += n_tok[92];
 	if(EquipNumSearch(644))
-		wX += Math.floor(n_A_Weapon_ATKplus * 1.5);
+		wX += n_A_Weapon_ATKplus * 1.5;
 	//custom TalonRO Recovery Light
 	if(EquipNumSearch(1511))
 		wX += Math.floor(n_A_Weapon_ATKplus * 3);

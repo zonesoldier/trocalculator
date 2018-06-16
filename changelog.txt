@@ -1,3 +1,28 @@
+[Update 2018-06-15]
+- Corrected negative hit [Slap]
+- Added links for 601-650 [Slap]
+- Issue #149: Proofreading [Slap] //For the sake of my sanity proofreading notes will not be as detailed as before; will only indicate what has been modified, not how
+	Vacation Hat: name, type
+	Water Lily Crown: name
+	Lucius's Fierce Armor of Volcano: name
+	Mes: updated effect/description
+	Thin Blade: updated effect/description
+	Muscle Cutter: updated effect/description
+	Long Horn: updated effect/description
+	Freezing Bow: updated effect/description
+	Earthen Bow: updated effect/description
+	Gale Bow: updated effect/description //Auto-generated autospell effect removed since it's only active when Arrow of Wind is equipped. Description updated to reflect this.
+	Orc Archer's Bow: item lvl
+	Ogre's Toenail: added description
+	Inverse Scare: added description
+	Bloody Blades: added description
+	Staff of Recovery: slight correction to healing bonus
+	Staff of Piercing: updated description
+	Staff of Destruction: updated description
+	Bass Guitar: added description
+	Spirited Guitar: added description
+
+
 [Update 2018-06-13]
 - Issue #182: Fixed regions for Seals mobs; [Kato]
 - Issue #183: Added links for combo items; [Kato]

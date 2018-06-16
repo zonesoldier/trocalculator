@@ -1425,6 +1425,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	n_A_HIT += n_tok[8];
 
+	//negative hit correction- slaptro - 2018-06-18
+	if(n_A_HIT < 0){
+		n_A_HIT -= n_A_HIT;
+	}
+
 	if(EquipNumSearch(656))
 		n_A_HIT -= Math.floor(SU_DEX / 3);
 	if(n_A_WeaponType==3 || n_A_WeaponType==2)
@@ -2327,7 +2332,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += Math.floor(SU_AGI / 14);
 	if(n_A_Equip[0]==484 && SU_STR >= 50)
 		w += 5;
-	if(SU_STR >= 95 && EquipNumSearch(621))
+	if(EquipNumSearch(621))
 		w -= 40;
 	if(EquipNumSearch(624))
 		w += (n_A_Weapon_ATKplus);
@@ -5099,7 +5104,7 @@ function KakutyouKansuu(){
 		if(n_A_JOB==9 || n_A_JOB==23){
 			var wX = 100+n_tok[94];
 			if(EquipNumSearch(644))
-				wX += Math.floor(n_A_Weapon_ATKplus * 1.5);
+				wX += n_A_Weapon_ATKplus * 1.5;
 			//custom TalonRO Recovery Light
 			if(EquipNumSearch(1511))
 				wX += Math.floor(n_A_Weapon_ATKplus * 3);
