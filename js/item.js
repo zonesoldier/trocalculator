@@ -1647,7 +1647,7 @@ ItemOBJ = [
 ,[1603,60,0,10,0,0,0,60,"Eden Group Uniform IV","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.",13,500,14,50,19,5,1,1,5,1,4,1,193,1,0]
 ,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.",193,1,0]
 //End of Eden Gear
-,[1605,62,0,2,0,0,40,95,"Loki's Muffler","","A red scarf worn out from long use.",2,1,1083,5,193,1,0]
+,[1605,62,0,2,0,0,40,95,"Loki's Muffler","","A red scarf worn out from long use.",2,1,5083,5,193,1,0]
 ,[1606,50,0,4,0,1,40,0,"Legionnaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0]
 ,[1607,51,0,2,0,1,50,50,"Lude Mask","","A mask which resembles a Lude. However, you will never be as awesome as a real Lude.",17,1,89,2,57,1,0]
 ,[1608,50,0,4,0,0,20,30,"Xmas Rudolph Hairband","","A Christmas hairband. Rudolf's excited mind for christmas is dwelled on it.<br/>You will feel like running faster.",1,3,5,2,6,3,2,3,12,5,0]

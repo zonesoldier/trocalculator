@@ -546,8 +546,6 @@ function StAllCalc()
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
 	}
-	console.log(n_tok);
-
 	StPlusCalc();
 
 	if(n_A_WeaponType != 10 && n_A_WeaponType !=14 && n_A_WeaponType !=15 && n_A_WeaponType !=17 && n_A_WeaponType !=18 && n_A_WeaponType !=19 && n_A_WeaponType !=20 && n_A_WeaponType !=21){
@@ -3147,9 +3145,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	/*[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Spell Element] [Kato]
 		Well I couldn't find a n_tok for magical damage based on element.
 		Since we don't have it, I will separate the skills by element (skills.js) and apply the magical damage for all races [170-179]
-		*** Snap, the math was bugus, only way I found here was to keep the modifier that was here and add the new one
+		*** Snap, the math was bugus, the only way I found here was to keep the modifier that was here and add the new one
 	*/
 	var eTypes = [0,0,0,0,0]; // 0 Neural, 1 Water, 2 Earth, 3 Fire, 4 Wind
+	var aMSnoEle = [373,374,375]; // Magical skills without proper element (will change depending on n_A_Weapon_zokusei)
 	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
 		var vME = tRO_MalangdoEnchantment[i];
 		if(vME >= 261 && vME <= 266) {
@@ -3167,6 +3166,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 						for(j=0; j<10; j++) {
 							n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[k]) / 100) - 100; // ***
 						}
+				}
+			}
+			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1){
+				for(j=0; j<10; j++) {
+					n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[n_A_Weapon_zokusei]) / 100) - 100; // ***
 				}
 			}
 		}
