@@ -1,3 +1,7 @@
+[Update 2018-06-14]
+- Issue #6: Added Malangdo Enchants; [Kato]
+- Issue #187: Fixed Loki's Muffler; [Kato]
+
 [Update 2018-06-13]
 - Issue #182: Fixed regions for Seals mobs; [Kato]
 - Issue #183: Added links for combo items; [Kato]
