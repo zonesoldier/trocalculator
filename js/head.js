@@ -4819,7 +4819,14 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 	document.getElementById("T_ME1").style.display = ((bEnchant1) ? "" : "none");
 	document.getElementById("T_ME2").style.display = ((bEnchant2) ? "" : "none");
 
-	if(bEnchant1 == false && bEnchant2 == false) return;
+	if(bEnchant1 == false) {
+		document.calcForm.A_ME11.value = 0;
+		document.calcForm.A_ME12.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_ME21.value = 0;
+		document.calcForm.A_ME22.value = 0;
+	}
 
 	with(document.calcForm){
 			if(ME_ENCHANTABLE[kID1][1] != 0){
