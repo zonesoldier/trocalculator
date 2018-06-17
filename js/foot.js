@@ -2027,6 +2027,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_HEAD_DEF_PLUS>=7)
 			P_ATK += P_ATK*.01;
 
+	//[Custom TalonRO 2018-06-16 - Malangdo Enchantment for ATK%] [Kato]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+
+		if(vME == 171) p_ATK += parseInt(vME.substr(-1));
+	}
+
+
 	if (P_ATK < 0){P_ATK = 0;}
 
 	H_ATK = P_ATK;
@@ -2193,6 +2201,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(81 <= wKE && wKE <= 89)
 				w += w_enchant;
 		}
+	}
+	// [Custom TalonRO 2018-06-16 - Malangdo Enchantment for MATK%] [Kato]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+
+		if(vME >= 891 && vME <= 892) w += parseInt(vME.substr(-1));
 	}
 
 	n_A_MATK[0] = Math.floor(n_A_MATK[0] * w / 100);
@@ -3151,7 +3165,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	var aMSnoEle = [373,374,375]; // Magical skills without proper element (will change depending on n_A_Weapon_zokusei)
 	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
 		var vME = tRO_MalangdoEnchantment[i];
-		if(vME >= 261 && vME <= 266) {
+		if(vME >= 261 && vME <= 267) {
 			switch(vME.substr(-1)){
 				case '1' : eTypes[3] += 2; break;
 				case '2' : eTypes[1] += 2; break;
@@ -3159,6 +3173,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 				case '4' : eTypes[2] += 2; break;
 				case '5' : eTypes[3] += 4; break;
 				case '6' : eTypes[1] += 5; break;
+				case '7' : eTypes[4] += 6; break;
 			}
 
 			for(k=1; k<5; k++) {
