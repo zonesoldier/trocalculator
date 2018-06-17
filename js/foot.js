@@ -2034,7 +2034,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
 		var vME = tRO_MalangdoEnchantment[i];
 
-		if(vME == 171) p_ATK += parseInt(vME.substr(-1));
+		if(vME == 171) P_ATK += parseInt(vME.substr(-1));
 	}
 
 
