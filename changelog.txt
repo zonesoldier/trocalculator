@@ -1,4 +1,8 @@
 [Update 2018-06-16]
+- Fixed Marionette Contro [Slap]
+	Status compensation should now cap based on base stat
+
+[Update 2018-06-16]
 - Issue #188: Added Dolor Hat [Slap]
 - Issue #149: Proofreading [Slap]
 	Carrot Whip: added description
