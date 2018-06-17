@@ -29,7 +29,7 @@ div#ubernavi {
 	padding: 0.5em;
 	margin-left: 3px;
 	line-height: 100%;
-	
+
 }
 div#ubernavi a {
 	text-decoration: none;
@@ -39,7 +39,7 @@ div#ubernavi a:hover {
 	text-decoration: underline;
 }
 span.navititle {
-	
+
 	font-weight:bold;
 }
 -->
@@ -174,8 +174,8 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 <span id="nm026">Speed Potion: </span><select name="A_SpeedPOT" onchange="StAllCalc()">
 	<option selected="selected" value="0">None</option>
 	<option value="1">Concentration Potion</option>
-	
-	
+
+
 <option value="2">Awakening Potion(Lv40)</option><option value="3">-Special(Berserk Pitcher)(Lv85)</option></select></td>
 <td>&nbsp;</td>
 <td>&nbsp;
@@ -285,6 +285,18 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 <td class="calc"></td>
 <td class="calc"></td>
 </tr>
+<tr id="T_ME1">
+	<td class="calc">
+		<span id="A_METext11"></span>
+			<select name="A_ME11" onchange="StAllCalc()"></select>
+	</td>
+	<td class="calc">
+		<span id="A_METext12"></span>
+		<select name="A_ME12" onchange="StAllCalc()"></select>
+	</td>
+	<td class="calc"></td>
+	<td class="calc"></td>
+</tr>
 <tr>
 <td class="calc"><span id="spanA_weapon2"></span></td>
 <td class="calc"><span id="spanA_weapon2seiren"></span></td>
@@ -360,7 +372,18 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 <td class="calc"></td>
 <td class="calc"></td>
 </tr>
-
+<tr style="display: none" id="T_ME2">
+	<td class="calc">
+		<span id="A_METext21"></span>
+			<select name="A_ME21" onchange="StAllCalc()"></select>
+	</td>
+	<td class="calc">
+		<span id="A_METext22"></span>
+		<select name="A_ME22" onchange="StAllCalc()"></select>
+	</td>
+	<td class="calc"></td>
+	<td class="calc"></td>
+</tr>
 <tr>
 <td class="calc">
 <select name="A_HEAD_DEF_PLUS" onchange="StAllCalc()">
