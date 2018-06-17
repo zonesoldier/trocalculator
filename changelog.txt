@@ -1,6 +1,8 @@
 [Update 2018-06-17]
-- Fixed Marionette Contro [Slap]
+- Issue #193: Fixed Marionette Contro [Slap]
 	Status compensation should now cap based on base stat
+- Issue #5: Corrected brewing formula [Slap]
+	0.05% lower than iRO due to custom homunculus bonus
 
 [Update 2018-06-16]
 - Issue #188: Added Dolor Hat [Slap]

@@ -5068,13 +5068,13 @@ function KakutyouKansuu(){
 
 			adopted = eval(document.calcForm.A_youshi.checked);
 
-			srate = Math.floor((potionr*0.5 + preparep*3 + n_A_JobLV*0.2 + (n_A_DEX +n_A_LUK + (n_A_INT/2)) * 0.1 + potrate + pharmacyboost)*100)/100;
-			if(srate < 0)srate = 0;
+			srate = potionr * 50 + preparep * 300 + n_A_JobLV * 20 + (n_A_DEX + n_A_LUK + (n_A_INT/2)) * 10 + potrate * 100 + pharmacyboost * 100;
+			// if(srate < 0)srate = 0;
 			//custom TalonRO Update 2015-12-21
-			if(srate > 100)srate = 100;
+			// if(srate > 100)srate = 100;
 
-			if(adopted){
-				srate = Math.floor((srate * 0.7));}
+			// if(adopted){
+			// 	srate = Math.floor((srate * 0.7));}
 
 			/*
 				selpot:
@@ -5084,7 +5084,7 @@ function KakutyouKansuu(){
 					3 = blue pot
 					4 = slim red
 					5 = slim yellow
-					6 = slim thiw
+					6 = slim white
 					7 = alcohol
 					8 = acid
 					9 = grenade
@@ -5098,17 +5098,48 @@ function KakutyouKansuu(){
 			*/
 
 			if(selpot == 3 || selpot == 4 || selpot == 13 || selpot == 14 || selpot == 15 || selpot == 16){
-				brate = 0;}
-			if(selpot == 5){brate = 2.5;}
-			if(selpot == 0 || selpot == 1 || selpot == 2 || selpot == 6 || selpot == 7 || selpot == 8 || selpot == 9 || selpot == 10 || selpot == 11 || selpot == 12){
-				brate = 5;}
+				brate = 0;
+				srate1 = srate;
+			}
+			else if(selpot == 5){
+				brate = -500;
+			}
+			else if(selpot == 0 || selpot == 1 || selpot == 2 || selpot == 7 || selpot == 8 || selpot == 9 || selpot == 10 || selpot == 11){
+				brate = 1000;
+			}
+			else if(selpot == 6 || selpot == 12){
+				brate = -1000;
+			}
 
-			frate1 = Math.floor((srate - brate)*100)/100;
-			if(frate1 < 0){frate1 = 0;}
-			frate2 = Math.floor((srate + brate)*100)/100;
-			if(frate2 < 0){frate2 = 0;}
+			// frate1 = Math.floor((srate - brate)*100)/100;
+			// if(frate1 < 0){frate1 = 0;}
+			// frate2 = Math.floor((srate + brate)*100)/100;
+			// if(frate2 < 0){frate2 = 0;}
+			if(brate < 0){
+				srate1 = srate - 10;
+			}
+			else if(brate > 0){
+				srate1 = srate + 10;
+			}
 
-			myInnerHtml("A_KakutyouData","<b><br>Success rate: </b>" + srate + " %" + " [ " + frate1 + " % ~ " + frate2 + " % ]",0);
+			srate2 = srate + (brate/2);
+			srate3 = srate + brate;
+
+			if(srate1 > 10000){srate1 = 10000;}
+			if(srate1 < 0){srate1 = 0;}
+			if(srate2 > 10000){srate2 = 10000;}
+			if(srate2 < 0){srate2 = 0;}
+			if(srate3 > 10000){srate3 = 10000;}
+			if(srate3 < 0){srate3 = 0;}
+
+			srate_avg = Math.floor((srate1 + srate2 + srate3)/3)/100;
+
+			srate_min = Math.min(srate1, srate2, srate3)/100;
+			srate_med = srate2/100;
+			srate_max = Math.max(srate1, srate2, srate3)/100;
+
+			myInnerHtml("A_KakutyouData","<b><br>Success rate range (Minimum ~ Median ~ Maximum):</b> " + srate_min + " % ~ " + srate_med + " % ~ " + srate_max + " %" + "<br><b>Success rate averge:</b> " + srate_avg + " %",0);
+
 		}
 		else if(n_A_JOB==22){
 			myInnerHtml("A_KakutyouSel","Potion to Create: " + '<select name="A_KakutyouSelNum" onChange="StAllCalc()"></select><BR>',0);
