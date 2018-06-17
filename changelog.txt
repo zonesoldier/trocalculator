@@ -1,5 +1,5 @@
 [Update 2018-06-16]
-- Issue #188: Added Dolor Hat
+- Issue #188: Added Dolor Hat [Slap]
 - Issue #149: Proofreading [Slap]
 	Carrot Whip: added description
 	Western Outlaw: added description

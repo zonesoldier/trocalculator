@@ -839,7 +839,8 @@ ME_ENCHANTABLE = [
 	,[391,0] //Mailbreaker
 	,[392,0] //Weeder Knife
 	,[387,0] //Kitchen Knife
-	,[12,0] //Assassin Dagger
+	,[12,0] //Fortune Sword
+	,[13,0] //Assassin Dagger
 	,[394,0] //Exorciser
 	,[396,0] //Azoth
 	,[14,0] //Sucsamad
@@ -849,6 +850,7 @@ ME_ENCHANTABLE = [
 	,[398,0] //Dagger of Counter
 	,[799,0] //Holy Dagger
 	,[1156,0] //Krieg
+	,[1157,0] //Weihna
 	,[1463,0] //Black Wing
 	,[12,0] //Fortune Sword
 	,[393,53,0] //Combat Knife - Except DEX+3
@@ -891,7 +893,7 @@ ME_ENCHANTABLE = [
 	,[35,0] //Mysteltainn
 	,[36,0] //Tirfing
 	,[403,0] //Byeollungum
-	,[405,0] //Immaterial Sword
+	,[404,0] //Immaterial Sword
 	,[470,0] //Star Dust Blade [1]
 	,[1158,0] //Roubel Sword [1]
 	,[1623,0] //Chrome Metal Sword
