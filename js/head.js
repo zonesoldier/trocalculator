@@ -4829,7 +4829,7 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 	}
 
 	with(document.calcForm){
-			if(ME_ENCHANTABLE[kID1][1] != 0){
+			if(ME_ENCHANTABLE[kID1][1] != 0) {
 				var arEx = [];
 				for(i=1; i<ME_ENCHANTABLE[kID1].length; i++){
 					if(ME_ENCHANTABLE[kID1][i] != 0) {
@@ -4837,20 +4837,29 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 					}
 					else break;
 				}
-
+				if(arEx.length > 0 ) {
 					for (j = A_ME11.length - 1; j >= 0; j--) {
 						if(parseInt(arEx.indexOf(A_ME11.options[j].value)) != -1) {
-								A_ME11.remove(j);
+								A_ME11.options[j].disabled = true;
+								A_ME11.options[j].classList.add('prohibted');
 						}
 					}
 					for(j = A_ME12.length - 1; j >= 0; j--){
 							if(parseInt(arEx.indexOf(A_ME12.options[j].value)) != -1) {
-								A_ME12.remove(j);
+								A_ME12.options[j].disabled = true;
+								A_ME12.options[j].classList.add('prohibted');
 							}
 					}
+				}
+		} else {
+			for(j = MALANGDO_ENCHANTS.length - 1; j >= 0; j--){
+				A_ME11.options[j].disabled = A_ME12.options[j].disabled = false;
+				A_ME11.options[j].classList.remove('prohibted');
+				A_ME12.options[j].classList.remove('prohibted');
+			}
 		}
 
-		if(ME_ENCHANTABLE[kID2][1] != 0){
+		if(ME_ENCHANTABLE[kID2][1] != 0) {
 			var arEx = [];
 			for(i=1;i< ME_ENCHANTABLE[kID2].length;i++){
 				if(ME_ENCHANTABLE[kID2][i] != 0)
@@ -4860,14 +4869,22 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 
 				for (j = A_ME21.length - 1; j >= 0; j--) {
 					if(arEx.indexOf(A_ME21.options[j].value) != -1) {
-							A_ME21.remove(j);
+						A_ME21.options[j].disabled = true;
+						A_ME21.options[j].classList.add('prohibted');
 					}
 				}
 				for (j = A_ME22.length - 1; j >= 0; j--) {
 						if(arEx.indexOf(A_ME22.options[j].value) != -1) {
-							A_ME22.remove(j);
+							A_ME22.options[j].disabled = true;
+							A_ME22.options[j].classList.add('prohibted');
 						}
 				}
+		} else {
+			for(j = MALANGDO_ENCHANTS.length - 1; j >= 0; j--){
+				A_ME21.options[j].disabled = A_ME22.options[j].disabled = false;
+				A_ME21.options[j].classList.remove('prohibted');
+				A_ME22.options[j].classList.remove('prohibted');
+			}
 		}
 	}
 	tRO_MalangdoEnchantment = [document.calcForm.A_ME11.value,document.calcForm.A_ME12.value,document.calcForm.A_ME21.value,document.calcForm.A_ME22.value];

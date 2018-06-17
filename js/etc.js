@@ -891,7 +891,7 @@ ME_ENCHANTABLE = [
 	,[470,0] //Star Dust Blade [1]
 	,[1158,0] //Roubel Sword [1]
 	,[1623,0] //Chrome Metal Sword
-	,[402,99,98,41,42,43,53,0] //Excalibur - Except INT Enchant and DEX+3
+	,[402,41,42,43,53,0] //Excalibur - Except INT Enchant and DEX+3
 	,[399,0] //Nagan
 	,[400,0] //Edge
 /* [Two Handed Swords] */
