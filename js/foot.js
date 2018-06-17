@@ -1058,7 +1058,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1058)){
 		w += n_A_BaseLV*2;}
 
-	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - slaptro - 2018-06-07
+	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1646)){
 		w += n_A_HEAD_DEF_PLUS * 5;
 	}
@@ -1182,7 +1182,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(809))
 		n_A_DEFplus -= n_A_HEAD_DEF_PLUS;
 
-	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - slaptro - 2016-06-07
+	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - [Slap] - 2016-06-07
 	if(EquipNumSearch(1641)){
 		n_A_DEF -= Math.floor(SU_VIT / 30);
 	}
@@ -1441,7 +1441,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	n_A_HIT += n_tok[8];
 
-	//negative hit correction- slaptro - 2018-06-18
+	//negative hit correction- [Slap] - 2018-06-18
 	if(n_A_HIT < 0){
 		n_A_HIT -= n_A_HIT;
 	}
@@ -1570,7 +1570,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill6[0] == 2 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==4)
 		n_A_FLEE += n_A_PassSkill6[1] *3;
 
-	//Bloody Roar FLEE -160 - slaptro - 2018-06-11
+	//Bloody Roar FLEE -160 - [Slap] - 2018-06-11
 	if(EquipNumSearch(483)){
 		if(n_A_FLEE < 160){
 			n_A_FLEE -= n_A_FLEE;
@@ -1687,12 +1687,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill8[20])
 		n_A_LUCKY += 20;
 
-	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - slaptro - 2016-06-07
+	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - [Slap] - 2016-06-07
 	if(EquipNumSearch(1652) && n_A_HEAD_DEF_PLUS > 6){
 		n_A_LUCKY += 4;
 	}
 
-	//Bloody Roar Perfect Dodge -160 - slaptro - 2018-06-11
+	//Bloody Roar Perfect Dodge -160 - [Slap] - 2018-06-11
 	if(EquipNumSearch(483)){
 		if(n_A_LUCKY < 160){
 			n_A_LUCKY -= n_A_LUCKY;
@@ -2139,12 +2139,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 1 * (n_A_HEAD_DEF_PLUS - 7);
 	}
 
-	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
+	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
 	if(EquipNumSearch(1640)){
 		w += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 
-	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
+	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
 	if(EquipNumSearch(1645)){
 		w += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
@@ -2447,7 +2447,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1455))
 		w += 3*Math.floor(n_A_Weapon_ATKplus/2);
 
-	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - slaptro - 2016-06-07
+	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - [Slap] - 2016-06-07
 	if(EquipNumSearch(1315) && n_A_Weapon_ATKplus>4){
 			w += n_A_Weapon_ATKplus - 4;
 	}
@@ -2836,12 +2836,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS >= 5)
 		n_tok[37] += 2*(n_A_HEAD_DEF_PLUS-4);
 
-	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - slaptro - 2018-06-07
+	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - [Slap] - 2018-06-07
 	if(EquipNumSearch(1649) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[31] += 10
 	}
 
-	//custom Talonro Imrpoved Bongun Hat: If refine > 6 increase damage against Demon monster by 10% - slaptro - 2018-06-07
+	//custom Talonro Imrpoved Bongun Hat: If refine > 6 increase damage against Demon monster by 10% - [Slap] - 2018-06-07
 	if(EquipNumSearch(1650) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[36] += 10
 	}
@@ -2914,7 +2914,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 7)
 		n_tok[70] += 10;
 
-	//custom TalonRO Improved Joker Jester: If refine rate >6 +5% critical damage - slaptro - 2018-06-07
+	//custom TalonRO Improved Joker Jester: If refine rate >6 +5% critical damage - [Slap] - 2018-06-07
 	if(EquipNumSearch(1647) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[70] += 5;
 	}
@@ -3343,12 +3343,12 @@ function StPlusCalc()
 			wSPC_DEX += 1;
 	}
 
-	//custom TalonRo Improved Mage Hat: Every Refine level 7 or higher adds INT + 1 - slaptro - 2018-06-07
+	//custom TalonRo Improved Mage Hat: Every Refine level 7 or higher adds INT + 1 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1645) && n_A_HEAD_DEF_PLUS > 6){
 		wSPC_INT += n_A_HEAD_DEF_PLUS - 6;
 	}
 
-	//custom TalonRo Improved Magician Hat: Every Refine level 7 or higher adds DEX + 1 - slaptro - 2018-06-07
+	//custom TalonRo Improved Magician Hat: Every Refine level 7 or higher adds DEX + 1 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1646) && n_A_HEAD_DEF_PLUS > 6){
 		wSPC_DEX += n_A_HEAD_DEF_PLUS - 6;
 	}
@@ -3717,6 +3717,8 @@ function StPlusCalc()
 			else
 				wSPC_LUK = (99 - n_A_LUK);
 		}
+
+	//Marionette status compensation rework - [Slap] - 2018-06-17	
 	}else if(n_A_PassSkill3[11] && n_A_PassSkill3[18]){
 		// if(n_A_STR + wSPC_STR < 99){
 			if(n_A_STR + w2[0] + Math.floor(n_A_PassSkill3[12]/2) < 99)
@@ -5065,9 +5067,9 @@ function KakutyouKansuu(){
 			if (homunevolved)
 				pharmacyboost *= 2;
 
-
 			adopted = eval(document.calcForm.A_youshi.checked);
 
+			//Brewing rework - [Slap] - 2018-06-17
 			srate = potionr * 50 + preparep * 300 + n_A_JobLV * 20 + (n_A_DEX + n_A_LUK + (n_A_INT/2)) * 10 + potrate * 100 + pharmacyboost * 100;
 			// if(srate < 0)srate = 0;
 			//custom TalonRO Update 2015-12-21

@@ -1727,7 +1727,7 @@ ItemOBJ = [
 */
 
 /*
-	slaptro - 2018-06-11
+	[Slap] - 2018-06-11
 	Work in progress ItemID table. Currently proofreading and adding to this array.
 	Format: [ItemOBJ index, type, item IDs...]
 	type:
