@@ -182,3 +182,7 @@ ul li+b {
   color: #FFFFFF !important;
   text-decoration: underline !important;
 }
+.prohibted{
+  cursor: not-allowed !important;
+  color: #CCCCCC !important;
+}
