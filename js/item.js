@@ -237,10 +237,10 @@ ItemOBJ = [
 ,[214,50,55,4,0,0,30,0,"Wizard Hat","",0,14,100,0]
 ,[215,50,56,4,0,0,120,38,"Grief for Greed","",0,4,1,5,1,0]
 ,[216,50,75,4,0,"0 / 1",40,0,"Cap","",0,0]
-,[217,50,1,4,0,0,40,45,"Crown","",0,4,2,0]
+,[217,50,1,4,0,0,40,45,"Crown [0]","",0,4,2,0]
 ,[218,50,72,4,0,0,60,60,"Jewel Crown","",0,4,2,6,1,19,3,0]
 ,[219,50,72,4,0,"0 / 1",50,0,"Gemmed Sallet","",0,19,3,0]
-,[220,50,1,4,0,0,40,45,"Tiara","",0,4,2,0]
+,[220,50,1,4,0,0,40,45,"Tiara [0]","",0,4,2,0]
 ,[221,50,53,4,0,"0 / 1",10,0,"Biretta","",0,0]
 ,[222,50,72,4,0,0,40,0,"Army Cap","",0,0]
 ,[223,50,0,4,0,0,40,19,"Rainbow Eggshell","",0,193,1,0]
@@ -408,7 +408,7 @@ ItemOBJ = [
 ,[385,51,0,1,0,0,10,70,"Angel Wing Ears","",0,1,1,0]
 ,[386,51,0,2,0,0,10,0,"Goblin Leader Mask","","<b>Mid and Low Headgear</b>",0]
 ,[387,1,1,75,4,0,50,36,"Kitchen Knife","","Adds a 50% additional chance of dropping Meat each time a Brute monster dies",37,3,10,30,0]
-,[388,1,1,80,4,0,60,36,"Ice Pick","","-30% damage to Emperium<br>-30% damage to castle guardians",23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
+,[388,1,1,80,4,0,60,36,"Ice Pick [0]","","-30% damage to Emperium<br>-30% damage to castle guardians",23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
 ,[389,1,1,84,4,0,40,0,"Princess Knife","",0,7,1,0]
 ,[390,1,1,70,4,"0 / 3",100,36,"Swordbreaker","",0,140,5,0]
 ,[391,1,1,70,4,"0 / 3",100,36,"Mailbreaker","",0,141,5,0]
@@ -621,66 +621,66 @@ ItemOBJ = [
 ,[598,64,1,0,0,0,0,0,"Ring [Rental]","",0,1,4,0] //custom TalonRO Rental
 ,[599,64,1,0,0,0,0,0,"Rosary [Rental]","",0,19,5,6,4,0] //custom TalonRO Rental
 ,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","","A hat, when equipped, that plays holy music and refresh its wearer.<br>The wearer of this holy hat is guarded by an angel.",19,2,1,2,221,19,0]
-,[601,999,0,1,0,1,20,30,"Resort Hat","",0,193,1,3,1,0]
-,[602,50,0,0,0,1,20,30,"Lily Crown","",0,193,1,19,3,2,1,5,1,75,5,76,3,0]
+,[601,50,0,1,0,1,20,30,"Vacation Hat","",0,193,1,3,1,0]
+,[602,50,0,0,0,1,20,30,"Water Lily Crown","",0,2,1,5,1,75,5,76,3,19,3,193,1,0]
 ,[603,60,1,4,0,1,220,45,"Claytos Cracking Earth Armor [1]","",0,198,2,0]
-,[604,60,1,4,0,1,220,45,"Luciu's Fierce Armor of Volcano [1]","",0,198,3,0]
+,[604,60,1,4,0,1,220,45,"Lucius's Fierce Armor of Volcano [1]","",0,198,3,0]
 ,[605,60,1,4,0,1,220,45,"Saphien's Armor of Ocean [1]","",0,198,1,0]
 ,[606,60,1,4,0,1,220,45,"Aebecee's Raging Typhoon Armor [1]","",0,198,4,0]
 ,[607,1,1,70,4,1,60,36,"Ice Pick [1]","","-30% damage to Emperium<br>-30% damage to castle guardians",23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
 ,[608,50,1,4,0,1,40,45,"Crown [1]","",0,4,1,0]
 ,[609,50,1,4,0,1,40,45,"Tiara [1]","",0,4,1,0]
-,[610,1,1001,120,4,3,50,55,"Mes","","When attacking, adds a 5% chance to inflict [External Bleeding] on the enemy",0]
+,[610,1,1001,120,4,3,50,55,"Mes","",0,138,5,0]
 ,[611,1,1001,130,4,1,70,55,"Tooth Blade","","Whenever you attack, 0.5% to cause all enemies within 5 x 5 (PBAoE) cells around you to delay their casting time by 20%<br><b>[Refine Rate 9~10]</b><br>The chance of the effect is increased to 0.7% as well as increasing PBAoE cell effects to 11 x 11 and the delay casting time of all enemies by 40%",0]
 ,[612,2,72,130,4,1,150,55,"Silver Shotel","",0,10,50,0]
-,[613,2,72,125,4,2,80,55,"Thin Blade","","Every time you attack, small chance to cause Curse on the enemy",12,10,0]
-,[614,3,1001,200,4,1,350,55,"Atroce's Blade","","If the user's base Str is 80 or higher, adds a 5% chance of damaging the target's armor when doing a physical attack",10,10,0]
-,[615,3,1001,160,4,2,220,55,"Muscle Cutter","","Add a 2% chance of auto casting Level 1 Decrease Agi on the enemy when attacking<br>Add a 1% chance of auto casting External Bleeding on the enemy when attacking",0]
-,[616,4,1001,150,4,1,100,65,"Long Horn","","Enables the use of [Detoxify]Lv 1<br>Adds a 5% chance of inflicting [Bleeding] on the target when doing a melee attack",20,6,194,1,0]
+,[613,2,72,125,4,2,80,55,"Thin Blade","",0,12,10,133,3,0]
+,[614,3,1001,200,4,1,350,55,"Atroce's Blade","","<b>If base STR >= 80:</b><br>Add a 5% chance of damaging the target's armor when doing a physical attack",10,10,0]
+,[615,3,1001,160,4,2,220,55,"Muscle Cutter","","Add a 3% chance of auto casting Level 1 Decrease Agi on the enemy when attacking",138,8,0]
+,[616,4,1001,150,4,1,100,65,"Long Horn","","Enables the use of [Detoxify]Lv 1",20,6,138,5,194,1,0]
 ,[617,4,1001,140,4,1,90,65,"Battle Hook","",0,37,20,131,5,220,11,0]
 ,[618,4,1001,180,4,1,420,60,"Hunting Spear","","A spear designed specifically to hunt. The end tip looks like a leaf. This spear focused on using its weight to bring damage rather than to piercing the enemy.<br>Adds a 10% chance of the Meat item dropping when killing a [Brute] race monster",182,1,221,20,0]
 ,[619,5,1,170,4,"0 / 1",200,75,"Phantom Spear","","If the target enemy dies, Recovers 50 HP<BR>Small chance to cause Chaos on yourself",31,20,36,20,47,20,51,10,56,10,67,10,0]
 ,[620,5,61,120,4,0,100,65,"Ahlspiess","","Auger shaped spear that is effective at attacking enemy's weak points.",22,10,37,10,221,21,0]
-,[621,7,1,10,4,"0 / 1",600,80,"Doom Slayer","","Decrease Attack Speed by 40%<br>SP cost of All Skills is doubled<br>If user's base Str is 95 or higher: ATK + 340, Causes Stun effect to enemies by 30% chance when receiving damage and add a 5% chance of breaking the enemy's armor when attacking",0]
+,[621,7,1,10,4,"0 / 1",600,80,"Doom Slayer","","SP cost of All Skills is doubled<br><b>If base STR >= 95:</b><br>ATK + 340<br>Causes Stun effect to enemies by 30% chance when receiving damage<br>Add a 5% chance of breaking the enemy's armor when attacking",12,-40,0]
 ,[622,7,1001,200,3,2,250,70,"Bardiche","",0,191,13,192,15,0]
 ,[623,7,1001,175,4,1,200,70,"Heart Breaker","","Each upgrade gives Crit +1<br><b>[Whitesmith, Creator]</b><br>Add a chance of auto casting Level 3 Hammerfall on the enemy when attacking",10,20,12,5,0]
-,[624,7,1001,332,4,1,350,80,"Hurricane Fury","","Hurricane shaped massive two handed axe. The power of hurricane lie hidden in an orb at the center of the axe.<b>For each upgrade:</b><br>ASPD +1%<br>1% less damage from [Medium] size enemies",191,10,221,22,0]
-,[625,8,1,4,4,1,44,44,"Holgren's Refining Hammer","","Every time you attack the enemy, small chance to destroy their weapon or armor by 10%<br>If user's base Str is 44 or higher: Damage calculation becomes ATK + 44<br><br><b>When equipping [Holgren's Refining Hammer]+[Whitesmith Card] at the same time:<br>Very high chance to destroy enemy's equipment, and small chance to destroy your own by 1%</b>",0]
-,[626,10,76,95,3,1,140,55,"Burning Bow","","If equipped together with Fire Arrow, increases damage by 25%",63,10,0]
-,[627,10,76,100,3,1,140,55,"Freezing Bow","","If equipped together with Crystal Arrow, increases damage by 25%",132,1,0]
-,[628,10,76,105,3,1,140,55,"Earthen Bow","","If equipped together with Stone Arrow, increases damage by 25%",134,1,0]
-,[629,10,76,95,3,1,140,55,"Gale Bow","","A light bow that seems to have a potential to cause a whirlwind.<br>If equipped together with [<font color=blue>+ Wind Arrow</font>],<br>This chance is increased when the wearer's INT is 40 or greater.<br> Increases damage by 25%",221,23,0]
-,[630,10,76,120,3,0,160,65,"Orc Archer's Bow","","If equipped together with Steel Arrow, increases damage by 50%.",0]
-,[631,11,122,160,4,1,145,55,"Ogre's Toenail","","[description translation missing - ItemID: 631]",0]
-,[632,11,122,140,4,0,150,55,"Inverse Scare","","[description translation missing - ItemID: 632]",20,6,0]
-,[633,11,122,110,4,1,140,55,"Drill Katar","","[description translation missing - ItemID: 633]",8,30,0]
-,[634,11,122,120,4,2,170,55,"Bloody Blades","","[description translation missing - ItemID: 634]",0]
+,[624,7,1001,332,4,1,350,80,"Hurricane Fury","","Hurricane shaped massive two handed axe. The power of hurricane lie hidden in an orb at the center of the axe.<br><b>For each upgrade:</b><br>ASPD +1%<br>1% less damage from [Medium] size enemies",191,10,221,22,0]
+,[625,8,1,4,4,1,44,44,"Holgren's Refining Hammer","","Every time you attack the enemy, small chance to destroy their weapon or armor by 10%<br>If user's base STR is 44 or higher: Damage calculation becomes ATK + 44<br><br><b>When equipping [Holgren's Refining Hammer]+[Whitesmith Card] at the same time:<br>Very high chance to destroy enemy's equipment, and small chance to destroy your own by 1%</b>",0]
+,[626,10,76,95,3,1,140,55,"Burning Bow","","If equipped together with <b><font color=Red>Fire Arrow</font></b>, increases damage by 25%",63,10,0]
+,[627,10,76,100,3,1,140,55,"Freezing Bow","","If equipped together with <b><font color=Blue>Crystal Arrow</font></b>, increases damage by 25%",132,10,0]
+,[628,10,76,105,3,1,140,55,"Earthen Bow","","<b>If equipped together with <font color=brown>Stone Arrow</font>:</b><br>Increases damage by 25%<br>When attacking, adds a 10% chance to inflict [Stone Curse] on the enemy",0]
+,[629,10,76,95,3,1,140,55,"Gale Bow","","A light bow that seems to have a potential to cause a whirlwind.<br><b>If equipped together with <font color=green>Arrow of Wind</font>:</b><br>When performing a ATK based attack, there's a 10% chance to cast the skill [Wind Blade]Lv 5<br>This chance is 20% when the wearer's base INT is 40 or greater.<br> Increases damage by 25%",0]
+,[630,10,76,120,4,0,160,65,"Orc Archer's Bow","","If equipped together with <b>Steel Arrow</b>, increases damage by 50%.",0]
+,[631,11,122,160,4,1,145,55,"Ogre's Toenail","","When the weapon's special ability activates by small chance (10%), the target will receive a very dangerous wound, causing effects of Heal, Sanctuary, and Potion Pitcher effectiveness by 20%<br>Some recovery items will have their effective reduced by 20%<br><b>If refine >= 9:</b><br>The recovery effects will have its effectiveness reduced by 40% instead of 20%",0]
+,[632,11,122,140,4,0,150,55,"Inverse Scare","","Every attack you do has a 3% chance of causing all enemies within 5 x 5 cell around you (PBAoE) to receive a random status ailment<br><b>If refine >= 9:</b><br>The affected area of Dragon Fear increases to 11 x 11 around the caster",20,6,0]
+,[633,11,122,110,4,1,140,55,"Drill Katar","",0,8,30,0]
+,[634,11,122,120,4,2,170,55,"Bloody Blades","","Every time you attack, small chance to cause External Bleeding status ailment to all enemies within 5 x 5 (PBAoE) cells around you<br><b>If refine >= 9:</b><br>The range is increased to 11 x 11",0]
 ,[635,13,0,80,3,3,65,75,"Magma Fist","","A knuckle made with magma. It appears like any other knuckles, but it sometimes gets very hot to the point it could melt anything in contact with it. However, the inside of this knuckle has been designed specifically so it won't burn the user's hands.",221,24,0]
 ,[636,13,0,80,3,3,65,75,"Icicle Fist","","	A knuckle made with an icicle. It appears like any other knuckles, but it sometimes gets very cold to the point it could freeze anything in contact with it. However, it seems to have no effect at all to the user.",221,25,0]
 ,[637,13,0,80,3,3,65,75,"Electric Fist","","A knuckle made with the power of lightning. It appears like any other knuckles, but it sometimes cause massive shock to the enemies. Due to the specifically designed components inside of the knuckles, the user is not affected.",221,26,0]
 ,[638,13,0,80,3,3,65,75,"Seismic Fist","","A knuckle made with the spirit of the earth. It appears like any other knuckles, but it sometimes eminates powerful aura that could destroy any enemies in your way.<br>While the power of the earth shows absolute cruelty toward the enemies, the wielder will only feel the warmth and kindness of the goddess of the earth.",221,27,0]
 ,[639,13,0,30,3,4,50,60,"Barrage Fist","","",5187,15,5188,15,5189,20,0]
 ,[640,12,0,110,3,2,200,70,"Giant Encyclopedia","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,0]
-,[641,12,0,137,4,2,100,85,"Book of the Dead","","Add a 0.1% chance of auto casting Coma effect on DemiHuman monster<br>Attack Speed increased depending on the refinement rate of this weapon<br><b>[Sage, Professor]</b><br>There is a 2% chance of using [Hell's Judgment]Lv 5 on the target when doing a physical attack",89,15,1,3,4,3,6,-20,0]
-,[642,9,1001,60,3,2,80,70,"Lich's Bone Wand","","Whenever you take a Physical Damage, small chance to cause Curse status ailment to every enemies in the screen. This chance is increased depending on the refinement rate of this weapon<br><b>[Refine Rate 9~10]</b><br>You will receive bonus MATK + 3%, Maximum SP + 300",89,20,4,1,5,1,20,9,0]
+,[641,12,0,137,4,2,100,85,"Book of the Dead","","Add a 0.1% chance of auto casting Coma effect on DemiHuman monster<br>Attack Speed increased depending on the refinement rate of this weapon<br><b>[Sage, Professor]</b><br>On attack, there is a 2% chance to cause damage and Curse status ailment to every enemy on screen",89,15,1,3,4,3,6,-20,0]
+,[642,9,1001,60,3,2,80,70,"Lich's Bone Wand","","Whenever you take a Physical Damage, 1% chance to cause Curse status ailment to every enemies in the screen. This chance is increased depending on the refinement rate of this weapon<br><b>[Refine Rate 9~10]</b><br>You will receive bonus MATK + 3%, Maximum SP + 300",89,20,4,1,5,1,20,9,0]
 ,[643,51,1,0,0,0,10,0,"Dark Blinder","",0,154,100,151,2,0]
 ,[644,9,53,10,3,0,40,55,"Staff of Recovery","","Heal and Sanctuary effectiveness increased by the refine of the weapon",89,15,20,6,0]
-,[645,9,1001,80,3,0,50,70,"Staff of Piercing","","When you attack using magical ability, it will ignore 10% of their MDEF<br>The amount ignored will increase depending on the refinement rate of this weapon",89,15,4,4,0]
-,[646,9,125,130,4,1,250,80,"Staff of Destruction","","Reduces casting time of Amplify Magic by 50%<br>Refinement in multiples of 2 (+2, +4, +6, +8, +10) increases MATK by 1%<br>SP taken by all skills will increase depending on the refinement rate of this weapon<br>Small chance to cast [Jupitel Thunder]Lv 5 whenever you are attacked physically. This chance depends on the refinement rate of this weapon",89,25,4,3,2,10,195,1,0]
-,[647,9,63,120,4,0,150,70,"Divine Cross","","",89,15,20,6,5,4,51,15,56,15,0]
-,[648,14,130,130,3,1,150,70,"Bass Guitar","","[description translation missing - ItemID: 648]",0]
-,[649,14,130,10,4,0,180,70,"Spirited Guitar","","The legendary guitar known for when the player finally snaps out of stupor, you've already finished your performance.",12,100,75,-100,0] //todo
+,[645,9,1001,80,3,0,50,70,"Staff of Piercing","","When you attack using magical ability, it will ignore 10% of their MDEF<br>The amount ignored will increase depending on the refinement rate of this weapon (1% per refine)",89,15,4,4,0]
+,[646,9,125,130,4,1,250,80,"Staff of Destruction","","Reduces casting time of Amplify Magic by 50%<br>Refinement in multiples of 2 (+2, +4, +6, +8, +10) increases MATK by 1%<br>SP taken by all skills will increase depending on the refinement rate of this weapon (2% per refine)<br>Small chance to cast [Jupitel Thunder]Lv 5 whenever you are attacked physically (2% per refine)",89,25,4,3,2,10,195,1,0]
+,[647,9,63,120,4,0,150,70,"Divine Cross","","",89,15,20,6,5,4,51,15,56,15,195,1,0]
+,[648,14,130,130,3,1,150,70,"Bass Guitar","","Every time the enemy dies, Recovers 3 SP<br>Add a 3% chance of auto casting Level 3 Heaven's Drive on the enemy when receiving physical damage<br>Whenever you attack, 10% chance to cause Chaos to enemies within 5 x 5 (PBAoE) cells around you",0]
+,[649,14,130,10,4,0,180,70,"Spirited Guitar","","Loses 50 HP per every 5 second<br>Reduces DEX by massive rate",12,100,75,-100,0]
 ,[650,15,0,110,3,0,70,30,"Electric Wire","",0,20,4,0]
 ,[651,15,131,100,4,2,200,70,"Electric Eel","","Made of a creature that gives out electric energy. The surface is slippery and feels weird.<br>The skill level of the autocast Arrow Vulcan changes depending on the refinement rate of this weapon (not yet calculated!)",20,4,2,2,4,2,221,28,0]
 ,[652,15,131,110,4,1,150,70,"Foot of the Sea Witch","","A whip made with a foot of the famous western sea witch. It says it steals your life essence, so be careful of the witch.<br>Whenever the enemy dies, <font color=blue>Recovers 5 SP</font><br>Every time you attack, small chance to cause Silence to all enemies within 5 x 5 (PBAoE) cells around you.",221,29,0]
-,[653,15,131,185,4,0,130,70,"Carrot Whip","","[description translation missing - ItemID: 653]",0]
-,[654,17,0,68,3,2,58,70,"Western Outlaw","","[description translation missing - ItemID: 654]",0]
+,[653,15,131,185,4,0,130,70,"Carrot Whip","","Every time you attack, 1% chance to use AGI Up on yourself<br>The level of AGI Up cast depends on the refinement rate of this weapon",0]
+,[654,17,0,68,3,2,58,70,"Western Outlaw","","<b>For every 10 base AGI:</b><br>Hit + 1<br><b>For Every 14 base AGI:</b><br>ASPD + 1%",0]
 ,[655,18,0,150,3,"0 / 1",100,70,"Long Barrel","",0,10,20,12,-3,221,30,0]
-,[656,18,0,170,3,"0 / 1",70,70,"Jungle Carbine","","[description translation missing - ItemID: 656]",8,10,10,4,12,10,0]
+,[656,18,0,170,3,"0 / 1",70,70,"Jungle Carbine","","<b>For every 3 base DEX</b><br>Hit - 1",8,10,10,4,12,10,0]
 ,[657,18,0,138,3,2,77,70,"Lever Action Rifle","",0,8,20,10,50,12,-5,0]
-,[658,19,0,200,4,0,130,70,"Gate Keeper-DD","","DEF increases by Refine Rate",5,1,221,31,0]
-,[659,19,0,80,3,"1 / 2",70,70,"THUNDER-P","","[description translation missing - ItemID: 659]",8,-5,12,20,0]
-,[660,16,0,112,3,2,155,70,"Huuma Morning Star Shuriken","",0,5396,30,0]
+,[658,19,0,200,4,0,130,70,"Gatekeeper-DD","","Inflicts splash damage<br>DEF increases by Refine Rate",5,1,221,31,0]
+,[659,19,0,80,3,"1 / 2",70,70,"Thunder-P","","Inflicts splash damage",8,-5,12,20,0]
+,[660,16,0,112,3,2,155,70,"Huuma Calm Mind","","Casting cannot be interrupted",5396,30,0]
 ,[661,50,1,5,0,0,100,65,"Magni's Cap","",0,1,2,0]
 ,[662,50,1,3,0,1,50,65,"Ulle's Cap","",0,5,2,2,1,0]
 ,[663,50,1,3,0,0,30,65,"Frigg's Circlet","",0,19,10,4,2,14,50,0]
@@ -692,17 +692,17 @@ ItemOBJ = [
 ,[669,50,1,1,0,0,60,0,"Feather Beret","",0,19,1,57,10,0]
 ,[670,50,0,7,0,1,10,0,"Valkyrie Helm","",0,2,20,3,20,6,20,19,20,57,10,0] //custom TalonRO SQI - original: ,[670,50,1001,5,0,1,100,0,"Valkyrie Helm","",0,19,5,0]
 ,[671,50,0,0,0,0,70,0,"Beret","",0,57,10,193,1,0]
-,[672,50,0,3,0,1,40,60,"Magistrate Hat","","[description translation missing - ItemID: 672]",0]
-,[673,50,0,3,0,1,40,60,"Ayam","","<b>[TaeKwon Class]</b><br>INT + 1, SP Recovery + 3%",0]
+,[672,50,0,3,0,1,40,60,"Magistrate Hat","","<b>[TaeKwon Class]</b><br>AGI + 1<br>HP Recovery + 3%",0]
+,[673,50,0,3,0,1,40,60,"Ayam","","<b>[TaeKwon Class]</b><br>INT + 1<br>SP Recovery + 3%",0]
 ,[674,999,0,0,0,0,10,0,"HORIORUGORU","","[description translation missing - ItemID: 674]",0]
-,[675,50,0,4,0,1,50,40,"Bride Mask","","[description translation missing - ItemID: 675]",0]
-,[676,50,0,5,0,1,50,40,"Mythical Lion Mask","","[description translation missing - ItemID: 676]",0]
+,[675,50,0,4,0,1,50,40,"Bride Mask","","<b>[TaeKwon Class]</b><br>LUK + 2<br>Critical Rate + 5<br><b>Upper, Middle, and Lower Headgear</b>",0]
+,[676,50,0,5,0,1,50,40,"Mythical Lion Mask","","<b>[TaeKwon Class]</b><br>DEX + 2<br>ATK increases by Refine Rate * 2<br>Add a 10% chance of auto casting Stun on the enemy when attacking<br><b>Upper and Middle Headgear</b>",0]
 ,[677,51,0,0,0,0,10,0,"Censor Bar","",0,19,1,8,-5,153,5,0]
-,[678,51,0,2,0,0,10,30,"Hahoe Mask","","[description translation missing - ItemID: 678]",0]
-,[679,50,0,1,0,0,10,0,"Rabbit Doll","",0,5,1,9,2,0]
+,[678,51,0,2,0,0,10,30,"Hahoe Mask","","<b>[TaeKwon Class]</b><br>LUK + 1<br>Perfect Dodge + 2<br><b>Middle and Lower Headgear</b>",0]
+,[679,50,0,3,0,0,10,30,"Dolor Hat","","1.5% chance to cast Lex Aeterna with physical attacks",194,1,0]
 ,[680,50,0,5,0,0,80,50,"Dragon Skull","",0,59,5,0]
-,[681,50,0,1,0,0,50,30,"Ramen Hat","","Chance of auto casting Decrease AGI Level 1 on the enemy when attacking",5,4,0]
-,[682,50,0,0,0,0,10,10,"Whisper Mask","","[description translation missing - ItemID: 682]",2,3,68,-10,193,1,0]
+,[681,50,0,1,0,0,0,0,"Ramen Hat","","Chance of auto casting Decrease AGI Level 1 on the enemy when attacking",5,4,193,1,0]
+,[682,50,0,0,0,0,0,0,"Whisper Mask","",0,2,3,68,-10,193,1,0]
 ,[683,60,50,4,0,1,60,40,"Angelic Protection","",0,19,20,0]
 ,[684,60,1,6,0,1,250,65,"Odin's Blessing","",0,0]
 ,[685,60,1,7,0,0,350,54,"Goibne's Armor","",0,3,2,15,10,0]
@@ -713,15 +713,15 @@ ItemOBJ = [
 ,[690,61,50,3,0,1,40,20,"Angelic Guard","",0,56,5,0]
 ,[691,61,1,3,0,1,150,65,"Stone Buckler","",0,192,5,0]
 ,[692,61,1,3,0,1,50,65,"Valkyrja's Shield","",0,19,5,61,20,63,20,67,20,69,20,0]
-,[693,61,1001,5,0,0,120,68,"Platinum Shield","","40% chance to reflect magic spells for 2 seconds",19,5,191,15,192,15,51,10,0]
+,[693,61,1001,5,0,0,120,68,"Platinum Shield","","Whenever you receive a Magical Damage there is 1.5% chance to reflect all offensive magic against you at 40% chance for 2 seconds",19,5,191,15,192,15,51,10,0]
 ,[694,61,1001,5,0,1,100,55,"Orlean's Server","","5% chance to reflect magic spells",19,2,0]
 ,[695,61,1001,5,0,1,100,55,"Thorn Shield","",0,19,2,0]
-,[696,61,1001,4,0,1,250,75,"Strong Shield","","Skills cannot push or move the user<br>",60,-20,61,-20,62,-20,63,-20,64,-20,66,-20,67,-20,68,-20,0]
-,[697,62,55,1,0,1,30,85,"Wing of Eagle","",0,0]
+,[696,61,1001,4,0,1,250,75,"Strong Shield","","Skills cannot push or move the user",60,-20,61,-20,62,-20,63,-20,64,-20,66,-20,67,-20,68,-20,0]
+,[697,62,55,1,0,1,30,85,"Eagle Wing","",0,0]
 ,[698,62,50,2,0,1,40,20,"Angelic Cardigan","",0,75,5,0]
 ,[699,62,0,2,0,"0 / 1",15,0,"Undershirt","",0,19,1,0]
 ,[700,62,1,3,0,0,60,33,"Morpheus's Shawl","",0,19,3,16,10,0]
-,[701,62,1,3,0,0,60,61,"Morrigane Manteau","",0,6,2,11,8,0]
+,[701,62,1,3,0,0,60,61,"Morrigane's Manteau","",0,6,2,11,8,0]
 ,[702,62,1,3,0,0,70,54,"Goibne's Spaulders","",0,78,10,19,2,3,1,0]
 ,[703,62,1,3,0,0,40,65,"Falcon Robe","",0,9,15,11,5,0]
 ,[704,62,1,4,0,0,60,65,"Vali's Manteau","",0,60,15,0]
@@ -1377,7 +1377,7 @@ ItemOBJ = [
 ,[1352,4,0,160,3,0,0,1,"Spear of Excellent [Rental]","","[Magnum Break] damage +25%",1,2,0] //custom TalonRO rental
 ,[1353,9,1,100,2,0,0,1,"Staff of Darkness [Rental]","",0,4,2,89,15,73,-5,0] //custom TalonRO rental
 ,[1354,9,53,10,3,0,0,1,"Staff of Healing [Rental]","","Increase 15% chance to heal yourself by [Heal] and [Sanctuary] (didn't really get the description...)",89,15,193,1,0] //custom TalonRO rental
-,[1355,9,1,71,3,1,0,1,"Survivor's Rod (dex) [Rental]","",0,89,20,5,4,13,500,193,1,0] //custom TalonRO rental
+,[1355,9,1,71,3,1,0,1,"Survivor's Rod (DEX) [Rental]","",0,89,20,5,4,13,500,193,1,0] //custom TalonRO rental
 ,[1356,1,1,105,4,0,0,1,"Swordbreaker [Rental]","",0,140,5,193,1,0] //custom TalonRO rental
 ,[1357,11,0,179,4,0,0,1,"Unholy Touch [Rental]","",0,20,7,133,5,193,1,194,1,0] //custom TalonRO rental
 ,[1358,64,1,1,0,0,10,0,"Vesper Core 01 [Rental]","",0,4,2,16,5,19,3,0] //custom TalonRO rental
@@ -1684,7 +1684,7 @@ ItemOBJ = [
 ,[1638,100,0,0,0,0,0,0,"Advanced Angelic Protection + Advanced Angelic Cardigan","","",60,5,0]
 ,[1639,100,0,0,0,0,0,0,"Advanced Angelic Protection, Advanced Angel's Reincarnation, Advanced Angelic Guard, Advanced Angelic Cardigan & Advanced Angel's Kiss Equip","","",13,900,14,100,221,131,0]
 ,[1640,9,1053,30,3,1,100,50,"Staff of Thea","","A chance to recover 200 SP after using Heal<br><b>For every two upgrades:</b><br>Increase MATK by 1%",89,15,4,6,3,2,195,1,0]
-,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
+,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 base VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
 ,[1642,51,54,2,0,0,10,50,"Advanced Binoculars","",0,5,1,25,1,0]
 ,[1643,52,81,1,0,0,10,70,"Advanced Assassin Mask","",0,10,1,70,1,0]
 ,[1644,51,56,2,0,0,30,50,"Advanced Welding Mask","","<b>Mid and Low Headgear</b>",5,1,6,1,63,10,0]
@@ -2339,108 +2339,108 @@ ItemID = [
 ,[597,1,2693]
 ,[598,1,2690]
 ,[599,1,2694]
-,[600,1,5225],
-[601,4,0],
-[602,4,0],
-[603,4,0],
-[604,4,0],
-[605,4,0],
-[606,4,0],
-[607,4,0],
-[608,4,0],
-[609,4,0],
-[610,4,0],
-[611,4,0],
-[612,4,0],
-[613,4,0],
-[614,4,0],
-[615,4,0],
-[616,4,0],
-[617,4,0],
-[618,4,0],
-[619,4,0],
-[620,4,0],
-[621,4,0],
-[622,4,0],
-[623,4,0],
-[624,4,0],
-[625,4,0],
-[626,4,0],
-[627,4,0],
-[628,4,0],
-[629,4,0],
-[630,4,0],
-[631,4,0],
-[632,4,0],
-[633,4,0],
-[634,4,0],
-[635,4,0],
-[636,4,0],
-[637,4,0],
-[638,4,0],
-[639,4,0],
-[640,4,0],
-[641,4,0],
-[642,4,0],
-[643,4,0],
-[644,4,0],
-[645,4,0],
-[646,4,0],
-[647,4,0],
-[648,4,0],
-[649,4,0],
-[650,4,0],
-[651,4,0],
-[652,4,0],
-[653,4,0],
-[654,4,0],
-[655,4,0],
-[656,4,0],
-[657,4,0],
-[658,4,0],
-[659,4,0],
-[660,4,0],
-[661,4,0],
-[662,4,0],
-[663,4,0],
-[664,4,0],
-[665,4,0],
-[666,4,0],
-[667,4,0],
-[668,4,0],
-[669,4,0],
-[670,4,0],
-[671,4,0],
-[672,4,0],
-[673,4,0],
-[674,4,0],
-[675,4,0],
-[676,4,0],
-[677,4,0],
-[678,4,0],
-[679,4,0],
-[680,4,0],
-[681,4,0],
-[682,4,0],
-[683,4,0],
-[684,4,0],
-[685,4,0],
-[686,4,0],
-[687,4,0],
-[688,4,0],
-[689,4,0],
-[690,4,0],
-[691,4,0],
-[692,4,0],
-[693,4,0],
-[694,4,0],
-[695,4,0],
-[696,4,0],
-[697,4,0],
-[698,4,0],
-[699,4,0],
-[700,4,0],
-[701,4,0],
+,[600,1,5225]
+,[601,1,5287]
+,[602,1,5284]
+,[603,1,2351]
+,[604,1,2345]
+,[605,1,2347]
+,[606,1,2349]
+,[607,1,13017]
+,[608,1,5165]
+,[609,1,5164]
+,[610,1,13027]
+,[611,1,13028]
+,[612,1,13404]
+,[613,1,13405]
+,[614,1,1175]
+,[615,1,1176]
+,[616,1,1420]
+,[617,1,1421]
+,[618,1,1422]
+,[619,1,1477,1479]
+,[620,1,1478]
+,[621,1,1370,1371] //fix autospell
+,[622,1,1375]
+,[623,1,1376]
+,[624,1,1377]
+,[625,1,1535]
+,[626,1,1730]
+,[627,1,1731]
+,[628,1,1732]
+,[629,1,1733]
+,[630,1,1734]
+,[631,1,1268]
+,[632,1,1269]
+,[633,1,1270]
+,[634,1,1271]
+,[635,1,1818]
+,[636,1,1819]
+,[637,1,1820]
+,[638,1,1821]
+,[639,1,1822]
+,[640,1,1564]
+,[641,1,1565]
+,[642,1,1624]
+,[643,1,5104]
+,[644,1,1625]
+,[645,1,1626]
+,[646,1,2000]
+,[647,1,2001]
+,[648,1,1919]
+,[649,1,1920]
+,[650,1,1971]
+,[651,1,1972] //missing arrow vulcan autocast
+,[652,1,1973]
+,[653,1,1974]
+,[654,1,13107]
+,[655,1,13163,13164]
+,[656,1,13165,13166]
+,[657,1,13170]
+,[658,1,13167]
+,[659,1,13168,13169]
+,[660,1,13304]
+,[661,1,5122]
+,[662,1,5123]
+,[663,1,5124]
+,[664,1,5125]
+,[665,1,5126]
+,[666,1,5127]
+,[667,1,5128]
+,[668,1,5141]
+,[669,1,5170]
+,[670,1,8048]
+,[671,1,5172]
+,[672,1,5173]
+,[673,1.5174]
+,[674,3,0]
+,[675,1,5169]
+,[676,1,5177]
+,[677,1,5175]
+,[678,1,5176]
+,[679,1,5563]
+,[680,1,5292]
+,[681,1,5293]
+,[682,1,5294]
+,[683,1,2355]
+,[684,1,2353]
+,[685,1,2354]
+,[686,1,2364]
+,[687,1,2365]
+,[688,1,2366]
+,[689,1,2367]
+,[690,1,2116]
+,[691,1,2114]
+,[692,1,2115]
+,[693,1,2122]
+,[694,1,2123]
+,[695,1,2124]
+,[696,1,2125]
+,[697,1,2515]
+,[698,1,2521]
+,[699,1,2522,2523]
+,[700,1,2518]
+,[701,1,2519],
 [702,4,0],
 [703,4,0],
 [704,4,0],
@@ -3436,7 +3436,7 @@ function ClickB_Item(CBI)
 	if(eval(document.calcForm.ITEM_SW.checked)==0)
 		return;
 
-	// Item IDs with links to Talonro Item Database
+	// Item IDs with links to Talonro Item Database - Kato/Slap
 	if(ItemID[CBI][1] == 1){
 		var itemLink = "";
 		for(i = 2; i < ItemID[CBI].length; i++){

@@ -633,7 +633,7 @@ AutoSpellSkill = [
 [27,0,233,5,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Seismic Weapon]Lv 5
 [28,1,126,3,5,1], //When performing a ATK based attack, there's a chance 5 % to cast the skill [Jupitel Thunder]Lv 3
 [29,1,130,3,5,6], //When recieving ATK based damage, there's a chance 5 % to cast the skill [Frost Nova]Lv 3
-[30,1,430,5,0,1], //
+[30,1,430,5,2,1], //
 [31,1,436,6,0,1],
 [32,1,52,1,15,1],
 [33,1,76,5,2,1],
