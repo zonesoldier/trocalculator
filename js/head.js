@@ -5476,7 +5476,7 @@ with(document.calcForm){
 	}
 	//custom TalonRO Thanatos Card
 	if(CardNumSearch(166)){
-		n_B[14] = Math.round(n_B[14]/100*70);
+		n_B[14] = Math.round(n_B[14]/100*(100-30*CardNumSearch(166)));
 	}
 	n_B2[25] = Math.floor(n_B[7] / 2) + n_B[9];
 	n_B2[26] = n_B[5] + n_B[10];
@@ -5653,8 +5653,14 @@ if(n_B_IJYOU[1]){
 		n_B[24] = n_B[7] + (Math.floor(n_B[7]/20) * Math.floor(n_B[7]/20) -1);
 	//custom TalonRO Thanatos Card
 	if(CardNumSearch(166)){
-		n_B[23] = Math.round(n_B[23]/100*70);
-		n_B[24] = Math.round(n_B[24]/100*70);
+		if(CardNumSearch(166) == 4){
+			n_B[23] -= n_B[23];
+			n_B[24] -= n_B[24];
+		}
+		else{
+			n_B[23] = Math.round(n_B[23]/100*(100-30*CardNumSearch(166)));
+			n_B[24] = Math.round(n_B[24]/100*(100-30*CardNumSearch(166)));
+		}
 	}
 		if(n_B[23] > n_B[24])
 			n_B[24] = n_B[23];
