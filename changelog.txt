@@ -1,4 +1,4 @@
-[Update 2018-06-15]
+[Update 2018-06-16]
 - Issue #188: Added Dolor Hat
 - Issue #149: Proofreading [Slap]
 	Carrot Whip: added description
