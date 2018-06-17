@@ -3718,12 +3718,48 @@ function StPlusCalc()
 				wSPC_LUK = (99 - n_A_LUK);
 		}
 	}else if(n_A_PassSkill3[11] && n_A_PassSkill3[18]){
-		wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
-		wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
-		wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
-		wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
-		wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
-		wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
+		// if(n_A_STR + wSPC_STR < 99){
+			if(n_A_STR + w2[0] + Math.floor(n_A_PassSkill3[12]/2) < 99)
+				wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
+			else
+				wSPC_STR += Math.max((99 - n_A_STR - w2[0]), 0);
+		// }
+		// if(n_A_AGI + wSPC_AGI < 99){
+			if(n_A_AGI + w2[1] + Math.floor(n_A_PassSkill3[13]/2) < 99)
+				wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
+			else
+				wSPC_AGI += Math.max((99 - n_A_AGI - w2[1]), 0);
+		// }
+		// if(n_A_VIT + wSPC_VIT < 99){
+			if(n_A_VIT + w2[2] + Math.floor(n_A_PassSkill3[14]/2) < 99)
+				wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
+			else
+				wSPC_VIT += Math.max((99 - n_A_VIT - w2[2]), 0);
+		// }
+		// if(n_A_INT + wSPC_INT < 99){
+			if(n_A_INT + w2[3] + Math.floor(n_A_PassSkill3[15]/2) < 99)
+				wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
+			else
+				wSPC_INT += Math.max((99 - n_A_INT - w2[3]), 0);
+		// }
+		// if(n_A_DEX + wSPC_DEX < 99){
+			if(n_A_DEX + w2[4] + Math.floor(n_A_PassSkill3[16]/2) < 99)
+				wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
+			else
+				wSPC_DEX += Math.max((99 - n_A_DEX - w2[4]), 0);
+		// }
+		// if(n_A_LUK + wSPC_LUK < 99){
+			if(n_A_LUK + w2[5] + Math.floor(n_A_PassSkill3[17]/2) < 99)
+				wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
+			else
+				wSPC_LUK += Math.max((99 - n_A_LUK - w2[5]), 0);
+		// }
+		// wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
+		// wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
+		// wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
+		// wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
+		// wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
+		// wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
 	}
 
 	//CUSTOM (1st Transcendent Spirit)
