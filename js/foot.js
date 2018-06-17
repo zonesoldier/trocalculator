@@ -5099,7 +5099,6 @@ function KakutyouKansuu(){
 
 			if(selpot == 3 || selpot == 4 || selpot == 13 || selpot == 14 || selpot == 15 || selpot == 16){
 				brate = 0;
-				srate1 = srate;
 			}
 			else if(selpot == 5){
 				brate = -500;
@@ -5121,9 +5120,18 @@ function KakutyouKansuu(){
 			else if(brate > 0){
 				srate1 = srate + 10;
 			}
+			else{
+				srate1 = srate;
+			}
 
 			srate2 = srate + (brate/2);
 			srate3 = srate + brate;
+
+			if(adopted){
+				srate1 -= 3000;
+				srate2 -= 3000;
+				srate3 -= 3000;
+			}
 
 			if(srate1 > 10000){srate1 = 10000;}
 			if(srate1 < 0){srate1 = 0;}
@@ -5134,9 +5142,16 @@ function KakutyouKansuu(){
 
 			srate_avg = Math.floor((srate1 + srate2 + srate3)/3)/100;
 
-			srate_min = Math.min(srate1, srate2, srate3)/100;
-			srate_med = srate2/100;
-			srate_max = Math.max(srate1, srate2, srate3)/100;
+			srate_min = Math.floor(Math.min(srate1, srate2, srate3))/100;
+			srate_med = Math.floor(srate2)/100;
+			srate_max = Math.floor(Math.max(srate1, srate2, srate3))/100;
+
+			// if(adopted){
+			// 	srate_min = Math.floor((srate_min * 0.7)*100)/100;
+			// 	srate_med = Math.floor((srate_med * 0.7)*100)/100;
+			// 	srate_max = Math.floor((srate_max * 0.7)*100)/100;
+			// 	srate_avg = Math.floor((srate_avg * 0.7)*100)/100;
+			// }
 
 			myInnerHtml("A_KakutyouData","<b><br>Success rate range (Minimum ~ Median ~ Maximum):</b> " + srate_min + " % ~ " + srate_med + " % ~ " + srate_max + " %" + "<br><b>Success rate averge:</b> " + srate_avg + " %",0);
 
