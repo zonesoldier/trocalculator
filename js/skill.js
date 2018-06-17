@@ -633,7 +633,7 @@ AutoSpellSkill = [
 [27,0,233,5,1,1], //When performing a ATK based attack, there's a 1 % chance to cast the skill [Seismic Weapon]Lv 5
 [28,1,126,3,5,1], //When performing a ATK based attack, there's a chance 5 % to cast the skill [Jupitel Thunder]Lv 3
 [29,1,130,3,5,6], //When recieving ATK based damage, there's a chance 5 % to cast the skill [Frost Nova]Lv 3
-[30,1,430,5,0,1], //
+[30,1,430,5,2,1], //
 [31,1,436,6,0,1],
 [32,1,52,1,15,1],
 [33,1,76,5,2,1],
@@ -739,3 +739,16 @@ AutoSpellSkill = [
 [132,1,131,2,1,1] //custom TalonRO Chilly Spell Book lv 2 Storm Gust (1%) on physical attack [NattWara]
 ]
 //ID - Gets called in second spot(221(effect),1(ID)), autocast id = 1 by default, skill Id,Skill Lvl, chance %, attacktype(1atkbased,2shortrange,3longrange,4magical,5attacking,6receivingATKbased,0 by default, 0=low chance, 1=medium chance, 2=high chance)
+
+TRO_MAGICALSKILL_ELEMENTS = [
+  [0], //Neural
+  [54,55,128,130,131,320,410,412], //Water
+  [132,133], //Earth
+  [51,52,53,122,124,125,407,408,409], //Fire
+  [56,57,126,127,413,414,415], //Wind
+  [0], //Poison
+  [37,46,47,104,387], //Holy
+  [0], //Shadow
+  [277], //Ghost
+  [0], //Undead
+];

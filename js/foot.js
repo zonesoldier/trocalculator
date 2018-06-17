@@ -211,6 +211,9 @@ function StAllCalc()
 	//custom TalonRO Kris Enchantment
 	Click_KrisEnchantment();
 
+	//[Custom TalonRO 2018-06-14 - Malangdo Enchantment] [Kato]
+	tRO_Click_MalangdoEnchantment(n_A_Equip[0],n_A_Equip[1]);
+
 	if(n_Nitou){
 		W_REF2 = 0;
 		n_A_Weapon2LV = ItemOBJ[n_A_Equip[1]][4];
@@ -543,7 +546,6 @@ function StAllCalc()
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
 	}
-
 	StPlusCalc();
 
 	if(n_A_WeaponType != 10 && n_A_WeaponType !=14 && n_A_WeaponType !=15 && n_A_WeaponType !=17 && n_A_WeaponType !=18 && n_A_WeaponType !=19 && n_A_WeaponType !=20 && n_A_WeaponType !=21){
@@ -569,8 +571,6 @@ function StAllCalc()
 		w += 20;
 	if(SU_LUK >= 90 && EquipNumSearch(1164))
 		w += 20;
-	if(EquipNumSearch(676))
-		w += n_A_HEAD_DEF_PLUS * 2;
 	if(CardNumSearch(492))
 		w += Math.floor(n_A_JobLV /5) * CardNumSearch(492); //custom TalonRO Ifrit Card +1atk every 5 Joblv
 		//w += Math.floor(n_A_JobLV /10) * CardNumSearch(492); //original Ifrit Card +1atk every 10 Joblv
@@ -826,6 +826,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 	}
 
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for MaxHP] [Kato]
+	for(i=0;i<tRO_MalangdoEnchantment.length;i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+			if(vME >= 131 && vME <= 133) {
+					w += parseInt(vME.substr(-1)) * 100;
+			}
+	}
+
 	n_A_MaxHP += w;
 
 	if(n_A_MaxHP < 1)
@@ -1064,6 +1072,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(31 <= wKE && wKE <= 39)
 				w += w_enchant*50;
 		}
+	}
+
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for MaxSP] [Kato]
+	for(i=0;i<tRO_MalangdoEnchantment.length;i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+			if(vME == 141 || vME == 142) {
+					w += parseInt(vME.substr(-1)) * 50;
+			}
 	}
 
 	n_A_MaxSP += w;
@@ -1519,6 +1535,22 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_A_HIT += w_enchant*4;
 	}
 
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Fighting Spirit/Sharp - HIT] [Kato]
+		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+			var vME = tRO_MalangdoEnchantment[i];
+			if(vME >= 1781 && vME <= 1788) { //FS
+				if(vME.substr(-1) <= 4)
+					n_A_HIT += 1 + parseInt(vME.substr(-1));
+				 else
+					n_A_HIT += 5;
+			}
+
+			if(vME >= 1081 && vME <= 1085) { //Sharp
+				n_A_HIT += 1 + parseInt(vME.substr(-1));
+			}
+		}
+
+
 	myInnerHtml("A_HIT",n_A_HIT,0);
 
 	n_A_FLEE = n_A_BaseLV + n_A_AGI;
@@ -1786,6 +1818,17 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill8[16])
 		n_A_CRI = 0;
 
+		//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Sharp - CRIT [Kato]
+			for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+				var vME = tRO_MalangdoEnchantment[i];
+				if(vME >= 1081 && vME <= 1085) {
+					if(vME.substr(-1) == 1)
+						n_A_CRI += 3;
+					 else
+						n_A_CRI += 3 + parseInt(vME.substr(-1));
+				}
+			}
+
 	myInnerHtml("A_CRI",n_A_CRI,0);
 
 	//atk da calc
@@ -1911,6 +1954,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if (SkillSearch(146)){C_ATK +=3;}
 	if(n_A_PassSkill3[9]){C_ATK += 50+(25*(n_A_PassSkill3[9]-1));}
 	if(n_A_PassSkill6[0] == 0 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==3){C_ATK += n_A_PassSkill6[1] *10;}
+
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Fighting Spirit - ATK] [Kato]
+		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+			var vME = tRO_MalangdoEnchantment[i];
+			if(vME >= 1781 && vME <= 1788) {
+					C_ATK += (4 + (2 * (parseInt(vME.substr(-1)) - 1)));
+			}
+		}
 
 	//refines das armas
 	if(n_A_WeaponLV == 1){W_REF = n_A_Weapon_ATKplus * 2;}
@@ -2332,8 +2383,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += Math.floor(SU_AGI / 14);
 	if(n_A_Equip[0]==484 && SU_STR >= 50)
 		w += 5;
-	if(EquipNumSearch(621))
-		w -= 40;
 	if(EquipNumSearch(624))
 		w += (n_A_Weapon_ATKplus);
 	if(EquipNumSearch(641))
@@ -2480,6 +2529,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Halloween Midas Whisper
 	if(SU_AGI >= 80 && EquipNumSearch(1526))
 		w += 5;
+
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for ASPD] [Kato]
+		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+			var vME = tRO_MalangdoEnchantment[i];
+
+			if(vME == 123) w += parseInt(vME.substr(-1));
+		}
+
 
 	n_A_ASPD += (200 - n_A_ASPD) * (w / 100);
 
@@ -2804,6 +2861,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[25] -= (n_A_HEAD_DEF_PLUS - 5);
 	}
 
+	//[Custom TalonRO 2018-06-15 - Malandgo Enchantment for Expert Archer] [Kato]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+		if(vME >= 251 && vME <= 256) {
+				n_tok[25] += 2 * parseInt(vME.substr(-1));
+		}
+	}
+
 	//Custom TalonRO - 2018-06-07 - Lord of the Dead Helm [1] + Abysmal Knight Card - +5% damage on boss monsters  [Nattwara]
 	if(EquipNumSearch(1658) && CardNumSearch(31))
 		n_tok[26] += 5;
@@ -2968,7 +3033,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(wSPVS==3 || wSPVS==4 || wSPVS==5)
 			n_tok[19] += 5;
 	}
-	
+
 	if(EquipNumSearch(828)){
 		n_tok[151] += 2 * n_A_HEAD_DEF_PLUS;
 		n_tok[152] += 2 * n_A_HEAD_DEF_PLUS;
@@ -3076,6 +3141,42 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(CardNumSearch(536) && (n_A_JOB == 3 || n_A_JOB == 9 || n_A_JOB == 23 || n_A_JOB == 15 || n_A_JOB == 33)) {
 		n_tok[91] += 1 * Math.floor(n_A_HEAD_DEF_PLUS/2);
 	}
+
+
+	/*[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Spell Element] [Kato]
+		Well I couldn't find a n_tok for magical damage based on element.
+		Since we don't have it, I will separate the skills by element (skills.js) and apply the magical damage for all races [170-179]
+		*** Snap, the math was bugus, the only way I found here was to keep the modifier that was here and add the new one
+	*/
+	var eTypes = [0,0,0,0,0]; // 0 Neural, 1 Water, 2 Earth, 3 Fire, 4 Wind
+	var aMSnoEle = [373,374,375]; // Magical skills without proper element (will change depending on n_A_Weapon_zokusei)
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+		if(vME >= 261 && vME <= 266) {
+			switch(vME.substr(-1)){
+				case '1' : eTypes[3] += 2; break;
+				case '2' : eTypes[1] += 2; break;
+				case '3' : eTypes[4] += 2; break;
+				case '4' : eTypes[2] += 2; break;
+				case '5' : eTypes[3] += 4; break;
+				case '6' : eTypes[1] += 5; break;
+			}
+
+			for(k=1; k<5; k++) {
+				if(TRO_MAGICALSKILL_ELEMENTS[k].indexOf(n_A_ActiveSkill) != -1){
+						for(j=0; j<10; j++) {
+							n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[k]) / 100) - 100; // ***
+						}
+				}
+			}
+			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1){
+				for(j=0; j<10; j++) {
+					n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[n_A_Weapon_zokusei]) / 100) - 100; // ***
+				}
+			}
+		}
+	}
+
 
 	ClickB_Enemy();
 	KakutyouKansuu();
@@ -3492,6 +3593,26 @@ function StPlusCalc()
 				wSPC_LUK += w;
 		}
 	}
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for STR/AGI/VIT/INT/DEX/LUK] [Kato]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+
+		if(vME == 0 || vME.length > 2) continue;
+
+		var op = vME.substr(0,1);
+		var val = parseInt(vME.substr(-1));
+
+		switch(op) {
+				case '1': wSPC_STR += val; break;
+				case '2': wSPC_AGI += val; break;
+				case '3': wSPC_VIT += val; break;
+				case '4': wSPC_INT += val; break;
+				case '5': wSPC_DEX += val; break;
+				case '6': wSPC_LUK += val; break;
+		}
+	}
+
+
 	/*var wHSE2 = eval(document.calcForm.A_HSE_HEAD1.value);
 	if(wHSE2){
 		var w = wHSE2 % 10;
@@ -5750,14 +5871,14 @@ function StoN(n){
 			return i;
 }
 
-SaveStr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14, 15,16, 17, 18, 19, 20, 21,22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96];
-SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1,  3, 1,  3,  3,  3,  3,  3, 1,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2];
+SaveStr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14, 15,16, 17, 18, 19, 20, 21,22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100];
+SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1,  3, 1,  3,  3,  3,  3,  3, 1,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3];
 
 function SaveCookie(){
 with(document.calcForm){
 	SaveData = new Array();
 
-	for(i=0;i<=91;i++)
+	for(i=0;i<=100;i++)
 		SaveData[i]=0;
 
 	SaveData[0] = eval(A_JOB.value);
@@ -5896,14 +6017,28 @@ with(document.calcForm){
 		SaveData[96] = 0;
 	}
 
+	//[Custom TalonRO 2018-06-14 - Save Cookie for Malangdo] [Kato]
+	SaveData[97] = ((A_ME11.value) ? eval(A_ME11.value) : 0);
+	SaveData[98] = ((A_ME12.value) ? eval(A_ME12.value) : 0);
+
+
+	if (typeof(A_weapon2) != "undefined"){
+			SaveData[99] = ((A_ME21.value) ? eval(A_ME21.value) : 0);
+			SaveData[100] = ((A_ME22.value) ? eval(A_ME22.value) : 0);
+	}else{
+			SaveData[99] = 0;
+			SaveData[100] = 0;
+	}
+
 	//wak1="";
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
-	for(i=0;i<=96;i++)
+	for(i=0;i<=100;i++)
 		SaveData[i] = NtoS(SaveData[i],SaveStr1[i]);
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
 	//alert(wak1);
+
 	cookieNum = A_SaveSlot.value;
 
 	wDay = 99000;
@@ -5914,7 +6049,7 @@ with(document.calcForm){
 
 	wStr = "" +SaveData[0];
 
-	for(i=1;i<=96;i++){
+	for(i=1;i<=100;i++){
 		wStr += ""+SaveData[i];
 	}
 	document.cookie = cookieNum +"="+ wStr +"; expires="+ expDay;
@@ -5937,11 +6072,12 @@ with(document.calcForm){
 			break;
 		}
 	}
-	for(i=0;i<=96;i++)
+
+	for(i=0;i<=100;i++)
 		SaveData[i] = 0;
 
 	j=0;
-	for(i=0;i<=96;i++){
+	for(i=0;i<=100;i++){
 		if(SaveStr1[i] == 1){
 			SaveData[i] = wStr.substr(j,1);
 			j++;
@@ -5953,7 +6089,8 @@ with(document.calcForm){
 			j+=3;
 		}
 	}
-	for(i=0;i<=96;i++){
+
+	for(i=0;i<=100;i++){
 		if(SaveStr1[i] == 1)
 			SaveData[i] = StoN(SaveData[i]);
 		if(SaveStr1[i] == 2)
@@ -5961,7 +6098,8 @@ with(document.calcForm){
 		if(SaveStr1[i] == 3)
 			SaveData[i] = StoN(SaveData[i].substr(0,1)) + SaveData[i].substr(1,2);
 	}
-	for(i=0;i<=96;i++){
+
+	for(i=0;i<=100;i++){
 		if(SaveStr1[i] == 3 && SaveData[i].substr(0,2) == "00")
 			SaveData[i] = SaveData[i].substr(2,1);
 		else if(SaveStr1[i] == 3 && SaveData[i].substr(0,1) == "0")
@@ -5980,8 +6118,14 @@ with(document.calcForm){
 		}
 	}
 
-	for(i=0;i<=96;i++)
-		SaveData[i] = eval(SaveData[i]);
+	for(i=97;i<=100;i++){
+		if (typeof(SaveData[i]) == "undefined"){
+			SaveData[i] = 0;
+		}
+	}
+
+	for(i=0;i<=100;i++)
+			SaveData[i] = eval(SaveData[i]);
 
 	if(eval(SaveData[0]) == 20 && eval(SaveData[54]) == 1)
 		SuperNoviceFullWeaponCHECK = 1;
@@ -6128,6 +6272,12 @@ with(document.calcForm){
 	SQI_Bonus_Effect[1] = SaveData[94];
 	SQI_Bonus_Effect[2] = SaveData[95];
 	SQI_Bonus_Effect[3] = SaveData[96];
+
+	// [Custom TalonRO - 2018-06-15 - Load Cookie for Malangdo Enchants] [Kato]
+	A_ME11.value = SaveData[97];
+	A_ME12.value = SaveData[98];
+	A_ME21.value = SaveData[99];
+	A_ME22.value = SaveData[100];
 
 	Click_SQI_Bonus(0);
 
@@ -6615,6 +6765,16 @@ with(document.calcForm){
 		x+=4;
 	}
 
+	//[Custom TalonRO 2018-06-15 - SAVE URL] [Kato]
+		SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_ME11.value),2);
+		SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_ME12.value),2);
+		x+=2;
+	if (typeof(A_weapon2) != "undefined"){
+			SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_ME21.value),2);
+			SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_ME22.value),2);
+			x+=2;
+	}
+
 	wStr = "" +SaveData[0];
 	for(i=1;i<=x;i++){
 		wStr += ""+SaveData[i];
@@ -6960,6 +7120,14 @@ with(document.calcForm){
 			x+=8;
 		}
 
+		//[Custom TalonRO 2018-06-15 - LOAD URL] [Kato]
+		A_ME11.value = StoN2(w.substr(x+1,2));
+		A_ME12.value = StoN2(w.substr(x+3,2));
+		x+=4;
+		A_ME21.value = StoN2(w.substr(x+1,2));
+		A_ME22.value = StoN2(w.substr(x+3,2));
+		x+=4;
+
 		calc();
 
 		StCalc(1);
@@ -7218,15 +7386,15 @@ for(i=0;i<ITEM_SP_TIME_OBJ.length;i++){
 	}
 }
 
+//[Custom TalonRO - 2018-06-03 - Populate combos in index] [Kato]
+tRO_PopulateCombos();
+
 document.calcForm.A_JOB.value = 0;
 ClickJob(0);
 if(Taijin==0)
 	EnemySort();
 StCalc();
 calc();
-
-//[Custom TalonRO - 2018-06-03 - Populate combos in index] [Kato]
-tRO_PopulateCombos();
 
 LoadCookie3();
 LoadCookieConf();

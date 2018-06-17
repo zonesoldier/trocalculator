@@ -1,4 +1,23 @@
 [Update 2018-06-15]
+- Issue #188: Added Dolor Hat
+- Issue #149: Proofreading [Slap]
+	Carrot Whip: added description
+	Western Outlaw: added description
+	Jungle Carbine: added description
+	Gatekeeper-DD: name, description
+	Thunder-P: added description
+	Huuma Calm Mind: name
+	Magistrate Hat: added description
+	Bride Mask: added description
+	Mythical Lion Mask: added description
+	Hahoe Mask: added description
+	Ramen Hat: weight, lvl req, added unrefinable
+	Whisper Mask: weight, lvl req
+	Platinum Shield: description
+	Eagle Wing: name
+	Morrigane's Manteau: name
+
+[Update 2018-06-15]
 - Corrected negative hit [Slap]
 - Added links for 601-650 [Slap]
 - Issue #149: Proofreading [Slap] //For the sake of my sanity proofreading notes will not be as detailed as before; will only indicate what has been modified, not how
@@ -22,6 +41,9 @@
 	Bass Guitar: added description
 	Spirited Guitar: added description
 
+[Update 2018-06-14]
+- Issue #6: Added Malangdo Enchants; [Kato]
+- Issue #187: Fixed Loki's Muffler; [Kato]
 
 [Update 2018-06-13]
 - Issue #182: Fixed regions for Seals mobs; [Kato]

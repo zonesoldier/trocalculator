@@ -60,6 +60,9 @@ EQB = [0,0,0];
 //custom TalonRO fix ignore effects on left/offhand like Ice Pick or Weeder Knife
 IgnoreEffectOnLeftHand = 0;
 
+//[Custom TalonRO 2018-06-15 - Global for Malangdo Enchants values] [Kato]
+tRO_MalangdoEnchantment = [0,0,0,0];
+
 function myInnerHtml(wIH1,wIH2,wIH3)
 {
 	if(wIH3 == 0){
@@ -3109,12 +3112,12 @@ function BattleMagicCalc(wBMC)
 	if(n_A_ActiveSkill==131)
 		if(EquipNumSearch(1169))
 			wX += n_A_Weapon_ATKplus;
-		
+
 	//Custom TalonRO - 2018-06-07 - Chilly Spell Book - Storm Gust & Cold Bolt damage +3% per refine [Nattwara]
 	if(n_A_ActiveSkill==54 || n_A_ActiveSkill==131)
 		if(EquipNumSearch(1653))
 			wX += (3 * n_A_Weapon_ATKplus);
-		
+
 	if(n_A_ActiveSkill==37||n_A_ActiveSkill==387){
 		if(n_A_JobSearch() == 3 && EquipNumSearch(1247)){
 			wX += 5;
@@ -4729,7 +4732,7 @@ with(document.calcForm){
 }}
 /*[Custom TalonRO - 2018-06-03
 Function to populate combos by using definitions from etc.js;
-Definitions are: +0 to +10, Kris/HS Enchants, Extended Info and Card Shorcuts] [Kato]
+Definitions are: +0 to +10, Kris/HS/Malangdo Enchants, Extended Info and Card Shorcuts] [Kato]
 */
 function tRO_PopulateCombos() {
 	with(document.calcForm){
@@ -4761,10 +4764,113 @@ function tRO_PopulateCombos() {
 				A_KE22.options[i+1] = new Option(KRIS_ENCHANTMENT[i][1],KRIS_ENCHANTMENT[i][0]);
 		}
 
+			myInnerHtml("A_METext11","Malangdo 1: ",0);
+			myInnerHtml("A_METext12","Malangdo 2: ",0);
+			myInnerHtml("A_METext21","Malangdo 1: ",0);
+			myInnerHtml("A_METext22","Malangdo 2: ",0);
+
+		A_ME11.options[0] = new Option("(Malangdo Enchant "+ A_ME11.name.substr(-1) +")",0);
+		A_ME12.options[0] = new Option("(Malangdo Enchant "+ A_ME12.name.substr(-1) +")",0);
+		A_ME21.options[0] = new Option("(Malangdo Enchant 2-"+ A_ME21.name.substr(-1) +")",0);
+		A_ME22.options[0] = new Option("(Malangdo Enchant 2-"+ A_ME22.name.substr(-1) +")",0);
+
+		for(i=0; i<MALANGDO_ENCHANTS.length; i++) {
+				A_ME11.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+				A_ME12.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+				A_ME21.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+				A_ME22.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+		}
+
 		for(var i=0; i<HS_ENCHANTS.length; i++) {
 			A_HSE.options[i] = new Option(HS_ENCHANTS[i][1],HS_ENCHANTS[i][0]);
 		}
 	}
+}
+
+/*
+	[Custom TalonRO 2018-06-14 - Function to perform the click changes,
+	it's responsible for elements displays changes and enchant removal exceptions
+	Requires etc.js->arrays: ME_ENCHANTABLE and MALANGDO_ENCHANTS, index.html->select: A_ME11, A_ME12, A_ME21, A_ME22
+] [Kato]
+*/
+function tRO_Click_MalangdoEnchantment(w1,w2){
+
+	var bEnchant1 = bEnchant2 = false;
+	var kID1 = kID2 = 0;
+	if(w1) {
+			for(i=0; i<ME_ENCHANTABLE.length; i++) {
+				if(ME_ENCHANTABLE[i][0] == w1) {
+					bEnchant1 = true;
+					kID1 = i;
+					break;
+				}
+			}
+	}
+	if(w2) {
+			for(i=0;i<ME_ENCHANTABLE.length;i++) {
+				if(ME_ENCHANTABLE[i][0] == w2) {
+					bEnchant2 = true;
+					kID2 = i;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_ME1").style.display = ((bEnchant1) ? "" : "none");
+	document.getElementById("T_ME2").style.display = ((bEnchant2) ? "" : "none");
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_ME11.value = 0;
+		document.calcForm.A_ME12.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_ME21.value = 0;
+		document.calcForm.A_ME22.value = 0;
+	}
+
+	with(document.calcForm){
+			if(ME_ENCHANTABLE[kID1][1] != 0){
+				var arEx = [];
+				for(i=1; i<ME_ENCHANTABLE[kID1].length; i++){
+					if(ME_ENCHANTABLE[kID1][i] != 0) {
+						arEx.push(ME_ENCHANTABLE[kID1][i].toString());
+					}
+					else break;
+				}
+
+					for (j = A_ME11.length - 1; j >= 0; j--) {
+						if(parseInt(arEx.indexOf(A_ME11.options[j].value)) != -1) {
+								A_ME11.remove(j);
+						}
+					}
+					for(j = A_ME12.length - 1; j >= 0; j--){
+							if(parseInt(arEx.indexOf(A_ME12.options[j].value)) != -1) {
+								A_ME12.remove(j);
+							}
+					}
+		}
+
+		if(ME_ENCHANTABLE[kID2][1] != 0){
+			var arEx = [];
+			for(i=1;i< ME_ENCHANTABLE[kID2].length;i++){
+				if(ME_ENCHANTABLE[kID2][i] != 0)
+					arEx.push(ME_ENCHANTABLE[kID2][i].toString());
+				else break;
+			}
+
+				for (j = A_ME21.length - 1; j >= 0; j--) {
+					if(arEx.indexOf(A_ME21.options[j].value) != -1) {
+							A_ME21.remove(j);
+					}
+				}
+				for (j = A_ME22.length - 1; j >= 0; j--) {
+						if(arEx.indexOf(A_ME22.options[j].value) != -1) {
+							A_ME22.remove(j);
+						}
+				}
+		}
+	}
+	tRO_MalangdoEnchantment = [document.calcForm.A_ME11.value,document.calcForm.A_ME12.value,document.calcForm.A_ME21.value,document.calcForm.A_ME22.value];
 }
 
 function Click_Skill9SW(){
