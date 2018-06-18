@@ -5091,7 +5091,7 @@ function KakutyouKansuu(){
 					8 = acid
 					9 = grenade
 					10 = plant
-					11 = marine sphere
+					11 = marine
 					12 = glisten
 					13 = anodyne
 					14 = aloevera
@@ -5099,23 +5099,36 @@ function KakutyouKansuu(){
 					16 = elemental
 			*/
 
-			if(selpot == 3 || selpot == 4 || selpot == 13 || selpot == 14 || selpot == 15 || selpot == 16){
+			if(selpot == 3 //blue pot
+				|| selpot == 4 //slim red
+				|| selpot == 13 //anodyne
+				|| selpot == 14 //aloevera
+				|| selpot == 15 //embryo
+				|| selpot == 16) //elemental
+			{
 				brate = 0;
 			}
-			else if(selpot == 5){
+			else if(selpot == 5) //slim yellow
+			{
 				brate = -500;
 			}
-			else if(selpot == 0 || selpot == 1 || selpot == 2 || selpot == 7 || selpot == 8 || selpot == 9 || selpot == 10 || selpot == 11){
+			else if(selpot == 0 //red pot
+				|| selpot == 1 //yellow pot
+				|| selpot == 2 //white pot
+				|| selpot == 7 //alcohol
+				|| selpot == 8 //acid
+				|| selpot == 9 //grenade
+				|| selpot == 10 //plant
+				|| selpot == 11) //marine
+			{
 				brate = 1000;
 			}
-			else if(selpot == 6 || selpot == 12){
+			else if(selpot == 6 //slim white
+				|| selpot == 12) //glisten
+			{
 				brate = -1000;
 			}
 
-			// frate1 = Math.floor((srate - brate)*100)/100;
-			// if(frate1 < 0){frate1 = 0;}
-			// frate2 = Math.floor((srate + brate)*100)/100;
-			// if(frate2 < 0){frate2 = 0;}
 			if(brate < 0){
 				srate1 = srate - 10;
 			}
@@ -5130,9 +5143,9 @@ function KakutyouKansuu(){
 			srate3 = srate + brate;
 
 			if(adopted){
-				srate1 -= 3000;
-				srate2 -= 3000;
-				srate3 -= 3000;
+				srate1 = Math.floor(srate1 * 70) / 100;
+				srate2 = Math.floor(srate2 * 70) / 100;
+				srate3 = Math.floor(srate3 * 70) / 100;
 			}
 
 			if(srate1 > 10000){srate1 = 10000;}
