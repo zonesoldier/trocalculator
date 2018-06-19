@@ -1,9 +1,11 @@
 [Update 2018-06-19]
-- Fixed scrollbar jumping when changing items with item data shown [Slap]
-- Removed gym pass from weight limit calculations [Slap]
+- Issue #200: Fixed scrollbar jumping when changing items with item data shown [Slap]
+- Issue #199: Removed gym pass from weight limit calculations [Slap]
+- Fixed strip chance interaction with cards for rogues/stalkers in extend info [Slap]
+- Fixed extended info not clearing properly after changing info displayed [Slap]
 
 [Update 2018-06-18]
-- Changed items set links [Kato/Slap]
+- Issue #183: Changed items set links [Kato/Slap]
 	Now done through SetEquipName Function
 - Issue #149: Proofreading [Slap]
 	Falcon Muffler: name
@@ -19,7 +21,7 @@
 
 [Update 2018-06-17]
 - Issue #193: Fixed Marionette Contro [Slap]
-	Status compensation should now cap based on base stat
+	Stat compensation should now cap based on base stat
 - Issue #5: Corrected brewing formula [Slap]
 	0.05% lower than iRO due to custom homunculus bonus
 - Issue #113: Thanatos cards now stack [Slap]
