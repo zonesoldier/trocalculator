@@ -4540,36 +4540,36 @@ function KakutyouKansuu(){
 			myInnerHtml("A_KakutyouData","",0);
 	}
 	else if(wKK == 5){
-		syozijob =[0,800,400,400,600,200,800,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,0,0,0,0,0,0,800,800,400,600,800];
-		syoziryou = 2000 + syozijob[n_A_JOB];
-		syoziryou += eval(document.calcForm.A_KakutyouSelNum2.value) * 200;
-		if(eval(document.calcForm.A_youshi.checked))
-			syoziryou = 2000;
-		syoziryou += eval(document.calcForm.A_STR.value) * 30;
-		if(SkillSearch(78))
-			syoziryou += 1000;
-		if(n_A_JOB==6||n_A_JOB==12||n_A_JOB==19||n_A_JOB==20||n_A_JOB==26||n_A_JOB==33)
-			syoziryou += eval(document.calcForm.A_KakutyouSelNum.value) * 200;
-		EquipKG = 0;
-		for(i=0;i<=10;i++)
-			EquipKG += ItemOBJ[n_A_Equip[i]][6];
+			syozijob =[0,800,400,400,600,200,800,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,0,0,0,0,0,0,800,800,400,600,800];
+			syoziryou = 2000 + syozijob[n_A_JOB];
+			// syoziryou += eval(document.calcForm.A_KakutyouSelNum2.value) * 200;
+			if(eval(document.calcForm.A_youshi.checked))
+				syoziryou = 2000;
+			syoziryou += eval(document.calcForm.A_STR.value) * 30;
+			if(SkillSearch(78))
+				syoziryou += 1000;
+			if(n_A_JOB==6||n_A_JOB==12||n_A_JOB==19||n_A_JOB==20||n_A_JOB==26||n_A_JOB==33)
+				syoziryou += eval(document.calcForm.A_KakutyouSelNum.value) * 200;
+			EquipKG = 0;
+			for(i=0;i<=10;i++)
+				EquipKG += ItemOBJ[n_A_Equip[i]][6];
 
-		w = "<table border=0>";
-		//w += "<tr><td><b><font color=grey>White Slim Potion: </font></b>" + '<td><select name="A_WPS" onChange="StAllCalc()"></select>' + "</td>";
-		//w += "<td><b><font color=blue>Blue Potion: </font></b>" + '<td><select name="A_BP" onChange="StAllCalc()"></select>' + "</td></tr>";
-		w += "<tr><td><b><font color=red>Weight Limit: </font></b>" + syoziryou + "</td></tr><tr><td><b>Total Weight of Items: </b>"+EquipKG;
-		w += "</td></tr></table>";
+			w = "<table border=0>";
+			//w += "<tr><td><b><font color=grey>White Slim Potion: </font></b>" + '<td><select name="A_WPS" onChange="StAllCalc()"></select>' + "</td>";
+			//w += "<td><b><font color=blue>Blue Potion: </font></b>" + '<td><select name="A_BP" onChange="StAllCalc()"></select>' + "</td></tr>";
+			w += "<tr><td><b><font color=red>Weight Limit: </font></b>" + syoziryou + "</td></tr><tr><td><b>Total Weight of Items: </b>"+EquipKG;
+			w += "</td></tr></table>";
 
-		/*for(i=0;i<1000;i++)
-					document.calcForm.A_WPS.options[i] = new Option(i,i);
-					document.calcForm.A_WPS.value=0;}
-		for(i=0;i<1000;i++)
-					document.calcForm.A_BP.options[i] = new Option(i,i);
-					document.calcForm.A_BP.value=0;}*/
+			/*for(i=0;i<1000;i++)
+						document.calcForm.A_WPS.options[i] = new Option(i,i);
+						document.calcForm.A_WPS.value=0;}
+			for(i=0;i<1000;i++)
+						document.calcForm.A_BP.options[i] = new Option(i,i);
+						document.calcForm.A_BP.value=0;}*/
 
-		myInnerHtml("A_KakutyouData",w,0);
+			myInnerHtml("A_KakutyouData",w,0);
 
-		//myInnerHtml("A_KakutyouData","Weight Limit: "+syoziryou+"<BR>Total Weight of Equipment: "+EquipKG,0);
+			//myInnerHtml("A_KakutyouData","Weight Limit: "+syoziryou+"<BR>Total Weight of Equipment: "+EquipKG,0);
 	}
 	else if(wKK == 6){
 		var JyoutaiTaisei = new Array();
@@ -5071,33 +5071,6 @@ function KakutyouKansuu(){
 
 			//Brewing rework - [Slap] - 2018-06-17
 			srate = potionr * 50 + preparep * 300 + n_A_JobLV * 20 + (n_A_DEX + n_A_LUK + (n_A_INT/2)) * 10 + potrate * 100 + pharmacyboost * 100;
-			// if(srate < 0)srate = 0;
-			//custom TalonRO Update 2015-12-21
-			// if(srate > 100)srate = 100;
-
-			// if(adopted){
-			// 	srate = Math.floor((srate * 0.7));}
-
-			/*
-				selpot:
-					0 = red pot
-					1 = yellow pot
-					2 = white pot
-					3 = blue pot
-					4 = slim red
-					5 = slim yellow
-					6 = slim white
-					7 = alcohol
-					8 = acid
-					9 = grenade
-					10 = plant
-					11 = marine
-					12 = glisten
-					13 = anodyne
-					14 = aloevera
-					15 = embryo
-					16 = elemental
-			*/
 
 			if(selpot == 3 //blue pot
 				|| selpot == 4 //slim red
@@ -5129,15 +5102,9 @@ function KakutyouKansuu(){
 				brate = -1000;
 			}
 
-			if(brate < 0){
-				srate1 = srate - 10;
-			}
-			else if(brate > 0){
-				srate1 = srate + 10;
-			}
-			else{
-				srate1 = srate;
-			}
+			if(brate < 0){srate1 = srate - 10;}
+			else if(brate > 0){srate1 = srate + 10;}
+			else{srate1 = srate;}
 
 			srate2 = srate + (brate/2);
 			srate3 = srate + brate;
@@ -5161,15 +5128,7 @@ function KakutyouKansuu(){
 			srate_med = Math.floor(srate2)/100;
 			srate_max = Math.floor(Math.max(srate1, srate2, srate3))/100;
 
-			// if(adopted){
-			// 	srate_min = Math.floor((srate_min * 0.7)*100)/100;
-			// 	srate_med = Math.floor((srate_med * 0.7)*100)/100;
-			// 	srate_max = Math.floor((srate_max * 0.7)*100)/100;
-			// 	srate_avg = Math.floor((srate_avg * 0.7)*100)/100;
-			// }
-
 			myInnerHtml("A_KakutyouData","<b><br>Success rate range (Minimum ~ Median ~ Maximum):</b> " + srate_min + " % ~ " + srate_med + " % ~ " + srate_max + " %" + "<br><b>Success rate averge:</b> " + srate_avg + " %",0);
-
 		}
 		else if(n_A_JOB==22){
 			myInnerHtml("A_KakutyouSel","Potion to Create: " + '<select name="A_KakutyouSelNum" onChange="StAllCalc()"></select><BR>',0);
@@ -5430,20 +5389,22 @@ function KakutyouKansuu2(){
 	}
 	if(wKK == 5){
 		if(n_A_JOB==6||n_A_JOB==12||n_A_JOB==19||n_A_JOB==20||n_A_JOB==26||n_A_JOB==33){
-			myInnerHtml("A_KakutyouSel","Enlarge Weight Limit Lv: " + '<select name="A_KakutyouSelNum"onChange="StAllCalc()"></select><BR>'
-			+"Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
-			for(i=0;i<=10;i++)
-				document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
+			// myInnerHtml("A_KakutyouSel","Enlarge Weight Limit Lv: " + '<select name="A_KakutyouSelNum"onChange="StAllCalc()"></select><BR>'
+			// +"Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
+			myInnerHtml("A_KakutyouSel","Enlarge Weight Limit Lv: " + '<select name="A_KakutyouSelNum"onChange="StAllCalc()"></select><BR>',0);
+			// for(i=0;i<=10;i++)
+			// 	document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
 			for(i=0;i<=10;i++)
 				document.calcForm.A_KakutyouSelNum.options[i] = new Option(i,i);
-			if(n_A_JOB==20)
-				document.calcForm.A_KakutyouSelNum.value=0;
-			else
+			// if(n_A_JOB==20)
+			// 	document.calcForm.A_KakutyouSelNum.value=0;
+			// else
 				document.calcForm.A_KakutyouSelNum.value=10;
 		}else{
-			myInnerHtml("A_KakutyouSel","Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
-			for(i=0;i<=10;i++)
-				document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
+			// myInnerHtml("A_KakutyouSel","Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
+			// for(i=0;i<=10;i++)
+			// 	document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
+			myInnerHtml("A_KakutyouSel","",0);
 		}
 		return;
 	}
@@ -5589,8 +5550,9 @@ function KakutyouKansuu2(){
 					document.calcForm.ISP.value=0;
 			for(i=0;i<=10;i++)
 					document.calcForm.IRP.options[i] = new Option(i,i);
-					document.calcForm.IRP.value=0;}
-			return;
+					document.calcForm.IRP.value=0;
+		}else{myInnerHtml("A_KakutyouSel","",0);}
+		return;
 	}
 	if(wKK == 13){
 		if(n_A_JOB==12||n_A_JOB==26){
@@ -5683,7 +5645,7 @@ function KakutyouKansuu2(){
 		if(CardNumSearch(413)){
 			striptext += "<td>Strip [Armor] Level:</td>" + '<td><select name="S3_LV" onChange="StAllCalc()"></select></td>';}
 		striptext += "</td></tr></table>";
-		myInnerHtml("A_KakutyouSel",striptext + "<br>",0);
+		myInnerHtml("A_KakutyouSel",striptext,0);
 		if(n_A_JOB == 14 || n_A_JOB == 28){
 			for(i=1;i<=5;i++){
 				document.calcForm.S_LV.options[i-1] = new Option(i,i);
@@ -5718,7 +5680,7 @@ function KakutyouKansuu2(){
 		myInnerHtml("A_KakutyouSel",cooktext + "<br>",0);
 		for(i=1;i<=10;i++){
 			document.calcForm.Flv.options[i-1] = new Option(i,i);
-			document.calcForm.Flv.value=0;}
+			document.calcForm.Flv.value=1;}
 		for(i=0;i<=5;i++){
 			document.calcForm.FStat.options[i] = new Option(Stat_Food[i][1],i);
 			document.calcForm.FStat.value=0;}

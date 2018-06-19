@@ -1,4 +1,8 @@
-[Update 2018-06-17]
+[Update 2018-06-19]
+- Fixed scrollbar jumping when changing items with item data shown [Slap]
+- Removed gym pass from weight limit calculations [Slap]
+
+[Update 2018-06-18]
 - Changed items set links [Kato/Slap]
 	Now done through SetEquipName Function
 - Issue #149: Proofreading [Slap]

@@ -592,6 +592,8 @@ CardSortOBJ = [
 //}
 function Click_Card(CBI)
 {
+	var tempScrollTop = window.pageYOffset;
+
 	Item_or_Card = "Card";
 	ItemCardNumberCheck = CBI;
 
@@ -610,11 +612,13 @@ function Click_Card(CBI)
 	if(CBI == 106){
 		myInnerHtml("nm080","Very Strong or Top10",0);
 		myInnerHtml("B_SETUMEI","1 Star Crumb adds +5 seeking damage<BR>2 Star Crumb adds +10 seeking damage<BR>3 Star Crumb adds +40 seeking damage<BR>If is made by a TOP 10 Blacksmith/Whitemisth Rank damage +10 seeking damage<BR>[Rank card available at the forth column]",0);
+		window.scrollTo(0, tempScrollTop);
 		return;
 	}
 	if(201 <= CBI && CBI <= 204){
 		myInnerHtml("nm080",cardOBJ[CBI][2],0);
 		myInnerHtml("B_SETUMEI","Weapons "+ ZokuseiOBJ[CBI-200] +" to attribute",0);
+		window.scrollTo(0, tempScrollTop);
 		return;
 	}
 	myInnerHtml("nm080",cardOBJ[CBI][2] +" Card",0);
@@ -647,6 +651,7 @@ function Click_Card(CBI)
 		}
 	}
 	myInnerHtml("B_SETUMEI",CBIstr,0);
+	window.scrollTo(0, tempScrollTop);
 }
 
 w_SC = [[429,235,306,"NULL"],

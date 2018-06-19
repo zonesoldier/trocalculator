@@ -638,7 +638,7 @@ SQI_BONUS =[
 ];
 
 EXTENDED_INFO = [
-	["","-"]
+[0,"-"]
  ,[1,"Heal Amount"]
  ,[16,"Sanctuary Healing Amount"]
  ,[2,"Increased HP Recovery"]

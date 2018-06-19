@@ -3407,6 +3407,8 @@ ItemMax = ItemOBJ.length -1;
 
 function ClickB_Item(CBI)
 {
+   var tempScrollTop = window.pageYOffset;
+
 	if(eval(document.calcForm.ITEM_SW.checked)==1 && CBI == "SW" && Item_or_Card == "Card"){
 		Click_Card(ItemCardNumberCheck);
 		return;
@@ -3517,6 +3519,7 @@ function ClickB_Item(CBI)
 				SQI_Bonus_Effect[i] = 0;
 			Click_SQI_Bonus(0);
 		}
+   window.scrollTo(0, tempScrollTop);
 }
 
 function Item_Setumei(nC1,nC2)
@@ -3733,7 +3736,7 @@ function Item_Setumei(nC1,nC2)
 			CBIstr += "Increase damage from [" + SizeOBJ[nC1-190] +"] size monsters by "+ (-1 * nC2) +"%<BR>";
 	}
 	if(193 == nC1)
-		CBIstr += "<br><Font color='#FF0000'>Unrefinable</Font><BR>";
+		CBIstr += "<Font color='#FF0000'>Unrefinable</Font><BR>";
 	if(194 == nC1)
 		CBIstr += "Cannot be broken<BR>";
 	if(195 == nC1)

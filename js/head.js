@@ -203,10 +203,10 @@ JobEquipItemOBJ = [
 
 		50 = novice
 		51 = swordman class
-		52 = thief class
+		52 = thief class, ninja
 		53 = acolyte class
 		54 = archer class
-		55 = mage class
+		55 = mage class, soul linker
 		56 = merchant class
 		58 = ninja
 		59 = gunslinger
