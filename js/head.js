@@ -203,10 +203,10 @@ JobEquipItemOBJ = [
 
 		50 = novice
 		51 = swordman class
-		52 = thief class
+		52 = thief class, ninja
 		53 = acolyte class
 		54 = archer class
-		55 = mage class
+		55 = mage class, soul linker
 		56 = merchant class
 		58 = ninja
 		59 = gunslinger
@@ -5476,7 +5476,7 @@ with(document.calcForm){
 	}
 	//custom TalonRO Thanatos Card
 	if(CardNumSearch(166)){
-		n_B[14] = Math.round(n_B[14]/100*70);
+		n_B[14] = Math.round(n_B[14]/100*(100-30*CardNumSearch(166)));
 	}
 	n_B2[25] = Math.floor(n_B[7] / 2) + n_B[9];
 	n_B2[26] = n_B[5] + n_B[10];
@@ -5653,8 +5653,8 @@ if(n_B_IJYOU[1]){
 		n_B[24] = n_B[7] + (Math.floor(n_B[7]/20) * Math.floor(n_B[7]/20) -1);
 	//custom TalonRO Thanatos Card
 	if(CardNumSearch(166)){
-		n_B[23] = Math.round(n_B[23]/100*70);
-		n_B[24] = Math.round(n_B[24]/100*70);
+		n_B[23] = Math.round(n_B[23]/100*(100-30*CardNumSearch(166)));
+		n_B[24] = Math.round(n_B[24]/100*(100-30*CardNumSearch(166)));
 	}
 		if(n_B[23] > n_B[24])
 			n_B[24] = n_B[23];

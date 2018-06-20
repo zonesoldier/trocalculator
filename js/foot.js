@@ -1058,7 +1058,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1058)){
 		w += n_A_BaseLV*2;}
 
-	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - slaptro - 2018-06-07
+	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1646)){
 		w += n_A_HEAD_DEF_PLUS * 5;
 	}
@@ -1182,7 +1182,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(809))
 		n_A_DEFplus -= n_A_HEAD_DEF_PLUS;
 
-	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - slaptro - 2016-06-07
+	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - [Slap] - 2016-06-07
 	if(EquipNumSearch(1641)){
 		n_A_DEF -= Math.floor(SU_VIT / 30);
 	}
@@ -1441,7 +1441,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	n_A_HIT += n_tok[8];
 
-	//negative hit correction- slaptro - 2018-06-18
+	//negative hit correction- [Slap] - 2018-06-18
 	if(n_A_HIT < 0){
 		n_A_HIT -= n_A_HIT;
 	}
@@ -1570,7 +1570,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill6[0] == 2 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==4)
 		n_A_FLEE += n_A_PassSkill6[1] *3;
 
-	//Bloody Roar FLEE -160 - slaptro - 2018-06-11
+	//Bloody Roar FLEE -160 - [Slap] - 2018-06-11
 	if(EquipNumSearch(483)){
 		if(n_A_FLEE < 160){
 			n_A_FLEE -= n_A_FLEE;
@@ -1687,12 +1687,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill8[20])
 		n_A_LUCKY += 20;
 
-	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - slaptro - 2016-06-07
+	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - [Slap] - 2016-06-07
 	if(EquipNumSearch(1652) && n_A_HEAD_DEF_PLUS > 6){
 		n_A_LUCKY += 4;
 	}
 
-	//Bloody Roar Perfect Dodge -160 - slaptro - 2018-06-11
+	//Bloody Roar Perfect Dodge -160 - [Slap] - 2018-06-11
 	if(EquipNumSearch(483)){
 		if(n_A_LUCKY < 160){
 			n_A_LUCKY -= n_A_LUCKY;
@@ -2139,12 +2139,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 1 * (n_A_HEAD_DEF_PLUS - 7);
 	}
 
-	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
+	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
 	if(EquipNumSearch(1640)){
 		w += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 
-	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
+	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
 	if(EquipNumSearch(1645)){
 		w += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
@@ -2447,7 +2447,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1455))
 		w += 3*Math.floor(n_A_Weapon_ATKplus/2);
 
-	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - slaptro - 2016-06-07
+	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - [Slap] - 2016-06-07
 	if(EquipNumSearch(1315) && n_A_Weapon_ATKplus>4){
 			w += n_A_Weapon_ATKplus - 4;
 	}
@@ -2836,12 +2836,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS >= 5)
 		n_tok[37] += 2*(n_A_HEAD_DEF_PLUS-4);
 
-	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - slaptro - 2018-06-07
+	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - [Slap] - 2018-06-07
 	if(EquipNumSearch(1649) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[31] += 10
 	}
 
-	//custom Talonro Imrpoved Bongun Hat: If refine > 6 increase damage against Demon monster by 10% - slaptro - 2018-06-07
+	//custom Talonro Imrpoved Bongun Hat: If refine > 6 increase damage against Demon monster by 10% - [Slap] - 2018-06-07
 	if(EquipNumSearch(1650) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[36] += 10
 	}
@@ -2914,7 +2914,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 7)
 		n_tok[70] += 10;
 
-	//custom TalonRO Improved Joker Jester: If refine rate >6 +5% critical damage - slaptro - 2018-06-07
+	//custom TalonRO Improved Joker Jester: If refine rate >6 +5% critical damage - [Slap] - 2018-06-07
 	if(EquipNumSearch(1647) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[70] += 5;
 	}
@@ -3343,12 +3343,12 @@ function StPlusCalc()
 			wSPC_DEX += 1;
 	}
 
-	//custom TalonRo Improved Mage Hat: Every Refine level 7 or higher adds INT + 1 - slaptro - 2018-06-07
+	//custom TalonRo Improved Mage Hat: Every Refine level 7 or higher adds INT + 1 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1645) && n_A_HEAD_DEF_PLUS > 6){
 		wSPC_INT += n_A_HEAD_DEF_PLUS - 6;
 	}
 
-	//custom TalonRo Improved Magician Hat: Every Refine level 7 or higher adds DEX + 1 - slaptro - 2018-06-07
+	//custom TalonRo Improved Magician Hat: Every Refine level 7 or higher adds DEX + 1 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1646) && n_A_HEAD_DEF_PLUS > 6){
 		wSPC_DEX += n_A_HEAD_DEF_PLUS - 6;
 	}
@@ -3717,13 +3717,51 @@ function StPlusCalc()
 			else
 				wSPC_LUK = (99 - n_A_LUK);
 		}
+
+	//Marionette status compensation rework - [Slap] - 2018-06-17	
 	}else if(n_A_PassSkill3[11] && n_A_PassSkill3[18]){
-		wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
-		wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
-		wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
-		wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
-		wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
-		wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
+		// if(n_A_STR + wSPC_STR < 99){
+			if(n_A_STR + w2[0] + Math.floor(n_A_PassSkill3[12]/2) < 99)
+				wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
+			else
+				wSPC_STR += Math.max((99 - n_A_STR - w2[0]), 0);
+		// }
+		// if(n_A_AGI + wSPC_AGI < 99){
+			if(n_A_AGI + w2[1] + Math.floor(n_A_PassSkill3[13]/2) < 99)
+				wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
+			else
+				wSPC_AGI += Math.max((99 - n_A_AGI - w2[1]), 0);
+		// }
+		// if(n_A_VIT + wSPC_VIT < 99){
+			if(n_A_VIT + w2[2] + Math.floor(n_A_PassSkill3[14]/2) < 99)
+				wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
+			else
+				wSPC_VIT += Math.max((99 - n_A_VIT - w2[2]), 0);
+		// }
+		// if(n_A_INT + wSPC_INT < 99){
+			if(n_A_INT + w2[3] + Math.floor(n_A_PassSkill3[15]/2) < 99)
+				wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
+			else
+				wSPC_INT += Math.max((99 - n_A_INT - w2[3]), 0);
+		// }
+		// if(n_A_DEX + wSPC_DEX < 99){
+			if(n_A_DEX + w2[4] + Math.floor(n_A_PassSkill3[16]/2) < 99)
+				wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
+			else
+				wSPC_DEX += Math.max((99 - n_A_DEX - w2[4]), 0);
+		// }
+		// if(n_A_LUK + wSPC_LUK < 99){
+			if(n_A_LUK + w2[5] + Math.floor(n_A_PassSkill3[17]/2) < 99)
+				wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
+			else
+				wSPC_LUK += Math.max((99 - n_A_LUK - w2[5]), 0);
+		// }
+		// wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
+		// wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
+		// wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
+		// wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
+		// wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
+		// wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
 	}
 
 	//CUSTOM (1st Transcendent Spirit)
@@ -4502,36 +4540,36 @@ function KakutyouKansuu(){
 			myInnerHtml("A_KakutyouData","",0);
 	}
 	else if(wKK == 5){
-		syozijob =[0,800,400,400,600,200,800,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,0,0,0,0,0,0,800,800,400,600,800];
-		syoziryou = 2000 + syozijob[n_A_JOB];
-		syoziryou += eval(document.calcForm.A_KakutyouSelNum2.value) * 200;
-		if(eval(document.calcForm.A_youshi.checked))
-			syoziryou = 2000;
-		syoziryou += eval(document.calcForm.A_STR.value) * 30;
-		if(SkillSearch(78))
-			syoziryou += 1000;
-		if(n_A_JOB==6||n_A_JOB==12||n_A_JOB==19||n_A_JOB==20||n_A_JOB==26||n_A_JOB==33)
-			syoziryou += eval(document.calcForm.A_KakutyouSelNum.value) * 200;
-		EquipKG = 0;
-		for(i=0;i<=10;i++)
-			EquipKG += ItemOBJ[n_A_Equip[i]][6];
+			syozijob =[0,800,400,400,600,200,800,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,0,0,0,0,0,0,800,800,400,600,800];
+			syoziryou = 2000 + syozijob[n_A_JOB];
+			// syoziryou += eval(document.calcForm.A_KakutyouSelNum2.value) * 200;
+			if(eval(document.calcForm.A_youshi.checked))
+				syoziryou = 2000;
+			syoziryou += eval(document.calcForm.A_STR.value) * 30;
+			if(SkillSearch(78))
+				syoziryou += 1000;
+			if(n_A_JOB==6||n_A_JOB==12||n_A_JOB==19||n_A_JOB==20||n_A_JOB==26||n_A_JOB==33)
+				syoziryou += eval(document.calcForm.A_KakutyouSelNum.value) * 200;
+			EquipKG = 0;
+			for(i=0;i<=10;i++)
+				EquipKG += ItemOBJ[n_A_Equip[i]][6];
 
-		w = "<table border=0>";
-		//w += "<tr><td><b><font color=grey>White Slim Potion: </font></b>" + '<td><select name="A_WPS" onChange="StAllCalc()"></select>' + "</td>";
-		//w += "<td><b><font color=blue>Blue Potion: </font></b>" + '<td><select name="A_BP" onChange="StAllCalc()"></select>' + "</td></tr>";
-		w += "<tr><td><b><font color=red>Weight Limit: </font></b>" + syoziryou + "</td></tr><tr><td><b>Total Weight of Items: </b>"+EquipKG;
-		w += "</td></tr></table>";
+			w = "<table border=0>";
+			//w += "<tr><td><b><font color=grey>White Slim Potion: </font></b>" + '<td><select name="A_WPS" onChange="StAllCalc()"></select>' + "</td>";
+			//w += "<td><b><font color=blue>Blue Potion: </font></b>" + '<td><select name="A_BP" onChange="StAllCalc()"></select>' + "</td></tr>";
+			w += "<tr><td><b><font color=red>Weight Limit: </font></b>" + syoziryou + "</td></tr><tr><td><b>Total Weight of Items: </b>"+EquipKG;
+			w += "</td></tr></table>";
 
-		/*for(i=0;i<1000;i++)
-					document.calcForm.A_WPS.options[i] = new Option(i,i);
-					document.calcForm.A_WPS.value=0;}
-		for(i=0;i<1000;i++)
-					document.calcForm.A_BP.options[i] = new Option(i,i);
-					document.calcForm.A_BP.value=0;}*/
+			/*for(i=0;i<1000;i++)
+						document.calcForm.A_WPS.options[i] = new Option(i,i);
+						document.calcForm.A_WPS.value=0;}
+			for(i=0;i<1000;i++)
+						document.calcForm.A_BP.options[i] = new Option(i,i);
+						document.calcForm.A_BP.value=0;}*/
 
-		myInnerHtml("A_KakutyouData",w,0);
+			myInnerHtml("A_KakutyouData",w,0);
 
-		//myInnerHtml("A_KakutyouData","Weight Limit: "+syoziryou+"<BR>Total Weight of Equipment: "+EquipKG,0);
+			//myInnerHtml("A_KakutyouData","Weight Limit: "+syoziryou+"<BR>Total Weight of Equipment: "+EquipKG,0);
 	}
 	else if(wKK == 6){
 		var JyoutaiTaisei = new Array();
@@ -5029,50 +5067,68 @@ function KakutyouKansuu(){
 			if (homunevolved)
 				pharmacyboost *= 2;
 
-
 			adopted = eval(document.calcForm.A_youshi.checked);
 
-			srate = Math.floor((potionr*0.5 + preparep*3 + n_A_JobLV*0.2 + (n_A_DEX +n_A_LUK + (n_A_INT/2)) * 0.1 + potrate + pharmacyboost)*100)/100;
-			if(srate < 0)srate = 0;
-			//custom TalonRO Update 2015-12-21
-			if(srate > 100)srate = 100;
+			//Brewing rework - [Slap] - 2018-06-17
+			srate = potionr * 50 + preparep * 300 + n_A_JobLV * 20 + (n_A_DEX + n_A_LUK + (n_A_INT/2)) * 10 + potrate * 100 + pharmacyboost * 100;
+
+			if(selpot == 3 //blue pot
+				|| selpot == 4 //slim red
+				|| selpot == 13 //anodyne
+				|| selpot == 14 //aloevera
+				|| selpot == 15 //embryo
+				|| selpot == 16) //elemental
+			{
+				brate = 0;
+			}
+			else if(selpot == 5) //slim yellow
+			{
+				brate = -500;
+			}
+			else if(selpot == 0 //red pot
+				|| selpot == 1 //yellow pot
+				|| selpot == 2 //white pot
+				|| selpot == 7 //alcohol
+				|| selpot == 8 //acid
+				|| selpot == 9 //grenade
+				|| selpot == 10 //plant
+				|| selpot == 11) //marine
+			{
+				brate = 1000;
+			}
+			else if(selpot == 6 //slim white
+				|| selpot == 12) //glisten
+			{
+				brate = -1000;
+			}
+
+			if(brate < 0){srate1 = srate - 10;}
+			else if(brate > 0){srate1 = srate + 10;}
+			else{srate1 = srate;}
+
+			srate2 = srate + (brate/2);
+			srate3 = srate + brate;
 
 			if(adopted){
-				srate = Math.floor((srate * 0.7));}
+				srate1 = Math.floor(srate1 * 70) / 100;
+				srate2 = Math.floor(srate2 * 70) / 100;
+				srate3 = Math.floor(srate3 * 70) / 100;
+			}
 
-			/*
-				selpot:
-					0 = red pot
-					1 = yellow pot
-					2 = white pot
-					3 = blue pot
-					4 = slim red
-					5 = slim yellow
-					6 = slim thiw
-					7 = alcohol
-					8 = acid
-					9 = grenade
-					10 = plant
-					11 = marine sphere
-					12 = glisten
-					13 = anodyne
-					14 = aloevera
-					15 = embryo
-					16 = elemental
-			*/
+			if(srate1 > 10000){srate1 = 10000;}
+			if(srate1 < 0){srate1 = 0;}
+			if(srate2 > 10000){srate2 = 10000;}
+			if(srate2 < 0){srate2 = 0;}
+			if(srate3 > 10000){srate3 = 10000;}
+			if(srate3 < 0){srate3 = 0;}
 
-			if(selpot == 3 || selpot == 4 || selpot == 13 || selpot == 14 || selpot == 15 || selpot == 16){
-				brate = 0;}
-			if(selpot == 5){brate = 2.5;}
-			if(selpot == 0 || selpot == 1 || selpot == 2 || selpot == 6 || selpot == 7 || selpot == 8 || selpot == 9 || selpot == 10 || selpot == 11 || selpot == 12){
-				brate = 5;}
+			srate_avg = Math.floor((srate1 + srate2 + srate3)/3)/100;
 
-			frate1 = Math.floor((srate - brate)*100)/100;
-			if(frate1 < 0){frate1 = 0;}
-			frate2 = Math.floor((srate + brate)*100)/100;
-			if(frate2 < 0){frate2 = 0;}
+			srate_min = Math.floor(Math.min(srate1, srate2, srate3))/100;
+			srate_med = Math.floor(srate2)/100;
+			srate_max = Math.floor(Math.max(srate1, srate2, srate3))/100;
 
-			myInnerHtml("A_KakutyouData","<b><br>Success rate: </b>" + srate + " %" + " [ " + frate1 + " % ~ " + frate2 + " % ]",0);
+			myInnerHtml("A_KakutyouData","<b><br>Success rate range (Minimum ~ Median ~ Maximum):</b> " + srate_min + " % ~ " + srate_med + " % ~ " + srate_max + " %" + "<br><b>Success rate averge:</b> " + srate_avg + " %",0);
 		}
 		else if(n_A_JOB==22){
 			myInnerHtml("A_KakutyouSel","Potion to Create: " + '<select name="A_KakutyouSelNum" onChange="StAllCalc()"></select><BR>',0);
@@ -5085,7 +5141,7 @@ function KakutyouKansuu(){
 
 		}else{myInnerHtml("A_KakutyouData","Not Available for this Class",0);}
 	}
-	/*else if(wKK == 14){
+	/*else if(wKK == 1 4){
 		var wkk14;
 		if(n_A_JOB == 19 || n_A_JOB == 33 ){
 			Amistr = n_A_STR + n_A_AGI + n_A_VIT;
@@ -5109,38 +5165,7 @@ function KakutyouKansuu(){
 	}*/
 	else if(wKK == 14){//banana
 		var wkk14;
-
-		if((CardNumSearch(157) && CardNumSearch(413)) && (n_A_JOB != 14 || n_A_JOB != 28)){
-			S_LV1 = eval(document.calcForm.S2_LV.value);
-			E_DEX1 = eval(document.calcForm.E2_DEX.value);
-			Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
-			S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
-			if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
-			if (S_Time < 60){S_Time = 60;}
-
-			wkk14 = "<table border=0><tr><td><b>Chance to Strip [Weapon], [Armor]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
-			wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
-		else if(CardNumSearch(413) && (n_A_JOB != 14 || n_A_JOB != 28)){
-			S_LV1 = eval(document.calcForm.S3_LV.value);
-			E_DEX1 = eval(document.calcForm.E2_DEX.value);
-			Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
-			S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
-			if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
-			if (S_Time < 60){S_Time = 60;}
-
-			wkk14 = "<table border=0><tr><td><b>Chance to Strip [Armor]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
-			wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
-		else if(CardNumSearch(157) && (n_A_JOB != 14 || n_A_JOB != 28)){
-			S_LV1 = eval(document.calcForm.S2_LV.value);
-			E_DEX1 = eval(document.calcForm.E2_DEX.value);
-			Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
-			S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
-			if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
-			if (S_Time < 60){S_Time = 60;}
-
-			wkk14 = "<table border=0><tr><td><b>Chance to Strip [Weapon]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
-			wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
-		else if(n_A_JOB == 14 || n_A_JOB == 28){
+		if(n_A_JOB == 14 || n_A_JOB == 28){
 			if(n_A_JOB == 14 || n_A_JOB == 28){
 				S_LV1 = eval(document.calcForm.S_LV.value);
 				E_DEX1 = eval(document.calcForm.E_DEX.value);
@@ -5153,20 +5178,64 @@ function KakutyouKansuu(){
 				FS_LV1 = eval(document.calcForm.FS_LV.value);
 				FStrip = 5 + (2*FS_LV1) + ((n_A_DEX - E_DEX1)/5);
 				FS_Time = 135 + ((n_A_DEX - E_DEX1)/2);
-			if (FStrip < 5+2*FS_LV1){FStrip = 5+2*FS_LV1;}
-			if (FS_Time < 135){FS_Time = 135;}
+				if (FStrip < 5+2*FS_LV1){FStrip = 5+2*FS_LV1;}
+				if (FS_Time < 135){FS_Time = 135;}
 			}
 
 			if(n_A_JOB == 14){
 				wkk14 = "<table border=0><tr><td><b>Chance to Strip [Helm], [Armor], [Weapon] or [Shield]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
 				wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
-			if(n_A_JOB == 28){
+			else if(n_A_JOB == 28){
 				wkk14 = "<table border = 0><tr><td><b>Chance to Strip [Helm], [Armor], [Weapon] or [Shield]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
 				wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr>";
 				wkk14 += "<tr><td><b>Chance to Full Strip: </b></td><td>" + Math.floor(FStrip*10)/10 + " %</td></tr>";
 				wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(FS_Time*10)/10 + " Seconds</td></tr></table>";}
 			}
-		}else {wkk14 = "Not Available for this Class";}
+		}
+		else if(CardNumSearch(157) || CardNumSearch(413)){
+			// S_LV1 = eval(document.calcForm.S2_LV.value);
+			S_LV1 = 1;
+			E_DEX1 = eval(document.calcForm.E2_DEX.value);
+			Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
+			S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
+			if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
+			if (S_Time < 60){S_Time = 60;}
+
+			if(CardNumSearch(157) && CardNumSearch(413)){
+				strip_type = "[Weapon], [Armor]";
+			}
+			else if(CardNumSearch(157)){
+				strip_type = "[Weapon]";
+			}
+			else if(CardNumSearch(413)){
+				strip_type = "[Armor]";
+			}
+			wkk14 = "<table border=0><tr><td><b>Chance to Strip " + strip_type + ": </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
+			wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
+		// else if(CardNumSearch(413)){
+		// 	// S_LV1 = eval(document.calcForm.S3_LV.value);
+		// 	S_LV1 = 1;
+		// 	E_DEX1 = eval(document.calcForm.E2_DEX.value);
+		// 	Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
+		// 	S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
+		// 	if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
+		// 	if (S_Time < 60){S_Time = 60;}
+
+		// 	wkk14 = "<table border=0><tr><td><b>Chance to Strip [Armor]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
+		// 	wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
+		// else if(CardNumSearch(157)){
+		// 	// S_LV1 = eval(document.calcForm.S2_LV.value);
+		// 	S_LV1 = 1;
+		// 	E_DEX1 = eval(document.calcForm.E2_DEX.value);
+		// 	Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
+		// 	S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
+		// 	if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
+		// 	if (S_Time < 60){S_Time = 60;}
+
+		// 	wkk14 = "<table border=0><tr><td><b>Chance to Strip [Weapon]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
+		// 	wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";
+		// }
+		else {wkk14 = "Not Available for this Class";}
 		myInnerHtml("A_KakutyouData",wkk14,0);
 	}
 	else if(wKK == 15){
@@ -5333,20 +5402,22 @@ function KakutyouKansuu2(){
 	}
 	if(wKK == 5){
 		if(n_A_JOB==6||n_A_JOB==12||n_A_JOB==19||n_A_JOB==20||n_A_JOB==26||n_A_JOB==33){
-			myInnerHtml("A_KakutyouSel","Enlarge Weight Limit Lv: " + '<select name="A_KakutyouSelNum"onChange="StAllCalc()"></select><BR>'
-			+"Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
-			for(i=0;i<=10;i++)
-				document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
+			// myInnerHtml("A_KakutyouSel","Enlarge Weight Limit Lv: " + '<select name="A_KakutyouSelNum"onChange="StAllCalc()"></select><BR>'
+			// +"Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
+			myInnerHtml("A_KakutyouSel","Enlarge Weight Limit Lv: " + '<select name="A_KakutyouSelNum"onChange="StAllCalc()"></select><BR>',0);
+			// for(i=0;i<=10;i++)
+			// 	document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
 			for(i=0;i<=10;i++)
 				document.calcForm.A_KakutyouSelNum.options[i] = new Option(i,i);
-			if(n_A_JOB==20)
-				document.calcForm.A_KakutyouSelNum.value=0;
-			else
+			// if(n_A_JOB==20)
+			// 	document.calcForm.A_KakutyouSelNum.value=0;
+			// else
 				document.calcForm.A_KakutyouSelNum.value=10;
 		}else{
-			myInnerHtml("A_KakutyouSel","Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
-			for(i=0;i<=10;i++)
-				document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
+			// myInnerHtml("A_KakutyouSel","Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
+			// for(i=0;i<=10;i++)
+			// 	document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
+			myInnerHtml("A_KakutyouSel","",0);
 		}
 		return;
 	}
@@ -5492,8 +5563,9 @@ function KakutyouKansuu2(){
 					document.calcForm.ISP.value=0;
 			for(i=0;i<=10;i++)
 					document.calcForm.IRP.options[i] = new Option(i,i);
-					document.calcForm.IRP.value=0;}
-			return;
+					document.calcForm.IRP.value=0;
+		}else{myInnerHtml("A_KakutyouSel","",0);}
+		return;
 	}
 	if(wKK == 13){
 		if(n_A_JOB==12||n_A_JOB==26){
@@ -5568,7 +5640,7 @@ function KakutyouKansuu2(){
 				document.calcForm.A_HomunEvolved.options[i] = new Option(HomunEvolvedOption[i],i);
 				document.calcForm.A_HomunEvolved.value=0;
 			//end
-		}
+		}else{myInnerHtml("A_KakutyouSel","",0);}
 		return;
 	}
 	if(wKK == 14){
@@ -5576,17 +5648,18 @@ function KakutyouKansuu2(){
 		if(n_A_JOB == 14 || n_A_JOB == 28){
 			striptext += "<table border=0><tr><td>Strip [Helm], [Armor], [Weapon] or [Shield] Level:</td>" + '<td><select name="S_LV" onChange="StAllCalc()"></select></td>';
 			striptext += "<td>Enemy DEX:</td>" + '<td><select name="E_DEX" onChange="StAllCalc()"></select>';
-		if(n_A_JOB == 28){
-			striptext += "<tr><td>Full Strip Level:</td>" + '<td><select name="FS_LV" onChange="StAllCalc()"></select>';}
+			if(n_A_JOB == 28){
+				striptext += "<tr><td>Full Strip Level:</td>" + '<td><select name="FS_LV" onChange="StAllCalc()"></select>';}
+			striptext += "</td></tr></table>";
 		}
-		else if((CardNumSearch(157) || CardNumSearch(413)) && (n_A_JOB != 14 || n_A_JOB != 28)){
-			striptext += "<table border=0><tr><td>Enemy DEX:</td>" + '<td><select name="E2_DEX" onChange="StAllCalc()"></select></td></tr><tr>';}
-		if(CardNumSearch(157)){
-			striptext += "<td>Strip [Weapon] Level:</td>" + '<td><select name="S2_LV" onChange="StAllCalc()"></select></td>';}
-		if(CardNumSearch(413)){
-			striptext += "<td>Strip [Armor] Level:</td>" + '<td><select name="S3_LV" onChange="StAllCalc()"></select></td>';}
-		striptext += "</td></tr></table>";
-		myInnerHtml("A_KakutyouSel",striptext + "<br>",0);
+		else if((CardNumSearch(157) || CardNumSearch(413)) && (n_A_JOB != 14 && n_A_JOB != 28)){
+			striptext += "<table border=0><tr><td>Enemy DEX:</td>" + '<td><select name="E2_DEX" onChange="StAllCalc()"></select></td></tr>';
+			if(CardNumSearch(157)){
+				striptext += "<td>Strip [Weapon] Level: 1</td>";}
+			if(CardNumSearch(413)){
+			striptext += "<td>Strip [Armor] Level: 1</td>";}
+		}
+		myInnerHtml("A_KakutyouSel",striptext,0);
 		if(n_A_JOB == 14 || n_A_JOB == 28){
 			for(i=1;i<=5;i++){
 				document.calcForm.S_LV.options[i-1] = new Option(i,i);
@@ -5600,16 +5673,22 @@ function KakutyouKansuu2(){
 					document.calcForm.FS_LV.value=1;}
 			}
 		}
-		if(CardNumSearch(157) || CardNumSearch(413)){
+		else if(CardNumSearch(157) || CardNumSearch(413)){
 			for(i=0;i<=200;i++){
 				document.calcForm.E2_DEX.options[i] = new Option(i,i);
 				document.calcForm.E2_DEX.value=0;}
-			if(CardNumSearch(157)){
-				document.calcForm.S2_LV.options[0] = new Option("1",0);
-				document.calcForm.S2_LV.value=0;}
-			if(CardNumSearch(413)){
-				document.calcForm.S3_LV.options[0] = new Option("1",0);
-				document.calcForm.S3_LV.value=0;}
+			// if(CardNumSearch(157)){
+			// 	document.calcForm.S2_LV.options[0] = new Option("1",0);
+			// 	document.calcForm.S2_LV.value=0;}
+			// else if(CardNumSearch(413)){
+			// 	document.calcForm.S3_LV.options[0] = new Option("1",0);
+			// 	document.calcForm.S3_LV.value=0;}
+			// else{
+			// 	document.calcForm.S2_LV.options[0] = new Option("1",0);
+			// 	document.calcForm.S2_LV.value=0;
+			// 	document.calcForm.S3_LV.options[0] = new Option("1",0);
+			// 	document.calcForm.S3_LV.value=0;
+			// }
 		}
 		return;
 	}
@@ -5621,7 +5700,7 @@ function KakutyouKansuu2(){
 		myInnerHtml("A_KakutyouSel",cooktext + "<br>",0);
 		for(i=1;i<=10;i++){
 			document.calcForm.Flv.options[i-1] = new Option(i,i);
-			document.calcForm.Flv.value=0;}
+			document.calcForm.Flv.value=1;}
 		for(i=0;i<=5;i++){
 			document.calcForm.FStat.options[i] = new Option(Stat_Food[i][1],i);
 			document.calcForm.FStat.value=0;}

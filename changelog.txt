@@ -1,3 +1,31 @@
+[Update 2018-06-19]
+- Issue #200: Fixed scrollbar jumping when changing items with item data shown [Slap]
+- Issue #199: Removed gym pass from weight limit calculations [Slap]
+- Fixed strip chance interaction with cards for rogues/stalkers in extend info [Slap]
+- Fixed extended info not clearing properly after changing info displayed [Slap]
+
+[Update 2018-06-18]
+- Issue #183: Changed items set links [Kato/Slap]
+	Now done through SetEquipName Function
+- Issue #149: Proofreading [Slap]
+	Falcon Muffler: name
+	Crest of the Rider: name
+	Wolfheiden: description
+	Mithril Magic Manteau: description
+	Angel's Reincarnation: lvl req
+	High Quality Sandals: name, lvl req
+	Sacrifice Ring: jobid
+	Shinobi Sash: def
+	Bloodied Shackle Ball: name
+	Horn of the Buffalo: name
+
+[Update 2018-06-17]
+- Issue #193: Fixed Marionette Contro [Slap]
+	Stat compensation should now cap based on base stat
+- Issue #5: Corrected brewing formula [Slap]
+	0.05% lower than iRO due to custom homunculus bonus
+- Issue #113: Thanatos cards now stack [Slap]
+
 [Update 2018-06-16]
 - Issue #188: Added Dolor Hat [Slap]
 - Issue #149: Proofreading [Slap]

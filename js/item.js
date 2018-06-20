@@ -723,18 +723,18 @@ ItemOBJ = [
 ,[700,62,1,3,0,0,60,33,"Morpheus's Shawl","",0,19,3,16,10,0]
 ,[701,62,1,3,0,0,60,61,"Morrigane's Manteau","",0,6,2,11,8,0]
 ,[702,62,1,3,0,0,70,54,"Goibne's Spaulders","",0,78,10,19,2,3,1,0]
-,[703,62,1,3,0,0,40,65,"Falcon Robe","",0,9,15,11,5,0]
+,[703,62,1,3,0,0,40,65,"Falcon Muffler","",0,9,15,11,5,0]
 ,[704,62,1,4,0,0,60,65,"Vali's Manteau","",0,60,15,0]
 ,[705,62,1001,4,0,1,60,48,"Dragon's Breath","",0,59,15,0]
 ,[706,62,1001,3,0,1,50,55,"Wool Scarf","",0,19,4,0]
-,[707,62,1001,4,0,"0 / 1",50,55,"Crest of Rider","",0,2,2,0]
-,[708,62,1072,3,0,1,70,70,"Wolfheiden","","Whenever you receive a Physical Damage, there is a small chance to activate [Stone Skin]Lv 6",0]
-,[709,62,1089,3,0,1,40,70,"Mithril Magic Manteau","","Whenever you receive a Magical Damage, there is a small chance to activate [Anti-Magic]Lv 6",19,3,0]
-,[710,63,50,2,0,1,30,54,"Angel's Reincarnation","",0,13,100,0]
+,[707,62,1001,4,0,"0 / 1",50,55,"Crest of the Rider","",0,2,2,0]
+,[708,62,1072,3,0,1,70,70,"Wolfheiden","","Whenever you receive Physical Damage, 2% chance to increase your DEF by 20% for 2 seconds, but also reduce your MDEF by 20% during that 2 seconds",0]
+,[709,62,1089,3,0,1,40,70,"Mithril Magic Manteau","","Whenever you receive Magical Damage, 20% chance to increase your MDEF by 20% for 2 seconds, but also reduce your DEF by 20% during that 2 seconds",19,3,0]
+,[710,63,50,2,0,1,30,25,"Angel's Reincarnation","",0,13,100,0]
 ,[711,63,1,4,0,0,70,54,"Goibne's Greaves","",0,19,3,15,5,16,5,0]
 ,[712,63,1,3,0,0,50,65,"Fricco's Shoes","","Increase the heal power of Red, Orange, Yellow and White Potion by 20%",2,2,0]
 ,[713,63,1,4,0,0,65,65,"Vidar's Boots","",0,15,9,16,9,0]
-,[714,63,77,2,0,1,20,0,"High Fashion Sandals","",0,19,10,0]
+,[714,63,77,2,0,1,20,40,"High Quality Sandals","",0,19,10,0]
 ,[715,63,1001,3,0,0,50,85,"Variant Shoes","","Maximum HP / Maximum SP reduced by 1% per refine rate<br>Added +1 DEF for every 2 refinement",15,20,16,20,0]
 ,[716,63,1001,3,0,1,30,55,"Tidal Shoes","",0,61,5,0]
 ,[717,63,1001,4,0,"0 / 1",50,55,"Black Leather Boots","","<b>[Refine Rate 9~10]</b><br>AGI + 2",2,1,0]
@@ -743,23 +743,23 @@ ItemOBJ = [
 ,[720,64,1,0,0,0,10,33,"Morpheus's Bracelet","",0,4,1,16,5,0]
 ,[721,64,1,0,0,0,20,61,"Morrigane's Belt","",0,17,5,10,3,0]
 ,[722,64,1,0,0,0,20,61,"Morrigane's Pendant","",0,1,2,10,3,0]
-,[723,64,1,0,0,0,10,90,"Sacrifice Ring","",0,0]
-,[724,64,52,0,0,0,30,30,"Shinobi Sash","",0,1,1,2,1,19,1,0]
-,[725,64,1,0,0,0,400,0,"Bloody Shackle Ball","",0,0]
+,[723,64,0,0,0,0,10,90,"Sacrifice Ring","",0,0]
+,[724,64,52,1,0,0,30,30,"Shinobi Sash","",0,1,1,2,1,19,1,0]
+,[725,64,1,0,0,0,400,0,"Bloodied Shackle Ball","",0,0]
 ,[726,64,72,1,0,0,100,0,"Armor Charm","",0,13,50,0]
 ,[727,64,0,0,0,0,10,0,"Spiritual Ring","",0,4,2,5,1,0]
 ,[728,64,82,0,0,0,10,0,"Ring of Flame Lord","",0,1,2,3,1,17,15,63,10,221,32,221,33,221,34,221,35,221,36,0]
 ,[729,64,82,2,0,0,10,0,"Ring of Resonance","",0,2,2,3,1,19,2,221,37,221,38,221,39,221,40,221,41,0]
 ,[730,64,0,0,0,0,10,0,"Lesser Elemental Ring","",0,7,1,0]
-,[731,64,1051,0,0,0,10,60,"Seal of Red Silk","","[description translation missing - ItemID: 731]",0]
+,[731,64,1051,0,0,0,10,60,"Seal of Red Silk","",0,0]
 ,[732,64,1001,0,0,1,10,90,"Orlean's Gloves","",0,5,2,89,3,0]
-,[733,64,1001,0,0,1,10,90,"Horn of Buffalo","",0,2,2,0]
+,[733,64,1001,0,0,1,10,90,"Horn of the Buffalo","",0,2,2,0]
 ,[734,64,1001,0,0,1,15,50,"Expert Ring","","Increases SP consumption of skills by 5%",74,5,0]
 ,[735,64,1,1,0,0,20,0,"Kafra Ring","",0,19,1,1,1,2,1,4,1,6,1,0]
 ,[736,100,0,0,0,0,0,0,"No Set",0,0,0]
 ,[737,100,0,0,0,0,0,0,0,0,"MATK increase by Survivor's Rod refine rate<br>Increase resistance from Neutral Property attacks by refine rate * 3",13,300,89,-5,0]
 ,[738,100,0,0,0,0,0,0,0,0,0,212,5,9,10,0]
-,[739,100,0,0,0,0,0,0,0,0,"[description translation missing - ItemID: 739]",13,300,0]
+,[739,100,0,0,0,0,0,0,0,0,"Reduce SP Consumption of skills by 20%",13,300,0]
 ,[740,100,0,0,0,0,0,0,0,0,"Reduces damage from Zombie Prisoner and Skeleton Prisoner by 20%",17,50,3147,20,3171,20,0]
 ,[741,100,0,0,0,0,0,0,0,0,0,13,150,18,5,0]
 ,[742,100,0,0,0,0,0,0,0,0,"<b>[Swordman Class]</b><br>Additional DEF + 6",1,2,18,5,19,5,0]
@@ -1727,7 +1727,7 @@ ItemOBJ = [
 */
 
 /*
-	slaptro - 2018-06-11
+	[Slap] - 2018-06-11
 	Work in progress ItemID table. Currently proofreading and adding to this array.
 	Format: [ItemOBJ index, type, item IDs...]
 	type:
@@ -2440,46 +2440,46 @@ ItemID = [
 ,[698,1,2521]
 ,[699,1,2522,2523]
 ,[700,1,2518]
-,[701,1,2519],
-[702,4,0],
-[703,4,0],
-[704,4,0],
-[705,4,0],
-[706,4,0],
-[707,4,0],
-[708,4,0],
-[709,4,0],
-[710,4,0],
-[711,4,0],
-[712,4,0],
-[713,4,0],
-[714,4,0],
-[715,4,0],
-[716,4,0],
-[717,4,0],
-[718,4,0],
-[719,4,0],
-[720,4,0],
-[721,4,0],
-[722,4,0],
-[723,4,0],
-[724,4,0],
-[725,4,0],
-[726,4,0],
-[727,4,0],
-[728,4,0],
-[729,4,0],
-[730,4,0],
-[731,4,0],
-[732,4,0],
-[733,4,0],
-[734,4,0],
-[735,4,0],
-[736,4,0],
-[737,4,0],
-[738,4,0],
-[739,4,0],
-[740,4,0],
+,[701,1,2519]
+,[702,1,2520]
+,[703,1,2516]
+,[704,1,2517]
+,[705,1,2527]
+,[706,1,2528]
+,[707,1,2529,2530]
+,[708,1,2531]
+,[709,1,2532]
+,[710,1,2420]
+,[711,1,2419]
+,[712,1,2417]
+,[713,1,2418]
+,[714,1,2422]
+,[715,1,2423]
+,[716,1,2424]
+,[717,1,2425,2434]
+,[718,1,2426]
+,[719,1,2648]
+,[720,1,2649]
+,[721,1,2650]
+,[722,1,2651]
+,[723,1,2653]
+,[724,1,2654]
+,[725,1,2655]
+,[726,1,2656]
+,[727,1,2677]
+,[728,1,2678]
+,[729,1,2679]
+,[730,1,2680] //missing autospell
+,[731,1,2700]
+,[732,1,2701]
+,[733,1,2702]
+,[734,1,2703]
+,[735,1,2640]
+,[736,0,0] //no set
+,[737,2,2509,1618,1620]
+,[738,2,2339,2371,2522,2523]
+,[739,2,2337,2359,2654]
+,[740,2,2408,2655],
 [741,4,0],
 [742,4,0],
 [743,4,0],
@@ -3407,6 +3407,8 @@ ItemMax = ItemOBJ.length -1;
 
 function ClickB_Item(CBI)
 {
+   var tempScrollTop = window.pageYOffset;
+
 	if(eval(document.calcForm.ITEM_SW.checked)==1 && CBI == "SW" && Item_or_Card == "Card"){
 		Click_Card(ItemCardNumberCheck);
 		return;
@@ -3436,7 +3438,7 @@ function ClickB_Item(CBI)
 	if(eval(document.calcForm.ITEM_SW.checked)==0)
 		return;
 
-	// Item IDs with links to Talonro Item Database - Kato/Slap
+	// Item IDs with links to Talonro Item Database - [Kato/Slap]
 	if(ItemID[CBI][1] == 1){
 		var itemLink = "";
 		for(i = 2; i < ItemID[CBI].length; i++){
@@ -3485,16 +3487,16 @@ function ClickB_Item(CBI)
 					check = 1;
 				}
 			}
-			CBIstr += " at the same time ";
+			CBIstr += " at the same time";
 
-      // Item IDs with links to Talonro Item Database for Combos; [Kato]
-    	if(ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][1] == 2){
-    		var itemLink = "[";
-    		for(a = 2; a < ItemID[w_SE[ItemOBJ[CBI][i+1]][0]].length; a++){
-          itemLink += "<a href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][a] + "/\" target=\"_blank\"><b>" + ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][a] + "</b></a>" + ((a+1 < ItemID[w_SE[ItemOBJ[CBI][i+1]][0]].length) ? ", " : "");  //todo title
-    		}
-	       CBIstr += itemLink + "]";
-    	}
+     //  // Item IDs with links to Talonro Item Database for Combos; [Kato]
+    	// if(ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][1] == 2){
+    	// 	var itemLink = "[";
+    	// 	for(a = 2; a < ItemID[w_SE[ItemOBJ[CBI][i+1]][0]].length; a++){
+     //      itemLink += "<a href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][a] + "/\" target=\"_blank\"><b>" + ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][a] + "</b></a>" + ((a+1 < ItemID[w_SE[ItemOBJ[CBI][i+1]][0]].length) ? ", " : "");  //todo title
+    	// 	}
+	    //    CBIstr += itemLink + "]";
+    	// }
 
 
     CBIstr += ": <BR>";
@@ -3517,6 +3519,7 @@ function ClickB_Item(CBI)
 				SQI_Bonus_Effect[i] = 0;
 			Click_SQI_Bonus(0);
 		}
+   window.scrollTo(0, tempScrollTop);
 }
 
 function Item_Setumei(nC1,nC2)
@@ -3733,7 +3736,7 @@ function Item_Setumei(nC1,nC2)
 			CBIstr += "Increase damage from [" + SizeOBJ[nC1-190] +"] size monsters by "+ (-1 * nC2) +"%<BR>";
 	}
 	if(193 == nC1)
-		CBIstr += "<br><Font color='#FF0000'>Unrefinable</Font><BR>";
+		CBIstr += "<Font color='#FF0000'>Unrefinable</Font><BR>";
 	if(194 == nC1)
 		CBIstr += "Cannot be broken<BR>";
 	if(195 == nC1)
@@ -3960,13 +3963,22 @@ for(var i=0;i<=SE_MAXnum;i++){
 	}
 }
 
+//Improved SetEquipName combining combo linking with set equipment info - [Kato/Slap] - 2018-06-18
 function SetEquipName(SENw){
 	var SENstr = "";
 	for(var i=0;i<=SE_MAXnum;i++){
 		if(i == SENw){
 			for(var j=1;w_SE[i][j] != "NULL";j++){
-				SENstr += "["+ ItemOBJ[w_SE[i][j]][8] +"]";
-				if(w_SE[i][j+1] != "NULL")
+            if(ItemID[w_SE[i][j]][1]==1){
+			      SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][2] + "/\" target=\"_blank\"><b>" + "<font color='blue'>["+ ItemOBJ[w_SE[i][j]][8] +"]</font></b></a>";
+               if(ItemID[w_SE[i][j]][3]){
+                  SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][3] + "/\" target=\"_blank\"><b>" + "<font color='blue'><sup>[1]</sup></font></b></a>"
+               }
+            }
+            else{
+               SENstr += "["+ ItemOBJ[w_SE[i][j]][8] +"]";
+            }
+			   if(w_SE[i][j+1] != "NULL")
 					SENstr += "+";
 			}
 			return SENstr;
