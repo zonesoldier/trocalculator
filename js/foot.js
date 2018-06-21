@@ -1222,11 +1222,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_IJYOU[2])
 		n_A_totalDEF -= Math.floor(n_A_totalDEF * 25 / 100);
 
-	if(SkillSearch(196))
-		n_A_totalDEF = 90;
-
 	if(n_A_PassSkill8[12] >= 3)
 		n_A_totalDEF -= Math.floor(n_A_totalDEF * (n_A_PassSkill8[12] - 2) * 5 / 100);
+	
+	if(SkillSearch(196))
+		n_A_totalDEF = 90;
 
 	/*if(n_A_totalDEF >= 100)
 		n_A_totalDEF = 99;*/

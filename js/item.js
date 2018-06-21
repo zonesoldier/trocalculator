@@ -1213,7 +1213,7 @@ ItemOBJ = [
 ,[1190,60,1072,7,0,1,100,85,"Bone Plate","","Adds a 1% chance to cause External Bleeding status ailment all players in a 5x5 area around you when taking ATK based damage",1,1,19,3,307,10,302,10,0]
 ,[1191,61,1079,5,0,1,180,65,"Bradium Shield","",0,13,500,5159,60,5384,60,2,-1,0]
 ,[1192,62,1001,5,0,1,100,0,"Dragon Manteau","",0,2,1,19,5,0]
-,[1193,62,1001,5,0,1,40,90,"Proxy Skin Fragment","","Increases SP by Level/3 + [Refine Rate * 10]<br>When dealing physical damage there's a 1% chance that you'll recover 1% of your damage as SP",19,3,60,3,61,3,62,3,63,3,64,3,65,3,66,3,67,3,68,3,69,3,0]
+,[1193,62,1001,5,0,1,40,90,"Proxy Skin Fragment","","Increases SP by Level/3 + [Refine Rate * 10]<br>When dealing physical damage there's a 1% chance that you'll recover 1% of your damage as SP",19,3,61,3,62,3,63,3,64,3,65,3,66,3,67,3,68,3,69,3,0]
 ,[1194,63,1001,4,0,0,50,60,"Life Tree Wooden Shoes","","Recover 30 HP every 10 seconds",15,10,75,5,3,2,19,3,92,5,0]
 ,[1195,64,0,0,0,0,10,0,"Ring of Wisdom King","",0,13,50,14,20,0]
 ,[1196,64,1,0,0,1,10,70,"Eyeball Ring","",0,10,2,14,25,0]
@@ -1621,7 +1621,7 @@ ItemOBJ = [
 ,[1577,50,0,1,1,0,0,60,"Eden Group Hat II","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.<br/><br/>When dealing physical damage there's a high chance that for 5 seconds you will gain ATK + 10.<br/><br/>When dealing magic damage there's a high chance that for 5 seconds you will gain MATK + 10.",193,1,0]
 ,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.",89,15,8,10,193,1,0]
 ,[1579,11,0,155,3,0,0,60,"Eden Group Katar I","","A katar that is made by the Eden Group. It is suitable for those who have more advanced experience handling katars.",10,5,8,10,193,1,0]
-,[1580,12,0,155,3,0,0,60,"Eden Group Knuckle I","","A claw that is made by the Eden Group. It is suitable for those who have more advanced experience as Champions.",12,10,8,10,193,1,0]
+,[1580,13,0,155,3,0,0,60,"Eden Group Knuckle I","","A claw that is made by the Eden Group. It is suitable for those who have more advanced experience as Champions.",12,10,8,10,193,1,0]
 ,[1581,8,0,142,2,0,0,26,"Eden Group Mace I","","A beginner's mace that is made exclusively by the Eden Group.",8,10,193,1,0]
 ,[1582,8,0,163,2,0,0,40,"Eden Group Mace II","","A mace that is made by the Eden Group.",8,10,193,1,0]
 ,[1583,8,0,172,3,0,0,60,"Eden Group Mace III","","A mace that is made by the Eden Group. It's suitable for an experienced mace wielder.",8,10,193,1,0]
@@ -1705,6 +1705,7 @@ ItemOBJ = [
 ,[1659,52,0,0,0,0,10,1,"Cheer Whistle","","Blowing this whistle can drastically improve your team's morale.",1,1,0]
 ,[1660,52,0,0,0,0,10,1,"Blue Pencil In Mouth","","A blue pencil full of teeth marks due to holding it in your mouth all the time.",8,3,0]
 ,[1661,50,0,0,0,0,0,10,"Party Member Hat","","A helm with a Party Member wanted ad on it. Let's level up together!!",0]
+,[1662,8,0,88,1,3,70,1,"Cat Club","","Has a chance of casting [Wink of Charm] while physically attacking.",32,15,0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
@@ -3400,7 +3401,8 @@ ItemID = [
 [1658,1,18574],
 [1659,1,18837],
 [1660,1,18819],
-[1661,1,5337]
+[1661,1,5337],
+[1662,1,16015]
 ];
 
 ItemMax = ItemOBJ.length -1;

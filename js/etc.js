@@ -251,7 +251,7 @@ PET_OBJ = [[0,"No Pet",0,0]
 ,[47,"Loli Ruri [MHP +3%, 5% to cast Heal Lv. 1 on the owner receiving Physical Damage]","When receiving Physical Damage, has a certain chance to use Heal Lv.1",15,3,0]
 //custom TalonRO pets
 ,[48,"Acidus [FLEE +10]",0,9,10,0]
-,[49,"Baby Leopard [ASPD +3%]",0,12,3,0]
+,[49,"Baby Leopard [ASPD +5%]",0,12,5,0]
 ,[50,"Develing [Shadow Resistance +3%]",0,67,3,0]
 ,[51,"Garm Baby [Water Resistance +7%]",0,61,7,0]
 ,[52,"Green Ferus [Increase damage against Dragon by 5% and Demon by 2%]",0,31,2,39,5,0]
