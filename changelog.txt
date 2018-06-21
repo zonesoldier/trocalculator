@@ -1,3 +1,159 @@
+[Update 2018-06-19]
+- Issue #200: Fixed scrollbar jumping when changing items with item data shown [Slap]
+- Issue #199: Removed gym pass from weight limit calculations [Slap]
+- Fixed strip chance interaction with cards for rogues/stalkers in extend info [Slap]
+- Fixed extended info not clearing properly after changing info displayed [Slap]
+
+[Update 2018-06-18]
+- Issue #183: Changed items set links [Kato/Slap]
+	Now done through SetEquipName Function
+- Issue #149: Proofreading [Slap]
+	Falcon Muffler: name
+	Crest of the Rider: name
+	Wolfheiden: description
+	Mithril Magic Manteau: description
+	Angel's Reincarnation: lvl req
+	High Quality Sandals: name, lvl req
+	Sacrifice Ring: jobid
+	Shinobi Sash: def
+	Bloodied Shackle Ball: name
+	Horn of the Buffalo: name
+
+[Update 2018-06-17]
+- Issue #193: Fixed Marionette Contro [Slap]
+	Stat compensation should now cap based on base stat
+- Issue #5: Corrected brewing formula [Slap]
+	0.05% lower than iRO due to custom homunculus bonus
+- Issue #113: Thanatos cards now stack [Slap]
+
+[Update 2018-06-16]
+- Issue #188: Added Dolor Hat [Slap]
+- Issue #149: Proofreading [Slap]
+	Carrot Whip: added description
+	Western Outlaw: added description
+	Jungle Carbine: added description
+	Gatekeeper-DD: name, description
+	Thunder-P: added description
+	Huuma Calm Mind: name
+	Magistrate Hat: added description
+	Bride Mask: added description
+	Mythical Lion Mask: added description
+	Hahoe Mask: added description
+	Ramen Hat: weight, lvl req, added unrefinable
+	Whisper Mask: weight, lvl req
+	Platinum Shield: description
+	Eagle Wing: name
+	Morrigane's Manteau: name
+
+[Update 2018-06-15]
+- Corrected negative hit [Slap]
+- Added links for 601-650 [Slap]
+- Issue #149: Proofreading [Slap] //For the sake of my sanity proofreading notes will not be as detailed as before; will only indicate what has been modified, not how
+	Vacation Hat: name, type
+	Water Lily Crown: name
+	Lucius's Fierce Armor of Volcano: name
+	Mes: updated effect/description
+	Thin Blade: updated effect/description
+	Muscle Cutter: updated effect/description
+	Long Horn: updated effect/description
+	Freezing Bow: updated effect/description
+	Earthen Bow: updated effect/description
+	Gale Bow: updated effect/description //Auto-generated autospell effect removed since it's only active when Arrow of Wind is equipped. Description updated to reflect this.
+	Orc Archer's Bow: item lvl
+	Ogre's Toenail: added description
+	Inverse Scare: added description
+	Bloody Blades: added description
+	Staff of Recovery: slight correction to healing bonus
+	Staff of Piercing: updated description
+	Staff of Destruction: updated description
+	Bass Guitar: added description
+	Spirited Guitar: added description
+
+[Update 2018-06-14]
+- Issue #6: Added Malangdo Enchants; [Kato]
+- Issue #187: Fixed Loki's Muffler; [Kato]
+
+[Update 2018-06-13]
+- Issue #182: Fixed regions for Seals mobs; [Kato]
+- Issue #183: Added links for combo items; [Kato]
+- Added ItemIDs from 1496 to 1526; [Kato]
+
+[Update 2018-06-12]
+- Removed extra comma in Eden Group Huuma Shuriken I that currently breaks the page [Slap]
+- Added items [Slap]:
+	Tanigumi Girl Doll
+	King Tiger Doll Hat
+	Drooping Bunny
+	Blue Tiger Mask
+	Red Tiger Mask
+- Issue #173: Fixed Luna Kaleet; [Kato]
+- Issue #172: Fixed some descriptions and other were OK; [Kato]
+- Issue #171: Added the ItemIDs, also added from 1527 to 1661; [Kato]
+- Issue #170: Added Party Member Hat ; [Kato]
+- Fixed potion success rate in etc.js [Slap]
+- Added items 501-600 to ItemID [Slap]
+- Clarified rental item names (Ballista R -> Ballista [Rental]) [Slap]
+- Issue #149: Proofreading [Slap]
+	Renown Detective's Cap: name (Renown Detective Cap -> Renown Detective's Cap)
+	Banana Hat: autospell level (1 -> 3)
+	Zherlthsh Mask: name (Zealotus Mask -> Zherlthsh Mask)
+	Novice Guard: weight (1 -> 0.1)
+	Novice Shield: required lvl (30 -> 40)
+	Somber Novice Hood: weight (1 -> 0.1)
+	Novice Slippers: weight (1 -> 0.1)
+	Tattered Novice Ninja Suit: weight (1 -> 0.1)
+	Luna Bow: updated description
+	Heavenly Maiden Robe: name (Heavenly Maiden's Robe -> Heavenly Maiden Robe)
+	Helm of Darkness: updated description
+	Maiden's Twin Ribbon: effect (removed 76,5)
+	Nest Hat: name (Bird's Nest Hat -> Nest Hat)
+	Improved Arm Guard: name (Advanced Arm Guard -> Improved Arm Guard)
+	Jitte:
+		updated description
+		effect (added 140,2)
+	Hakujin: fixed effects
+	Gokurin: updated description/effects
+	Huuma Giant Wheel Shuriken:
+		updated description/effects
+		effect (added 194,1)
+	Huuma Blaze Shuriken: effect (added 194,1)
+	Huuma Wing Shuriken: effect (added 194,1)
+	Branch: effect (removed 8,10)
+	Gate Keeper: required lvl (55 -> 24)
+	Destroyer: effect (added 141,2)
+	Note Headphones:
+		updated description
+		required lvl (10 -> 0)
+	Wandering Minstrel Hat:
+		name (Legendary Minstrel Hat -> Wandering Minstrel Hat)
+		type (999 -> 50)
+	Pumpkin Hat: replaced with Tanigumi Girl Doll //Description of Pumpkin Hat items don't match their scripts; will add them back if they are reintroduced in-game
+	Dress Hat: replaced with King Tiger Doll Hat //Already present as Maiden Hat, which was recently added as a "missing" item
+	Satelite Hairclip: name (Satelite Hat -> Satelite Hairclip)
+	Moonowl Cap:
+		name (Moonlight Flower Hat -> Moonowl Cap)
+		updated description
+	Bunny Band (ID 568): replaced with Drooping Bunny //Already present as Sheila Hairnet
+	Flapping Angel Wings: replaced with Blue Tiger Mask //Already present as Flying Angel
+	Red Glasses:
+		weight (10 -> 0)
+		required lvl (10 -> 0)
+		effect (19,5 -> 4,1)
+	Peco Peco Hairband: weight (10 -> 0)
+	Pinwheel Hairpin:
+		name (Windmill Hairpin -> Pinwheel Hairpin)
+		effect (2 DEF -> 3 DEF)
+	Magic Kettle:
+		name (Kettle Hat-> Magic Kettle)
+		fixed autocast
+	Pole Axe [Rental]: ATK (195 -> 159)
+	Rudra Bow [Rental]: name (Rudra's Bow [Rental] -> Rudra Bow [Rental])
+	Steel Flower [Rental]: replaced with Red Tiger Mask //Item does not exist
+	Eye Of Darkness:
+		required lvl (0 -> 50)
+		effect (added 154,100)
+	Holy Marcher Hat: effect (removed 151,10)
+
 [Update 2018-06-11]
 - Changed format of the ItemID array in item.js [Slap]
 	Work in progress ItemID table. Currently proofreading and adding to this array.
@@ -8,13 +164,14 @@
 		2 = Item Set
 		3 = Unknown
 		4 = Not yet proofread/Placeholder
-- Fixed Thief Ring attack bonus script [Slap]
-- Fixed Bloody Roar script [Slap]
+- Added items 0-500 to ItemID
+- Fixed Thief Ring attack bonus [Slap]
+- Fixed Bloody Roar effect [Slap]
 - Added Drooping Maya [Slap]
 - Issue #149: Proofreading [Slap]
 	Byeollungum: effect (26,50 -> 26,5)
 	Schweizersabel: name (Schweizer Sabel -> Schweizersabel)
-	Brocca: effects (22,10 -> 22,1)
+	Brocca: effect (22,10 -> 22,1)
 	Brionac: effect (added 26,5)
 	Slash: effect (49,15 -> 31,15)
 	Quadrille: effect (49,10 -> 31,10)
@@ -157,7 +314,7 @@
 	Helm of Angel: name (Angel Helm -> Helm of Angel)
 	Goggles: updated description
 	Sphinx Hat:
-		name (Sphinx Hat [1] -> Sphinx Hat) //Will remove the other Sphinx Hat as it is not obtainable and not in the wiki database.
+		name (Sphinx Hat [1] -> Sphinx Hat) //Other Sphinx Hat not in game
 		slots (0 -> "0 / 1")
 		updated description
 	Zorro Masque: name (Zorro Mask -> Zorro Masque)

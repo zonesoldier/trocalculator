@@ -105,11 +105,11 @@ ItemOBJ = [
 ,[82,8,53,135,4,0,80,40,"Long Mace","","Capable of damaging enemies 3 cells away from his owner",78,10,0]
 ,[83,8,53,140,4,"0 / 1",150,40,"Grand Cross","","Regain 1 SP for each attack on an Undead Monster<BR>Regain 3 SP for each killed Undead Monster",20,6,221,5,0]
 ,[84,8,112,220,4,3,600,0,"Mjolnir","","<font color='blue'>SQI</font>",1,5,5,5,6,5,20,4,0] //custom TalonRO SQI
-,[85,9,0,15,1,"3 / 4",40,0,"Rod","",0,88,15,0]
+,[85,9,0,15,1,"3 / 4",40,0,"Rod","",0,89,15,0]
 ,[86,9,0,25,2,"2 / 3",40,12,"Wand","",0,4,1,89,15,0]
 ,[87,9,1,40,2,"2 / 3",40,12,"Staff","",0,4,2,89,15,0]
 ,[88,9,55,25,3,0,140,73,"Soul Staff","",0,4,5,2,2,89,15,195,1,0]
-,[89,9,1,40,3,0,70,24,"Evil Bone Wand","",0,4,4,20,9,89,15,0]
+,[89,9,1,40,3,0,70,24,"Evil Bone Wand","",0,20,9,4,4,89,15,0]
 ,[90,9,1,60,3,"1 / 2",40,24,"Arc Wand","",0,4,3,89,15,0]
 ,[91,9,1,75,3,0,70,24,"Wand of Occult","",0,4,3,89,15,0]
 ,[92,9,55,120,4,0,240,90,"Wizardry Staff","",0,4,6,5,2,89,15,195,1,0]
@@ -237,10 +237,10 @@ ItemOBJ = [
 ,[214,50,55,4,0,0,30,0,"Wizard Hat","",0,14,100,0]
 ,[215,50,56,4,0,0,120,38,"Grief for Greed","",0,4,1,5,1,0]
 ,[216,50,75,4,0,"0 / 1",40,0,"Cap","",0,0]
-,[217,50,1,4,0,0,40,45,"Crown","",0,4,2,0]
+,[217,50,1,4,0,0,40,45,"Crown [0]","",0,4,2,0]
 ,[218,50,72,4,0,0,60,60,"Jewel Crown","",0,4,2,6,1,19,3,0]
 ,[219,50,72,4,0,"0 / 1",50,0,"Gemmed Sallet","",0,19,3,0]
-,[220,50,1,4,0,0,40,45,"Tiara","",0,4,2,0]
+,[220,50,1,4,0,0,40,45,"Tiara [0]","",0,4,2,0]
 ,[221,50,53,4,0,"0 / 1",10,0,"Biretta","",0,0]
 ,[222,50,72,4,0,0,40,0,"Army Cap","",0,0]
 ,[223,50,0,4,0,0,40,19,"Rainbow Eggshell","",0,193,1,0]
@@ -408,7 +408,7 @@ ItemOBJ = [
 ,[385,51,0,1,0,0,10,70,"Angel Wing Ears","",0,1,1,0]
 ,[386,51,0,2,0,0,10,0,"Goblin Leader Mask","","<b>Mid and Low Headgear</b>",0]
 ,[387,1,1,75,4,0,50,36,"Kitchen Knife","","Adds a 50% additional chance of dropping Meat each time a Brute monster dies",37,3,10,30,0]
-,[388,1,1,80,4,0,60,36,"Ice Pick","","-30% damage to Emperium<br>-30% damage to castle guardians",23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
+,[388,1,1,80,4,0,60,36,"Ice Pick [0]","","-30% damage to Emperium<br>-30% damage to castle guardians",23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
 ,[389,1,1,84,4,0,40,0,"Princess Knife","",0,7,1,0]
 ,[390,1,1,70,4,"0 / 3",100,36,"Swordbreaker","",0,140,5,0]
 ,[391,1,1,70,4,"0 / 3",100,36,"Mailbreaker","",0,141,5,0]
@@ -427,7 +427,7 @@ ItemOBJ = [
 ,[404,2,1,140,4,0,90,40,"Immaterial Sword","","Drains 30% of target's SP by a low chance<br>Drain 1 SP from its owner on each attack",20,8,194,1,0]
 ,[405,3,1,150,4,"0 / 2",130,48,"Dragon Slayer","",0,39,15,189,1,0]
 ,[406,3,1,160,4,"0 / 2",160,48,"Schweizersabel","",0,18,1,20,4,221,6,0]
-,[407,999,1,250,4,0,100,48,"Balmung","",0,4,20,6,20,0]
+,[407,999,1,250,4,0,100,48,"Balmung","",0,20,6,4,20,6,20,0]
 ,[408,4,1,145,4,0,70,48,"Gelerdria","",0,20,2,13,800,14,-50,0]
 ,[409,4,1,100,4,0,85,48,"Brocca","",0,40,25,22,1,0]
 ,[410,4,1,95,4,0,100,48,"Tjungkuletti","","Regains 1 SP with each attack and 5 SP each time an enemy is killed",0]
@@ -442,7 +442,7 @@ ItemOBJ = [
 ,[419,7,1,215,4,0,300,44,"Guillotine","","Can cause the Coma effect on Demi-Human monster by a 0.30% chance<br>Regain 2 SP for each attack on a DemiHuman monster and 20 SP for each killed DemiHuman monster",0]
 ,[420,8,53,85,4,"0 / 2",70,40,"Spike","",0,10,40,24,3,0]
 ,[421,8,53,145,4,0,100,40,"Slash","","Can cause the Coma effect on Undead monster by a 0.10% chance",31,15,121,5,0]
-,[422,8,53,165,4,0,90,40,"Quadrille","",0,31,10,42,10,37,10,0]
+,[422,8,53,165,4,0,90,40,"Quadrille","",0,31,10,37,10,42,10,0]
 ,[423,13,1,110,4,0,45,36,"Kaiser Knuckle","",0,20,4,31,5,41,10,42,10,43,10,44,10,0]
 ,[424,13,1,120,4,"0 / 1",50,36,"Berserk","",0,12,12,0]
 ,[425,15,1,100,4,0,40,44,"Lariat Whip","",0,5,5,2,1,0]
@@ -463,7 +463,7 @@ ItemOBJ = [
 ,[440,64,0,0,0,0,10,0,"Gold Ring","",0,0]
 ,[441,64,0,0,0,0,10,0,"Diamond Ring","",0,0]
 ,[442,64,52,0,0,0,10,70,"Thief Ring","","If user's base STR is 90 or higher: HIT + 10, FLEE + 10<br>If user's base AGI is 90 or higher: ATK + 10, CRIT + 10",0]
-,[443,999,999,2,0,0,35,45,"Wing of Diablo","",0,0]
+,[443,999,0,2,0,0,35,45,"Wing of Diablo","",0,0]
 ,[444,50,0,6,0,0,10,0,"-Lord Kaho's Horn","",0,1,20,4,20,5,20,19,20,0]  //custom TalonRO
 ,[445,52,81,0,0,0,10,70,"Assassin Mask","",0,0]
 ,[446,999,0,0,0,0,1,0,"Aniversary Ring","",0,7,1,13,1,14,1,0]
@@ -526,23 +526,23 @@ ItemOBJ = [
 ,[503,50,0,3,0,0,50,0,"Winter Hat","",0,152,10,0]
 ,[504,50,50,4,0,"0 / 1",40,40,"Super Novice Hat","",0,7,1,0]
 ,[505,50,0,3,0,"0 / 1",30,0,"Bucket Hat","",0,0]
-,[506,50,0,3,0,1,35,0,"Renown Detective Cap","",0,0]
+,[506,50,0,3,0,1,35,0,"Renown Detective's Cap","",0,0]
 ,[507,50,0,1,0,0,20,0,"Banana Hat","",0,221,10,0]
 ,[508,50,0,0,0,0,10,0,"Mystic Rose","",0,53,2,0]
-,[509,50,1,3,0,0,40,70,"Zealotus Mask","","<b>Upper and Mid Headgear</b>",37,5,57,5,0]
-,[510,61,50,3,0,0,1,0,"Novice Guard","",0,13,400,193,1,0]
-,[511,61,50,3,0,1,100,30,"Novice Shield","",0,61,20,62,20,63,20,64,20,65,20,66,20,67,20,68,20,69,20,0]
-,[512,62,50,2,0,0,1,0,"Somber Novice Hood","",0,60,20,193,1,0]
+,[509,50,1,3,0,0,40,70,"Zherlthsh Mask","","<b>Upper and Mid Headgear</b>",37,5,57,5,0]
+,[510,61,50,3,0,0,0.1,0,"Novice Guard","",0,13,400,193,1,0]
+,[511,61,50,3,0,1,100,40,"Novice Shield","",0,61,20,62,20,63,20,64,20,65,20,66,20,67,20,68,20,69,20,0]
+,[512,62,50,2,0,0,0.1,0,"Somber Novice Hood","",0,60,20,193,1,0]
 ,[513,62,50,2,0,1,50,40,"Novice Manteau","",0,60,10,0]
 ,[514,62,72,5,0,1,80,80,"Pauldron","",0,0]
-,[515,63,50,2,0,0,1,0,"Novice Slippers","",0,193,1,0]
+,[515,63,50,2,0,0,0.1,0,"Novice Slippers","",0,193,1,0]
 ,[516,63,50,2,0,1,50,40,"Novice Shoes","",0,15,5,0]
 ,[517,64,0,0,0,0,10,40,"Goddess of Fortune's Cursed Brooch","","When attacking, adds a 0.5% chance to inflict [Curse] on yourself",10,6,0]
-,[518,60,50,4,0,0,1,0,"Tattered Novice Ninja Suit","",0,13,700,193,1,0]
+,[518,60,50,4,0,0,0.1,0,"Tattered Novice Ninja Suit","",0,13,700,193,1,0]
 ,[519,50,50,3,0,0,1,0,"Novice False Eggshell","",0,14,80,193,1,0]
 ,[520,1,50,45,1,0,1,0,"Novice Main-Gauche","",0,8,20,17,60,193,1,0]
-,[521,10,110,100,3,2,200,30,"Luna Bow","","<b>[Refine Rate 0~6]</b><br>DEF + 2<br><b>[Refine Rate 7~8]</b><br>DEF + 3<br><b>[Refine Rate 9~10]</b><br>DEF + 5",0]
-,[522,62,1,3,0,1,50,80,"Heavenly Maiden's Robe","",0,0]
+,[521,10,110,100,3,2,200,30,"Luna Bow","","<b>[Refine Rate 0~5]</b><br>DEF + 2<br><b>[Refine Rate 6~8]</b><br>DEF + 5<br><b>[Refine Rate 9~10]</b><br>DEF + 7",0]
+,[522,62,1,3,0,1,50,80,"Heavenly Maiden Robe","",0,0]
 ,[523,64,0,0,0,1,10,0,"Nile Rose","",0,13,10,0]
 ,[524,64,82,1,0,0,10,0,"Vesper Core 01","",0,4,2,16,5,19,3,0]
 ,[525,64,82,1,0,0,10,0,"Vesper Core 02","",0,1,3,17,10,19,3,0]
@@ -550,137 +550,137 @@ ItemOBJ = [
 ,[527,64,82,1,0,0,10,0,"Vesper Core 04","",0,5,3,8,10,19,3,0]
 ,[528,50,0,1,0,1,10,10,"Laurel Crown","",0,6,3,154,5,153,5,0]
 ,[529,50,0,2,0,0,50,30,"Puppy Hat","","If user's base AGI is 77 or higher: Chance to cast the skill [Gloria]Lv 1 becomes 3%",2,1,193,1,221,11,0]
-,[530,50,72,3,0,1,200,50,"Helm of Darkness","","",1,2,0]
-,[531,50,0,0,0,1,20,30,"Maiden's Twin Ribbon","",0,14,30,19,3,76,5,0]
+,[530,50,72,3,0,1,200,50,"Helm of Darkness","","<b>Upper and Middle Headgear</b>",1,2,0]
+,[531,50,0,0,0,1,20,30,"Maiden's Twin Ribbon","",0,14,30,19,3,0]
 ,[532,50,0,1,0,0,50,30,"Decorative Geographer","",0,4,1,193,1,221,12,0]
-,[533,50,0,2,0,0,50,10,"Bird's Nest Hat","",0,2,1,5,1,151,10,0]
+,[533,50,0,2,0,0,50,10,"Nest Hat","",0,2,1,5,1,151,10,0]
 ,[534,60,1001,6,0,1,280,0,"Valkyrja's Armor","","<b>[Mage, Archer, Acolyte Class]</b><br>Status effect [Silence] resistance +50%<br><b>[Swordman, Merchant, Thief Class]</b><br>Status effect [Stun] resistance +50%",7,1,194,1,0]
 ,[535,62,1001,3,0,1,50,0,"Valkyrja's Manteau","","<b>[Mage, Archer, Acolyte Class]</b><br>Perfect Dodge + 5 + Refine Rate * 2<br><b>[Swordman, Merchant, Thief Class]</b><br>Reflect Melee Physical Attacks by 5% + Refine Rate * 2",194,1,0]
 ,[536,63,1001,4,0,1,50,0,"Valkyrja's Shoes","","<b>[Mage, Archer, Acolyte Class]</b><br>Maximum HP + 5 * Base Level<br><b>[Swordman, Merchant, Thief Class]</b><br>Maximum SP + 2 * Job Level",194,1,0]
 ,[537,61,58,5,0,"0 / 1",15,20,"Arm Guard","",0,0]
-,[538,61,58,4,0,"0 / 1",15,50,"Advanced Arm Guard","",0,19,5,0]
+,[538,61,58,4,0,"0 / 1",15,50,"Improved Arm Guard","",0,19,5,0]
 ,[539,1,58,50,1,"2 / 3",60,12,"Ashura","",0,89,10,0]
-,[540,1,58,70,2,"0 / 1",40,35,"Jitte","","When attacking, adds a 5% chance of destroying the enemy's weapon",0]
+,[540,1,58,70,2,"0 / 1",40,35,"Jitte","",0,140,2,0]
 ,[541,1,58,95,2,"1 / 2",70,24,"Murasame","",0,20,1,117,10,0]
-,[542,1,58,120,3,"0 / 1",80,42,"Hakujin","","A dagger that has a shining white blade crafted of bone, and is designed for stabbing, rather than slashing.",0,4,2,221,13,0]
-,[543,1,58,150,3,0,60,65,"Gokurin","","When attacking, adds a 10% chance to inflict [Curse] on the enemy",20,7,0]
+,[542,1,58,120,3,"0 / 1",80,42,"Hakujin","","A dagger that has a shining white blade crafted of bone, and is designed for stabbing, rather than slashing.",4,2,221,13,0]
+,[543,1,58,150,3,0,60,65,"Gokurin","",0,20,7,133,10,0]
 ,[544,1,58,125,4,0,90,70,"Kamaitachi","","Weapon Range + 1",20,4,12,3,10,3,0]
-,[545,16,58,50,4,"3 / 4",250,42,"Huuma Giant Wheel Shuriken","","When attacking, adds a 1% chance to inflict [External Bleeding] on the enemy",0]
-,[546,16,58,185,4,0,150,55,"Huuma Blaze Shuriken","","<font color=blue>[SQI Ingredient]</font><br>A <font color=red>Fire</font> Property Huuma shuriken that sparks like a firecracker when it strikes enemies.",20,3,5,-2,221,14,0]
-,[547,16,58,150,4,0,300,65,"Huuma Wing Shuriken","",0,20,4,2,-1,5,-2,0]
+,[545,16,58,50,4,"3 / 4",250,42,"Huuma Giant Wheel Shuriken","",0,138,1,194,1,0]
+,[546,16,58,185,4,0,150,55,"Huuma Blaze Shuriken","","<font color=blue>[SQI Ingredient]</font><br>A <font color=red>Fire</font> Property Huuma shuriken that sparks like a firecracker when it strikes enemies.",20,3,5,-2,221,14,194,1,0]
+,[547,16,58,150,4,0,300,65,"Huuma Wing Shuriken","",0,20,4,2,-1,5,-2,194,1,0]
 ,[548,17,59,30,1,"1 / 2",40,10,"Six Shooter","",0,8,-10,0]
 ,[549,17,59,45,2,"1 / 2",45,35,"Crimson Bolt","",0,8,-10,0]
 ,[550,17,59,70,2,"1 / 2",50,55,"Garrison","",0,8,-10,0]
 ,[551,17,59,20,3,0,50,12,"Gold Lux","","Add a 10% chance of auto casting Flip Coin when the user receives Physical Damage<br>Autocast Coin Flip will be equal to the Coin Flip skill level that the user has learned",8,-10,0]
-,[552,18,59,50,1,3,50,0,"Branch","",0,8,10,0]
+,[552,18,59,50,1,3,50,0,"Branch","",0,0]
 ,[553,18,59,120,2,"1 / 2",70,24,"Cyclone","",0,8,10,10,10,0]
 ,[554,18,59,150,2,1,75,56,"Dusk","",0,8,10,10,10,0]
 ,[555,19,59,135,1,1,90,14,"Rolling Stone","","Inflicts Splash Damage[Baphomet MVP Card Effect]",0]
 ,[556,19,59,180,2,1,90,35,"Black Rose","","Inflicts Splash Damage[Baphomet MVP Card Effect]",0]
-,[557,19,59,210,2,0,100,55,"Gate Keeper","","Inflicts Splash Damage[Baphomet MVP Card Effect]",221,113,0]
+,[557,19,59,210,2,0,100,24,"Gate Keeper","","Inflicts Splash Damage[Baphomet MVP Card Effect]",221,113,0]
 ,[558,20,59,50,2,1,230,55,"Drifter","",0,0]
 ,[559,20,59,75,3,"0 / 1",250,68,"Butcher","",0,112,10,0]
-,[560,21,59,220,2,"0 / 1",120,52,"Destroyer","",0,0]
+,[560,21,59,220,2,"0 / 1",120,52,"Destroyer","",0,141,2,0]
 ,[561,21,59,280,2,1,125,65,"Inferno","",0,0]
-,[562,50,0,4,0,1,20,10,"Note Headphones","","",151,10,152,10,19,3,0]
-,[563,999,0,2,0,0,50,50,"Legendary Minstrel's Hat","",0,4,1,5,1,0]
-,[564,50,0,2,0,0,20,0,"Pumpkin Hat","",0,56,5,0]
-,[565,50,0,2,0,1,20,20,"Dress Hat","","<b>[Refine Rate 6~10]</b><br>MATK + 1%<br>Physical damage + 1% (versus Normal/Boss/Guardian)<br>Heal amount increased by + 1%<br>Sanctuary effectiveness increased by + 1%",19,7,1,1,4,1,89,2,80,2,91,5,94,5,0]
-,[566,50,0,3,0,1,100,30,"Satellite Hat","",0,13,50,14,10,220,10,0]
-,[567,50,0,3,0,0,20,0,"Moonlight Flower Hat","","A hat created with the monster Moonlight Flower in mind.<br>It is said that it uses 30% of Moonlight Flower's fur, and 70% of Nine Tails fur.<br>Note that you should only use hand washing to clean it.<br>Wear this with your Nine Tails scarf for the perfect winter fashion!",5,2,221,15,0]
-,[568,50,0,2,0,0,20,0,"Bunny Hairband","",0,19,3,2,2,0]
-,[569,50,0,1,0,0,30,10,"Flapping Angel Wings","",0,12,3,73,-3,2,1,4,1,0]
+,[562,50,0,4,0,1,20,0,"Note Headphones","","<b>Upper and Middle Headgear</b>",151,10,152,10,19,3,0]
+,[563,50,0,2,0,0,50,50,"Wandering Minstrel Hat","",0,4,1,5,1,0]
+,[564,50,0,2,0,0,30,60,"Tanigumi Girl Doll","","Every time you kill a monster, small chance to drop Banana",2,2,9,3,44,5,0]
+,[565,50,0,3,0,1,40,30,"King Tiger Doll Hat","",0,1,2,0]
+,[566,50,0,3,0,1,100,30,"Satelite Hairclip","",0,13,50,14,10,220,10,0]
+,[567,50,0,3,0,0,20,0,"Moonowl Cap","","A hat created with the monster Moonlight Flower in mind.<br>It is said that it uses 30% of Moonlight Flower's fur, and 70% of Nine Tails fur.<br>Note that you should only use hand washing to clean it.<br>Wear this with your Nine Tails scarf for the perfect winter fashion!<br><b>Upper and Lower Headgear</b>",5,2,221,15,0]
+,[568,50,0,1,0,0,10,0,"Drooping Bunny","",0,5,1,9,2,0]
+,[569,50,0,4,0,0,40,50,"Blue Tiger Mask","",0,12,3,13,100,193,1,0]
 ,[570,50,0,1,0,0,10,10,"Baby Chick","","Allows usage Level 2 Double Attack<br>If you already know a level higher than Level 2 Double Attack, the appropriate level will be used instead",6,2,13,50,14,50,57,3,193,1,0]
-,[571,51,0,1,0,0,10,10,"Red Glasses","",0,19,5,0]
-,[572,50,0,3,0,0,10,70,"Peco Peco Hairband","","Movement speed increased by 5%",12,5,73,-5,0] //custom TalonRO +5% aspd, -5% casting time
-,[573,50,0,2,0,1,30,30,"Windmill Hairpin","",0,2,2,193,1,0]
-,[574,50,0,4,0,0,60,30,"Kettle Hat","","",221,16,221,17,0]
-,[575,1,58,120,1,0,0,1,"Ashura R","",0,89,15,193,1,0] //custom TalonRO Rental
-,[576,3,51,190,4,0,0,1,"Executioner R","",0,20,7,187,1,37,20,57,-10,193,1,0] //custom TalonRO Rental
-,[577,1,55,209,4,0,0,1,"Dagger of Counter R","",0,10,90,193,1,0] //custom TalonRO Rental
-,[578,2,72,185,4,0,0,1,"Cutlus R","",0,1,2,18,1,193,1,220,3,0] //custom TalonRO Rental
-,[579,1,1,85,4,0,0,1,"Moonlight Dagger R","","Regain 3 SP with each attack",16,10,193,1,0] //custom TalonRO Rental
-,[580,12,0,135,3,0,0,1,"Sage's Diary R","",0,89,20,12,5,193,1,0] //custom TalonRO Rental
-,[581,8,53,150,3,0,0,1,"Wrench R","","Small chance of randomly inflict Stun, Blind, Poison or Freeze Status with each melee attack",193,1,0] //custom TalonRO Rental
-,[582,2,1,120,4,0,0,1,"Solar Sword R","","Regains 1% of the damage inflicted on his target as HP with each attack<BR>Drains 15 SP from his owner every 10 seconds",20,3,193,1,0] //custom TalonRO Rental
-,[583,7,1,200,4,0,0,1,"Tomahawk R","",0,20,4,193,1,220,8,0] //custom TalonRO Rental
-,[584,4,0,195,3,0,480,1,"Pole Axe R","",0,1,1,4,2,5,1,193,1,0] //custom TalonRO Rental
-,[585,7,1,229,4,0,0,1,"Light Epsilon R","","Increases Movement Speed by 25%",20,6,1,10,36,3,193,1,220,4,0] //custom TalonRO Rental
-,[586,10,76,185,4,0,0,1,"Rudra's Bow R","",0,20,6,4,5,193,1,220,5,220,6,0] //custom TalonRO Rental
-,[587,50,0,9,0,0,0,0,"Bunny Band R","",0,19,5,57,10,193,1,0] //custom TalonRO Rental
-,[588,999,1,1,0,0,10,0,"Steel Flower R","",0,193,1,221,18,0] //No longer in Database, remove me.
-,[589,999,1,5,0,0,80,0,"Majestic Goat R","",0,1,1,193,1,0]
-,[590,50,1,7,0,0,0,1,"Apple of Archer R","",0,5,4,193,1,0] //custom TalonRO Rental
-,[591,51,1,1,0,0,10,0,"Eye Of Darkness","",0,5,1,0]
-,[592,64,1,0,0,0,0,1,"Earring R","",0,4,3,0] //custom TalonRO Rental
-,[593,64,1,0,0,0,0,1,"Critical Ring R","",0,10,10,0] //custom TalonRO Rental
-,[594,64,1,0,0,0,0,1,"Glove R","",0,5,4,0] //custom TalonRO Rental
-,[595,64,1,5,0,0,0,1,"Safety Ring R","",0,19,5,0] //custom TalonRO Rental
-,[596,64,1,0,0,0,0,1,"Necklace R","",0,3,4,0] //custom TalonRO Rental
-,[597,64,1,0,0,0,0,1,"Brooch R","",0,2,4,0] //custom TalonRO Rental
-,[598,64,1,0,0,0,0,1,"Ring R","",0,1,4,0] //custom TalonRO Rental
-,[599,64,1,0,0,0,0,1,"Rosary R","",0,19,5,6,4,0] //custom TalonRO Rental
-,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","","A hat, when equipped, that plays holy music and refresh its wearer.<br>The wearer of this holy hat is guarded by an angel.",19,2,1,2,221,19,151,10,0]
-,[601,999,0,1,0,1,20,30,"Resort Hat","",0,193,1,3,1,0]
-,[602,50,0,0,0,1,20,30,"Lily Crown","",0,193,1,19,3,2,1,5,1,75,5,76,3,0]
+,[571,51,0,1,0,0,0,0,"Red Glasses","",0,4,1,0]
+,[572,50,0,3,0,0,0,70,"Peco Peco Hairband","","Movement speed increased by 5%",12,5,73,-5,0] //custom TalonRO +5% aspd, -5% casting time
+,[573,50,0,3,0,1,30,30,"Pinwheel Hairpin","",0,2,2,193,1,0]
+,[574,50,0,4,0,0,60,30,"Magic Kettle","","",221,16,221,17,0]
+,[575,1,58,120,1,0,0,0,"Ashura [Rental]","",0,89,15,193,1,0] //custom TalonRO Rental
+,[576,3,51,190,4,0,0,0,"Executioner [Rental]","",0,20,7,187,1,37,20,57,-10,193,1,0] //custom TalonRO Rental
+,[577,1,55,209,4,0,0,0,"Dagger of Counter [Rental]","",0,10,90,193,1,0] //custom TalonRO Rental
+,[578,2,72,185,4,0,0,0,"Cutlus [Rental]","",0,1,2,18,1,193,1,220,3,0] //custom TalonRO Rental
+,[579,1,1,85,4,0,0,0,"Moonlight Dagger [Rental]","","Regain 3 SP with each attack",16,10,193,1,0] //custom TalonRO Rental
+,[580,12,0,135,3,0,0,0,"Sage's Diary [Rental]","",0,89,20,12,5,193,1,0] //custom TalonRO Rental
+,[581,8,53,150,3,0,0,0,"Wrench [Rental]","","Small chance of randomly inflict Stun, Blind, Poison or Freeze Status with each melee attack",193,1,0] //custom TalonRO Rental
+,[582,2,1,120,4,0,0,0,"Solar Sword [Rental]","","Regains 1% of the damage inflicted on his target as HP with each attack<BR>Drains 15 SP from his owner every 10 seconds",20,3,193,1,0] //custom TalonRO Rental
+,[583,7,1,200,4,0,0,0,"Tomahawk [Rental]","",0,20,4,193,1,220,8,0] //custom TalonRO Rental
+,[584,4,0,159,3,0,480,0,"Pole Axe [Rental]","",0,1,1,4,2,5,1,193,1,0] //custom TalonRO Rental
+,[585,7,1,229,4,0,0,0,"Light Epsilon [Rental]","","Increases Movement Speed by 25%",20,6,1,10,36,3,193,1,220,4,0] //custom TalonRO Rental
+,[586,10,76,185,4,0,0,0,"Rudra Bow [Rental]","",0,20,6,4,5,193,1,220,5,220,6,0] //custom TalonRO Rental
+,[587,50,0,9,0,0,0,0,"Bunny Band [Rental]","",0,19,5,57,10,193,1,0] //custom TalonRO Rental
+,[588,50,0,4,0,0,40,50,"Red Tiger Mask","",0,1,4,13,200,193,1,0]
+,[589,999,0,5,0,0,0,0,"Majestic Goat [Rental]","",0,1,1,193,1,0]
+,[590,50,1,7,0,0,0,0,"Apple of Archer [Rental]","",0,5,4,193,1,0] //custom TalonRO Rental
+,[591,51,1,1,0,0,10,50,"Eye Of Darkness","",0,5,1,154,100,0]
+,[592,64,1,0,0,0,0,0,"Earring [Rental]","",0,4,3,0] //custom TalonRO Rental
+,[593,64,1,0,0,0,0,0,"Critical Ring [Rental]","",0,10,10,0] //custom TalonRO Rental
+,[594,64,1,0,0,0,0,0,"Glove [Rental]","",0,5,4,0] //custom TalonRO Rental
+,[595,64,1,5,0,0,0,0,"Safety Ring [Rental]","",0,19,5,0] //custom TalonRO Rental
+,[596,64,1,0,0,0,0,0,"Necklace [Rental]","",0,3,4,0] //custom TalonRO Rental
+,[597,64,1,0,0,0,0,0,"Brooch [Rental]","",0,2,4,0] //custom TalonRO Rental
+,[598,64,1,0,0,0,0,0,"Ring [Rental]","",0,1,4,0] //custom TalonRO Rental
+,[599,64,1,0,0,0,0,0,"Rosary [Rental]","",0,19,5,6,4,0] //custom TalonRO Rental
+,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","","A hat, when equipped, that plays holy music and refresh its wearer.<br>The wearer of this holy hat is guarded by an angel.",19,2,1,2,221,19,0]
+,[601,50,0,1,0,1,20,30,"Vacation Hat","",0,193,1,3,1,0]
+,[602,50,0,0,0,1,20,30,"Water Lily Crown","",0,2,1,5,1,75,5,76,3,19,3,193,1,0]
 ,[603,60,1,4,0,1,220,45,"Claytos Cracking Earth Armor [1]","",0,198,2,0]
-,[604,60,1,4,0,1,220,45,"Luciu's Fierce Armor of Volcano [1]","",0,198,3,0]
+,[604,60,1,4,0,1,220,45,"Lucius's Fierce Armor of Volcano [1]","",0,198,3,0]
 ,[605,60,1,4,0,1,220,45,"Saphien's Armor of Ocean [1]","",0,198,1,0]
 ,[606,60,1,4,0,1,220,45,"Aebecee's Raging Typhoon Armor [1]","",0,198,4,0]
 ,[607,1,1,70,4,1,60,36,"Ice Pick [1]","","-30% damage to Emperium<br>-30% damage to castle guardians",23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
 ,[608,50,1,4,0,1,40,45,"Crown [1]","",0,4,1,0]
 ,[609,50,1,4,0,1,40,45,"Tiara [1]","",0,4,1,0]
-,[610,1,1001,120,4,3,50,55,"Mes","","When attacking, adds a 5% chance to inflict [External Bleeding] on the enemy",0]
+,[610,1,1001,120,4,3,50,55,"Mes","",0,138,5,0]
 ,[611,1,1001,130,4,1,70,55,"Tooth Blade","","Whenever you attack, 0.5% to cause all enemies within 5 x 5 (PBAoE) cells around you to delay their casting time by 20%<br><b>[Refine Rate 9~10]</b><br>The chance of the effect is increased to 0.7% as well as increasing PBAoE cell effects to 11 x 11 and the delay casting time of all enemies by 40%",0]
 ,[612,2,72,130,4,1,150,55,"Silver Shotel","",0,10,50,0]
-,[613,2,72,125,4,2,80,55,"Thin Blade","","Every time you attack, small chance to cause Curse on the enemy",12,10,0]
-,[614,3,1001,200,4,1,350,55,"Atroce's Blade","","If the user's base Str is 80 or higher, adds a 5% chance of damaging the target's armor when doing a physical attack",10,10,0]
-,[615,3,1001,160,4,2,220,55,"Muscle Cutter","","Add a 2% chance of auto casting Level 1 Decrease Agi on the enemy when attacking<br>Add a 1% chance of auto casting External Bleeding on the enemy when attacking",0]
-,[616,4,1001,150,4,1,100,65,"Long Horn","","Enables the use of [Detoxify]Lv 1<br>Adds a 5% chance of inflicting [Bleeding] on the target when doing a melee attack",20,6,194,1,0]
+,[613,2,72,125,4,2,80,55,"Thin Blade","",0,12,10,133,3,0]
+,[614,3,1001,200,4,1,350,55,"Atroce's Blade","","<b>If base STR >= 80:</b><br>Add a 5% chance of damaging the target's armor when doing a physical attack",10,10,0]
+,[615,3,1001,160,4,2,220,55,"Muscle Cutter","","Add a 3% chance of auto casting Level 1 Decrease Agi on the enemy when attacking",138,8,0]
+,[616,4,1001,150,4,1,100,65,"Long Horn","","Enables the use of [Detoxify]Lv 1",20,6,138,5,194,1,0]
 ,[617,4,1001,140,4,1,90,65,"Battle Hook","",0,37,20,131,5,220,11,0]
 ,[618,4,1001,180,4,1,420,60,"Hunting Spear","","A spear designed specifically to hunt. The end tip looks like a leaf. This spear focused on using its weight to bring damage rather than to piercing the enemy.<br>Adds a 10% chance of the Meat item dropping when killing a [Brute] race monster",182,1,221,20,0]
 ,[619,5,1,170,4,"0 / 1",200,75,"Phantom Spear","","If the target enemy dies, Recovers 50 HP<BR>Small chance to cause Chaos on yourself",31,20,36,20,47,20,51,10,56,10,67,10,0]
 ,[620,5,61,120,4,0,100,65,"Ahlspiess","","Auger shaped spear that is effective at attacking enemy's weak points.",22,10,37,10,221,21,0]
-,[621,7,1,10,4,"0 / 1",600,80,"Doom Slayer","","Decrease Attack Speed by 40%<br>SP cost of All Skills is doubled<br>If user's base Str is 95 or higher: ATK + 340, Causes Stun effect to enemies by 30% chance when receiving damage and add a 5% chance of breaking the enemy's armor when attacking",0]
+,[621,7,1,10,4,"0 / 1",600,80,"Doom Slayer","","SP cost of All Skills is doubled<br><b>If base STR >= 95:</b><br>ATK + 340<br>Causes Stun effect to enemies by 30% chance when receiving damage<br>Add a 5% chance of breaking the enemy's armor when attacking",12,-40,0]
 ,[622,7,1001,200,3,2,250,70,"Bardiche","",0,191,13,192,15,0]
 ,[623,7,1001,175,4,1,200,70,"Heart Breaker","","Each upgrade gives Crit +1<br><b>[Whitesmith, Creator]</b><br>Add a chance of auto casting Level 3 Hammerfall on the enemy when attacking",10,20,12,5,0]
-,[624,7,1001,332,4,1,350,80,"Hurricane Fury","","Hurricane shaped massive two handed axe. The power of hurricane lie hidden in an orb at the center of the axe.<b>For each upgrade:</b><br>ASPD +1%<br>1% less damage from [Medium] size enemies",191,10,221,22,0]
-,[625,8,1,4,4,1,44,44,"Holgren's Refining Hammer","","Every time you attack the enemy, small chance to destroy their weapon or armor by 10%<br>If user's base Str is 44 or higher: Damage calculation becomes ATK + 44<br><br><b>When equipping [Holgren's Refining Hammer]+[Whitesmith Card] at the same time:<br>Very high chance to destroy enemy's equipment, and small chance to destroy your own by 1%</b>",0]
-,[626,10,76,95,3,1,140,55,"Burning Bow","","If equipped together with Fire Arrow, increases damage by 25%",63,10,0]
-,[627,10,76,100,3,1,140,55,"Freezing Bow","","If equipped together with Crystal Arrow, increases damage by 25%",132,1,0]
-,[628,10,76,105,3,1,140,55,"Earthen Bow","","If equipped together with Stone Arrow, increases damage by 25%",134,1,0]
-,[629,10,76,95,3,1,140,55,"Gale Bow","","A light bow that seems to have a potential to cause a whirlwind.<br>If equipped together with [<font color=blue>+ Wind Arrow</font>],<br>This chance is increased when the wearer's INT is 40 or greater.<br> Increases damage by 25%",221,23,0]
-,[630,10,76,120,3,0,160,65,"Orc Archer's Bow","","If equipped together with Steel Arrow, increases damage by 50%.",0]
-,[631,11,122,160,4,1,145,55,"Ogre's Toenail","","[description translation missing - ItemID: 631]",0]
-,[632,11,122,140,4,0,150,55,"Inverse Scare","","[description translation missing - ItemID: 632]",20,6,0]
-,[633,11,122,110,4,1,140,55,"Drill Katar","","[description translation missing - ItemID: 633]",8,30,0]
-,[634,11,122,120,4,2,170,55,"Bloody Blades","","[description translation missing - ItemID: 634]",0]
+,[624,7,1001,332,4,1,350,80,"Hurricane Fury","","Hurricane shaped massive two handed axe. The power of hurricane lie hidden in an orb at the center of the axe.<br><b>For each upgrade:</b><br>ASPD +1%<br>1% less damage from [Medium] size enemies",191,10,221,22,0]
+,[625,8,1,4,4,1,44,44,"Holgren's Refining Hammer","","Every time you attack the enemy, small chance to destroy their weapon or armor by 10%<br>If user's base STR is 44 or higher: Damage calculation becomes ATK + 44<br><br><b>When equipping [Holgren's Refining Hammer]+[Whitesmith Card] at the same time:<br>Very high chance to destroy enemy's equipment, and small chance to destroy your own by 1%</b>",0]
+,[626,10,76,95,3,1,140,55,"Burning Bow","","If equipped together with <b><font color=Red>Fire Arrow</font></b>, increases damage by 25%",63,10,0]
+,[627,10,76,100,3,1,140,55,"Freezing Bow","","If equipped together with <b><font color=Blue>Crystal Arrow</font></b>, increases damage by 25%",132,10,0]
+,[628,10,76,105,3,1,140,55,"Earthen Bow","","<b>If equipped together with <font color=brown>Stone Arrow</font>:</b><br>Increases damage by 25%<br>When attacking, adds a 10% chance to inflict [Stone Curse] on the enemy",0]
+,[629,10,76,95,3,1,140,55,"Gale Bow","","A light bow that seems to have a potential to cause a whirlwind.<br><b>If equipped together with <font color=green>Arrow of Wind</font>:</b><br>When performing a ATK based attack, there's a 10% chance to cast the skill [Wind Blade]Lv 5<br>This chance is 20% when the wearer's base INT is 40 or greater.<br> Increases damage by 25%",0]
+,[630,10,76,120,4,0,160,65,"Orc Archer's Bow","","If equipped together with <b>Steel Arrow</b>, increases damage by 50%.",0]
+,[631,11,122,160,4,1,145,55,"Ogre's Toenail","","When the weapon's special ability activates by small chance (10%), the target will receive a very dangerous wound, causing effects of Heal, Sanctuary, and Potion Pitcher effectiveness by 20%<br>Some recovery items will have their effective reduced by 20%<br><b>If refine >= 9:</b><br>The recovery effects will have its effectiveness reduced by 40% instead of 20%",0]
+,[632,11,122,140,4,0,150,55,"Inverse Scare","","Every attack you do has a 3% chance of causing all enemies within 5 x 5 cell around you (PBAoE) to receive a random status ailment<br><b>If refine >= 9:</b><br>The affected area of Dragon Fear increases to 11 x 11 around the caster",20,6,0]
+,[633,11,122,110,4,1,140,55,"Drill Katar","",0,8,30,0]
+,[634,11,122,120,4,2,170,55,"Bloody Blades","","Every time you attack, small chance to cause External Bleeding status ailment to all enemies within 5 x 5 (PBAoE) cells around you<br><b>If refine >= 9:</b><br>The range is increased to 11 x 11",0]
 ,[635,13,0,80,3,3,65,75,"Magma Fist","","A knuckle made with magma. It appears like any other knuckles, but it sometimes gets very hot to the point it could melt anything in contact with it. However, the inside of this knuckle has been designed specifically so it won't burn the user's hands.",221,24,0]
 ,[636,13,0,80,3,3,65,75,"Icicle Fist","","	A knuckle made with an icicle. It appears like any other knuckles, but it sometimes gets very cold to the point it could freeze anything in contact with it. However, it seems to have no effect at all to the user.",221,25,0]
 ,[637,13,0,80,3,3,65,75,"Electric Fist","","A knuckle made with the power of lightning. It appears like any other knuckles, but it sometimes cause massive shock to the enemies. Due to the specifically designed components inside of the knuckles, the user is not affected.",221,26,0]
 ,[638,13,0,80,3,3,65,75,"Seismic Fist","","A knuckle made with the spirit of the earth. It appears like any other knuckles, but it sometimes eminates powerful aura that could destroy any enemies in your way.<br>While the power of the earth shows absolute cruelty toward the enemies, the wielder will only feel the warmth and kindness of the goddess of the earth.",221,27,0]
 ,[639,13,0,30,3,4,50,60,"Barrage Fist","","",5187,15,5188,15,5189,20,0]
 ,[640,12,0,110,3,2,200,70,"Giant Encyclopedia","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,0]
-,[641,12,0,137,4,2,100,85,"Book of the Dead","","Add a 0.1% chance of auto casting Coma effect on DemiHuman monster<br>Attack Speed increased depending on the refinement rate of this weapon<br><b>[Sage, Professor]</b><br>There is a 2% chance of using [Hell's Judgment]Lv 5 on the target when doing a physical attack",89,15,1,3,4,3,6,-20,0]
-,[642,9,1001,60,3,2,80,70,"Lich's Bone Wand","","Whenever you take a Physical Damage, small chance to cause Curse status ailment to every enemies in the screen. This chance is increased depending on the refinement rate of this weapon<br><b>[Refine Rate 9~10]</b><br>You will receive bonus MATK + 3%, Maximum SP + 300",89,20,4,1,5,1,20,9,0]
+,[641,12,0,137,4,2,100,85,"Book of the Dead","","Add a 0.1% chance of auto casting Coma effect on DemiHuman monster<br>Attack Speed increased depending on the refinement rate of this weapon<br><b>[Sage, Professor]</b><br>On attack, there is a 2% chance to cause damage and Curse status ailment to every enemy on screen",89,15,1,3,4,3,6,-20,0]
+,[642,9,1001,60,3,2,80,70,"Lich's Bone Wand","","Whenever you take a Physical Damage, 1% chance to cause Curse status ailment to every enemies in the screen. This chance is increased depending on the refinement rate of this weapon<br><b>[Refine Rate 9~10]</b><br>You will receive bonus MATK + 3%, Maximum SP + 300",89,20,4,1,5,1,20,9,0]
 ,[643,51,1,0,0,0,10,0,"Dark Blinder","",0,154,100,151,2,0]
 ,[644,9,53,10,3,0,40,55,"Staff of Recovery","","Heal and Sanctuary effectiveness increased by the refine of the weapon",89,15,20,6,0]
-,[645,9,1001,80,3,0,50,70,"Staff of Piercing","","When you attack using magical ability, it will ignore 10% of their MDEF<br>The amount ignored will increase depending on the refinement rate of this weapon",89,15,4,4,0]
-,[646,9,125,130,4,1,250,80,"Staff of Destruction","","Reduces casting time of Amplify Magic by 50%<br>Refinement in multiples of 2 (+2, +4, +6, +8, +10) increases MATK by 1%<br>SP taken by all skills will increase depending on the refinement rate of this weapon<br>Small chance to cast [Jupitel Thunder]Lv 5 whenever you are attacked physically. This chance depends on the refinement rate of this weapon",89,25,4,3,2,10,195,1,0]
-,[647,9,63,120,4,0,150,70,"Divine Cross","","",89,15,20,6,5,4,51,15,56,15,0]
-,[648,14,130,130,3,1,150,70,"Bass Guitar","","[description translation missing - ItemID: 648]",0]
-,[649,14,130,10,4,0,180,70,"Spirited Guitar","","[description translation missing - ItemID: 649]",12,100,75,-100,0]
+,[645,9,1001,80,3,0,50,70,"Staff of Piercing","","When you attack using magical ability, it will ignore 10% of their MDEF<br>The amount ignored will increase depending on the refinement rate of this weapon (1% per refine)",89,15,4,4,0]
+,[646,9,125,130,4,1,250,80,"Staff of Destruction","","Reduces casting time of Amplify Magic by 50%<br>Refinement in multiples of 2 (+2, +4, +6, +8, +10) increases MATK by 1%<br>SP taken by all skills will increase depending on the refinement rate of this weapon (2% per refine)<br>Small chance to cast [Jupitel Thunder]Lv 5 whenever you are attacked physically (2% per refine)",89,25,4,3,2,10,195,1,0]
+,[647,9,63,120,4,0,150,70,"Divine Cross","","",89,15,20,6,5,4,51,15,56,15,195,1,0]
+,[648,14,130,130,3,1,150,70,"Bass Guitar","","Every time the enemy dies, Recovers 3 SP<br>Add a 3% chance of auto casting Level 3 Heaven's Drive on the enemy when receiving physical damage<br>Whenever you attack, 10% chance to cause Chaos to enemies within 5 x 5 (PBAoE) cells around you",0]
+,[649,14,130,10,4,0,180,70,"Spirited Guitar","","Loses 50 HP per every 5 second<br>Reduces DEX by massive rate",12,100,75,-100,0]
 ,[650,15,0,110,3,0,70,30,"Electric Wire","",0,20,4,0]
 ,[651,15,131,100,4,2,200,70,"Electric Eel","","Made of a creature that gives out electric energy. The surface is slippery and feels weird.<br>The skill level of the autocast Arrow Vulcan changes depending on the refinement rate of this weapon (not yet calculated!)",20,4,2,2,4,2,221,28,0]
 ,[652,15,131,110,4,1,150,70,"Foot of the Sea Witch","","A whip made with a foot of the famous western sea witch. It says it steals your life essence, so be careful of the witch.<br>Whenever the enemy dies, <font color=blue>Recovers 5 SP</font><br>Every time you attack, small chance to cause Silence to all enemies within 5 x 5 (PBAoE) cells around you.",221,29,0]
-,[653,15,131,185,4,0,130,70,"Carrot Whip","","[description translation missing - ItemID: 653]",0]
-,[654,17,0,68,3,2,58,70,"Western Outlaw","","[description translation missing - ItemID: 654]",0]
+,[653,15,131,185,4,0,130,70,"Carrot Whip","","Every time you attack, 1% chance to use AGI Up on yourself<br>The level of AGI Up cast depends on the refinement rate of this weapon",0]
+,[654,17,0,68,3,2,58,70,"Western Outlaw","","<b>For every 10 base AGI:</b><br>Hit + 1<br><b>For Every 14 base AGI:</b><br>ASPD + 1%",0]
 ,[655,18,0,150,3,"0 / 1",100,70,"Long Barrel","",0,10,20,12,-3,221,30,0]
-,[656,18,0,170,3,"0 / 1",70,70,"Jungle Carbine","","[description translation missing - ItemID: 656]",8,10,10,4,12,10,0]
+,[656,18,0,170,3,"0 / 1",70,70,"Jungle Carbine","","<b>For every 3 base DEX</b><br>Hit - 1",8,10,10,4,12,10,0]
 ,[657,18,0,138,3,2,77,70,"Lever Action Rifle","",0,8,20,10,50,12,-5,0]
-,[658,19,0,200,4,0,130,70,"Gate Keeper-DD","","DEF increases by Refine Rate",5,1,221,31,0]
-,[659,19,0,80,3,"1 / 2",70,70,"THUNDER-P","","[description translation missing - ItemID: 659]",8,-5,12,20,0]
-,[660,16,0,112,3,2,155,70,"Huuma Morning Star Shuriken","",0,5396,30,0]
+,[658,19,0,200,4,0,130,70,"Gatekeeper-DD","","Inflicts splash damage<br>DEF increases by Refine Rate",5,1,221,31,0]
+,[659,19,0,80,3,"1 / 2",70,70,"Thunder-P","","Inflicts splash damage",8,-5,12,20,0]
+,[660,16,0,112,3,2,155,70,"Huuma Calm Mind","","Casting cannot be interrupted",5396,30,0]
 ,[661,50,1,5,0,0,100,65,"Magni's Cap","",0,1,2,0]
 ,[662,50,1,3,0,1,50,65,"Ulle's Cap","",0,5,2,2,1,0]
 ,[663,50,1,3,0,0,30,65,"Frigg's Circlet","",0,19,10,4,2,14,50,0]
@@ -692,17 +692,17 @@ ItemOBJ = [
 ,[669,50,1,1,0,0,60,0,"Feather Beret","",0,19,1,57,10,0]
 ,[670,50,0,7,0,1,10,0,"Valkyrie Helm","",0,2,20,3,20,6,20,19,20,57,10,0] //custom TalonRO SQI - original: ,[670,50,1001,5,0,1,100,0,"Valkyrie Helm","",0,19,5,0]
 ,[671,50,0,0,0,0,70,0,"Beret","",0,57,10,193,1,0]
-,[672,50,0,3,0,1,40,60,"Magistrate Hat","","[description translation missing - ItemID: 672]",0]
-,[673,50,0,3,0,1,40,60,"Ayam","","<b>[TaeKwon Class]</b><br>INT + 1, SP Recovery + 3%",0]
+,[672,50,0,3,0,1,40,60,"Magistrate Hat","","<b>[TaeKwon Class]</b><br>AGI + 1<br>HP Recovery + 3%",0]
+,[673,50,0,3,0,1,40,60,"Ayam","","<b>[TaeKwon Class]</b><br>INT + 1<br>SP Recovery + 3%",0]
 ,[674,999,0,0,0,0,10,0,"HORIORUGORU","","[description translation missing - ItemID: 674]",0]
-,[675,50,0,4,0,1,50,40,"Bride Mask","","[description translation missing - ItemID: 675]",0]
-,[676,50,0,5,0,1,50,40,"Mythical Lion Mask","","[description translation missing - ItemID: 676]",0]
+,[675,50,0,4,0,1,50,40,"Bride Mask","","<b>[TaeKwon Class]</b><br>LUK + 2<br>Critical Rate + 5<br><b>Upper, Middle, and Lower Headgear</b>",0]
+,[676,50,0,5,0,1,50,40,"Mythical Lion Mask","","<b>[TaeKwon Class]</b><br>DEX + 2<br>ATK increases by Refine Rate * 2<br>Add a 10% chance of auto casting Stun on the enemy when attacking<br><b>Upper and Middle Headgear</b>",0]
 ,[677,51,0,0,0,0,10,0,"Censor Bar","",0,19,1,8,-5,153,5,0]
-,[678,51,0,2,0,0,10,30,"Hahoe Mask","","[description translation missing - ItemID: 678]",0]
-,[679,50,0,1,0,0,10,0,"Rabbit Doll","",0,5,1,9,2,0]
+,[678,51,0,2,0,0,10,30,"Hahoe Mask","","<b>[TaeKwon Class]</b><br>LUK + 1<br>Perfect Dodge + 2<br><b>Middle and Lower Headgear</b>",0]
+,[679,50,0,3,0,0,10,30,"Dolor Hat","","1.5% chance to cast Lex Aeterna with physical attacks",194,1,0]
 ,[680,50,0,5,0,0,80,50,"Dragon Skull","",0,59,5,0]
-,[681,50,0,1,0,0,50,30,"Ramen Hat","","Chance of auto casting Decrease AGI Level 1 on the enemy when attacking",5,4,0]
-,[682,50,0,0,0,0,10,10,"Whisper Mask","","[description translation missing - ItemID: 682]",2,3,68,-10,193,1,0]
+,[681,50,0,1,0,0,0,0,"Ramen Hat","","Chance of auto casting Decrease AGI Level 1 on the enemy when attacking",5,4,193,1,0]
+,[682,50,0,0,0,0,0,0,"Whisper Mask","",0,2,3,68,-10,193,1,0]
 ,[683,60,50,4,0,1,60,40,"Angelic Protection","",0,19,20,0]
 ,[684,60,1,6,0,1,250,65,"Odin's Blessing","",0,0]
 ,[685,60,1,7,0,0,350,54,"Goibne's Armor","",0,3,2,15,10,0]
@@ -713,28 +713,28 @@ ItemOBJ = [
 ,[690,61,50,3,0,1,40,20,"Angelic Guard","",0,56,5,0]
 ,[691,61,1,3,0,1,150,65,"Stone Buckler","",0,192,5,0]
 ,[692,61,1,3,0,1,50,65,"Valkyrja's Shield","",0,19,5,61,20,63,20,67,20,69,20,0]
-,[693,61,1001,5,0,0,120,68,"Platinum Shield","","40% chance to reflect magic spells for 2 seconds",19,5,191,15,192,15,51,10,0]
+,[693,61,1001,5,0,0,120,68,"Platinum Shield","","Whenever you receive a Magical Damage there is 1.5% chance to reflect all offensive magic against you at 40% chance for 2 seconds",19,5,191,15,192,15,51,10,0]
 ,[694,61,1001,5,0,1,100,55,"Orlean's Server","","5% chance to reflect magic spells",19,2,0]
 ,[695,61,1001,5,0,1,100,55,"Thorn Shield","",0,19,2,0]
-,[696,61,1001,4,0,1,250,75,"Strong Shield","","Skills cannot push or move the user<br>",60,-20,61,-20,62,-20,63,-20,64,-20,66,-20,67,-20,68,-20,0]
-,[697,62,55,1,0,1,30,85,"Wing of Eagle","",0,0]
+,[696,61,1001,4,0,1,250,75,"Strong Shield","","Skills cannot push or move the user",60,-20,61,-20,62,-20,63,-20,64,-20,66,-20,67,-20,68,-20,0]
+,[697,62,55,1,0,1,30,85,"Eagle Wing","",0,0]
 ,[698,62,50,2,0,1,40,20,"Angelic Cardigan","",0,75,5,0]
 ,[699,62,0,2,0,"0 / 1",15,0,"Undershirt","",0,19,1,0]
 ,[700,62,1,3,0,0,60,33,"Morpheus's Shawl","",0,19,3,16,10,0]
-,[701,62,1,3,0,0,60,61,"Morrigane Manteau","",0,6,2,11,8,0]
+,[701,62,1,3,0,0,60,61,"Morrigane's Manteau","",0,6,2,11,8,0]
 ,[702,62,1,3,0,0,70,54,"Goibne's Spaulders","",0,78,10,19,2,3,1,0]
-,[703,62,1,3,0,0,40,65,"Falcon Robe","",0,9,15,11,5,0]
+,[703,62,1,3,0,0,40,65,"Falcon Muffler","",0,9,15,11,5,0]
 ,[704,62,1,4,0,0,60,65,"Vali's Manteau","",0,60,15,0]
 ,[705,62,1001,4,0,1,60,48,"Dragon's Breath","",0,59,15,0]
 ,[706,62,1001,3,0,1,50,55,"Wool Scarf","",0,19,4,0]
-,[707,62,1001,4,0,"0 / 1",50,55,"Crest of Rider","",0,2,2,0]
-,[708,62,1072,3,0,1,70,70,"Wolfheiden","","Whenever you receive a Physical Damage, there is a small chance to activate [Stone Skin]Lv 6",0]
-,[709,62,1089,3,0,1,40,70,"Mithril Magic Manteau","","Whenever you receive a Magical Damage, there is a small chance to activate [Anti-Magic]Lv 6",19,3,0]
-,[710,63,50,2,0,1,30,54,"Angel's Reincarnation","",0,13,100,0]
+,[707,62,1001,4,0,"0 / 1",50,55,"Crest of the Rider","",0,2,2,0]
+,[708,62,1072,3,0,1,70,70,"Wolfheiden","","Whenever you receive Physical Damage, 2% chance to increase your DEF by 20% for 2 seconds, but also reduce your MDEF by 20% during that 2 seconds",0]
+,[709,62,1089,3,0,1,40,70,"Mithril Magic Manteau","","Whenever you receive Magical Damage, 20% chance to increase your MDEF by 20% for 2 seconds, but also reduce your DEF by 20% during that 2 seconds",19,3,0]
+,[710,63,50,2,0,1,30,25,"Angel's Reincarnation","",0,13,100,0]
 ,[711,63,1,4,0,0,70,54,"Goibne's Greaves","",0,19,3,15,5,16,5,0]
 ,[712,63,1,3,0,0,50,65,"Fricco's Shoes","","Increase the heal power of Red, Orange, Yellow and White Potion by 20%",2,2,0]
 ,[713,63,1,4,0,0,65,65,"Vidar's Boots","",0,15,9,16,9,0]
-,[714,63,77,2,0,1,20,0,"High Fashion Sandals","",0,19,10,0]
+,[714,63,77,2,0,1,20,40,"High Quality Sandals","",0,19,10,0]
 ,[715,63,1001,3,0,0,50,85,"Variant Shoes","","Maximum HP / Maximum SP reduced by 1% per refine rate<br>Added +1 DEF for every 2 refinement",15,20,16,20,0]
 ,[716,63,1001,3,0,1,30,55,"Tidal Shoes","",0,61,5,0]
 ,[717,63,1001,4,0,"0 / 1",50,55,"Black Leather Boots","","<b>[Refine Rate 9~10]</b><br>AGI + 2",2,1,0]
@@ -743,23 +743,23 @@ ItemOBJ = [
 ,[720,64,1,0,0,0,10,33,"Morpheus's Bracelet","",0,4,1,16,5,0]
 ,[721,64,1,0,0,0,20,61,"Morrigane's Belt","",0,17,5,10,3,0]
 ,[722,64,1,0,0,0,20,61,"Morrigane's Pendant","",0,1,2,10,3,0]
-,[723,64,1,0,0,0,10,90,"Sacrifice Ring","",0,0]
-,[724,64,52,0,0,0,30,30,"Shinobi Sash","",0,1,1,2,1,19,1,0]
-,[725,64,1,0,0,0,400,0,"Bloody Shackle Ball","",0,0]
+,[723,64,0,0,0,0,10,90,"Sacrifice Ring","",0,0]
+,[724,64,52,1,0,0,30,30,"Shinobi Sash","",0,1,1,2,1,19,1,0]
+,[725,64,1,0,0,0,400,0,"Bloodied Shackle Ball","",0,0]
 ,[726,64,72,1,0,0,100,0,"Armor Charm","",0,13,50,0]
 ,[727,64,0,0,0,0,10,0,"Spiritual Ring","",0,4,2,5,1,0]
 ,[728,64,82,0,0,0,10,0,"Ring of Flame Lord","",0,1,2,3,1,17,15,63,10,221,32,221,33,221,34,221,35,221,36,0]
 ,[729,64,82,2,0,0,10,0,"Ring of Resonance","",0,2,2,3,1,19,2,221,37,221,38,221,39,221,40,221,41,0]
 ,[730,64,0,0,0,0,10,0,"Lesser Elemental Ring","",0,7,1,0]
-,[731,64,1051,0,0,0,10,60,"Seal of Red Silk","","[description translation missing - ItemID: 731]",0]
+,[731,64,1051,0,0,0,10,60,"Seal of Red Silk","",0,0]
 ,[732,64,1001,0,0,1,10,90,"Orlean's Gloves","",0,5,2,89,3,0]
-,[733,64,1001,0,0,1,10,90,"Horn of Buffalo","",0,2,2,0]
+,[733,64,1001,0,0,1,10,90,"Horn of the Buffalo","",0,2,2,0]
 ,[734,64,1001,0,0,1,15,50,"Expert Ring","","Increases SP consumption of skills by 5%",74,5,0]
 ,[735,64,1,1,0,0,20,0,"Kafra Ring","",0,19,1,1,1,2,1,4,1,6,1,0]
 ,[736,100,0,0,0,0,0,0,"No Set",0,0,0]
 ,[737,100,0,0,0,0,0,0,0,0,"MATK increase by Survivor's Rod refine rate<br>Increase resistance from Neutral Property attacks by refine rate * 3",13,300,89,-5,0]
 ,[738,100,0,0,0,0,0,0,0,0,0,212,5,9,10,0]
-,[739,100,0,0,0,0,0,0,0,0,"[description translation missing - ItemID: 739]",13,300,0]
+,[739,100,0,0,0,0,0,0,0,0,"Reduce SP Consumption of skills by 20%",13,300,0]
 ,[740,100,0,0,0,0,0,0,0,0,"Reduces damage from Zombie Prisoner and Skeleton Prisoner by 20%",17,50,3147,20,3171,20,0]
 ,[741,100,0,0,0,0,0,0,0,0,0,13,150,18,5,0]
 ,[742,100,0,0,0,0,0,0,0,0,"<b>[Swordman Class]</b><br>Additional DEF + 6",1,2,18,5,19,5,0]
@@ -832,7 +832,7 @@ ItemOBJ = [
 ,[809,50,0,1,0,1,20,20,"Leaf Hat","","[description translation missing - ItemID: 809]",4,1,0]
 ,[810,50,0,2,0,0,70,38,"Angeling Hat","",0,57,10,193,1,0]
 ,[811,50,0,2,0,0,0,10,"Guild Member Hat","",0,0]
-,[812,999,0,2,0,0,70,10,"Guild recruit Cap","",0,0]  //Duplicated, remove me. --> Duplicate with [811,50,0,2,0,0,0,10,"Guild Member Hat","",0,0]
+,[812,12,0,110,4,1,70,80,"Battlefield Textbook","","A book containing the History of many wars and the dreams of the strategists that took part in them.",4,3,0]  //todo autocasting
 ,[813,50,0,3,0,0,70,0,"Angeling Heartpin","",0,9,5,0]
 ,[814,100,0,0,0,0,0,0,0,0,0,214,2,6,2,0]
 ,[815,50,0,1,0,1,50,0,"Classic Hat","",0,1,1,27,5,28,5,29,5,0]
@@ -964,13 +964,13 @@ ItemOBJ = [
 ,[941,5,1001,160,3,1,100,50,"Ivory Lance","","[description translation missing - ItemID: 941]",2,2,12,3,220,15,0]
 ,[942,5,121,150,4,1,560,70,"Carled","","Every two upgrades made to the weapon gives Def +1",12,-10,0]
 ,[943,5,1001,112,2,4,70,50,"Battle Fork","",0,0]
-,[944,8,1053,110,3,3,70,50,"Luna Kaleet","","If user's base Str is 77 or higher: ASPD +4% and Causes Stun effect to enemies by 15% chance.<BR>When a Brute is killed, 15% chance to drop +4 STR Food<BR>When a Plant is killed, 15% chance to drop +5 DEX Food<BR>When a Fish is killed, 15% chance to drop +3 LUK Food",0]
+,[944,8,1053,110,3,3,70,50,"Luna Kaleet","","If user's base Str is 77 or higher: ASPD +4% and Causes Stun effect to enemies by 15% chance.<BR>When a Brute is killed, 5% chance to drop +3 STR Food<BR>When a Plant is killed,0.5% chance to drop +5 DEX Food<BR>When a Fish is killed, 5% chance to drop +4 LUK Food",0]
 ,[945,10,124,105,4,2,100,60,"Nepenthes Bow","","[description translation missing - ItemID: 945]",0]
 ,[946,10,1054,125,4,1,125,80,"Cursed Lyre","","[description translation missing - ItemID: 946]",6,-2,0]
 ,[947,13,129,95,3,3,60,60,"Soul of Hels Leon","","Adds a 3% chance of using [Joint Beat]Lv 1 on the target when doing a physical attack<br>Adds a 1% chance of using [Summon Spirit Sphere]Lv 5 when doing a physical attack<br>10% chance of using [Investigate]Lv 1 when [Palm Push Strike] is casted",0]
 ,[948,9,1001,80,4,0,50,70,"Eraser","","There is a small chance while magically attacking, on a radius 11 * 11 of your cell and drain every enemies SP by 20%<br><b>[Refine Rate 10]</b><br>The area becomes 19 * 19 and you drain every enemies SP by 60%",89,20,4,3,5,2,76,8,0]
 ,[949,14,130,110,3,3,70,70,"Chello","","[description translation missing - ItemID: 949]",2,2,5,3,0]
-,[950,14,130,120,4,2,100,60,"Harp of Nepenthes","","[description translation missing - ItemID: 950]",4,2,0]
+,[950,14,130,120,4,2,100,60,"Harp of Nepenthes","","A harp made by the strong tentacles of Nepentis.<br /> Add small chance to Stun on the enemy when using Musical Strike.<br />The probability of inflicting stun effect increases if the Refining Level is over 9.",4,2,0]
 ,[951,15,131,120,4,2,100,60,"Stem of Nepenthes","","[description translation missing - ItemID: 951]",4,2,0]
 ,[952,15,131,110,3,3,70,70,"Rope of Balance","","[description translation missing - ItemID: 952]",2,2,5,3,0]
 ,[953,50,0,5,0,0,80,0,"Baphomet Horns","","As your JOB Level increases,the helm grants additional ATK",37,12,0]
@@ -1081,7 +1081,7 @@ ItemOBJ = [
 ,[1058,100,0,0,0,0,0,0,"Shaman Set",0,"Skill casts cannot be interrupted (except in WoE)<br>Increases Max HP by 10 times base level<br>Increases Max SP by 2 times base level",73,15,0]
 ,[1059,50,0,1,0,0,50,0,"Poring Cake Hat","",0,6,2,0]
 ,[1060,50,0,1,0,0,10,0,"Cute Santa Hat","",0,19,1,6,1,0]
-,[1061,10,64,120,4,1,170,70,"Bard Bow","",0,4,2,76,10,0]
+,[1061,10,64,120,4,1,170,70,"Minstrel Bow","",0,4,2,76,10,0]
 ,[1062,50,0,3,0,0,10,0,"Luise's Santa Hat","","[description translation missing - ItemID: 1062]",6,1,19,1,57,5,56,5,58,5,0]
 ,[1063,50,0,1,0,0,40,0,"Fish Head Hat","",0,221,97,0]
 ,[1064,50,0,3,0,1,10,1,"Diadem","","[description translation missing - ItemID: 1064]",4,1,89,3,16,3,73,-3,91,3,94,3,0]
@@ -1148,7 +1148,7 @@ ItemOBJ = [
 ,[1125,50,0,1,0,1,20,0,"Crown Parrot","",0,156,100,4,1,221,107,193,1,0]
 ,[1126,50,0,0,0,0,10,0,"Red Hat","","[description translation missing - ItemID: 1126]",0]
 ,[1127,50,0,4,0,0,50,30,"Crab Nipper Hairpin","","[description translation missing - ItemID: 1127]",221,104,0]
-,[1128,50,0,2,0,0,0,10,"Notice Board","",0,0] 
+,[1128,50,0,2,0,0,0,10,"Notice Board","",0,0]
 ,[1129,50,0,2,0,0,30,30,"Noble Hat","","0.7% chance of auto casting [Adrenaline Rush]Lv 1 when receiving ATK based damage",1,2,0]
 ,[1130,50,0,3,0,1,80,80,"Emperor's Laurel Crown","",0,7,1,19,3,0]
 ,[1131,50,79,0,0,0,75,75,"Lion Mask","","[description translation missing - ItemID: 1131]",19,1,0]
@@ -1176,9 +1176,9 @@ ItemOBJ = [
 ,[1153,50,0,2,0,0,20,1,"Pinwheel Hat","",0,15,5,16,5,0]
 ,[1154,50,0,0,0,1,10,45,"True Love","","[description translation missing - ItemID: 1154]",193,1,19,10,73,-10,0]
 ,[1155,50,0,1,0,0,80,1,"Magic Rabbit Hat","",0,4,1,14,50,221,109,221,110,221,111,221,89,0]
-,[1156,1,1052,110,2,3,50,50,"Krieg","","Adds a 10% chance of inflicting [Bleeding] on the target when using [Back Stab]",5169,15,0]
+,[1156,1,1052,110,2,3,50,50,"Krieg Dagger","","Adds a 10% chance of inflicting [Bleeding] on the target when using [Back Stab]",5169,15,0]
 ,[1157,1,1052,135,3,2,5,50,"Weihna","","Adds a 10% chance of inflicting [Poison] on the target when using [Raid]<br>Adds a chance for when dealing physical damage, increase phyical damage by 10% for 5 seconds",0]
-,[1158,2,1051,170,3,1,150,50,"Roubel","","Adds a 0.5% chance for when dealing physical damage, the damage inflicted with [Bash] and [Bowling Bash] will be increased by 20% for 15 seconds",0]
+,[1158,2,1051,170,3,1,150,50,"Roubel Sword","","Adds a 0.5% chance for when dealing physical damage, the damage inflicted with [Bash] and [Bowling Bash] will be increased by 20% for 15 seconds",0]
 ,[1159,3,51,180,4,1,200,80,"Veteran Sword","","If the user has mastered [Bash], increases the damage with it by 50%<br>If the user has mastered [Bowling Bash], increases the damage with it by 50%",1,1,5,1,0]
 ,[1160,3,1051,200,2,3,380,50,"Krasnaya","","If user's base Str is 95 or higher: ATK + 20",0]
 ,[1161,8,53,160,3,2,180,80,"Veteran Hammer","","For each level of [Divine Protection] the user has learned, the power of the user's [Heal] is increased by 1%<br>For each level of [Mace Mastery] the user has learned, Crit +2",4,1,6,1,0]
@@ -1286,7 +1286,7 @@ ItemOBJ = [
 ,[1263,51,0,6,0,0,0,1,"Blush of Groom","","",57,3,0]
 ,[1264,50,0,0,0,1,10,0,"Purple Cowboy Hat",0,0,4,2,3,2,14,50,0]
 ,[1265,50,0,0,0,1,20,30,"Dark Randgris Helm","","<b>Upper and Mid Headgear</b>",5,4,19,1,0]
-,[1266,999,0,2,0,0,70,10,"AFK Hat","",0,0] //Duplicated (same with Notice Board TRO ID : 5474), remove me. --> Duplicate with [1128,50,0,2,0,0,0,10,"Notice Board","",0,0] 
+,[1266,999,0,2,0,0,70,10,"AFK Hat","",0,0] //Duplicated (same with Notice Board TRO ID : 5474), remove me. --> Duplicate with [1128,50,0,2,0,0,0,10,"Notice Board","",0,0]
 ,[1267,50,0,0,0,0,10,10,"Afro Wig","","Add a 30% chance of auto casting First Aid on the user when the user receives Physical Damage",60,1,0]
 ,[1268,50,0,0,0,0,10,0,"Angel Blessing","","",66,5,6,1,0,]
 ,[1269,51,1,0,0,0,20,30,"Angel of Ghost","",0,87,2,89,2,0]
@@ -1343,57 +1343,57 @@ ItemOBJ = [
 //custom TalonRO
 ,[1320,64,0,0,0,0,1,0,"Celebration Ring",0,0,7,5,0] //custom TalonRO
 //custom TalonRO rental
-,[1321,10,64,194,4,0,0,1,"Ballista R","",0,25,20,193,1,0] //custom TalonRO rental
-,[1322,7,1,220,3,0,0,1,"Two-handed Axe R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1323,13,0,150,3,0,0,1,"Fist R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1324,12,0,145,3,0,0,0,"Giant Encyclopedia R","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1325,14,0,177,3,0,0,1,"Guitar R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1326,11,0,200,3,0,0,1,"Jamadhar R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1327,5,0,220,3,0,0,1,"Lance R","",0,27,50,28,50,29,50,0] //custom TalonRO rental
-,[1328,15,0,170,3,0,0,1,"Rante Whip R","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1329,8,53,175,3,0,0,1,"Stunner R","",0,131,10,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1330,7,0,205,4,0,0,1,"Bloody Axe R","","Increases Movement Speed",1,20,12,5,193,1,0] //custom TalonRO rental
-,[1331,11,0,148,4,0,0,1,"Bloody Roar R","","Recovery 3 HP every 5 seconds",187,1,193,1,0] //custom TalonRO rental
-,[1332,10,75,170,4,0,0,0,"Bow of Evil R","","[Double Strafe] damage +25%",5,2,0] //custom TalonRO rental
-,[1333,4,1,149,4,0,0,1,"Brocca R","",0,28,20,22,1,193,1,0] //custom TalonRO rental //fixed 2016-05-05
-,[1334,1,1,129,4,0,0,1,"Combat Knife R","","Drain 3% SP",57,10,56,-10,187,1,16,10,193,1,0] //custom TalonRO rental
-,[1335,2,1,199,4,0,0,1,"Excalibur R","",0,20,6,4,10,6,10,193,1,0] //custom TalonRO rental
-,[1336,2,1,120,4,0,0,1,"Fireblend R","",0,20,3,4,2,220,47,221,114,193,1,0] //custom TalonRO rental
-,[1337,7,0,215,4,0,0,1,"Great Axe R","","Mammonite will shove his target back 5 cells",1,5,8,20,131,15,193,1,0] //custom TalonRO rental
-,[1338,12,0,168,4,0,0,1,"Hardcover Book R","",0,1,5,5,2,89,20,193,1,0] //custom TalonRO rental
-,[1339,2,1,160,4,0,0,1,"Immaterial Sword R","","Drains 45% of target's SP by a low chance<br>Drain 1 SP from its owner on each attack",20,8,193,1,194,1,0] //custom TalonRO rental
-,[1340,11,0,189,4,0,0,1,"Infiltrator R","",0,37,70,18,3,9,5,11,2,12,5,193,1,0] //custom TalonRO rental
-,[1341,13,1,159,4,0,0,1,"Kaiser Knuckle R","",0,12,5,20,4,49,5,41,10,42,10,43,10,44,10,0] //custom TalonRO rental
-,[1342,11,0,175,4,0,0,1,"Katar of Speed R","","[Sonic Blow] damage +25%",12,3,193,1,0] //custom TalonRO rental
-,[1343,8,0,150,3,0,0,1,"Mace of Madness R","","[Cart Revolution] damage +25%",1,2,0] //custom TalonRO rental
-,[1344,1,1,105,4,0,0,1,"Mailbreaker R","",0,141,5,193,1,0] //custom TalonRO rental
-,[1345,9,1,165,3,0,0,1,"Mighty Staff R","","Consume 1 SP with each physical attack",1,10,4,4,89,20,193,1,0] //custom TalonRO rental
-,[1346,13,0,150,4,0,0,1,"Monk Knuckle R","","[Finger Offensive] damage +25%",4,2,0] //custom TalonRO rental
-,[1347,3,0,204,4,0,0,1,"Muramasa R","",0,10,30,12,8,193,1,0] //custom TalonRO rental
-,[1348,2,1,148,4,0,0,1,"Nagan R","","Enables use of the skill [Double Attack]Lv5",37,10,193,1,0] //custom TalonRO rental
-,[1349,15,0,160,4,0,0,1,"Phenomena Whip R","","[Throw Arrow] damage +25%",5,2,0] //custom TalonRO rental
-,[1350,12,0,140,3,0,0,1,"Book of Prayer R","",0,3,2,19,10,16,10,0] //custom TalonRO rental
-,[1351,8,53,193,4,0,0,1,"Quadrille R","",0,31,40,36,40,37,30,193,1,0] //custom TalonRO rental
-,[1352,4,0,160,3,0,0,1,"Spear of Excellent R","","[Magnum Break] damage +25%",1,2,0] //custom TalonRO rental
-,[1353,9,1,100,2,0,0,1,"Staff of Darkness R","",0,4,2,89,15,73,-5,0] //custom TalonRO rental
-,[1354,9,53,10,3,0,0,1,"Staff of Healing R","","Increase 15% chance to heal yourself by [Heal] and [Sanctuary] (didn't really get the description...)",89,15,193,1,0] //custom TalonRO rental
-,[1355,9,1,71,3,1,0,1,"Survivor's Rod (dex) R","",0,89,20,5,4,13,500,193,1,0] //custom TalonRO rental
-,[1356,1,1,105,4,0,0,1,"Swordbreaker R","",0,140,5,193,1,0] //custom TalonRO rental
-,[1357,11,0,179,4,0,0,1,"Unholy Touch R","",0,20,7,133,5,193,1,194,1,0] //custom TalonRO rental
-,[1358,64,1,1,0,0,10,0,"Vesper Core 01 R","",0,4,2,16,5,19,3,0] //custom TalonRO rental
-,[1359,64,1,1,0,0,10,0,"Vesper Core 02 R","",0,1,3,17,10,19,3,0] //custom TalonRO rental
-,[1360,64,1,1,0,0,10,0,"Vesper Core 03 R","",0,2,3,9,5,19,3,0] //custom TalonRO rental
-,[1361,64,1,1,0,0,10,0,"Vesper Core 04 R","",0,5,3,8,10,19,3,0] //custom TalonRO rental
-,[1362,60,0,12,0,0,0,0,"Recuvative Armor R","","Reduces natural HP and SP recovery by 100%<BR>When unequipped, you lose 100 SP<BR>When a monster is defeated from Physical or Magical Attacks, it recover 60 HP and 6 SP",76,-100,75,-100,0] //custom TalonRO rental
-,[1363,63,0,9,0,0,0,0,"Refresh Shoes R","","Every 10 seconds, your HP goes up by 20, SP goes up by 3",15,17,16,8,0] //custom TalonRO rental
-,[1364,62,0,9,0,0,0,0,"Silf Manteau R","",0,9,13,11,1,60,13,0] //custom TalonRO rental
-,[1365,62,55,5,0,0,0,0,"Survivor's Manteau R","",0,3,10,19,10,193,1,0] //custom TalonRO rental
-,[1366,64,1,0,0,0,0,0,"Bloodied Shackle Ball R","",0,17,30,0] //custom TalonRO rental
-,[1367,64,0,0,0,0,0,0,"Spiritual Ring R","",0,4,2,5,2,0] //custom TalonRO rental
-,[1368,50,1,10,0,0,0,0,"Corsair R","",0,3,3,4,3,193,1,0] //custom TalonRO rental
-,[1369,50,1,6,0,0,0,0,"Drooping Cat R","",0,19,15,151,10,153,40,193,1,0] //custom TalonRO rental
-,[1370,50,1,10,0,0,0,0,"Grand Circlet R","",0,1,3,4,3,6,3,19,4,193,1,0] //custom TalonRO rental
-,[1371,51,1,1,0,0,0,0,"Masquerade R","",0,37,7,0] //custom TalonRO rental
+,[1321,10,64,194,4,0,0,1,"Ballista [Rental]","",0,25,20,193,1,0] //custom TalonRO rental
+,[1322,7,1,220,3,0,0,1,"Two-handed Axe [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1323,13,0,150,3,0,0,1,"Fist [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1324,12,0,145,3,0,0,0,"Giant Encyclopedia [Rental]","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1325,14,0,177,3,0,0,1,"Guitar [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1326,11,0,200,3,0,0,1,"Jamadhar [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1327,5,0,220,3,0,0,1,"Lance [Rental]","",0,27,50,28,50,29,50,0] //custom TalonRO rental
+,[1328,15,0,170,3,0,0,1,"Rante Whip [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1329,8,53,175,3,0,0,1,"Stunner [Rental]","",0,131,10,27,40,28,40,29,40,0] //custom TalonRO rental
+,[1330,7,0,205,4,0,0,1,"Bloody Axe [Rental]","","Increases Movement Speed",1,20,12,5,193,1,0] //custom TalonRO rental
+,[1331,11,0,148,4,0,0,1,"Bloody Roar [Rental]","","Recovery 3 HP every 5 seconds",187,1,193,1,0] //custom TalonRO rental
+,[1332,10,75,170,4,0,0,0,"Bow of Evil [Rental]","","[Double Strafe] damage +25%",5,2,0] //custom TalonRO rental
+,[1333,4,1,149,4,0,0,1,"Brocca [Rental]","",0,28,20,22,1,193,1,0] //custom TalonRO rental //fixed 2016-05-05
+,[1334,1,1,129,4,0,0,1,"Combat Knife [Rental]","","Drain 3% SP",57,10,56,-10,187,1,16,10,193,1,0] //custom TalonRO rental
+,[1335,2,1,199,4,0,0,1,"Excalibur [Rental]","",0,20,6,4,10,6,10,193,1,0] //custom TalonRO rental
+,[1336,2,1,120,4,0,0,1,"Fireblend [Rental]","",0,20,3,4,2,220,47,221,114,193,1,0] //custom TalonRO rental
+,[1337,7,0,215,4,0,0,1,"Great Axe [Rental]","","Mammonite will shove his target back 5 cells",1,5,8,20,131,15,193,1,0] //custom TalonRO rental
+,[1338,12,0,168,4,0,0,1,"Hardcover Book [Rental]","",0,1,5,5,2,89,20,193,1,0] //custom TalonRO rental
+,[1339,2,1,160,4,0,0,1,"Immaterial Sword [Rental]","","Drains 45% of target's SP by a low chance<br>Drain 1 SP from its owner on each attack",20,8,193,1,194,1,0] //custom TalonRO rental
+,[1340,11,0,189,4,0,0,1,"Infiltrator [Rental]","",0,37,70,18,3,9,5,11,2,12,5,193,1,0] //custom TalonRO rental
+,[1341,13,1,159,4,0,0,1,"Kaiser Knuckle [Rental]","",0,12,5,20,4,49,5,41,10,42,10,43,10,44,10,0] //custom TalonRO rental
+,[1342,11,0,175,4,0,0,1,"Katar of Speed [Rental]","","[Sonic Blow] damage +25%",12,3,193,1,0] //custom TalonRO rental
+,[1343,8,0,150,3,0,0,1,"Mace of Madness [Rental]","","[Cart Revolution] damage +25%",1,2,0] //custom TalonRO rental
+,[1344,1,1,105,4,0,0,1,"Mailbreaker [Rental]","",0,141,5,193,1,0] //custom TalonRO rental
+,[1345,9,1,165,3,0,0,1,"Mighty Staff [Rental]","","Consume 1 SP with each physical attack",1,10,4,4,89,20,193,1,0] //custom TalonRO rental
+,[1346,13,0,150,4,0,0,1,"Monk Knuckle [Rental]","","[Finger Offensive] damage +25%",4,2,0] //custom TalonRO rental
+,[1347,3,0,204,4,0,0,1,"Muramasa [Rental]","",0,10,30,12,8,193,1,0] //custom TalonRO rental
+,[1348,2,1,148,4,0,0,1,"Nagan [Rental]","","Enables use of the skill [Double Attack]Lv5",37,10,193,1,0] //custom TalonRO rental
+,[1349,15,0,160,4,0,0,1,"Phenomena Whip [Rental]","","[Throw Arrow] damage +25%",5,2,0] //custom TalonRO rental
+,[1350,12,0,140,3,0,0,1,"Book of Prayer [Rental]","",0,3,2,19,10,16,10,0] //custom TalonRO rental
+,[1351,8,53,193,4,0,0,1,"Quadrille [Rental]","",0,31,40,36,40,37,30,193,1,0] //custom TalonRO rental
+,[1352,4,0,160,3,0,0,1,"Spear of Excellent [Rental]","","[Magnum Break] damage +25%",1,2,0] //custom TalonRO rental
+,[1353,9,1,100,2,0,0,1,"Staff of Darkness [Rental]","",0,4,2,89,15,73,-5,0] //custom TalonRO rental
+,[1354,9,53,10,3,0,0,1,"Staff of Healing [Rental]","","Increase 15% chance to heal yourself by [Heal] and [Sanctuary] (didn't really get the description...)",89,15,193,1,0] //custom TalonRO rental
+,[1355,9,1,71,3,1,0,1,"Survivor's Rod (DEX) [Rental]","",0,89,20,5,4,13,500,193,1,0] //custom TalonRO rental
+,[1356,1,1,105,4,0,0,1,"Swordbreaker [Rental]","",0,140,5,193,1,0] //custom TalonRO rental
+,[1357,11,0,179,4,0,0,1,"Unholy Touch [Rental]","",0,20,7,133,5,193,1,194,1,0] //custom TalonRO rental
+,[1358,64,1,1,0,0,10,0,"Vesper Core 01 [Rental]","",0,4,2,16,5,19,3,0] //custom TalonRO rental
+,[1359,64,1,1,0,0,10,0,"Vesper Core 02 [Rental]","",0,1,3,17,10,19,3,0] //custom TalonRO rental
+,[1360,64,1,1,0,0,10,0,"Vesper Core 03 [Rental]","",0,2,3,9,5,19,3,0] //custom TalonRO rental
+,[1361,64,1,1,0,0,10,0,"Vesper Core 04 [Rental]","",0,5,3,8,10,19,3,0] //custom TalonRO rental
+,[1362,60,0,12,0,0,0,0,"Recuvative Armor [Rental]","","Reduces natural HP and SP recovery by 100%<BR>When unequipped, you lose 100 SP<BR>When a monster is defeated from Physical or Magical Attacks, it recover 60 HP and 6 SP",76,-100,75,-100,0] //custom TalonRO rental
+,[1363,63,0,9,0,0,0,0,"Refresh Shoes [Rental]","","Every 10 seconds, your HP goes up by 20, SP goes up by 3",15,17,16,8,0] //custom TalonRO rental
+,[1364,62,0,9,0,0,0,0,"Silf Manteau [Rental]","",0,9,13,11,1,60,13,0] //custom TalonRO rental
+,[1365,62,55,5,0,0,0,0,"Survivor's Manteau [Rental]","",0,3,10,19,10,193,1,0] //custom TalonRO rental
+,[1366,64,1,0,0,0,0,0,"Bloodied Shackle Ball [Rental]","",0,17,30,0] //custom TalonRO rental
+,[1367,64,0,0,0,0,0,0,"Spiritual Ring [Rental]","",0,4,2,5,2,0] //custom TalonRO rental
+,[1368,50,1,10,0,0,0,0,"Corsair [Rental]","",0,3,3,4,3,193,1,0] //custom TalonRO rental
+,[1369,50,1,6,0,0,0,0,"Drooping Cat [Rental]","",0,19,15,151,10,153,40,193,1,0] //custom TalonRO rental
+,[1370,50,1,10,0,0,0,0,"Grand Circlet [Rental]","",0,1,3,4,3,6,3,19,4,193,1,0] //custom TalonRO rental
+,[1371,51,1,1,0,0,0,0,"Masquerade [Rental]","",0,37,7,0] //custom TalonRO rental
 //custom TalonRO common mid-headgears
 ,[1372,51,0,1,0,1,10,0,"+1 STR [1]","",0,1,1,0] //custom TalonRO +1 str mid
 ,[1373,51,0,1,0,1,10,0,"+1 AGI [1]","",0,2,1,0] //custom TalonRO +1 agi mid
@@ -1479,8 +1479,8 @@ ItemOBJ = [
 ,[1449,50,0,3,0,0,10,1,"Pink Bunny Band","",0,6,2,0]
 ,[1450,50,0,0,0,1,40,1,"Black Shiba Hat","",0,37,10,0]
 ,[1451,50,1,3,0,1,30,90,"Cursed Book","","4% chance to absorb 4% HP on physical attack<br>For every 2 refines, increase the HP absorbed by 1%<br>1% chance to absorb 1% SP on physical attack<br>For every 3 refines, increase the SP absorbed by 1%<br>You lose the amount of refines in HP per 5 seconds when equipped (not calcled)",0]
-,[1452,64,1,0,0,1,5,80,"Death Medalion","",0,10,5,0]
-,[1453,64,1,0,0,1,5,80,"Rune Charm Stone","",0,14,50,73,-1,0]
+,[1452,64,1,0,0,1,5,80,"Death Loop","",0,10,5,0]
+,[1453,64,1,0,0,1,5,80,"Rune Spellstone","",0,14,50,73,-1,0]
 //custom TalonRO [Update 2013-10-06]
 ,[1454,15,131,170,3,1,80,90,"Stem Whip","","MATK +50<br>When using Scream, add a 3% chance of casting Level 2 Wide Sleep<br>For every refine above +6, decrease SP cost of all skills by 2%",12,5,0]
 ,[1455,3,1051,280,3,0,340,90,"Alca Bringer","","Every 2 refines + 3% ASPD",0]
@@ -1511,7 +1511,7 @@ ItemOBJ = [
 ,[1479,61,0,4,0,1,30,22,"Silver Guard","",0,19,-1,0]
 ,[1480,61,1051,7,0,1,130,90,"Rosa Shield","",0,0]
 ,[1481,8,1001,175,3,2,150,90,"Carga Mace","","Its name means 'Great Echo' in the Manuk tribe language, a rugged heavy mace with a sharp edge on one side.",0,0]
-,[1482,11,122,180,3,1,120,90,"Durga","",0,0]
+,[1482,11,122,180,3,1,120,90,"Dulga","",0,0]
 ,[1483,60,1051,11,0,1,450,90,"Ebone Armor","",0,0]
 ,[1484,60,1000,5,0,1,40,22,"Puente Robe","","Potion Pitcher effectiveness increased by + 3%",73,-1,91,3,0]
 ,[1485,60,1001,7,0,1,280,22,"Claire Suits","",0,0]
@@ -1553,7 +1553,7 @@ ItemOBJ = [
 ,[1519,100,0,0,0,0,0,0,0,0,0,10,2,15,-10,70,20,0] //Assassin's Glove & Chakram
 ,[1520,61,125,3,0,1,100,90,"Geffenia Water Book","","If Base INT is 99, adds MATK +1%, MaxHP + 800",4,1,19,2,0]
 ,[1521,100,0,0,0,0,0,0,0,0,"Reduces cast time of Storm Gust by 2% for every shield refine",0] //Geffenia Water Book & Lacrima Stick combo
-,[1522,18,0,170,3,2,0,70,"Lever Action Rifle R","",0,8,20,10,50,12,-5,80,30,0]
+,[1522,18,0,170,3,2,0,70,"Lever Action Rifle [Rental]","",0,8,20,10,50,12,-5,80,30,0]
 //custom TalonRO [Update 2014-09-02]
 ,[1523,51,0,3,0,0,100,10,"Evil Mask","","Drain 1 SP from user every 2 seconds<br><b>Mid and Low Headgear</b>",12,1,0]
 ,[1524,100,0,0,0,0,0,0,0,0,"ASPD +1<br>Drain 3 SP from user every 2 seconds",12,9,0] //Evil Mask & Succubus Horn
@@ -1601,7 +1601,7 @@ ItemOBJ = [
 ,[1558,52,0,0,0,0,10,0,"Blood Sucker","","When doing a physical attack, add a chance to absorb 5% of your damage dealt as HP.",75,-100,76,-100,0]
 ,[1559,8,0,130,3,2,50,50,"Red Square Bag","","If user's base Str is 90 or higher: Causes Stun effect to enemies by 5% chance.<BR>Every time you kill a monster, low chance to drop random Potion.",13,200,5244,20,5248,20,0]
 ,[1560,50,0,2,0,0,0,0,"Reforged Lord Kaho's Horns","","<br />Reforged Horns Of Lord Kaho. You feel a strange power emitting from them but they are not quite complete yet.",1,5,4,5,5,5,19,5,193,1,0]
-,[1561,51,51,2,0,65,30,65,"Advanced Fin Helm","","Additional Maximum HP + 6 * Base Level.",13,300,0]
+,[1561,51,51,2,0,1,30,65,"Advanced Fin Helm","","Additional Maximum HP + 6 * Base Level.",13,300,0]
 ,[1562,50,0,2,0,1,10,0,"Blue Pajamas Hat","","A cute blue pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.",17,5,89,5,0]
 ,[1563,50,0,2,0,1,10,0,"Pink Pajamas Hat","","A cute pink pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.",17,5,89,5,0]
 //Eden Gear
@@ -1619,8 +1619,8 @@ ItemOBJ = [
 ,[1575,14,0,150,3,0,0,60,"Eden Group Guitar I","","An instrument that is made by the Eden Group. It is suitable for those who have more advanced experience as Bards.",193,1,0]
 ,[1576,50,0,1,0,0,0,12,"Eden Group Hat","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.",193,1,0]
 ,[1577,50,0,1,1,0,0,60,"Eden Group Hat II","","A hat that is provided only for members of the Eden Group. It's designed to go well with a suit.<br/><br/>When dealing physical damage there's a high chance that for 5 seconds you will gain ATK + 10.<br/><br/>When dealing magic damage there's a high chance that for 5 seconds you will gain MATK + 10.",193,1,0]
-,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.",89,15,,8,10,193,1,0]
-,[1579,12,0,155,3,0,0,60,"Eden Group Katar I","","A katar that is made by the Eden Group. It is suitable for those who have more advanced experience handling katars.",10,5,8,10,193,1,0]
+,[1578,16,0,200,3,0,0,60,"Eden Group Huuma Shuriken I","","A Huuma Shuriken that is made by the Eden Group. It is suitable for experienced Ninjas only.",89,15,8,10,193,1,0]
+,[1579,11,0,155,3,0,0,60,"Eden Group Katar I","","A katar that is made by the Eden Group. It is suitable for those who have more advanced experience handling katars.",10,5,8,10,193,1,0]
 ,[1580,12,0,155,3,0,0,60,"Eden Group Knuckle I","","A claw that is made by the Eden Group. It is suitable for those who have more advanced experience as Champions.",12,10,8,10,193,1,0]
 ,[1581,8,0,142,2,0,0,26,"Eden Group Mace I","","A beginner's mace that is made exclusively by the Eden Group.",8,10,193,1,0]
 ,[1582,8,0,163,2,0,0,40,"Eden Group Mace II","","A mace that is made by the Eden Group.",8,10,193,1,0]
@@ -1647,7 +1647,7 @@ ItemOBJ = [
 ,[1603,60,0,10,0,0,0,60,"Eden Group Uniform IV","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.",13,500,14,50,19,5,1,1,5,1,4,1,193,1,0]
 ,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.",193,1,0]
 //End of Eden Gear
-,[1605,62,0,2,0,0,40,95,"Loki's Muffler","","A red scarf worn out from long use.",2,1,1083,5,193,1,0]
+,[1605,62,0,2,0,0,40,95,"Loki's Muffler","","A red scarf worn out from long use.",2,1,5083,5,193,1,0]
 ,[1606,50,0,4,0,1,40,0,"Legionnaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0]
 ,[1607,51,0,2,0,1,50,50,"Lude Mask","","A mask which resembles a Lude. However, you will never be as awesome as a real Lude.",17,1,89,2,57,1,0]
 ,[1608,50,0,4,0,0,20,30,"Xmas Rudolph Hairband","","A Christmas hairband. Rudolf's excited mind for christmas is dwelled on it.<br/>You will feel like running faster.",1,3,5,2,6,3,2,3,12,5,0]
@@ -1684,7 +1684,7 @@ ItemOBJ = [
 ,[1638,100,0,0,0,0,0,0,"Advanced Angelic Protection + Advanced Angelic Cardigan","","",60,5,0]
 ,[1639,100,0,0,0,0,0,0,"Advanced Angelic Protection, Advanced Angel's Reincarnation, Advanced Angelic Guard, Advanced Angelic Cardigan & Advanced Angel's Kiss Equip","","",13,900,14,100,221,131,0]
 ,[1640,9,1053,30,3,1,100,50,"Staff of Thea","","A chance to recover 200 SP after using Heal<br><b>For every two upgrades:</b><br>Increase MATK by 1%",89,15,4,6,3,2,195,1,0]
-,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
+,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 base VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
 ,[1642,51,54,2,0,0,10,50,"Advanced Binoculars","",0,5,1,25,1,0]
 ,[1643,52,81,1,0,0,10,70,"Advanced Assassin Mask","",0,10,1,70,1,0]
 ,[1644,51,56,2,0,0,30,50,"Advanced Welding Mask","","<b>Mid and Low Headgear</b>",5,1,6,1,63,10,0]
@@ -1704,7 +1704,7 @@ ItemOBJ = [
 ,[1658,50,0,5,0,1,100,70,"Lord of the Dead Helm","","<b>Mid and Upper Headgear</b><br>[Refine Rate 5~10]<br>Increase damage on Boss monster by 1% for every refine.<br><br>[+ Abysmal Knight Card]<br>Increase damage on Boss monster by 5%.<br><br>[Refine Rate 6~10]<br>Receive 1% more damage from all monsters for every refine.",19,5,26,10,77,-5,79,-5,0]
 ,[1659,52,0,0,0,0,10,1,"Cheer Whistle","","Blowing this whistle can drastically improve your team's morale.",1,1,0]
 ,[1660,52,0,0,0,0,10,1,"Blue Pencil In Mouth","","A blue pencil full of teeth marks due to holding it in your mouth all the time.",8,3,0]
-,[1661,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,18,0]
+,[1661,50,0,0,0,0,0,10,"Party Member Hat","","A helm with a Party Member wanted ad on it. Let's level up together!!",0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
@@ -1727,7 +1727,7 @@ ItemOBJ = [
 */
 
 /*
-	slaptro - 2018-06-11
+	[Slap] - 2018-06-11
 	Work in progress ItemID table. Currently proofreading and adding to this array.
 	Format: [ItemOBJ index, type, item IDs...]
 	type:
@@ -2239,247 +2239,247 @@ ItemID = [
 ,[497,1,1968]
 ,[498,1,1969]
 ,[499,1,1970,1976]
-,[500,1,5118],
-[501,4,0],
-[502,4,0],
-[503,4,0],
-[504,4,0],
-[505,4,0],
-[506,4,0],
-[507,4,0],
-[508,4,0],
-[509,4,0],
-[510,4,0],
-[511,4,0],
-[512,4,0],
-[513,4,0],
-[514,4,0],
-[515,4,0],
-[516,4,0],
-[517,4,0],
-[518,4,0],
-[519,4,0],
-[520,4,0],
-[521,4,0],
-[522,4,0],
-[523,4,0],
-[524,4,0],
-[525,4,0],
-[526,4,0],
-[527,4,0],
-[528,4,0],
-[529,4,0],
-[530,4,0],
-[531,4,0],
-[532,4,0],
-[533,4,0],
-[534,4,0],
-[535,4,0],
-[536,4,0],
-[537,4,0],
-[538,4,0],
-[539,4,0],
-[540,4,0],
-[541,4,0],
-[542,4,0],
-[543,4,0],
-[544,4,0],
-[545,4,0],
-[546,4,0],
-[547,4,0],
-[548,4,0],
-[549,4,0],
-[550,4,0],
-[551,4,0],
-[552,4,0],
-[553,4,0],
-[554,4,0],
-[555,4,0],
-[556,4,0],
-[557,4,0],
-[558,4,0],
-[559,4,0],
-[560,4,0],
-[561,4,0],
-[562,4,0],
-[563,4,0],
-[564,4,0],
-[565,4,0],
-[566,4,0],
-[567,4,0],
-[568,4,0],
-[569,4,0],
-[570,4,0],
-[571,4,0],
-[572,4,0],
-[573,4,0],
-[574,4,0],
-[575,4,0],
-[576,4,0],
-[577,4,0],
-[578,4,0],
-[579,4,0],
-[580,4,0],
-[581,4,0],
-[582,4,0],
-[583,4,0],
-[584,4,0],
-[585,4,0],
-[586,4,0],
-[587,4,0],
-[588,4,0],
-[589,4,0],
-[590,4,0],
-[591,4,0],
-[592,4,0],
-[593,4,0],
-[594,4,0],
-[595,4,0],
-[596,4,0],
-[597,4,0],
-[598,4,0],
-[599,4,0],
-[600,4,0],
-[601,4,0],
-[602,4,0],
-[603,4,0],
-[604,4,0],
-[605,4,0],
-[606,4,0],
-[607,4,0],
-[608,4,0],
-[609,4,0],
-[610,4,0],
-[611,4,0],
-[612,4,0],
-[613,4,0],
-[614,4,0],
-[615,4,0],
-[616,4,0],
-[617,4,0],
-[618,4,0],
-[619,4,0],
-[620,4,0],
-[621,4,0],
-[622,4,0],
-[623,4,0],
-[624,4,0],
-[625,4,0],
-[626,4,0],
-[627,4,0],
-[628,4,0],
-[629,4,0],
-[630,4,0],
-[631,4,0],
-[632,4,0],
-[633,4,0],
-[634,4,0],
-[635,4,0],
-[636,4,0],
-[637,4,0],
-[638,4,0],
-[639,4,0],
-[640,4,0],
-[641,4,0],
-[642,4,0],
-[643,4,0],
-[644,4,0],
-[645,4,0],
-[646,4,0],
-[647,4,0],
-[648,4,0],
-[649,4,0],
-[650,4,0],
-[651,4,0],
-[652,4,0],
-[653,4,0],
-[654,4,0],
-[655,4,0],
-[656,4,0],
-[657,4,0],
-[658,4,0],
-[659,4,0],
-[660,4,0],
-[661,4,0],
-[662,4,0],
-[663,4,0],
-[664,4,0],
-[665,4,0],
-[666,4,0],
-[667,4,0],
-[668,4,0],
-[669,4,0],
-[670,4,0],
-[671,4,0],
-[672,4,0],
-[673,4,0],
-[674,4,0],
-[675,4,0],
-[676,4,0],
-[677,4,0],
-[678,4,0],
-[679,4,0],
-[680,4,0],
-[681,4,0],
-[682,4,0],
-[683,4,0],
-[684,4,0],
-[685,4,0],
-[686,4,0],
-[687,4,0],
-[688,4,0],
-[689,4,0],
-[690,4,0],
-[691,4,0],
-[692,4,0],
-[693,4,0],
-[694,4,0],
-[695,4,0],
-[696,4,0],
-[697,4,0],
-[698,4,0],
-[699,4,0],
-[700,4,0],
-[701,4,0],
-[702,4,0],
-[703,4,0],
-[704,4,0],
-[705,4,0],
-[706,4,0],
-[707,4,0],
-[708,4,0],
-[709,4,0],
-[710,4,0],
-[711,4,0],
-[712,4,0],
-[713,4,0],
-[714,4,0],
-[715,4,0],
-[716,4,0],
-[717,4,0],
-[718,4,0],
-[719,4,0],
-[720,4,0],
-[721,4,0],
-[722,4,0],
-[723,4,0],
-[724,4,0],
-[725,4,0],
-[726,4,0],
-[727,4,0],
-[728,4,0],
-[729,4,0],
-[730,4,0],
-[731,4,0],
-[732,4,0],
-[733,4,0],
-[734,4,0],
-[735,4,0],
-[736,4,0],
-[737,4,0],
-[738,4,0],
-[739,4,0],
-[740,4,0],
+,[500,1,5118]
+,[501,1,5109]
+,[502,1,5111]
+,[503,1,5115]
+,[504,1,5112,5119]
+,[505,1,5114,5120]
+,[506,1,5108]
+,[507,1,5116]
+,[508,1,5117]
+,[509,1,5121]
+,[510,1,2112]
+,[511,1,2113]
+,[512,1,2510]
+,[513,1,2512]
+,[514,1,2514]
+,[515,1,2414]
+,[516,1,2416]
+,[517,1,2652]
+,[518,1,2352]
+,[519,1,5055]
+,[520,1,1243]
+,[521,1,1723]
+,[522,1,2513]
+,[523,1,2658]
+,[524,1,2659]
+,[525,1,2660]
+,[526,1,2661]
+,[527,1,2662]
+,[528,1,5185]
+,[529,1,5182]
+,[530,1,5181]
+,[531,1,5187]
+,[532,1,5186]
+,[533,1,5183]
+,[534,1,2357]
+,[535,1,2524]
+,[536,1,2421]
+,[537,1,2117,2118]
+,[538,1,2119,2120]
+,[539,1,13010,13011]
+,[540,1,13007,13008]
+,[541,1,13012,13013]
+,[542,1,13014,13015]
+,[543,1,13006]
+,[544,1,13009]
+,[545,1,13301,13302]
+,[546,1,13303]
+,[547,1,13300]
+,[548,1,13100,13101]
+,[549,1,13102,13103]
+,[550,1,13104,13105]
+,[551,1,13106]
+,[552,1,13150]
+,[553,1,13151,13152]
+,[554,1,13153]
+,[555,1,13154]
+,[556,1,13155]
+,[557,1,13156]
+,[558,1,13157]
+,[559,1,13158,13159]
+,[560,1,13160,13161]
+,[561,1,13162]
+,[562,1,5151]
+,[563,1,5188]
+,[564,1,5526]
+,[565,1,5497]
+,[566,1,5212]
+,[567,1,5214]
+,[568,1,5198]
+,[569,1,18582]
+,[570,1,5283]
+,[571,1,5288]
+,[572,1,5286]
+,[573,1,5285]
+,[574,1,5291]
+,[575,1,13023]
+,[576,1,1174]
+,[577,1,13022]
+,[578,1,13402]
+,[579,1,13026]
+,[580,1,1563]
+,[581,1,1534]
+,[582,1,13403]
+,[583,1,1374]
+,[584,1,1419]
+,[585,1,1372]
+,[586,1,1729]
+,[587,1,5266]
+,[588,1,18581]
+,[589,3,5280] //Not in game
+,[590,1,5265]
+,[591,1,5470]
+,[592,1,2689]
+,[593,1,2688]
+,[594,1,2692]
+,[595,1,2695]
+,[596,1,2691]
+,[597,1,2693]
+,[598,1,2690]
+,[599,1,2694]
+,[600,1,5225]
+,[601,1,5287]
+,[602,1,5284]
+,[603,1,2351]
+,[604,1,2345]
+,[605,1,2347]
+,[606,1,2349]
+,[607,1,13017]
+,[608,1,5165]
+,[609,1,5164]
+,[610,1,13027]
+,[611,1,13028]
+,[612,1,13404]
+,[613,1,13405]
+,[614,1,1175]
+,[615,1,1176]
+,[616,1,1420]
+,[617,1,1421]
+,[618,1,1422]
+,[619,1,1477,1479]
+,[620,1,1478]
+,[621,1,1370,1371] //fix autospell
+,[622,1,1375]
+,[623,1,1376]
+,[624,1,1377]
+,[625,1,1535]
+,[626,1,1730]
+,[627,1,1731]
+,[628,1,1732]
+,[629,1,1733]
+,[630,1,1734]
+,[631,1,1268]
+,[632,1,1269]
+,[633,1,1270]
+,[634,1,1271]
+,[635,1,1818]
+,[636,1,1819]
+,[637,1,1820]
+,[638,1,1821]
+,[639,1,1822]
+,[640,1,1564]
+,[641,1,1565]
+,[642,1,1624]
+,[643,1,5104]
+,[644,1,1625]
+,[645,1,1626]
+,[646,1,2000]
+,[647,1,2001]
+,[648,1,1919]
+,[649,1,1920]
+,[650,1,1971]
+,[651,1,1972] //missing arrow vulcan autocast
+,[652,1,1973]
+,[653,1,1974]
+,[654,1,13107]
+,[655,1,13163,13164]
+,[656,1,13165,13166]
+,[657,1,13170]
+,[658,1,13167]
+,[659,1,13168,13169]
+,[660,1,13304]
+,[661,1,5122]
+,[662,1,5123]
+,[663,1,5124]
+,[664,1,5125]
+,[665,1,5126]
+,[666,1,5127]
+,[667,1,5128]
+,[668,1,5141]
+,[669,1,5170]
+,[670,1,8048]
+,[671,1,5172]
+,[672,1,5173]
+,[673,1.5174]
+,[674,3,0]
+,[675,1,5169]
+,[676,1,5177]
+,[677,1,5175]
+,[678,1,5176]
+,[679,1,5563]
+,[680,1,5292]
+,[681,1,5293]
+,[682,1,5294]
+,[683,1,2355]
+,[684,1,2353]
+,[685,1,2354]
+,[686,1,2364]
+,[687,1,2365]
+,[688,1,2366]
+,[689,1,2367]
+,[690,1,2116]
+,[691,1,2114]
+,[692,1,2115]
+,[693,1,2122]
+,[694,1,2123]
+,[695,1,2124]
+,[696,1,2125]
+,[697,1,2515]
+,[698,1,2521]
+,[699,1,2522,2523]
+,[700,1,2518]
+,[701,1,2519]
+,[702,1,2520]
+,[703,1,2516]
+,[704,1,2517]
+,[705,1,2527]
+,[706,1,2528]
+,[707,1,2529,2530]
+,[708,1,2531]
+,[709,1,2532]
+,[710,1,2420]
+,[711,1,2419]
+,[712,1,2417]
+,[713,1,2418]
+,[714,1,2422]
+,[715,1,2423]
+,[716,1,2424]
+,[717,1,2425,2434]
+,[718,1,2426]
+,[719,1,2648]
+,[720,1,2649]
+,[721,1,2650]
+,[722,1,2651]
+,[723,1,2653]
+,[724,1,2654]
+,[725,1,2655]
+,[726,1,2656]
+,[727,1,2677]
+,[728,1,2678]
+,[729,1,2679]
+,[730,1,2680] //missing autospell
+,[731,1,2700]
+,[732,1,2701]
+,[733,1,2702]
+,[734,1,2703]
+,[735,1,2640]
+,[736,0,0] //no set
+,[737,2,2509,1618,1620]
+,[738,2,2339,2371,2522,2523]
+,[739,2,2337,2359,2654]
+,[740,2,2408,2655],
 [741,4,0],
 [742,4,0],
 [743,4,0],
@@ -3060,111 +3060,111 @@ ItemID = [
 [1318,4,0],
 [1319,4,0],
 [1320,4,0],
-[1321,4,0],
-[1322,4,0],
-[1323,4,0],
-[1324,4,0],
-[1325,4,0],
-[1326,4,0],
-[1327,4,0],
-[1328,4,0],
-[1329,4,0],
-[1330,4,0],
-[1331,4,0],
-[1332,4,0],
-[1333,4,0],
-[1334,4,0],
-[1335,4,0],
-[1336,4,0],
-[1337,4,0],
-[1338,4,0],
-[1339,4,0],
-[1340,4,0],
-[1341,4,0],
-[1342,4,0],
-[1343,4,0],
-[1344,4,0],
-[1345,4,0],
-[1346,4,0],
-[1347,4,0],
-[1348,4,0],
-[1349,4,0],
-[1350,4,0],
-[1351,4,0],
-[1352,4,0],
-[1353,4,0],
-[1354,4,0],
-[1355,4,0],
-[1356,4,0],
-[1357,4,0],
-[1358,4,0],
-[1359,4,0],
-[1360,4,0],
-[1361,4,0],
-[1362,4,0],
-[1363,4,0],
-[1364,4,0],
-[1365,4,0],
-[1366,4,0],
-[1367,4,0],
-[1368,4,0],
-[1369,4,0],
-[1370,4,0],
-[1371,4,0],
+[1321,1,1728],
+[1322,1,1388],
+[1323,1,1829],
+[1324,1,1580],
+[1325,1,1929],
+[1326,1,1286],
+[1327,1,1487],
+[1328,1,1983],
+[1329,1,16002],
+[1330,1,1373],
+[1331,1,1273],
+[1332,1,1744],
+[1333,1,1424],
+[1334,1,13021],
+[1335,1,13401],
+[1336,1,13408],
+[1337,1,1378],
+[1338,1,1567],
+[1339,1,13409],
+[1340,1,1267],
+[1341,1,1817],
+[1342,1,1283],
+[1343,1,1547],
+[1344,1,13025],
+[1345,1,1623],
+[1346,1,1828],
+[1347,1,1173],
+[1348,1,13407],
+[1349,1,1982],
+[1350,1,1578],
+[1351,1,1537],
+[1352,1,1427],
+[1353,1,1642],
+[1354,1,1638],
+[1355,1,1628],
+[1356,1,13024],
+[1357,1,1274],
+[1358,1,2696],
+[1359,1,2697],
+[1360,1,2698],
+[1361,1,2699],
+[1362,1,2385],
+[1363,1,2439],
+[1364,1,2543],
+[1365,1,2535],
+[1366,1,2710],
+[1367,1,2711],
+[1368,1,5331],
+[1369,1,5279],
+[1370,1,5279],
+[1371,1,5326],
 [1372,4,0],
 [1373,4,0],
 [1374,4,0],
-[1375,4,0],
-[1376,4,0],
-[1377,4,0],
-[1378,4,0],
-[1379,4,0],
-[1380,4,0],
-[1381,4,0],
-[1382,4,0],
-[1383,4,0],
-[1384,4,0],
-[1385,4,0],
-[1386,4,0],
-[1387,4,0],
-[1388,4,0],
-[1389,4,0],
-[1390,4,0],
-[1391,4,0],
+[1375,1,1290],
+[1376,1,2150],
+[1377,1,1745],
+[1378,1,1990],
+[1379,1,1190],
+[1380,1,1320],
+[1381,1,1913],
+[1382,1,1549],
+[1383,1,2480],
+[1384,1,1651],
+[1385,1,13320],
+[1386,1,1430],
+[1387,1,5600],
+[1388,1,1746],
+[1389,1,1650],
+[1390,1,1840],
+[1391,1,1590],
 [1392,4,0],
-[1393,4,0],
-[1394,4,0],
-[1395,4,0],
-[1396,4,0],
-[1397,4,0],
-[1398,4,0],
-[1399,4,0],
-[1400,4,0],
+[1393,1,5051],
+[1394,1,18643],
+[1395,1,5597],
+[1396,1,18566],
+[1397,1,18642],
+[1398,1,18644],
+[1399,1,5564],
+[1400,1,18677],
 [1401,4,0],
-[1402,4,0],
-[1403,4,0],
-[1404,4,0],
-[1405,4,0],
-[1406,4,0],
-[1407,4,0],
-[1408,4,0],
+[1402,1,5775],
+[1403,1,5594],
+[1404,1,18678],
+[1405,1,18670],
+[1406,1,5445],
+[1407,1,18564],
+[1408,1,18563],
 [1409,4,0],
-[1410,4,0],
-[1411,4,0],
-[1412,4,0],
-[1413,4,0],
-[1414,4,0],
-[1415,4,0],
-[1416,4,0],
-[1417,4,0],
+[1410,1,5210],
+[1411,1,18703],
+[1412,1,18536],
+[1413,1,5463],
+[1414,1,5548],
+[1415,1,5767],
+[1416,1,18683],
+[1417,1,5213],
 [1418,4,0],
-[1419,4,0],
-[1420,4,0],
+[1419,1,18648],
+[1420,1,18505],
 [1421,4,0],
-[1422,4,0],
-[1423,4,0],
-[1424,4,0],
-[1425,4,0],
+[1422,1,5431],
+[1423,1,5664],
+[1424,1,5822],
+[1425,1,5171],
 [1426,4,0],
 [1427,4,0],
 [1428,4,0],
@@ -3235,178 +3235,180 @@ ItemID = [
 [1493,4,0],
 [1494,4,0],
 [1495,4,0],
-[1496,4,0],
-[1497,4,0],
-[1498,4,0],
-[1499,4,0],
-[1500,4,0],
-[1501,4,0],
-[1502,4,0],
-[1503,4,0],
-[1504,4,0],
-[1505,4,0],
-[1506,4,0],
-[1507,4,0],
-[1508,4,0],
-[1509,4,0],
-[1510,4,0],
-[1511,4,0],
-[1512,4,0],
-[1513,4,0],
-[1514,4,0],
-[1515,4,0],
-[1516,4,0],
-[1517,4,0],
-[1518,4,0],
-[1519,4,0],
-[1520,4,0],
-[1521,4,0],
-[1522,4,0],
-[1523,4,0],
-[1524,4,0],
-[1525,4,0],
-[1526,4,0],
-[1527,4,0],
-[1528,4,0],
-[1529,4,0],
-[1530,4,0],
-[1531,4,0],
-[1532,4,0],
-[1533,4,0],
-[1534,4,0],
-[1535,4,0],
-[1536,4,0],
-[1537,4,0],
-[1538,4,0],
-[1539,4,0],
-[1540,4,0],
-[1541,4,0],
-[1542,4,0],
-[1543,4,0],
-[1544,4,0],
-[1545,4,0],
-[1546,4,0],
-[1547,4,0],
-[1548,4,0],
-[1549,4,0],
-[1550,4,0],
-[1551,4,0],
-[1552,4,0],
-[1553,4,0],
-[1554,4,0],
-[1555,4,0],
-[1556,4,0],
-[1557,4,0],
-[1558,4,0],
-[1559,4,0],
-[1560,4,0],
-[1561,4,0],
-[1562,4,0],
-[1563,4,0],
-[1564,4,0],
-[1565,4,0],
-[1566,4,0],
-[1567,4,0],
-[1568,4,0],
-[1569,4,0],
-[1570,4,0],
-[1571,4,0],
-[1572,4,0],
-[1573,4,0],
-[1574,4,0],
-[1575,4,0],
-[1576,4,0],
-[1577,4,0],
-[1578,4,0],
-[1579,4,0],
-[1580,4,0],
-[1581,4,0],
-[1582,4,0],
-[1583,4,0],
-[1584,4,0],
-[1585,4,0],
-[1586,4,0],
-[1587,4,0],
-[1588,4,0],
-[1589,4,0],
-[1590,4,0],
-[1591,4,0],
-[1592,4,0],
-[1593,4,0],
-[1594,4,0],
-[1595,4,0],
-[1596,4,0],
-[1597,4,0],
-[1598,4,0],
-[1599,4,0],
-[1600,4,0],
-[1601,4,0],
-[1602,4,0],
-[1603,4,0],
-[1604,4,0],
-[1605,4,0],
-[1606,4,0],
-[1607,4,0],
-[1608,4,0],
-[1609,4,0],
-[1610,4,0],
-[1611,4,0],
-[1612,4,0],
-[1613,4,0],
-[1614,4,0],
-[1615,4,0],
-[1616,4,0],
-[1617,4,0],
-[1618,4,0],
-[1619,4,0],
-[1620,4,0],
-[1621,4,0],
-[1622,4,0],
-[1623,4,0],
-[1624,4,0],
-[1625,4,0],
-[1626,4,0],
-[1627,4,0],
-[1628,4,0],
-[1629,4,0],
-[1630,4,0],
-[1631,4,0],
-[1632,4,0],
-[1633,4,0],
-[1634,4,0],
-[1635,4,0],
-[1636,4,0],
-[1637,4,0],
-[1638,4,0],
-[1639,4,0],
-[1640,4,0],
-[1641,4,0],
-[1642,4,0],
-[1643,4,0],
-[1644,4,0],
-[1645,4,0],
-[1646,4,0],
-[1647,4,0],
-[1648,4,0],
-[1649,4,0],
-[1650,4,0],
-[1651,4,0],
-[1652,4,0],
-[1653,4,0],
-[1654,4,0],
-[1655,4,0],
-[1656,4,0],
-[1657,4,0],
-[1658,4,0],
-[1659,4,0],
-[1660,4,0],
-[1661,4,0]
+[1496,1,2370],
+[1497,1,5654],
+[1498,1,2582],
+[1499,1,16017],
+[1500,1,2160],
+[1501,1,18850],
+[1502,1,18793],
+[1503,1,18852],
+[1504,1,19806],
+[1505,1,5875],
+[1506,1,18111],
+[1507,1,2162],
+[1508,1,1654],
+[1509,1,2853],
+[1510,2,2853,1654],
+[1511,1,1659],
+[1512,1,1830],
+[1513,1,15044],
+[1514,2,15044,13027],
+[1515,1,18109],
+[1516,1,1435],
+[1517,1,2892],
+[1518,2,2892,1284],
+[1519,2,2892,1285],
+[1520,1,2161],
+[1521,2,2161,1646],
+[1522,1,13175],
+[1523,1,18540],
+[1524,2,18540,5066],
+[1525,2,18540,5072],
+[1526,1,20159],
+[1527,1,20161],
+[1528,1,18664],
+[1529,1,18711],
+[1530,1,18676],
+[1531,1,18924],
+[1532,1,18921],
+[1533,1,19976],
+[1534,1,18549],
+[1535,1,2546],
+[1536,1,2441],
+[1537,2,2441,2546],
+[1538,1,18595],
+[1539,1,18522],
+[1540,1,18867],
+[1541,1,15052],
+[1542,1,2591],
+[1543,1,2170],
+[1544,1,2492],
+[1545,1,18878],
+[1546,1,5516],
+[1547,1,18531],
+[1548,1,20175],
+[1549,1,1291],
+[1550,1,2474],
+[1551,1,2592],
+[1552,1,15138],
+[1553,1,19026],
+[1554,2,19026,2474],
+[1555,2,19026,2592],
+[1556,2,19026,15138],
+[1557,2,19026,15138,2592,2474],
+[1558,1,18754],
+[1559,1,16001],
+[1560,1,8926],
+[1561,1,18773],
+[1562,1,5506],
+[1563,1,5507],
+[1564,1,2456],
+[1565,1,2457],
+[1566,1,2458],
+[1567,1,2473],
+[1568,1,1742],
+[1569,1,1748],
+[1570,1,18106],
+[1571,1,13050],
+[1572,1,13051],
+[1573,1,13066],
+[1574,1,1583],
+[1575,1,1931],
+[1576,1,5583],
+[1577,1,21000],
+[1578,1,13310],
+[1579,1,1289],
+[1580,1,1831],
+[1581,1,16004],
+[1582,1,16005],
+[1583,1,16014],
+[1584,1,2560],
+[1585,1,2571],
+[1586,1,13112],
+[1587,1,13113],
+[1588,1,13114],
+[1589,1,13423],
+[1590,1,13424],
+[1591,1,13434],
+[1592,1,1192],
+[1593,1,1193],
+[1594,1,1197],
+[1595,1,1434],
+[1596,1,1662],
+[1597,1,1663],
+[1598,1,1658],
+[1599,1,1391],
+[1600,1,15009],
+[1601,1,15010],
+[1602,1,15011],
+[1603,1,15031],
+[1604,1,1986],
+[1605,1,2568],
+[1606,1,5418],
+[1607,1,18649],
+[1608,1,20031],
+[1609,1,20030],
+[1610,1,8801],
+[1611,1,2910],
+[1612,1,2911],
+[1613,1,2873],
+[1614,1,2907],
+[1615,1,2646],
+[1616,1,1393],
+[1617,1,1392],
+[1618,1,13062],
+[1619,1,2854],
+[1620,1,18804],
+[1621,2,18804,1636],
+[1622,1,1985],
+[1623,1,13431],
+[1624,1,13070],
+[1625,1,13069],
+[1626,1,22014],
+[1627,1,1295],
+[1628,1,5211],
+[1629,1,18776],
+[1630,1,22015],
+[1631,1,21001],
+[1632,1,2183],
+[1633,1,15068],
+[1634,2,18776,21001],
+[1635,2,22015,18776],
+[1636,2,21001,15068],
+[1637,2,2183,22015],
+[1638,2,15068,21001],
+[1639,2,15068,22015,2183,21001,18776],
+[1640,1,2005],
+[1641,1,2956],
+[1642,1,18772],
+[1643,1,18774],
+[1644,1,18775],
+[1645,1,18760],
+[1646,1,18761],
+[1647,1,18763],
+[1648,1,18764],
+[1649,1,18769],
+[1650,1,18770],
+[1651,1,18771],
+[1652,1,18762],
+[1653,1,1584],
+[1654,1,18767],
+[1655,1,18766],
+[1656,1,18768],
+[1657,1,18765],
+[1658,1,18574],
+[1659,1,18837],
+[1660,1,18819],
+[1661,1,5337]
 ];
 
 ItemMax = ItemOBJ.length -1;
 
 function ClickB_Item(CBI)
 {
+   var tempScrollTop = window.pageYOffset;
+
 	if(eval(document.calcForm.ITEM_SW.checked)==1 && CBI == "SW" && Item_or_Card == "Card"){
 		Click_Card(ItemCardNumberCheck);
 		return;
@@ -3436,7 +3438,7 @@ function ClickB_Item(CBI)
 	if(eval(document.calcForm.ITEM_SW.checked)==0)
 		return;
 
-	// Item IDs with links to Talonro Item Database
+	// Item IDs with links to Talonro Item Database - [Kato/Slap]
 	if(ItemID[CBI][1] == 1){
 		var itemLink = "";
 		for(i = 2; i < ItemID[CBI].length; i++){
@@ -3485,7 +3487,19 @@ function ClickB_Item(CBI)
 					check = 1;
 				}
 			}
-			CBIstr += " at the same time:<BR>";
+			CBIstr += " at the same time";
+
+     //  // Item IDs with links to Talonro Item Database for Combos; [Kato]
+    	// if(ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][1] == 2){
+    	// 	var itemLink = "[";
+    	// 	for(a = 2; a < ItemID[w_SE[ItemOBJ[CBI][i+1]][0]].length; a++){
+     //      itemLink += "<a href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][a] + "/\" target=\"_blank\"><b>" + ItemID[w_SE[ItemOBJ[CBI][i+1]][0]][a] + "</b></a>" + ((a+1 < ItemID[w_SE[ItemOBJ[CBI][i+1]][0]].length) ? ", " : "");  //todo title
+    	// 	}
+	    //    CBIstr += itemLink + "]";
+    	// }
+
+
+    CBIstr += ": <BR>";
 			check = 0;
 			for(var j=11;ItemOBJ[w][j] != 0;j+=2)
 				Item_Setumei(ItemOBJ[w][j],ItemOBJ[w][j+1]);
@@ -3505,6 +3519,7 @@ function ClickB_Item(CBI)
 				SQI_Bonus_Effect[i] = 0;
 			Click_SQI_Bonus(0);
 		}
+   window.scrollTo(0, tempScrollTop);
 }
 
 function Item_Setumei(nC1,nC2)
@@ -3721,7 +3736,7 @@ function Item_Setumei(nC1,nC2)
 			CBIstr += "Increase damage from [" + SizeOBJ[nC1-190] +"] size monsters by "+ (-1 * nC2) +"%<BR>";
 	}
 	if(193 == nC1)
-		CBIstr += "<br><Font color='#FF0000'>Unrefinable</Font><BR>";
+		CBIstr += "<Font color='#FF0000'>Unrefinable</Font><BR>";
 	if(194 == nC1)
 		CBIstr += "Cannot be broken<BR>";
 	if(195 == nC1)
@@ -3948,13 +3963,22 @@ for(var i=0;i<=SE_MAXnum;i++){
 	}
 }
 
+//Improved SetEquipName combining combo linking with set equipment info - [Kato/Slap] - 2018-06-18
 function SetEquipName(SENw){
 	var SENstr = "";
 	for(var i=0;i<=SE_MAXnum;i++){
 		if(i == SENw){
 			for(var j=1;w_SE[i][j] != "NULL";j++){
-				SENstr += "["+ ItemOBJ[w_SE[i][j]][8] +"]";
-				if(w_SE[i][j+1] != "NULL")
+            if(ItemID[w_SE[i][j]][1]==1){
+			      SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][2] + "/\" target=\"_blank\"><b>" + "<font color='blue'>["+ ItemOBJ[w_SE[i][j]][8] +"]</font></b></a>";
+               if(ItemID[w_SE[i][j]][3]){
+                  SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][3] + "/\" target=\"_blank\"><b>" + "<font color='blue'><sup>[1]</sup></font></b></a>"
+               }
+            }
+            else{
+               SENstr += "["+ ItemOBJ[w_SE[i][j]][8] +"]";
+            }
+			   if(w_SE[i][j+1] != "NULL")
 					SENstr += "+";
 			}
 			return SENstr;

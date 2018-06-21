@@ -211,6 +211,9 @@ function StAllCalc()
 	//custom TalonRO Kris Enchantment
 	Click_KrisEnchantment();
 
+	//[Custom TalonRO 2018-06-14 - Malangdo Enchantment] [Kato]
+	tRO_Click_MalangdoEnchantment(n_A_Equip[0],n_A_Equip[1]);
+
 	if(n_Nitou){
 		W_REF2 = 0;
 		n_A_Weapon2LV = ItemOBJ[n_A_Equip[1]][4];
@@ -543,7 +546,6 @@ function StAllCalc()
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
 	}
-
 	StPlusCalc();
 
 	if(n_A_WeaponType != 10 && n_A_WeaponType !=14 && n_A_WeaponType !=15 && n_A_WeaponType !=17 && n_A_WeaponType !=18 && n_A_WeaponType !=19 && n_A_WeaponType !=20 && n_A_WeaponType !=21){
@@ -569,8 +571,6 @@ function StAllCalc()
 		w += 20;
 	if(SU_LUK >= 90 && EquipNumSearch(1164))
 		w += 20;
-	if(EquipNumSearch(676))
-		w += n_A_HEAD_DEF_PLUS * 2;
 	if(CardNumSearch(492))
 		w += Math.floor(n_A_JobLV /5) * CardNumSearch(492); //custom TalonRO Ifrit Card +1atk every 5 Joblv
 		//w += Math.floor(n_A_JobLV /10) * CardNumSearch(492); //original Ifrit Card +1atk every 10 Joblv
@@ -826,6 +826,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 	}
 
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for MaxHP] [Kato]
+	for(i=0;i<tRO_MalangdoEnchantment.length;i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+			if(vME >= 131 && vME <= 133) {
+					w += parseInt(vME.substr(-1)) * 100;
+			}
+	}
+
 	n_A_MaxHP += w;
 
 	if(n_A_MaxHP < 1)
@@ -1050,7 +1058,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1058)){
 		w += n_A_BaseLV*2;}
 
-	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - slaptro - 2018-06-07
+	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1646)){
 		w += n_A_HEAD_DEF_PLUS * 5;
 	}
@@ -1064,6 +1072,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(31 <= wKE && wKE <= 39)
 				w += w_enchant*50;
 		}
+	}
+
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for MaxSP] [Kato]
+	for(i=0;i<tRO_MalangdoEnchantment.length;i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+			if(vME == 141 || vME == 142) {
+					w += parseInt(vME.substr(-1)) * 50;
+			}
 	}
 
 	n_A_MaxSP += w;
@@ -1166,7 +1182,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(809))
 		n_A_DEFplus -= n_A_HEAD_DEF_PLUS;
 
-	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - slaptro - 2016-06-07
+	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - [Slap] - 2016-06-07
 	if(EquipNumSearch(1641)){
 		n_A_DEF -= Math.floor(SU_VIT / 30);
 	}
@@ -1425,6 +1441,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	n_A_HIT += n_tok[8];
 
+	//negative hit correction- [Slap] - 2018-06-18
+	if(n_A_HIT < 0){
+		n_A_HIT -= n_A_HIT;
+	}
+
 	if(EquipNumSearch(656))
 		n_A_HIT -= Math.floor(SU_DEX / 3);
 	if(n_A_WeaponType==3 || n_A_WeaponType==2)
@@ -1514,6 +1535,22 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_A_HIT += w_enchant*4;
 	}
 
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Fighting Spirit/Sharp - HIT] [Kato]
+		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+			var vME = tRO_MalangdoEnchantment[i];
+			if(vME >= 1781 && vME <= 1788) { //FS
+				if(vME.substr(-1) <= 4)
+					n_A_HIT += 1 + parseInt(vME.substr(-1));
+				 else
+					n_A_HIT += 5;
+			}
+
+			if(vME >= 1081 && vME <= 1085) { //Sharp
+				n_A_HIT += 1 + parseInt(vME.substr(-1));
+			}
+		}
+
+
 	myInnerHtml("A_HIT",n_A_HIT,0);
 
 	n_A_FLEE = n_A_BaseLV + n_A_AGI;
@@ -1533,7 +1570,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill6[0] == 2 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==4)
 		n_A_FLEE += n_A_PassSkill6[1] *3;
 
-	//Bloody Roar FLEE -160 - slaptro - 2018-06-11
+	//Bloody Roar FLEE -160 - [Slap] - 2018-06-11
 	if(EquipNumSearch(483)){
 		if(n_A_FLEE < 160){
 			n_A_FLEE -= n_A_FLEE;
@@ -1650,12 +1687,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill8[20])
 		n_A_LUCKY += 20;
 
-	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - slaptro - 2016-06-07
+	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - [Slap] - 2016-06-07
 	if(EquipNumSearch(1652) && n_A_HEAD_DEF_PLUS > 6){
 		n_A_LUCKY += 4;
 	}
 
-	//Bloody Roar Perfect Dodge -160 - slaptro - 2018-06-11
+	//Bloody Roar Perfect Dodge -160 - [Slap] - 2018-06-11
 	if(EquipNumSearch(483)){
 		if(n_A_LUCKY < 160){
 			n_A_LUCKY -= n_A_LUCKY;
@@ -1780,6 +1817,17 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	if(n_A_PassSkill8[16])
 		n_A_CRI = 0;
+
+		//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Sharp - CRIT [Kato]
+			for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+				var vME = tRO_MalangdoEnchantment[i];
+				if(vME >= 1081 && vME <= 1085) {
+					if(vME.substr(-1) == 1)
+						n_A_CRI += 3;
+					 else
+						n_A_CRI += 3 + parseInt(vME.substr(-1));
+				}
+			}
 
 	myInnerHtml("A_CRI",n_A_CRI,0);
 
@@ -1907,6 +1955,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill3[9]){C_ATK += 50+(25*(n_A_PassSkill3[9]-1));}
 	if(n_A_PassSkill6[0] == 0 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==3){C_ATK += n_A_PassSkill6[1] *10;}
 
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Fighting Spirit - ATK] [Kato]
+		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+			var vME = tRO_MalangdoEnchantment[i];
+			if(vME >= 1781 && vME <= 1788) {
+					C_ATK += (4 + (2 * (parseInt(vME.substr(-1)) - 1)));
+			}
+		}
+
 	//refines das armas
 	if(n_A_WeaponLV == 1){W_REF = n_A_Weapon_ATKplus * 2;}
 	else if(n_A_WeaponLV == 2){W_REF = n_A_Weapon_ATKplus * 3;}
@@ -1973,6 +2029,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1447))
 		if(n_A_HEAD_DEF_PLUS>=7)
 			P_ATK += P_ATK*.01;
+
+	//[Custom TalonRO 2018-06-16 - Malangdo Enchantment for ATK%] [Kato]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+
+		if(vME == 171) P_ATK += P_ATK * parseInt(vME.substr(-1))/100;
+	}
+
 
 	if (P_ATK < 0){P_ATK = 0;}
 
@@ -2075,12 +2139,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 1 * (n_A_HEAD_DEF_PLUS - 7);
 	}
 
-	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
+	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
 	if(EquipNumSearch(1640)){
 		w += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
 
-	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - slaptro - 2016-06-07
+	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
 	if(EquipNumSearch(1645)){
 		w += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
@@ -2140,6 +2204,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(81 <= wKE && wKE <= 89)
 				w += w_enchant;
 		}
+	}
+	// [Custom TalonRO 2018-06-16 - Malangdo Enchantment for MATK%] [Kato]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+
+		if(vME >= 891 && vME <= 892) w += parseInt(vME.substr(-1));
 	}
 
 	n_A_MATK[0] = Math.floor(n_A_MATK[0] * w / 100);
@@ -2327,8 +2397,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += Math.floor(SU_AGI / 14);
 	if(n_A_Equip[0]==484 && SU_STR >= 50)
 		w += 5;
-	if(SU_STR >= 95 && EquipNumSearch(621))
-		w -= 40;
 	if(EquipNumSearch(624))
 		w += (n_A_Weapon_ATKplus);
 	if(EquipNumSearch(641))
@@ -2379,7 +2447,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1455))
 		w += 3*Math.floor(n_A_Weapon_ATKplus/2);
 
-	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - slaptro - 2016-06-07
+	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - [Slap] - 2016-06-07
 	if(EquipNumSearch(1315) && n_A_Weapon_ATKplus>4){
 			w += n_A_Weapon_ATKplus - 4;
 	}
@@ -2475,6 +2543,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Halloween Midas Whisper
 	if(SU_AGI >= 80 && EquipNumSearch(1526))
 		w += 5;
+
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for ASPD] [Kato]
+		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+			var vME = tRO_MalangdoEnchantment[i];
+
+			if(vME == 123) w += parseInt(vME.substr(-1));
+		}
+
 
 	n_A_ASPD += (200 - n_A_ASPD) * (w / 100);
 
@@ -2760,12 +2836,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS >= 5)
 		n_tok[37] += 2*(n_A_HEAD_DEF_PLUS-4);
 
-	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - slaptro - 2018-06-07
+	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - [Slap] - 2018-06-07
 	if(EquipNumSearch(1649) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[31] += 10
 	}
 
-	//custom Talonro Imrpoved Bongun Hat: If refine > 6 increase damage against Demon monster by 10% - slaptro - 2018-06-07
+	//custom Talonro Imrpoved Bongun Hat: If refine > 6 increase damage against Demon monster by 10% - [Slap] - 2018-06-07
 	if(EquipNumSearch(1650) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[36] += 10
 	}
@@ -2799,6 +2875,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[25] -= (n_A_HEAD_DEF_PLUS - 5);
 	}
 
+	//[Custom TalonRO 2018-06-15 - Malandgo Enchantment for Expert Archer] [Kato]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+		if(vME >= 251 && vME <= 256) {
+				n_tok[25] += 2 * parseInt(vME.substr(-1));
+		}
+	}
+
 	//Custom TalonRO - 2018-06-07 - Lord of the Dead Helm [1] + Abysmal Knight Card - +5% damage on boss monsters  [Nattwara]
 	if(EquipNumSearch(1658) && CardNumSearch(31))
 		n_tok[26] += 5;
@@ -2830,7 +2914,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 7)
 		n_tok[70] += 10;
 
-	//custom TalonRO Improved Joker Jester: If refine rate >6 +5% critical damage - slaptro - 2018-06-07
+	//custom TalonRO Improved Joker Jester: If refine rate >6 +5% critical damage - [Slap] - 2018-06-07
 	if(EquipNumSearch(1647) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[70] += 5;
 	}
@@ -2963,7 +3047,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(wSPVS==3 || wSPVS==4 || wSPVS==5)
 			n_tok[19] += 5;
 	}
-	
+
 	if(EquipNumSearch(828)){
 		n_tok[151] += 2 * n_A_HEAD_DEF_PLUS;
 		n_tok[152] += 2 * n_A_HEAD_DEF_PLUS;
@@ -3071,6 +3155,43 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(CardNumSearch(536) && (n_A_JOB == 3 || n_A_JOB == 9 || n_A_JOB == 23 || n_A_JOB == 15 || n_A_JOB == 33)) {
 		n_tok[91] += 1 * Math.floor(n_A_HEAD_DEF_PLUS/2);
 	}
+
+
+	/*[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Spell Element] [Kato]
+		Well I couldn't find a n_tok for magical damage based on element.
+		Since we don't have it, I will separate the skills by element (skills.js) and apply the magical damage for all races [170-179]
+		*** Snap, the math was bugus, the only way I found here was to keep the modifier that was here and add the new one
+	*/
+	var eTypes = [0,0,0,0,0]; // 0 Neural, 1 Water, 2 Earth, 3 Fire, 4 Wind
+	var aMSnoEle = [373,374,375]; // Magical skills without proper element (will change depending on n_A_Weapon_zokusei)
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+		if(vME >= 261 && vME <= 267) {
+			switch(vME.substr(-1)){
+				case '1' : eTypes[3] += 2; break;
+				case '2' : eTypes[1] += 2; break;
+				case '3' : eTypes[4] += 2; break;
+				case '4' : eTypes[2] += 2; break;
+				case '5' : eTypes[3] += 4; break;
+				case '6' : eTypes[1] += 5; break;
+				case '7' : eTypes[4] += 6; break;
+			}
+
+			for(k=1; k<5; k++) {
+				if(TRO_MAGICALSKILL_ELEMENTS[k].indexOf(n_A_ActiveSkill) != -1){
+						for(j=0; j<10; j++) {
+							n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[k]) / 100) - 100; // ***
+						}
+				}
+			}
+			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1){
+				for(j=0; j<10; j++) {
+					n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[n_A_Weapon_zokusei]) / 100) - 100; // ***
+				}
+			}
+		}
+	}
+
 
 	ClickB_Enemy();
 	KakutyouKansuu();
@@ -3222,12 +3343,12 @@ function StPlusCalc()
 			wSPC_DEX += 1;
 	}
 
-	//custom TalonRo Improved Mage Hat: Every Refine level 7 or higher adds INT + 1 - slaptro - 2018-06-07
+	//custom TalonRo Improved Mage Hat: Every Refine level 7 or higher adds INT + 1 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1645) && n_A_HEAD_DEF_PLUS > 6){
 		wSPC_INT += n_A_HEAD_DEF_PLUS - 6;
 	}
 
-	//custom TalonRo Improved Magician Hat: Every Refine level 7 or higher adds DEX + 1 - slaptro - 2018-06-07
+	//custom TalonRo Improved Magician Hat: Every Refine level 7 or higher adds DEX + 1 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1646) && n_A_HEAD_DEF_PLUS > 6){
 		wSPC_DEX += n_A_HEAD_DEF_PLUS - 6;
 	}
@@ -3487,6 +3608,26 @@ function StPlusCalc()
 				wSPC_LUK += w;
 		}
 	}
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for STR/AGI/VIT/INT/DEX/LUK] [Kato]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+
+		if(vME == 0 || vME.length > 2) continue;
+
+		var op = vME.substr(0,1);
+		var val = parseInt(vME.substr(-1));
+
+		switch(op) {
+				case '1': wSPC_STR += val; break;
+				case '2': wSPC_AGI += val; break;
+				case '3': wSPC_VIT += val; break;
+				case '4': wSPC_INT += val; break;
+				case '5': wSPC_DEX += val; break;
+				case '6': wSPC_LUK += val; break;
+		}
+	}
+
+
 	/*var wHSE2 = eval(document.calcForm.A_HSE_HEAD1.value);
 	if(wHSE2){
 		var w = wHSE2 % 10;
@@ -3576,13 +3717,51 @@ function StPlusCalc()
 			else
 				wSPC_LUK = (99 - n_A_LUK);
 		}
+
+	//Marionette status compensation rework - [Slap] - 2018-06-17	
 	}else if(n_A_PassSkill3[11] && n_A_PassSkill3[18]){
-		wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
-		wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
-		wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
-		wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
-		wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
-		wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
+		// if(n_A_STR + wSPC_STR < 99){
+			if(n_A_STR + w2[0] + Math.floor(n_A_PassSkill3[12]/2) < 99)
+				wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
+			else
+				wSPC_STR += Math.max((99 - n_A_STR - w2[0]), 0);
+		// }
+		// if(n_A_AGI + wSPC_AGI < 99){
+			if(n_A_AGI + w2[1] + Math.floor(n_A_PassSkill3[13]/2) < 99)
+				wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
+			else
+				wSPC_AGI += Math.max((99 - n_A_AGI - w2[1]), 0);
+		// }
+		// if(n_A_VIT + wSPC_VIT < 99){
+			if(n_A_VIT + w2[2] + Math.floor(n_A_PassSkill3[14]/2) < 99)
+				wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
+			else
+				wSPC_VIT += Math.max((99 - n_A_VIT - w2[2]), 0);
+		// }
+		// if(n_A_INT + wSPC_INT < 99){
+			if(n_A_INT + w2[3] + Math.floor(n_A_PassSkill3[15]/2) < 99)
+				wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
+			else
+				wSPC_INT += Math.max((99 - n_A_INT - w2[3]), 0);
+		// }
+		// if(n_A_DEX + wSPC_DEX < 99){
+			if(n_A_DEX + w2[4] + Math.floor(n_A_PassSkill3[16]/2) < 99)
+				wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
+			else
+				wSPC_DEX += Math.max((99 - n_A_DEX - w2[4]), 0);
+		// }
+		// if(n_A_LUK + wSPC_LUK < 99){
+			if(n_A_LUK + w2[5] + Math.floor(n_A_PassSkill3[17]/2) < 99)
+				wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
+			else
+				wSPC_LUK += Math.max((99 - n_A_LUK - w2[5]), 0);
+		// }
+		// wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
+		// wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
+		// wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
+		// wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
+		// wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
+		// wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
 	}
 
 	//CUSTOM (1st Transcendent Spirit)
@@ -4361,36 +4540,36 @@ function KakutyouKansuu(){
 			myInnerHtml("A_KakutyouData","",0);
 	}
 	else if(wKK == 5){
-		syozijob =[0,800,400,400,600,200,800,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,0,0,0,0,0,0,800,800,400,600,800];
-		syoziryou = 2000 + syozijob[n_A_JOB];
-		syoziryou += eval(document.calcForm.A_KakutyouSelNum2.value) * 200;
-		if(eval(document.calcForm.A_youshi.checked))
-			syoziryou = 2000;
-		syoziryou += eval(document.calcForm.A_STR.value) * 30;
-		if(SkillSearch(78))
-			syoziryou += 1000;
-		if(n_A_JOB==6||n_A_JOB==12||n_A_JOB==19||n_A_JOB==20||n_A_JOB==26||n_A_JOB==33)
-			syoziryou += eval(document.calcForm.A_KakutyouSelNum.value) * 200;
-		EquipKG = 0;
-		for(i=0;i<=10;i++)
-			EquipKG += ItemOBJ[n_A_Equip[i]][6];
+			syozijob =[0,800,400,400,600,200,800,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,800,400,600,700,400,1000,800,400,600,700,700,400,1000,0,0,0,0,0,0,0,800,800,400,600,800];
+			syoziryou = 2000 + syozijob[n_A_JOB];
+			// syoziryou += eval(document.calcForm.A_KakutyouSelNum2.value) * 200;
+			if(eval(document.calcForm.A_youshi.checked))
+				syoziryou = 2000;
+			syoziryou += eval(document.calcForm.A_STR.value) * 30;
+			if(SkillSearch(78))
+				syoziryou += 1000;
+			if(n_A_JOB==6||n_A_JOB==12||n_A_JOB==19||n_A_JOB==20||n_A_JOB==26||n_A_JOB==33)
+				syoziryou += eval(document.calcForm.A_KakutyouSelNum.value) * 200;
+			EquipKG = 0;
+			for(i=0;i<=10;i++)
+				EquipKG += ItemOBJ[n_A_Equip[i]][6];
 
-		w = "<table border=0>";
-		//w += "<tr><td><b><font color=grey>White Slim Potion: </font></b>" + '<td><select name="A_WPS" onChange="StAllCalc()"></select>' + "</td>";
-		//w += "<td><b><font color=blue>Blue Potion: </font></b>" + '<td><select name="A_BP" onChange="StAllCalc()"></select>' + "</td></tr>";
-		w += "<tr><td><b><font color=red>Weight Limit: </font></b>" + syoziryou + "</td></tr><tr><td><b>Total Weight of Items: </b>"+EquipKG;
-		w += "</td></tr></table>";
+			w = "<table border=0>";
+			//w += "<tr><td><b><font color=grey>White Slim Potion: </font></b>" + '<td><select name="A_WPS" onChange="StAllCalc()"></select>' + "</td>";
+			//w += "<td><b><font color=blue>Blue Potion: </font></b>" + '<td><select name="A_BP" onChange="StAllCalc()"></select>' + "</td></tr>";
+			w += "<tr><td><b><font color=red>Weight Limit: </font></b>" + syoziryou + "</td></tr><tr><td><b>Total Weight of Items: </b>"+EquipKG;
+			w += "</td></tr></table>";
 
-		/*for(i=0;i<1000;i++)
-					document.calcForm.A_WPS.options[i] = new Option(i,i);
-					document.calcForm.A_WPS.value=0;}
-		for(i=0;i<1000;i++)
-					document.calcForm.A_BP.options[i] = new Option(i,i);
-					document.calcForm.A_BP.value=0;}*/
+			/*for(i=0;i<1000;i++)
+						document.calcForm.A_WPS.options[i] = new Option(i,i);
+						document.calcForm.A_WPS.value=0;}
+			for(i=0;i<1000;i++)
+						document.calcForm.A_BP.options[i] = new Option(i,i);
+						document.calcForm.A_BP.value=0;}*/
 
-		myInnerHtml("A_KakutyouData",w,0);
+			myInnerHtml("A_KakutyouData",w,0);
 
-		//myInnerHtml("A_KakutyouData","Weight Limit: "+syoziryou+"<BR>Total Weight of Equipment: "+EquipKG,0);
+			//myInnerHtml("A_KakutyouData","Weight Limit: "+syoziryou+"<BR>Total Weight of Equipment: "+EquipKG,0);
 	}
 	else if(wKK == 6){
 		var JyoutaiTaisei = new Array();
@@ -4888,29 +5067,68 @@ function KakutyouKansuu(){
 			if (homunevolved)
 				pharmacyboost *= 2;
 
-
 			adopted = eval(document.calcForm.A_youshi.checked);
 
-			srate = Math.floor((potionr*0.5 + preparep*3 + n_A_JobLV*0.2 + (n_A_DEX +n_A_LUK + (n_A_INT/2)) * 0.1 + potrate + pharmacyboost)*100)/100;
-			if(srate < 0)srate = 0;
-			//custom TalonRO Update 2015-12-21
-			if(srate > 100)srate = 100;
+			//Brewing rework - [Slap] - 2018-06-17
+			srate = potionr * 50 + preparep * 300 + n_A_JobLV * 20 + (n_A_DEX + n_A_LUK + (n_A_INT/2)) * 10 + potrate * 100 + pharmacyboost * 100;
+
+			if(selpot == 3 //blue pot
+				|| selpot == 4 //slim red
+				|| selpot == 13 //anodyne
+				|| selpot == 14 //aloevera
+				|| selpot == 15 //embryo
+				|| selpot == 16) //elemental
+			{
+				brate = 0;
+			}
+			else if(selpot == 5) //slim yellow
+			{
+				brate = -500;
+			}
+			else if(selpot == 0 //red pot
+				|| selpot == 1 //yellow pot
+				|| selpot == 2 //white pot
+				|| selpot == 7 //alcohol
+				|| selpot == 8 //acid
+				|| selpot == 9 //grenade
+				|| selpot == 10 //plant
+				|| selpot == 11) //marine
+			{
+				brate = 1000;
+			}
+			else if(selpot == 6 //slim white
+				|| selpot == 12) //glisten
+			{
+				brate = -1000;
+			}
+
+			if(brate < 0){srate1 = srate - 10;}
+			else if(brate > 0){srate1 = srate + 10;}
+			else{srate1 = srate;}
+
+			srate2 = srate + (brate/2);
+			srate3 = srate + brate;
 
 			if(adopted){
-				srate = Math.floor((srate * 0.7));}
+				srate1 = Math.floor(srate1 * 70) / 100;
+				srate2 = Math.floor(srate2 * 70) / 100;
+				srate3 = Math.floor(srate3 * 70) / 100;
+			}
 
-			if(selpot == 3 || selpot == 4 || selpot == 13 || selpot == 14 || selpot == 15 || selpot == 16){
-				brate = 0;}
-			if(selpot == 5){brate = 2.5;}
-			if(selpot == 0 || selpot == 1 || selpot == 2 || selpot == 6 || selpot == 7 || selpot == 8 || selpot == 9 || selpot == 10 || selpot == 11 || selpot == 12){
-				brate = 5;}
+			if(srate1 > 10000){srate1 = 10000;}
+			if(srate1 < 0){srate1 = 0;}
+			if(srate2 > 10000){srate2 = 10000;}
+			if(srate2 < 0){srate2 = 0;}
+			if(srate3 > 10000){srate3 = 10000;}
+			if(srate3 < 0){srate3 = 0;}
 
-			frate1 = Math.floor((srate - brate)*100)/100;
-			if(frate1 < 0){frate1 = 0;}
-			frate2 = Math.floor((srate + brate)*100)/100;
-			if(frate2 < 0){frate2 = 0;}
+			srate_avg = Math.floor((srate1 + srate2 + srate3)/3)/100;
 
-			myInnerHtml("A_KakutyouData","<b><br>Success rate: </b>" + srate + " %" + " [ " + frate1 + " % ~ " + frate2 + " % ]",0);
+			srate_min = Math.floor(Math.min(srate1, srate2, srate3))/100;
+			srate_med = Math.floor(srate2)/100;
+			srate_max = Math.floor(Math.max(srate1, srate2, srate3))/100;
+
+			myInnerHtml("A_KakutyouData","<b><br>Success rate range (Minimum ~ Median ~ Maximum):</b> " + srate_min + " % ~ " + srate_med + " % ~ " + srate_max + " %" + "<br><b>Success rate averge:</b> " + srate_avg + " %",0);
 		}
 		else if(n_A_JOB==22){
 			myInnerHtml("A_KakutyouSel","Potion to Create: " + '<select name="A_KakutyouSelNum" onChange="StAllCalc()"></select><BR>',0);
@@ -4923,7 +5141,7 @@ function KakutyouKansuu(){
 
 		}else{myInnerHtml("A_KakutyouData","Not Available for this Class",0);}
 	}
-	/*else if(wKK == 14){
+	/*else if(wKK == 1 4){
 		var wkk14;
 		if(n_A_JOB == 19 || n_A_JOB == 33 ){
 			Amistr = n_A_STR + n_A_AGI + n_A_VIT;
@@ -4947,38 +5165,7 @@ function KakutyouKansuu(){
 	}*/
 	else if(wKK == 14){//banana
 		var wkk14;
-
-		if((CardNumSearch(157) && CardNumSearch(413)) && (n_A_JOB != 14 || n_A_JOB != 28)){
-			S_LV1 = eval(document.calcForm.S2_LV.value);
-			E_DEX1 = eval(document.calcForm.E2_DEX.value);
-			Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
-			S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
-			if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
-			if (S_Time < 60){S_Time = 60;}
-
-			wkk14 = "<table border=0><tr><td><b>Chance to Strip [Weapon], [Armor]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
-			wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
-		else if(CardNumSearch(413) && (n_A_JOB != 14 || n_A_JOB != 28)){
-			S_LV1 = eval(document.calcForm.S3_LV.value);
-			E_DEX1 = eval(document.calcForm.E2_DEX.value);
-			Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
-			S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
-			if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
-			if (S_Time < 60){S_Time = 60;}
-
-			wkk14 = "<table border=0><tr><td><b>Chance to Strip [Armor]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
-			wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
-		else if(CardNumSearch(157) && (n_A_JOB != 14 || n_A_JOB != 28)){
-			S_LV1 = eval(document.calcForm.S2_LV.value);
-			E_DEX1 = eval(document.calcForm.E2_DEX.value);
-			Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
-			S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
-			if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
-			if (S_Time < 60){S_Time = 60;}
-
-			wkk14 = "<table border=0><tr><td><b>Chance to Strip [Weapon]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
-			wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
-		else if(n_A_JOB == 14 || n_A_JOB == 28){
+		if(n_A_JOB == 14 || n_A_JOB == 28){
 			if(n_A_JOB == 14 || n_A_JOB == 28){
 				S_LV1 = eval(document.calcForm.S_LV.value);
 				E_DEX1 = eval(document.calcForm.E_DEX.value);
@@ -4991,20 +5178,64 @@ function KakutyouKansuu(){
 				FS_LV1 = eval(document.calcForm.FS_LV.value);
 				FStrip = 5 + (2*FS_LV1) + ((n_A_DEX - E_DEX1)/5);
 				FS_Time = 135 + ((n_A_DEX - E_DEX1)/2);
-			if (FStrip < 5+2*FS_LV1){FStrip = 5+2*FS_LV1;}
-			if (FS_Time < 135){FS_Time = 135;}
+				if (FStrip < 5+2*FS_LV1){FStrip = 5+2*FS_LV1;}
+				if (FS_Time < 135){FS_Time = 135;}
 			}
 
 			if(n_A_JOB == 14){
 				wkk14 = "<table border=0><tr><td><b>Chance to Strip [Helm], [Armor], [Weapon] or [Shield]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
 				wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
-			if(n_A_JOB == 28){
+			else if(n_A_JOB == 28){
 				wkk14 = "<table border = 0><tr><td><b>Chance to Strip [Helm], [Armor], [Weapon] or [Shield]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
 				wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr>";
 				wkk14 += "<tr><td><b>Chance to Full Strip: </b></td><td>" + Math.floor(FStrip*10)/10 + " %</td></tr>";
 				wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(FS_Time*10)/10 + " Seconds</td></tr></table>";}
 			}
-		}else {wkk14 = "Not Available for this Class";}
+		}
+		else if(CardNumSearch(157) || CardNumSearch(413)){
+			// S_LV1 = eval(document.calcForm.S2_LV.value);
+			S_LV1 = 1;
+			E_DEX1 = eval(document.calcForm.E2_DEX.value);
+			Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
+			S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
+			if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
+			if (S_Time < 60){S_Time = 60;}
+
+			if(CardNumSearch(157) && CardNumSearch(413)){
+				strip_type = "[Weapon], [Armor]";
+			}
+			else if(CardNumSearch(157)){
+				strip_type = "[Weapon]";
+			}
+			else if(CardNumSearch(413)){
+				strip_type = "[Armor]";
+			}
+			wkk14 = "<table border=0><tr><td><b>Chance to Strip " + strip_type + ": </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
+			wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
+		// else if(CardNumSearch(413)){
+		// 	// S_LV1 = eval(document.calcForm.S3_LV.value);
+		// 	S_LV1 = 1;
+		// 	E_DEX1 = eval(document.calcForm.E2_DEX.value);
+		// 	Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
+		// 	S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
+		// 	if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
+		// 	if (S_Time < 60){S_Time = 60;}
+
+		// 	wkk14 = "<table border=0><tr><td><b>Chance to Strip [Armor]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
+		// 	wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";}
+		// else if(CardNumSearch(157)){
+		// 	// S_LV1 = eval(document.calcForm.S2_LV.value);
+		// 	S_LV1 = 1;
+		// 	E_DEX1 = eval(document.calcForm.E2_DEX.value);
+		// 	Strip = 5 + (5*S_LV1) + ((n_A_DEX - E_DEX1)/5);
+		// 	S_Time = 60 + (15* S_LV1) + ((n_A_DEX - E_DEX1)/2);
+		// 	if (Strip < 5+5*S_LV1){Strip = 5+5*S_LV1;}
+		// 	if (S_Time < 60){S_Time = 60;}
+
+		// 	wkk14 = "<table border=0><tr><td><b>Chance to Strip [Weapon]: </b></td><td>" + Math.floor(Strip*10)/10 + " %</td></tr>";
+		// 	wkk14 += "<tr><td><font color=red><b>Duration Time: </b></font></td><td>" + Math.floor(S_Time*10)/10 + " Seconds</td></tr></table>";
+		// }
+		else {wkk14 = "Not Available for this Class";}
 		myInnerHtml("A_KakutyouData",wkk14,0);
 	}
 	else if(wKK == 15){
@@ -5078,7 +5309,7 @@ function KakutyouKansuu(){
 		if(n_A_JOB==9 || n_A_JOB==23){
 			var wX = 100+n_tok[94];
 			if(EquipNumSearch(644))
-				wX += Math.floor(n_A_Weapon_ATKplus * 1.5);
+				wX += n_A_Weapon_ATKplus * 1.5;
 			//custom TalonRO Recovery Light
 			if(EquipNumSearch(1511))
 				wX += Math.floor(n_A_Weapon_ATKplus * 3);
@@ -5171,20 +5402,22 @@ function KakutyouKansuu2(){
 	}
 	if(wKK == 5){
 		if(n_A_JOB==6||n_A_JOB==12||n_A_JOB==19||n_A_JOB==20||n_A_JOB==26||n_A_JOB==33){
-			myInnerHtml("A_KakutyouSel","Enlarge Weight Limit Lv: " + '<select name="A_KakutyouSelNum"onChange="StAllCalc()"></select><BR>'
-			+"Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
-			for(i=0;i<=10;i++)
-				document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
+			// myInnerHtml("A_KakutyouSel","Enlarge Weight Limit Lv: " + '<select name="A_KakutyouSelNum"onChange="StAllCalc()"></select><BR>'
+			// +"Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
+			myInnerHtml("A_KakutyouSel","Enlarge Weight Limit Lv: " + '<select name="A_KakutyouSelNum"onChange="StAllCalc()"></select><BR>',0);
+			// for(i=0;i<=10;i++)
+			// 	document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
 			for(i=0;i<=10;i++)
 				document.calcForm.A_KakutyouSelNum.options[i] = new Option(i,i);
-			if(n_A_JOB==20)
-				document.calcForm.A_KakutyouSelNum.value=0;
-			else
+			// if(n_A_JOB==20)
+			// 	document.calcForm.A_KakutyouSelNum.value=0;
+			// else
 				document.calcForm.A_KakutyouSelNum.value=10;
 		}else{
-			myInnerHtml("A_KakutyouSel","Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
-			for(i=0;i<=10;i++)
-				document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
+			// myInnerHtml("A_KakutyouSel","Enlarge Weight Limit R Lv: " + '<select name="A_KakutyouSelNum2"onChange="StAllCalc()"></select><BR>',0);
+			// for(i=0;i<=10;i++)
+			// 	document.calcForm.A_KakutyouSelNum2.options[i] = new Option(i,i);
+			myInnerHtml("A_KakutyouSel","",0);
 		}
 		return;
 	}
@@ -5330,8 +5563,9 @@ function KakutyouKansuu2(){
 					document.calcForm.ISP.value=0;
 			for(i=0;i<=10;i++)
 					document.calcForm.IRP.options[i] = new Option(i,i);
-					document.calcForm.IRP.value=0;}
-			return;
+					document.calcForm.IRP.value=0;
+		}else{myInnerHtml("A_KakutyouSel","",0);}
+		return;
 	}
 	if(wKK == 13){
 		if(n_A_JOB==12||n_A_JOB==26){
@@ -5406,7 +5640,7 @@ function KakutyouKansuu2(){
 				document.calcForm.A_HomunEvolved.options[i] = new Option(HomunEvolvedOption[i],i);
 				document.calcForm.A_HomunEvolved.value=0;
 			//end
-		}
+		}else{myInnerHtml("A_KakutyouSel","",0);}
 		return;
 	}
 	if(wKK == 14){
@@ -5414,17 +5648,18 @@ function KakutyouKansuu2(){
 		if(n_A_JOB == 14 || n_A_JOB == 28){
 			striptext += "<table border=0><tr><td>Strip [Helm], [Armor], [Weapon] or [Shield] Level:</td>" + '<td><select name="S_LV" onChange="StAllCalc()"></select></td>';
 			striptext += "<td>Enemy DEX:</td>" + '<td><select name="E_DEX" onChange="StAllCalc()"></select>';
-		if(n_A_JOB == 28){
-			striptext += "<tr><td>Full Strip Level:</td>" + '<td><select name="FS_LV" onChange="StAllCalc()"></select>';}
+			if(n_A_JOB == 28){
+				striptext += "<tr><td>Full Strip Level:</td>" + '<td><select name="FS_LV" onChange="StAllCalc()"></select>';}
+			striptext += "</td></tr></table>";
 		}
-		else if((CardNumSearch(157) || CardNumSearch(413)) && (n_A_JOB != 14 || n_A_JOB != 28)){
-			striptext += "<table border=0><tr><td>Enemy DEX:</td>" + '<td><select name="E2_DEX" onChange="StAllCalc()"></select></td></tr><tr>';}
-		if(CardNumSearch(157)){
-			striptext += "<td>Strip [Weapon] Level:</td>" + '<td><select name="S2_LV" onChange="StAllCalc()"></select></td>';}
-		if(CardNumSearch(413)){
-			striptext += "<td>Strip [Armor] Level:</td>" + '<td><select name="S3_LV" onChange="StAllCalc()"></select></td>';}
-		striptext += "</td></tr></table>";
-		myInnerHtml("A_KakutyouSel",striptext + "<br>",0);
+		else if((CardNumSearch(157) || CardNumSearch(413)) && (n_A_JOB != 14 && n_A_JOB != 28)){
+			striptext += "<table border=0><tr><td>Enemy DEX:</td>" + '<td><select name="E2_DEX" onChange="StAllCalc()"></select></td></tr>';
+			if(CardNumSearch(157)){
+				striptext += "<td>Strip [Weapon] Level: 1</td>";}
+			if(CardNumSearch(413)){
+			striptext += "<td>Strip [Armor] Level: 1</td>";}
+		}
+		myInnerHtml("A_KakutyouSel",striptext,0);
 		if(n_A_JOB == 14 || n_A_JOB == 28){
 			for(i=1;i<=5;i++){
 				document.calcForm.S_LV.options[i-1] = new Option(i,i);
@@ -5438,16 +5673,22 @@ function KakutyouKansuu2(){
 					document.calcForm.FS_LV.value=1;}
 			}
 		}
-		if(CardNumSearch(157) || CardNumSearch(413)){
+		else if(CardNumSearch(157) || CardNumSearch(413)){
 			for(i=0;i<=200;i++){
 				document.calcForm.E2_DEX.options[i] = new Option(i,i);
 				document.calcForm.E2_DEX.value=0;}
-			if(CardNumSearch(157)){
-				document.calcForm.S2_LV.options[0] = new Option("1",0);
-				document.calcForm.S2_LV.value=0;}
-			if(CardNumSearch(413)){
-				document.calcForm.S3_LV.options[0] = new Option("1",0);
-				document.calcForm.S3_LV.value=0;}
+			// if(CardNumSearch(157)){
+			// 	document.calcForm.S2_LV.options[0] = new Option("1",0);
+			// 	document.calcForm.S2_LV.value=0;}
+			// else if(CardNumSearch(413)){
+			// 	document.calcForm.S3_LV.options[0] = new Option("1",0);
+			// 	document.calcForm.S3_LV.value=0;}
+			// else{
+			// 	document.calcForm.S2_LV.options[0] = new Option("1",0);
+			// 	document.calcForm.S2_LV.value=0;
+			// 	document.calcForm.S3_LV.options[0] = new Option("1",0);
+			// 	document.calcForm.S3_LV.value=0;
+			// }
 		}
 		return;
 	}
@@ -5459,7 +5700,7 @@ function KakutyouKansuu2(){
 		myInnerHtml("A_KakutyouSel",cooktext + "<br>",0);
 		for(i=1;i<=10;i++){
 			document.calcForm.Flv.options[i-1] = new Option(i,i);
-			document.calcForm.Flv.value=0;}
+			document.calcForm.Flv.value=1;}
 		for(i=0;i<=5;i++){
 			document.calcForm.FStat.options[i] = new Option(Stat_Food[i][1],i);
 			document.calcForm.FStat.value=0;}
@@ -5724,14 +5965,14 @@ function StoN(n){
 			return i;
 }
 
-SaveStr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14, 15,16, 17, 18, 19, 20, 21,22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96];
-SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1,  3, 1,  3,  3,  3,  3,  3, 1,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2];
+SaveStr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14, 15,16, 17, 18, 19, 20, 21,22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100];
+SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1,  3, 1,  3,  3,  3,  3,  3, 1,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3];
 
 function SaveCookie(){
 with(document.calcForm){
 	SaveData = new Array();
 
-	for(i=0;i<=91;i++)
+	for(i=0;i<=100;i++)
 		SaveData[i]=0;
 
 	SaveData[0] = eval(A_JOB.value);
@@ -5870,14 +6111,28 @@ with(document.calcForm){
 		SaveData[96] = 0;
 	}
 
+	//[Custom TalonRO 2018-06-14 - Save Cookie for Malangdo] [Kato]
+	SaveData[97] = ((A_ME11.value) ? eval(A_ME11.value) : 0);
+	SaveData[98] = ((A_ME12.value) ? eval(A_ME12.value) : 0);
+
+
+	if (typeof(A_weapon2) != "undefined"){
+			SaveData[99] = ((A_ME21.value) ? eval(A_ME21.value) : 0);
+			SaveData[100] = ((A_ME22.value) ? eval(A_ME22.value) : 0);
+	}else{
+			SaveData[99] = 0;
+			SaveData[100] = 0;
+	}
+
 	//wak1="";
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
-	for(i=0;i<=96;i++)
+	for(i=0;i<=100;i++)
 		SaveData[i] = NtoS(SaveData[i],SaveStr1[i]);
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
 	//alert(wak1);
+
 	cookieNum = A_SaveSlot.value;
 
 	wDay = 99000;
@@ -5888,7 +6143,7 @@ with(document.calcForm){
 
 	wStr = "" +SaveData[0];
 
-	for(i=1;i<=96;i++){
+	for(i=1;i<=100;i++){
 		wStr += ""+SaveData[i];
 	}
 	document.cookie = cookieNum +"="+ wStr +"; expires="+ expDay;
@@ -5911,11 +6166,12 @@ with(document.calcForm){
 			break;
 		}
 	}
-	for(i=0;i<=96;i++)
+
+	for(i=0;i<=100;i++)
 		SaveData[i] = 0;
 
 	j=0;
-	for(i=0;i<=96;i++){
+	for(i=0;i<=100;i++){
 		if(SaveStr1[i] == 1){
 			SaveData[i] = wStr.substr(j,1);
 			j++;
@@ -5927,7 +6183,8 @@ with(document.calcForm){
 			j+=3;
 		}
 	}
-	for(i=0;i<=96;i++){
+
+	for(i=0;i<=100;i++){
 		if(SaveStr1[i] == 1)
 			SaveData[i] = StoN(SaveData[i]);
 		if(SaveStr1[i] == 2)
@@ -5935,7 +6192,8 @@ with(document.calcForm){
 		if(SaveStr1[i] == 3)
 			SaveData[i] = StoN(SaveData[i].substr(0,1)) + SaveData[i].substr(1,2);
 	}
-	for(i=0;i<=96;i++){
+
+	for(i=0;i<=100;i++){
 		if(SaveStr1[i] == 3 && SaveData[i].substr(0,2) == "00")
 			SaveData[i] = SaveData[i].substr(2,1);
 		else if(SaveStr1[i] == 3 && SaveData[i].substr(0,1) == "0")
@@ -5954,8 +6212,14 @@ with(document.calcForm){
 		}
 	}
 
-	for(i=0;i<=96;i++)
-		SaveData[i] = eval(SaveData[i]);
+	for(i=97;i<=100;i++){
+		if (typeof(SaveData[i]) == "undefined"){
+			SaveData[i] = 0;
+		}
+	}
+
+	for(i=0;i<=100;i++)
+			SaveData[i] = eval(SaveData[i]);
 
 	if(eval(SaveData[0]) == 20 && eval(SaveData[54]) == 1)
 		SuperNoviceFullWeaponCHECK = 1;
@@ -6102,6 +6366,12 @@ with(document.calcForm){
 	SQI_Bonus_Effect[1] = SaveData[94];
 	SQI_Bonus_Effect[2] = SaveData[95];
 	SQI_Bonus_Effect[3] = SaveData[96];
+
+	// [Custom TalonRO - 2018-06-15 - Load Cookie for Malangdo Enchants] [Kato]
+	A_ME11.value = SaveData[97];
+	A_ME12.value = SaveData[98];
+	A_ME21.value = SaveData[99];
+	A_ME22.value = SaveData[100];
 
 	Click_SQI_Bonus(0);
 
@@ -6589,6 +6859,16 @@ with(document.calcForm){
 		x+=4;
 	}
 
+	//[Custom TalonRO 2018-06-15 - SAVE URL] [Kato]
+		SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_ME11.value),2);
+		SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_ME12.value),2);
+		x+=2;
+	if (typeof(A_weapon2) != "undefined"){
+			SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_ME21.value),2);
+			SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_ME22.value),2);
+			x+=2;
+	}
+
 	wStr = "" +SaveData[0];
 	for(i=1;i<=x;i++){
 		wStr += ""+SaveData[i];
@@ -6934,6 +7214,14 @@ with(document.calcForm){
 			x+=8;
 		}
 
+		//[Custom TalonRO 2018-06-15 - LOAD URL] [Kato]
+		A_ME11.value = StoN2(w.substr(x+1,2));
+		A_ME12.value = StoN2(w.substr(x+3,2));
+		x+=4;
+		A_ME21.value = StoN2(w.substr(x+1,2));
+		A_ME22.value = StoN2(w.substr(x+3,2));
+		x+=4;
+
 		calc();
 
 		StCalc(1);
@@ -7192,15 +7480,15 @@ for(i=0;i<ITEM_SP_TIME_OBJ.length;i++){
 	}
 }
 
+//[Custom TalonRO - 2018-06-03 - Populate combos in index] [Kato]
+tRO_PopulateCombos();
+
 document.calcForm.A_JOB.value = 0;
 ClickJob(0);
 if(Taijin==0)
 	EnemySort();
 StCalc();
 calc();
-
-//[Custom TalonRO - 2018-06-03 - Populate combos in index] [Kato]
-tRO_PopulateCombos();
 
 LoadCookie3();
 LoadCookieConf();
