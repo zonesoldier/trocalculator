@@ -1,3 +1,6 @@
+[Update 2018-06-22]
+- Issue #181: [Missing Monster] - Bloody Knight (GMC) [NattWara]
+
 [Update 2018-06-21]
 - Issue #207: Improve calc functionality for baby jobs [Slap]
 - Issue #206: Updated items [Slap]
