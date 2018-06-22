@@ -1,3 +1,7 @@
+[Update 2018-06-21]
+- Issue #207: Improve calc functionality for baby jobs [Slap]
+- Issue #206: Updated items [Slap]
+
 [Update 2018-06-19]
 - Issue #200: Fixed scrollbar jumping when changing items with item data shown [Slap]
 - Issue #199: Removed gym pass from weight limit calculations [Slap]
