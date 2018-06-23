@@ -111,8 +111,59 @@ function SuperNoviceFullWeapon(nSNFW)
 	}
 }
 
+function BabyJobs(){
+with(document.calcForm){
+	//Remove rebirth classes when adopted is checked - [Slap] - 2018-06-21
+	var adopted = eval(A_youshi.checked);
+	if(adopted && A_JOB.options.length > 26){
+		var jobJump = 0;
+		while(A_JOB.options.length > 26){
+			if(A_JOB.selectedIndex == 21){
+					jobJump = 1;
+			}
+			A_JOB.options.remove(21);
+		}
+		if(jobJump == 1){
+			ClickJob(0);
+		}
+	}
+	else if(!adopted && A_JOB.options.length < 47){
+		for(i = 21; i < 41; i++){
+			option = document.createElement("option");
+			option.value = (i);
+			option.text = (JobName[i]);
+			A_JOB.add(option,i);
+		}
+	}
+
+	//Cap stats at 80 when adopted is checked - [Slap] - 2018-06-21
+	if(adopted && A_STR.options.length > 79){
+		for(i = A_STR.options.length - 1; i > 79; i--){
+			A_STR.remove(i);
+			A_STR.remove(i);
+			A_AGI.remove(i);
+			A_VIT.remove(i);
+			A_INT.remove(i);
+			A_DEX.remove(i);
+			A_LUK.remove(i);
+		}
+	}
+	else if(!adopted && A_STR.options.length < 100){
+		for(i = A_STR.options.length + 1; i < 100; i++){
+			A_STR.options[i-1] = new Option(i,i);
+			A_AGI.options[i-1] = new Option(i,i);
+			A_VIT.options[i-1] = new Option(i,i);
+			A_INT.options[i-1] = new Option(i,i);
+			A_DEX.options[i-1] = new Option(i,i);
+			A_LUK.options[i-1] = new Option(i,i);
+		}
+	}
+}
+}
+
 function StAllCalc()
 {with(document.calcForm){
+	BabyJobs();
 	n_A_JobSet();
 	if(n_A_JOB == 20){
 		if(SuperNoviceFullWeaponCHECK == 0 && eval(A_skill9.value) == 1)
@@ -1224,7 +1275,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	if(n_A_PassSkill8[12] >= 3)
 		n_A_totalDEF -= Math.floor(n_A_totalDEF * (n_A_PassSkill8[12] - 2) * 5 / 100);
-	
+
 	if(SkillSearch(196))
 		n_A_totalDEF = 90;
 
@@ -1905,6 +1956,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1250))
 		C_ATK += 5;
 
+	//[Custom TalonRO 2018-06-23 - Krishina and Assassin's Glove combo not working, added here] [Kato]
+	if(EquipNumSearch(1518)){
+		C_ATK += 25;
+	}
 
 	C_ATK += n_A_PassSkill9[40];
 
@@ -3184,7 +3239,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 						}
 				}
 			}
-			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1){
+			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1 && n_A_Weapon_zokusei <= 5){
 				for(j=0; j<10; j++) {
 					n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[n_A_Weapon_zokusei]) / 100) - 100; // ***
 				}
@@ -3718,7 +3773,7 @@ function StPlusCalc()
 				wSPC_LUK = (99 - n_A_LUK);
 		}
 
-	//Marionette status compensation rework - [Slap] - 2018-06-17	
+	//Marionette status compensation rework - [Slap] - 2018-06-17
 	}else if(n_A_PassSkill3[11] && n_A_PassSkill3[18]){
 		// if(n_A_STR + wSPC_STR < 99){
 			if(n_A_STR + w2[0] + Math.floor(n_A_PassSkill3[12]/2) < 99)
@@ -6160,6 +6215,12 @@ with(document.calcForm){
 	SaveData = document.cookie.split("; ");
 	wStr = "";
 
+	//clear baby job status before load
+	if(A_youshi.checked){
+		document.getElementById("lab1").checked = false;
+		BabyJobs();
+	}
+	
 	for(i=0;SaveData[i];i++){
 		if (SaveData[i].substr(0,6) == cookieNum +"="){
 			wStr = SaveData[i].substr(6,SaveData[i].length);
@@ -7215,11 +7276,28 @@ with(document.calcForm){
 		}
 
 		//[Custom TalonRO 2018-06-15 - LOAD URL] [Kato]
-		A_ME11.value = StoN2(w.substr(x+1,2));
-		A_ME12.value = StoN2(w.substr(x+3,2));
+		if((StoN2(w.substr(x+1,2)) != "undefined"))
+			A_ME11.value = StoN2(w.substr(x+1,2));
+		else
+			A_ME11.value = 0;
+
+		if((StoN2(w.substr(x+3,2)) != "undefined"))
+			A_ME12.value = StoN2(w.substr(x+3,2));
+		else
+			A_ME12.value = 0;
+
 		x+=4;
-		A_ME21.value = StoN2(w.substr(x+1,2));
-		A_ME22.value = StoN2(w.substr(x+3,2));
+
+		if((StoN2(w.substr(x+1,2)) != "undefined"))
+			A_ME21.value = StoN2(w.substr(x+1,2));
+		else
+			A_ME21.value = 0;
+
+		if((StoN2(w.substr(x+3,2)) != "undefined"))
+			A_ME22.value = StoN2(w.substr(x+3,2));
+		else
+			A_ME22.value = 0;
+
 		x+=4;
 
 		calc();

@@ -893,7 +893,7 @@ ItemOBJ = [
 ,[870,50,0,2,0,1,10,0,"Santa Poring Cap","",0,19,2,47,3,67,3,193,2,0]
 ,[871,50,0,3,0,1,20,0,"Bell Ribbon","",0,3,1,220,12,0]
 ,[872,50,0,2,0,1,200,0,"Phoenix Crown","","Each refine adds 1% of boss type reduction<br><b>Mid and Upper Headgear</b>",19,3,0]
-,[873,51,0,2,0,0,20,0,"Tongue-Sticking Mask","","[description translation missing - ItemID: 873]",0]
+,[873,51,0,2,0,0,10,0,"Tongue Mask","","Add a 5% chance of auto casting Level 5 Provoke on the enemy when attacking<br><b>Middle and Lower Headgear</b>",0]
 ,[874,51,0,0,0,0,10,0,"Blank Eyes","",0,0]
 ,[875,50,0,0,0,0,30,0,"Coppola","",0,0]
 ,[876,50,1,1,0,0,10,20,"Yellow Bandana","",0,3,2,6,2,78,10,0]
@@ -1164,7 +1164,7 @@ ItemOBJ = [
 ,[1141,999,0,0,0,0,20,0,"Fisherman's Scarf","","[description translation missing - ItemID: 1141]",0]
 ,[1142,999,0,0,0,0,25,0,"Fishing Boots","","[description translation missing - ItemID: 1142]",0]
 ,[1143,999,0,0,0,0,10,0,"Lure","","[description translation missing - ItemID: 1143]",0]
-,[1144,51,0,0,0,0,30,50,"Tiger Face","","[description translation missing - ItemID: 1144]",32,5,0]
+,[1144,51,0,3,0,0,100,60,"Tiger Face","","<b>Middle and Lower Headgear</b>",52,5,32,5,172,5,0]
 ,[1145,50,0,1,0,0,100,10,"Hermose's cap","",0,12,10,80,-10,89,-20,0]
 ,[1146,50,0,1,0,1,20,0,"Katyusha Flowers","","[description translation missing - ItemID: 1146]",5132,15,5133,15,7132,25,7133,25,0]
 ,[1147,51,0,0,0,0,10,70,"Ifrit Ear","",0,19,3,1,1,63,5,61,-5,5051,2,5125,2,5122,2,5006,2,5070,2,5007,2,0]
@@ -1241,7 +1241,7 @@ ItemOBJ = [
 ,[1218,50,0,2,0,0,30,0,"Moon Rabbit Hat","","[description translation missing - ItemID: 1218]",2,3,5,1,151,15,0]
 ,[1219,50,0,5,0,1,100,30,"Tiara Samambaia","","",76,8,0]
 ,[1220,50,0,2,0,0,30,1,"Lunatic Hat","","[description translation missing - ItemID: 1220]",19,2,6,5,11,5,0]
-,[1221,51,0,1,0,0,10,0,"Cube Mask","","[description translation missing - ItemID: 1221]",0]
+,[1221,51,0,1,0,0,10,0,"Mask Cube","","<b>Middle and Lower Headgear</b>",0]
 ,[1222,50,0,1,0,0,40,30,"Gryphon Hat","","[description translation missing - ItemID: 1222]",0]
 ,[1223,50,0,0,0,0,10,1,"Lady Tanee Hat","","[description translation missing - ItemID: 1223]",193,1,194,1,0]
 ,[1224,50,0,0,0,1,40,1,"Rabbit Earplugs","","[description translation missing - ItemID: 1224]",80,4,89,4,0]
@@ -1283,7 +1283,7 @@ ItemOBJ = [
 ,[1260,50,0,0,0,1,10,0,"Wild Rose Hat",0,0,2,3,0]
 ,[1261,999,0,5,0,0,80,50,"Large Bapho Horns [DEF Version]","","As your JOB Level increases,the helm grants additional ATK",57,12,0]
 ,[1262,52,0,0,0,0,10,0,"Gentleman's Pipe","","",89,1,0] //custom TalonRO
-,[1263,51,0,6,0,0,0,1,"Blush of Groom","","",57,3,0]
+,[1263,51,0,0,0,0,5,0,"Blush of Groom","","",57,3,0]
 ,[1264,50,0,0,0,1,10,0,"Purple Cowboy Hat",0,0,4,2,3,2,14,50,0]
 ,[1265,50,0,0,0,1,20,30,"Dark Randgris Helm","","<b>Upper and Mid Headgear</b>",5,4,19,1,0]
 ,[1266,999,0,2,0,0,70,10,"AFK Hat","",0,0] //Duplicated (same with Notice Board TRO ID : 5474), remove me. --> Duplicate with [1128,50,0,2,0,0,0,10,"Notice Board","",0,0]
@@ -2613,7 +2613,7 @@ ItemID = [
 [870,4,0],
 [871,4,0],
 [872,4,0],
-[873,4,0],
+[873,1,5272],
 [874,4,0],
 [875,4,0],
 [876,4,0],
@@ -2884,7 +2884,7 @@ ItemID = [
 [1141,4,0],
 [1142,4,0],
 [1143,4,0],
-[1144,4,0],
+[1144,1,5485],
 [1145,4,0],
 [1146,4,0],
 [1147,4,0],
@@ -2961,7 +2961,7 @@ ItemID = [
 [1218,4,0],
 [1219,4,0],
 [1220,4,0],
-[1221,4,0],
+[1221,1,5475],
 [1222,4,0],
 [1223,4,0],
 [1224,4,0],
@@ -3003,7 +3003,7 @@ ItemID = [
 [1260,4,0],
 [1261,4,0],
 [1262,4,0],
-[1263,4,0],
+[1263,1,5800],
 [1264,4,0],
 [1265,4,0],
 [1266,4,0],
@@ -3797,16 +3797,16 @@ function Item_Setumei(nC1,nC2)
     /*ZoneSoldier - 6/3/2018
       Increase Damage of [Element] magic by %
       Example: 343,5 = Increase Damge of [Fire] magic by 5%
-      440 = Neutral
-      441 = Water
-      442 = Earth
-      443 = Fire
-      444 = Wind
-      445 = Poison
-      446 = Holy
-      447 = Shadow
-      448 = Ghost
-      449 = Undead
+      340 = Neutral
+      341 = Water
+      342 = Earth
+      343 = Fire
+      344 = Wind
+      345 = Poison
+      346 = Holy
+      347 = Shadow
+      348 = Ghost
+      349 = Undead
     */
   if(340 <= nC1 && nC1 <=349)
     CBIstr += "Increases damage of ["+ ZokuseiOBJ2[nC1-340] + "] magic by "+ nC2 +"%<BR>";
