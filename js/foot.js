@@ -111,8 +111,59 @@ function SuperNoviceFullWeapon(nSNFW)
 	}
 }
 
+function BabyJobs(){
+with(document.calcForm){
+	//Remove rebirth classes when adopted is checked - [Slap] - 2018-06-21
+	var adopted = eval(A_youshi.checked);
+	if(adopted && A_JOB.options.length > 26){
+		var jobJump = 0;
+		while(A_JOB.options.length > 26){
+			if(A_JOB.selectedIndex == 21){
+					jobJump = 1;
+			}
+			A_JOB.options.remove(21);
+		}
+		if(jobJump == 1){
+			ClickJob(0);
+		}
+	}
+	else if(!adopted && A_JOB.options.length < 47){
+		for(i = 21; i < 41; i++){
+			option = document.createElement("option");
+			option.value = (i);
+			option.text = (JobName[i]);
+			A_JOB.add(option,i);
+		}
+	}
+
+	//Cap stats at 80 when adopted is checked - [Slap] - 2018-06-21
+	if(adopted && A_STR.options.length > 79){
+		for(i = A_STR.options.length - 1; i > 79; i--){
+			A_STR.remove(i);
+			A_STR.remove(i);
+			A_AGI.remove(i);
+			A_VIT.remove(i);
+			A_INT.remove(i);
+			A_DEX.remove(i);
+			A_LUK.remove(i);
+		}
+	}
+	else if(!adopted && A_STR.options.length < 100){
+		for(i = A_STR.options.length + 1; i < 100; i++){
+			A_STR.options[i-1] = new Option(i,i);
+			A_AGI.options[i-1] = new Option(i,i);
+			A_VIT.options[i-1] = new Option(i,i);
+			A_INT.options[i-1] = new Option(i,i);
+			A_DEX.options[i-1] = new Option(i,i);
+			A_LUK.options[i-1] = new Option(i,i);
+		}
+	}
+}
+}
+
 function StAllCalc()
 {with(document.calcForm){
+	BabyJobs();
 	n_A_JobSet();
 	if(n_A_JOB == 20){
 		if(SuperNoviceFullWeaponCHECK == 0 && eval(A_skill9.value) == 1)
@@ -6160,6 +6211,12 @@ with(document.calcForm){
 	SaveData = document.cookie.split("; ");
 	wStr = "";
 
+	//clear baby job status before load
+	if(A_youshi.checked){
+		document.getElementById("lab1").checked = false;
+		BabyJobs();
+	}
+	
 	for(i=0;SaveData[i];i++){
 		if (SaveData[i].substr(0,6) == cookieNum +"="){
 			wStr = SaveData[i].substr(6,SaveData[i].length);
