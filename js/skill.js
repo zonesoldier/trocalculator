@@ -587,7 +587,7 @@ InsertSkill = [
 [43,1,7,5],
 [44,1,320,3],
 [45,1,130,3],
-[46,1,128,4],
+[46,1,128,1],
 [47,1,51,5], //custom TalonRO Fireblend = Firebolt lv 5
 [48,1,51,6], //custom TalonRO SQI Bonus - Djinn = Firebolt lv 6
 [49,1,126,3],//custom TalonRO SQI Bonus - Electric Guitar = Jupitel Thunder lv 3

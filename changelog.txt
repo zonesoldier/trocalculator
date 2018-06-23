@@ -2,6 +2,24 @@
 - Issue #181: [Missing Monster] - Bloody Knight (GMC) [NattWara]
 - Fixed Malangdo spell type enchants for non-element spells [Slap]
 - Removed Earth Spike from Taekwon classes [Slap]
+- Added Items:
+	Drooping Cat Crew
+	Elephant Hat (ID:5259)
+- Issue #149: Proofreading [Slap]
+	Morrigane's Belt: fixed atk stacking
+	Morpheus set: added description
+	Spiritual Ring + Clip/Rosary set: removed sanctuary bonus
+	Vanilmirth Hat: weight
+	Yellow Mage Hat: jobid, description
+	Sniping Suit R: replaced
+	Ulle's Cap set: added description
+	Phantom Spear set: added description
+	RAKUMA: replaced //don't google "RAKUMA ragnarok online"
+	Gauntlet of Hit: name
+	Blue Mage Hat: jobid, description
+	Bunny Slipper: name
+	Captain's Hat: name
+	Elephant Hat (ID:5146): there are 2 elephant hats in game
 
 [Update 2018-06-21]
 - Issue #207: Improve calc functionality for baby jobs [Slap]
