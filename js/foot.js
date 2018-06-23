@@ -3235,7 +3235,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 						}
 				}
 			}
-			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1){
+			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1 && n_A_Weapon_zokusei <= 5){
 				for(j=0; j<10; j++) {
 					n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[n_A_Weapon_zokusei]) / 100) - 100; // ***
 				}

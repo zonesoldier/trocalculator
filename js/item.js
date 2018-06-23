@@ -3797,16 +3797,16 @@ function Item_Setumei(nC1,nC2)
     /*ZoneSoldier - 6/3/2018
       Increase Damage of [Element] magic by %
       Example: 343,5 = Increase Damge of [Fire] magic by 5%
-      440 = Neutral
-      441 = Water
-      442 = Earth
-      443 = Fire
-      444 = Wind
-      445 = Poison
-      446 = Holy
-      447 = Shadow
-      448 = Ghost
-      449 = Undead
+      340 = Neutral
+      341 = Water
+      342 = Earth
+      343 = Fire
+      344 = Wind
+      345 = Poison
+      346 = Holy
+      347 = Shadow
+      348 = Ghost
+      349 = Undead
     */
   if(340 <= nC1 && nC1 <=349)
     CBIstr += "Increases damage of ["+ ZokuseiOBJ2[nC1-340] + "] magic by "+ nC2 +"%<BR>";
