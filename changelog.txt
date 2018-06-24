@@ -1,7 +1,8 @@
-[Update 2018-06-22]
-- Issue #181: [Missing Monster] - Bloody Knight (GMC) [NattWara]
-- Fixed Malangdo spell type enchants for non-element spells [Slap]
-- Removed Earth Spike from Taekwon classes [Slap]
+[Update 2018-06-24]
+- Deleted description for 1000+skillid [Slap]
+- Added exceptions list for item set linking for items where only one of its slotted versions is active in the item set [Slap]
+
+[Update 2018-06-23]
 - Added Items:
 	Drooping Cat Crew
 	Elephant Hat (ID:5259)
@@ -20,6 +21,14 @@
 	Bunny Slipper: name
 	Captain's Hat: name
 	Elephant Hat (ID:5146): there are 2 elephant hats in game
+
+[Update 2018-06-22]
+- Issue #181: [Missing Monster] - Bloody Knight (GMC) [NattWara]
+- Added Kishna combo [Kato]
+- Fixed Malangdo URL loading [Kato]
+- Fixed pet Ferus [Kato]
+- Fixed Malangdo spell type enchants for non-element spells [Slap]
+- Removed Earth Spike from Taekwon classes [Slap]
 
 [Update 2018-06-21]
 - Issue #207: Improve calc functionality for baby jobs [Slap]

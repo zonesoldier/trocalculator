@@ -3814,8 +3814,6 @@ function Item_Setumei(nC1,nC2)
   if(350 <= nC1 && nC1 <=359)
     CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
     //Incease Damage of skill by %
-  if(1000 <= nC1 && nC1 <=1439)
-    CBIstr += "Increases damage inflicted by skill " + SkillOBJ[nC1-1000][2] + " " + nC2 + " %<b>";
 	if(5000 <= nC1 && nC1 <= 6999)
 		CBIstr += "["+ SkillOBJ[nC1 -5000][2] +"] damage"+ wIS + nC2 +"%<BR>";
     /*
@@ -3963,24 +3961,50 @@ for(var i=0;i<=SE_MAXnum;i++){
 		ItemOBJ[w_SE[i][k]][j+2]=0;
 	}
 }
-
+/*
+Exceptions list for item set linking for items where only one of its slotted versions is active in the item set - [Slap] = 2018-06-24
+   slotsExceptList = [[a,b,c],[a,b,c],...]
+      a = set id in ItemOBJ
+      b = item id in ItemOBJ
+      c = slot version:
+         0 = the less sloted version is in the set
+         1 = the more sloted version is in the set
+   for example [[755,405,0],...] would mean in the item set with id 755 in ItemOBJ, the item with id 405 in the 755 set array in w_SE has only its less slotted version in the item set
+*/
+slotsExceptList = [
+[755,405,0]
+,[755,467,0]
+,[755,471,0]
+];
 //Improved SetEquipName combining combo linking with set equipment info - [Kato/Slap] - 2018-06-18
 function SetEquipName(SENw){
 	var SENstr = "";
+   var exceptfound = 0;
 	for(var i=0;i<=SE_MAXnum;i++){
 		if(i == SENw){
 			for(var j=1;w_SE[i][j] != "NULL";j++){
-            if(ItemID[w_SE[i][j]][1]==1){
-			      SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][2] + "/\" target=\"_blank\"><b>" + "<font color='blue'>["+ ItemOBJ[w_SE[i][j]][8] +"]</font></b></a>";
-               if(ItemID[w_SE[i][j]][3]){
-                  SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][3] + "/\" target=\"_blank\"><b>" + "<font color='blue'><sup>[1]</sup></font></b></a>"
+            exceptFound = 0;
+            for(var k=0;k<slotsExceptList.length;k++){
+               if(slotsExceptList[k][1] == w_SE[i][j] && slotsExceptList[k][0] == w_SE[i][0]){
+                  var slotVersion = slotsExceptList[k][2];
+                  var slotNum = ItemOBJ[slotsExceptList[k][1]][5][slotVersion * 4];
+                  SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[slotsExceptList[k][1]][slotVersion + 2] + "/\" target=\"_blank\"><b>" + "<font color='blue'>["+ ItemOBJ[slotsExceptList[k][1]][8] +"][" + slotNum + "]</font></b></a>";
+               exceptFound = 1;
                }
             }
-            else{
-               SENstr += "["+ ItemOBJ[w_SE[i][j]][8] +"]";
+            if(exceptFound == 0){
+               if(ItemID[w_SE[i][j]][1]==1){
+   			      SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][2] + "/\" target=\"_blank\"><b>" + "<font color='blue'>["+ ItemOBJ[w_SE[i][j]][8] +"]</font></b></a>";
+                  if(ItemID[w_SE[i][j]][3]){
+                     SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][3] + "/\" target=\"_blank\"><b>" + "<font color='blue'><sup>[1]</sup></font></b></a>"
+                  }
+               }
+               else{
+                  SENstr += "["+ ItemOBJ[w_SE[i][j]][8] +"]";
+               }
+   			   if(w_SE[i][j+1] != "NULL")
+   					SENstr += "+";
             }
-			   if(w_SE[i][j+1] != "NULL")
-					SENstr += "+";
 			}
 			return SENstr;
 		}
