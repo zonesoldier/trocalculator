@@ -141,7 +141,7 @@ ItemOBJ = [
 ,[118,12,0,90,3,"0 / 3",75,27,"Book of Mother Earth","",0,20,2,0]
 ,[119,12,0,115,3,2,100,27,"Bible","",0,4,2,0]
 ,[120,12,0,125,3,1,80,27,"Tablet","",0,0]
-,[121,12,0,60,4,1,30,40,"Girl's Diary","","Increase damage on Bongun Monsters by 150%",1275,150,0]
+,[121,12,0,60,4,1,30,40,"Girl's Diary","",0,1275,150,0]
 ,[122,12,0,120,4,0,80,40,"Book of the Apocalypse","",0,20,7,41,7,42,7,43,7,44,7,46,5,0]
 ,[123,13,0,30,1,"3 / 4",40,0,"Waghnak","",0,0]
 ,[124,13,0,50,2,"2 / 3",45,12,"Knuckle Duster","",0,0]
@@ -408,7 +408,7 @@ ItemOBJ = [
 ,[385,51,0,1,0,0,10,70,"Angel Wing Ears","",0,1,1,0]
 ,[386,51,0,2,0,0,10,0,"Goblin Leader Mask","","<b>Mid and Low Headgear</b>",0]
 ,[387,1,1,75,4,0,50,36,"Kitchen Knife","","Adds a 50% additional chance of dropping Meat each time a Brute monster dies",37,3,10,30,0]
-,[388,1,1,80,4,0,60,36,"Ice Pick [0]","","-30% damage to Emperium<br>-30% damage to castle guardians",23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
+,[388,1,1,80,4,0,60,36,"Ice Pick [0]","",0,23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
 ,[389,1,1,84,4,0,40,0,"Princess Knife","",0,7,1,0]
 ,[390,1,1,70,4,"0 / 3",100,36,"Swordbreaker","",0,140,5,0]
 ,[391,1,1,70,4,"0 / 3",100,36,"Mailbreaker","",0,141,5,0]
@@ -627,7 +627,7 @@ ItemOBJ = [
 ,[604,60,1,4,0,1,220,45,"Lucius's Fierce Armor of Volcano [1]","",0,198,3,0]
 ,[605,60,1,4,0,1,220,45,"Saphien's Armor of Ocean [1]","",0,198,1,0]
 ,[606,60,1,4,0,1,220,45,"Aebecee's Raging Typhoon Armor [1]","",0,198,4,0]
-,[607,1,1,70,4,1,60,36,"Ice Pick [1]","","-30% damage to Emperium<br>-30% damage to castle guardians",23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
+,[607,1,1,70,4,1,60,36,"Ice Pick [1]","",0,23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
 ,[608,50,1,4,0,1,40,45,"Crown [1]","",0,4,1,0]
 ,[609,50,1,4,0,1,40,45,"Tiara [1]","",0,4,1,0]
 ,[610,1,1001,120,4,3,50,55,"Mes","",0,138,5,0]
@@ -3808,12 +3808,15 @@ function Item_Setumei(nC1,nC2)
       348 = Ghost
       349 = Undead
     */
-  if(340 <= nC1 && nC1 <=349)
-    CBIstr += "Increases damage of ["+ ZokuseiOBJ2[nC1-340] + "] magic by "+ nC2 +"%<BR>";
-    //Recieve more Damage of [element] by %
-  if(350 <= nC1 && nC1 <=359)
-    CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
-    //Incease Damage of skill by %
+   if(340 <= nC1 && nC1 <=349)
+      CBIstr += "Increases damage of ["+ ZokuseiOBJ2[nC1-340] + "] magic by "+ nC2 +"%<BR>";
+   //Recieve more Damage of [element] by %
+   if(350 <= nC1 && nC1 <=359)
+      CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
+   //Physical damage agins specific monster
+   if(1000 <= nC1 && nC1 <=1439)
+      CBIstr += "Adjusts physcial damage inflicted on <b>" + MonsterOBJ[nC1-1000][1] + "</b> by " + nC2 + "%<br>";
+   //Incease Damage of skill by %
 	if(5000 <= nC1 && nC1 <= 6999)
 		CBIstr += "["+ SkillOBJ[nC1 -5000][2] +"] damage"+ wIS + nC2 +"%<BR>";
     /*

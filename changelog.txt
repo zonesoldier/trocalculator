@@ -1,9 +1,9 @@
 [Update 2018-06-24]
-- Deleted description for 1000+skillid [Slap]
+- Changed description for 1000+skillid to 1000+mobid [Slap]
 - Added exceptions list for item set linking for items where only one of its slotted versions is active in the item set [Slap]
 
 [Update 2018-06-23]
-- Added Items:
+- Added Items [Slap]:
 	Drooping Cat Crew
 	Elephant Hat (ID:5259)
 - Issue #149: Proofreading [Slap]
