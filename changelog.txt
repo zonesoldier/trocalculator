@@ -1,4 +1,5 @@
 [Update 2018-06-25]
+- Added calculations for n_tok[340-349] [Slap]
 - Issue #149: Proofreading [Slap]
 	Phrygian Cap: name
 	Diablos Robe: name, lvl req
@@ -8,8 +9,8 @@
 	Diablos Manteau: name
 	Diablos Boots: name
 	Librarian Gloves: name
-	Diablos Ring: name
 	Iron Wrist: def
+	Diablos Ring: name
 
 [Update 2018-06-24]
 - Changed description for 1000+skillid to 1000+mobid [Slap]

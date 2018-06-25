@@ -864,7 +864,7 @@ ItemOBJ = [
 ,[841,64,124,0,0,0,10,70,"Feather of Icarus","",0,5,3,14,50,0]
 ,[842,64,124,0,0,0,20,70,"Renown Archer's Scarf","",0,5,3,14,50,0]
 ,[843,64,1,0,0,1,5,80,"Cursed Hand","","[description translation missing - ItemID: 843]",8,10,75,20,0]
-,[844,64,1079,0,0,1,5,0,"Diablos Ring","","Increases Physical Damage when facing Satan Morroc by 10%",13,100,14,100,91,5,94,5,1495,10,1496,10,0]
+,[844,64,1079,0,0,1,5,0,"Diablos Ring","",0,13,100,14,100,91,5,94,5,1495,10,1496,10,0]
 ,[845,64,1,0,0,1,5,80,"Seal of Continental Guard","",0,12,3,13,50,0]
 ,[846,64,1,0,0,1,5,80,"Morroc Charm Stone","","[description translation missing - ItemID: 846]",73,-1,14,50,0]
 ,[847,64,1,0,0,1,5,80,"Morroc Ring","","[description translation missing - ItemID: 847]",10,5,0]
