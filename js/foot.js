@@ -628,6 +628,15 @@ function StAllCalc()
 		w += Math.floor(n_A_JobLV /5) * CardNumSearch(492); //custom TalonRO Ifrit Card +1atk every 5 Joblv
 		//w += Math.floor(n_A_JobLV /10) * CardNumSearch(492); //original Ifrit Card +1atk every 10 Joblv
 
+	//[Custom TalonRO 2018-06-25 - Malangdo Enchantment for Fighting Spirit - ATK] [NattWara]
+	// Actual damage part.
+		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+			var vME = tRO_MalangdoEnchantment[i];
+			if(vME >= 1781 && vME <= 1788) {
+					w += (4 + (2 * (parseInt(vME.substr(-1)) - 1)));
+			}
+		}
+		
 	//Custom TalonRO - 2018-06-07 - Enhanced Hat of the Sun God [1] - ATK part [Nattwara]
 	/*
 	[Refine Rate 5+]
@@ -2013,6 +2022,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill6[0] == 0 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==3){C_ATK += n_A_PassSkill6[1] *10;}
 
 	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Fighting Spirit - ATK] [Kato]
+	// ATK status part.
 		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
 			var vME = tRO_MalangdoEnchantment[i];
 			if(vME >= 1781 && vME <= 1788) {
