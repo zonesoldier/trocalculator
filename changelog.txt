@@ -1,3 +1,16 @@
+[Update 2018-06-25]
+- Issue #149: Proofreading [Slap]
+	Phrygian Cap: name
+	Diablos Robe: name, lvl req
+	Diablos Armor: name, effect
+	Sacred Scripture: name
+	Book of Charms Vol. 1: effect/description
+	Diablos Manteau: name
+	Diablos Boots: name
+	Librarian Gloves: name
+	Diablos Ring: name
+	Iron Wrist: def
+
 [Update 2018-06-24]
 - Changed description for 1000+skillid to 1000+mobid [Slap]
 - Added exceptions list for item set linking for items where only one of its slotted versions is active in the item set [Slap]

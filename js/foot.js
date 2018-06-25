@@ -3245,9 +3245,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 			for(k=1; k<5; k++) {
 				if(TRO_MAGICALSKILL_ELEMENTS[k].indexOf(n_A_ActiveSkill) != -1){
-						for(j=0; j<10; j++) {
-							n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[k]) / 100) - 100; // ***
-						}
+					for(j=0; j<10; j++) {
+						n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[k]) / 100) - 100; // ***
+					}
 				}
 			}
 			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1 && n_A_Weapon_zokusei <= 5){

@@ -846,25 +846,25 @@ ItemOBJ = [
 ,[823,12,0,30,3,2,70,70,"Ancient Magic","",0,89,15,0]
 ,[824,100,0,0,0,0,0,0,0,0,0,214,4,19,8,16,10,0]
 ,[825,9,55,30,3,0,50,50,"Radiant Wisdom","","When performing a Magical attack, there's a small chance to recover SP and HP",89,15,4,3,91,5,94,5,0]
-,[826,50,0,0,0,0,50,0,"Knit Hat Earmuffs","",0,4,2,0]
+,[826,50,0,0,0,0,50,0,"Phrygian Cap","",0,4,2,0]
 ,[827,50,1,2,0,1,30,40,"Rideword Hat","","5% chance to absorb 8% HP on Physical attack<br>1% chance to absorb 4% SP on Physical attack<br>You lose 10 HP each 5 seconds when equipped ",0]
-,[828,50,82,5,0,1,25,0,"Dark Bacilium","","Each refine increases resistance by 2%<br><b>Upper, Mid and Low Headgear</b>",159,20,152,20,151,20,0]
-,[829,60,1089,6,0,1,30,60,"Diabolus Robe","",0,14,150,19,5,74,10,91,6,0]
-,[830,60,1072,7,0,1,60,60,"Diabolus Armor","",0,19,5,1,2,5,1,13,150,151,5,159,5,0]
-,[831,61,63,5,0,0,60,50,"Exorcism Bible","",0,4,1,75,3,76,3,0]
-,[832,61,113,6,0,1,200,80,"Cross Shield","","[description translation missing - ItemID: 832]",1,1,5324,30,5159,30,5384,30,0]
-,[833,61,1055,2,0,1,100,70,"Book of Charms Vol. 1","",0,4,2,19,3,131,1,0]
-,[834,62,1,2,0,1,25,60,"Skin of Ventus","",0,9,10,13,200,19,2,0]
-,[835,62,1079,5,0,1,25,0,"Diabolus Manteau","","Increases Physical Damage when facing Satan Morroc by 10%",13,100,60,5,1495,10,1496,10,0]
-,[836,63,1079,4,0,1,25,0,"Diabolus Boots","","Maximum HP + 10 * Base Level",0]
-,[837,64,65,0,0,1,10,80,"Librarians Gloves","",0,14,20,0]
+,[828,50,82,5,0,1,25,0,"Dark Bashilrium","","Each refine increases resistance by 2%<br><b>Upper, Mid and Low Headgear</b>",159,20,152,20,151,20,0]
+,[829,60,1089,6,0,1,30,55,"Diablos Robe","",0,14,150,19,5,74,10,91,6,94,6,0]
+,[830,60,1072,7,0,1,60,60,"Diablos Armor","",0,1,2,5,1,13,150,151,5,159,5,0]
+,[831,61,63,5,0,0,60,50,"Sacred Scripture","",0,4,1,75,3,76,3,0]
+,[832,61,113,6,0,1,200,80,"Cross Shield","",0,1,1,5324,30,5159,30,5384,30,0]
+,[833,61,1055,2,0,1,100,70,"Book of Charms Vol. 1","","10% chance of auto casting Stun on an enemy when the user receives Physical Damage",4,2,19,3,0]
+,[834,62,1,2,0,1,25,60,"Skin of Ventoss","",0,9,10,13,200,19,2,0]
+,[835,62,1079,5,0,1,25,0,"Diablos Manteau","",0,13,100,60,5,1495,10,1496,10,0]
+,[836,63,1079,4,0,1,25,0,"Diablos Boots","","Maximum HP + 10 * Base Level",0]
+,[837,64,65,0,0,1,10,80,"Librarian Gloves","",0,14,20,0]
 ,[838,64,55,0,0,0,20,80,"Pocket Watch","",0,0]
 ,[839,64,54,0,0,1,20,65,"Lunatic Brooch","",0,0]
-,[840,64,70,0,0,0,70,50,"Iron Wrist","",0,5006,6,5065,6,0]
+,[840,64,70,1,0,0,70,50,"Iron Wrist","",0,5006,6,5065,6,0]
 ,[841,64,124,0,0,0,10,70,"Feather of Icarus","",0,5,3,14,50,0]
 ,[842,64,124,0,0,0,20,70,"Renown Archer's Scarf","",0,5,3,14,50,0]
 ,[843,64,1,0,0,1,5,80,"Cursed Hand","","[description translation missing - ItemID: 843]",8,10,75,20,0]
-,[844,64,1079,0,0,1,5,0,"Diabolus Ring","","Increases Physical Damage when facing Satan Morroc by 10%",13,100,14,100,91,5,94,5,1495,10,1496,10,0]
+,[844,64,1079,0,0,1,5,0,"Diablos Ring","","Increases Physical Damage when facing Satan Morroc by 10%",13,100,14,100,91,5,94,5,1495,10,1496,10,0]
 ,[845,64,1,0,0,1,5,80,"Seal of Continental Guard","",0,12,3,13,50,0]
 ,[846,64,1,0,0,1,5,80,"Morroc Charm Stone","","[description translation missing - ItemID: 846]",73,-1,14,50,0]
 ,[847,64,1,0,0,1,5,80,"Morroc Ring","","[description translation missing - ItemID: 847]",10,5,0]
@@ -3814,8 +3814,8 @@ function Item_Setumei(nC1,nC2)
    if(350 <= nC1 && nC1 <=359)
       CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
    //Physical damage against specific monster
-   if(1000 <= nC1 && nC1 <=1439)
-      CBIstr += wIS + nC2 + "% Physcial damage inflicted against <b>" + MonsterOBJ[nC1-1000][1] + "<br>";
+   if(1000 <= nC1 && nC1 <=1999)
+      CBIstr += wIS + nC2 + "% Physcial damage inflicted against <b>" + MonsterOBJ[nC1-1000][1] + "</b><br>";
    //Incease Damage of skill by %
 	if(5000 <= nC1 && nC1 <= 6999)
 		CBIstr += "["+ SkillOBJ[nC1 -5000][2] +"] damage"+ wIS + nC2 +"%<BR>";
