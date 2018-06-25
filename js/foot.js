@@ -127,6 +127,7 @@ with(document.calcForm){
 			ClickJob(0);
 		}
 	}
+	//Add rebirth classes whhen adopted unchecked
 	else if(!adopted && A_JOB.options.length < 47){
 		for(i = 21; i < 41; i++){
 			option = document.createElement("option");
@@ -148,6 +149,7 @@ with(document.calcForm){
 			A_LUK.remove(i);
 		}
 	}
+	//Raise stat cap to 99 if adopted is unchecked
 	else if(!adopted && A_STR.options.length < 100){
 		for(i = A_STR.options.length + 1; i < 100; i++){
 			A_STR.options[i-1] = new Option(i,i);
@@ -3773,7 +3775,7 @@ function StPlusCalc()
 				wSPC_LUK = (99 - n_A_LUK);
 		}
 
-	//Marionette status compensation rework - [Slap] - 2018-06-17
+	//Marionette stat compensation rework - [Slap] - 2018-06-17
 	}else if(n_A_PassSkill3[11] && n_A_PassSkill3[18]){
 		// if(n_A_STR + wSPC_STR < 99){
 			if(n_A_STR + w2[0] + Math.floor(n_A_PassSkill3[12]/2) < 99)
@@ -5126,7 +5128,8 @@ function KakutyouKansuu(){
 
 			//Brewing rework - [Slap] - 2018-06-17
 			srate = potionr * 50 + preparep * 300 + n_A_JobLV * 20 + (n_A_DEX + n_A_LUK + (n_A_INT/2)) * 10 + potrate * 100 + pharmacyboost * 100;
-
+			
+			//selpot values in etc.js
 			if(selpot == 3 //blue pot
 				|| selpot == 4 //slim red
 				|| selpot == 13 //anodyne
@@ -5157,6 +5160,7 @@ function KakutyouKansuu(){
 				brate = -1000;
 			}
 
+			//add brewing variance
 			if(brate < 0){srate1 = srate - 10;}
 			else if(brate > 0){srate1 = srate + 10;}
 			else{srate1 = srate;}
@@ -5164,12 +5168,14 @@ function KakutyouKansuu(){
 			srate2 = srate + (brate/2);
 			srate3 = srate + brate;
 
+			//baby alchemist penalty
 			if(adopted){
 				srate1 = Math.floor(srate1 * 70) / 100;
 				srate2 = Math.floor(srate2 * 70) / 100;
 				srate3 = Math.floor(srate3 * 70) / 100;
 			}
 
+			//limit success range to 0-100%
 			if(srate1 > 10000){srate1 = 10000;}
 			if(srate1 < 0){srate1 = 0;}
 			if(srate2 > 10000){srate2 = 10000;}

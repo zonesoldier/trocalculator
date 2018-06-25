@@ -2413,7 +2413,7 @@ ItemID = [
 ,[670,1,8048]
 ,[671,1,5172]
 ,[672,1,5173]
-,[673,1.5174]
+,[673,1,5174]
 ,[674,1,2760]
 ,[675,1,5169]
 ,[676,1,5177]
@@ -3981,12 +3981,13 @@ slotsExceptList = [
 ];
 //Improved SetEquipName combining combo linking with set equipment info - [Kato/Slap] - 2018-06-18
 function SetEquipName(SENw){
-	var SENstr = "";
+   var SENstr = "";
    var exceptfound = 0;
-	for(var i=0;i<=SE_MAXnum;i++){
-		if(i == SENw){
-			for(var j=1;w_SE[i][j] != "NULL";j++){
+   for(var i=0;i<=SE_MAXnum;i++){
+      if(i == SENw){
+         for(var j=1;w_SE[i][j] != "NULL";j++){
             exceptFound = 0;
+            //check for presence in slotsExceptList
             for(var k=0;k<slotsExceptList.length;k++){
                if(slotsExceptList[k][1] == w_SE[i][j] && slotsExceptList[k][0] == w_SE[i][0]){
                   var slotVersion = slotsExceptList[k][2];
@@ -3995,9 +3996,10 @@ function SetEquipName(SENw){
                exceptFound = 1;
                }
             }
+            //create set item description normally
             if(exceptFound == 0){
                if(ItemID[w_SE[i][j]][1]==1){
-   			      SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][2] + "/\" target=\"_blank\"><b>" + "<font color='blue'>["+ ItemOBJ[w_SE[i][j]][8] +"]</font></b></a>";
+                  SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][2] + "/\" target=\"_blank\"><b>" + "<font color='blue'>["+ ItemOBJ[w_SE[i][j]][8] +"]</font></b></a>";
                   if(ItemID[w_SE[i][j]][3]){
                      SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ ItemID[w_SE[i][j]][3] + "/\" target=\"_blank\"><b>" + "<font color='blue'><sup>[1]</sup></font></b></a>"
                   }
@@ -4009,10 +4011,10 @@ function SetEquipName(SENw){
             if(w_SE[i][j+1] != "NULL"){
                SENstr += "+";
             }
-			}
-			return SENstr;
-		}
-	}
+         }
+         return SENstr;
+      }
+   }
 }
 
 
