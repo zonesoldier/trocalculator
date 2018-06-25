@@ -1,5 +1,79 @@
+[Update 2018-06-24]
+- Changed description for 1000+skillid to 1000+mobid [Slap]
+- Added exceptions list for item set linking for items where only one of its slotted versions is active in the item set [Slap]
+- Added Items [Slap]:
+	Drooping Domovoi
+	9th Anniversary Celebration Hat
+	Baseball Cap [0]
+	Drooping Nine Tail
+	Drooping Boto
+	Feral Tail
+	Feral Boots
+	Golden Trickle
+	Beholder Ring [Rental]
+	Bloody Ring [Rental]
+	Chemical Ring [Rental]
+- Issue #149: Proofreading [Slap]
+	Balmung: replaced
+	Wing of Diablo: replaced
+	Aniversary Ring: replaced
+	Aniversary Hat: replaced
+	Christmas Ring: replaced
+	Majestic Goat [Rental]: replaced
+	HORIORUGORU: replaced
+	Quill Pen Ring: replaced
+	Quill Pen Ring set: replaced
+	Pointed Hat (White): replaced
+	Deviling Hat: weight, description
+	Baseball Cap [1]: name, weight
+	Drooping Ninetail: name, autospell
+	Dokebi's Wig: name, autospell
+	Chullos: name, description
+	Close Helmet: name
+	Cyclop's Eye: name
+	White Petal: name
+	Blessed Holy Robe: name
+	The Magic Ring Exit: replaced
+	Moonlight Ring: effect
+	Shark Hat: effect
+	Whikebine's Black Cat Ears: name
+	Ship Captain Hat: name, weight, lvl req
+	Peco-Peco Ears: name
+	Ninja's Scroll: name
+	Angel's Dress: name
+	Drooping Lif: name, description
+	Angeling Hat: lvl req
+	Battlefield Textbook: unrefinable
+	Angeling Hairpin: name
+	Classic Hat: everything
+	Bloody Eater: jobid
+	Ixion's Wings: name, description
+
+[Update 2018-06-23]
+- Added Items [Slap]:
+	Drooping Cat Crew
+	Elephant Hat (ID:5259)
+- Issue #149: Proofreading [Slap]
+	Morrigane's Belt: fixed atk stacking
+	Morpheus set: added description
+	Spiritual Ring + Clip/Rosary set: removed sanctuary bonus
+	Vanilmirth Hat: weight
+	Yellow Mage Hat: jobid, description
+	Sniping Suit R: replaced
+	Ulle's Cap set: added description
+	Phantom Spear set: added description
+	RAKUMA: replaced //don't google "RAKUMA ragnarok online"
+	Gauntlet of Hit: name
+	Blue Mage Hat: jobid, description
+	Bunny Slipper: name
+	Captain's Hat: name
+	Elephant Hat (ID:5146): there are 2 elephant hats in game
+
 [Update 2018-06-22]
 - Issue #181: [Missing Monster] - Bloody Knight (GMC) [NattWara]
+- Added Kishna combo [Kato]
+- Fixed Malangdo URL loading [Kato]
+- Fixed pet Ferus [Kato]
 - Fixed Malangdo spell type enchants for non-element spells [Slap]
 - Removed Earth Spike from Taekwon classes [Slap]
 
