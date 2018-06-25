@@ -1,5 +1,7 @@
 [Update 2018-06-22]
 - Issue #181: [Missing Monster] - Bloody Knight (GMC) [NattWara]
+- Fixed Malangdo spell type enchants for non-element spells [Slap]
+- Removed Earth Spike from Taekwon classes [Slap]
 
 [Update 2018-06-21]
 - Issue #207: Improve calc functionality for baby jobs [Slap]

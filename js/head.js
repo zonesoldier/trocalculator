@@ -5955,53 +5955,6 @@ if(n_B_IJYOU[1]){
 
 function calc()
 {
-	//Remove rebirth classes when adopted is checked - [Slap] - 2018-06-21
-	var noWith = document.calcForm;
-	var adopted = eval(noWith.A_youshi.checked);
-	if(adopted && noWith.A_JOB.options.length > 26){
-		var jobJump = 0;
-		while(noWith.A_JOB.options.length > 26){
-			if(noWith.A_JOB.selectedIndex == 21){
-					jobJump = 1;
-			}
-			noWith.A_JOB.options.remove(21);
-		}
-		if(jobJump == 1){
-			ClickJob(0);
-		}
-	}
-	else if(!adopted && noWith.A_JOB.options.length < 47){
-		for(i = 21; i < 41; i++){
-			option = document.createElement("option");
-			option.value = (i);
-			option.text = (JobName[i]);
-			noWith.A_JOB.add(option,i);
-		}
-	}
-
-	//Cap stats at 80 when adopted is checked - [Slap] - 2018-06-21
-	if(adopted && noWith.A_STR.options.length > 79){
-		for(i = noWith.A_STR.options.length - 1; i > 79; i--){
-			noWith.A_STR.remove(i);
-			noWith.A_STR.remove(i);
-			noWith.A_AGI.remove(i);
-			noWith.A_VIT.remove(i);
-			noWith.A_INT.remove(i);
-			noWith.A_DEX.remove(i);
-			noWith.A_LUK.remove(i);
-		}
-	}
-	else if(!adopted && noWith.A_STR.options.length < 100){
-		for(i = noWith.A_STR.options.length + 1; i < 100; i++){
-			noWith.A_STR.options[i-1] = new Option(i,i);
-			noWith.A_AGI.options[i-1] = new Option(i,i);
-			noWith.A_VIT.options[i-1] = new Option(i,i);
-			noWith.A_INT.options[i-1] = new Option(i,i);
-			noWith.A_DEX.options[i-1] = new Option(i,i);
-			noWith.A_LUK.options[i-1] = new Option(i,i);
-		}
-	}
-	
 	for(var i=0;i<=2;i++)
 		InnStr[i] = "";
 
