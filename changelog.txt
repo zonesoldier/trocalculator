@@ -1,5 +1,12 @@
 [Update 2018-06-25]
 - Added calculations for n_tok[340-349] [Slap]
+- Added Items [Slap]:
+	Clamorous Ring [Rental]
+	Decussate Ring [Rental]
+	Dragon Ring [Rental]
+	Fischer Ring [Rental]
+	Hallow Ring [Rental]
+	Insecticide Ring [Rental]
 - Issue #149: Proofreading [Slap]
 	Phrygian Cap: name
 	Diablos Robe: name, lvl req
@@ -11,6 +18,35 @@
 	Librarian Gloves: name
 	Iron Wrist: def
 	Diablos Ring: name
+	Cursed Hand: description
+	Rune Charm Stone: name
+	Death Medalion: name
+	Double Bound: description
+	Poring Tower: name/description
+	Academy Of Badge: name/description
+	Nekomimi Kafra Headband: name
+	Fish in Mouth: description
+	Continental Guard Seal: name
+	Marvelous Pendant: replaced
+	Balloon Hat
+	Hunter Hat
+	Brynhild: replaced
+	Autumn Leaves
+	Golden Tiara
+	Ring of Money Spirit: replaced
+	Resurrecting Soul: replaced
+	SantaPoring Cap
+	True Love: replaced
+	Foot Ring
+	Navel Ring
+	Mask of the Goddess: replaced
+	Blue Ribbon [1]
+	Filir Hat
+	Tailring Doll Hat
+	Deporte Doll 
+	Ribbon Yellow
+	Squatting Poring
+	A buttload of PVP weapons or something idk lol (ID 897-931)
 
 [Update 2018-06-24]
 - Changed description for 1000+skillid to 1000+mobid [Slap]

@@ -863,95 +863,95 @@ ItemOBJ = [
 ,[840,64,70,1,0,0,70,50,"Iron Wrist","",0,5006,6,5065,6,0]
 ,[841,64,124,0,0,0,10,70,"Feather of Icarus","",0,5,3,14,50,0]
 ,[842,64,124,0,0,0,20,70,"Renown Archer's Scarf","",0,5,3,14,50,0]
-,[843,64,1,0,0,1,5,80,"Cursed Hand","","[description translation missing - ItemID: 843]",8,10,75,20,0]
+,[843,64,1,0,0,1,5,80,"Cursed Hand","","When attacking there is a 3% chance to autocast Level 1 Critical Wounds",8,10,75,20,0]
 ,[844,64,1079,0,0,1,5,0,"Diablos Ring","",0,13,100,14,100,91,5,94,5,1495,10,1496,10,0]
-,[845,64,1,0,0,1,5,80,"Seal of Continental Guard","",0,12,3,13,50,0]
-,[846,64,1,0,0,1,5,80,"Morroc Charm Stone","","[description translation missing - ItemID: 846]",73,-1,14,50,0]
-,[847,64,1,0,0,1,5,80,"Morroc Ring","","[description translation missing - ItemID: 847]",10,5,0]
-,[848,64,0,0,0,1,10,0,"Marvelous Pendant","",0,51,2,56,2,57,1,55,1,52,1,0]
-,[849,50,0,3,0,1,80,0,"Balloon Hat","","Each refine increases your MATK",89,2,19,2,0]
-,[850,50,1,3,0,1,25,50,"Hunting Cap","",0,6,1,32,10,0]
+,[845,64,1,0,0,1,5,80,"Continental Guard Seal","",0,12,3,13,50,0]
+,[846,64,1,0,0,1,5,80,"Rune Charm Stone","",0,73,-1,14,50,0]
+,[847,64,1,0,0,1,5,80,"Death Medalion","",0,10,5,0]
+,[848,64,0,0,0,0,0,0,"Clamorous Ring [Rental]","",0,122,15,0]
+,[849,50,0,3,0,1,80,50,"Balloon Hat","","Each refine increases your MATK",89,2,19,2,0]
+,[850,50,1,3,0,1,25,50,"Hunting Cap","",0,6,1,32,10,37,5,0]
 ,[851,50,0,2,0,0,0,10,"Boyfriend Hat","",0,0]
 ,[852,50,0,2,0,0,0,10,"Girlfriend Hat","",0,0]
-,[853,10,124,70,3,3,90,70,"Double Bound","","[description translation missing - ItemID: 853]",0]
-,[854,100,0,0,0,0,0,0,0,0,"",80,3,89,3,0]
-,[855,100,0,0,0,0,0,0,"Tournament Shield System Set","","[Lord Knight]<br>Aspd -5%",18,2,80,4,0]
-,[856,100,0,0,0,0,0,0,0,0,0,5104,20,221,50,0]
-,[857,100,0,0,0,0,0,0,0,0,0,15,6,0]
-,[858,100,0,0,0,0,0,0,0,0,0,214,5,13,700,12,5,0]
-,[859,60,0,10,0,0,40,94,"Brynhild","",0,19,10,80,10,89,10,193,1,194,1,0]
-,[860,100,0,0,0,0,0,0,0,0,0,89,7,75,15,76,15,0]
-,[861,100,0,0,0,0,0,0,0,0,0,215,1,14,50,76,10,0]
-,[862,100,0,0,0,0,0,0,0,0,"Reduce SP Consumption of skills by 25%",0]
-,[863,9,63,50,4,1,50,70,"Holy Stick","",0,89,15,7037,25,7102,25,7104,25,0]
-,[864,50,0,0,0,0,10,0,"Leaves","",0,13,40,14,40,0]
-,[865,50,0,3,0,0,60,20,"Triple Poring Hat","","[description translation missing - ItemID: 865]",6,3,193,1,0]
-,[866,50,0,0,0,0,10,0,"Gold Tiara","",0,4,2,0]
-,[867,50,0,0,0,0,10,0,"Ring of Money Spirit","",0,6,1,66,5,193,1,0]
+,[853,10,124,70,3,3,90,70,"Double Bound","","Add a 1% chance of auto casting Double Strafing on the enemy when attacking",0]
+,[854,100,0,0,0,0,0,0,"Diablos Ring set",0,0,80,3,89,3,0]
+,[855,100,0,0,0,0,0,0,"Tournament Shield set","","[Lord Knight]<br>Aspd -5%",18,2,80,4,0]
+,[856,100,0,0,0,0,0,0,"Holy Stick set",0,0,5104,20,221,50,0]
+,[857,100,0,0,0,0,0,0,"Diablos Manteau set",0,0,15,6,0]
+,[858,100,0,0,0,0,0,0,"Librarian Glove set",0,0,214,5,13,700,12,5,0]
+,[859,64,0,0,0,0,0,0,"Decussate Ring [Rental]","",0,126,15,0]
+,[860,100,0,0,0,0,0,0,"Monocle set",0,0,89,7,75,15,76,15,0]
+,[861,100,0,0,0,0,0,0,"Lunatic Brooch set",0,0,215,1,14,50,76,10,0]
+,[862,100,0,0,0,0,0,0,"Renown Archer set",0,"Reduce SP Consumption of skills by 25%",0]
+,[863,9,63,50,4,1,50,70,"Holy Stick","",0,20,6,89,15,7037,25,7102,25,7104,25,0]
+,[864,50,0,0,0,0,10,0,"Autumn Leaves","",0,13,40,14,40,0]
+,[865,50,0,3,0,0,60,20,"Poring Tower","","Add a 2% chance of auto casting Greed around the user when attacking",6,3,193,1,0]
+,[866,50,0,0,0,0,10,0,"Golden Tiara","",0,4,2,0]
+,[867,64,0,0,0,0,0,0,"Dragon Ring [Rental]","",0,129,15,0]
 ,[868,50,0,1,0,1,10,20,"Valkyrie Feather Band","",0,4,1,221,102,0]
-,[869,50,1,2,0,0,30,20,"Resurrecting Soul","",0,19,2,0]
-,[870,50,0,2,0,1,10,0,"Santa Poring Cap","",0,19,2,47,3,67,3,193,2,0]
+,[869,64,0,0,0,0,0,0,"Fischer Ring [Rental]","",0,125,15,0]
+,[870,50,0,2,0,1,10,0,"SantaPoring Cap","",0,19,2,47,3,67,3,193,1,0]
 ,[871,50,0,3,0,1,20,0,"Bell Ribbon","",0,3,1,220,12,0]
-,[872,50,0,2,0,1,200,0,"Phoenix Crown","","Each refine adds 1% of boss type reduction<br><b>Mid and Upper Headgear</b>",19,3,0]
+,[872,50,0,4,0,1,50,0,"Phoenix Crown [1]","","Each refine adds 1% of boss type reduction<br><b>Upper and Middle Headgear</b>",19,3,0]
 ,[873,51,0,2,0,0,10,0,"Tongue Mask","","Add a 5% chance of auto casting Level 5 Provoke on the enemy when attacking<br><b>Middle and Lower Headgear</b>",0]
 ,[874,51,0,0,0,0,10,0,"Blank Eyes","",0,0]
 ,[875,50,0,0,0,0,30,0,"Coppola","",0,0]
 ,[876,50,1,1,0,0,10,20,"Yellow Bandana","",0,3,2,6,2,78,10,0]
-,[877,50,0,0,0,0,20,0,"True Love","",0,0]
-,[878,64,1,0,0,0,15,75,"Anklet","",0,3,3,75,10,0]
-,[879,64,1,0,0,0,10,75,"Body piercing","",0,5,3,6,1,19,2,0]
-,[880,51,0,0,0,0,20,30,"Mask of the Goddess","",0,80,2,89,2,0]
-,[881,50,0,2,0,0,20,0,"Academy Freshman Hat","","[description translation missing - ItemID: 881]",13,80,14,10,0]
-,[882,50,0,2,0,1,20,0,"Academy Completion Hat","","[description translation missing - ItemID: 882]",14,30,0]
-,[883,64,0,0,0,0,10,0,"Badge Academy","","[description translation missing - ItemID: 883]",0]
-,[884,50,0,1,0,1,20,30,"Neko Mimi Kafra","","[description translation missing - ItemID: 884]",19,5,0]
-,[885,50,0,1,0,1,10,45,"Blue Ribbon","",0,221,101,0]
-,[886,50,0,0,0,0,20,0,"Hopping Filir","","Increases your AGI by 1/19th of your base stats<BR>Has a very small chance to cast Level 5 Running when hit",0]
+,[877,64,0,0,0,0,0,0,"Hallow Ring [Rental]","",0,121,15,0]
+,[878,64,1,0,0,0,15,75,"Foot Ring","",0,3,3,75,10,0]
+,[879,64,1,0,0,0,10,75,"Navel Ring","",0,5,3,6,3,19,2,0]
+,[880,64,0,0,0,0,0,0,"Insecticide Ring [Rental]","",0,124,15,0]
+,[881,50,0,2,0,0,20,0,"Academy Freshman Hat","",0,13,80,14,10,0]
+,[882,50,0,2,0,1,20,0,"Academy Completion Hat","",0,14,30,0]
+,[883,64,0,0,0,0,10,0,"Academy Of Badge","","<b>If Base Level < 80:</b><br>MHP + 400<br>MSP + 200",0]
+,[884,50,0,1,0,1,20,30,"Nekomimi Kafra Headband","",0,19,5,0]
+,[885,50,0,1,0,1,10,45,"Blue Ribbon [1]","",0,221,101,0]
+,[886,50,0,0,0,0,20,80,"Filir Hat","",0,71,1,193,1,0]
 ,[887,51,0,1,0,0,20,70,"Black Framed Glasses","",0,19,2,4,1,0]
 ,[888,51,0,1,0,0,20,70,"Mischievous Fairy","",0,11,3,0]
-,[889,52,0,0,0,0,20,30,"Fish in Mouth","","[description translation missing - ItemID: 889]",0]
-,[890,50,0,0,0,1,50,60,"Telling Doll Hat","",0,193,1,2,2,57,5,0]
-,[891,50,0,0,0,1,50,60,"Defolty Doll Hat","",0,193,1,1,2,57,5,0]
-,[892,50,0,0,0,1,50,60,"Sorin Doll Hat","",0,193,1,5,2,57,5,0]
-,[893,50,0,0,0,1,50,60,"W Doll Hat","",0,193,1,6,2,57,5,0]
-,[894,50,1,1,0,0,10,20,"Yellow Ribbon","",0,3,2,6,2,78,10,0]
+,[889,52,0,0,0,0,20,30,"Fish in Mouth","","Add a 2% chance of getting Fresh Fish when a monster gets killed<br>Fresh Fish recovery rate + 25%",0]
+,[890,50,0,0,0,1,50,60,"Tailring Doll Hat","","Increases healing received from White Potions and Condensed White Potions by 10%",193,1,2,2,57,5,0]
+,[891,50,0,0,0,1,50,60,"Deporte Doll Hat","",0,193,1,1,2,57,5,221,133,0]
+,[892,50,0,0,0,1,50,60,"Sorin Doll Hat","","When physically attacking there is 2% chance that for 10 seconds you'll receive ATK +50",193,1,5,2,57,5,0]
+,[893,50,0,0,0,1,50,60,"W Doll Hat","",0,193,1,6,2,57,5,171,5,31,5,0]
+,[894,50,1,1,0,0,10,20,"Ribbon Yellow","",0,3,2,6,2,78,10,0]
 ,[895,50,0,2,0,0,0,10,"Friend Hat","",0,0]
-,[896,50,0,2,0,0,30,0,"Jumping Poring","",0,6,1,193,1,194,1,0]
-,[897,1,0,120,3,0,0,80,"Brave Assassin Damascus","","<b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%",194,1,1,1,2,1,37,75,307,20,0]
-,[898,1,0,120,3,0,0,80,"Valorous Assassin Damascus","","When attacking, there is a chance that for 6 seconds, the weapon will be endowed with occult impaction/icepick effect<br><b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%",194,1,1,1,2,1,37,75,0]
-,[899,2,0,115,3,0,0,80,"Valorous Gladiator Blade","",0,194,1,1,1,5,1,37,75,307,20,0]
-,[900,2,0,115,3,0,0,80,"Brave Gladiator Blade","",0,194,1,1,1,5,1,37,75,89,10,0]
-,[901,3,0,200,3,0,0,80,"Valorous Assault Katzbalger","",0,194,1,1,2,37,55,307,20,0]
-,[902,3,0,200,3,0,0,80,"Brave Assault Katzbalger","",0,194,1,10,20,37,55,70,20,0]
+,[896,50,0,2,0,0,30,10,"Squatting Poring","",0,6,1,193,1,194,1,0]
+,[897,1,0,120,3,0,0,80,"Assassin Damascus (Brave)","","<b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%",194,1,1,1,2,1,37,75,307,20,0]
+,[898,1,0,120,3,0,0,80,"Assassin Damascus (Valorous)","","When attacking, there is a chance that for 6 seconds, the weapon will be endowed with occult impaction/icepick effect<br><b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%",194,1,1,1,2,1,37,75,0]
+,[899,2,0,115,3,0,0,80,"Gladiator Blade (Valorous)","",0,194,1,1,1,5,1,37,75,307,20,0]
+,[900,2,0,115,3,0,0,80,"Gladiator Blade (Brave)","",0,194,1,1,1,5,1,37,75,89,10,0]
+,[901,3,0,200,3,0,0,80,"Assaulter's Katzbalger (Valorous)","",0,194,1,1,2,37,55,307,20,0]
+,[902,3,0,200,3,0,0,80,"Assaulter's Katzbalger (Brave)","",0,194,1,10,20,37,55,70,20,0]
 ,[903,4,0,60,3,0,0,80,"Assaulter Spear","","<b>[Crusader or Paladin]</b><br>Increases attack speed by 20%",194,1,1,2,37,95,307,20,0]
 ,[904,5,0,160,3,0,0,80,"Assaulter Lance","",0,194,1,1,2,37,25,187,1,0]
-,[905,7,1,200,3,0,0,80,"Valorous Insane Battle Axe","",0,194,1,1,3,37,55,307,20,0]
-,[906,7,1,200,3,0,0,80,"Brave Insane Battle Axe","","When attacking, chance to activate 100% chance to destroy the monster armor for 3 seconds",194,1,1,3,37,55,0]
-,[907,8,0,105,3,0,0,80,"Valorous Battlefield Morning Star","",0,194,1,1,1,5,1,37,75,307,20,0]
-,[908,8,0,105,3,0,0,80,"Brave Battlefield Morning Star","","When attacking there is a chance to activate for 6 seconds a 50% chance to Stun the monster",194,1,1,1,5,1,37,75,0]
-,[909,11,0,130,3,0,0,80,"Brave Carnage Katar","",0,194,1,1,1,5,1,6,1,37,70,307,20,0]
-,[910,11,0,130,3,0,0,80,"Valorous Carnage Katar","",0,194,1,1,1,5,1,6,1,37,70,70,20,12,5,0]
-,[911,12,0,90,3,0,0,80,"Brave Battle Strategy Book","",0,194,1,1,1,4,2,89,15,37,75,307,20,0]
-,[912,12,0,90,3,0,0,80,"Valorous Battle Strategy Book","",0,194,1,1,1,4,2,89,15,317,25,0]
-,[913,10,0,100,3,0,0,80,"Valorous Battle Crossbow","",0,194,1,5,2,37,55,307,20,0]
-,[914,10,0,100,3,0,0,80,"BraveBattle Crossbow","",0,194,1,5,2,4,10,37,55,0]
-,[915,13,0,30,3,0,0,80,"Valorous Battle Fist","",0,194,1,1,2,4,1,37,95,307,20,0]
-,[916,13,0,30,3,0,0,80,"Brave Battle Fist","","When attacking, there is a chance to activate for 6 seconds an effect that completely negates the cast time on Guillotine Fist",194,1,1,2,4,1,37,95,7197,25,7321,25,0]
+,[905,7,1,200,3,0,0,80,"Insane Battle Axe (Valorous)","",0,194,1,1,3,37,55,307,20,0]
+,[906,7,1,200,3,0,0,80,"Insane Battle Axe (Brave)","","When attacking, 2% chance to activate 100% chance to destroy the monster armor for 3 seconds",194,1,1,3,37,55,0]
+,[907,8,0,105,3,0,0,80,"Battlefield Morning Star (Valorous)","",0,194,1,1,1,5,1,37,75,307,20,0]
+,[908,8,0,105,3,0,0,80,"Battlefield Morning Star (Brave)","","When attacking there is a 1% chance to activate for 6 seconds a 50% chance to Stun the monster",194,1,1,1,5,1,37,75,0]
+,[909,11,0,130,3,0,0,80,"Carnage Katar (Brave)","",0,194,1,1,1,5,1,6,1,37,70,307,20,0]
+,[910,11,0,130,3,0,0,80,"Carnage Katar (Valorous)","",0,194,1,1,1,5,1,6,1,37,70,70,20,12,5,0]
+,[911,12,0,90,3,0,0,80,"Battle Strategy Book (Brave)","",0,194,1,1,2,4,1,89,15,37,75,307,20,0]
+,[912,12,0,90,3,0,0,80,"Battle Strategy Book (Valorous)","",0,194,1,1,1,4,2,89,15,317,25,0]
+,[913,10,0,100,3,0,0,80,"Battle Crossbow (Valorous)","",0,194,1,5,2,37,55,307,20,0]
+,[914,10,0,100,3,0,0,80,"Battle Crossbow (Brave)","",0,194,1,5,2,4,10,37,55,0]
+,[915,13,0,30,3,0,0,80,"Battle Fist (Valorous)","",0,194,1,1,2,2,1,37,95,307,20,0]
+,[916,13,0,30,3,0,0,80,"Battle Fist (Brave)","","When attacking, there is a chance to activate for 6 seconds an effect that completely negates the cast time on Guillotine Fist",194,1,1,2,4,1,37,95,7197,25,7321,25,0]
 ,[917,9,1,70,3,0,0,80,"Warlock's Magic Wand","","Adds a 5% chance to Stun opponents with your magic",194,1,89,15,4,4,5,3,317,25,0]
 ,[918,9,1,70,3,0,0,80,"Warlock's Battle Wand","","Adds a 5% chance to Stun opponents with your magic",194,1,89,15,4,3,5,3,177,15,0]
 ,[919,9,1,70,3,0,0,80,"Strong Recovery Wand","","Recover 5SP every 10 seconds",194,1,89,15,91,14,94,14,0]
 ,[920,9,1,70,3,0,0,80,"Speedy Recovery Wand","","Recover 5SP every 10 seconds",194,1,89,15,4,3,5,2,74,15,0]
-,[921,14,0,50,3,0,0,80,"Valorous Battlefield Guitar","",0,194,1,5,2,37,95,307,20,0]
-,[922,14,0,50,3,0,0,80,"Brave Battlefield Guitar","",0,194,1,5,2,37,95,5292,20,0]
-,[923,15,0,50,3,0,0,80,"Valorous Battle Lariat","",0,194,1,5,2,37,95,307,20,0]
-,[924,15,0,50,3,0,0,80,"Brave Battle Lariat","",0,194,1,5,2,37,95,5292,20,0]
-,[925,17,0,70,3,0,0,80,"Soldier Revolver","","[description translation missing - ItemID: 925]",194,1,5,2,8,-10,37,55,307,20,0]
-,[926,18,0,50,3,0,0,80,"Soldier Rifle","","[Tracking] Cast Time -25%",194,1,5,2,8,10,10,10,37,75,307,20,0]
-,[927,20,0,80,3,0,0,80,"Soldier Gatling Gun","","[description translation missing - ItemID: 927]",194,1,5,2,37,35,307,20,0]
-,[928,19,0,100,3,0,0,80,"Soldier Shotgun","","[description translation missing - ItemID: 928]",194,1,5,2,37,55,307,20,0]
-,[929,21,0,300,3,0,0,80,"Soldier Grenade Launcher","","[description translation missing - ItemID: 929]",194,1,5,2,37,35,307,20,0]
-,[930,16,0,55,3,0,0,80,"Brave Huuma Front Shuriken","",0,194,1,1,2,5,1,37,95,307,20,0]
-,[931,16,0,55,3,0,0,80,"Valorous Huuma Front Shuriken","","[description translation missing - ItemID: 931]",194,1,1,2,5,1,37,95,0]
+,[921,14,0,50,3,0,0,80,"Battlefield Guitar (Valorous)","",0,194,1,5,2,37,95,307,20,0]
+,[922,14,0,50,3,0,0,80,"Battlefield Guitar (Brave)","",0,194,1,5,2,37,95,5292,20,0]
+,[923,15,0,50,3,0,0,80,"Battle Lariat (Valorous)","",0,194,1,5,2,37,95,307,20,0]
+,[924,15,0,50,3,0,0,80,"Battle Lariat (Brave)","",0,194,1,5,2,37,95,5292,20,0]
+,[925,17,0,70,3,0,0,80,"Soldier Revolver","","When attacking, there is a 1% chance that for 3 seconds your ASPD will increase by 100%",194,1,5,2,8,-10,37,55,307,20,0]
+,[926,18,0,50,3,0,0,80,"Soldier Rifle","",0,194,1,5,2,8,10,10,10,37,75,307,20,7430,25,0]
+,[927,20,0,80,3,0,0,80,"Soldier GatlingGun","","When attacking, there is a 1% chance that for 6 seconds you gain ATK +80, but drains 120HP per seconds",194,1,5,2,37,35,307,20,0]
+,[928,19,0,100,3,0,0,80,"Soldier Shotgun","","Inflicts splash damage<br>When attacking, there is a 3% chance that for 6 seconds you gain ATK +80, but drains 100HP per seconds",194,1,5,2,37,55,307,20,0]
+,[929,21,0,300,3,0,0,80,"Soldier Grenade Launcher","","When attacking, there is a 3% chance that for 9 seconds you gain ATK +300, but drains 120HP per seconds",194,1,5,2,37,35,307,20,0]
+,[930,16,0,55,3,0,0,80,"Huuma Front Shuriken (Brave)","",0,194,1,1,2,5,1,37,95,307,20,0]
+,[931,16,0,55,3,0,0,80,"Huuma Front Shuriken (Valorous)","","When attacking, there is a 5% chance that for 10 seconds, your attack power with Throw Huuma Shuriken and Final Strike is increased by 100%",194,1,1,2,5,1,37,95,0]
 ,[932,2,1001,150,4,3,150,75,"Naght Sieger Twin Blade [Blue]","","Adds a 5% chance for when dealing physical damage, all physical attacks will ignore the defense of normal monsters and players for 5 seconds",20,1,220,13,0]
 ,[933,2,1001,160,4,3,150,75,"Naght Sieger Twin Blade [Red]","","Adds a 5% chance for when dealing physical damage, all physical attacks will ignore the defense of normal monsters and players for 5 seconds",20,3,220,14,0]
 ,[934,3,1000,250,4,2,200,90,"Tae Goo Lyeon","","<b>[Job Level >= 70]</b><br>When dealing physical damage chance of activate ATK + 50 for 10 seconds<br><b>[Refine Rate 9~10]</b><br>Reduces all skill's after-cast delay by 20%",11,10,0]
@@ -2047,7 +2047,6 @@ ItemID = [
 ,[304,1,2341,2342]
 ,[305,0,0]
 ,[306,1,2101,2102]
-,[307,1,2109,2121]
 ,[308,1,2103,2104]
 ,[309,1,2107,2108]
 ,[310,1,2105,2106]
@@ -2565,113 +2564,113 @@ ItemID = [
 ,[822,1,1572]
 ,[823,1,1573]
 ,[824,2,1573,2334,2372]
-,[825,1,1630],
-[826,4,0],
-[827,4,0],
-[828,4,0],
-[829,4,0],
-[830,4,0],
-[831,4,0],
-[832,4,0],
-[833,4,0],
-[834,4,0],
-[835,4,0],
-[836,4,0],
-[837,4,0],
-[838,4,0],
-[839,4,0],
-[840,4,0],
-[841,4,0],
-[842,4,0],
-[843,4,0],
-[844,4,0],
-[845,4,0],
-[846,4,0],
-[847,4,0],
-[848,4,0],
-[849,4,0],
-[850,4,0],
-[851,4,0],
-[852,4,0],
-[853,4,0],
-[854,4,0],
-[855,4,0],
-[856,4,0],
-[857,4,0],
-[858,4,0],
-[859,4,0],
-[860,4,0],
-[861,4,0],
-[862,4,0],
-[863,4,0],
-[864,4,0],
-[865,4,0],
-[866,4,0],
-[867,4,0],
-[868,4,0],
-[869,4,0],
-[870,4,0],
-[871,4,0],
-[872,4,0],
-[873,1,5272],
-[874,4,0],
-[875,4,0],
-[876,4,0],
-[877,4,0],
-[878,4,0],
-[879,4,0],
-[880,4,0],
-[881,4,0],
-[882,4,0],
-[883,4,0],
-[884,4,0],
-[885,4,0],
-[886,4,0],
-[887,4,0],
-[888,4,0],
-[889,4,0],
-[890,4,0],
-[891,4,0],
-[892,4,0],
-[893,4,0],
-[894,4,0],
-[895,4,0],
-[896,4,0],
-[897,4,0],
-[898,4,0],
-[899,4,0],
-[900,4,0],
-[901,4,0],
-[902,4,0],
-[903,4,0],
-[904,4,0],
-[905,4,0],
-[906,4,0],
-[907,4,0],
-[908,4,0],
-[909,4,0],
-[910,4,0],
-[911,4,0],
-[912,4,0],
-[913,4,0],
-[914,4,0],
-[915,4,0],
-[916,4,0],
-[917,4,0],
-[918,4,0],
-[919,4,0],
-[920,4,0],
-[921,4,0],
-[922,4,0],
-[923,4,0],
-[924,4,0],
-[925,4,0],
-[926,4,0],
-[927,4,0],
-[928,4,0],
-[929,4,0],
-[930,4,0],
-[931,4,0],
+,[825,1,1630]
+,[826,1,5148]
+,[827,1,5208]
+,[828,1,5808]
+,[829,1,2374]
+,[830,1,2375]
+,[831,1,2129]
+,[832,1,2130]
+,[833,1,2131]
+,[834,1,2536]
+,[835,1,2537]
+,[836,1,2433]
+,[837,1,2716]
+,[838,1,2717]
+,[839,1,2718]
+,[840,1,2719]
+,[841,1,2726]
+,[842,1,2727]
+,[843,1,2728]
+,[844,1,2729]
+,[845,1,2730]
+,[846,1,2731]
+,[847,1,2732]
+,[848,1,2755]
+,[849,1,5379]
+,[850,1,5383]
+,[851,1,5338]
+,[852,1,5346]
+,[853,1,1736]
+,[854,2,2374,2375,2729]
+,[855,2,2133,1420,1421,1422]
+,[856,2,2129,1631]
+,[857,2,2537,2433]
+,[858,2,1573,1572,2717,2716]
+,[859,1,2759]
+,[860,2,2239,2109,2121,2717]
+,[861,2,1723,2718]
+,[862,2,2726,2727]
+,[863,1,1631]
+,[864,1,5189]
+,[865,1,5255]
+,[866,1,5179]
+,[867,1,2762]
+,[868,1,5256]
+,[869,1,2758]
+,[870,1,5381]
+,[871,1,5382]
+,[872,1,5271]
+,[873,1,5272]
+,[874,1,5102]
+,[875,1,5200]
+,[876,1,5277]
+,[877,1,2754]
+,[878,1,2737]
+,[879,1,2736]
+,[880,1,2757]
+,[881,1,5406]
+,[882,1,5407]
+,[883,1,2751]
+,[884,1,5387]
+,[885,1,5404]
+,[886,1,5405]
+,[887,1,5401]
+,[888,1,5402]
+,[889,1,5403]
+,[890,1,5343]
+,[891,1,5340]
+,[892,1,5342]
+,[893,1,5345]
+,[894,1,5278]
+,[895,1,5339]
+,[896,1,5335]
+,[897,1,13036]
+,[898,1,13037]
+,[899,1,13410]
+,[900,1,13411]
+,[901,1,1183]
+,[902,1,1184]
+,[903,1,1425]
+,[904,1,1482]
+,[905,1,1379]
+,[906,1,1380]
+,[907,1,1542]
+,[908,1,1543]
+,[909,1,1279]
+,[910,1,1280]
+,[911,1,1574]
+,[912,1,1575]
+,[913,1,1738]
+,[914,1,1739]
+,[915,1,1823]
+,[916,1,1824]
+,[917,1,1632]
+,[918,1,1633]
+,[919,1,1634]
+,[920,1,1635]
+,[921,1,1923]
+,[922,1,1924]
+,[923,1,1977]
+,[924,1,1978]
+,[925,1,13018]
+,[926,1,13171]
+,[927,1,13172]
+,[928,1,13173]
+,[929,1,13174]
+,[930,1,13305]
+,[931,1,13306],
 [932,4,0],
 [933,4,0],
 [934,4,0],
@@ -3759,7 +3758,7 @@ function Item_Setumei(nC1,nC2)
       221,6 = When performing a ATK based attack, there's a 10 % chance to cast the skill [Lightning Bolt]Lv 3
     */
 	if(221 == nC1){
-		wNAME99 = [0,"When performing a ATK based attack, ","When performing a short-range ATK based attack, ","When performing a long-range ATK based attack, ","When performing a magical attack, ","When attacking, ","When recieving ATK based damage, ","When recieving short-range ATK based damage, ","When recieving long-range ATK based damage, ","When recieving magical damage, ","When recieving ATK based or magical damage, "];
+		wNAME99 = [0,"When performing a ATK based attack, ","When performing a short-range ATK based attack, ","When performing a long-range ATK based attack, ","When performing a magical attack, ","When performing a physical or magical attack, ","When recieving ATK based damage, ","When recieving short-range ATK based damage, ","When recieving long-range ATK based damage, ","When recieving magical damage, ","When recieving ATK based or magical damage, "];
 		wNAME98 = ["low","medium","high"];
 		CBIstr += wNAME99[AutoSpellSkill[nC2][5]] +"there's a ";
     //Checks the 6th line in the AutoSpellSKill array to see if its name should be wName98
@@ -3771,8 +3770,8 @@ function Item_Setumei(nC1,nC2)
       CBIstr += wNAME98[2];
     //If the AutoSpellSKill 4th spot is greater than 0 give it a %
 		else if(AutoSpellSkill[nC2][4] > 0)
-			CBIstr += AutoSpellSkill[nC2][4] + " %";
-		  CBIstr += " chance to cast the skill ["+ SkillOBJ[AutoSpellSkill[nC2][2]][2] +"]Lv "+ AutoSpellSkill[nC2][3] +"<BR>";
+			CBIstr += AutoSpellSkill[nC2][4] + "%";
+		  CBIstr += " chance to cast the skill ["+ SkillOBJ[AutoSpellSkill[nC2][2]][2] +"] Lv "+ AutoSpellSkill[nC2][3] +"<BR>";
 	}
 	if(290 == nC1)
 		CBIstr += "On (all?) monsters, ignore "+ nC2 +"% DEF<BR>";

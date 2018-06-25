@@ -705,7 +705,7 @@ AutoSpellSkill = [
 [99,0,27,5,0,6],
 [100,0,209,5,0,6],
 [101,0,42,2,0,2],
-[102,0,25,1,0,6],
+[102,0,25,1,1,6],
 [103,1,51,1,0,1],
 [104,1,54,1,0,1],
 [105,1,56,1,0,1],
@@ -731,12 +731,13 @@ AutoSpellSkill = [
 [124,1,40,5,2,5], //custom TalonRO Catapult lv5 Double Strafe (2%) on attacking
 [125,1,260,2,10,1], //custom TalonRO Cannon Spear lv 2 Head Crush (10%) on physical attack
 [126,1,83,1,0.5,2], //custom TalonRO Krishna Sonic Blow lv 1 (small/0.5%) on physical melee attack
-[127,1,51,5,0,1,0,0], //When performing a ATK based attack, there's a low chance to cast the skill [Fire Bolt]Lv 5
+[127,1,51,5,1,5], //When performing a ATK based attack, there's a low chance to cast the skill [Fire Bolt]Lv 5
 [128,1,27,1,5,4],
 [129,1,27,1,5,1],
 [130,1,440,1,0,1,0,1], //When dealing physical damage there is a chance to trigger Wink of Charm.
 [131,1,267,2,3,6,0], //When recieving ATK based damage, there's a low chance to cast the skill [Assumptio]Lv 2
-[132,1,131,2,1,1] //custom TalonRO Chilly Spell Book lv 2 Storm Gust (1%) on physical attack [NattWara]
+[132,1,131,2,1,1], //custom TalonRO Chilly Spell Book lv 2 Storm Gust (1%) on physical attack [NattWara]
+[133,1,30,10,2,6]
 ]
 //ID - Gets called in second spot(221(effect),1(ID)), autocast id = 1 by default, skill Id,Skill Lvl, chance %, attacktype(1atkbased,2shortrange,3longrange,4magical,5attacking,6receivingATKbased,0 by default, 0=low chance, 1=medium chance, 2=high chance)
 
