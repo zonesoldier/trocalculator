@@ -594,7 +594,7 @@ function StAllCalc()
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
 	}
-	for(i=290;i<=339;i++){
+	for(i=290;i<=349;i++){
 		n_tok[i] = 0;
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
@@ -608,7 +608,6 @@ function StAllCalc()
 		n_A_ATK_w = Math.round(Math.floor(n_A_DEX/10) * Math.floor(n_A_DEX/10));
 		n_A_ATK   = n_A_DEX + n_A_ATK_w + Math.floor(n_A_STR / 5) + Math.floor(n_A_LUK / 5);
 	}
-
 
 	w=n_tok[17];
 
@@ -3259,6 +3258,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 	}
 
+	for(i=0;i<TRO_MAGICALSKILL_ELEMENTS.length;i++){
+		if(TRO_MAGICALSKILL_ELEMENTS[i].indexOf(n_A_ActiveSkill) != -1){
+			for(j=0; j<10; j++) {
+				n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + n_tok[340 + i]) / 100) - 100; // ***
+			}
+		}
+	}
 
 	ClickB_Enemy();
 	KakutyouKansuu();
