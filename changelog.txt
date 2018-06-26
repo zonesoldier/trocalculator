@@ -7,7 +7,7 @@
 	Fischer Ring [Rental]
 	Hallow Ring [Rental]
 	Insecticide Ring [Rental]
-- Issue #149: Proofreading [Slap]
+- Issue #149: Proofreading [Slap] //list of items that were changed
 	Phrygian Cap: name
 	Diablos Robe: name, lvl req
 	Diablos Armor: name, effect
@@ -47,6 +47,26 @@
 	Ribbon Yellow
 	Squatting Poring
 	A buttload of PVP weapons or something idk lol (ID 897-931)
+	Naght Seiger Twin Blade(B)
+	Naght Seiger Twin Blade(R)
+	Tegron
+	Violet Fear: autospell
+	Dark Thorn Staff
+	Trackers Dagger
+	Ivory Knife
+	Used Mage Coat: atk bonus in foot.js
+	Maiden Hat: foot.js modifiers were all wrong
+	Entweihen Hairband
+	Chrome Metal Sword
+	Scarletto Nail
+	Aztoe Nail
+	Bangungot Agimat Tattoo
+	Xmas Rudolph Santa Hat
+	Xmas Snowman Hat
+	Eden Group Manteau II
+	Eden Group Knuckle I
+	Eden Group Hat II
+	Eden Group Boots IV
 
 [Update 2018-06-24]
 - Changed description for 1000+skillid to 1000+mobid [Slap]

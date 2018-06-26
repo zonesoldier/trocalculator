@@ -1990,7 +1990,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_PassSkill8[i] == 50 && EquipNumSearch(1538)){C_ATK += 100;}
 	}
 
-	//outros gears que dão atk
+	//ATK bonus
 	if(EquipNumSearch(953)){C_ATK += ((n_A_JobLV*2)/7);}
 	if(EquipNumSearch(1261)){C_ATK += ((n_A_JobLV*2)/7);}
 	if(EquipNumSearch(666) && EquipNumSearch(721) && EquipNumSearch(701) && EquipNumSearch(722)){C_ATK += 18;}
@@ -2005,6 +2005,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1165)){C_ATK += 10 * SkillSearch(311);}
 	if(EquipNumSearch(1164) && SU_LUK >=90){C_ATK += 20;}
 	if(EquipNumSearch(1160) && SU_STR >=95){C_ATK += 20;}
+	if(EquipNumSearch(1496)){C_ATK += 10};
 	if(A_acces1.value == 728){C_ATK += 15;}
 	if(A_acces2.value == 728){C_ATK += 15;}
 	if(A_acces1.value == 525){C_ATK += 10;}
@@ -2080,9 +2081,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(n_A_PassSkill2[12]){P_ATK += Math.floor(P_ATK*0.05);}
 		}
 		//Maiden Hat - ZoneSoldier - 6/6/2018
-		//Increase ATK + 1% per upgrade past 7.
-	if(n_A_HEAD_DEF_PLUS > 7 && EquipNumSearch(1628)){
-		p_ATK += 1 * (n_A_HEAD_DEF_PLUS - 7);
+		//Increase ATK + 1% per upgrade past 6.
+	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
+		P_ATK += 1 * (n_A_HEAD_DEF_PLUS - 6);
 	}
 
 	//custom TalonRO Chewing Bubblegum +1% atk
@@ -2195,14 +2196,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	//Entweihen Hairband - zonesoldier - 6/2/2018
 	//Increase MATK + 1% per upgrade past 5th upgrade
-	if(n_A_HEAD_DEF_PLUS > 5 && EquipNumSearch(1620))
+	if(n_A_HEAD_DEF_PLUS > 4 && EquipNumSearch(1620))
 	{
-		w += 1 * (n_A_HEAD_DEF_PLUS - 5);
+		w += 1 * (n_A_HEAD_DEF_PLUS - 4);
 	}
 	//Maiden Hat - ZoneSoldier - 6/6/2018
-	//Increase MATK + 1% per upgrade past 7.
-	if(n_A_HEAD_DEF_PLUS > 7 && EquipNumSearch(1628)){
-		w += 1 * (n_A_HEAD_DEF_PLUS - 7);
+	//Increase MATK + 1% per upgrade past 6.
+	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
+		w += 1 * (n_A_HEAD_DEF_PLUS - 6);
 	}
 
 	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
@@ -2757,7 +2758,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1095))
 		n_tok[74] += 5;
 	if(EquipNumSearch(936))
-		n_tok[74] += (n_A_Weapon_ATKplus * 1);
+		n_tok[74] += (n_A_Weapon_ATKplus * 3 / 2);
 	//custom TalonRO Magical Booster & Staff of Piercing Combo
 	if(EquipNumSearch(1430)& EquipNumSearch(473)){
 		if(n_A_Weapon_ATKplus==10){
@@ -3084,6 +3085,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(SkillSearch(421))
 		n_tok[78] += 20;
 
+	//maiden hat +1% heal per refine > 6 - [Slap] - 2018-06-25
+	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
+		n_tok[91] += n_A_HEAD_DEF_PLUS - 6;
+		n_tok[94] += n_A_HEAD_DEF_PLUS - 6;
+	}
+
 	if(EquipNumSearch(1085)){
 		if(n_A_Weapon_ATKplus >= 6){
 				n_tok[91] += 5 + (2 * (n_A_Weapon_ATKplus - 5));
@@ -3190,11 +3197,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_Weapon_ATKplus >= 6)
 			n_tok[317] += 5;
 	}
-	//Maiden Hat - ZoneSoldier - 6/6/2018
-	//Additional Heal effectiveness + 1% per upgrade past 7.
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1628)){
-		n_tok[317] =+ 1 * (n_A_HEAD_DEF_PLUS - 7);
-	}
+	// //Maiden Hat - ZoneSoldier - 6/6/2018
+	// //Additional Heal effectiveness + 1% per upgrade past 7.
+	// if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1628)){
+	// 	n_tok[317] =+ 1 * (n_A_HEAD_DEF_PLUS - 7);
+	// }
 
 	if(EquipNumSearch(1083)){
 		if(n_A_Weapon_ATKplus >= 6)
