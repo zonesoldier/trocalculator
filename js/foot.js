@@ -710,8 +710,9 @@ function StAllCalc()
 	if(CardNumSearch(528))
 		w += Math.floor(n_A_JobLV /5) * CardNumSearch(528);
 	//custom TalonRO Halloween Midas Whisper
-	if(SU_STR >= 80 && EquipNumSearch(1526))
+	if(SU_STR >= 80 && EquipNumSearch(1526)){
 		w += 30;
+	}
 
 	n_A_ATK += w;
 	w= 0;
@@ -1248,7 +1249,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_DEF -= Math.floor(SU_VIT / 30);
 	}
 
-	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - +1 DEF each refine past +4 until +8 [Nattwara]
+	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - +1 DEF each refine past +4 until +8 [Nattwara/Slap]
 	if(EquipNumSearch(1656) && n_A_HEAD_DEF_PLUS > 4)
 		n_A_DEFplus -= Math.min(n_A_HEAD_DEF_PLUS-4,4);
 
@@ -1947,6 +1948,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 		if(n_A_HEAD_DEF_PLUS>7)
 			C_ATK += 6;
+	}
+
+	if(SU_STR >= 80 && EquipNumSearch(1526)){
+		C_ATK += 30;
 	}
 
 	//custom TalonRO Incanation Samurai Card
@@ -3018,7 +3023,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1556))
 		n_tok[55] += n_A_BODY_DEF_PLUS;
 
-	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - 1% less damage Neutral element attack for each refine past +4 until +8 [Nattwara]
+	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - 1% less damage Neutral element attack for each refine past +4 until +8 [Nattwara/Slap]
 	if(EquipNumSearch(1656) && n_A_HEAD_DEF_PLUS > 4)
 		n_tok[60] += Math.min(n_A_HEAD_DEF_PLUS-4,4);
 
@@ -3111,7 +3116,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(wSPVS==3 || wSPVS==4 || wSPVS==5)
 			n_tok[156] += 50;
 	}
-
+	//custom TalonRO Recovery Light bHealPower refine * 3
+	if(EquipNumSearch(1511)){
+		n_tok[91] += Math.floor(n_A_Weapon_ATKplus * 3);
+		n_tok[94] += Math.floor(n_A_Weapon_ATKplus * 3);
+	}
+	
 	//custom Talonro Chameleon Armor: [Swordsman, Merchant, Thief] DEF + 3 [Magician, Archer, Acolyte] MDEF + 5
 	if(EquipNumSearch(986)){
 		wSPVS = n_A_JobSearch();
@@ -5394,9 +5404,6 @@ function KakutyouKansuu(){
 			var wX = 100+n_tok[94];
 			if(EquipNumSearch(644))
 				wX += n_A_Weapon_ATKplus * 1.5;
-			//custom TalonRO Recovery Light
-			if(EquipNumSearch(1511))
-				wX += Math.floor(n_A_Weapon_ATKplus * 3);
 			wkk16+="<table border=0>";
 			wkk16+="<tr><td><b>Sanctuary Level 1</b></td><td>"+Math.floor(100 * wX /100)+"</td></tr>";
 			wkk16+="<tr><td><b>Sanctuary Level 2</b></td><td>"+Math.floor(200 * wX /100)+"</td></tr>";

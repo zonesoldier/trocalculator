@@ -726,12 +726,12 @@ AutoSpellSkill = [
 [119,1,132,1,1,1],
 [120,1,124,2,2,4], //custom TalonRO Telekinetic Orb Sightrasher lv 3 on magic (2%)
 [121,1,124,3,3,4], //custom TalonRO Mental Stick & Telekinetic Orb combo Sightrasher lv 3 on magic (3%)
-[122,1,319,1,1,1], //custom TalonRO Sura's Rampage lv1 Heaven's Drive (1%) on physical attack
-[123,1,193,1,1,1], //custom TalonRO Sura's Rampage lv1 Investigate (1%) on physical attack
+[122,1,319,1,10,1], //custom TalonRO Sura's Rampage lv1 Heaven's Drive (10%) on physical attack
+[123,1,193,1,10,1], //custom TalonRO Sura's Rampage lv1 Investigate (10%) on physical attack
 [124,1,40,5,2,5], //custom TalonRO Catapult lv5 Double Strafe (2%) on attacking
 [125,1,260,2,10,1], //custom TalonRO Cannon Spear lv 2 Head Crush (10%) on physical attack
 [126,1,83,1,0.5,2], //custom TalonRO Krishna Sonic Blow lv 1 (small/0.5%) on physical melee attack
-[127,1,51,5,1,5], //When performing a ATK based attack, there's a low chance to cast the skill [Fire Bolt]Lv 5
+[127,1,51,5,1,5], //When performing a ATK/magic based attack, there's a low chance to cast the skill [Fire Bolt]Lv 5
 [128,1,27,1,5,4],
 [129,1,27,1,5,1],
 [130,1,440,1,0,1,0,1], //When dealing physical damage there is a chance to trigger Wink of Charm.

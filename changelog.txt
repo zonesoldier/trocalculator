@@ -1,4 +1,21 @@
 [Update 2018-06-25]
+- Issue #149: Proofreading [Slap]
+	Pink Pajamas Hat
+	Blue Pajamas Hat
+	Red Square Bag
+	Guillotine Katar
+	Drooping Permeter
+	Palace Guard Cap
+	Vajra
+	Gentleman Fez
+	Halloween Midas Whisper
+	Lever Action Rifle [Rental]
+	Chilly Spell Book
+	Sura's Rampage
+	Recovery Light
+	Salvage Cape
+
+[Update 2018-06-25]
 - Added calculations for n_tok[340-349] [Slap]
 - Added Items [Slap]:
 	Clamorous Ring [Rental]

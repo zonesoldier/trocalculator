@@ -1529,10 +1529,10 @@ ItemOBJ = [
 //custom TalonRO [Update 2014-08-30]
 ,[1496,60,0,15,0,0,0,0,"Used Mage Coat","",0,2,1,13,300,14,30,17,10,0]
 ,[1497,50,0,2,0,1,20,10,"Holy Marching Hat","","When doing physical damage, holy property is given to the weapon for 90 seconds at a 3% rate.",1,2,0]
-,[1498,62,1151,1,0,0,40,93,"Salvage Cape","","Possible to use Cicada Skin Shed Level 1<br>Increase cool time 30sec of the skill, 2 times more on SP consumption of all skills when equipped<br>When de-equipping, SP - 1200",0]
-,[1499,8,53,170,4,0,150,90,"Bloody Cross","","Adds a 1% chance to cast Level 1 Critical Wounds when attacking<br>The chance increases by the refine level of the weapon",20,7,138,1,0]
+,[1498,62,1151,1,0,0,40,93,"Salvage Cape","","Allows usage of Soul level 2<br>Upon casting Soul, auto cast Illusionary Shadow level 1<br>While equipped, all SP usage will be doubled<br>When equipping, SP - 500<br>When unequipping, SP - 1500",0]
+,[1499,8,53,170,4,0,150,90,"Bloody Cross","","Adds a 1% chance to cast Level 1 Critical Wounds o Bleeding when attacking<br>The chance increases by the refine level of the weapon",20,7,0]
 ,[1500,61,1051,7,0,1,280,90,"Giant Shield","","Reduces damage form large size monsters by 5%<br><b>[Refine Rate 9-10]</b><br>Reduces damage by an additional 5%",192,5,0]
-,[1501,50,0,2,0,0,30,1,"Polar Bear Cap","","SP recovery speed 3% increase",2,1,5,1,19,3,0]
+,[1501,50,0,2,0,0,30,0,"Polar Bear Cap","",0,2,1,5,1,19,3,76,3,0]
 ,[1502,50,0,5,0,1,20,90,"Magician's Night Cap","","",4,1,5,1,0]
 ,[1503,50,0,4,0,0,15,30,"Tasty Strawberry Hat","","<b>[Refine Rate 7-10]</b><br>ASPD + 4%",7,1,0]
 ,[1504,50,0,2,0,1,20,40,"Full Bloom Hairpin","","",9,4,11,4,19,4,0]
@@ -1541,55 +1541,55 @@ ItemOBJ = [
 ,[1507,61,123,4,0,1,50,95,"Bible of Promise(2nd Vol.)","",0,19,5,91,5,94,5,0]
 ,[1508,9,132,40,3,1,50,90,"Mental Stick","","Reduces SP usage of all skills by 5%<br><b>[Refine 6-10]</b><br>Each refine above 5 decreases SP usage by 1%",73,-10,89,15,0]
 ,[1509,64,1001,1,0,0,20,92,"Telekinetic Orb","","",4,3,14,30,19,1,221,120,0]
-,[1510,100,0,0,0,0,0,0,0,0,0,221,121,0] //Mental Stick & Telekinetic Orb combo
-,[1511,9,123,30,4,1,40,91,"Recovery Light","","A staff that increases the potency of Heal while increasing SP consumption depending on refine level",20,6,89,15,194,1,0]
+,[1510,100,0,0,0,0,0,0,"Mental Stick & Telekinetic Orb combo",0,0,221,121,0] //Mental Stick & Telekinetic Orb combo
+,[1511,9,123,30,4,1,40,91,"Recovery Light","","<b>For every refinement</b><br>Healing done by all skills +3%<br>The skill Heal costs 5 more SP",20,6,89,15,194,1,0]
 ,[1512,13,129,142,3,1,50,90,"Sura's Rampage","","Increases the SP cost of all skills by 5%<br><b>[Refine 5-10]</b><br>Each refine above +4 decreases the SP cost of skills by 1%",221,122,221,123,5187,10,0]
 ,[1513,60,133,7,0,1,66,90,"Green Surgical Gown","","",5,1,14,30,0]
-,[1514,100,0,0,0,0,0,0,0,0,"Has a chance when killing animal and demi-human type monsters to drop 'Immortal Heart' and 'Alcohol'<br>Higher refine rate increases the chance of item drop",0] //Green Surgical Gown & Mes combo
+,[1514,100,0,0,0,0,0,0,0,0,"Has a chance when killing animal and demi-human type monsters to drop 'Immortal Heart' and 'Alcohol'<br>Higher armor refine rate increases the chance of item drop",0] //Green Surgical Gown & Mes combo
 ,[1515,10,128,135,4,2,110,90,"Catapult","","If you have a higher level of Double Strafing, use that instead",221,124,0]
 ,[1516,4,127,180,4,1,160,90,"Cannon Spear","","Increases damage of Head Crush by 5% every 3rd refine",14,-100,221,125,0]
 ,[1517,64,122,1,0,1,40,90,"Assassin's Glove","","",10,3,14,20,0]
-,[1518,100,0,0,0,0,0,0,0,0,0,9,-20,17,25,5083,25,0] //Assassin's Glove & Krishna
-,[1519,100,0,0,0,0,0,0,0,0,0,10,2,15,-10,70,20,0] //Assassin's Glove & Chakram
+,[1518,100,0,0,0,0,0,0,"Assassin's Glove & Krishna",0,0,9,-20,17,25,5083,25,0] //Assassin's Glove & Krishna
+,[1519,100,0,0,0,0,0,0,"Assassin's Glove & Chakram",0,0,10,2,15,-10,70,20,0] //Assassin's Glove & Chakram
 ,[1520,61,125,3,0,1,100,90,"Geffenia Water Book","","If Base INT is 99, adds MATK +1%, MaxHP + 800",4,1,19,2,0]
-,[1521,100,0,0,0,0,0,0,0,0,"Reduces cast time of Storm Gust by 2% for every shield refine",0] //Geffenia Water Book & Lacrima Stick combo
-,[1522,18,0,170,3,2,0,70,"Lever Action Rifle [Rental]","",0,8,20,10,50,12,-5,80,30,0]
+,[1521,100,0,0,0,0,0,0,"Geffenia Water Book & Lacrima Stick combo",0,"Reduces cast time of Storm Gust by 2% for every shield refine",0] //Geffenia Water Book & Lacrima Stick combo
+,[1522,18,0,170,3,0,0,0,"Lever Action Rifle [Rental]","",0,8,20,10,50,12,-5,80,30,0]
 //custom TalonRO [Update 2014-09-02]
 ,[1523,51,0,3,0,0,100,10,"Evil Mask","","Drain 1 SP from user every 2 seconds<br><b>Mid and Low Headgear</b>",12,1,0]
-,[1524,100,0,0,0,0,0,0,0,0,"ASPD +1<br>Drain 3 SP from user every 2 seconds",12,9,0] //Evil Mask & Succubus Horn
-,[1525,100,0,0,0,0,0,0,0,0,"ASPD +1<br>Drain 3 SP from user every 2 seconds",12,9,0] //Evil Mask & Incubus Horn
+,[1524,100,0,0,0,0,0,0,"Evil Mask & Succubus Horn",0,"ASPD +1<br>Drain 3 SP from user every 2 seconds",12,9,0] //Evil Mask & Succubus Horn
+,[1525,100,0,0,0,0,0,0,"Evil Mask & Incubus Horn",0,"ASPD +1<br>Drain 3 SP from user every 2 seconds",12,9,0] //Evil Mask & Incubus Horn
 ,[1526,50,0,3,0,0,50,10,"Halloween Midas Whisper","","<b>[Base STR >= 80]</b><br>ATK + 30<br><b>[Base VIT >= 80]</b><br>MaxHP + 5%<br><b>[Base LUK >= 80]</b><br>CRIT + 5<br><b>[Base AGI >= 80]</b><br>ASPD + 5%<br><b>[Base INT >= 80]</b><br>MATK + 3%<br><b>[Base DEX >= 80]</b><br>Cast Time - 5%<br>Gain a candy item when killing monsters of DemiHuman type by low chance",7,1,56,5,0]
 //custom TalonRO [Update 2014-09-11]
-,[1527,51,0,2,0,0,10,1,"Gossip Raven","","Has a 2% chance of activating Level 1 Ruwach when receiving a physical attack",7,1,0]
+,[1527,51,0,2,0,0,10,0,"Gossip Raven","","Has a 2% chance of activating Level 1 Ruwach when receiving a physical attack",7,1,0]
 //custom TalonRO [Update 2014-12-30]
 ,[1528,51,1,3,0,0,40,20,"Shutter Glasses","",0,0]
 ,[1529,51,1,3,0,0,40,20,"Unique Sunglasses","",0,0]
 ,[1530,51,1,3,0,0,40,20,"Hexagonal Glasses","",0,9,2,0]
-,[1531,50,0,2,0,0,60,30,"Gentleman Fez","","<b>[Refine Rate 8~10]</b><br>DEX + 1<br><b>[Refine Rate 10]</b><br>DEX + 1",5,2,0]
+,[1531,50,0,2,0,1,60,30,"Gentleman Fez","","<b>[Refine Rate 8~10]</b><br>DEX + 1<br><b>[Refine Rate 10]</b><br>DEX + 1",5,2,0]
 ,[1532,50,0,1,0,0,20,50,"Tarnished Lamp","","",6,7,0]
 //custom TalonRO [Update 2015-12-19]
-,[1533,50,0,2,0,0,20,1,"Santa Cat Hat","","Increases your walking speed",7,2,12,5,73,-10,0]
+,[1533,50,0,2,0,0,20,0,"Santa Cat Hat","","Increases your walking speed",7,2,12,5,73,-10,0]
 ,[1534,50,0,3,0,1,20,20,"Butterfly Hairpin","","Add a chance of gaining Izidor each time a Plant-type monster is killed",19,3,33,5,173,5,53,5,0]
 //custom TalonRO [Update 2015-12-21]
 ,[1535,62,0,0,0,1,60,0,"Beach Manteau","",0,1,1,4,1,63,10,0]
 ,[1536,63,0,0,0,0,20,0,"Beach Sandals","",0,1,1,4,1,63,10,0]
-,[1537,100,0,0,0,0,0,0,0,0,0,9,5,0] //Beach Manteau & Beach Sandals
+,[1537,100,0,0,0,0,0,0,"Beach Manteau & Beach Sandals",0,0,9,5,0] //Beach Manteau & Beach Sandals
 ,[1538,50,0,4,0,1,40,50,"Ancient Horns","","<b>[Refine Rate 7~10]</b><br>Add a 1% chance of activating ATK + 100 for 10 seconds when hitting a monster.",0]
 //custom TalonRO [Update 2015-12-29]
-,[1539,50,0,3,0,1,50,1,"Evil Marching Hat","","<b>[Refine Rate 7~10]</b><br> Critical damage increased by 10%<br><b>[Refine Rate 9~10]</b><br>ATK + 5%<br>5% increased ranged physical damage",1,2,19,1,87,2,0]
+,[1539,50,0,3,0,1,50,0,"Evil Marching Hat","","<b>[Refine Rate 7~10]</b><br> Critical damage increased by 10%<br><b>[Refine Rate 9~10]</b><br>ATK + 5%<br>5% increased ranged physical damage",1,2,19,1,87,2,0]
 //custom TalonRO [Update 2016-05-05]
-,[1540,52,0,0,0,0,30,20,"Vajra","","",25,1,0]
+,[1540,52,0,0,0,0,30,48,"Vajra","","",25,1,0]
 //custom TalonRO [Update 2016-11-02]
-,[1541,60,0,6,0,1,50,1,"Bayani Bakonawa Scale Armor","","For every 2 refines, decreases Boss monster damage by 1%",7,1,0]
-,[1542,62,0,2,0,1,20,1,"Bayani Buwaya Skin Clothes","","Healing capacity and healing item effect increases 1% per 3 refines",61,7,62,7,63,7,64,7,0]
-,[1543,61,0,3,0,1,40,1,"Bayani Kalasag","","For every 3 refines, decreases Boss monster damage by 1%",0]
-,[1544,63,0,2,0,1,60,1,"Bayani Nightmare Bangungot Boots","","For every refine, MDEF + 1<br><b>[Refine Rate 7-10]</b><br>Increases walking speed",0]
+,[1541,60,0,6,0,1,50,0,"Bayani Bakonawa Scale Armor","","For every 2 refines, decreases Boss monster damage by 1%",7,1,0]
+,[1542,62,0,2,0,1,20,0,"Bayani Buwaya Skin Clothes","","Healing capacity and healing item effect increases 1% per 3 refines",61,7,62,7,63,7,64,7,0]
+,[1543,61,0,3,0,1,40,0,"Bayani Kalasag","","For every 3 refines, decreases Boss monster damage by 1%",0]
+,[1544,63,0,2,0,1,60,0,"Bayani Nightmare Bangungot Boots","","For every refine, MDEF + 1<br><b>[Refine Rate 7-10]</b><br>Movement speed +25% (non-stacking)",0]
 //[Custom TalonRO Updates 2018-06-02] [Kato]
-,[1545,50,0,3,0,1,100,50,"Palace Guard Cap","","Increase resistance against long range physical and magic attacks by +5%.<br /><br />Increase resistance to neutral attacks by +5%.<br /><br />Indestructible (except in upgrade attempts).<br /><br /><b>[Refine Rate 7~10]</b><br />For every refine, additional increased resistance against long range physical and magic attacks by 1%.",0,78,5,60,5,0]
+,[1545,50,0,3,0,1,100,50,"Palace Guard Cap","","[Refine Rate 7~10]</b>For every refine, additional increased resistance against long range physical and magic attacks by 1%",78,5,60,5,194,1,0]
 ,[1546,51,124,0,0,0,10,60,"Hawk Eye","","<b>[Slottable at Chiqita NPC]</b>",5,1,25,3,0]
-,[1547,50,0,8,0,1,100,10,"Drooping Permeter","","Increases physical attack against Solider, Permeter, Freezer, Assaulter, Heater and Turtle General by 20%.",0]
-,[1548,50,0,3,0,0,50,1,"Burning Crown","","Add a 1.5% chance of auto casting Level 3 Bash on an enemy when doing Physical damage.",63,20,42,20,0]
-,[1549,11,1,190,4,1,150,95,"Guillotine Katar","",0,37,25,9,-30,5,2,5083,15,0]
+,[1547,50,0,8,0,1,100,10,"Drooping Permeter","",0,1168,20,1220,20,1255,20,1006,20,1234,20,1176,20,0]
+,[1548,50,0,3,0,0,50,0,"Burning Crown","","Add a 1.5% chance of auto casting Level 3 Bash on an enemy when doing Physical damage.",63,20,42,20,0]
+,[1549,11,1001,190,4,1,150,95,"Guillotine Katar","",0,37,25,9,-30,5,2,5083,15,0]
 ,[1550,63,0,3,0,1,30,40,"Aegir Shoes","",0,13,500,14,50,194,1,0]
 ,[1551,62,0,2,0,1,30,40,"Aegir Cloak","",0,13,500,14,50,194,1,0]
 ,[1552,60,0,5,0,1,160,40,"Aegir Armor","",0,13,500,14,50,194,1,0]
@@ -1598,12 +1598,12 @@ ItemOBJ = [
 ,[1555,100,0,0,0,0,0,0,"Aegir Helm + Aegir Cloak","","Recovers 10 SP every time you kill a Fish type monster.<BR><BR>Add a chance to drop Sushi or Raw Fish when killing a Fish type monster, which increases per refinement rate of Aegir Cloak.<BR><BR>Increases natural HP recovery by 5% per refinement rate of Aegir Cloak.<BR><BR>Sushi and Raw Fish's HP recovery increase by 5%.",0] //Aegir Helm + Aegir Cloak
 ,[1556,100,0,0,0,0,0,0,"Aegir Helm + Aegir Armor","","Decreases damage from [Fish] race monsters by 1% per refinement of Aegir Armor",55,10,0] //Aegir Helm + Aegir Armor
 ,[1557,100,0,0,0,0,0,0,"Aegir Helm + Aegir Armor + Aegir Cloak + Aegir Shoes","","",13,1000,14,100,125,20,35,50,175,50,61,30,0] //Aegir Set
-,[1558,52,0,0,0,0,10,0,"Blood Sucker","","When doing a physical attack, add a chance to absorb 5% of your damage dealt as HP.",75,-100,76,-100,0]
-,[1559,8,0,130,3,2,50,50,"Red Square Bag","","If user's base Str is 90 or higher: Causes Stun effect to enemies by 5% chance.<BR>Every time you kill a monster, low chance to drop random Potion.",13,200,5244,20,5248,20,0]
+,[1558,52,0,0,0,0,10,0,"Blood Sucker","","When doing a physical attack, add a 2% chance to absorb 5% of your damage dealt as HP.",75,-100,76,-100,0]
+,[1559,8,1,130,3,2,50,50,"Red Square Bag","","If user's base Str is 95 or higher: Causes Stun effect to enemies by 5% chance.<BR>Every time you kill a monster, low chance to drop random Potion.",13,200,5244,20,5248,20,0]
 ,[1560,50,0,2,0,0,0,0,"Reforged Lord Kaho's Horns","","<br />Reforged Horns Of Lord Kaho. You feel a strange power emitting from them but they are not quite complete yet.",1,5,4,5,5,5,19,5,193,1,0]
-,[1561,51,51,2,0,1,30,65,"Advanced Fin Helm","","Additional Maximum HP + 6 * Base Level.",13,300,0]
-,[1562,50,0,2,0,1,10,0,"Blue Pajamas Hat","","A cute blue pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.",17,5,89,5,0]
-,[1563,50,0,2,0,1,10,0,"Pink Pajamas Hat","","A cute pink pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.",17,5,89,5,0]
+,[1561,51,51,2,0,0,30,65,"Advanced Fin Helm","","Additional Maximum HP + 6 * Base Level.",13,300,0]
+,[1562,50,0,2,0,1,10,0,"Blue Pajamas Hat","","A cute blue pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.",87,5,89,5,0]
+,[1563,50,0,2,0,1,10,0,"Pink Pajamas Hat","","A cute pink pajama hat, very cuddly. Ensures a good night's rest, giving energy to chase your dreams.",87,5,89,5,0]
 //Eden Gear
 ,[1564,63,0,3,0,0,0,12,"Eden Group Boots I","","Boots that are provided only for members of the Eden Group. These are designed to fit comfortably throughout long-walks.",75,10,76,2,193,1,0]
 ,[1565,63,0,3,0,0,0,26,"Eden Group Boots II","","Boots that are provided only for members of the Eden Group. These are designed to fit comfortably throughout long-walks.",75,12,76,4,193,1,0]
@@ -1696,7 +1696,7 @@ ItemOBJ = [
 ,[1650,50,0,5,0,1,30,0,"Improved Bongun Hat","","<b>If refine > 6:</b><br>Increases damage against [Demon] monster by 10%",56,10,0]
 ,[1651,51,1,2,0,0,20,20,"Improved Opera Phantom Mask","",0,17,5,89,3,0]
 ,[1652,50,1,2,0,1,30,0,"Improved Kitsune Mask","","<b>If refine > 6:</b><br>Perfect Dodge + 4",2,2,6,2,0]
-,[1653,12,132,100,4,2,100,90,"Chilly Spell Book","","The research of a great Sorcerer is detailed in this book. One of the 4 great elemental books (Cold Volume).<br>Add a chance of casting Storm Gust level 2 when doing a physical attack.<br>Each refine increases Cold Bolt and Storm Gust's attack power by 3%, and increases their SP cost by 5.",89,20,5,1,194,1,20,1,221,132,0]
+,[1653,12,132,100,4,2,100,90,"Chilly Spell Book","","Each refine increases Cold Bolt and Storm Gust's attack power by 3%, and increases their SP cost by 5",20,1,89,20,5,1,194,1,221,132,0]
 ,[1654,50,79,4,0,1,240,70,"Enhanced Hat of the Sun God","","A hat that is said to have been worn by the god of the sun.<br>[Refine Rate 5~6+]<br>ATK + 4, MATK + 1%<br>[Refine Rate 7+]<br>ATK + 6, MATK + 1%<br>[Refine Rate 8+]<br>ATK + 6, MATK + 2%",1,3,4,2,17,10,89,5,0]
 ,[1655,50,79,5,0,1,160,74,"Enhanced Helm of Angel","","A wondrous helmet adorned with angel wings that was made by a smithing genius.<br>[Refine Rate 5~6+]<br>AGI + 1, LUK + 1, MDEF + 1<br>[Refine Rate 7+]<br>ASPD + 1",2,1,6,1,19,3,12,5,0]
 ,[1656,50,70,5,0,1,240,70,"Enhanced Bone Helm","","An incredibly heavy, yet almost impenetrable helmet constructed of bone.<br>Every refine level past +4 until +8 reduces DEF by 1 and decreases damage received from Neutral Property attacks by another 1%.",60,1,67,-15,0]
@@ -3772,7 +3772,7 @@ function Item_Setumei(nC1,nC2)
     //If the AutoSpellSKill 4th spot is greater than 0 give it a %
 		else if(AutoSpellSkill[nC2][4] > 0)
 			CBIstr += AutoSpellSkill[nC2][4] + "%";
-		  CBIstr += " chance to cast the skill ["+ SkillOBJ[AutoSpellSkill[nC2][2]][2] +"] Lv "+ AutoSpellSkill[nC2][3] +"<BR>";
+		  CBIstr += " chance to cast the skill ["+ SkillOBJ[AutoSpellSkill[nC2][2]][2] +"] Lv"+ AutoSpellSkill[nC2][3] +"<BR>";
 	}
 	if(290 == nC1)
 		CBIstr += "On (all?) monsters, ignore "+ nC2 +"% DEF<BR>";
