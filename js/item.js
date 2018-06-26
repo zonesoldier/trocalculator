@@ -911,7 +911,7 @@ ItemOBJ = [
 ,[888,51,0,1,0,0,20,70,"Mischievous Fairy","",0,11,3,0]
 ,[889,52,0,0,0,0,20,30,"Fish in Mouth","","Add a 2% chance of getting Fresh Fish when a monster gets killed<br>Fresh Fish recovery rate + 25%",0]
 ,[890,50,0,0,0,1,50,60,"Tailring Doll Hat","","Increases healing received from White Potions and Condensed White Potions by 10%",193,1,2,2,57,5,0]
-,[891,50,0,0,0,1,50,60,"Deporte Doll Hat","",0,193,1,1,2,57,5,221,133,0]
+,[891,50,0,0,0,1,50,60,"Deporte Doll Hat","","Add a 2% chance of auto casting Level 10 Angelus on the user when the user receives Physical Damage",193,1,1,2,57,5,0]
 ,[892,50,0,0,0,1,50,60,"Sorin Doll Hat","","When physically attacking there is 2% chance that for 10 seconds you'll receive ATK +50",193,1,5,2,57,5,0]
 ,[893,50,0,0,0,1,50,60,"W Doll Hat","",0,193,1,6,2,57,5,171,5,31,5,0]
 ,[894,50,1,1,0,0,10,20,"Ribbon Yellow","",0,3,2,6,2,78,10,0]
