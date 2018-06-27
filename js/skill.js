@@ -596,6 +596,7 @@ InsertSkill = [
 [52,1,308,1],//custom TalonRO SQI Bonus - Mjolnir = Charge Attack lv 1
 [53,1,173,3],//custom TalonRO SQI Bonus - Tome of Ymir = Strip Shield lv 3
 [54,0,171,1],//custom TalonRO Kraken Card = Raid lv 1
+[55,1,130,1]
 ];
 
 
@@ -736,7 +737,8 @@ AutoSpellSkill = [
 [129,1,27,1,5,1],
 [130,1,440,1,0,1,0,1], //When dealing physical damage there is a chance to trigger Wink of Charm.
 [131,1,267,2,3,6,0], //When recieving ATK based damage, there's a low chance to cast the skill [Assumptio]Lv 2
-[132,1,131,2,1,1] //custom TalonRO Chilly Spell Book lv 2 Storm Gust (1%) on physical attack [NattWara]
+[132,1,131,2,1,1], //custom TalonRO Chilly Spell Book lv 2 Storm Gust (1%) on physical attack [NattWara]
+[133,1,51,3,3,1]
 ]
 //ID - Gets called in second spot(221(effect),1(ID)), autocast id = 1 by default, skill Id,Skill Lvl, chance %, attacktype(1atkbased,2shortrange,3longrange,4magical,5attacking,6receivingATKbased,0 by default, 0=low chance, 1=medium chance, 2=high chance)
 

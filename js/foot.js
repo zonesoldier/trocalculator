@@ -5076,6 +5076,7 @@ function KakutyouKansuu(){
 		if(n_A_Equip[9] == 1111 && n_A_Equip[10] == 983){H_Bonus += 0.05;}//Glorious Ring Set[5% ]
 		if(EquipNumSearch(1104) && EquipNumSearch(1107) && EquipNumSearch(1110)){H_Bonus += 0.03;}//kvm set[3%]
 		if(EquipNumSearch(959) && EquipNumSearch(965) && EquipNumSearch(968)){H_Bonus += 0.1;}//merc bg set gear[10%]
+		if(EquipNumSearch(1484)){H_Bonus += 0.03;}
 		/*if(EquipNumSearch(958) && EquipNumSearch(965) && EquipNumSearch(968)){H_Bonus += 0.1;}//sword bg set gear[10%][Impossivel usar lawl] mas devia adicionar uma key de on/off disto*/
 		//slims não são afectadas por rank bonus em pitch nem heal stuff como bacso card
 

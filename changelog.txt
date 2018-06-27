@@ -1,5 +1,28 @@
-[Update 2018-06-25]
-- Added Phoenix Crown [0]
+[Update 2018-06-27]
+- Removed items [Slap]:
+	+1 DEF
+	Blue Poring Clip
+	Green Poring Clip
+	Pink Poring Clip
+	Yellow Poring Clip //consolidated under Poring Clip (Color)
+	Cute Red Ribbon
+	Cute Blue Ribbon
+	Cute White Ribbon
+	Cute Green Ribbon //consolidated under Ribbon (Color)
+	Death Loop
+	Rune Spellstone
+- Added items [Slap]:
+	Phoenix Crown [0]
+	Satanic Ring [Rental]
+	Satanic Bone Helm
+	Poring Clip (Color)
+	Phreeoni Hat
+	Zaha Doll Hat
+	Freya's Crown
+	Mask Of Ifrit
+	Devil Whisper
+	Devil Whisper + Heart Hairpin set
+	Devil Whisper + Crescent Hairpin set
 - Issue #149: Proofreading [Slap]
 	Combat Knife [Rental]
 	Kaiser Knuckle [Rental]
@@ -10,13 +33,28 @@
 	Survivor's Rod (DEX) [Rental]
 	Vesper Core 02 [Rental]
 	Bloodied Shackle Ball [Rental]
-	rooping Cat [Rental]
+	Drooping Cat [Rental]
 	Masquerade [Rental]
 	Electric Guitar
 	Flying Angel
 	Deviruchi Headphones
+	Ice Ear Wing
+	Choco Stick In Mouth
+	(Color) Poring Clip
+	(Color) Ribbon
+	Staff of Ord
+	Crown Parrots
+	Voina Dagger
+	Black Shiba Hat
+	Tendrillion Skin
+	Helm of Dragon
+	Valkyrie Circlet
+	Elven Bow
+	Durga
+	Puente Robe
+	Sting Hat
 
-[Update 2018-06-25]
+[Update 2018-06-26]
 - Fixed Nagan/Nagan [Renta] Double Attack rates [Slap]
 - Fixed Sonic Blow bonus on some items to affect soul-linked version [Slap]
 - Issue #149: Proofreading [Slap]
@@ -37,6 +75,13 @@
 
 [Update 2018-06-25]
 - Added calculations for n_tok[340-349] [Slap]
+- Removed Items [Slap]:
+	Marvelous Pendant
+	Brynhild
+	Ring of Money Spirit
+	Resurrecting Soul
+	True Love
+	Mask of the Goddess
 - Added Items [Slap]:
 	Clamorous Ring [Rental]
 	Decussate Ring [Rental]
@@ -64,19 +109,13 @@
 	Nekomimi Kafra Headband: name
 	Fish in Mouth: description
 	Continental Guard Seal: name
-	Marvelous Pendant: replaced
 	Balloon Hat
 	Hunter Hat
-	Brynhild: replaced
 	Autumn Leaves
 	Golden Tiara
-	Ring of Money Spirit: replaced
-	Resurrecting Soul: replaced
 	SantaPoring Cap
-	True Love: replaced
 	Foot Ring
 	Navel Ring
-	Mask of the Goddess: replaced
 	Blue Ribbon [1]
 	Filir Hat
 	Tailring Doll Hat
@@ -108,6 +147,18 @@
 [Update 2018-06-24]
 - Changed description for 1000+skillid to 1000+mobid [Slap]
 - Added exceptions list for item set linking for items where only one of its slotted versions is active in the item set [Slap]
+- Removed Items [Slap]:
+	Balmung
+	Wing of Diablo
+	Aniversary Ring
+	Aniversary Hat
+	Christmas Ring
+	Majestic Goat [Rental]
+	HORIORUGORU
+	Quill Pen Ring
+	Quill Pen Ring set
+	Pointed Hat (White)
+	The Magic Ring Exit
 - Added Items [Slap]:
 	Drooping Domovoi
 	9th Anniversary Celebration Hat
@@ -121,16 +172,6 @@
 	Bloody Ring [Rental]
 	Chemical Ring [Rental]
 - Issue #149: Proofreading [Slap]
-	Balmung: replaced
-	Wing of Diablo: replaced
-	Aniversary Ring: replaced
-	Aniversary Hat: replaced
-	Christmas Ring: replaced
-	Majestic Goat [Rental]: replaced
-	HORIORUGORU: replaced
-	Quill Pen Ring: replaced
-	Quill Pen Ring set: replaced
-	Pointed Hat (White): replaced
 	Deviling Hat: weight, description
 	Baseball Cap [1]: name, weight
 	Drooping Ninetail: name, autospell
@@ -140,7 +181,6 @@
 	Cyclop's Eye: name
 	White Petal: name
 	Blessed Holy Robe: name
-	The Magic Ring Exit: replaced
 	Moonlight Ring: effect
 	Shark Hat: effect
 	Whikebine's Black Cat Ears: name
@@ -157,6 +197,9 @@
 	Ixion's Wings: name, description
 
 [Update 2018-06-23]
+- Removed Items [Slap]:
+	Sniping Suit R
+	RAKUMA //don't google "RAKUMA ragnarok online"
 - Added Items [Slap]:
 	Drooping Cat Crew
 	Elephant Hat (ID:5259)
@@ -166,10 +209,8 @@
 	Spiritual Ring + Clip/Rosary set: removed sanctuary bonus
 	Vanilmirth Hat: weight
 	Yellow Mage Hat: jobid, description
-	Sniping Suit R: replaced
 	Ulle's Cap set: added description
 	Phantom Spear set: added description
-	RAKUMA: replaced //don't google "RAKUMA ragnarok online"
 	Gauntlet of Hit: name
 	Blue Mage Hat: jobid, description
 	Bunny Slipper: name
