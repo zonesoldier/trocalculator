@@ -3094,7 +3094,6 @@ function BattleMagicCalc(wBMC)
 	if(90 <= n_B[3] && n_A_ActiveSkill==47)
 		wBMC2 = Math.floor(wBMC2 * (1 + 0.05 * n_A_ActiveSkillLV));
 
-
 	var wX = n_tok[170+n_B[2]];
 	if(n_B[2]==9  && SkillSearch(234))
 		wX += SkillSearch(234) *2;

@@ -1,3 +1,90 @@
+[Update 2018-06-25]
+- Issue #149: Proofreading [Slap]
+	Pink Pajamas Hat
+	Blue Pajamas Hat
+	Red Square Bag
+	Guillotine Katar
+	Drooping Permeter
+	Palace Guard Cap
+	Vajra
+	Gentleman Fez
+	Halloween Midas Whisper
+	Lever Action Rifle [Rental]
+	Chilly Spell Book
+	Sura's Rampage
+	Recovery Light
+	Salvage Cape
+
+[Update 2018-06-25]
+- Added calculations for n_tok[340-349] [Slap]
+- Added Items [Slap]:
+	Clamorous Ring [Rental]
+	Decussate Ring [Rental]
+	Dragon Ring [Rental]
+	Fischer Ring [Rental]
+	Hallow Ring [Rental]
+	Insecticide Ring [Rental]
+- Issue #149: Proofreading [Slap] //list of items that were changed
+	Phrygian Cap: name
+	Diablos Robe: name, lvl req
+	Diablos Armor: name, effect
+	Sacred Scripture: name
+	Book of Charms Vol. 1: effect/description
+	Diablos Manteau: name
+	Diablos Boots: name
+	Librarian Gloves: name
+	Iron Wrist: def
+	Diablos Ring: name
+	Cursed Hand: description
+	Rune Charm Stone: name
+	Death Medalion: name
+	Double Bound: description
+	Poring Tower: name/description
+	Academy Of Badge: name/description
+	Nekomimi Kafra Headband: name
+	Fish in Mouth: description
+	Continental Guard Seal: name
+	Marvelous Pendant: replaced
+	Balloon Hat
+	Hunter Hat
+	Brynhild: replaced
+	Autumn Leaves
+	Golden Tiara
+	Ring of Money Spirit: replaced
+	Resurrecting Soul: replaced
+	SantaPoring Cap
+	True Love: replaced
+	Foot Ring
+	Navel Ring
+	Mask of the Goddess: replaced
+	Blue Ribbon [1]
+	Filir Hat
+	Tailring Doll Hat
+	Deporte Doll 
+	Ribbon Yellow
+	Squatting Poring
+	A buttload of PVP weapons or something idk lol (ID 897-931)
+	Naght Seiger Twin Blade(B)
+	Naght Seiger Twin Blade(R)
+	Tegron
+	Violet Fear: autospell
+	Dark Thorn Staff
+	Trackers Dagger
+	Ivory Knife
+	Used Mage Coat: atk bonus in foot.js
+	Maiden Hat: foot.js modifiers were all wrong
+	Entweihen Hairband
+	Chrome Metal Sword
+	Scarletto Nail
+	Aztoe Nail
+	Bangungot Agimat Tattoo
+	Xmas Rudolph Santa Hat
+	Xmas Snowman Hat
+	Eden Group Manteau II
+	Eden Group Knuckle I
+	Eden Group Hat II
+	Eden Group Boots IV
+
 [Update 2018-06-24]
 - Changed description for 1000+skillid to 1000+mobid [Slap]
 - Added exceptions list for item set linking for items where only one of its slotted versions is active in the item set [Slap]
