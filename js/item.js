@@ -947,7 +947,7 @@ ItemOBJ = [
 ,[924,15,0,50,3,0,0,80,"Battle Lariat (Brave)","",0,194,1,5,2,37,95,5292,20,0]
 ,[925,17,0,70,3,0,0,80,"Soldier Revolver","","When attacking, there is a 1% chance that for 3 seconds your ASPD will increase by 100%",194,1,5,2,8,-10,37,55,307,20,0]
 ,[926,18,0,50,3,0,0,80,"Soldier Rifle","",0,194,1,5,2,8,10,10,10,37,75,307,20,7430,25,0]
-,[927,20,0,80,3,0,0,80,"Soldier GatlingGun","","When attacking, there is a 1% chance that for 6 seconds you gain ATK +80, but drains 120HP per seconds",194,1,5,2,37,35,307,20,0]
+,[927,20,0,80,3,0,0,80,"Soldier Gatling Gun","","When attacking, there is a 1% chance that for 6 seconds you gain ATK +80, but drains 120HP per seconds",194,1,5,2,37,35,307,20,0]
 ,[928,19,0,100,3,0,0,80,"Soldier Shotgun","","Inflicts splash damage<br>When attacking, there is a 3% chance that for 6 seconds you gain ATK +80, but drains 100HP per seconds",194,1,5,2,37,55,307,20,0]
 ,[929,21,0,300,3,0,0,80,"Soldier Grenade Launcher","","When attacking, there is a 3% chance that for 9 seconds you gain ATK +300, but drains 120HP per seconds",194,1,5,2,37,35,307,20,0]
 ,[930,16,0,55,3,0,0,80,"Huuma Front Shuriken (Brave)","",0,194,1,1,2,5,1,37,95,307,20,0]
@@ -1343,57 +1343,57 @@ ItemOBJ = [
 //custom TalonRO
 ,[1320,64,0,0,0,0,1,0,"Celebration Ring",0,0,7,5,0] //custom TalonRO
 //custom TalonRO rental
-,[1321,10,64,194,4,0,0,1,"Ballista [Rental]","",0,25,20,193,1,0] //custom TalonRO rental
-,[1322,7,1,220,3,0,0,1,"Two-handed Axe [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1323,13,0,150,3,0,0,1,"Fist [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1324,12,0,145,3,0,0,0,"Giant Encyclopedia [Rental]","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1325,14,0,177,3,0,0,1,"Guitar [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1326,11,0,200,3,0,0,1,"Jamadhar [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1327,5,0,220,3,0,0,1,"Lance [Rental]","",0,27,50,28,50,29,50,0] //custom TalonRO rental
-,[1328,15,0,170,3,0,0,1,"Rante Whip [Rental]","",0,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1329,8,53,175,3,0,0,1,"Stunner [Rental]","",0,131,10,27,40,28,40,29,40,0] //custom TalonRO rental
-,[1330,7,0,205,4,0,0,1,"Bloody Axe [Rental]","","Increases Movement Speed",1,20,12,5,193,1,0] //custom TalonRO rental
-,[1331,11,0,148,4,0,0,1,"Bloody Roar [Rental]","","Recovery 3 HP every 5 seconds",187,1,193,1,0] //custom TalonRO rental
-,[1332,10,75,170,4,0,0,0,"Bow of Evil [Rental]","","[Double Strafe] damage +25%",5,2,0] //custom TalonRO rental
-,[1333,4,1,149,4,0,0,1,"Brocca [Rental]","",0,28,20,22,1,193,1,0] //custom TalonRO rental //fixed 2016-05-05
-,[1334,1,1,129,4,0,0,1,"Combat Knife [Rental]","","Drain 3% SP",57,10,56,-10,187,1,16,10,193,1,0] //custom TalonRO rental
-,[1335,2,1,199,4,0,0,1,"Excalibur [Rental]","",0,20,6,4,10,6,10,193,1,0] //custom TalonRO rental
-,[1336,2,1,120,4,0,0,1,"Fireblend [Rental]","",0,20,3,4,2,220,47,221,114,193,1,0] //custom TalonRO rental
-,[1337,7,0,215,4,0,0,1,"Great Axe [Rental]","","Mammonite will shove his target back 5 cells",1,5,8,20,131,15,193,1,0] //custom TalonRO rental
-,[1338,12,0,168,4,0,0,1,"Hardcover Book [Rental]","",0,1,5,5,2,89,20,193,1,0] //custom TalonRO rental
-,[1339,2,1,160,4,0,0,1,"Immaterial Sword [Rental]","","Drains 45% of target's SP by a low chance<br>Drain 1 SP from its owner on each attack",20,8,193,1,194,1,0] //custom TalonRO rental
-,[1340,11,0,189,4,0,0,1,"Infiltrator [Rental]","",0,37,70,18,3,9,5,11,2,12,5,193,1,0] //custom TalonRO rental
-,[1341,13,1,159,4,0,0,1,"Kaiser Knuckle [Rental]","",0,12,5,20,4,49,5,41,10,42,10,43,10,44,10,0] //custom TalonRO rental
-,[1342,11,0,175,4,0,0,1,"Katar of Speed [Rental]","","[Sonic Blow] damage +25%",12,3,193,1,0] //custom TalonRO rental
-,[1343,8,0,150,3,0,0,1,"Mace of Madness [Rental]","","[Cart Revolution] damage +25%",1,2,0] //custom TalonRO rental
-,[1344,1,1,105,4,0,0,1,"Mailbreaker [Rental]","",0,141,5,193,1,0] //custom TalonRO rental
-,[1345,9,1,165,3,0,0,1,"Mighty Staff [Rental]","","Consume 1 SP with each physical attack",1,10,4,4,89,20,193,1,0] //custom TalonRO rental
-,[1346,13,0,150,4,0,0,1,"Monk Knuckle [Rental]","","[Finger Offensive] damage +25%",4,2,0] //custom TalonRO rental
-,[1347,3,0,204,4,0,0,1,"Muramasa [Rental]","",0,10,30,12,8,193,1,0] //custom TalonRO rental
-,[1348,2,1,148,4,0,0,1,"Nagan [Rental]","","Enables use of the skill [Double Attack]Lv5",37,10,193,1,0] //custom TalonRO rental
-,[1349,15,0,160,4,0,0,1,"Phenomena Whip [Rental]","","[Throw Arrow] damage +25%",5,2,0] //custom TalonRO rental
-,[1350,12,0,140,3,0,0,1,"Book of Prayer [Rental]","",0,3,2,19,10,16,10,0] //custom TalonRO rental
-,[1351,8,53,193,4,0,0,1,"Quadrille [Rental]","",0,31,40,36,40,37,30,193,1,0] //custom TalonRO rental
-,[1352,4,0,160,3,0,0,1,"Spear of Excellent [Rental]","","[Magnum Break] damage +25%",1,2,0] //custom TalonRO rental
-,[1353,9,1,100,2,0,0,1,"Staff of Darkness [Rental]","",0,4,2,89,15,73,-5,0] //custom TalonRO rental
-,[1354,9,53,10,3,0,0,1,"Staff of Healing [Rental]","","Increase 15% chance to heal yourself by [Heal] and [Sanctuary] (didn't really get the description...)",89,15,193,1,0] //custom TalonRO rental
-,[1355,9,1,71,3,1,0,1,"Survivor's Rod (DEX) [Rental]","",0,89,20,5,4,13,500,193,1,0] //custom TalonRO rental
-,[1356,1,1,105,4,0,0,1,"Swordbreaker [Rental]","",0,140,5,193,1,0] //custom TalonRO rental
-,[1357,11,0,179,4,0,0,1,"Unholy Touch [Rental]","",0,20,7,133,5,193,1,194,1,0] //custom TalonRO rental
-,[1358,64,1,1,0,0,10,0,"Vesper Core 01 [Rental]","",0,4,2,16,5,19,3,0] //custom TalonRO rental
-,[1359,64,1,1,0,0,10,0,"Vesper Core 02 [Rental]","",0,1,3,17,10,19,3,0] //custom TalonRO rental
-,[1360,64,1,1,0,0,10,0,"Vesper Core 03 [Rental]","",0,2,3,9,5,19,3,0] //custom TalonRO rental
-,[1361,64,1,1,0,0,10,0,"Vesper Core 04 [Rental]","",0,5,3,8,10,19,3,0] //custom TalonRO rental
-,[1362,60,0,12,0,0,0,0,"Recuvative Armor [Rental]","","Reduces natural HP and SP recovery by 100%<BR>When unequipped, you lose 100 SP<BR>When a monster is defeated from Physical or Magical Attacks, it recover 60 HP and 6 SP",76,-100,75,-100,0] //custom TalonRO rental
-,[1363,63,0,9,0,0,0,0,"Refresh Shoes [Rental]","","Every 10 seconds, your HP goes up by 20, SP goes up by 3",15,17,16,8,0] //custom TalonRO rental
-,[1364,62,0,9,0,0,0,0,"Silf Manteau [Rental]","",0,9,13,11,1,60,13,0] //custom TalonRO rental
+,[1321,10,64,194,4,0,0,0,"Ballista [Rental]","",0,25,20,193,1,0] //custom TalonRO rental
+,[1322,7,1,220,3,0,0,0,"Two-handed Axe [Rental]","",0,27,40,28,40,29,40,193,1,0] //custom TalonRO rental
+,[1323,13,0,150,3,0,0,0,"Fist [Rental]","",0,27,40,28,40,29,40,193,1,0] //custom TalonRO rental
+,[1324,12,0,145,3,0,0,0,"Giant Encyclopedia [Rental]","","Critical Rate bonus is further increased by +1 per 5 base LUK",89,15,4,3,5,2,10,20,27,40,28,40,29,40,193,1,0] //custom TalonRO rental
+,[1325,14,0,177,3,0,0,0,"Guitar [Rental]","",0,27,40,28,40,29,40,193,1,0] //custom TalonRO rental
+,[1326,11,0,200,3,0,0,0,"Jamadhar [Rental]","",0,27,40,28,40,29,40,193,1,0] //custom TalonRO rental
+,[1327,5,0,220,3,0,0,0,"Lance [Rental]","",0,27,50,28,50,29,50,193,1,0] //custom TalonRO rental
+,[1328,15,0,170,3,0,0,0,"Rante Whip [Rental]","",0,27,40,28,40,29,40,193,1,0] //custom TalonRO rental
+,[1329,8,53,175,3,0,0,0,"Stunner [Rental]","",0,131,10,27,40,28,40,29,40,193,1,0] //custom TalonRO rental
+,[1330,7,0,205,4,0,0,0,"Bloody Axe [Rental]","","Movement speed +25% (non-stacking)",1,20,12,5,193,1,0] //custom TalonRO rental
+,[1331,11,0,148,4,0,0,0,"Bloody Roar [Rental]","","Recovery 3 HP every 5 seconds",187,1,193,1,0] //custom TalonRO rental
+,[1332,10,80,170,4,0,0,0,"Bow of Evil [Rental]","","[Double Strafe] damage +25%",5,2,193,1,0] //custom TalonRO rental
+,[1333,4,1,149,4,0,0,0,"Brocca [Rental]","",0,28,20,22,1,193,1,0] //custom TalonRO rental //fixed 2016-05-05
+,[1334,1,1,129,4,0,0,0,"Combat Knife [Rental]","","Drain 3SP from enemy per hit",57,10,56,-10,187,1,16,10,193,1,0] //custom TalonRO rental
+,[1335,2,1,199,4,0,0,0,"Excalibur [Rental]","",0,20,6,4,10,6,10,193,1,0] //custom TalonRO rental
+,[1336,2,1,120,4,0,0,0,"Fireblend [Rental]","",0,20,3,4,2,220,47,221,114,193,1,0] //custom TalonRO rental
+,[1337,7,0,215,4,0,0,0,"Great Axe [Rental]","","Mammonite will shove his target back 5 cells",1,5,8,20,131,15,193,1,0] //custom TalonRO rental
+,[1338,12,0,168,4,0,0,0,"Hardcover Book [Rental]","",0,1,5,5,2,89,20,193,1,0] //custom TalonRO rental
+,[1339,2,1,160,4,0,0,0,"Immaterial Sword [Rental]","","Drains 45% of target's SP by a low chance<br>Drain 1 SP from its owner on each attack",20,8,193,1,194,1,0] //custom TalonRO rental
+,[1340,11,0,189,4,0,0,0,"Infiltrator [Rental]","",0,37,70,18,3,9,5,11,2,12,5,193,1,0] //custom TalonRO rental
+,[1341,13,1,159,4,0,0,0,"Kaiser Knuckle [Rental]","",0,20,4,12,5,31,5,41,10,42,10,43,10,44,10,193,1,0] //custom TalonRO rental
+,[1342,11,0,175,4,0,0,0,"Katar of Speed [Rental]","","[Sonic Blow] damage +25%",12,3,193,1,0] //custom TalonRO rental
+,[1343,8,1,150,3,0,0,0,"Mace of Madness [Rental]","","[Cart Revolution] damage +25%",1,2,193,1,0] //custom TalonRO rental
+,[1344,1,1,105,4,0,0,0,"Mailbreaker [Rental]","",0,141,5,193,1,0] //custom TalonRO rental
+,[1345,9,1,165,3,0,0,0,"Mighty Staff [Rental]","","Consume 1 SP with each physical attack",1,10,4,4,89,20,193,1,0] //custom TalonRO rental
+,[1346,13,0,150,4,0,0,0,"Monk Knuckle [Rental]","","[Finger Offensive] damage +25%",4,2,193,1,0] //custom TalonRO rental
+,[1347,3,0,204,4,0,0,0,"Muramasa [Rental]","",0,10,30,12,8,193,1,0] //custom TalonRO rental
+,[1348,2,1,148,4,0,0,0,"Nagan [Rental]","","Enables use of the skill [Double Attack]Lv5",37,40,193,1,0] //custom TalonRO rental
+,[1349,15,0,160,4,0,0,0,"Phenomena Whip [Rental]","","[Throw Arrow] damage +25%",5,2,193,1,0] //custom TalonRO rental
+,[1350,12,0,140,3,0,0,0,"Book of Prayer [Rental]","",0,3,2,19,2,16,10,193,1,0] //custom TalonRO rental
+,[1351,8,53,193,4,0,0,0,"Quadrille [Rental]","",0,31,40,36,40,37,30,193,1,0] //custom TalonRO rental
+,[1352,4,0,160,3,0,0,0,"Spear of Excellent [Rental]","","[Magnum Break] damage +25%",1,2,193,1,0] //custom TalonRO rental
+,[1353,9,1,100,2,0,0,0,"Staff of Darkness [Rental]","",0,4,2,89,15,73,-5,193,1,0] //custom TalonRO rental
+,[1354,9,53,10,3,0,0,0,"Staff of Healing [Rental]","",0,20,6,89,15,91,15,94,15,193,1,0] //custom TalonRO rental
+,[1355,9,1,71,3,0,0,0,"Survivor's Rod (DEX) [Rental]","",0,89,20,5,4,13,500,193,1,0] //custom TalonRO rental
+,[1356,1,1,105,4,0,0,0,"Swordbreaker [Rental]","",0,140,5,193,1,0] //custom TalonRO rental
+,[1357,11,0,179,4,0,0,0,"Unholy Touch [Rental]","",0,20,7,133,5,193,1,194,1,0] //custom TalonRO rental
+,[1358,64,1,1,0,0,0,0,"Vesper Core 01 [Rental]","",0,4,2,16,5,19,3,0] //custom TalonRO rental
+,[1359,64,1,1,0,0,0,0,"Vesper Core 02 [Rental]","",0,1,3,17,10,19,3,0] //custom TalonRO rental
+,[1360,64,1,1,0,0,0,0,"Vesper Core 03 [Rental]","",0,2,3,9,5,19,3,0] //custom TalonRO rental
+,[1361,64,1,1,0,0,0,0,"Vesper Core 04 [Rental]","",0,5,3,8,10,19,3,0] //custom TalonRO rental
+,[1362,60,0,12,0,0,0,0,"Recuvative Armor [Rental]","","When unequipped, you lose 100 SP<BR>When a monster is defeated from Physical or Magical Attacks, recover 60 HP and 6 SP",76,-100,75,-100,193,1,0] //custom TalonRO rental
+,[1363,63,0,9,0,0,0,0,"Refresh Shoes [Rental]","","Every 10 seconds, your HP goes up by 20, SP goes up by 3",15,17,16,8,193,1,0] //custom TalonRO rental
+,[1364,62,0,9,0,0,0,0,"Silf Manteau [Rental]","",0,9,13,11,1,60,13,193,1,0] //custom TalonRO rental
 ,[1365,62,55,5,0,0,0,0,"Survivor's Manteau [Rental]","",0,3,10,19,10,193,1,0] //custom TalonRO rental
 ,[1366,64,1,0,0,0,0,0,"Bloodied Shackle Ball [Rental]","",0,17,30,0] //custom TalonRO rental
 ,[1367,64,0,0,0,0,0,0,"Spiritual Ring [Rental]","",0,4,2,5,2,0] //custom TalonRO rental
 ,[1368,50,1,10,0,0,0,0,"Corsair [Rental]","",0,3,3,4,3,193,1,0] //custom TalonRO rental
-,[1369,50,1,6,0,0,0,0,"Drooping Cat [Rental]","",0,19,15,151,10,153,40,193,1,0] //custom TalonRO rental
+,[1369,50,1,1,0,0,0,0,"Drooping Cat [Rental]","",0,19,15,153,30,193,1,0] //custom TalonRO rental
 ,[1370,50,1,10,0,0,0,0,"Grand Circlet [Rental]","",0,1,3,4,3,6,3,19,4,193,1,0] //custom TalonRO rental
-,[1371,51,1,1,0,0,0,0,"Masquerade [Rental]","",0,37,7,0] //custom TalonRO rental
+,[1371,51,0,1,0,0,0,0,"Masquerade [Rental]","",0,37,7,0] //custom TalonRO rental
 //custom TalonRO common mid-headgears
 ,[1372,51,0,1,0,1,10,0,"+1 STR [1]","",0,1,1,0] //custom TalonRO +1 str mid
 ,[1373,51,0,1,0,1,10,0,"+1 AGI [1]","",0,2,1,0] //custom TalonRO +1 agi mid
@@ -1405,57 +1405,56 @@ ItemOBJ = [
 ,[1378,15,117,190,4,3,70,0,"Belmont Whip","","<font color='blue'>SQI</font>",2,4,5,5,6,4,20,3,0] //custom TalonRO SQI
 ,[1379,1,50,150,4,3,150,0,"Blade of Angels","","<font color='blue'>SQI</font>",1,10,3,10,8,40,15,20,14,250,0] //custom TalonRO SQI
 ,[1380,6,119,250,4,3,600,0,"Djinn","","<font color='blue'>SQI</font>",3,3,5,5,6,5,20,2,194,1,0] //custom TalonRO SQI
-,[1381,14,0,110,2,0,180,70,"Electric Guitar","","<font color='blue'>SQI</font>",0,20,4,5,5,4,4,3,4,0]
+,[1381,14,0,190,4,3,100,0,"Electric Guitar","","<font color='blue'>SQI</font>",0,20,4,5,5,4,4,3,4,0]
 ,[1382,8,109,250,4,3,150,0,"Evangelist","","<font color='blue'>SQI</font>",4,5,5,5,20,1,194,1,220,50,0] //custom TalonRO SQI
 ,[1383,63,150,4,0,1,150,0,"Eversong Greaves","","Movement speed increased (same as Increase AGI)<BR><font color='blue'>SQI</font><BR>[Taekwon]<BR>MaxHP + 10%<BR>HIT + 25<BR>[Taekwon Master]<BR>MaxHP + 20%",15,10,19,10,0] //custom TalonRO SQI
 ,[1384,9,143,225,4,3,150,0,"Ghostdancer Staff","","<font color='blue'>SQI</font>",4,5,5,5,89,15,0] //custom TalonRO SQI
-,[1385,16,144,250,4,3,100,0,"Hira Shurikat","","<font color='blue'>SQI</font>",5,5,15,20,16,20,18,8,20,4,77,20,79,20,0] //custom TalonRO SQI
-//,[84,8,112,220,4,3,600,0,"Mjolnir","","<font color='blue'>SQI</font>",1,5,5,5,6,5,20,4,0] //custom TalonRO SQI
+,[1385,16,144,250,4,3,100,0,"Hira Shurikat","","Negates the need for ninja stones<br><font color='blue'>SQI</font>",20,4,5,5,15,20,16,20,18,8,77,20,79,20,0] //custom TalonRO SQI
 ,[1386,4,107,200,4,3,550,0,"Nibelungen","","Enable to use Level 1 [Enchant Poison]<BR><font color='blue'>SQI</font>",1,5,8,10,0] //custom TalonRO SQI
-,[1387,51,145,7,0,1,10,0,"Scouter","","Power Level: &gt;9000<BR><font color='blue'>SQI</font>",5,10,12,15,0] //custom TalonRO SQI
+,[1387,51,145,7,0,1,10,0,"Scouter","","Enable use of [Monster Property]<br>Power Level: &gt;9000<BR><font color='blue'>SQI</font>",5,10,12,15,0] //custom TalonRO SQI
 ,[1388,10,114,150,4,3,150,0,"Sherwood Bow","","Enable to use [Arrow Crafting]<BR><font color='blue'>SQI</font>",2,5,5,5,0] //custom TalonRO SQI
-,[1389,9,111,250,4,3,50,0,"Staff of Magi","","<font color='blue'>SQI</font>",4,5,5,5,89,20,20,3,0] //custom TalonRO SQI
-,[1390,13,115,150,4,3,60,0,"Suiken","","<font color='blue'>SQI</font>",1,5,2,3,5,5,20,1,0] //custom TalonRO SQI
+,[1389,9,111,250,4,3,50,0,"Staff of Magi","","<font color='blue'>SQI</font>",20,3,4,5,5,5,89,20,0] //custom TalonRO SQI
+,[1390,13,115,150,4,3,60,0,"Suiken","","<font color='blue'>SQI</font>",20,1,1,5,2,3,5,5,0] //custom TalonRO SQI
 ,[1391,12,118,250,4,3,80,0,"Tome of Ymir","","<font color='blue'>SQI</font>",3,3,4,4,5,5,194,1,0] //custom TalonRO SQI
 //custom TalonRO equip combos
-,[1392,100,0,0,0,0,0,0,0,0,0,60,25,89,5,0]
+,[1392,100,0,0,0,0,0,0,"Survivor's Manteau [Rental] set",0,0,60,25,89,5,0]
 //custom TalonRO etc (low/mid-headgears)
-,[1393,52,0,0,0,0,10,0,"Pussy Cat Bell","",0,18,5,0]
+,[1393,52,0,5,0,0,10,0,"Pussy Cat Bell","",0,0]
 ,[1394,52,1,0,0,0,20,20,"Rock Replica","",0,1,1,0]
-,[1395,52,0,1,0,0,10,1,"Chewing Bubblegum","","ATK + 1%",0]
-,[1396,52,0,1,0,0,0,1,"Nut Donut In Mouth","",0,17,5,0]
+,[1395,52,0,1,0,0,10,0,"Chewing Bubblegum","","ATK + 1%",0]
+,[1396,52,0,1,0,0,0,0,"Nut Donut In Mouth","",0,17,5,0]
 ,[1397,52,1,0,0,0,20,20,"Scissors Replica","",0,2,1,0]
 ,[1398,52,1,0,0,0,20,20,"Paper Replica","",0,6,1,0]
 ,[1399,50,0,3,0,1,30,85,"Crown of Deceit","",0,4,4,73,-10,0]
 ,[1400,52,1,0,0,0,20,20,"Cherry Blossom In Mouth","",0,33,1,0]
-,[1401,52,0,1,0,0,10,1,"+1 DEF","",0,0]
-,[1402,52,0,1,0,0,5,1,"Choco Donut In Mouth","",0,13,50,0]
-,[1403,52,0,1,0,0,5,1,"Donut In Mouth","","Regain 1 HP every 10 seconds.",13,100,0]
+,[1401,50,0,2,0,0,200,0,"Phoenix Crown [0]","",0,4,1,151,10,0]
+,[1402,52,0,1,0,0,5,0,"Choco Donut In Mouth","",0,13,50,0]
+,[1403,52,0,1,0,0,5,0,"Donut In Mouth","","Regain 2 HP every 10 seconds.",13,100,0]
 ,[1404,52,1,0,0,0,20,20,"Green Onion In Mouth","",0,190,1,0]
 ,[1405,52,0,0,0,0,10,12,"Handkerchief In Mouth","",0,37,1,57,-1,0]
 ,[1406,52,0,0,0,0,10,0,"Lollipop","",0,14,5,0]
 ,[1407,52,0,0,0,0,20,50,"Love Piece","",0,0]
 ,[1408,50,0,0,0,0,30,50,"Heart Wing Hairband","","Decreases SP taken by all skills by 5%",74,5,0]
-,[1409,100,0,0,0,0,0,0,0,0,0,73,-5,0]
-,[1410,50,0,1,0,1,30,10,"Flying Angel","",0,2,1,4,1,12,3,73,-3,0]
-,[1411,52,0,0,0,0,5,1,"Plant Stem In Mouth","",0,150,20,0]
-,[1412,52,0,0,0,0,10,1,"Puppy Grass","",0,73,-1,0]
+,[1409,100,0,0,0,0,0,0,"Love Piece set",0,0,73,-5,0]
+,[1410,50,0,1,0,0,30,10,"Flying Angel","",0,2,1,4,1,12,3,73,-3,0]
+,[1411,52,0,0,0,0,5,0,"Plant Stem In Mouth","",0,150,20,0]
+,[1412,52,0,0,0,0,10,0,"Puppy Grass","",0,73,-1,0]
 ,[1413,52,0,1,0,0,10,90,"Rainbow Scarf","",0,4,1,0]
 ,[1414,52,0,0,0,0,10,50,"Rose Of Crimson","",0,6,1,0]
-,[1415,52,0,1,0,0,30,50,"Samurai Mask","",0,80,1,0]
-,[1416,52,0,1,0,0,20,1,"Special Carrot In Mouth","",0,53,1,0]
+,[1415,52,0,1,0,0,30,0,"Samurai Mask","",0,87,1,0]
+,[1416,52,0,1,0,0,20,0,"Special Carrot In Mouth","",0,53,1,0]
 ,[1417,50,0,2,0,0,20,0,"Sheila Hairnet","","Sexy rating will be increased by 100%",2,2,19,3,0]
-,[1418,100,0,0,0,0,0,0,0,0,"When receiving physical attack there's a chance to autocast [High Jump] Level 1",0]
-,[1419,52,0,0,0,0,10,1,"Strange Tongue","",0,56,1,0]
+,[1418,100,0,0,0,0,0,0,"Special Carrot In Mouth set",0,"When receiving physical attack there's a 1% chance to autocast [High Jump] Level 1",0]
+,[1419,52,0,0,0,0,10,0,"Strange Tongue","",0,56,1,0]
 ,[1420,52,0,1,0,0,20,30,"Umbala Spirit","","",3,1,0]
-,[1421,100,0,0,0,0,0,0,0,0,0,5,2,18,2,0]
-,[1422,50,0,0,0,1,100,30,"Chicken Hat","","Add a chance to autocast skill [Loud Exclamation]Lv 1",12,5,0]
+,[1421,100,0,0,0,0,0,0,"Well-Chewed Pencil set",0,0,5,2,18,2,0]
+,[1422,50,0,0,0,1,100,30,"Chicken Hat","","Add a 3% chance to autocast skill [Loud Exclamation]Lv 1",12,5,0]
 ,[1423,51,0,1,0,0,10,70,"Filir Wings","","",12,2,73,-2,0]
 ,[1424,50,0,2,0,0,10,0,"Chicken Of Love hat","",0,1,3,13,100,52,7,57,7,0]
 ,[1425,50,1001,5,0,1,100,0,"Minor Valkyrie Helm","",0,19,5,0]
-,[1426,50,0,2,0,1,20,30,"Deviruchi Headphones","","MaxHP  -1%<br/ ><b>[Mage, Archer, Acolyte Class]</b><br>When combined with Deviruchi Pet, add additional 5% [Stun] resistance (not calced)<br>If Deviruchi Pet is loyal, add an additional 10% [Stun] resistance (not calced)",19,1,151,15,0]
+,[1426,50,0,0,0,1,20,30,"Deviruchi Headphones","","MaxHP  -1%<br/ ><b>[Mage, Archer, Acolyte Class]</b><br>When combined with Deviruchi Pet, add additional 5% [Stun] resistance (not calced)<br>If Deviruchi Pet is loyal, add an additional 10% [Stun] resistance (not calced)",19,1,151,15,0]
 ,[1427,50,0,1,0,0,30,40,"Black Feather Beret","",0,3,1,19,1,57,10,0]
-,[1428,50,0,5,0,0,30,1,"Cat Ear Beret","","<b>[Refine Rate 5~10]</b><br>Increase physical damage against [Demi-Human] race monsters by 2% per refine level over 5<br>Decrease damage from [Demi-Human] race monsters by 2% per refine level over 5",0]
+,[1428,50,0,5,0,0,30,0,"Cat Ear Beret","","<b>[Refine Rate 6~10]</b><br>Increase physical damage against [Demi-Human] race monsters by 2% per refine level over 5<br>Decrease damage from [Demi-Human] race monsters by 2% per refine level over 5",0]
 ,[1429,50,0,2,0,1,50,33,"Knit Rabbit Ear Hat","","<b>[Base LUK > 55]</b><br>HP Regen + 30%<br>SP Regen + 30%",75,20,76,20,0]
 ,[1430,51,0,0,0,0,30,30,"Magical Booster","",0,89,3,0]
 ,[1431,100,0,0,0,0,0,0,0,0,"<b>[Refine Rate 5~10]</b><br>On Bosstype monsters, ignore 3% MDEF<br>Adjusts your resistance to normal monsters by -5%<br><b>[Refine Rate 7~10]</b><br>On Bosstype monsters, ignore 4% MDEF<br>Adjusts your resistance to normal monsters by -5%",297,2,0] //Magical Booster & Southern Cross Combo
@@ -1463,7 +1462,7 @@ ItemOBJ = [
 ,[1433,100,0,0,0,0,0,0,0,0,"For every refine of the Hypnotist's Staff, add +4 MATK<br><b>[Refine Rate 10]</b><br>Additional MATK + 25<br>After Cast Delay - 10%",0] //Magical Booster & Hypnotist's Staff Combo
 ,[1434,51,0,0,0,0,20,10,"Anemos Mask","",0,44,4,0]
 ,[1435,51,0,0,0,0,10,10,"Ice Ear Wing","",0,6,1,0]
-,[1436,51,0,0,0,0,10,1,"Ifrit Eyes","",0,5,1,153,25,0]
+,[1436,51,0,0,0,0,10,0,"Ifrit Eyes","",0,5,1,153,25,0]
 ,[1437,52,0,0,0,0,5,10,"Poker Card In Mouth","",0,37,1,57,-1,0]
 ,[1438,52,0,0,0,0,5,10,"Choco Stick In Mouth","","ATK - 1%",14,10,0]
 ,[1439,52,0,0,0,0,10,10,"Cold Breath","",0,3,-1,4,1,0]
@@ -1472,12 +1471,12 @@ ItemOBJ = [
 ,[1442,50,0,3,0,0,10,10,"Pink Poring Clip","",0,0]
 ,[1443,50,0,3,0,0,10,10,"Yellow Poring Clip","",0,0]
 ,[1444,50,0,5,0,0,60,10,"King Poring Hat","","For every 3 refines DEX+1, LUK+1",5,1,6,1,0]
-,[1445,50,0,6,0,0,50,1,"Majoruros Horn","",0,1,2,13,100,0]
-,[1446,50,0,0,0,1,0,1,"Gold Coin Poring Hat","",0,5,2,6,2,0]
-,[1447,50,0,0,0,1,10,1,"Rainbow Poring Hat","","<b>[Refine Rate ~7-10]</b><br>ATK + 1%<br>MATK + 1%",57,5,0]
-,[1448,50,0,3,0,1,20,1,"Scrat Hat","",0,191,5,0]
-,[1449,50,0,3,0,0,10,1,"Pink Bunny Band","",0,6,2,0]
-,[1450,50,0,0,0,1,40,1,"Black Shiba Hat","",0,37,10,0]
+,[1445,50,0,6,0,0,50,0,"Majoruros Horn","",0,1,2,13,100,0]
+,[1446,50,0,0,0,1,0,0,"Gold Coin Poring Hat","",0,5,2,6,2,0]
+,[1447,50,0,0,0,1,10,0,"Rainbow Poring Hat","","<b>[Refine Rate ~7-10]</b><br>ATK + 1%<br>MATK + 1%",57,5,0]
+,[1448,50,0,3,0,1,20,0,"Scrat Hat","",0,191,5,0]
+,[1449,50,0,3,0,0,10,0,"Pink Bunny Band","",0,6,2,0]
+,[1450,50,0,0,0,1,40,0,"Black Shiba Hat","",0,37,10,0]
 ,[1451,50,1,3,0,1,30,90,"Cursed Book","","4% chance to absorb 4% HP on physical attack<br>For every 2 refines, increase the HP absorbed by 1%<br>1% chance to absorb 1% SP on physical attack<br>For every 3 refines, increase the SP absorbed by 1%<br>You lose the amount of refines in HP per 5 seconds when equipped (not calcled)",0]
 ,[1452,64,1,0,0,1,5,80,"Death Loop","",0,10,5,0]
 ,[1453,64,1,0,0,1,5,80,"Rune Spellstone","",0,14,50,73,-1,0]
@@ -1493,12 +1492,12 @@ ItemOBJ = [
 ,[1462,14,130,170,3,1,80,90,"Green Whistle","","MATK +50<br>When using Frost Joker, add a 3% chance of casting Level 2 Wide Curse<br>For every refine above +6, decrease SP cost of all skills by 2%",12,5,0]
 ,[1463,1,128,142,3,1,60,90,"Black Wing","","Each refine increases skill damage of [Back Stab] by 2%<br>Each refine increases MATK by 3%",5169,30,0]
 ,[1464,100,0,0,0,0,0,0,0,0,"MATK +5<br>Reduces the SP cost of all skills by 5%",8,5,0] //Black Wing & Black Cat combo
-,[1465,60,1,2,0,1,50,1,"Tidung","",0,19,5,50,3,51,3,52,3,53,3,54,3,55,3,56,3,58,3,59,3,151,10,152,10,0]
+,[1465,60,1,2,0,1,50,0,"Tidung","",0,19,5,50,3,51,3,52,3,53,3,54,3,55,3,56,3,58,3,59,3,151,10,152,10,0]
 //custom TalonRO [Update 2013-10-07]
-,[1466,51,0,0,0,0,10,1,"Mother Elven Ears","",0,19,4,0]
-,[1467,50,0,5,0,0,10,1,"Elder Crown","",0,4,2,19,5,0]
-,[1468,50,0,2,0,1,30,1,"RWC Commemorative Pin","","<b>[Refine Rate 4-10]</b><br>Additional +1% to ATK and MATK for each refine level",27,1,28,1,29,1,89,1,0]
-,[1469,50,0,0,0,1,30,1,"Angeling Fur Hat","","ATK + 1%",7,1,89,1,0]
+,[1466,51,0,0,0,0,10,0,"Mother Elven Ears","",0,19,4,0]
+,[1467,50,0,5,0,0,10,0,"Elder Crown","",0,4,2,19,5,0]
+,[1468,50,0,2,0,1,30,0,"RWC Commemorative Pin","","<b>[Refine Rate 4-10]</b><br>Additional +1% to ATK and MATK for each refine level",27,1,28,1,29,1,89,1,0]
+,[1469,50,0,0,0,1,30,0,"Angeling Fur Hat","","ATK + 1%",7,1,89,1,0]
 ,[1470,50,0,5,0,0,50,20,"Wunderkammer","","When doing short range physical attacks, add a chance of auto casting various skills:<br>Monster Property/Sense<br>Identify<br>Pick Stone<br>Greed<br>Running<br>High Jump<br>First Aid<br>Back Sliding",19,10,193,1,0]
 ,[1471,100,0,0,0,0,0,0,0,0,"Add a chance of auto casting Level 2 Weapon Perfection on the enemy when attacking",0] //Wunderkammer & Lesser Elemental Ring combo
 ,[1472,1,0,107,3,1,70,30,"Kris","","Enable a 5% chance of gaining 10% of the damage inflicted on an enemy as HP with each attack",89,10,0]
@@ -1520,7 +1519,7 @@ ItemOBJ = [
 //custom TalonRO [Update 2013-10-13]
 ,[1488,50,0,1,0,1,50,10,"Little Feather Hat","","If equipped together with Sharp Arrow, increases Critical Damage by 5%<br><br><b>[Refine Rate 7-10]</b><br>Increase Critical Damage by an additional 5%",5,2,70,5,0] // fixed 2016-11-02
 ,[1489,100,0,0,0,0,0,0,0,0,"Reduce Sharp Shooting casting time by 15%",0] //Little Feather Hat & Falken Blitz combo
-,[1490,50,0,5,0,0,100,1,"Sting Hat","",0,1,2,3,1,19,3,42,5,43,5,221,119,0]
+,[1490,50,0,5,0,0,100,0,"Sting Hat","",0,1,2,3,1,19,3,42,5,43,5,221,119,0]
 ,[1491,50,0,4,0,1,75,50,"New Ascended Black Dragon Hat","",0,12,3,19,5,193,1,0]
 ,[1492,50,0,5,0,1,75,60,"Powerful Ascended Black Dragon Hat",0,"When defeating a monster, add a chance to gain an Old Blue Box",12,4,19,7,193,1,0]
 ,[1493,50,0,5,0,1,75,70,"Ultimate Ascended Black Dragon Hat",0,"When defeating a monster, add a chance to gain an Old Blue Box<br>Increase EXP gained from non-Boss monsters by 5%",12,5,19,10,0]
@@ -1549,11 +1548,11 @@ ItemOBJ = [
 ,[1515,10,128,135,4,2,110,90,"Catapult","","If you have a higher level of Double Strafing, use that instead",221,124,0]
 ,[1516,4,127,180,4,1,160,90,"Cannon Spear","","Increases damage of Head Crush by 5% every 3rd refine",14,-100,221,125,0]
 ,[1517,64,122,1,0,1,40,90,"Assassin's Glove","","",10,3,14,20,0]
-,[1518,100,0,0,0,0,0,0,"Assassin's Glove & Krishna",0,0,9,-20,17,25,5083,25,0] //Assassin's Glove & Krishna
+,[1518,100,0,0,0,0,0,0,"Assassin's Glove & Krishna",0,0,9,-20,17,25,5083,25,5388,25,0] //Assassin's Glove & Krishna
 ,[1519,100,0,0,0,0,0,0,"Assassin's Glove & Chakram",0,0,10,2,15,-10,70,20,0] //Assassin's Glove & Chakram
 ,[1520,61,125,3,0,1,100,90,"Geffenia Water Book","","If Base INT is 99, adds MATK +1%, MaxHP + 800",4,1,19,2,0]
 ,[1521,100,0,0,0,0,0,0,"Geffenia Water Book & Lacrima Stick combo",0,"Reduces cast time of Storm Gust by 2% for every shield refine",0] //Geffenia Water Book & Lacrima Stick combo
-,[1522,18,0,170,3,0,0,0,"Lever Action Rifle [Rental]","",0,8,20,10,50,12,-5,80,30,0]
+,[1522,18,0,170,3,0,0,0,"Lever Action Rifle [Rental]","",0,8,20,10,50,12,-5,80,30,193,1,0]
 //custom TalonRO [Update 2014-09-02]
 ,[1523,51,0,3,0,0,100,10,"Evil Mask","","Drain 1 SP from user every 2 seconds<br><b>Mid and Low Headgear</b>",12,1,0]
 ,[1524,100,0,0,0,0,0,0,"Evil Mask & Succubus Horn",0,"ASPD +1<br>Drain 3 SP from user every 2 seconds",12,9,0] //Evil Mask & Succubus Horn
@@ -1589,7 +1588,7 @@ ItemOBJ = [
 ,[1546,51,124,0,0,0,10,60,"Hawk Eye","","<b>[Slottable at Chiqita NPC]</b>",5,1,25,3,0]
 ,[1547,50,0,8,0,1,100,10,"Drooping Permeter","",0,1168,20,1220,20,1255,20,1006,20,1234,20,1176,20,0]
 ,[1548,50,0,3,0,0,50,0,"Burning Crown","","Add a 1.5% chance of auto casting Level 3 Bash on an enemy when doing Physical damage.",63,20,42,20,0]
-,[1549,11,1001,190,4,1,150,95,"Guillotine Katar","",0,37,25,9,-30,5,2,5083,15,0]
+,[1549,11,1001,190,4,1,150,95,"Guillotine Katar","",0,37,25,9,-30,5,2,5083,15,5388,15,0]
 ,[1550,63,0,3,0,1,30,40,"Aegir Shoes","",0,13,500,14,50,194,1,0]
 ,[1551,62,0,2,0,1,30,40,"Aegir Cloak","",0,13,500,14,50,194,1,0]
 ,[1552,60,0,5,0,1,160,40,"Aegir Armor","",0,13,500,14,50,194,1,0]
@@ -1647,7 +1646,7 @@ ItemOBJ = [
 ,[1603,60,0,10,0,0,0,60,"Eden Group Uniform IV","","A suit that is only provided for members of the Eden Group. There are various sizes so tall people don't have to worry about it.",13,500,14,50,19,5,1,1,5,1,4,1,193,1,0]
 ,[1604,15,0,150,3,0,0,60,"Eden Group Whip I","","A whip that is made by the Eden Group. It is suitable for those who have more advanced experience as Dancers.",193,1,0]
 //End of Eden Gear
-,[1605,62,0,2,0,0,40,95,"Loki's Muffler","","A red scarf worn out from long use.",2,1,5083,5,193,1,0]
+,[1605,62,0,2,0,0,40,95,"Loki's Muffler","","A red scarf worn out from long use.",2,1,5083,5,5388,5,193,1,0]
 ,[1606,50,0,4,0,1,40,0,"Legionnaire Hat","","It's feel like you're on the marching band just by wearing this hat.",1,1,80,3,0]
 ,[1607,51,0,2,0,1,50,50,"Lude Mask","","Has a chance of obtaining Pumpkin Pie when killing a monster<br><b>Middle and Lower Headgear</b>",87,1,89,2,57,1,0]
 ,[1608,50,0,4,0,0,20,30,"Xmas Rudolph Hairband","","A Christmas hairband. Rudolf's excited mind for christmas is dwelled on it<br/>Movement speed +25% (non-stacking)",1,3,5,2,6,3,2,3,12,5,0]

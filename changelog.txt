@@ -1,4 +1,24 @@
 [Update 2018-06-25]
+- Added Phoenix Crown [0]
+- Issue #149: Proofreading [Slap]
+	Combat Knife [Rental]
+	Kaiser Knuckle [Rental]
+	Mace of Madness [Rental]
+	Nagan [Rental]
+	Book of Prayer [Rental]
+	Staff of Healing [Rental]
+	Survivor's Rod (DEX) [Rental]
+	Vesper Core 02 [Rental]
+	Bloodied Shackle Ball [Rental]
+	rooping Cat [Rental]
+	Masquerade [Rental]
+	Electric Guitar
+	Flying Angel
+	Deviruchi Headphones
+
+[Update 2018-06-25]
+- Fixed Nagan/Nagan [Renta] Double Attack rates [Slap]
+- Fixed Sonic Blow bonus on some items to affect soul-linked version [Slap]
 - Issue #149: Proofreading [Slap]
 	Pink Pajamas Hat
 	Blue Pajamas Hat
