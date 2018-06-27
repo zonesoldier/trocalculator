@@ -2905,8 +2905,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 
 	}
-	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS >= 5)
-		n_tok[37] += 2*(n_A_HEAD_DEF_PLUS-4);
+	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS > 5)
+		n_tok[37] += 2*(n_A_HEAD_DEF_PLUS-5);
 
 	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - [Slap] - 2018-06-07
 	if(EquipNumSearch(1649) && n_A_HEAD_DEF_PLUS > 6){
@@ -2999,8 +2999,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[51] += 30;
 		n_tok[56] += 30;
 	}
-	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS >= 5)
-		n_tok[57] += 2*(n_A_HEAD_DEF_PLUS-4);
+	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS > 5)
+		n_tok[57] += 2*(n_A_HEAD_DEF_PLUS-5);
 	if(n_A_PassSkill2[14] && n_A_JOB != 13 && n_A_JOB != 27)
 		n_tok[56] += n_A_PassSkill2[14] * 5;
 	if(SkillSearch(234))
