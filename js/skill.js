@@ -654,8 +654,8 @@ AutoSpellSkill = [
 [48,1,1,1,30,6],
 [49,0,29,1,0,1],
 [50,1,102,1,0,10],
-[51,1,130,5,0,1],
-[52,1,125,3,0,1],
+[51,1,130,5,5,1],
+[52,1,125,3,3,1],
 [53,1,162,3,0,6],
 [54,1,172,1,5,1],
 [55,0,28,3,0,1],
@@ -705,7 +705,7 @@ AutoSpellSkill = [
 [99,0,27,5,0,6],
 [100,0,209,5,0,6],
 [101,0,42,2,0,2],
-[102,0,25,1,0,6],
+[102,0,25,1,1,6],
 [103,1,51,1,0,1],
 [104,1,54,1,0,1],
 [105,1,56,1,0,1],
@@ -726,12 +726,12 @@ AutoSpellSkill = [
 [119,1,132,1,1,1],
 [120,1,124,2,2,4], //custom TalonRO Telekinetic Orb Sightrasher lv 3 on magic (2%)
 [121,1,124,3,3,4], //custom TalonRO Mental Stick & Telekinetic Orb combo Sightrasher lv 3 on magic (3%)
-[122,1,319,1,1,1], //custom TalonRO Sura's Rampage lv1 Heaven's Drive (1%) on physical attack
-[123,1,193,1,1,1], //custom TalonRO Sura's Rampage lv1 Investigate (1%) on physical attack
+[122,1,319,1,10,1], //custom TalonRO Sura's Rampage lv1 Heaven's Drive (10%) on physical attack
+[123,1,193,1,10,1], //custom TalonRO Sura's Rampage lv1 Investigate (10%) on physical attack
 [124,1,40,5,2,5], //custom TalonRO Catapult lv5 Double Strafe (2%) on attacking
 [125,1,260,2,10,1], //custom TalonRO Cannon Spear lv 2 Head Crush (10%) on physical attack
 [126,1,83,1,0.5,2], //custom TalonRO Krishna Sonic Blow lv 1 (small/0.5%) on physical melee attack
-[127,1,51,5,0,1,0,0], //When performing a ATK based attack, there's a low chance to cast the skill [Fire Bolt]Lv 5
+[127,1,51,5,1,5], //When performing a ATK/magic based attack, there's a low chance to cast the skill [Fire Bolt]Lv 5
 [128,1,27,1,5,4],
 [129,1,27,1,5,1],
 [130,1,440,1,0,1,0,1], //When dealing physical damage there is a chance to trigger Wink of Charm.

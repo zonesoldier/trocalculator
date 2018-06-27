@@ -594,7 +594,7 @@ function StAllCalc()
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
 	}
-	for(i=290;i<=339;i++){
+	for(i=290;i<=349;i++){
 		n_tok[i] = 0;
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
@@ -608,7 +608,6 @@ function StAllCalc()
 		n_A_ATK_w = Math.round(Math.floor(n_A_DEX/10) * Math.floor(n_A_DEX/10));
 		n_A_ATK   = n_A_DEX + n_A_ATK_w + Math.floor(n_A_STR / 5) + Math.floor(n_A_LUK / 5);
 	}
-
 
 	w=n_tok[17];
 
@@ -711,8 +710,9 @@ function StAllCalc()
 	if(CardNumSearch(528))
 		w += Math.floor(n_A_JobLV /5) * CardNumSearch(528);
 	//custom TalonRO Halloween Midas Whisper
-	if(SU_STR >= 80 && EquipNumSearch(1526))
+	if(SU_STR >= 80 && EquipNumSearch(1526)){
 		w += 30;
+	}
 
 	n_A_ATK += w;
 	w= 0;
@@ -1249,7 +1249,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_DEF -= Math.floor(SU_VIT / 30);
 	}
 
-	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - +1 DEF each refine past +4 until +8 [Nattwara]
+	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - +1 DEF each refine past +4 until +8 [Nattwara/Slap]
 	if(EquipNumSearch(1656) && n_A_HEAD_DEF_PLUS > 4)
 		n_A_DEFplus -= Math.min(n_A_HEAD_DEF_PLUS-4,4);
 
@@ -1950,6 +1950,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			C_ATK += 6;
 	}
 
+	if(SU_STR >= 80 && EquipNumSearch(1526)){
+		C_ATK += 30;
+	}
+
 	//custom TalonRO Incanation Samurai Card
 	if(CardNumSearch(255)){C_ATK += CardNumSearch(255)*65;}
 	//custom TalonRO Bloody Knight Card
@@ -1991,7 +1995,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_PassSkill8[i] == 50 && EquipNumSearch(1538)){C_ATK += 100;}
 	}
 
-	//outros gears que dão atk
+	//ATK bonus
 	if(EquipNumSearch(953)){C_ATK += ((n_A_JobLV*2)/7);}
 	if(EquipNumSearch(1261)){C_ATK += ((n_A_JobLV*2)/7);}
 	if(EquipNumSearch(666) && EquipNumSearch(721) && EquipNumSearch(701) && EquipNumSearch(722)){C_ATK += 18;}
@@ -2006,6 +2010,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1165)){C_ATK += 10 * SkillSearch(311);}
 	if(EquipNumSearch(1164) && SU_LUK >=90){C_ATK += 20;}
 	if(EquipNumSearch(1160) && SU_STR >=95){C_ATK += 20;}
+	if(EquipNumSearch(1496)){C_ATK += 10};
 	if(A_acces1.value == 728){C_ATK += 15;}
 	if(A_acces2.value == 728){C_ATK += 15;}
 	if(A_acces1.value == 525){C_ATK += 10;}
@@ -2081,9 +2086,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(n_A_PassSkill2[12]){P_ATK += Math.floor(P_ATK*0.05);}
 		}
 		//Maiden Hat - ZoneSoldier - 6/6/2018
-		//Increase ATK + 1% per upgrade past 7.
-	if(n_A_HEAD_DEF_PLUS > 7 && EquipNumSearch(1628)){
-		p_ATK += 1 * (n_A_HEAD_DEF_PLUS - 7);
+		//Increase ATK + 1% per upgrade past 6.
+	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
+		P_ATK += 1 * (n_A_HEAD_DEF_PLUS - 6);
 	}
 
 	//custom TalonRO Chewing Bubblegum +1% atk
@@ -2196,14 +2201,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	//Entweihen Hairband - zonesoldier - 6/2/2018
 	//Increase MATK + 1% per upgrade past 5th upgrade
-	if(n_A_HEAD_DEF_PLUS > 5 && EquipNumSearch(1620))
+	if(n_A_HEAD_DEF_PLUS > 4 && EquipNumSearch(1620))
 	{
-		w += 1 * (n_A_HEAD_DEF_PLUS - 5);
+		w += 1 * (n_A_HEAD_DEF_PLUS - 4);
 	}
 	//Maiden Hat - ZoneSoldier - 6/6/2018
-	//Increase MATK + 1% per upgrade past 7.
-	if(n_A_HEAD_DEF_PLUS > 7 && EquipNumSearch(1628)){
-		w += 1 * (n_A_HEAD_DEF_PLUS - 7);
+	//Increase MATK + 1% per upgrade past 6.
+	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
+		w += 1 * (n_A_HEAD_DEF_PLUS - 6);
 	}
 
 	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
@@ -2758,7 +2763,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1095))
 		n_tok[74] += 5;
 	if(EquipNumSearch(936))
-		n_tok[74] += (n_A_Weapon_ATKplus * 1);
+		n_tok[74] += (n_A_Weapon_ATKplus * 3 / 2);
 	//custom TalonRO Magical Booster & Staff of Piercing Combo
 	if(EquipNumSearch(1430)& EquipNumSearch(473)){
 		if(n_A_Weapon_ATKplus==10){
@@ -3018,7 +3023,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1556))
 		n_tok[55] += n_A_BODY_DEF_PLUS;
 
-	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - 1% less damage Neutral element attack for each refine past +4 until +8 [Nattwara]
+	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - 1% less damage Neutral element attack for each refine past +4 until +8 [Nattwara/Slap]
 	if(EquipNumSearch(1656) && n_A_HEAD_DEF_PLUS > 4)
 		n_tok[60] += Math.min(n_A_HEAD_DEF_PLUS-4,4);
 
@@ -3085,6 +3090,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(SkillSearch(421))
 		n_tok[78] += 20;
 
+	//maiden hat +1% heal per refine > 6 - [Slap] - 2018-06-25
+	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
+		n_tok[91] += n_A_HEAD_DEF_PLUS - 6;
+		n_tok[94] += n_A_HEAD_DEF_PLUS - 6;
+	}
+
 	if(EquipNumSearch(1085)){
 		if(n_A_Weapon_ATKplus >= 6){
 				n_tok[91] += 5 + (2 * (n_A_Weapon_ATKplus - 5));
@@ -3104,6 +3115,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[151] += 50;
 		if(wSPVS==3 || wSPVS==4 || wSPVS==5)
 			n_tok[156] += 50;
+	}
+	//custom TalonRO Recovery Light bHealPower refine * 3
+	if(EquipNumSearch(1511)){
+		n_tok[91] += Math.floor(n_A_Weapon_ATKplus * 3);
+		n_tok[94] += Math.floor(n_A_Weapon_ATKplus * 3);
 	}
 
 	//custom Talonro Chameleon Armor: [Swordsman, Merchant, Thief] DEF + 3 [Magician, Archer, Acolyte] MDEF + 5
@@ -3191,11 +3207,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_Weapon_ATKplus >= 6)
 			n_tok[317] += 5;
 	}
-	//Maiden Hat - ZoneSoldier - 6/6/2018
-	//Additional Heal effectiveness + 1% per upgrade past 7.
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1628)){
-		n_tok[317] =+ 1 * (n_A_HEAD_DEF_PLUS - 7);
-	}
+	// //Maiden Hat - ZoneSoldier - 6/6/2018
+	// //Additional Heal effectiveness + 1% per upgrade past 7.
+	// if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1628)){
+	// 	n_tok[317] =+ 1 * (n_A_HEAD_DEF_PLUS - 7);
+	// }
 
 	if(EquipNumSearch(1083)){
 		if(n_A_Weapon_ATKplus >= 6)
@@ -3246,9 +3262,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 			for(k=1; k<5; k++) {
 				if(TRO_MAGICALSKILL_ELEMENTS[k].indexOf(n_A_ActiveSkill) != -1){
-						for(j=0; j<10; j++) {
-							n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[k]) / 100) - 100; // ***
-						}
+					for(j=0; j<10; j++) {
+						n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[k]) / 100) - 100; // ***
+					}
 				}
 			}
 			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1 && n_A_Weapon_zokusei <= 5){
@@ -3258,7 +3274,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			}
 		}
 	}
-
+	//increase damage of skills based on element for n_tok[340-349] - [Slap]
+	for(i=0;i<TRO_MAGICALSKILL_ELEMENTS.length;i++){
+		if(TRO_MAGICALSKILL_ELEMENTS[i].indexOf(n_A_ActiveSkill) != -1){
+			for(j=0; j<10; j++) {
+				n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + n_tok[340 + i]) / 100) - 100; // ***
+			}
+		}
+	}
 
 	ClickB_Enemy();
 	KakutyouKansuu();
@@ -5381,9 +5404,6 @@ function KakutyouKansuu(){
 			var wX = 100+n_tok[94];
 			if(EquipNumSearch(644))
 				wX += n_A_Weapon_ATKplus * 1.5;
-			//custom TalonRO Recovery Light
-			if(EquipNumSearch(1511))
-				wX += Math.floor(n_A_Weapon_ATKplus * 3);
 			wkk16+="<table border=0>";
 			wkk16+="<tr><td><b>Sanctuary Level 1</b></td><td>"+Math.floor(100 * wX /100)+"</td></tr>";
 			wkk16+="<tr><td><b>Sanctuary Level 2</b></td><td>"+Math.floor(200 * wX /100)+"</td></tr>";
