@@ -3121,7 +3121,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[91] += Math.floor(n_A_Weapon_ATKplus * 3);
 		n_tok[94] += Math.floor(n_A_Weapon_ATKplus * 3);
 	}
-	
+
 	//custom Talonro Chameleon Armor: [Swordsman, Merchant, Thief] DEF + 3 [Magician, Archer, Acolyte] MDEF + 5
 	if(EquipNumSearch(986)){
 		wSPVS = n_A_JobSearch();
@@ -3274,7 +3274,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			}
 		}
 	}
-
+	//increase damage of skills based on element for n_tok[340-349] - [Slap]
 	for(i=0;i<TRO_MAGICALSKILL_ELEMENTS.length;i++){
 		if(TRO_MAGICALSKILL_ELEMENTS[i].indexOf(n_A_ActiveSkill) != -1){
 			for(j=0; j<10; j++) {
