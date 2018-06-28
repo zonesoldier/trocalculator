@@ -1234,7 +1234,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - [Slap] - 2016-06-07
 	if(EquipNumSearch(1641)){
-		n_A_DEF -= Math.floor(SU_VIT / 30);
+		n_A_DEF -= EquipNumSearch(1641) * Math.floor(SU_VIT / 30);
 	}
 
 	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - +1 DEF each refine past +4 until +8 [Nattwara/Slap]

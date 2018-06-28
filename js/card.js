@@ -549,6 +549,10 @@ cardOBJ = [
 ,[540,1,"Mini Octopus","When dealing magic damage there's a 1.5% chance to cause blind status",0]
 ];
 
+//array for card id linking to be filled
+cardID =[
+];
+
 CardNum = cardOBJ.length -1;
 
 CardSortOBJ = [

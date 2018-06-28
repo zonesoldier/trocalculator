@@ -1735,7 +1735,6 @@ ItemOBJ = [
 		1 = Equipment
 		2 = Item Set
 		3 = Unknown
-		4 = Not yet proofread/Placeholder
 */
 
 ItemID = [
