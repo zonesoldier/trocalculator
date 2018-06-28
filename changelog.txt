@@ -1,4 +1,4 @@
-[Update 2018-06-27]
+[Update 2018-06-28]
 - Wrote function to sort cards automatically [Slap]
 	Outputs an array in the same format as CardSortOBJ used previously, so no need to change anything that calls the array
 - Fixed some minor errors with cardOBJ inpreparation for adding ID linking to the item database [Slap]
