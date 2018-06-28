@@ -6046,19 +6046,22 @@ function calc()
 		else
 			wDA = 5;
 	}
+	if(EquipNumSearch(399) || EquipNumSearch(1348)){ //Nagan/Nagan [Rental] double attack - [Slap] -2018-06-26
+			wDA = 25;
+	}
 	if(EquipNumSearch(570) && n_A_WeaponType != 0){
 		if(SkillSearch(13) > 1)
 			wDA = SkillSearch(13) * 5;
 		else
 			wDA = 10;
 	}
-	//if(EquipNumSearch(399)){
-	if(EquipNumSearch(399) || EquipNumSearch(1348)){ //custom TalonRO rental: enable Double Attack lv 5 for Nagan R
-		if(SkillSearch(13) > 5)
-			wDA = SkillSearch(13) * 5;
-		else
-			wDA = 25;
-	}
+	// //if(EquipNumSearch(399)){
+	// if(EquipNumSearch(399) || EquipNumSearch(1348)){ //custom TalonRO rental: enable Double Attack lv 5 for Nagan R
+	// 	if(SkillSearch(13) > 5)
+	// 		wDA = SkillSearch(13) * 5;
+	// 	else
+	// 		wDA = 25;
+	// }
 	if(EquipNumSearch(1495)){ //custom TalonRO rental: enable Double Attack lv 1 for Snake Head Hat
 		if(SkillSearch(13) > 1)
 			wDA = SkillSearch(13) * 5;

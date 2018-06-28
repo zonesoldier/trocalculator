@@ -843,8 +843,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w -= 40 * n_A_BODY_DEF_PLUS;
 	if(EquipNumSearch(836))
 		w += n_A_BaseLV *10;
-	if(EquipNumSearch(859))
-		w += n_A_BaseLV *20;
 	if(n_A_Equip[8]==536){
 		wHPVS = n_A_JobSearch();
 		if(wHPVS==3 || wHPVS==4 || wHPVS==5)
@@ -856,12 +854,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 500 * CardNumSearch(477);
 	if(EquipNumSearch(883) && n_A_BaseLV <= 79)
 		w += 400 * EquipNumSearch(883);
-	if(EquipNumSearch(762))
-		w += 20 * n_A_BaseLV;
 	if(EquipNumSearch(1116) && n_A_JobSearch()==0)
 		w += 30;
-	if(EquipNumSearch(770))
-		w += 3 * n_A_BaseLV;
 	if(EquipNumSearch(986))
 		w += 7 * n_A_BaseLV;
 	if(n_A_Weapon_ATKplus >= 6 && EquipNumSearch(1168))
@@ -1094,8 +1088,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	if(SkillSearch(372))
 		w += 30 * SkillSearch(372);
-	if(EquipNumSearch(859))
-		w += n_A_BaseLV *5;
 	if(n_A_Equip[8]==536){
 		wSPVS = n_A_JobSearch();
 		if(wSPVS==1 || wSPVS==2 || wSPVS==6)
@@ -1105,12 +1097,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 300;
 	if(EquipNumSearch(883) && n_A_BaseLV <= 79)
 		w += 200 * EquipNumSearch(883);
-	if(EquipNumSearch(762))
-		w += 5 * n_A_BaseLV;
 	if(EquipNumSearch(1118) && n_A_JobSearch()==3)
 		w += 50;
-	if(EquipNumSearch(770))
-		w += n_A_JobLV;
 	if(EquipNumSearch(986))
 		w += Math.floor(0.5 * n_A_BaseLV);
 	if(n_A_Weapon_ATKplus >= 6 && EquipNumSearch(1168))
@@ -1949,7 +1937,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_HEAD_DEF_PLUS>7)
 			C_ATK += 6;
 	}
-
+	//vesper core 02 [rental] atk display
+	if(EquipNumSearch(1359)){
+		C_ATK += 5;
+	}
+	//bloodied shackle ball [rental] atk display
+	if(EquipNumSearch(1366)){
+		C_ATK += 30;
+	}
 	if(SU_STR >= 80 && EquipNumSearch(1526)){
 		C_ATK += 30;
 	}
@@ -2195,10 +2190,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//sag diadem
 	if(n_A_HEAD_DEF_PLUS == 10 && EquipNumSearch(1289)){
 		w += 4;}
-	//dress hat
-	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(565)){
-		w += 1;}
-
 	//Entweihen Hairband - zonesoldier - 6/2/2018
 	//Increase MATK + 1% per upgrade past 5th upgrade
 	if(n_A_HEAD_DEF_PLUS > 4 && EquipNumSearch(1620))
@@ -3039,10 +3030,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	if(EquipNumSearch(737))
 		n_tok[60] += n_A_SHOULDER_DEF_PLUS * 3;
-	if(EquipNumSearch(957)){
-		for(i=0;i<=9;i++)
-			n_tok[60+i] += 30;
-	}
 	if(n_A_SHOULDER_DEF_PLUS >= 9 && CardNumSearch(403))
 		n_tok[60] += 5;
 	if(n_A_HEAD_DEF_PLUS >= 8 && EquipNumSearch(1244))
@@ -3560,13 +3547,6 @@ function StPlusCalc()
 	//custom TalonRO Bayani Kalasag
 	if(EquipNumSearch(1543)){
 		n_tok[77] += Math.floor(n_A_BODY_DEF_PLUS /3);}
-	//dress hat
-	if(n_A_HEAD_DEF_PLUS >= 6 && EquipNumSearch(565)){
-		n_tok[80] += 1;
-		n_tok[91] += 1;
-		n_tok[94] += 1;
-	}
-
 	if(EquipNumSearch(1268))wSPC_INT += Math.floor(SU_INT/24);
 
 	if(CardNumSearch(405)){
@@ -5069,6 +5049,7 @@ function KakutyouKansuu(){
 		if(n_A_Equip[9] == 1111 && n_A_Equip[10] == 983){H_Bonus += 0.05;}//Glorious Ring Set[5% ]
 		if(EquipNumSearch(1104) && EquipNumSearch(1107) && EquipNumSearch(1110)){H_Bonus += 0.03;}//kvm set[3%]
 		if(EquipNumSearch(959) && EquipNumSearch(965) && EquipNumSearch(968)){H_Bonus += 0.1;}//merc bg set gear[10%]
+		if(EquipNumSearch(1484)){H_Bonus += 0.03;}
 		/*if(EquipNumSearch(958) && EquipNumSearch(965) && EquipNumSearch(968)){H_Bonus += 0.1;}//sword bg set gear[10%][Impossivel usar lawl] mas devia adicionar uma key de on/off disto*/
 		//slims não são afectadas por rank bonus em pitch nem heal stuff como bacso card
 
