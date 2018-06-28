@@ -1,3 +1,9 @@
+[Update 2018-06-28]
+- Wrote function to sort cards automatically [Slap]
+	Outputs an array in the same format as CardSortOBJ used previously, so no need to change anything that calls the array
+- Fixed some minor errors with cardOBJ inpreparation for adding ID linking to the item database [Slap]
+- Added empty cardID array with annotated types to be used for in linking to item database [Slap]
+
 [Update 2018-06-27]
 - Completed ItemID links for every single gear (not cards) currently in calc [Slap]
 - Removed some left over stuff in foot.js for removed items [Slap]
