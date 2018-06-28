@@ -1,21 +1,24 @@
 [Update 2018-06-27]
+- Completed ItemID links for every single gear (not cards) currently in calc [Slap]
+- Removed some left over stuff in foot.js for removed items [Slap]
 - Removed items [Slap]:
 	+1 DEF
 	Blue Poring Clip
 	Green Poring Clip
 	Pink Poring Clip
-	Yellow Poring Clip //consolidated under Poring Clip (Color)
+	Yellow Poring Clip //consolidated under Poring Clip (Colored)
 	Cute Red Ribbon
 	Cute Blue Ribbon
 	Cute White Ribbon
-	Cute Green Ribbon //consolidated under Ribbon (Color)
+	Cute Green Ribbon //consolidated under Ribbon (Colored)
 	Death Loop
 	Rune Spellstone
+	Asprika
 - Added items [Slap]:
 	Phoenix Crown [0]
 	Satanic Ring [Rental]
 	Satanic Bone Helm
-	Poring Clip (Color)
+	Poring Clip (Colored)
 	Phreeoni Hat
 	Zaha Doll Hat
 	Freya's Crown
@@ -23,6 +26,7 @@
 	Devil Whisper
 	Devil Whisper + Heart Hairpin set
 	Devil Whisper + Crescent Hairpin set
+	Tendrillion Hat
 - Issue #149: Proofreading [Slap]
 	Combat Knife [Rental]
 	Kaiser Knuckle [Rental]
@@ -53,6 +57,18 @@
 	Durga
 	Puente Robe
 	Sting Hat
+	Ivory Lance
+	Nepentis Bow
+	Cursed Lyre
+	Horn of Hillslion
+	Chello
+	Harp Of Nepentis
+	Stem Of Nepentis
+	Rope Of Unbalance
+	Shining Electric Bulb Hairband
+	A buttload of pvp stuff lolidk (958-983)
+	Naght Seiger Flame Manteau
+	Sprint Mail
 
 [Update 2018-06-26]
 - Fixed Nagan/Nagan [Renta] Double Attack rates [Slap]
@@ -320,12 +336,20 @@
 
 [Update 2018-06-12]
 - Removed extra comma in Eden Group Huuma Shuriken I that currently breaks the page [Slap]
-- Added items [Slap]:
+- Removed Items [Slap]:
+	Pumpkin Hat
+	Dress Hat
+	Bunny Band (ID 568)
+	Flapping Angel Wings
+	Steel Flower [Rental]
+	Breeze Whip
+- Added Items [Slap]:
 	Tanigumi Girl Doll
 	King Tiger Doll Hat
 	Drooping Bunny
 	Blue Tiger Mask
 	Red Tiger Mask
+	Drooping Maya
 - Issue #173: Fixed Luna Kaleet; [Kato]
 - Issue #172: Fixed some descriptions and other were OK; [Kato]
 - Issue #171: Added the ItemIDs, also added from 1527 to 1661; [Kato]
@@ -367,14 +391,10 @@
 	Wandering Minstrel Hat:
 		name (Legendary Minstrel Hat -> Wandering Minstrel Hat)
 		type (999 -> 50)
-	Pumpkin Hat: replaced with Tanigumi Girl Doll //Description of Pumpkin Hat items don't match their scripts; will add them back if they are reintroduced in-game
-	Dress Hat: replaced with King Tiger Doll Hat //Already present as Maiden Hat, which was recently added as a "missing" item
 	Satelite Hairclip: name (Satelite Hat -> Satelite Hairclip)
 	Moonowl Cap:
 		name (Moonlight Flower Hat -> Moonowl Cap)
 		updated description
-	Bunny Band (ID 568): replaced with Drooping Bunny //Already present as Sheila Hairnet
-	Flapping Angel Wings: replaced with Blue Tiger Mask //Already present as Flying Angel
 	Red Glasses:
 		weight (10 -> 0)
 		required lvl (10 -> 0)
@@ -388,7 +408,6 @@
 		fixed autocast
 	Pole Axe [Rental]: ATK (195 -> 159)
 	Rudra Bow [Rental]: name (Rudra's Bow [Rental] -> Rudra Bow [Rental])
-	Steel Flower [Rental]: replaced with Red Tiger Mask //Item does not exist
 	Eye Of Darkness:
 		required lvl (0 -> 50)
 		effect (added 154,100)
@@ -443,7 +462,6 @@
 	Hypnotist's Staff: slots ("1 / 2" -> 2) //Single slotted isn't obtainable and set only works with double slotted.
 	Bloody Roar: updated description
 	Red Flame Whip: weight (90 -> 70)
-	Breeze Whip: replaced with Drooping Maya //Item does not exist
 	Icicle Whip: weight (90 -> 70)
 	Gaia Whip: weight (90 -> 70)
 	Blade Whip: effect (added 138,3)
