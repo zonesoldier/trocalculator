@@ -743,7 +743,7 @@ ItemOBJ = [
 ,[720,64,1,0,0,0,10,33,"Morpheus's Bracelet","",0,4,1,16,5,0]
 ,[721,64,1,0,0,0,20,61,"Morrigane's Belt","",0,17,5,10,3,0]
 ,[722,64,1,0,0,0,20,61,"Morrigane's Pendant","",0,1,2,10,3,0]
-,[723,64,0,0,0,0,10,90,"Sacrifice Ring","",0,0]
+,[723,999,0,0,0,0,10,90,"Sacrifice Ring","",0,0]
 ,[724,64,52,1,0,0,30,30,"Shinobi Sash","",0,1,1,2,1,19,1,0]
 ,[725,64,1,0,0,0,400,0,"Bloodied Shackle Ball","",0,0]
 ,[726,64,72,1,0,0,100,0,"Armor Charm","",0,13,50,0]
@@ -884,7 +884,7 @@ ItemOBJ = [
 ,[861,100,0,0,0,0,0,0,"Lunatic Brooch set",0,0,215,1,14,50,76,10,0]
 ,[862,100,0,0,0,0,0,0,"Renown Archer set",0,"Reduce SP Consumption of skills by 25%",0]
 ,[863,9,63,50,4,1,50,70,"Holy Stick","",0,20,6,89,15,7037,25,7102,25,7104,25,0]
-,[864,50,0,0,0,0,10,0,"Autumn Leaves","",0,13,40,14,40,0]
+,[864,999,0,0,0,0,10,0,"Autumn Leaves","",0,13,40,14,40,0]
 ,[865,50,0,3,0,0,60,20,"Poring Tower","","Add a 2% chance of auto casting Greed around the user when attacking",6,3,193,1,0]
 ,[866,50,0,0,0,0,10,0,"Golden Tiara","",0,4,2,0]
 ,[867,64,0,0,0,0,0,0,"Dragon Ring [Rental]","",0,129,15,0]
@@ -898,8 +898,8 @@ ItemOBJ = [
 ,[875,50,0,0,0,0,30,0,"Coppola","",0,0]
 ,[876,50,1,1,0,0,10,20,"Yellow Bandana","",0,3,2,6,2,78,10,0]
 ,[877,64,0,0,0,0,0,0,"Hallow Ring [Rental]","",0,121,15,0]
-,[878,64,1,0,0,0,15,75,"Foot Ring","",0,3,3,75,10,0]
-,[879,64,1,0,0,0,10,75,"Navel Ring","",0,5,3,6,3,19,2,0]
+,[878,999,1,0,0,0,15,75,"Foot Ring","",0,3,3,75,10,0]
+,[879,999,1,0,0,0,10,75,"Navel Ring","",0,5,3,6,3,19,2,0]
 ,[880,64,0,0,0,0,0,0,"Insecticide Ring [Rental]","",0,124,15,0]
 ,[881,50,0,2,0,0,20,0,"Academy Freshman Hat","",0,13,80,14,10,0]
 ,[882,50,0,2,0,1,20,0,"Academy Completion Hat","",0,14,30,0]
@@ -1291,7 +1291,7 @@ ItemOBJ = [
 ,[1268,50,0,0,0,0,10,0,"Angel Blessing","","",66,5,6,1,0,]
 ,[1269,51,1,0,0,0,20,30,"Angel of Ghost","",0,87,2,89,2,0]
 ,[1270,52,0,0,0,0,5,0,"Angry Mouth","",0,74,3,0]
-,[1271,50,0,3,0,0,30,1,"Anniversary Hat","","",7,2,0]
+,[1271,999,0,3,0,0,30,1,"Anniversary Hat","","",7,2,0]
 ,[1272,50,0,3,0,0,30,70,"Aries Crown",0,"<b>[Refine Rate 7~10]</b><br>DEF + 1<br>VIT + 1",63,5,3,2,0]
 ,[1273,50,0,3,0,0,30,70,"Aries Diadem",0,"<b>[Refine Rate 7~10]</b><br>DEF + 1<br>VIT + 1",63,5,3,2,0]
 ,[1274,50,0,3,0,0,30,70,"Aquarius Crown",0,"<b>[Refine Rate 7~10]</b><br>DEF + 1<br>ATK + 15",64,5,9,10,1,2,0]
@@ -1683,7 +1683,7 @@ ItemOBJ = [
 ,[1638,100,0,0,0,0,0,0,"Advanced Angelic Protection + Advanced Angelic Cardigan","","",60,5,0]
 ,[1639,100,0,0,0,0,0,0,"Advanced Angelic Protection, Advanced Angel's Reincarnation, Advanced Angelic Guard, Advanced Angelic Cardigan & Advanced Angel's Kiss Equip","","",13,900,14,100,221,131,0]
 ,[1640,9,1053,30,3,1,100,50,"Staff of Thea","","A chance to recover 200 SP after using Heal<br><b>For every two upgrades:</b><br>Increase MATK by 1%",89,15,4,6,3,2,195,1,0]
-,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 base VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
+,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 base VIT reduces DEF by 1<br><br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
 ,[1642,51,54,2,0,0,10,50,"Advanced Binoculars","",0,5,1,25,1,0]
 ,[1643,52,81,1,0,0,10,70,"Advanced Assassin Mask","",0,10,1,70,1,0]
 ,[1644,51,56,2,0,0,30,50,"Advanced Welding Mask","","<b>Mid and Low Headgear</b>",5,1,6,1,63,10,0]
@@ -2462,7 +2462,7 @@ ItemID = [
 ,[720,1,2649]
 ,[721,1,2650]
 ,[722,1,2651]
-,[723,1,2653]
+,[723,3,0] //replace me
 ,[724,1,2654]
 ,[725,1,2655]
 ,[726,1,2656]
@@ -2603,7 +2603,7 @@ ItemID = [
 ,[861,2,1723,2718]
 ,[862,2,2726,2727]
 ,[863,1,1631]
-,[864,1,5189]
+,[864,3,0] //replace me
 ,[865,1,5255]
 ,[866,1,5179]
 ,[867,1,2762]
@@ -2617,8 +2617,8 @@ ItemID = [
 ,[875,1,5200]
 ,[876,1,5277]
 ,[877,1,2754]
-,[878,1,2737]
-,[879,1,2736]
+,[878,3,0] //replace me
+,[879,3,0] //replace me
 ,[880,1,2757]
 ,[881,1,5406]
 ,[882,1,5407]
@@ -2880,9 +2880,9 @@ ItemID = [
 ,[1138,3,0] //replace me
 ,[1139,3,0] //replace me
 ,[1140,3,0] //replace me
-,[1141,1,5317]
-,[1142,1,2443]
-,[1143,1,2775]
+,[1141,3,0] //replace me
+,[1142,3,0] //replace me
+,[1143,3,0] //replace me
 ,[1144,1,5485]
 ,[1145,1,5481]
 ,[1146,1,5547]
@@ -2940,7 +2940,7 @@ ItemID = [
 ,[1198,1,2788]
 ,[1199,1,2789]
 ,[1200,1,2790]
-,[1201,1,2764]
+,[1201,3,0] //replace me
 ,[1202,2,5040,5442]
 ,[1203,2,2399,2553]
 ,[1204,1,5502]
@@ -3010,7 +3010,7 @@ ItemID = [
 ,[1268,1,5207]
 ,[1269,1,5389]
 ,[1270,1,5521]
-,[1271,1,5486]
+,[1271,3,0] //replace me
 ,[1272,1,5546]
 ,[1273,1,5545]
 ,[1274,1,5513]
@@ -3402,7 +3402,7 @@ ItemID = [
 ,[1660,1,18819]
 ,[1661,1,5337]
 ,[1662,1,16015]
-]
+];
 
 ItemMax = ItemOBJ.length -1;
 
