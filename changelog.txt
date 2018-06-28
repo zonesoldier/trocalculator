@@ -1,4 +1,78 @@
-[Update 2018-06-25]
+[Update 2018-06-27]
+- Completed ItemID links for every single gear (not cards) currently in calc [Slap]
+- Removed some left over stuff in foot.js for removed items [Slap]
+- Removed items [Slap]:
+	+1 DEF
+	Blue Poring Clip
+	Green Poring Clip
+	Pink Poring Clip
+	Yellow Poring Clip //consolidated under Poring Clip (Colored)
+	Cute Red Ribbon
+	Cute Blue Ribbon
+	Cute White Ribbon
+	Cute Green Ribbon //consolidated under Ribbon (Colored)
+	Death Loop
+	Rune Spellstone
+	Asprika
+- Added items [Slap]:
+	Phoenix Crown [0]
+	Satanic Ring [Rental]
+	Satanic Bone Helm
+	Poring Clip (Colored)
+	Phreeoni Hat
+	Zaha Doll Hat
+	Freya's Crown
+	Mask Of Ifrit
+	Devil Whisper
+	Devil Whisper + Heart Hairpin set
+	Devil Whisper + Crescent Hairpin set
+	Tendrillion Hat
+- Issue #149: Proofreading [Slap]
+	Combat Knife [Rental]
+	Kaiser Knuckle [Rental]
+	Mace of Madness [Rental]
+	Nagan [Rental]
+	Book of Prayer [Rental]
+	Staff of Healing [Rental]
+	Survivor's Rod (DEX) [Rental]
+	Vesper Core 02 [Rental]
+	Bloodied Shackle Ball [Rental]
+	Drooping Cat [Rental]
+	Masquerade [Rental]
+	Electric Guitar
+	Flying Angel
+	Deviruchi Headphones
+	Ice Ear Wing
+	Choco Stick In Mouth
+	(Color) Poring Clip
+	(Color) Ribbon
+	Staff of Ord
+	Crown Parrots
+	Voina Dagger
+	Black Shiba Hat
+	Tendrillion Skin
+	Helm of Dragon
+	Valkyrie Circlet
+	Elven Bow
+	Durga
+	Puente Robe
+	Sting Hat
+	Ivory Lance
+	Nepentis Bow
+	Cursed Lyre
+	Horn of Hillslion
+	Chello
+	Harp Of Nepentis
+	Stem Of Nepentis
+	Rope Of Unbalance
+	Shining Electric Bulb Hairband
+	A buttload of pvp stuff lolidk (958-983)
+	Naght Seiger Flame Manteau
+	Sprint Mail
+
+[Update 2018-06-26]
+- Fixed Nagan/Nagan [Renta] Double Attack rates [Slap]
+- Fixed Sonic Blow bonus on some items to affect soul-linked version [Slap]
 - Issue #149: Proofreading [Slap]
 	Pink Pajamas Hat
 	Blue Pajamas Hat
@@ -17,6 +91,13 @@
 
 [Update 2018-06-25]
 - Added calculations for n_tok[340-349] [Slap]
+- Removed Items [Slap]:
+	Marvelous Pendant
+	Brynhild
+	Ring of Money Spirit
+	Resurrecting Soul
+	True Love
+	Mask of the Goddess
 - Added Items [Slap]:
 	Clamorous Ring [Rental]
 	Decussate Ring [Rental]
@@ -44,19 +125,13 @@
 	Nekomimi Kafra Headband: name
 	Fish in Mouth: description
 	Continental Guard Seal: name
-	Marvelous Pendant: replaced
 	Balloon Hat
 	Hunter Hat
-	Brynhild: replaced
 	Autumn Leaves
 	Golden Tiara
-	Ring of Money Spirit: replaced
-	Resurrecting Soul: replaced
 	SantaPoring Cap
-	True Love: replaced
 	Foot Ring
 	Navel Ring
-	Mask of the Goddess: replaced
 	Blue Ribbon [1]
 	Filir Hat
 	Tailring Doll Hat
@@ -88,6 +163,18 @@
 [Update 2018-06-24]
 - Changed description for 1000+skillid to 1000+mobid [Slap]
 - Added exceptions list for item set linking for items where only one of its slotted versions is active in the item set [Slap]
+- Removed Items [Slap]:
+	Balmung
+	Wing of Diablo
+	Aniversary Ring
+	Aniversary Hat
+	Christmas Ring
+	Majestic Goat [Rental]
+	HORIORUGORU
+	Quill Pen Ring
+	Quill Pen Ring set
+	Pointed Hat (White)
+	The Magic Ring Exit
 - Added Items [Slap]:
 	Drooping Domovoi
 	9th Anniversary Celebration Hat
@@ -101,16 +188,6 @@
 	Bloody Ring [Rental]
 	Chemical Ring [Rental]
 - Issue #149: Proofreading [Slap]
-	Balmung: replaced
-	Wing of Diablo: replaced
-	Aniversary Ring: replaced
-	Aniversary Hat: replaced
-	Christmas Ring: replaced
-	Majestic Goat [Rental]: replaced
-	HORIORUGORU: replaced
-	Quill Pen Ring: replaced
-	Quill Pen Ring set: replaced
-	Pointed Hat (White): replaced
 	Deviling Hat: weight, description
 	Baseball Cap [1]: name, weight
 	Drooping Ninetail: name, autospell
@@ -120,7 +197,6 @@
 	Cyclop's Eye: name
 	White Petal: name
 	Blessed Holy Robe: name
-	The Magic Ring Exit: replaced
 	Moonlight Ring: effect
 	Shark Hat: effect
 	Whikebine's Black Cat Ears: name
@@ -137,6 +213,9 @@
 	Ixion's Wings: name, description
 
 [Update 2018-06-23]
+- Removed Items [Slap]:
+	Sniping Suit R
+	RAKUMA //don't google "RAKUMA ragnarok online"
 - Added Items [Slap]:
 	Drooping Cat Crew
 	Elephant Hat (ID:5259)
@@ -146,10 +225,8 @@
 	Spiritual Ring + Clip/Rosary set: removed sanctuary bonus
 	Vanilmirth Hat: weight
 	Yellow Mage Hat: jobid, description
-	Sniping Suit R: replaced
 	Ulle's Cap set: added description
 	Phantom Spear set: added description
-	RAKUMA: replaced //don't google "RAKUMA ragnarok online"
 	Gauntlet of Hit: name
 	Blue Mage Hat: jobid, description
 	Bunny Slipper: name
@@ -259,12 +336,20 @@
 
 [Update 2018-06-12]
 - Removed extra comma in Eden Group Huuma Shuriken I that currently breaks the page [Slap]
-- Added items [Slap]:
+- Removed Items [Slap]:
+	Pumpkin Hat
+	Dress Hat
+	Bunny Band (ID 568)
+	Flapping Angel Wings
+	Steel Flower [Rental]
+	Breeze Whip
+- Added Items [Slap]:
 	Tanigumi Girl Doll
 	King Tiger Doll Hat
 	Drooping Bunny
 	Blue Tiger Mask
 	Red Tiger Mask
+	Drooping Maya
 - Issue #173: Fixed Luna Kaleet; [Kato]
 - Issue #172: Fixed some descriptions and other were OK; [Kato]
 - Issue #171: Added the ItemIDs, also added from 1527 to 1661; [Kato]
@@ -306,14 +391,10 @@
 	Wandering Minstrel Hat:
 		name (Legendary Minstrel Hat -> Wandering Minstrel Hat)
 		type (999 -> 50)
-	Pumpkin Hat: replaced with Tanigumi Girl Doll //Description of Pumpkin Hat items don't match their scripts; will add them back if they are reintroduced in-game
-	Dress Hat: replaced with King Tiger Doll Hat //Already present as Maiden Hat, which was recently added as a "missing" item
 	Satelite Hairclip: name (Satelite Hat -> Satelite Hairclip)
 	Moonowl Cap:
 		name (Moonlight Flower Hat -> Moonowl Cap)
 		updated description
-	Bunny Band (ID 568): replaced with Drooping Bunny //Already present as Sheila Hairnet
-	Flapping Angel Wings: replaced with Blue Tiger Mask //Already present as Flying Angel
 	Red Glasses:
 		weight (10 -> 0)
 		required lvl (10 -> 0)
@@ -327,7 +408,6 @@
 		fixed autocast
 	Pole Axe [Rental]: ATK (195 -> 159)
 	Rudra Bow [Rental]: name (Rudra's Bow [Rental] -> Rudra Bow [Rental])
-	Steel Flower [Rental]: replaced with Red Tiger Mask //Item does not exist
 	Eye Of Darkness:
 		required lvl (0 -> 50)
 		effect (added 154,100)
@@ -382,7 +462,6 @@
 	Hypnotist's Staff: slots ("1 / 2" -> 2) //Single slotted isn't obtainable and set only works with double slotted.
 	Bloody Roar: updated description
 	Red Flame Whip: weight (90 -> 70)
-	Breeze Whip: replaced with Drooping Maya //Item does not exist
 	Icicle Whip: weight (90 -> 70)
 	Gaia Whip: weight (90 -> 70)
 	Blade Whip: effect (added 138,3)
