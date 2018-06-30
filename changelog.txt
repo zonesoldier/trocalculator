@@ -1,3 +1,9 @@
+[Update 2018-06-30]
+- Removed items [Slap]:
+	Shiny Wig
+- Added items [Slap]:
+	Giant Crossbow
+	
 [Update 2018-06-29]
 - Added debugMode that removes class restrictions for all items [Slap]
 	Value can be edited in line 1 of head.js

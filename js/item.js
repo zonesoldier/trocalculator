@@ -1065,7 +1065,7 @@ ItemOBJ = [
 ,[1042,100,0,0,0,0,0,0,"Gentleman Set",0,"Refine rate increases MATK",5,2,4,2,76,5,0]
 ,[1043,50,0,4,0,1,80,30,"Executioner Hood","","[description translation missing - ItemID: 1043]",154,100,153,7,0]
 ,[1044,50,0,2,0,0,10,24,"Scarves","",0,19,2,9,5,0]
-,[1045,999,0,0,0,1,10,10,"Shiny Wig","",0,60,1,221,48,0]
+,[1045,10,124,120,4,2,90,92,"Giant Crossbow","","Increases the damage of Sharp Shooting by 3% for every refine level as well as increasing SP consumption of the skill<br>If Base AGI is 90 or higher, adds 2% ASPD",0]
 ,[1046,999,0,3,0,0,20,0,"Pumpkin Hat 2008","","[description translation missing - ItemID: 1046]",0]
 ,[1047,50,1,2,0,0,70,38,"Poporing Cap","",0,0]
 ,[1048,50,0,2,0,0,50,0,"Tiraya Bonnet","",0,3,2,0]
@@ -2783,7 +2783,7 @@ ItemID = [
 ,[1042,2,1629,5045]
 ,[1043,1,5304]
 ,[1044,1,5322]
-,[1045,3,0] //replace me
+,[1045,1,18110] //replace me
 ,[1046,3,0] //replace me
 ,[1047,1,5352]
 ,[1048,1,5395]
