@@ -2644,12 +2644,15 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 5;
 
 	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for ASPD] [Kato]
-		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
-			var vME = tRO_MalangdoEnchantment[i];
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
 
-			if(vME == 123) w += parseInt(vME.substr(-1));
-		}
+		if(vME == 123) w += parseInt(vME.substr(-1));
+	}
 
+	if(EquipNumSearch(1045) && SU_AGI >= 90){
+		w += 2;
+	}
 
 	n_A_ASPD += (200 - n_A_ASPD) * (w / 100);
 

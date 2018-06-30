@@ -6695,6 +6695,9 @@ function BaiCI(wBaiCI)
 					w1 += 35;
 					break;
 				}
+	if(n_A_ActiveSkill == 272 && EquipNumSearch(1045)){
+		w1 += n_A_Weapon_ATKplus * 3;
+	}
 	//custom TalonRO Imperial Guard: Shield Chain damage +2% each refine above 6
 	if(n_A_ActiveSkill == 324)
 		if(EquipNumSearch(1459))
