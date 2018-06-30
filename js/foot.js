@@ -2227,8 +2227,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
 
-	//Green Sheila Hairnet [Refine Rate 9+] Increase MATK by 2% [Refine Rate 10] Increase MATK by 2% - [Slap] - 2016-06-29
-	if(EquipNumSearch(1022)){
+	//Green/Pink Sheila Hairnet [Refine Rate 9+] Increase MATK by 2% [Refine Rate 10] Increase MATK by 2% - [Slap] - 2016-06-29
+	if(EquipNumSearch(1022) || EquipNumSearch(1026)){
 		if(n_A_HEAD_DEF_PLUS >= 9){
 			w += 2;
 		}

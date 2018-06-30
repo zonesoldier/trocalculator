@@ -3155,7 +3155,7 @@ ItemID = [
 ,[1414,1,5548]
 ,[1415,1,5767]
 ,[1416,1,18683]
-,[1417,1,5213,5763]
+,[1417,1,5213]
 ,[1418,2,18683,5213]
 ,[1419,1,18648]
 ,[1420,1,18505]
@@ -3808,7 +3808,7 @@ function Item_Setumei(nC1,nC2)
     */
    if(340 <= nC1 && nC1 <=349)
       CBIstr += "Increases damage of ["+ ZokuseiOBJ2[nC1-340] + "] magic by "+ nC2 +"%<BR>";
-   // //Recieve more Damage of [element] by %
+   // //Recieve more Damage of [element] by % //Use 60-69 with negative values instead
    // if(350 <= nC1 && nC1 <=359)
    //    CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
    //Physical damage against specific monster
