@@ -3321,12 +3321,12 @@ function ClickWeaponType(n){
 with(document.calcForm){
 	addSharpArrow = 0;
 	n_A_JobSet();
-	if(n_A_JobSearch()==2 || n_A_JobSearch()==4 || (n_A_JOB==45 && n!=0) || debugMode == 1){
+	if(n_A_JobSearch()==2 || n_A_JobSearch()==4 || (n_A_JOB==45 && n!=0)){
 		A_Arrow.style.visibility = "visible";
 		var len = A_Arrow.length;
 		for(var i=0;i<len;i++)
 			A_Arrow.options[0] = null;
-		if(n==10||n==14||n==15 || debugMode == 1){
+		if(n==10||n==14||n==15){
 			j=18;
 			for (i=0; i<=4; i++)
 				ArrowOBJ[i] = ArrowOBJbackup[i];
@@ -3408,7 +3408,8 @@ with(document.calcForm){
 		A_left_card.style.visibility = "hidden";
 		A_left_card.value = 0;
 	}
-	else{
+	//n_Nitou == 0 means no off-hand weapon for assasins equipped
+	else if(n_Nitou == 0){
 		A_LEFT_DEF_PLUS.style.visibility = "visible";
 		A_left.style.visibility = "visible"
 		A_left_card.style.visibility = "visible"
