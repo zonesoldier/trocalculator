@@ -3,7 +3,8 @@
 	Shiny Wig
 - Added items [Slap]:
 	Giant Crossbow
-	
+- Updated index.html to the release; [Kato]
+
 [Update 2018-06-29]
 - Added debugMode that removes class restrictions for all items [Slap]
 	Value can be edited in line 1 of head.js
@@ -200,7 +201,7 @@
 	Blue Ribbon [1]
 	Filir Hat
 	Tailring Doll Hat
-	Deporte Doll 
+	Deporte Doll
 	Ribbon Yellow
 	Squatting Poring
 	A buttload of PVP weapons or something idk lol (ID 897-931)
