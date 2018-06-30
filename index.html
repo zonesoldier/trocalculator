@@ -23,15 +23,26 @@
 <span class="navititle">Quick Navigation:</span> [<a href="./">PvM Calc</a>] [<a href="pvp.html">PvP Calc</a>] [<a href="https://forum.talonro.com/topic/28330-talonros-calculator-project/" target="_blank">Bug Report/Requests</a>]
 </div>
 <form name="calcForm">
-	
+
 <div class="topic-main" align="left">
 <div align="left" style="margin-left: 6.5px;margin-top: 6.5px;">
-  <strong style="color:#F00">NOTE: the calculator is player-made and while quite accurate, it is not a 100% representation of TalonRO's gameplay. It is highly discouraged to base in-game purchases on results obtained through this calculator.</strong>
+  <strong style="color:#F00">NOTE: the calculator while quite accurate, it is not a 100% representation of TalonRO's gameplay. It is highly discouraged to base in-game purchases on results obtained through this calculator.</strong>
 </div>
 <div class="topic">
 	<h3>CHANGELOG</h3>
 	<div class="pad">
-		<span><b>2018-06-08</b></span>
+		<span><b>2018-06-28</b></span>
+									<ul>
+										<li>Added Malangdo Enchantable Weapons plus restrictions;</li>
+										<li>Added Items/Combo Link to the tRO's database;</li>
+										<li>Various items fix (stats, jobs and descriptions);</li>
+										<li>Fixed Brewing formula;</li>
+										<li>Fixed Baby jobs stats and rebirths;</li>
+										<li>Fixed Steel Body, Marionette Control;</li>
+									</ul>
+									<br />
+		<span><b>2018-06-08</b> [<a href="javascript: void(0)" onclick="Toogle('changelog20180608',this)">Show</a>]</span>
+		<div style="display: none" id="changelog20180608">
 						<ul>
 								<li><b>ITEMS</b>
 									<ul>
@@ -70,6 +81,7 @@
 									</ul>
 							</li>
 						</ul>
+					</div>
 	</div>
 </div>
 <div class="topic" style="margin-left: 6.5px;">
@@ -875,6 +887,16 @@
 			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
 		  })();
+
+			function Toogle(x,t){
+				if (document.getElementById(x).style.display === "none") {
+        	document.getElementById(x).style.display = "block";
+					t.innerHTML = "Hide";
+		    } else {
+		    	document.getElementById(x).style.display = "none";
+					t.innerHTML = "Show";
+		    }
+			}
 		</script>
 		<!-- End Piwik Code -->
 </body></html>
