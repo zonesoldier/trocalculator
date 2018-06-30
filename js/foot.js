@@ -127,7 +127,7 @@ with(document.calcForm){
 			ClickJob(0);
 		}
 	}
-	//Add rebirth classes whhen adopted unchecked
+	//Add rebirth classes when adopted unchecked
 	else if(!adopted && A_JOB.options.length < 47){
 		for(i = 21; i < 41; i++){
 			option = document.createElement("option");
@@ -714,6 +714,7 @@ function StAllCalc()
 		w += 30;
 	}
 
+	//ATK% stuff
 	n_A_ATK += w;
 	w= 0;
 
@@ -739,6 +740,16 @@ function StAllCalc()
 	//custom TalonRO Angeling Fur Hat +1% atk
 	if(EquipNumSearch(1469))
 		w += n_A_ATK*.01;
+
+	//Green/Pink Sheila Hairnet [Refine Rate 9+] Increase ATK by 2% [Refine Rate 10] Increase ATK by 2% - [Slap] - 2016-06-29
+	if(EquipNumSearch(1022) || EquipNumSearch(1026)){
+		if(n_A_HEAD_DEF_PLUS >= 9){
+			w += n_A_ATK*.02;
+		}
+		if(n_A_HEAD_DEF_PLUS == 10){
+			w += n_A_ATK*.02;
+		}
+	}
 
 	w = Math.round(w);
 
@@ -1465,8 +1476,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 				n_A_MDEF += w_enchant+1;
 		}
 	}
-	//custom TalonRO Bayani Nightmare Bangungot Boots
-	if(EquipNumSearch(1544)){n_A_MDEF += n_A_SHOES_DEF_PLUS;}
+
+	//custom TalonRO Nightmare Bangungot Boots
+	if(EquipNumSearch(1544) || EquipNumSearch(1014)){
+		n_A_MDEF += n_A_SHOES_DEF_PLUS;
+	}
 
 	//custom TalonRO Alnoldi Card: +5 MDEF if refined above +9
 	if(n_A_LEFT_DEF_PLUS >= 9 && CardNumSearch(518))
@@ -2141,6 +2155,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	w = Math.floor(n_A_INT / 5);
 	n_A_MATK[2] = n_A_INT + w * w;
 
+	//MATK% stuff
 	w = 100;
 
 	w += n_tok[89];
@@ -2210,6 +2225,27 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
 	if(EquipNumSearch(1645)){
 		w += Math.floor(n_A_HEAD_DEF_PLUS / 2);
+	}
+
+	//Green/Pink Sheila Hairnet [Refine Rate 9+] Increase MATK by 2% [Refine Rate 10] Increase MATK by 2% - [Slap] - 2016-06-29
+	if(EquipNumSearch(1022) || EquipNumSearch(1026)){
+		if(n_A_HEAD_DEF_PLUS >= 9){
+			w += 2;
+		}
+		if(n_A_HEAD_DEF_PLUS == 10){
+			w += 2;
+		}
+	}
+
+	//Orange/Blue Sheila Hairnet [Refine Rate 9+] Increase Physical Damage and MATK by 2% [Refine Rate 10] Cast Time - 10% - [Slap] - 2016-06-29
+	if(EquipNumSearch(1024) || EquipNumSearch(1025)){
+		if(n_A_HEAD_DEF_PLUS >= 9){
+			n_tok[80] += 2;
+			w += 2;
+		}
+		if(n_A_HEAD_DEF_PLUS == 10){
+			n_tok[73] -= 10;
+		}
 	}
 
 	//Custom TalonRO - 2018-06-07 - Enhanced Hat of the Sun God [1] - MATK part [Nattwara]
@@ -3309,7 +3345,7 @@ function StPlusCalc()
 	wSPC_LUK += StPlusCalc2(6) + wSPCall;
 
 	wSPC_DEX += SkillSearch(38);
-	if(SkillSearch(68) || TimeItemNumSearch(17))
+	if(SkillSearch(68))
 		wSPC_STR += 4;
 	wSPC_STR += SkillSearch(146);
 	wSPC_STR += SkillSearch(404);
@@ -3541,12 +3577,14 @@ function StPlusCalc()
 	//Phoenix Crown
 	if(EquipNumSearch(872)){
 		n_tok[77] += n_A_HEAD_DEF_PLUS;}
-	//custom TalonRO Bayani Bakonawa Scale Armor
-	if(EquipNumSearch(1541)){
-		n_tok[77] += Math.floor(n_A_BODY_DEF_PLUS /2);}
-	//custom TalonRO Bayani Kalasag
-	if(EquipNumSearch(1543)){
-		n_tok[77] += Math.floor(n_A_BODY_DEF_PLUS /3);}
+	//custom TalonRO Bakonawa Scale Armor
+	if(EquipNumSearch(1541) || EquipNumSearch(1015)){
+		n_tok[77] += Math.floor(n_A_BODY_DEF_PLUS /2);
+	}
+	//custom TalonRO Kalasag
+	if(EquipNumSearch(1543) || EquipNumSearch(1013)){
+		n_tok[77] += Math.floor(n_A_LEFT_DEF_PLUS /3);
+	}
 	if(EquipNumSearch(1268))wSPC_INT += Math.floor(SU_INT/24);
 
 	if(CardNumSearch(405)){
@@ -3790,48 +3828,42 @@ function StPlusCalc()
 
 	//Marionette stat compensation rework - [Slap] - 2018-06-17
 	}else if(n_A_PassSkill3[11] && n_A_PassSkill3[18]){
-		// if(n_A_STR + wSPC_STR < 99){
-			if(n_A_STR + w2[0] + Math.floor(n_A_PassSkill3[12]/2) < 99)
+			if(n_A_STR + w2[0] + Math.floor(n_A_PassSkill3[12]/2) < 99){
 				wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
-			else
+			}
+			else{
 				wSPC_STR += Math.max((99 - n_A_STR - w2[0]), 0);
-		// }
-		// if(n_A_AGI + wSPC_AGI < 99){
-			if(n_A_AGI + w2[1] + Math.floor(n_A_PassSkill3[13]/2) < 99)
+			}
+			if(n_A_AGI + w2[1] + Math.floor(n_A_PassSkill3[13]/2) < 99){
 				wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
-			else
+			}
+			else{
 				wSPC_AGI += Math.max((99 - n_A_AGI - w2[1]), 0);
-		// }
-		// if(n_A_VIT + wSPC_VIT < 99){
-			if(n_A_VIT + w2[2] + Math.floor(n_A_PassSkill3[14]/2) < 99)
+			}
+			if(n_A_VIT + w2[2] + Math.floor(n_A_PassSkill3[14]/2) < 99){
 				wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
-			else
+			}
+			else{
 				wSPC_VIT += Math.max((99 - n_A_VIT - w2[2]), 0);
-		// }
-		// if(n_A_INT + wSPC_INT < 99){
-			if(n_A_INT + w2[3] + Math.floor(n_A_PassSkill3[15]/2) < 99)
+			}
+			if(n_A_INT + w2[3] + Math.floor(n_A_PassSkill3[15]/2) < 99){
 				wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
-			else
+			}
+			else{
 				wSPC_INT += Math.max((99 - n_A_INT - w2[3]), 0);
-		// }
-		// if(n_A_DEX + wSPC_DEX < 99){
-			if(n_A_DEX + w2[4] + Math.floor(n_A_PassSkill3[16]/2) < 99)
+			}
+			if(n_A_DEX + w2[4] + Math.floor(n_A_PassSkill3[16]/2) < 99){
 				wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
-			else
+			}
+			else{
 				wSPC_DEX += Math.max((99 - n_A_DEX - w2[4]), 0);
-		// }
-		// if(n_A_LUK + wSPC_LUK < 99){
-			if(n_A_LUK + w2[5] + Math.floor(n_A_PassSkill3[17]/2) < 99)
+			}
+			if(n_A_LUK + w2[5] + Math.floor(n_A_PassSkill3[17]/2) < 99){
 				wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
-			else
+			}
+			else{
 				wSPC_LUK += Math.max((99 - n_A_LUK - w2[5]), 0);
-		// }
-		// wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
-		// wSPC_AGI += Math.floor(n_A_PassSkill3[13]/2);
-		// wSPC_VIT += Math.floor(n_A_PassSkill3[14]/2);
-		// wSPC_INT += Math.floor(n_A_PassSkill3[15]/2);
-		// wSPC_DEX += Math.floor(n_A_PassSkill3[16]/2);
-		// wSPC_LUK += Math.floor(n_A_PassSkill3[17]/2);
+			}
 	}
 
 	//CUSTOM (1st Transcendent Spirit)
@@ -4108,7 +4140,7 @@ function WeaponSet()
 	work = new Array();
 	j = 0;
 	for (i=0;i<=ItemMax; i++)	{
-		if(ItemOBJ[i][1] == n_A_WeaponType && JobEquipItemSearch(ItemOBJ[i][2]) == 1){
+		if(ItemOBJ[i][1] == n_A_WeaponType && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || debugMode == 1)){
 			work[j] = i;
 			j++;
 
@@ -4214,35 +4246,35 @@ with(document.calcForm){
 	for(i=0;i<=7;i++)
 		wsj[i]=0;
 	for(i=0;i<=ItemMax; i++){
-		if(ItemOBJ[i][1] == 50 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || SuperNoviceFullWeaponCHECK)){
+		if(ItemOBJ[i][1] == 50 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || SuperNoviceFullWeaponCHECK || debugMode == 1)){
 			workB[0][wsj[0]] = i;
 			wsj[0]++;
 		}
-		else if(ItemOBJ[i][1] == 51 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || SuperNoviceFullWeaponCHECK)){
+		else if(ItemOBJ[i][1] == 51 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || SuperNoviceFullWeaponCHECK || debugMode == 1)){
 			workB[1][wsj[1]] = i;
 			wsj[1]++;
 		}
-		else if(ItemOBJ[i][1] == 52 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || SuperNoviceFullWeaponCHECK)){
+		else if(ItemOBJ[i][1] == 52 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || SuperNoviceFullWeaponCHECK || debugMode == 1)){
 			workB[2][wsj[2]] = i;
 			wsj[2]++;
 		}
-		else if(ItemOBJ[i][1] == 61 && JobEquipItemSearch(ItemOBJ[i][2]) == 1){
+		else if(ItemOBJ[i][1] == 61 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || debugMode == 1)){
 			workB[3][wsj[3]] = i;
 			wsj[3]++;
 		}
-		else if(ItemOBJ[i][1] == 60 && JobEquipItemSearch(ItemOBJ[i][2]) == 1){
+		else if(ItemOBJ[i][1] == 60 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || debugMode == 1)){
 			workB[4][wsj[4]] = i;
 			wsj[4]++;
 		}
-		else if(ItemOBJ[i][1] == 62 && JobEquipItemSearch(ItemOBJ[i][2]) == 1){
+		else if(ItemOBJ[i][1] == 62 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || debugMode == 1)){
 			workB[5][wsj[5]] = i;
 			wsj[5]++;
 		}
-		else if(ItemOBJ[i][1] == 63 && JobEquipItemSearch(ItemOBJ[i][2]) == 1){
+		else if(ItemOBJ[i][1] == 63 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || debugMode == 1)){
 			workB[6][wsj[6]] = i;
 			wsj[6]++;
 		}
-		else if(ItemOBJ[i][1] == 64 && JobEquipItemSearch(ItemOBJ[i][2]) == 1){
+		else if(ItemOBJ[i][1] == 64 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || debugMode == 1)){
 			workB[7][wsj[7]] = i;
 			wsj[7]++;
 		}
@@ -6232,7 +6264,7 @@ with(document.calcForm){
 	SaveData = document.cookie.split("; ");
 	wStr = "";
 
-	//clear baby job status before load
+	//clear baby job status before load - [Slap] - 2018-06-22
 	if(A_youshi.checked){
 		document.getElementById("lab1").checked = false;
 		BabyJobs();

@@ -170,7 +170,7 @@ cardOBJ = [
 ,[153,999,"0",0,0]
 ,[154,3,"Race Reduction 30%",0,50,30,51,30,52,30,53,30,54,30,55,30,56,30,57,30,58,30,59,30,0]
 ,[155,999,"0",0,0]
-,[156,1,"Crit Dmg+10%,Crit+7",0,70,10,10,7,0]
+,[156,11,"Crit Dmg+10%,Crit+7",0,70,10,10,7,0]
 ,[157,1,"Metaling",0,221,54,0]
 ,[158,1,"Eremes Guile",0,117,10,0]
 ,[159,1,"Howard Alt-Eisen",0,8,30,12,-5,0]
@@ -1124,10 +1124,11 @@ CardNum = cardOBJ.length -1;
 //Sort cards alphabetically - [Slap] - 2018-06-28
 function sortCards(inputArray){
 	var tempArray = [[0],[0],[0],[0],[0],[0],[0],[0]];
-	var enchants = [];
+	var elementalStone = [];
 	var cardSpecial = [];
+	//sort all cards
 	for(i = 1; i < inputArray.length; i++){
-		if(inputArray[i][1] > 0 && inputArray[i][1] < 8){
+		if(inputArray[i][1] >= 1 && inputArray[i][1] <= 7){
 			for(j = tempArray[inputArray[i][1]].length - 1; j >= 0; j--){
 				if(inputArray[i][2] > inputArray[tempArray[inputArray[i][1]][j]][2]){
 					tempArray[inputArray[i][1]].splice(j + 1, 0, inputArray[i][0]);
@@ -1138,19 +1139,23 @@ function sortCards(inputArray){
 				}
 			}
 		}
+		//filter out elemental stone
 		else if(inputArray[i][1] == 10){
-			enchants.push(inputArray[i][0]);
+			elementalStone.push(inputArray[i][0]);
 		}
+		//filter out special
 		else if(inputArray[i][1] == 11){
 			cardSpecial.push(inputArray[i][0]);
 		}
 	}
+	//add special to weapon cards list
 	for(i = 0; i < cardSpecial.length; i++){
 		tempArray[0].splice(i + 1, 0, cardSpecial[i]);
 		tempArray[1].splice(i + 1, 0, cardSpecial[i]);
 	}
-	for(i = 0; i < enchants.length; i++){
-		tempArray[0].splice(i + 1, 0, enchants[i]);
+	//add elemental stone to 1st weapon card slot list
+	for(i = 0; i < elementalStone.length; i++){
+		tempArray[0].splice(i + 1, 0, elementalStone[i]);
 	}
 	for(i = 0; i < tempArray.length; i++){
 		tempArray[i].push("NULL");
