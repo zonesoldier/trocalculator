@@ -740,9 +740,8 @@ function StAllCalc()
 	//custom TalonRO Angeling Fur Hat +1% atk
 	if(EquipNumSearch(1469))
 		w += n_A_ATK*.01;
-
-	//Green/Pink Sheila Hairnet [Refine Rate 9+] Increase ATK by 2% [Refine Rate 10] Increase ATK by 2% - [Slap] - 2016-06-29
-	if(EquipNumSearch(1022) || EquipNumSearch(1026)){
+	//Yellow/Green/Pink Sheila Hairnet [Refine Rate 9+] Increase ATK by 2% [Refine Rate 10] Increase ATK by 2% - [Slap] - 2016-06-29
+	if(EquipNumSearch(1022) || EquipNumSearch(1026) || EquipNumSearch(1073)){
 		if(n_A_HEAD_DEF_PLUS >= 9){
 			w += n_A_ATK*.02;
 		}
@@ -871,8 +870,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 7 * n_A_BaseLV;
 	if(n_A_Weapon_ATKplus >= 6 && EquipNumSearch(1168))
 		w -= 200*(n_A_Weapon_ATKplus-5);
-	if(EquipNumSearch(1058)){
-		w += n_A_BaseLV*10;}
 	//custom TalonRO Chronos fix, +50 HP instead of SP each 2 refine levels
 	if(EquipNumSearch(1172))
 		w += 50 * Math.floor(n_A_Weapon_ATKplus / 2);
@@ -893,6 +890,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 	}
 
+	//tiraya bonnet + 20hp per refine - [Slap] 2018-07-02
+	if(EquipNumSearch(1048)){
+		w += n_A_HEAD_DEF_PLUS * 20;
+	}
 	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for MaxHP] [Kato]
 	for(i=0;i<tRO_MalangdoEnchantment.length;i++) {
 		var vME = tRO_MalangdoEnchantment[i];
@@ -1116,8 +1117,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w -= 100*(n_A_Weapon_ATKplus-5);
 	if(EquipNumSearch(1193))
 		w += Math.floor(n_A_BaseLV / 3) + n_A_SHOULDER_DEF_PLUS * 10;
-	if(EquipNumSearch(1058)){
-		w += n_A_BaseLV*2;}
 
 	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - [Slap] - 2018-06-07
 	if(EquipNumSearch(1646)){
@@ -2216,19 +2215,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
 		w += 1 * (n_A_HEAD_DEF_PLUS - 6);
 	}
-
 	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
 	if(EquipNumSearch(1640)){
 		w += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
-
 	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
 	if(EquipNumSearch(1645)){
 		w += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
-
-	//Green/Pink Sheila Hairnet [Refine Rate 9+] Increase MATK by 2% [Refine Rate 10] Increase MATK by 2% - [Slap] - 2016-06-29
-	if(EquipNumSearch(1022) || EquipNumSearch(1026)){
+	//Yellow/Green/Pink Sheila Hairnet [Refine Rate 9+] Increase MATK by 2% [Refine Rate 10] Increase MATK by 2% - [Slap] - 2016-06-29
+	if(EquipNumSearch(1022) || EquipNumSearch(1026) || EquipNumSearch(1073)){
 		if(n_A_HEAD_DEF_PLUS >= 9){
 			w += 2;
 		}
@@ -2236,9 +2232,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			w += 2;
 		}
 	}
-
-	//Orange/Blue Sheila Hairnet [Refine Rate 9+] Increase Physical Damage and MATK by 2% [Refine Rate 10] Cast Time - 10% - [Slap] - 2016-06-29
-	if(EquipNumSearch(1024) || EquipNumSearch(1025)){
+	//Silver/Violet/Orange/Blue Sheila Hairnet [Refine Rate 9+] Increase Physical Damage and MATK by 2% [Refine Rate 10] Cast Time - 10% - [Slap] - 2016-06-29
+	if(EquipNumSearch(1024) || EquipNumSearch(1025) || EquipNumSearch(1062) || EquipNumSearch(1074)){
 		if(n_A_HEAD_DEF_PLUS >= 9){
 			n_tok[80] += 2;
 			w += 2;
@@ -2247,7 +2242,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[73] -= 10;
 		}
 	}
-
 	//Custom TalonRO - 2018-06-07 - Enhanced Hat of the Sun God [1] - MATK part [Nattwara]
 	/*
 	[Refine Rate 5+]
@@ -2732,7 +2726,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w -= 50;
 	if(EquipNumSearch(1005)& EquipNumSearch(442)){
 		w -= (n_A_Weapon_ATKplus/2);}
-
+	//parade hat [refine >= 6] -5 cast time - [Slap] 2018-07-02
+	if(EquipNumSearch(1036) && n_A_HEAD_DEF_PLUS >= 6){
+		w -= 5;
+	}
 	//custom TalonRO SQI Bonus Mjolnir: 30% cast reduction with Charge Attack
 	if(n_A_ActiveSkill == 308)
 		if(EquipNumSearch(84))
@@ -2786,8 +2783,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	if(n_A_Weapon_ATKplus >= 9 && EquipNumSearch(934))
 		n_tok[74] += 20;
-	if(EquipNumSearch(1036) && n_A_HEAD_DEF_PLUS >= 6)
-		n_tok[74] += n_A_HEAD_DEF_PLUS - 5;
 	if(n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1084))
 		n_tok[74] += 5;
 	if(n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1095))

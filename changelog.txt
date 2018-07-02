@@ -1,3 +1,42 @@
+[Update 2018-07-02]
+- Removed items [Slap]:
+	Pumpkin Hat 2008
+	Cute Santa Hat
+	Louise's Santa Hat
+	Fanta Zero Lemon Can
+	Fantastic Wig
+	Cruiser Cap
+- Added items [Slap]:
+	Green Apple Hat
+	Observer
+	Violet Sheila Hairnet
+	Fanta Can Hats
+	Yellow Sheila Hairnet
+	Silver Sheila Hairnet
+- Issue #149: Proofreading [Slap]
+	Wind Milestone
+	Parade Hat
+	Hairband  of Reginleif
+	Kerchief
+	Poporing Hat
+	Tiraya Bonnet
+	Dark Knight Mask A
+	Dark Knight Belt A
+	Dark Knight Glove A
+	Feather Of Bizofnil
+	Shaman's Coif
+	Shaman Ring
+	Shaman Set
+	Poring Cake Hat
+	Fish Head Hat
+	Diadem
+	Yoyo Hat
+	Grand Peco Hairband
+	Helm Of Abyss
+	Sky Hat
+	Sakura Mist Hat
+	Sakura Milk Tea Hat
+
 [Update 2018-06-30]
 - Removed items [Slap]:
 	Shiny Wig
