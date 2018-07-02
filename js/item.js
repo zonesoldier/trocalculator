@@ -743,7 +743,7 @@ ItemOBJ = [
 ,[720,64,1,0,0,0,10,33,"Morpheus's Bracelet","",0,4,1,16,5,0]
 ,[721,64,1,0,0,0,20,61,"Morrigane's Belt","",0,17,5,10,3,0]
 ,[722,64,1,0,0,0,20,61,"Morrigane's Pendant","",0,1,2,10,3,0]
-,[723,64,0,0,0,0,10,90,"Sacrifice Ring","",0,0]
+,[723,999,0,0,0,0,10,90,"Sacrifice Ring","",0,0]
 ,[724,64,52,1,0,0,30,30,"Shinobi Sash","",0,1,1,2,1,19,1,0]
 ,[725,64,1,0,0,0,400,0,"Bloodied Shackle Ball","",0,0]
 ,[726,64,72,1,0,0,100,0,"Armor Charm","",0,13,50,0]
@@ -810,7 +810,7 @@ ItemOBJ = [
 ,[787,50,0,3,0,1,20,0,"Baseball Cap [1]","",0,0]
 ,[788,50,0,0,0,0,10,0,"Silver Tiara","",0,4,2,0]
 ,[789,50,0,1,0,0,30,20,"Drooping Ninetail","",0,2,1,5,1,221,47,0]
-,[790,50,0,0,0,1,10,10,"Dokebi's Wig (ID:5258)","",0,60,1,221,48,0]
+,[790,50,0,0,0,1,10,10,"Dokebi's Wig (ID:5258)","","<b>Upper and Middle Headgear</b>",60,1,221,48,0]
 ,[791,50,0,2,0,1,80,0,"Chullos","","<b>Upper and Middle Headgear</b>",152,10,0]
 ,[792,50,51,8,0,0,120,75,"Close Helmet","","<b>Upper, Middle, and Lower Headgear</b>",3,3,15,3,0]
 ,[793,51,1,0,0,0,20,75,"Cyclop's Eye","",0,14,50,0]
@@ -884,7 +884,7 @@ ItemOBJ = [
 ,[861,100,0,0,0,0,0,0,"Lunatic Brooch set",0,0,215,1,14,50,76,10,0]
 ,[862,100,0,0,0,0,0,0,"Renown Archer set",0,"Reduce SP Consumption of skills by 25%",0]
 ,[863,9,63,50,4,1,50,70,"Holy Stick","",0,20,6,89,15,7037,25,7102,25,7104,25,0]
-,[864,50,0,0,0,0,10,0,"Autumn Leaves","",0,13,40,14,40,0]
+,[864,999,0,0,0,0,10,0,"Autumn Leaves","",0,13,40,14,40,0]
 ,[865,50,0,3,0,0,60,20,"Poring Tower","","Add a 2% chance of auto casting Greed around the user when attacking",6,3,193,1,0]
 ,[866,50,0,0,0,0,10,0,"Golden Tiara","",0,4,2,0]
 ,[867,64,0,0,0,0,0,0,"Dragon Ring [Rental]","",0,129,15,0]
@@ -898,8 +898,8 @@ ItemOBJ = [
 ,[875,50,0,0,0,0,30,0,"Coppola","",0,0]
 ,[876,50,1,1,0,0,10,20,"Yellow Bandana","",0,3,2,6,2,78,10,0]
 ,[877,64,0,0,0,0,0,0,"Hallow Ring [Rental]","",0,121,15,0]
-,[878,64,1,0,0,0,15,75,"Foot Ring","",0,3,3,75,10,0]
-,[879,64,1,0,0,0,10,75,"Navel Ring","",0,5,3,6,3,19,2,0]
+,[878,999,1,0,0,0,15,75,"Foot Ring","",0,3,3,75,10,0]
+,[879,999,1,0,0,0,10,75,"Navel Ring","",0,5,3,6,3,19,2,0]
 ,[880,64,0,0,0,0,0,0,"Insecticide Ring [Rental]","",0,124,15,0]
 ,[881,50,0,2,0,0,20,0,"Academy Freshman Hat","",0,13,80,14,10,0]
 ,[882,50,0,2,0,1,20,0,"Academy Completion Hat","",0,14,30,0]
@@ -1009,51 +1009,51 @@ ItemOBJ = [
 ,[986,60,1079,5,0,0,170,70,"Chameleon Armor","","Increases HP and SP depending by base level.<br>Adds a chance immune from all magic skill for 2 sec When receiving magical attack.<br><b>[Swordman, Merchant, Thief Class]</b><br>DEF + 3<br><b>[Mage, Archer, Acolyte Class]</b><br>MDEF + 5",0]
 ,[987,60,1079,3,0,1,100,70,"Sprint Mail","",0,3,1,75,5,91,3,92,3,0]
 ,[988,60,122,4,0,1,30,70,"Gandora","",0,2,1,9,5,12,2,0]
-,[989,60,1079,5,0,1,100,0,"Armor of Naga","","[description translation missing - ItemID: 989]",19,2,0]
-,[990,60,1054,6,0,1,40,75,"Improved Tights","",0,19,2,11,3,0]
+,[989,60,1079,5,0,1,100,70,"Naga Scale Armor","","Adds a chance ATK + 20 for 10 seconds when dealing physical damage",19,2,0]
+,[990,60,1054,6,0,1,40,75,"Refined Tights","",0,19,2,11,3,0]
 ,[991,60,1051,9,0,1,350,82,"Life Link","",0,3,2,19,5,75,50,0]
 ,[992,61,1051,5,0,1,100,50,"Tournament Shield",0,0,80,1,0]
-,[993,61,1079,3,0,1,50,0,"Shield of Naga","","When receiving physical damage there's low chance physical damage will be reflected to the attacker for 5 seconds<br>The chance for the reflect rate is around 3% for each refine",19,3,0]
+,[993,61,1079,3,0,1,50,70,"Naga Scale Shield","","When receiving physical damage there's low chance physical damage will be reflected to the attacker for 5 seconds<br>The chance for the reflect rate is around 3% for each refine",19,3,0]
 ,[994,61,128,4,0,1,80,70,"Shadow Guard","",0,0]
 ,[995,100,0,0,0,0,0,0,"Shadow Guard Set",0,"When attacking, adds a high chance to inflict [Blind] on the enemy and get FLEE + 20",0]
 ,[996,62,1079,3,0,1,30,0,"Tendrillion Skin","",0,62,5,61,5,52,5,53,5,0]
-,[997,62,123,2,0,1,50,70,"Musika","","[description translation missing - ItemID: 997]",19,3,0]
-,[998,63,1079,2,0,1,30,0,"Sprint Shoes","",0,2,1,76,5,0]
+,[997,62,1063,2,0,1,50,70,"Mushika","","Add a chance of auto casting Level 1 Heal on yourself when the user receiving physical damage<br>If you know a higher level of heal, you will cast that level instead",19,3,0]
+,[998,63,1079,2,0,1,30,70,"Sprint Shoes","",0,2,1,76,5,0]
 ,[999,100,0,0,0,0,0,0,"Sprint Set",0,0,15,7,16,7,73,-3,74,15,0]
-,[1000,64,1079,0,0,0,10,70,"Angelic Ring","","[description translation missing - ItemID: 1000]",4,2,5,1,19,2,0]
-,[1001,64,1079,0,0,0,10,0,"Sprint Ring","",0,73,-10,74,5,0]
-,[1002,64,1079,0,0,1,20,0,"Pinguicula Corsage","",0,19,2,14,25,0]
+,[1000,64,1079,0,0,0,10,70,"Angelic Ring","","When using Heal, Aid Potion, Sanctuary, there is a chance for 3 seconds that gives you the ability + 20% Heal more",4,2,5,1,19,2,0]
+,[1001,64,1079,0,0,0,10,70,"Sprint Ring","",0,73,-10,74,-5,0]
+,[1002,64,1079,0,0,1,20,70,"Pinguicura's Corsage","",0,19,2,14,25,0]
 ,[1003,64,122,1,0,0,10,80,"Cold Heart","",0,2,3,0]
 ,[1004,100,0,0,0,0,0,0,"Cold Heart Set","","Increases Attack speed by the refine rate of your weapon",28,8,0]
 ,[1005,64,128,1,0,0,10,80,"Black Cat","",0,5,3,0]
 ,[1006,100,0,0,0,0,0,0,"Black Cat Set","","Increases HIT and decreases casting time by the refine level of your weapon",29,8,0]
-,[1007,64,1054,0,0,0,20,84,"Cursed Star","","[description translation missing - ItemID: 1007]",5,2,6,-1,19,3,0]
-,[1008,100,0,0,0,0,0,0,"Cursed Star Set",0,"[description translation missing - ItemID: 1008]",17,25,0]
+,[1007,64,1054,0,0,0,20,84,"Cursed Star","","Add a 2% chance inflict Curse on the enemy when received long range attack<br>When equipped, HP -50 every 10 seconds<br>When unequipped, you will lose 300 HP",5,2,6,-1,19,3,0]
+,[1008,100,0,0,0,0,0,0,"Cursed Star Set",0,"Adds 2% chance inflict Curse on the enemy",17,25,0]
 ,[1009,64,1079,1,0,1,12,90,"Linen Glove","",0,2,2,5,1,19,1,0]
-,[1010,100,0,0,0,0,0,0,"Improved Tights Set",0,0,11,5,0]
-,[1011,50,0,2,0,0,150,60,"Antenna","",0,9,5,10,5,19,5,220,18,221,118,0]
-,[1012,999,0,0,0,0,100,30,"Her National Treasury","","Allows usage of the skill [Loud Exclamation]Lv 1",12,-10,193,1,0]
-,[1013,999,0,2,0,1,10,0,"Fanta Orange Can","",0,0]
-,[1014,999,0,2,0,1,10,0,"Fanta Grape Can","",0,0]
-,[1015,999,0,2,0,1,10,0,"Coca-Cola Can","",0,0]
-,[1016,50,0,6,0,0,10,0,"Paper Bag Hat","","<b>Upper, Mid and Low Headgear</b>",57,4,151,4,13,100,0]
-,[1017,999,0,2,0,1,10,0,"Flower Tea Cap","",0,2,1,0]
-,[1018,999,0,2,0,1,10,0,"Coca-Cola Cap","",0,1,1,0]
-,[1019,50,0,0,0,1,10,10,"Happy Wig","",0,60,1,221,48,0]
-,[1020,50,0,0,0,0,10,50,"Umbrella Hat","",0,61,3,0]
+,[1010,100,0,0,0,0,0,0,"Refined Tights Set",0,0,11,5,0]
+,[1011,50,0,2,0,0,150,50,"Antenna","",0,9,5,10,5,19,5,220,18,221,118,0]
+,[1012,62,0,2,0,0,20,0,"Buwaya Skin Clothes","","Healing capacity and healing item effect increases 1% per 3 refines",61,10,62,10,63,10,64,10,0]
+,[1013,61,0,3,0,0,40,0,"Kalasag","","For every 3 refines, decreases Boss monster damage by 1%",0]
+,[1014,63,0,2,0,1,60,0,"Nightmare Bangungot Boots","","For every refine, MDEF + 1<br><b>[Refine Rate 8-10]</b><br>Movement speed +25% (non-stacking)",0]
+,[1015,60,0,6,0,0,50,0,"Bakonawa Scale Armor","","1% damage decrease from Boss monsters per 2 refines",7,1,0]
+,[1016,50,0,6,0,0,20,0,"Paper Bag Hat","","<b>Upper, Mid and Low Headgear</b>",57,4,151,4,13,100,0]
+,[1017,100,0,0,0,0,0,0,"Port Malaya set","","Reduces damage from all Malaya monsters by 30%",15,20,16,10,0]
+,[1018,50,0,0,0,1,60,40,"Witch Hat","","When defeating a Demon or Undead monster with a physical attack, you will receive 4 SP",4,1,5,1,89,2,0]
+,[1019,50,0,1,0,0,10,10,"Happy Wig","","<b>Upper and Middle Headgear</b>",18,4,220,22,0]
+,[1020,50,0,2,0,0,10,50,"Umbrella Hat","",0,61,3,0]
 ,[1021,50,0,2,0,0,30,10,"Little Angel Doll","",0,5,3,221,53,0]
-,[1022,999,0,6,0,0,20,0,"Bread Bag","","[description translation missing - ItemID: 1022]",13,100,57,4,131,4,193,1,0]
+,[1022,50,0,0,0,1,20,0,"Green Sheila Hairnet","","Your sexyness increases to 100%<br><b>[Refine Rate 9+]</b><br>ATK + 2%<br>MATK + 2%<br><b>[Refine Rate 10]</b><br>ATK + 2%<br>MATK + 2%",1,2,4,1,5,1,0]
 ,[1023,51,0,1,0,0,10,50,"Odin Mask","","",77,2,0]
-,[1024,999,0,3,0,0,20,0,"Pumpkin Hat2007","","[description translation missing - ItemID: 1024]",0]
-,[1025,52,0,0,0,0,10,0,"Reindeer Nose","","[description translation missing - ItemID: 1025]",0]
-,[1026,52,0,5,0,0,10,0,"Santa's Beard","","[description translation missing - ItemID: 1026]",0]
-,[1027,50,0,0,0,1,50,60,"Clarice Doll Hat","",0,193,1,4,2,57,5,0]
-,[1028,50,0,0,0,1,50,60,"Bennit Doll Hat","","When attacking with an ATK based attack, there's a low chance to increase ASPD by 5% for 6 seconds",193,1,3,2,57,5,0]
-,[1029,50,0,1,0,0,80,10,"Pagdayaw","","[description translation missing - ItemID: 1029]",5,2,89,3,0]
-,[1030,999,0,1,0,1,10,1,"Aumdura's Benefit","",0,7,1,19,1,0]
-,[1031,50,0,10,0,0,20,0,"Wings of Victory","",0,19,10,194,1,0]
-,[1032,50,0,3,0,0,40,0,"Carmen Miranda Hat","","[description translation missing - ItemID: 1032]",19,3,0]
-,[1033,50,0,0,0,1,10,10,"Marvelous Wig","",0,60,1,221,48,0]
+,[1024,50,0,1,0,1,1,0,"Orange Sheila Hairnet","","Your sexyness increases to 100%<br><b>[Refine Rate 9+]</b><br>Physical Damge + 2%<br>MATK + 2%<br><b>[Refine Rate 10]</b><br>Cast Time - 10%",3,3,4,2,1,1,0]
+,[1025,50,0,0,0,0,1,0,"Blue Sheila Hairnet","","Your sexyness increases to 100%<br><b>[Refine Rate 9+]</b><br>Physical Damge + 2%<br>MATK + 2%<br><b>[Refine Rate 10]</b><br>Cast Time - 10%",3,2,4,1,1,3,0]
+,[1026,50,0,0,0,1,20,0,"Pink Sheila Hairnet","","Your sexyness increases to 100%<br><b>[Refine Rate 9+]</b><br>ATK + 2%<br>MATK + 2%<br><b>[Refine Rate 10]</b><br>ATK + 2%<br>MATK + 2%",1,1,4,2,5,1,0]
+,[1027,50,0,0,0,1,50,60,"Glarice Doll Hat","","Recover +50 HP when defeating a monster with a magical attack",4,2,57,5,193,1,0]
+,[1028,50,0,0,0,1,50,60,"Vinit Doll Hat","","When physically attacking there is a chance that for 30 seconds you'll gain ASPD +5%",3,2,57,5,193,1,0]
+,[1029,50,1,1,0,0,10,20,"Pagdayaw [0]","",0,61,1,62,1,63,1,64,1,133,3,0]
+,[1030,50,0,2,0,0,20,0,"Red Sheila Hairnet","","Your sexyness increases to 100%",2,2,19,3,0]
+,[1031,50,0,10,0,0,20,0,"Wings of Victory","","<b>Upper and Middle Headgear</b>",19,10,194,1,193,1,0]
+,[1032,50,0,3,0,0,40,0,"Carmen Miranda Hat","","Add a 5% chance of auto casting Level 1 Wink Charm when the user receives Physical Damage",19,3,0]
+,[1033,50,0,1,0,1,10,10,"Dokebi's Wig (ID:5298)","","<b>Upper and Middle Headgear</b>",60,5,61,-5,63,-5,0]
 ,[1034,50,0,5,0,0,20,50,"Helm Of Dragon","","3% chance to cause a certain abnormal status to all enemies in 5x5 cell on physical attack",39,20,0]
 ,[1035,50,0,2,0,1,10,30,"Wind Guidepost","",0,2,2,220,23,0]
 ,[1036,50,0,3,0,1,80,1,"Parade Hat","","[description translation missing - ItemID: 1036]",19,2,74,5,0]
@@ -1065,7 +1065,7 @@ ItemOBJ = [
 ,[1042,100,0,0,0,0,0,0,"Gentleman Set",0,"Refine rate increases MATK",5,2,4,2,76,5,0]
 ,[1043,50,0,4,0,1,80,30,"Executioner Hood","","[description translation missing - ItemID: 1043]",154,100,153,7,0]
 ,[1044,50,0,2,0,0,10,24,"Scarves","",0,19,2,9,5,0]
-,[1045,999,0,0,0,1,10,10,"Shiny Wig","",0,60,1,221,48,0]
+,[1045,10,124,120,4,2,90,92,"Giant Crossbow","","Increases the damage of Sharp Shooting by 3% for every refine level as well as increasing SP consumption of the skill<br>If Base AGI is 90 or higher, adds 2% ASPD",0]
 ,[1046,999,0,3,0,0,20,0,"Pumpkin Hat 2008","","[description translation missing - ItemID: 1046]",0]
 ,[1047,50,1,2,0,0,70,38,"Poporing Cap","",0,0]
 ,[1048,50,0,2,0,0,50,0,"Tiraya Bonnet","",0,3,2,0]
@@ -1291,7 +1291,7 @@ ItemOBJ = [
 ,[1268,50,0,0,0,0,10,0,"Angel Blessing","","",66,5,6,1,0,]
 ,[1269,51,1,0,0,0,20,30,"Angel of Ghost","",0,87,2,89,2,0]
 ,[1270,52,0,0,0,0,5,0,"Angry Mouth","",0,74,3,0]
-,[1271,50,0,3,0,0,30,1,"Anniversary Hat","","",7,2,0]
+,[1271,999,0,3,0,0,30,1,"Anniversary Hat","","",7,2,0]
 ,[1272,50,0,3,0,0,30,70,"Aries Crown",0,"<b>[Refine Rate 7~10]</b><br>DEF + 1<br>VIT + 1",63,5,3,2,0]
 ,[1273,50,0,3,0,0,30,70,"Aries Diadem",0,"<b>[Refine Rate 7~10]</b><br>DEF + 1<br>VIT + 1",63,5,3,2,0]
 ,[1274,50,0,3,0,0,30,70,"Aquarius Crown",0,"<b>[Refine Rate 7~10]</b><br>DEF + 1<br>ATK + 15",64,5,9,10,1,2,0]
@@ -1405,7 +1405,7 @@ ItemOBJ = [
 ,[1378,15,117,190,4,3,70,0,"Belmont Whip","","<font color='blue'>SQI</font>",2,4,5,5,6,4,20,3,0] //custom TalonRO SQI
 ,[1379,1,50,150,4,3,150,0,"Blade of Angels","","<font color='blue'>SQI</font>",1,10,3,10,8,40,15,20,14,250,0] //custom TalonRO SQI
 ,[1380,6,119,250,4,3,600,0,"Djinn","","<font color='blue'>SQI</font>",3,3,5,5,6,5,20,2,194,1,0] //custom TalonRO SQI
-,[1381,14,0,190,4,3,100,0,"Electric Guitar","","<font color='blue'>SQI</font>",0,20,4,5,5,4,4,3,4,0]
+,[1381,14,0,190,4,3,100,0,"Electric Guitar","","<font color='blue'>SQI</font>",20,4,5,5,4,4,3,4,0]
 ,[1382,8,109,250,4,3,150,0,"Evangelist","","<font color='blue'>SQI</font>",4,5,5,5,20,1,194,1,220,50,0] //custom TalonRO SQI
 ,[1383,63,150,4,0,1,150,0,"Eversong Greaves","","Movement speed increased (same as Increase AGI)<BR><font color='blue'>SQI</font><BR>[Taekwon]<BR>MaxHP + 10%<BR>HIT + 25<BR>[Taekwon Master]<BR>MaxHP + 20%",15,10,19,10,0] //custom TalonRO SQI
 ,[1384,9,143,225,4,3,150,0,"Ghostdancer Staff","","<font color='blue'>SQI</font>",4,5,5,5,89,15,0] //custom TalonRO SQI
@@ -1443,7 +1443,7 @@ ItemOBJ = [
 ,[1414,52,0,0,0,0,10,50,"Rose Of Crimson","",0,6,1,0]
 ,[1415,52,0,1,0,0,30,0,"Samurai Mask","",0,87,1,0]
 ,[1416,52,0,1,0,0,20,0,"Special Carrot In Mouth","",0,53,1,0]
-,[1417,50,0,2,0,0,20,0,"Sheila Hairnet","","Sexy rating will be increased by 100%",2,2,19,3,0]
+,[1417,50,0,2,0,0,20,0,"Sheila Hairnet","","Your sexyness increases to 100%",2,2,19,3,0]
 ,[1418,100,0,0,0,0,0,0,"Special Carrot In Mouth set",0,"When receiving physical attack there's a 1% chance to autocast [High Jump] Level 1",0]
 ,[1419,52,0,0,0,0,10,0,"Strange Tongue","",0,56,1,0]
 ,[1420,52,0,1,0,0,20,30,"Umbala Spirit","","",3,1,0]
@@ -1468,7 +1468,7 @@ ItemOBJ = [
 ,[1439,52,0,0,0,0,10,10,"Cold Breath","",0,3,-1,4,1,0]
 ,[1440,50,0,3,0,0,10,10,"Poring Clip (Colored)","",0,0]
 ,[1441,64,0,0,0,0,0,0,"Satanic Ring [Rental]","",0,128,15,0]
-,[1442,50,0,3,0,1,60,70,"Satanic Bone Helm","",5,1,60,5,220,55,0]
+,[1442,50,0,3,0,1,60,70,"Satanic Bone Helm","",0,5,1,60,5,220,55,0]
 ,[1443,50,0,2,0,0,30,50,"Phreeoni Hat","",0,8,7,0]
 ,[1444,50,0,5,0,0,60,10,"King Poring Hat","","For every 3 refines DEX+1, LUK+1",5,1,6,1,0]
 ,[1445,50,0,6,0,0,50,0,"Majoruros Horn","",0,1,2,13,100,0]
@@ -1530,7 +1530,7 @@ ItemOBJ = [
 ,[1497,50,0,2,0,1,20,10,"Holy Marching Hat","","When doing physical damage, holy property is given to the weapon for 90 seconds at a 3% rate.",1,2,0]
 ,[1498,62,1151,1,0,0,40,93,"Salvage Cape","","Allows usage of Soul level 2<br>Upon casting Soul, auto cast Illusionary Shadow level 1<br>While equipped, all SP usage will be doubled<br>When equipping, HP - 500<br>When unequipping, SP - 1500",0]
 ,[1499,8,53,170,4,0,150,90,"Bloody Cross","","Adds a 1% chance to cast Level 1 Critical Wounds o Bleeding when attacking<br>The chance increases by the refine level of the weapon",20,7,0]
-,[1500,61,1051,7,0,1,280,90,"Giant Shield","","Reduces damage form large size monsters by 5%<br><b>[Refine Rate 9-10]</b><br>Reduces damage by an additional 5%",192,5,0]
+,[1500,61,1051,7,0,1,280,90,"Giant Shield","","<b>[Refine Rate 9-10]</b><br>Reduces damage by an additional 5%",192,5,0]
 ,[1501,50,0,2,0,0,30,0,"Polar Bear Cap","",0,2,1,5,1,19,3,76,3,0]
 ,[1502,50,0,5,0,1,20,90,"Magician's Night Cap","","",4,1,5,1,0]
 ,[1503,50,0,4,0,0,15,30,"Tasty Strawberry Hat","","<b>[Refine Rate 7-10]</b><br>ASPD + 4%",7,1,0]
@@ -1660,7 +1660,7 @@ ItemOBJ = [
 ,[1616,7,1001,250,4,1,190,95,"End Sektura","","An axe made of artic ice.<br>Chance of inflicting Curse status when dealing physical damage<br>Risk of targeting yourself",20,1,194,1,0]
 ,[1617,7,1001,250,4,1,190,95,"Ygnus Stale","","A large axe made by a blacksmith from the fires of a volcano.<br>Chance of inflicting Bleeding status when dealing physical damage<br>Risk of targeting yourself",20,3,194,1,0]
 ,[1618,1,1001,107,4,0,60,93,"Ancient Dagger","","A dagger used in ancient rituals, it feels as though it holds a mysterious power.<br>When dealing physical or magical damage there's a low chance to receive the Curse status.",89,10,14,100,76,5,0]
-,[1619,64,1001,1,0,1,10,93,"Alchemy Glove","","Magic gloves made for handling corrosive chemicals, smells a bit like charcoal.",4,1,19,2,343,10,221,127,351,25,0]
+,[1619,64,1001,1,0,1,10,93,"Alchemy Glove","","Magic gloves made for handling corrosive chemicals, smells a bit like charcoal.",4,1,19,2,343,10,221,127,61,-25,0]
 ,[1620,50,0,2,0,1,30,10,"Entweihen Hairband","","<b>For every refine > 4:<b><br>MATK + 1%",4,1,5,1,89,1,0]
 ,[1621,100,0,0,0,0,0,0,"Entweihen Hairband + Dark Thorn Staff","","<br/>[Refine Rate 5~10]<br/>For every refine, add +1% MATK.<br/><br/>When equipping [Entweihen Hairband]+[Dark Thorn Staff] at the same time:<br/>[Refine Rate 5~10 Dark Thorn Staff]<br/>For every 2 refines on the Dark Thorn Staff, add +10 MATK",0]
 ,[1622,15,131,150,4,0,100,92,"Rosevine","","A whip created from a magically enchanted rose that radiates the smell of roses.",7,2,10,5,89,10,221,130,0]
@@ -1683,7 +1683,7 @@ ItemOBJ = [
 ,[1638,100,0,0,0,0,0,0,"Advanced Angelic Protection + Advanced Angelic Cardigan","","",60,5,0]
 ,[1639,100,0,0,0,0,0,0,"Advanced Angelic Protection, Advanced Angel's Reincarnation, Advanced Angelic Guard, Advanced Angelic Cardigan & Advanced Angel's Kiss Equip","","",13,900,14,100,221,131,0]
 ,[1640,9,1053,30,3,1,100,50,"Staff of Thea","","A chance to recover 200 SP after using Heal<br><b>For every two upgrades:</b><br>Increase MATK by 1%",89,15,4,6,3,2,195,1,0]
-,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 base VIT reduces DEF by 1<br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
+,[1641,64,1,0,0,1,10,50,"Advanced Safety Ring","","Add a 1.5% chance of auto casting level 5 Kyrie Eleison when being attacked physically<br>Every 30 base VIT reduces DEF by 1<br><br><b>[If 2 Advanced Safety Rings are worn together]</b><br>Kyrie Eleison level increases to 10 and auto cast chance increases to 2.5%",3,1,19,3,0]
 ,[1642,51,54,2,0,0,10,50,"Advanced Binoculars","",0,5,1,25,1,0]
 ,[1643,52,81,1,0,0,10,70,"Advanced Assassin Mask","",0,10,1,70,1,0]
 ,[1644,51,56,2,0,0,30,50,"Advanced Welding Mask","","<b>Mid and Low Headgear</b>",5,1,6,1,63,10,0]
@@ -1735,7 +1735,6 @@ ItemOBJ = [
 		1 = Equipment
 		2 = Item Set
 		3 = Unknown
-		4 = Not yet proofread/Placeholder
 */
 
 ItemID = [
@@ -2462,7 +2461,7 @@ ItemID = [
 ,[720,1,2649]
 ,[721,1,2650]
 ,[722,1,2651]
-,[723,1,2653]
+,[723,3,0] //replace me
 ,[724,1,2654]
 ,[725,1,2655]
 ,[726,1,2656]
@@ -2603,7 +2602,7 @@ ItemID = [
 ,[861,2,1723,2718]
 ,[862,2,2726,2727]
 ,[863,1,1631]
-,[864,1,5189]
+,[864,3,0] //replace me
 ,[865,1,5255]
 ,[866,1,5179]
 ,[867,1,2762]
@@ -2617,8 +2616,8 @@ ItemID = [
 ,[875,1,5200]
 ,[876,1,5277]
 ,[877,1,2754]
-,[878,1,2737]
-,[879,1,2736]
+,[878,3,0] //replace me
+,[879,3,0] //replace me
 ,[880,1,2757]
 ,[881,1,5406]
 ,[882,1,5407]
@@ -2751,25 +2750,25 @@ ItemID = [
 ,[1009,1,2749]
 ,[1010,2,2749,2390]
 ,[1011,1,5333]
-,[1012,3,0] //replace me
-,[1013,3,0] //replace me
-,[1014,3,0] //replace me
-,[1015,3,0] //replace me
+,[1012,1,2590]
+,[1013,1,2169]
+,[1014,1,2491]
+,[1015,1,15051]
 ,[1016,1,5410]
-,[1017,3,0] //replace me
-,[1018,3,0] //replace me
+,[1017,2,15051,2590,2491,2169]
+,[1018,1,18543]
 ,[1019,1,5273]
 ,[1020,1,5316]
 ,[1021,1,5324]
-,[1022,3,0] //replace me
+,[1022,1,5785]
 ,[1023,1,5483]
-,[1024,3,0] //replace me
-,[1025,1,5204]
-,[1026,1,5155]
+,[1024,1,18585]
+,[1025,1,18587]
+,[1026,1,5784]
 ,[1027,1,5341]
 ,[1028,1,5344]
 ,[1029,1,5263]
-,[1030,3,0] //replace me
+,[1030,1,5763]
 ,[1031,1,5357]
 ,[1032,1,5307]
 ,[1033,1,5298]
@@ -2784,7 +2783,7 @@ ItemID = [
 ,[1042,2,1629,5045]
 ,[1043,1,5304]
 ,[1044,1,5322]
-,[1045,3,0] //replace me
+,[1045,1,18110] //replace me
 ,[1046,3,0] //replace me
 ,[1047,1,5352]
 ,[1048,1,5395]
@@ -2880,9 +2879,9 @@ ItemID = [
 ,[1138,3,0] //replace me
 ,[1139,3,0] //replace me
 ,[1140,3,0] //replace me
-,[1141,1,5317]
-,[1142,1,2443]
-,[1143,1,2775]
+,[1141,3,0] //replace me
+,[1142,3,0] //replace me
+,[1143,3,0] //replace me
 ,[1144,1,5485]
 ,[1145,1,5481]
 ,[1146,1,5547]
@@ -2940,7 +2939,7 @@ ItemID = [
 ,[1198,1,2788]
 ,[1199,1,2789]
 ,[1200,1,2790]
-,[1201,1,2764]
+,[1201,3,0] //replace me
 ,[1202,2,5040,5442]
 ,[1203,2,2399,2553]
 ,[1204,1,5502]
@@ -3010,7 +3009,7 @@ ItemID = [
 ,[1268,1,5207]
 ,[1269,1,5389]
 ,[1270,1,5521]
-,[1271,1,5486]
+,[1271,3,0] //replace me
 ,[1272,1,5546]
 ,[1273,1,5545]
 ,[1274,1,5513]
@@ -3402,7 +3401,7 @@ ItemID = [
 ,[1660,1,18819]
 ,[1661,1,5337]
 ,[1662,1,16015]
-]
+];
 
 ItemMax = ItemOBJ.length -1;
 
@@ -3809,9 +3808,9 @@ function Item_Setumei(nC1,nC2)
     */
    if(340 <= nC1 && nC1 <=349)
       CBIstr += "Increases damage of ["+ ZokuseiOBJ2[nC1-340] + "] magic by "+ nC2 +"%<BR>";
-   //Recieve more Damage of [element] by %
-   if(350 <= nC1 && nC1 <=359)
-      CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
+   // //Recieve more Damage of [element] by % //Use 60-69 with negative values instead
+   // if(350 <= nC1 && nC1 <=359)
+   //    CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
    //Physical damage against specific monster
    if(1000 <= nC1 && nC1 <=1999)
       CBIstr += wIS + nC2 + "% Physcial damage inflicted against <b>" + MonsterOBJ[nC1-1000][1] + "</b><br>";
@@ -3892,6 +3891,7 @@ w_SE = [[737,436,475,"NULL"]
 ,[1006,442,1005,"NULL"]
 ,[1008,946,1007,"NULL"]
 ,[1010,990,1009,"NULL"]
+,[1017,1012,1013,1014,1015,"NULL"]
 ,[1042,198,1041,"NULL"]
 ,[1053,1050,1051,1052,"NULL"]
 ,[1058,1055,1056,1057,"NULL"]

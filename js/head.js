@@ -1,3 +1,4 @@
+debugMode = 0;
 n_Nitou=0;
 n_Tensei=0;
 n_Ses=0;
@@ -147,40 +148,40 @@ KunaiOBJ = [
 ];
 
 JobEquipItemOBJ = [
-[0,50,90,100,999],
-[0, 1, 51,101, 70, 71, 72, 74, 75,78,83,84,85,86,87,90,91,999],
-[0, 1, 52,102, 72, 74, 75,78, 80,83,84,85,90,91,999],
-[0, 1, 53,103, 71, 73, 74, 77,78,85,89,152,999],//Acolyte //custom TalonRO (152) Diadem of Bruenhild
-[0, 1, 54,104, 75, 76,83,89,999],
-[0, 1, 55,105, 71, 77,89,152,999],//Magician //custom TalonRO (152) Diadem of Bruenhild
-[0, 1, 56,106, 70, 71, 72, 73, 74, 75,78,83,84,85,86,90,91,999],
-[0, 1, 51, 61,107, 70, 71, 72, 74, 75,78,79,83,84,85,86,87,90,91,999],
-[0, 1, 52, 62,108, 72, 74, 75,78,79,81,83,84,85,90,91,999],
+[0,50,90,100,999], //Novice
+[0, 1, 51,101, 70, 71, 72, 74, 75,78,83,84,85,86,87,90,91,999], //Swordman
+[0, 1, 52,102, 72, 74, 75,78, 80,83,84,85,90,91,999], //Thief
+[0, 1, 53,103, 71, 73, 74, 77,78,85,89,152,999], //Acolyte
+[0, 1, 54,104, 75, 76,83,89,999], //Archer
+[0, 1, 55,105, 71, 77,89,152,999], //Mage
+[0, 1, 56,106, 70, 71, 72, 73, 74, 75,78,83,84,85,86,90,91,999], //Merchant
+[0, 1, 51, 61,107, 70, 71, 72, 74, 75,78,79,83,84,85,86,87,90,91,999], //Knight
+[0, 1, 52, 62,108, 72, 74, 75,78,79,81,83,84,85,90,91,999], //Assassin
 [0, 1, 53, 63,109, 71, 73, 74, 77,78,79,81,85,89,999], //Priest
-[0, 1, 54, 64,110, 75, 76,79,80,83,88,89,999],
+[0, 1, 54, 64,110, 75, 76,79,80,83,88,89,999], //Hunter
 [0, 1, 55, 65,111, 71, 77,79,89,999], //Wizard
-[0, 1, 56, 66,112, 70, 71, 72, 73, 74, 75,78,79,83,84,85,86,90,91,999],
-[0, 1, 51, 61,113, 70, 71, 72, 74, 75,78,79,83,84,85,86,87,90,91,999],
-[0, 1, 52, 62,114, 72, 74, 75, 76,78,79,80,83,84,85,88,91,999],
-[0, 1, 53, 63,115, 71, 73, 74, 77,78,79,85,89,999],
-[0, 1, 54, 64,116, 74, 75, 76,79,83,89,999],
-[0, 1, 54, 64,117, 74, 75, 76,79,83,89,999],
-[0, 1, 55, 65,118, 71, 77,79,89,999],
-[0, 1, 56, 66,119, 70, 71, 72, 73, 74, 75,78,79,83,84,85,86,90,91,999],
-[0,50,90,120,999],
-[0, 1, 51, 61,107,121, 70, 71, 72, 74, 75,78,79,82,83,84,85,86,87,90,91,999],
-[0, 1, 52, 62,108,122, 72, 74, 75,78,79,81,82,83,84,85,90,91,999],
-[0, 1, 53, 63,109,123, 71, 73, 74, 77,78,79,81,82,85,89,151,152,999],//High Priest //custom TalonRO (151) SQI Bonus for Salvage Cape //custom TalonRO (152) Diadem of Bruenhild
-[0, 1, 54, 64,110,124, 75, 76,79,80,82,83,88,89,999],
-[0, 1, 55, 65,111,125, 71, 77,79,82,89,151,152,999],//High Wizard //custom TalonRO (151) SQI Bonus for Salvage Cape //custom TalonRO (152) Diadem of Bruenhild
-[0, 1, 56, 66,112,126, 70, 71, 72, 73, 74, 75,78,79,82,83,84,85,86,90,91,999],
-[0, 1, 51, 61,113,127, 70, 71, 72, 74, 75,78,79,82,83,84,85,86,87,90,91,999],
-[0, 1, 52, 62,114,128, 72, 74, 75, 76,78,79,80,82,83,84,85,88,91,999],
-[0, 1, 53, 63,115,129, 71, 73, 74,77,78,79,82,85,89,152,999],//Champion //custom TalonRO (152) Diadem of Bruenhild
-[0, 1, 54, 64,116,130, 74, 75, 76,79,82,83,89,153,999],//Clown
-[0, 1, 54, 64,117,131, 74, 75, 76,79,82,83,89,153,999],//Gypsy
-[0, 1, 55, 65,118,132, 71,77,79,82,89,152,999],//Professor //custom TalonRO (152) Diadem of Bruenhild
-[0, 1, 56, 66,119,133, 70, 71, 72, 73, 74, 75,78,79,82,83,84,85,86,90,91,999],
+[0, 1, 56, 66,112, 70, 71, 72, 73, 74, 75,78,79,83,84,85,86,90,91,999], //Blacksmith
+[0, 1, 51, 61,113, 70, 71, 72, 74, 75,78,79,83,84,85,86,87,90,91,999], //Crusader
+[0, 1, 52, 62,114, 72, 74, 75, 76,78,79,80,83,84,85,88,91,999], //Rogue
+[0, 1, 53, 63,115, 71, 73, 74, 77,78,79,85,89,999], //Monk
+[0, 1, 54, 64,116, 74, 75, 76,79,83,89,999], //Bard
+[0, 1, 54, 64,117, 74, 75, 76,79,83,89,999], //Dancer
+[0, 1, 55, 65,118, 71, 77,79,89,999], //Sage
+[0, 1, 56, 66,119, 70, 71, 72, 73, 74, 75,78,79,83,84,85,86,90,91,999], //Alchemist
+[0,50,90,120,999], //High Novice
+[0, 1, 51, 61,107,121, 70, 71, 72, 74, 75,78,79,82,83,84,85,86,87,90,91,999], //Lord Knight
+[0, 1, 52, 62,108,122, 72, 74, 75,78,79,81,82,83,84,85,90,91,999], //Assassin Cross
+[0, 1, 53, 63,109,123, 71, 73, 74, 77,78,79,81,82,85,89,151,152,999], //High Priest
+[0, 1, 54, 64,110,124, 75, 76,79,80,82,83,88,89,999], //Sniper
+[0, 1, 55, 65,111,125, 71, 77,79,82,89,151,152,999], //High Wizard
+[0, 1, 56, 66,112,126, 70, 71, 72, 73, 74, 75,78,79,82,83,84,85,86,90,91,999], //Whitesmith
+[0, 1, 51, 61,113,127, 70, 71, 72, 74, 75,78,79,82,83,84,85,86,87,90,91,999], //Paladin
+[0, 1, 52, 62,114,128, 72, 74, 75, 76,78,79,80,82,83,84,85,88,91,999], //Stalker
+[0, 1, 53, 63,115,129, 71, 73, 74,77,78,79,82,85,89,152,999], //Champion
+[0, 1, 54, 64,116,130, 74, 75, 76,79,82,83,89,153,999], //Clown
+[0, 1, 54, 64,117,131, 74, 75, 76,79,82,83,89,153,999], //Gypsy
+[0, 1, 55, 65,118,132, 71,77,79,82,89,152,999], //Professor
+[0, 1, 56, 66,119,133, 70, 71, 72, 73, 74, 75,78,79,82,83,84,85,86,90,91,999], //Creator
 [0],
 [0],
 [0],
@@ -188,15 +189,15 @@ JobEquipItemOBJ = [
 [0],
 [0],
 [0],
-[0, 1,141, 83,84,85,86,150,999], //Taekwon Kid //custom TalonRO (150) SQI Bonus for Eversong Greaves
-[0, 1,142, 79,83,84,85,86,87,91,150,999], //Star Gladiator //custom TalonRO (150) SQI Bonus for Eversong Greaves
-[0, 1,143, 55, 65,111, 71, 77,79,89,999],
-[0, 1,144, 58, 52,91,999],
-[0, 1,145, 59, 83,145,999],
+[0, 1,141, 83,84,85,86,150,999], //Taekwon Kid //custom
+[0, 1,142, 79,83,84,85,86,87,91,150,999], //Star Gladiator
+[0, 1,143, 55, 65,111, 71, 77,79,89,999], //Soul Linker
+[0, 1,144, 58, 52,91,999], //Ninja
+[0, 1,145, 59, 83,145,999], //Gunslinger
 ];
 
 /*
-	JobEquipItemOBJ values:
+	JobEquipItemOBJ values - [Slap] - 2018-06-03
 
 		0 = all jobs
 		1 = every job except novice
@@ -284,16 +285,20 @@ JobEquipItemOBJ = [
 		144 = ninja
 		145 = gunslinger
 		150 = taekwon, star gladiator //for SQI
+		151 = priest, wizard
+		152 = mage ONLY, acolyte ONLY, high priest, high wizard, champion, professor
 
 	Unless otherwise stated, upper classes are included.
 		Example 1: 109 = priest //includes high priest
 		Example 2: 80 = thief, hunter, rogue //does not include assassin
+		Example 3: 101 = swordman ONLY //no other classes included
 	Adding 1000 makes it rebirth classes only.
 		Example 1: 1 = every job except novice, 1001 = every rebirth job except high novice
 		Example 2: 51 = swordman class, 1051 = trans swordman class
 	If a class cannot equip an item type, even if the JobEquipItemOBJ value includes that class, it will not show up in the calculator
 		For example: the JobEquipItemOBJ value of Jamadhar (id:112) is 0 (all classes)
 		Since only assassins can equip katars, the item will only be an option for assassins in the calculator since no other classes can choose a katar as the weapon
+	To add new jobids, simply add the new value to the subarrays in JobEquipItemOBJ for the classes that should be able to equip the item
 */
 
 SyuzokuOBJ = ["Formless","Undead","Brute","Plant","Insect","Fish","Demon","Demi-Human","Angel","Dragon"];
@@ -2947,7 +2952,7 @@ function BattleHiDam(){
 		}
 	}
 	//custom TalonRO SQI Bonus Sherwood Bow: 15% Melee resistance
-	if(n_B[20]==0)
+	if(n_B[20]==0){
 		if(EquipNumSearch(1388))
 			for(i=0;i<SQI_Bonus_Effect.length;i++)
 				if(SQI_Bonus_Effect[i]==135) {
@@ -2955,7 +2960,17 @@ function BattleHiDam(){
 						w_HiDam[j] -= Math.floor(w_HiDam[j] * 15 /100);
 					break;
 				}
+	}
 
+	//Port Malaya set damage reduction - [Slap] - 2018-06-29
+	portMalayaMob = [596,597,598,599,600,601,602,603,671,672,673,674,676,677]
+	if(EquipNumSearch(1017)){
+		if(portMalayaMob.includes(n_B[0])){
+			for(i=0;i<=6;i++){
+				w_HiDam[i] -= Math.floor(w_HiDam[i] * 30 / 100);
+			}
+		}
+	}
 
 	if(n_B[19]==1){
 		for(i=0;i<=6;i++)
@@ -3207,7 +3222,7 @@ with(document.calcForm){
 	j = 0;
 	for (i=0; i<=21; i++)
 	{
-		if(JobASPD[n][i] != 0)
+		if(JobASPD[n][i] != 0  || debugMode == 1)
 		{
 			A_WeaponType.options[j] = new Option(WeaponName[i],i);
 			j++;
@@ -3383,6 +3398,23 @@ with(document.calcForm){
 		A_left.style.visibility = "visible"
 		A_left_card.style.visibility = "visible"
 	}
+
+	//hide shield when using two-handed weapons - [Slap] - 2018-06-29
+	if(n == 3 || n == 5 || n == 7 || n == 10 || n == 11 || n == 16 || n == 17 || n == 18 || n == 19 || n == 20 || n == 21){
+		A_LEFT_DEF_PLUS.style.visibility = "hidden";
+		A_LEFT_DEF_PLUS.value = 0;
+		A_left.style.visibility = "hidden";
+		A_left.value = 305;
+		A_left_card.style.visibility = "hidden";
+		A_left_card.value = 0;
+	}
+	//n_Nitou == 0 means no off-hand weapon for assasins equipped
+	else if(n_Nitou == 0){
+		A_LEFT_DEF_PLUS.style.visibility = "visible";
+		A_left.style.visibility = "visible"
+		A_left_card.style.visibility = "visible"
+	}
+
 	n_A_Equip[0] = eval(A_weapon1.value);
 	ActiveSkillSetPlus();
 	ClickB_Item(n_A_Equip[0]);
@@ -6663,6 +6695,9 @@ function BaiCI(wBaiCI)
 					w1 += 35;
 					break;
 				}
+	if(n_A_ActiveSkill == 272 && EquipNumSearch(1045)){
+		w1 += n_A_Weapon_ATKplus * 3;
+	}
 	//custom TalonRO Imperial Guard: Shield Chain damage +2% each refine above 6
 	if(n_A_ActiveSkill == 324)
 		if(EquipNumSearch(1459))
