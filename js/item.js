@@ -1013,7 +1013,7 @@ ItemOBJ = [
 ,[990,60,1054,6,0,1,40,75,"Refined Tights","",0,19,2,11,3,0]
 ,[991,60,1051,9,0,1,350,82,"Life Link","",0,3,2,19,5,75,50,0]
 ,[992,61,1051,5,0,1,100,50,"Tournament Shield",0,0,80,1,0]
-,[993,61,1079,3,0,1,50,70,"Naga Scale Shield","","When receiving physical damage there's low chance physical damage will be reflected to the attacker for 5 seconds<br>The chance for the reflect rate is around 3% for each refine",19,3,0]
+,[993,61,1079,3,0,1,50,70,"Naga Scale Shield","","When receiving physical damage there's 1% chance physical damage will be reflected to the attacker for 5 seconds<br>The amount reflected is 3% per refine",19,3,0]
 ,[994,61,128,4,0,1,80,70,"Shadow Guard","",0,0]
 ,[995,100,0,0,0,0,0,0,"Shadow Guard Set",0,"When attacking, adds a high chance to inflict [Blind] on the enemy and get FLEE + 20",0]
 ,[996,62,1079,3,0,1,30,0,"Tendrillion Skin","",0,62,5,61,5,52,5,53,5,0]
