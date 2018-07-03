@@ -741,7 +741,7 @@ AutoSpellSkill = [
 [132,1,131,2,1,1], //custom TalonRO Chilly Spell Book lv 2 Storm Gust (1%) on physical attack [NattWara]
 [133,1,51,3,3,1],
 [134,1,261,1,10,1],
-[135,1,54,1,10,1]
+[135,1,54,1,10,6]
 ];
 //ID - Gets called in second spot(221(effect),1(ID)), autocast id = 1 by default, skill Id,Skill Lvl, chance %, attacktype(1atkbased,2shortrange,3longrange,4magical,5attacking,6receivingATKbased,0 by default, 0=low chance, 1=medium chance, 2=high chance)
 
