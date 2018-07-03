@@ -865,7 +865,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(883) && n_A_BaseLV <= 79)
 		w += 400 * EquipNumSearch(883);
 	if(EquipNumSearch(1116) && n_A_JobSearch()==0)
-		w += 30;
+		w += 60;
 	if(EquipNumSearch(986))
 		w += 7 * n_A_BaseLV;
 	if(n_A_Weapon_ATKplus >= 6 && EquipNumSearch(1168))
@@ -1961,7 +1961,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(SU_STR >= 80 && EquipNumSearch(1526)){
 		C_ATK += 30;
 	}
-
+	if(EquipNumSearch(1120) && n_A_JobSearch()==4)
+		C_ATK += 10;
 	//custom TalonRO Incanation Samurai Card
 	if(CardNumSearch(255)){C_ATK += CardNumSearch(255)*65;}
 	//custom TalonRO Bloody Knight Card

@@ -1,4 +1,6 @@
 [Update 2018-07-02]
+- All PVP items have been temporarily removed until PVP update [Slap]
+	IDs: 897-931, 1076-1115
 - Removed items [Slap]:
 	Pumpkin Hat 2008
 	Cute Santa Hat
@@ -36,6 +38,19 @@
 	Sky Hat
 	Sakura Mist Hat
 	Sakura Milk Tea Hat
+	Novice Figure
+	Swordsman Figure
+	Acolyte Figure
+	Magician Figure
+	Archer Figure
+	Thief Figure
+	Merchant Figure
+	Crown Parrots
+	Red Hat
+	Nipper Crab Hairpin
+	Emperor's Laurel Crown
+	Lion Mask
+	Fox Hat
 
 [Update 2018-06-30]
 - Removed items [Slap]:
