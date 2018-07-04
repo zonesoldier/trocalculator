@@ -1,4 +1,4 @@
-debugMode = 0;
+debugMode = 1;
 n_Nitou=0;
 n_Tensei=0;
 n_Ses=0;
@@ -3134,7 +3134,7 @@ function BattleMagicCalc(wBMC)
 	if(n_A_ActiveSkill==37||n_A_ActiveSkill==387){
 		if(n_A_JobSearch() == 3 && EquipNumSearch(1247)){
 			wX += 5;
-			if(n_A_HEAD_DEF_PLUS >= 7)
+			if(n_A_HEAD_DEF_PLUS > 7)
 				wX += 5;
 		}
 	}
@@ -6625,8 +6625,8 @@ function BaiCI(wBaiCI)
 		debug_atk+="\n --- (BaiCI) card-skill Modifier ---";
 		debug_atk+="\nb_wBaiCI:"+wBaiCI;
 	}
+	//specific skill %damage bonus
 	w1=0;
-
 	if(n_A_ActiveSkill == 6)
 		if(n_A_SHOES_DEF_PLUS >= 9 && CardNumSearch(362))
 			w1 += 10;

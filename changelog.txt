@@ -1,3 +1,81 @@
+[Update 2018-07-04]
+- Temporarily removed PVP gears until PVP update [Loa]
+	IDs 958-984
+- Added a thing for Beer Hat recuperative skills in Extended Info [Loa]
+- Removed items [Loa]:
+	Frist Hat
+	Frist Sword
+	Frist Hat + Sword
+	Frist Sword + Odin's Blessing
+	Ice Hat
+	Eddga Hat
+	Red Beret
+	Hukke's Blackcat Ears
+	Fairy Ears [bRO]
+	Sphinx Hat //duplicate
+	Large Bapho Horns [DEF Version]
+	AFK Hat
+	Afro Wig
+	Angry Mouth
+	Anniversary Hat
+	Bf Recruiter Hat
+	Blue Night Cap
+- Added items [Loa]:
+	Sakura Coronet
+	Sakura Coronet + Romantic Flower
+	Sakura Coronet + White Petal
+	Sakura Coronet + Romantic Leaf
+	Pirates Red Hood
+	Sakura Hairband
+	Koneko Hat
+	White Deviruchi Hat
+	White Feather
+	White Feather + Pipe
+	White Mage Hat
+	White Musang Hat
+	White Snake Hat
+	White School Hat
+	Indonesia Beret
+	Injured Eyepatch
+	Little Red Riding Hood Scarf
+- Issue #149: Proofreading [Loa]
+	Rabbit Earplugs
+	Lyria Doll Hat
+	Drooping Morroc Minion
+	Sakura Bells
+	White Piggy Bank
+	Poring Letter
+	Imp Hat
+	Beer Hat
+	Noah's Hat
+	Anniversary Star Hat
+	Monocle + Anniversary Star Hat
+	Jasper Crest
+	Flying Evil Wing
+	Cancer Crown
+	Cancer Diadem
+	Capricorn Crown
+	Capricorn Diadem
+	Gemini Crown
+	Gemini Diadem
+	Leo Crown
+	Leo Diadem
+	Libra Crown
+	Libra Diadem
+	Pisces Crown
+	Pisces Diadem
+	Sagittarius Crown
+	Sagittarius Diadem
+	Scorpio Crown
+	Taurus Crown
+	Taurus Diadem
+	Bandit Hat
+	Black Ribbon
+	Dark Knight Mask B
+	Dark Knight Belt B
+	Dark Knight Glove B
+	I LOVE CHINA
+
 [Update 2018-07-03]
 - Removed negative hit correction [Loa]
 - Removed items [Loa]:
@@ -16,6 +94,23 @@
 	Horn Helmet
 	Corona Torch
 	True Love
+	Burnt Rod
+	Large Orc Hero Helm
+	Box of Fun [A]
+	Box of Fun [B]
+	Stick Candy?
+	Small Fishing..?
+	Jaguar Face
+	Darkness Helm
+	Dark Angel Wings + Ear
+	Dark Devil Wings + Ear
+	Awfully Dark Wings + Ear
+	Dark + Glasses
+	Dark + Darkness Ice
+	Red Marcher Hat
+	Captain's Pipe
+	Captains's Hat + Pipe
+	Lady Tanee Hat
 - Added items [Loa]:
 	Evolved Demon Student Hat
 	Evolved Demon Student Hat + Blue Pencil in Mouth set
@@ -32,6 +127,23 @@
 	Boiled Rice Hat
 	Dice Hat
 	Blue Hippo Hat
+	Pagdayaw [1]
+	Hungry Big Fish Hat
+	Jolly Roger Hat
+	Rain Cloud
+	Ring of Water
+	Light of El Dicastes
+	Cashmere Hat
+	Falcon Mask
+	King Prawn Hat
+	Navy Hat
+	Shower Cap
+	Watermelon Hat
+	Scuba Mask
+	White King Tiger Doll Hat
+	Gentleman's Hat
+	Brazil National Flag Hat
+	Brazilian Flag Hat
 - Issue #149: Proofreading [Loa]
 	Hermose Cap
 	RJC Katyusha Flower
@@ -44,6 +156,17 @@
 	Veteran Axe
 	Bradium Stone Hammer
 	Withered Branch Staff
+	Krishna
+	Cat's Footprint Hairpin
+	Bride's Flower Crown
+	Heaven Maiden's Flower
+	Cherub Hat
+	Life Tree Wooden Shoes
+	Ring Of Wisdom
+	Eye Ring
+	Necromancer Hood
+	Frog King Hat
+	Jade Rabbit Hat
 
 [Update 2018-07-02]
 - All PVP items have been temporarily removed until PVP update [Loa]

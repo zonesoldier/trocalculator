@@ -615,7 +615,58 @@ function StAllCalc()
 		n_tok[62] += Math.floor(n_A_HEAD_DEF_PLUS/2);
 		n_tok[63] += Math.floor(n_A_HEAD_DEF_PLUS/2);
 	}
-
+	//Jolly Roger Hat -[Loa] - 2018-07-03
+	if(EquipNumSearch(1186)){
+		if(n_A_HEAD_DEF_PLUS > 7){
+			n_tok[41] += 3;
+		}
+		if(n_A_HEAD_DEF_PLUS > 8){
+			n_tok[61] += 3;
+		}
+	}
+	//White King Tiger Doll Hat - [Loa] - 2018-07-03
+	if(EquipNumSearch(1214)){
+		n_tok[32] += n_A_HEAD_DEF_PLUS;
+	}
+	//Jade Rabbit Hat -[Loa] - 2017-07-03
+	if(EquipNumSearch(1218) && n_A_HEAD_DEF_PLUS > 4){
+		n_tok[17] += n_A_HEAD_DEF_PLUS - 4;
+		n_tok[89] += n_A_HEAD_DEF_PLUS - 4;
+	}
+	//Sakura Coronet + Romantic Flower - [Loa] - 2018-07-04
+	if(EquipNumSearch(1236) && n_A_HEAD_DEF_PLUS > 7){
+		n_tok[16] += n_A_HEAD_DEF_PLUS;
+	}
+	//Sakura Coronet + White Petal - [Loa] - 2018-07-04
+	if(EquipNumSearch(1237) && n_A_HEAD_DEF_PLUS > 5){
+		n_tok[73] -= Math.floor(n_A_HEAD_DEF_PLUS / 2);
+	}
+	//Sakura Coronet + Romantic Leaf - [Loa] - 2018-07-04
+	if(EquipNumSearch(1238) && n_A_HEAD_DEF_PLUS > 3){
+		n_tok[14] += n_A_HEAD_DEF_PLUS * 5;
+	}
+	//White Feather - [Loa] - 2018-07-04
+	if(EquipNumSearch(1255) && n_A_HEAD_DEF_PLUS >= 5){
+		n_tok[8] -= 10;
+		n_tok[15] += 10;
+		if(n_A_HEAD_DEF_PLUS >= 7){
+			n_tok[8] -= 3;
+			n_tok[15] += 3;
+			if(n_A_HEAD_DEF_PLUS >= 9){
+				n_tok[8] -= 3;
+				n_tok[15] += 3;
+			}
+		}
+	}
+	//White Feather + Pipe - [Loa] - 2018-07-04
+	if(EquipNumSearch(1257) && n_A_HEAD_DEF_PLUS >= 7){
+		n_tok[8] += 1;
+		n_tok[15] += 2;
+		if(n_A_HEAD_DEF_PLUS >= 9){
+			n_tok[8] += 1;
+			n_tok[15] += 2;
+		}
+	}
 	w=n_tok[17];
 
 	if(SU_STR >= 80 && CardNumSearch(267))
@@ -672,10 +723,6 @@ function StAllCalc()
 		w += 10;
 	if(EquipNumSearch(1165))
 		w += 10 * SkillSearch(311);
-
-	if(EquipNumSearch(953) || EquipNumSearch(1261))
-		w += Math.floor(n_A_JobLV *2 /7);
-
 	if(n_A_PassSkill6[0] == 0 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==3)
 		w += n_A_PassSkill6[1] * 10;
 
@@ -697,9 +744,7 @@ function StAllCalc()
 		w += 15;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1275)){
 		w += 15;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1280)){
-		w += 15;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1282)){
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1276)){
 		w += 15;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1291)){
 		w += 5;}
@@ -728,8 +773,6 @@ function StAllCalc()
 	if(n_A_Equip[9] == 978 || n_A_Equip[9] == 979 || n_A_Equip[9] == 980 || n_A_Equip[9] == 981 || n_A_Equip[9] == 982 || n_A_Equip[9] == 983 || n_A_Equip[9] == 984){
 		w += n_A_ATK*.05;}
 	if(n_A_Equip[10] == 978 || n_A_Equip[10] == 979 || n_A_Equip[10] == 980 || n_A_Equip[10] == 981 || n_A_Equip[10] == 982 || n_A_Equip[10] == 983 || n_A_Equip[10] == 984){
-		w += n_A_ATK*.05;}
-	if(EquipNumSearch(1208) && EquipNumSearch(381)){
 		w += n_A_ATK*.05;}
 	if(EquipNumSearch(1312)){
 		w += n_A_ATK*.05;}
@@ -1223,8 +1266,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1276)){n_A_DEF += 1;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1280)){n_A_DEF += 1;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1282)){n_A_DEF += 1;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1292)){n_A_DEF += 2;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1293)){n_A_DEF += 2;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1286)){n_A_DEF += 1;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1287)){n_A_DEF += 1;}
 	if(EquipNumSearch(658))
 		n_A_DEF += n_A_Weapon_ATKplus;
 	if(EquipNumSearch(715))
@@ -1457,7 +1500,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_MDEF += 3;
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1277)){n_A_MDEF += 1;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1281)){n_A_MDEF += 7;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1286)){n_A_MDEF += 5;}
 
 	if(SkillSearch(9)){
 		n_A_MDEF += SkillSearch(9);
@@ -2013,7 +2055,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	//ATK bonus display portion
 	if(EquipNumSearch(953)){C_ATK += ((n_A_JobLV*2)/7);}
-	if(EquipNumSearch(1261)){C_ATK += ((n_A_JobLV*2)/7);}
 	if(EquipNumSearch(666) && EquipNumSearch(721) && EquipNumSearch(701) && EquipNumSearch(722)){C_ATK += 18;}
 	if(EquipNumSearch(666)){C_ATK += 3;}
 	if(EquipNumSearch(721)){C_ATK += 5 * EquipNumSearch(721);}
@@ -2033,10 +2074,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(A_acces2.value == 525){C_ATK += 10;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1274)){C_ATK += 15;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1275)){C_ATK += 15;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1280)){C_ATK += 15;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1282)){C_ATK += 15;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1276)){C_ATK += 15;}
+	if(EquipNumSearch(1282)){C_ATK += 15;}
+	if(EquipNumSearch(1283)){C_ATK += 5;}
+	if(EquipNumSearch(1285)){C_ATK += 7;}
+	if(n_A_HEAD_DEF_PLUS == 10 && EquipNumSearch(1290)){C_ATK += 5;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1291)){C_ATK += 5;}
 	if(EquipNumSearch(1150)){C_ATK += 15};
+	if(EquipNumSearch(1218)){C_ATK += 5};
+	//Jade Rabbit Hat -[Loa] - 2017-07-03
+	if(EquipNumSearch(1218) && n_A_HEAD_DEF_PLUS > 4){C_ATK += n_A_HEAD_DEF_PLUS - 4;}
 	//skils que dão atk[parte 1]
 	if (SkillSearch(146)){C_ATK +=3;}
 	if(n_A_PassSkill3[9]){C_ATK += 50+(25*(n_A_PassSkill3[9]-1));}
@@ -2134,8 +2181,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		H_ATK += H_ATK*.05;}
 	if(n_A_Equip[10] == 978 || n_A_Equip[10] == 979 || n_A_Equip[10] == 980 || n_A_Equip[10] == 981 || n_A_Equip[10] == 982 || n_A_Equip[10] == 983 || n_A_Equip[10] == 984){
 		H_ATK += H_ATK*.05;}
-	if(EquipNumSearch(1208) && EquipNumSearch(381)){
-		H_ATK += H_ATK*.05;}
 	if(EquipNumSearch(1312)){
 		H_ATK += H_ATK*.05;}
 
@@ -2195,12 +2240,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 2;
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1284)){
 		w += 3;}
-	if(n_A_HEAD_DEF_PLUS >= 9 && EquipNumSearch(1284)){
-		w += 5;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1286)){
 		w += 2;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1287)){
 		w += 2;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1292)){
+		w += 1;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1293)){
+		w += 1;}
 	if(EquipNumSearch(1520) && SU_INT == 99)
 		w += 1;
 	if(n_A_Equip[0]==484 && SU_INT >= 70)
@@ -2326,7 +2373,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	n_A_MATK[0] = Math.floor(n_A_MATK[0] * w / 100);
 	n_A_MATK[2] = Math.floor(n_A_MATK[2] * w / 100);
-
+	//Gemini Crown - [Loa] - 2018-07-04
+	if(EquipNumSearch(1280) && n_A_HEAD_DEF_PLUS >= 7){
+		n_A_MATK[0] += 15;
+		n_A_MATK[2] += 15;
+	}
 	//Balloon Hat Matk Bonus
 	if(EquipNumSearch(849)){
 		n_A_MATK[0] += Math.floor(n_A_MATK[0]*(n_A_HEAD_DEF_PLUS/2)/100);
@@ -2845,10 +2896,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	w += n_tok[75];
 	if(SU_LUK >= 77)
 		w += 100 * CardNumSearch(221);
-	//beer hat
-	if(EquipNumSearch(1240) && (n_A_JOB!=1||n_A_JOB!=7||n_A_JOB!=13||n_A_JOB!=20||n_A_JOB!=21||n_A_JOB!=27)){
-		w += Math.floor((5 + n_A_MaxHP / 500) * 3);}
-
 	if(n_A_JobSearch()==41 && EquipNumSearch(672))
 		w += 3;
 	if(n_A_SHOES_DEF_PLUS <= 4 && CardNumSearch(407))
@@ -2880,10 +2927,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	if(SU_LUK >= 77)
 		w += 100 * CardNumSearch(221);
-	//beer hat
-	if(EquipNumSearch(1240) && (n_A_JOB!=5||n_A_JOB!=9||n_A_JOB!=11||n_A_JOB!=18||n_A_JOB!=20||n_A_JOB!=23||n_A_JOB!=25||n_A_JOB!=32||n_A_JOB!=39)){
-		w += Math.floor((3 + n_A_MaxSP / 500) * 3);}
-
 	if(n_A_JobSearch()==41 && EquipNumSearch(673))
 		w += 3;
 	if(n_A_HEAD_DEF_PLUS <= 4 && n_A_card[8]==179)
@@ -2977,8 +3020,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalnRO Elven Bow + Elven Arrow: +50% dmg
 	if(EquipNumSearch(1477) && n_A_Arrow == 18)
 		n_tok[25] += 50;
-	if(EquipNumSearch(1217))
-		n_tok[25] += n_A_HEAD_DEF_PLUS;
 	if(n_A_HEAD_DEF_PLUS >= 9 &&EquipNumSearch(1288)){
 		n_tok[25] += 5;}//sagittarius crown
 
@@ -3089,8 +3130,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[60] += n_A_SHOULDER_DEF_PLUS * 3;
 	if(n_A_SHOULDER_DEF_PLUS >= 9 && CardNumSearch(403))
 		n_tok[60] += 5;
-	if(n_A_HEAD_DEF_PLUS >= 8 && EquipNumSearch(1244))
-		n_tok[61] += 5;
 	if(SkillSearch(150)){
 		n_tok[60] += SkillSearch(150);
 		n_tok[63] += 4 * SkillSearch(150);
@@ -3191,9 +3230,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[159] += 50 * CardNumSearch(176);
 		}
 	}
-
-	if(n_A_PassSkill8[0] == 42 && EquipNumSearch(1218))
-		n_tok[151] += 10;
 
 	n_A_zokusei = new Array();
 	for(i=0;i<=9;i++){
@@ -3523,17 +3559,15 @@ function StPlusCalc()
 	//zodiac hats
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1272)){wSPC_VIT += 1;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1273)){wSPC_VIT += 1;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1276)){n_tok[91] += 3;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1277)){n_tok[91] += 3;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1277)){n_tok[91] += 3;n_tok[94] += 3;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1279)){wSPC_INT += 2;}
-	if(n_A_HEAD_DEF_PLUS >= 9 && EquipNumSearch(1279)){n_tok[91] += 4;}
+	if(n_A_HEAD_DEF_PLUS >= 9 && EquipNumSearch(1279)){n_tok[91] += 4;n_tok[94] += 4;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1280)){n_tok[64] += 5;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1281)){n_tok[64] += 5;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1287)){wSPC_INT += 3;}
 	if(n_A_HEAD_DEF_PLUS >= 8 && EquipNumSearch(1288)){wSPC_AGI += 2;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1291)){wSPC_DEX += 1;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1292)){n_tok[62] += 5;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1293)){wSPC_VIT += 2;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1292)){wSPC_DEX += 1;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1293)){wSPC_DEX += 1;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1294)){n_tok[62] += 5;}
 
 	//custom TalonRO Giant Shield +5% resistance against Large sized monster if refined +9-10
@@ -4647,6 +4681,11 @@ function KakutyouKansuu(){
 			HPRLV = eval(document.calcForm.A_KakutyouSelNum.value);
 			w = Math.floor((5 + n_A_MaxHP / 500) * HPRLV);
 			myInnerHtml("A_KakutyouData","<br>Regen: "+w,0);
+		}
+		//Beer Hat - [Loa] - 2018-07-04
+		else if(EquipNumSearch(1240)){
+			w = Math.floor((5 + n_A_MaxHP / 500) * 3);
+			myInnerHtml("A_KakutyouData","<br>Regen: "+w,0);
 		}else
 			myInnerHtml("A_KakutyouData","",0);
 	}
@@ -4654,6 +4693,11 @@ function KakutyouKansuu(){
 		if(n_A_JOB==5||n_A_JOB==9||n_A_JOB==11||n_A_JOB==18||n_A_JOB==20||n_A_JOB==23||n_A_JOB==25||n_A_JOB==32||n_A_JOB==39||n_A_JOB==44){
 			SPRLV = eval(document.calcForm.A_KakutyouSelNum.value);
 			w = Math.floor((3 + n_A_MaxSP / 500) * SPRLV);
+			myInnerHtml("A_KakutyouData","<br>Regen: "+w,0);
+		}
+		//Beer Hat - [Loa] - 2018-07-04
+		else if(EquipNumSearch(1240)){
+			w = Math.floor((3 + n_A_MaxSP / 500) * 3);
 			myInnerHtml("A_KakutyouData","<br>Regen: "+w,0);
 		}else
 			myInnerHtml("A_KakutyouData","",0);
@@ -5101,9 +5145,6 @@ function KakutyouKansuu(){
 		if(n_A_Equip[10] == 1111){H_Bonus += 0.05;}//2º Glorious Ring
 		if(EquipNumSearch(1258)){H_Bonus += 0.1;}//anubis hat
 		if(EquipNumSearch(1194)){H_Bonus += 0.05;}//life tree wooden shoes
-		if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1276)){H_Bonus += 0.03;}//cancer crown
-		if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1277)){H_Bonus += 0.03;}//cancer diadem
-		if(n_A_HEAD_DEF_PLUS >= 9 && EquipNumSearch(1279)){H_Bonus += 0.04;}//Capricorn Diadem
 		if(n_A_Equip[9] == 1111 && n_A_Equip[10] == 983){H_Bonus += 0.05;}//Glorious Ring Set[5% ]
 		if(EquipNumSearch(1104) && EquipNumSearch(1107) && EquipNumSearch(1110)){H_Bonus += 0.03;}//kvm set[3%]
 		if(EquipNumSearch(959) && EquipNumSearch(965) && EquipNumSearch(968)){H_Bonus += 0.1;}//merc bg set gear[10%]
@@ -5487,6 +5528,11 @@ function KakutyouKansuu2(){
 				document.calcForm.A_KakutyouSelNum.options[i] = new Option(i,i);
 			document.calcForm.A_KakutyouSelNum.value=10;
 			return;
+		}
+		//Beer Hat - [Loa] - 2018-07-04
+		else if(EquipNumSearch(1240)){
+			myInnerHtml("A_KakutyouSel","Increased HP Recovery Level: 3",0);
+			return;
 		}else{
 			myInnerHtml("A_KakutyouSel","Not Available for this Class",0);
 			return;
@@ -5501,6 +5547,11 @@ function KakutyouKansuu2(){
 			for(i=0;i<=10;i++)
 				document.calcForm.A_KakutyouSelNum.options[i] = new Option(i,i);
 			document.calcForm.A_KakutyouSelNum.value=10;
+			return;
+		}
+		//Beer Hat - [Loa] - 2018-07-04
+		else if(EquipNumSearch(1240)){
+			myInnerHtml("A_KakutyouSel","Increased SP Recovery Level: 3",0);
 			return;
 		}else{
 			myInnerHtml("A_KakutyouSel","Not Available for this Class",0);

@@ -597,7 +597,8 @@ InsertSkill = [
 [53,1,173,3],//custom TalonRO SQI Bonus - Tome of Ymir = Strip Shield lv 3
 [54,0,171,1],//custom TalonRO Kraken Card = Raid lv 1
 [55,1,130,1],
-[56,1,132,3]
+[56,1,132,3],
+[57,1,6,1]
 ];
 
 
@@ -743,7 +744,9 @@ AutoSpellSkill = [
 [134,1,261,1,10,1],
 [135,1,54,1,10,6],
 [136,1,51,5,1,6],
-[137,1,130,1,1,6]
+[137,1,130,1,1,6],
+[138,0,209,1,5,6],
+[139,1,76,5,1,1]
 ];
 //ID - Gets called in second spot(221(effect),1(ID)), autocast id = 1 by default, skill Id,Skill Lvl, chance %, attacktype(1atkbased,2shortrange,3longrange,4magical,5attacking,6receivingATKbased,0 by default, 0=low chance, 1=medium chance, 2=high chance)
 
