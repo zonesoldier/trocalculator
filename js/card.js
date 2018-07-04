@@ -1137,11 +1137,11 @@ function sortCards(inputArray){
 				}
 			}
 		}
-		//filter out elemental stone
+		//filter out weapon elemental stone
 		else if(inputArray[i][1] == 10){
 			elementalStone.push(inputArray[i][0]);
 		}
-		//filter out special
+		//filter out weapon special
 		else if(inputArray[i][1] == 11){
 			cardSpecial.push(inputArray[i][0]);
 		}
@@ -1327,6 +1327,7 @@ function SetCardName(SENw){
 	for(var i=0;i<SC_MAXnum;i++){
 		if(i == SENw){
 			for(var j=1;w_SC[i][j] != "NULL";j++){
+				//if card id in cardID array, generate links
 				if(cardID[w_SC[i][j]][2]){
 					SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ cardID[w_SC[i][j]][2] + "/\" target=\"_blank\"><b>" + "<font color='blue'>["+ cardOBJ[w_SC[i][j]][2] +"]</font></b></a>";
 					if(w_SC[i][j+1] != "NULL")
