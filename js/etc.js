@@ -393,6 +393,7 @@ ITEM_SP_TIME_OBJ =[
 ];
 //ITEM_SP_TIME_OBJ_SORT = [0,5,10,4,27,3,44,37,30,31,26,39,49,45,46,18,48,15,11,12,14,13,17,32,1,7,47,35,33,21,16,40,28,34,38,42,19,22,23,24,36,41,25,6,20,8,29,43];
 
+//2nd value is bonus brewing success rate in %
 Potion_Type =[
 [0,20,"Red Potion"]
 ,[1,20,"Yellow Potion"]

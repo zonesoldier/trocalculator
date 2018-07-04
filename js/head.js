@@ -197,7 +197,7 @@ JobEquipItemOBJ = [
 ];
 
 /*
-	JobEquipItemOBJ values - [Slap] - 2018-06-03
+	JobEquipItemOBJ values - [Loa] - 2018-06-03
 
 		0 = all jobs
 		1 = every job except novice
@@ -2961,8 +2961,7 @@ function BattleHiDam(){
 					break;
 				}
 	}
-
-	//Port Malaya set damage reduction - [Slap] - 2018-06-29
+	//Port Malaya set damage reduction - [Loa] - 2018-06-29
 	portMalayaMob = [596,597,598,599,600,601,602,603,671,672,673,674,676,677]
 	if(EquipNumSearch(1017)){
 		if(portMalayaMob.includes(n_B[0])){
@@ -3122,7 +3121,7 @@ function BattleMagicCalc(wBMC)
 			wX += 20 * CardNumSearch(474);
 	if(n_A_ActiveSkill==132 || n_A_ActiveSkill==133)
 		if(EquipNumSearch(1146))
-			wX += n_A_HEAD_DEF_PLUS;
+			wX += n_A_Weapon_ATKplus;
 	if(n_A_ActiveSkill==131)
 		if(EquipNumSearch(1169))
 			wX += n_A_Weapon_ATKplus;
@@ -3135,7 +3134,7 @@ function BattleMagicCalc(wBMC)
 	if(n_A_ActiveSkill==37||n_A_ActiveSkill==387){
 		if(n_A_JobSearch() == 3 && EquipNumSearch(1247)){
 			wX += 5;
-			if(n_A_HEAD_DEF_PLUS >= 7)
+			if(n_A_HEAD_DEF_PLUS > 7)
 				wX += 5;
 		}
 	}
@@ -3399,7 +3398,7 @@ with(document.calcForm){
 		A_left_card.style.visibility = "visible"
 	}
 
-	//hide shield when using two-handed weapons - [Slap] - 2018-06-29
+	//hide shield when using two-handed weapons - [Loa] - 2018-06-29
 	if(n == 3 || n == 5 || n == 7 || n == 10 || n == 11 || n == 16 || n == 17 || n == 18 || n == 19 || n == 20 || n == 21){
 		A_LEFT_DEF_PLUS.style.visibility = "hidden";
 		A_LEFT_DEF_PLUS.value = 0;
@@ -3411,8 +3410,8 @@ with(document.calcForm){
 	//n_Nitou == 0 means no off-hand weapon for assasins equipped
 	else if(n_Nitou == 0){
 		A_LEFT_DEF_PLUS.style.visibility = "visible";
-		A_left.style.visibility = "visible"
-		A_left_card.style.visibility = "visible"
+		A_left.style.visibility = "visible";
+		A_left_card.style.visibility = "visible";
 	}
 
 	n_A_Equip[0] = eval(A_weapon1.value);
@@ -6078,7 +6077,7 @@ function calc()
 		else
 			wDA = 5;
 	}
-	if(EquipNumSearch(399) || EquipNumSearch(1348)){ //Nagan/Nagan [Rental] double attack - [Slap] -2018-06-26
+	if(EquipNumSearch(399) || EquipNumSearch(1348)){ //Nagan/Nagan [Rental] double attack - [Loa] -2018-06-26
 			wDA = 25;
 	}
 	if(EquipNumSearch(570) && n_A_WeaponType != 0){
@@ -6626,8 +6625,8 @@ function BaiCI(wBaiCI)
 		debug_atk+="\n --- (BaiCI) card-skill Modifier ---";
 		debug_atk+="\nb_wBaiCI:"+wBaiCI;
 	}
+	//specific skill %damage bonus
 	w1=0;
-
 	if(n_A_ActiveSkill == 6)
 		if(n_A_SHOES_DEF_PLUS >= 9 && CardNumSearch(362))
 			w1 += 10;
@@ -6728,7 +6727,7 @@ function BaiCI(wBaiCI)
 		if(n_A_ActiveSkillLV == 10 && EquipNumSearch(1159))
 			w1 += 50;
 	if(n_A_ActiveSkill == 65)
-		if(SU_LUK >= 90 && SU_DEX >= 90 && EquipNumSearch(1164))
+		if((SU_LUK >= 90 || SU_DEX >= 90) && EquipNumSearch(1164))
 			w1 += 15;
 	if(n_A_ActiveSkill == 264)
 		if(EquipNumSearch(1176) && SkillSearch(81) == 10)
