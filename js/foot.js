@@ -113,7 +113,7 @@ function SuperNoviceFullWeapon(nSNFW)
 
 function BabyJobs(){
 with(document.calcForm){
-	//Remove rebirth classes when adopted is checked - [Slap] - 2018-06-21
+	//Remove rebirth classes when adopted is checked - [Loa] - 2018-06-21
 	var adopted = eval(A_youshi.checked);
 	if(adopted && A_JOB.options.length > 26){
 		var jobJump = 0;
@@ -136,8 +136,7 @@ with(document.calcForm){
 			A_JOB.add(option,i);
 		}
 	}
-
-	//Cap stats at 80 when adopted is checked - [Slap] - 2018-06-21
+	//Cap stats at 80 when adopted is checked - [Loa] - 2018-06-21
 	if(adopted && A_STR.options.length > 79){
 		for(i = A_STR.options.length - 1; i > 79; i--){
 			A_STR.remove(i);
@@ -608,6 +607,14 @@ function StAllCalc()
 		n_A_ATK_w = Math.round(Math.floor(n_A_DEX/10) * Math.floor(n_A_DEX/10));
 		n_A_ATK   = n_A_DEX + n_A_ATK_w + Math.floor(n_A_STR / 5) + Math.floor(n_A_LUK / 5);
 	}
+	//Galaxy Circlet - [Loa] - 2018-07-03
+	if(EquipNumSearch(1163)){
+		n_tok[13] += n_A_HEAD_DEF_PLUS * 10;
+		n_tok[14] += n_A_HEAD_DEF_PLUS * 10;
+		n_tok[61] += Math.floor(n_A_HEAD_DEF_PLUS/2);
+		n_tok[62] += Math.floor(n_A_HEAD_DEF_PLUS/2);
+		n_tok[63] += Math.floor(n_A_HEAD_DEF_PLUS/2);
+	}
 
 	w=n_tok[17];
 
@@ -740,7 +747,7 @@ function StAllCalc()
 	//custom TalonRO Angeling Fur Hat +1% atk
 	if(EquipNumSearch(1469))
 		w += n_A_ATK*.01;
-	//Yellow/Green/Pink Sheila Hairnet [Refine Rate 9+] Increase ATK by 2% [Refine Rate 10] Increase ATK by 2% - [Slap] - 2016-06-29
+	//Yellow/Green/Pink Sheila Hairnet [Refine Rate 9+] Increase ATK by 2% [Refine Rate 10] Increase ATK by 2% - [Loa] - 2016-06-29
 	if(EquipNumSearch(1022) || EquipNumSearch(1026) || EquipNumSearch(1073)){
 		if(n_A_HEAD_DEF_PLUS >= 9){
 			w += n_A_ATK*.02;
@@ -832,7 +839,6 @@ function StAllCalc()
 			n_A_MaxHP = Math.floor(wKenseiHP[n_A_BaseLV-90] * (100 + n_A_VIT) / 100);
 	}
 
-
 //[Custom TalonRO 2018-06-02 - Advanced Fin Helm Gives Maximum HP + 6 * Base Level] [Kato]
 if(EquipNumSearch(1561)) {
 	n_A_MaxHP += 6 * n_A_BaseLV;
@@ -869,7 +875,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(986))
 		w += 7 * n_A_BaseLV;
 	if(n_A_Weapon_ATKplus >= 6 && EquipNumSearch(1168))
-		w -= 200*(n_A_Weapon_ATKplus-5);
+		w -= 200;
 	//custom TalonRO Chronos fix, +50 HP instead of SP each 2 refine levels
 	if(EquipNumSearch(1172))
 		w += 50 * Math.floor(n_A_Weapon_ATKplus / 2);
@@ -890,7 +896,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 	}
 
-	//tiraya bonnet + 20hp per refine - [Slap] 2018-07-02
+	//tiraya bonnet + 20hp per refine - [Loa] 2018-07-02
 	if(EquipNumSearch(1048)){
 		w += n_A_HEAD_DEF_PLUS * 20;
 	}
@@ -1114,15 +1120,18 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(986))
 		w += Math.floor(0.5 * n_A_BaseLV);
 	if(n_A_Weapon_ATKplus >= 6 && EquipNumSearch(1168))
-		w -= 100*(n_A_Weapon_ATKplus-5);
+		w -= 100;
 	if(EquipNumSearch(1193))
 		w += Math.floor(n_A_BaseLV / 3) + n_A_SHOULDER_DEF_PLUS * 10;
-
-	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - [Slap] - 2018-06-07
+	//custom Talonro Improved Magician Hat: Every refine level adds Maximum SP + 5 - [Loa] - 2018-06-07
 	if(EquipNumSearch(1646)){
 		w += n_A_HEAD_DEF_PLUS * 5;
 	}
-
+	//Red Minstrel Hat [For Every Refine > 5] MDEF + 1, MSP + 10 - [Loa] - 2018-07-03
+	if(EquipNumSearch(1139) && n_A_HEAD_DEF_PLUS > 5){
+		w += (n_A_HEAD_DEF_PLUS - 5) * 10;
+		n_tok[19] += n_A_HEAD_DEF_PLUS - 5;
+	}
 	//custom TalonRO Kris enchant SP
 	var KEbonus = [A_KE11.value,A_KE12.value,A_KE21.value,A_KE22.value];
 	for (i=0;i<4;i++){
@@ -1133,7 +1142,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 				w += w_enchant*50;
 		}
 	}
-
 	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for MaxSP] [Kato]
 	for(i=0;i<tRO_MalangdoEnchantment.length;i++) {
 		var vME = tRO_MalangdoEnchantment[i];
@@ -1141,7 +1149,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 					w += parseInt(vME.substr(-1)) * 50;
 			}
 	}
-
 	n_A_MaxSP += w;
 
 	if(n_A_MaxSP < 0)
@@ -1242,12 +1249,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(809))
 		n_A_DEFplus -= n_A_HEAD_DEF_PLUS;
 
-	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - [Slap] - 2016-06-07
+	//custom Talonro Advanced Safety Ring: Every 30 VIT reduces DEF by 1 - [Loa] - 2016-06-07
 	if(EquipNumSearch(1641)){
 		n_A_DEF -= EquipNumSearch(1641) * Math.floor(SU_VIT / 30);
 	}
 
-	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - +1 DEF each refine past +4 until +8 [Nattwara/Slap]
+	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - +1 DEF each refine past +4 until +8 [Nattwara/Loa]
 	if(EquipNumSearch(1656) && n_A_HEAD_DEF_PLUS > 4)
 		n_A_DEFplus -= Math.min(n_A_HEAD_DEF_PLUS-4,4);
 
@@ -1504,10 +1511,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	n_A_HIT += n_tok[8];
 
-	//negative hit correction- [Slap] - 2018-06-18
-	if(n_A_HIT < 0){
-		n_A_HIT -= n_A_HIT;
-	}
+	// //negative hit correction- [Loa] - 2018-06-18
+	// if(n_A_HIT < 0){
+	// 	n_A_HIT -= n_A_HIT;
+	// }
 
 	if(EquipNumSearch(656))
 		n_A_HIT -= Math.floor(SU_DEX / 3);
@@ -1633,14 +1640,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill6[0] == 2 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==4)
 		n_A_FLEE += n_A_PassSkill6[1] *3;
 
-	//Bloody Roar FLEE -160 - [Slap] - 2018-06-11
+	//Bloody Roar FLEE -160 - [Loa] - 2018-06-11
 	if(EquipNumSearch(483)){
-		if(n_A_FLEE < 160){
-			n_A_FLEE -= n_A_FLEE;
-		}
-		else{
+		// if(n_A_FLEE < 160){
+		// 	n_A_FLEE -= n_A_FLEE;
+		// }
+		// else{
 			n_A_FLEE -= 160;
-		}
+		// }
 	}
 
 	if(n_A_JOB==8||n_A_JOB==14||n_A_JOB==22||n_A_JOB==28)
@@ -1750,12 +1757,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill8[20])
 		n_A_LUCKY += 20;
 
-	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - [Slap] - 2016-06-07
+	//custom Talonro Improved Kitsune Mask: If refine > 6 Perfect Dodge + 4 - [Loa] - 2016-06-07
 	if(EquipNumSearch(1652) && n_A_HEAD_DEF_PLUS > 6){
 		n_A_LUCKY += 4;
 	}
 
-	//Bloody Roar Perfect Dodge -160 - [Slap] - 2018-06-11
+	//Bloody Roar Perfect Dodge -160 - [Loa] - 2018-06-11
 	if(EquipNumSearch(483)){
 		if(n_A_LUCKY < 160){
 			n_A_LUCKY -= n_A_LUCKY;
@@ -2004,7 +2011,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(n_A_PassSkill8[i] == 50 && EquipNumSearch(1538)){C_ATK += 100;}
 	}
 
-	//ATK bonus
+	//ATK bonus display portion
 	if(EquipNumSearch(953)){C_ATK += ((n_A_JobLV*2)/7);}
 	if(EquipNumSearch(1261)){C_ATK += ((n_A_JobLV*2)/7);}
 	if(EquipNumSearch(666) && EquipNumSearch(721) && EquipNumSearch(701) && EquipNumSearch(722)){C_ATK += 18;}
@@ -2029,7 +2036,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1280)){C_ATK += 15;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1282)){C_ATK += 15;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1291)){C_ATK += 5;}
-
+	if(EquipNumSearch(1150)){C_ATK += 15};
 	//skils que dão atk[parte 1]
 	if (SkillSearch(146)){C_ATK +=3;}
 	if(n_A_PassSkill3[9]){C_ATK += 50+(25*(n_A_PassSkill3[9]-1));}
@@ -2216,15 +2223,15 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
 		w += 1 * (n_A_HEAD_DEF_PLUS - 6);
 	}
-	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
+	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Loa] - 2016-06-07
 	if(EquipNumSearch(1640)){
 		w += Math.floor(n_A_Weapon_ATKplus / 2);
 	}
-	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - [Slap] - 2016-06-07
+	//custom TalonRO Improved Mage Hat: Increase MATK by 1% for every 2 upgrades - [Loa] - 2016-06-07
 	if(EquipNumSearch(1645)){
 		w += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
-	//Yellow/Green/Pink Sheila Hairnet [Refine Rate 9+] Increase MATK by 2% [Refine Rate 10] Increase MATK by 2% - [Slap] - 2016-06-29
+	//Yellow/Green/Pink Sheila Hairnet [Refine Rate 9+] Increase MATK by 2% [Refine Rate 10] Increase MATK by 2% - [Loa] - 2016-06-29
 	if(EquipNumSearch(1022) || EquipNumSearch(1026) || EquipNumSearch(1073)){
 		if(n_A_HEAD_DEF_PLUS >= 9){
 			w += 2;
@@ -2233,7 +2240,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			w += 2;
 		}
 	}
-	//Silver/Violet/Orange/Blue Sheila Hairnet [Refine Rate 9+] Increase Physical Damage and MATK by 2% [Refine Rate 10] Cast Time - 10% - [Slap] - 2016-06-29
+	//Silver/Violet/Orange/Blue Sheila Hairnet [Refine Rate 9+] Increase Physical Damage and MATK by 2% [Refine Rate 10] Cast Time - 10% - [Loa] - 2016-06-29
 	if(EquipNumSearch(1024) || EquipNumSearch(1025) || EquipNumSearch(1062) || EquipNumSearch(1074)){
 		if(n_A_HEAD_DEF_PLUS >= 9){
 			n_tok[80] += 2;
@@ -2241,6 +2248,17 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 		if(n_A_HEAD_DEF_PLUS == 10){
 			n_tok[73] -= 10;
+		}
+	}
+	//Red Wing Hat [Refine Rate > 6] Physical Damge + 2%, MATK + 2% [Refine Rate > 8] Physical Damge + 2%, MATK + 2% - [Loa] - 2018-07-03
+	if(EquipNumSearch(1135)){
+		if(n_A_HEAD_DEF_PLUS > 6){
+			n_tok[80] += 2;
+			w += 2;
+		}
+		if(n_A_HEAD_DEF_PLUS > 8){
+			n_tok[80] += 2;
+			w += 2;
 		}
 	}
 	//Custom TalonRO - 2018-06-07 - Enhanced Hat of the Sun God [1] - MATK part [Nattwara]
@@ -2541,7 +2559,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1455))
 		w += 3*Math.floor(n_A_Weapon_ATKplus/2);
 
-	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - [Slap] - 2016-06-07
+	//custom TalonRO Gigantic Lance: For every refine above +4, increase ASPD by 1% - [Loa] - 2016-06-07
 	if(EquipNumSearch(1315) && n_A_Weapon_ATKplus>4){
 			w += n_A_Weapon_ATKplus - 4;
 	}
@@ -2727,7 +2745,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w -= 50;
 	if(EquipNumSearch(1005)& EquipNumSearch(442)){
 		w -= (n_A_Weapon_ATKplus/2);}
-	//parade hat [refine >= 6] -5 cast time - [Slap] 2018-07-02
+	//parade hat [refine >= 6] -5 cast time - [Loa] 2018-07-02
 	if(EquipNumSearch(1036) && n_A_HEAD_DEF_PLUS >= 6){
 		w -= 5;
 	}
@@ -2934,14 +2952,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS > 5)
 		n_tok[37] += 2*(n_A_HEAD_DEF_PLUS-5);
 
-	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - [Slap] - 2018-06-07
+	//custom Talonro Imrpoved Munak Hat: If refine > 6 increase damage against Undead monster by 10% - [Loa] - 2018-06-07
 	if(EquipNumSearch(1649) && n_A_HEAD_DEF_PLUS > 6){
-		n_tok[31] += 10
+		n_tok[31] += 10;
 	}
 
-	//custom Talonro Imrpoved Bongun Hat: If refine > 6 increase damage against Demon monster by 10% - [Slap] - 2018-06-07
+	//custom Talonro Imrpoved Bongun Hat: If refine > 6 increase damage against Demon monster by 10% - [Loa] - 2018-06-07
 	if(EquipNumSearch(1650) && n_A_HEAD_DEF_PLUS > 6){
-		n_tok[36] += 10
+		n_tok[36] += 10;
 	}
 
 	if(EquipNumSearch(628) && n_A_Arrow == 4)
@@ -3012,7 +3030,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 7)
 		n_tok[70] += 10;
 
-	//custom TalonRO Improved Joker Jester: If refine rate >6 +5% critical damage - [Slap] - 2018-06-07
+	//custom TalonRO Improved Joker Jester: If refine rate >6 +5% critical damage - [Loa] - 2018-06-07
 	if(EquipNumSearch(1647) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[70] += 5;
 	}
@@ -3044,12 +3062,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[59] -= 200;
 		}
 	}
-
+	//Orc Hero Headdress [For Every Refine > 5] Physical Damage against Demi-Human monsters + 1%, Damage from Demi-Human monster - 2% - [Loa] - 2018-07-03
+	if(EquipNumSearch(1142) && n_A_HEAD_DEF_PLUS > 5){
+		n_tok[37] += n_A_HEAD_DEF_PLUS - 5;
+		n_tok[57] += (n_A_HEAD_DEF_PLUS - 5) * 2;
+	}
 	//[Custom TalonRO - 2018-06-02 - Aegir Helm + Armor Combo - 1% less damage from Fish race monster for each refine] [Kato/Nattwara]
 	if(EquipNumSearch(1556))
 		n_tok[55] += n_A_BODY_DEF_PLUS;
 
-	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - 1% less damage Neutral element attack for each refine past +4 until +8 [Nattwara/Slap]
+	//Custom TalonRO - 2018-06-07 - Enhanced Bone Helm [1] - 1% less damage Neutral element attack for each refine past +4 until +8 [Nattwara/Loa]
 	if(EquipNumSearch(1656) && n_A_HEAD_DEF_PLUS > 4)
 		n_tok[60] += Math.min(n_A_HEAD_DEF_PLUS-4,4);
 
@@ -3112,7 +3134,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(SkillSearch(421))
 		n_tok[78] += 20;
 
-	//maiden hat +1% heal per refine > 6 - [Slap] - 2018-06-25
+	//maiden hat +1% heal per refine > 6 - [Loa] - 2018-06-25
 	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
 		n_tok[91] += n_A_HEAD_DEF_PLUS - 6;
 		n_tok[94] += n_A_HEAD_DEF_PLUS - 6;
@@ -3130,6 +3152,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	}
 	if(EquipNumSearch(1161))
 		n_tok[91] += SkillSearch(23);
+		n_tok[94] += SkillSearch(23);
 
 	if(EquipNumSearch(534)){
 		wSPVS = n_A_JobSearch();
@@ -3296,11 +3319,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			}
 		}
 	}
-	//increase damage of skills based on element for n_tok[340-349] - [Slap]
+	//increase damage of skills based on element for n_tok[340-349] - [Loa]
 	for(i=0;i<TRO_MAGICALSKILL_ELEMENTS.length;i++){
 		if(TRO_MAGICALSKILL_ELEMENTS[i].indexOf(n_A_ActiveSkill) != -1){
 			for(j=0; j<10; j++) {
-				n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + n_tok[340 + i]) / 100) - 100; // ***
+				n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + n_tok[340 + i]) / 100) - 100;
 			}
 		}
 	}
@@ -3455,12 +3478,12 @@ function StPlusCalc()
 			wSPC_DEX += 1;
 	}
 
-	//custom TalonRo Improved Mage Hat: Every Refine level 7 or higher adds INT + 1 - [Slap] - 2018-06-07
+	//custom TalonRo Improved Mage Hat: Every Refine level 7 or higher adds INT + 1 - [Loa] - 2018-06-07
 	if(EquipNumSearch(1645) && n_A_HEAD_DEF_PLUS > 6){
 		wSPC_INT += n_A_HEAD_DEF_PLUS - 6;
 	}
 
-	//custom TalonRo Improved Magician Hat: Every Refine level 7 or higher adds DEX + 1 - [Slap] - 2018-06-07
+	//custom TalonRo Improved Magician Hat: Every Refine level 7 or higher adds DEX + 1 - [Loa] - 2018-06-07
 	if(EquipNumSearch(1646) && n_A_HEAD_DEF_PLUS > 6){
 		wSPC_DEX += n_A_HEAD_DEF_PLUS - 6;
 	}
@@ -3573,6 +3596,10 @@ function StPlusCalc()
 	if(n_A_card[14] == 98 && CardNumSearch(273)){wSPC_STR += 3;}
 	if(n_A_card[15] == 98 && CardNumSearch(273)){wSPC_STR += 3;}
 	if(n_A_card[14] == 98 && n_A_card[15] == 98 && CardNumSearch(273) == 1){wSPC_STR -= 3;}
+	//Orc Hero Headdress [For Every 4 Refines] STR + 1 - [Loa] - 2018-07-03
+	if(EquipNumSearch(1142)){
+		wSPC_STR += Math.floor(n_A_HEAD_DEF_PLUS/4);
+	}
 	//Phoenix Crown
 	if(EquipNumSearch(872)){
 		n_tok[77] += n_A_HEAD_DEF_PLUS;}
@@ -3825,7 +3852,7 @@ function StPlusCalc()
 				wSPC_LUK = (99 - n_A_LUK);
 		}
 
-	//Marionette stat compensation rework - [Slap] - 2018-06-17
+	//Marionette stat compensation rework - [Loa] - 2018-06-17
 	}else if(n_A_PassSkill3[11] && n_A_PassSkill3[18]){
 			if(n_A_STR + w2[0] + Math.floor(n_A_PassSkill3[12]/2) < 99){
 				wSPC_STR += Math.floor(n_A_PassSkill3[12]/2);
@@ -5163,17 +5190,13 @@ function KakutyouKansuu(){
 			homunevolved = eval(document.calcForm.A_HomunEvolved.value);
 			//end
 			potrate = Potion_Type[selpot][1];
-
 			//custom TalonRO Update 2014-09-29
 			pharmacyboost = homunlevel * 0.025;
 			if (homunevolved)
 				pharmacyboost *= 2;
-
 			adopted = eval(document.calcForm.A_youshi.checked);
-
-			//Brewing rework - [Slap] - 2018-06-17
+			//Brewing rework - [Loa] - 2018-06-17
 			srate = potionr * 50 + preparep * 300 + n_A_JobLV * 20 + (n_A_DEX + n_A_LUK + (n_A_INT/2)) * 10 + potrate * 100 + pharmacyboost * 100;
-			
 			//selpot values in etc.js
 			if(selpot == 3 //blue pot
 				|| selpot == 4 //slim red
@@ -5204,22 +5227,18 @@ function KakutyouKansuu(){
 			{
 				brate = -1000;
 			}
-
 			//add brewing variance
 			if(brate < 0){srate1 = srate - 10;}
 			else if(brate > 0){srate1 = srate + 10;}
 			else{srate1 = srate;}
-
 			srate2 = srate + (brate/2);
 			srate3 = srate + brate;
-
 			//baby alchemist penalty
 			if(adopted){
 				srate1 = Math.floor(srate1 * 70) / 100;
 				srate2 = Math.floor(srate2 * 70) / 100;
 				srate3 = Math.floor(srate3 * 70) / 100;
 			}
-
 			//limit success range to 0-100%
 			if(srate1 > 10000){srate1 = 10000;}
 			if(srate1 < 0){srate1 = 0;}
@@ -5227,13 +5246,10 @@ function KakutyouKansuu(){
 			if(srate2 < 0){srate2 = 0;}
 			if(srate3 > 10000){srate3 = 10000;}
 			if(srate3 < 0){srate3 = 0;}
-
 			srate_avg = Math.floor((srate1 + srate2 + srate3)/3)/100;
-
 			srate_min = Math.floor(Math.min(srate1, srate2, srate3))/100;
 			srate_med = Math.floor(srate2)/100;
 			srate_max = Math.floor(Math.max(srate1, srate2, srate3))/100;
-
 			myInnerHtml("A_KakutyouData","<b><br>Success rate range (Minimum ~ Median ~ Maximum):</b> " + srate_min + " % ~ " + srate_med + " % ~ " + srate_max + " %" + "<br><b>Success rate averge:</b> " + srate_avg + " %",0);
 		}
 		else if(n_A_JOB==22){
@@ -6262,13 +6278,12 @@ with(document.calcForm){
 	cookieNum = A_SaveSlot.value;
 	SaveData = document.cookie.split("; ");
 	wStr = "";
-
-	//clear baby job status before load - [Slap] - 2018-06-22
+	//clear baby job status before load - [Loa] - 2018-06-22
 	if(A_youshi.checked){
 		document.getElementById("lab1").checked = false;
 		BabyJobs();
 	}
-	
+
 	for(i=0;SaveData[i];i++){
 		if (SaveData[i].substr(0,6) == cookieNum +"="){
 			wStr = SaveData[i].substr(6,SaveData[i].length);

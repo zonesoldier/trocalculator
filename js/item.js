@@ -1056,7 +1056,7 @@ ItemOBJ = [
 ,[1033,50,0,1,0,1,10,10,"Dokebi's Wig (ID:5298)","","<b>Upper and Middle Headgear</b>",60,5,61,-5,63,-5,0]
 ,[1034,50,0,5,0,0,20,50,"Helm Of Dragon","","3% chance to cause a certain abnormal status to all enemies in 5x5 cell on physical attack",39,20,0]
 ,[1035,50,0,2,0,0,10,30,"Wind Milestone","",0,2,2,220,23,0]
-,[1036,50,0,3,0,0,80,0,"Parade Hat","","<b>[Refine Rate 6~10]</b><br>Reduces Cast Time by an additional 5%",19,2,73,-5,0]
+,[1036,50,0,3,0,0,80,0,"Parade Hat","","<b>[Refine Rate > 5]</b><br>Reduces Cast Time by an additional 5%",19,2,73,-5,0]
 ,[1037,51,0,1,0,0,10,50,"Darkness Eyes","",0,5,1,154,100,0]
 ,[1038,51,0,1,0,0,80,50,"Hairband of Reginleif","",0,61,3,63,3,68,3,69,3,0]
 ,[1039,50,0,5,0,1,10,10,"Hyegun Hat","",0,19,3,56,10,193,1,0]
@@ -1153,42 +1153,42 @@ ItemOBJ = [
 ,[1130,50,0,3,0,0,100,0,"Emperor's Laurel Crown","",0,7,1,19,3,0]
 ,[1131,50,79,0,0,0,70,75,"Lion Mask","","<b>Upper and Middle Headgear</b>",19,1,136,5,0]
 ,[1132,51,0,1,0,0,10,70,"Fox Hat","",0,2,1,11,2,0]
-,[1133,999,0,0,0,0,10,30,"Pirate Dagger","",0,71,1,0]
-,[1134,999,0,50,1,3,0,0,"Novice Cutter","",0,193,1,0]
-,[1135,999,0,63,1,3,0,0,"Novice Main-Gauche[3]","",0,193,1,0]
-,[1136,999,0,59,1,3,0,2,"Novice Falchion","",0,193,1,0]
-,[1137,999,0,57,1,3,0,2,"Novice Mace","",0,193,1,0]
-,[1138,999,1,100,1,3,0,3,"Novice Battle Axe","",0,193,1,0]
-,[1139,999,0,49,1,3,0,4,"Novice Composite Bow","",0,193,1,0]
-,[1140,999,0,15,1,3,0,0,"Novice Rod","",0,89,16,193,1,0]
-,[1141,999,0,0,0,0,20,0,"Fisherman's Scarf","","[description translation missing - ItemID: 1141]",0]
-,[1142,999,0,0,0,0,25,0,"Fishing Boots","","[description translation missing - ItemID: 1142]",0]
-,[1143,999,0,0,0,0,10,0,"Lure","","[description translation missing - ItemID: 1143]",0]
+,[1133,50,1,4,0,1,10,0,"Evolved Demon Student Hat","",0,3,2,1,2,6,1,0]
+,[1134,100,0,0,0,0,0,0,"Evolved Demon Student Hat + Blue Pencil in Mouth","",0,80,2,0]
+,[1135,50,0,0,0,1,60,50,"Red Wing Hat","","<b>[Refine Rate > 6]</b><br>Physical Damge + 2%<br>MATK + 2%<br><b>[Refine Rate > 8]</b><br>Physical Damge + 2%<br>MATK + 2%",1,1,4,1,5,1,0]
+,[1136,50,0,1,0,0,10,0,"Shinny Wig","","Movement Speed + 25% (non-stacking)<br><b>Upper and Middle Headgear</b>",18,4,220,22,0]
+,[1137,50,1,3,0,0,40,0,"Antler Gentleman Hat","",0,4,3,0]
+,[1138,50,0,2,0,0,30,0,"Camp Fire Hat","",0,63,10,221,136,0]
+,[1139,50,0,1,0,1,10,40,"Red Minstrel Hat","","<b>[For Every Refine > 5]</b><br>MDEF + 1<br>MSP + 10",4,1,14,80,19,3,0]
+,[1140,50,0,2,0,1,60,45,"Tucano Hat","",0,5,3,193,1,0]
+,[1141,50,0,0,0,0,50,0,"Blazing Sun","","Increase SP Consumption of skills by 5%",7051,-5,7052,-5,5051,5,5052,5,5053,3,5125,3,193,1,0]
+,[1142,50,0,5,0,1,90,0,"Orc Hero Headdress","","Add a 1% chance of auto casting Level 3 Weapon Perfection on the user when receives Physical Damage<br><b>[For Every 4 Refines]</b><br>STR + 1<br><b>[For Every Refine > 5]</b><br>Physical Damage against Demi-Human monsters + 1%<br>Damage from Demi-Human monsters - 2%<br><b>Upper and Middle Headgear</b>",0]
+,[1143,50,0,1,0,0,50,50,"Aladdin Prince Hat","",0,71,1,0]
 ,[1144,51,0,3,0,0,100,60,"Tiger Face","","<b>Middle and Lower Headgear</b>",52,5,32,5,172,5,0]
-,[1145,50,0,1,0,0,100,10,"Hermose's cap","",0,12,10,80,-10,89,-20,0]
-,[1146,50,0,1,0,1,20,0,"Katyusha Flowers","","[description translation missing - ItemID: 1146]",5132,15,5133,15,7132,25,7133,25,0]
-,[1147,51,0,0,0,0,10,70,"Ifrit Ear","",0,19,3,1,1,63,5,61,-5,5051,2,5125,2,5122,2,5006,2,5070,2,5007,2,0]
-,[1148,999,0,0,0,0,10,50,"Red Nose","","[description translation missing - ItemID: 1148]",6,1,0]
-,[1149,999,0,3,0,0,300,75,"Horn Helmet","","[description translation missing - ItemID: 1149]",13,100,60,-30,61,-30,62,-30,63,-30,64,-30,65,-30,66,-30,67,-30,68,-30,69,-30,0]
-,[1150,50,0,0,0,1,50,0,"New Cowboy Hat","",0,17,15,9,-5,0]
-,[1151,50,0,1,0,1,75,45,"Quati Hat","",0,193,1,2,3,0]
-,[1152,999,0,3,0,0,25,1,"Corona Torch","",0,193,1,63,20,220,34,0]
-,[1153,50,0,2,0,0,20,1,"Pinwheel Hat","",0,15,5,16,5,0]
-,[1154,999,0,0,0,1,10,45,"True Love","","[description translation missing - ItemID: 1154]",193,1,19,10,73,-10,0]
-,[1155,50,0,1,0,0,80,1,"Magic Rabbit Hat","",0,4,1,14,50,221,109,221,110,221,111,221,89,0]
+,[1145,50,0,1,0,1,100,0,"Hermose Cap","",0,12,10,80,-10,89,-20,0]
+,[1146,50,0,1,0,1,20,0,"RJC Katyusha Flower","","Increases damage with Heaven's Drive and Earth Spike by 1% per refine on weapon",5132,15,5133,15,0]
+,[1147,51,1,0,0,0,0,70,"Ifrit Ear","",0,19,3,1,1,63,5,61,-5,5051,2,5125,2,5122,2,5006,2,5070,2,5007,2,0]
+,[1148,50,0,3,0,1,10,0,"Desert Prince","",0,194,1,0]
+,[1149,50,0,4,0,0,7,0,"Boiled Rice Hat","","When killing a monster, add chance to drop Meat",6,1,0]
+,[1150,50,0,0,0,1,50,0,"Purple Cowboy Hat (ID:5816)","",0,17,15,9,-5,0]
+,[1151,50,0,1,0,1,70,45,"Kwati Hat","",0,2,3,193,1,0]
+,[1152,50,0,3,0,0,30,50,"Dice Hat","",0,6,4,193,0]
+,[1153,50,0,2,0,0,20,0,"Pinwheel Hat","",0,75,5,76,5,0]
+,[1154,50,0,5,0,1,50,10,"Blue Hippo Hat","",0,61,10,221,137,0]
+,[1155,50,0,1,0,0,80,0,"Magic Rabbit Hat","",0,4,1,14,50,221,109,221,110,221,111,221,89,0]
 ,[1156,1,1052,110,2,3,50,50,"Krieg Dagger","","Adds a 10% chance of inflicting [Bleeding] on the target when using [Back Stab]",5169,15,0]
 ,[1157,1,1052,135,3,2,50,50,"Voina Dagger","","Adds a 10% chance of inflicting [Poison] on the target when using [Raid]<br>0.5% chance when dealing melee physical damage to increase phyical damage by 10% for 5 seconds",0]
 ,[1158,2,1051,170,3,1,150,50,"Roubel Sword","","Adds a 0.5% chance for when dealing physical damage, the damage inflicted with [Bash] and [Bowling Bash] will be increased by 20% for 15 seconds",0]
 ,[1159,3,51,180,4,1,200,80,"Veteran Sword","","If the user has mastered [Bash], increases the damage with it by 50%<br>If the user has mastered [Bowling Bash], increases the damage with it by 50%",1,1,5,1,0]
 ,[1160,3,1051,200,2,3,380,50,"Krasnaya","","If user's base Str is 95 or higher: ATK + 20",0]
 ,[1161,8,53,160,3,2,180,80,"Veteran Hammer","","For each level of [Divine Protection] the user has learned, the power of the user's [Heal] is increased by 1%<br>For each level of [Mace Mastery] the user has learned, Crit +2",4,1,6,1,0]
-,[1162,8,1001,130,3,2,50,50,"Erde","","",14,50,5244,20,5248,20,91,10,94,10,0]
-,[1163,999,1001,130,3,2,50,50,"Red Broad Mace","","Every time you kill a monster, low chance to drop random Potion<br>If user's base Str is 77 or higher: Causes Stun effect to enemies by 5% chance",13,200,5244,20,5248,20,0]
+,[1162,8,1001,130,3,2,50,50,"Erde Mace","",0,14,50,5244,20,5248,20,91,10,94,10,0]
+,[1163,50,0,3,0,1,100,50,"Galaxy Circlet","","<b>[For Every Refine]</b><br>MHP + 10<br>MSP + 10<br><b>[For Every 2 Refines]</b><br>Increase resistance to <b><font color='brown'>Earth</font></b>, <b><font color='red'>Fire</font></b> and <b><font color='blue'>Water</font></b> attacks by 1%",19,5,0]
 ,[1164,6,1070,140,3,2,150,50,"Berchel Axe","","If the user's base Luk is 90 or higher, Atk +20<br>If the user's base Dex is 90 or higher, Crit +5<br>If the user's base Dex and Luk are 90 or higher, increases the damage inflicted with [Mammonite] by 15%",0]
-,[1165,7,56,250,3,2,300,80,"Veteran Axe","","If the player has mastered Smith Dagger, ATK + 10<br>If the player has mastered Smith Sword, ATK + 10<br>If the player has mastered Smith Two-hand Sword, ATK + 10<br>If the player has mastered Smith Knuckle, ATK + 10<br>If the player has mastered Smith Spear, ATK + 10<br>If the player has mastered Smith Axe, ATK + 10<br>If the player has mastered Smith Mace, ATK + 10",3,2,0]
-,[1166,7,126,210,4,0,270,75,"Bradium Stone Hammer","","Additional 5% chance to Stun when using the skill Hammer Fall<br>The chance to Stun with Hammer Fall increases by 2% per refine on the weapon",0]
-,[1167,7,1070,330,3,1,400,50,"Giant Axe","","If user's base Str is 95 or higher: HIT + 10, ASPD + 3 %",5326,15,0]
-,[1168,9,77,100,4,0,10,70,"Dead Tree Staff","","INT bonus increases if refined past + 6, at the cost of reduced Max HP and Max SP<br><b>[Refine Rate 6]</b><br>INT + 1, MaxHP - 200, MaxSP - 100<br><b>[Refine Rate 7]</b><br>INT + 2, MaxHP - 400, MaxSP - 200<br><b>[Refine Rate 8]</b><br>INT + 3, MaxHP - 600, MaxSP - 300<br><b>[Refine Rate 9]</b><br>INT + 4, MaxHP - 800, MaxSP - 400<br><b>[Refine Rate 10]</b><br>INT + 5, MaxHP - 1000, MaxSP - 500",89,15,4,4,0]
+,[1165,7,70,250,3,2,300,80,"Veteran Axe","","If the player has mastered Smith Dagger, ATK + 10<br>If the player has mastered Smith Sword, ATK + 10<br>If the player has mastered Smith Two-hand Sword, ATK + 10<br>If the player has mastered Smith Knuckle, ATK + 10<br>If the player has mastered Smith Spear, ATK + 10<br>If the player has mastered Smith Axe, ATK + 10<br>If the player has mastered Smith Mace, ATK + 10",3,2,0]
+,[1166,7,1070,210,4,0,270,75,"Bradium Stone Hammer","","Additional 5% chance to Stun when using the skill Hammer Fall<br>The chance to Stun with Hammer Fall increases by 2% per refine on the weapon",0]
+,[1167,7,1070,330,3,1,400,50,"Giant Axe","","If user's base Str is 95 or higher: HIT + 10<br>ASPD + 3%",5326,15,0]
+,[1168,9,77,100,4,0,10,70,"Withered Branch Staff","","<b>[Refine Rate > 5]</b><br>MHP - 200<br>MSP - 100<br><b>[For Every Refine > 5]</b><br>INT + 1",89,15,4,4,0]
 ,[1169,9,1055,30,3,2,50,50,"Lacrima Stick","","<b>For each upgrade:</b><br>MDef +1<br>Increases the damage inflicted with [Storm Gust] by 1%<br><b>[Refine Rate 10]</b><br>Reduces the cast time for [Storm Gust] by 8%",89,15,4,4,19,1,0]
 ,[1170,9,1053,30,3,1,50,50,"Croce Staff","","Adds a chance of using [Blessing]Lv 1, or the user's level if its higher, on the target when [Heal] is used",20,6,89,15,4,4,0]
 ,[1171,9,1055,30,4,0,50,50,"Staff Of Ord","","If character has learned [Dragonology], SP Cost is reduced by 1%, INT + 3",89,15,4,2,5,1,0]
@@ -1284,7 +1284,7 @@ ItemOBJ = [
 ,[1261,999,0,5,0,0,80,50,"Large Bapho Horns [DEF Version]","","As your JOB Level increases,the helm grants additional ATK",57,12,0]
 ,[1262,52,0,0,0,0,10,0,"Gentleman's Pipe","","",89,1,0] //custom TalonRO
 ,[1263,51,0,0,0,0,5,0,"Blush of Groom","","",57,3,0]
-,[1264,50,0,0,0,1,10,0,"Purple Cowboy Hat",0,0,4,2,3,2,14,50,0]
+,[1264,50,0,4,0,1,50,0,"Purple Cowboy Hat (ID:5409)",0,0,4,2,3,2,14,50,0]
 ,[1265,50,0,0,0,1,20,30,"Dark Randgris Helm","","<b>Upper and Mid Headgear</b>",5,4,19,1,0]
 ,[1266,999,0,2,0,0,70,10,"AFK Hat","",0,0] //Duplicated (same with Notice Board TRO ID : 5474), remove me. --> Duplicate with [1128,50,0,2,0,0,0,10,"Notice Board","",0,0]
 ,[1267,999,0,0,0,0,10,10,"Afro Wig","","Add a 30% chance of auto casting First Aid on the user when the user receives Physical Damage",60,1,0]
@@ -1727,7 +1727,7 @@ ItemOBJ = [
 */
 
 /*
-	[Slap] - 2018-06-11
+	[Loa] - 2018-06-11
 	Work in progress ItemID table. Currently proofreading and adding to this array.
 	Format: [ItemOBJ index, type, item IDs...]
 	type:
@@ -2871,29 +2871,29 @@ ItemID = [
 ,[1130,1,5205]
 ,[1131,1,5130]
 ,[1132,1,5534]
-,[1133,3,0] //replace me
-,[1134,3,0] //replace me
-,[1135,3,0] //replace me
-,[1136,3,0] //replace me
-,[1137,3,0] //replace me
-,[1138,3,0] //replace me
-,[1139,3,0] //replace me
-,[1140,3,0] //replace me
-,[1141,3,0] //replace me
-,[1142,3,0] //replace me
-,[1143,3,0] //replace me
+,[1133,1,18817]
+,[1134,2,18817,18819]
+,[1135,1,5690]
+,[1136,1,5274]
+,[1137,1,18662]
+,[1138,1,5414]
+,[1139,1,5435]
+,[1140,1,5538]
+,[1141,1,5776]
+,[1142,1,5375]
+,[1143,1,8503]
 ,[1144,1,5485]
 ,[1145,1,5481]
 ,[1146,1,5547]
 ,[1147,1,5421]
-,[1148,3,0] //replace me
-,[1149,3,0] //replace me
+,[1148,1,5591]
+,[1149,1,18753] 
 ,[1150,1,5816]
 ,[1151,1,5537]
-,[1152,3,0] //replace me
+,[1152,1,5496]
 ,[1153,1,5458]
-,[1154,3,0] //replace me
-,[1155,1,5503]
+,[1154,1,18714]
+,[1155,1,5561]
 ,[1156,1,13046]
 ,[1157,1,13047]
 ,[1158,1,13421]
@@ -2901,13 +2901,13 @@ ItemID = [
 ,[1160,1,1189]
 ,[1161,1,1548]
 ,[1162,1,16000]
-,[1163,3,0] //replace me
+,[1163,1,18551]
 ,[1164,1,1311]
 ,[1165,1,1384]
 ,[1166,1,1385]
 ,[1167,1,1387]
 ,[1168,1,1643]
-,[1169,1,1646]
+,[1169,1,1646] //proofread
 ,[1170,1,1647]
 ,[1171,1,1648]
 ,[1172,1,2004]
@@ -3438,7 +3438,7 @@ function ClickB_Item(CBI)
 	if(eval(document.calcForm.ITEM_SW.checked)==0)
 		return;
 
-	// Item IDs with links to Talonro Item Database - [Kato/Slap]
+	// Item IDs with links to Talonro Item Database - [Kato/Loa]
 	if(ItemID[CBI][1] == 1){
 		var itemLink = "";
 		for(i = 2; i < ItemID[CBI].length; i++){
@@ -3813,7 +3813,7 @@ function Item_Setumei(nC1,nC2)
    //    CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
    //Physical damage against specific monster
    if(1000 <= nC1 && nC1 <=1999)
-      CBIstr += wIS + nC2 + "% Physcial damage inflicted against <b>" + MonsterOBJ[nC1-1000][1] + "</b><br>";
+      CBIstr += wIS + nC2 + "% Physical damage inflicted against <b>" + MonsterOBJ[nC1-1000][1] + "</b><br>";
    //Incease Damage of skill by %
 	if(5000 <= nC1 && nC1 <= 6999)
 		CBIstr += "["+ SkillOBJ[nC1 -5000][2] +"] damage"+ wIS + nC2 +"%<BR>";
@@ -3907,6 +3907,7 @@ w_SE = [[737,436,475,"NULL"]
 ,[1203,1189,1192,"NULL"]
 ,[1249,251,1248,"NULL"]
 ,[1311,1306,1309,1310,"NULL"]
+,[1134,1133,1660,"NULL"]
 ,[1392,1365,475,"NULL"] //custom TalonRO Survivor's Manteau R
 ,[1392,1365,477,"NULL"] //custom TalonRO Survivor's Manteau R
 ,[750,1367,88,"NULL"] //custom TalonRO Spiritual Ring R
@@ -3959,7 +3960,7 @@ for(var i=0;i<=SE_MAXnum;i++){
 	}
 }
 /*
-Exceptions list for item set linking for items where only one of its slotted versions is active in the item set - [Slap] = 2018-06-24
+Exceptions list for item set linking for items where only one of its slotted versions is active in the item set - [Loa] = 2018-06-24
    slotsExceptList = [[a,b,c],[a,b,c],...]
       a = set id in ItemOBJ
       b = item id in ItemOBJ
@@ -3973,7 +3974,7 @@ slotsExceptList = [
 ,[755,467,0]
 ,[755,471,0]
 ];
-//Improved SetEquipName combining combo linking with set equipment info - [Kato/Slap] - 2018-06-18
+//Improved SetEquipName combining combo linking with set equipment info - [Kato/Loa] - 2018-06-18
 function SetEquipName(SENw){
    var SENstr = "";
    var exceptfound = 0;

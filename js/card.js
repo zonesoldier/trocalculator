@@ -563,7 +563,7 @@ cardOBJ = [
 ];
 
 /*
-	array for card ID linking  - [Slap] - 2018-06-28
+	array for card ID linking  - [Loa] - 2018-06-28
 		format for entries in cardID is [a,b,c] where:
 			a = index in cardOBJ
 			b:
@@ -1118,10 +1118,8 @@ cardID = [
 ,[540,1,4533]
 ];
 
-
 CardNum = cardOBJ.length -1;
-
-//Sort cards alphabetically - [Slap] - 2018-06-28
+//Sort cards alphabetically - [Loa] - 2018-06-28
 function sortCards(inputArray){
 	var tempArray = [[0],[0],[0],[0],[0],[0],[0],[0]];
 	var elementalStone = [];
@@ -1162,7 +1160,6 @@ function sortCards(inputArray){
 	}
 	return tempArray
 }
-
 CardSortOBJ = sortCards(cardOBJ);
 // CardSortOBJ = [
 // [0,201,202,203,204,1,2,3,106,31,230,25,11,112,107,223,356,463,305,520,45,355,217,465,163,519,15,265,160,499,325,259,156,279,311,169,28,20,329,42,47,21,32,343,5,462,215,19,244,158,4,359,110,8,17,253,524,263,14,286,288,287,529,39,167,498,6,159,46,13,255,235,26,357,289,290,164,168,382,537,7,165,37,23,398,35,157,36,540,30,328,40,380,466,345,252,27,353,12,360,44,171,33,539,515,534,170,111,390,22,109,16,254,43,428,29,9,34,162,41,523,366,18,464,166,427,233,296,323,24,363,161,10,38,326,319,"NULL"],
@@ -1234,8 +1231,7 @@ function Click_Card(CBI)
 		window.scrollTo(0, tempScrollTop);
 		return;
 	}
-
-	// Card IDs with links to Talonro Item Database - [Slap] - 2018-06-28
+	// Card IDs with links to Talonro Item Database - [Loa] - 2018-06-28
 	if(cardID[CBI][1] == 1 && cardID[CBI][2] != 0){
 		var itemLink = "";
 		itemLink = " <a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ cardID[CBI][2] + "/\" target=\"_blank\"><b>" + cardID[CBI][2] + "</b></a>";
