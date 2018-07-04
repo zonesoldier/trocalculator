@@ -1,4 +1,6 @@
 [Update 2018-07-04]
+- Completed cardID array for linking [Loa]
+- Added linking for card sets [Loa]
 - Temporarily removed PVP gears until PVP update [Loa]
 	IDs 958-984
 - Added a thing for Beer Hat recuperative skills in Extended Info [Loa]

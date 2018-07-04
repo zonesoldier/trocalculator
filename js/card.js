@@ -1311,9 +1311,9 @@ w_SC = [[429,235,306,"NULL"],
 [461,326,175,281,388,104,"NULL"],
 [496,485,494,"NULL"]
 ];
-SC_MAXnum = 33;
+SC_MAXnum = w_SC.length;
 
-for(var i=0;i<=SC_MAXnum;i++){
+for(var i=0;i<SC_MAXnum;i++){
 	for(var k=1;w_SC[i][k] != "NULL";k++){
 		for(var j=4;cardOBJ[w_SC[i][k]][j] != 0;j+=2);
 		cardOBJ[w_SC[i][k]][j]=90;
@@ -1321,15 +1321,22 @@ for(var i=0;i<=SC_MAXnum;i++){
 		cardOBJ[w_SC[i][k]][j+2]=0;
 	}
 }
-
+//Updated with links to itemdb - [Loa] - 2018-07-04
 function SetCardName(SENw){
 	var SENstr = "";
-	for(var i=0;i<=SC_MAXnum;i++){
+	for(var i=0;i<SC_MAXnum;i++){
 		if(i == SENw){
 			for(var j=1;w_SC[i][j] != "NULL";j++){
-				SENstr += "["+ cardOBJ[w_SC[i][j]][2] +" Card]";
-				if(w_SC[i][j+1] != "NULL")
-					SENstr += "+";
+				if(cardID[w_SC[i][j]][2]){
+					SENstr += "<a class=\"linkW\" href=\"https://panel.talonro.com/itemdb/"+ cardID[w_SC[i][j]][2] + "/\" target=\"_blank\"><b>" + "<font color='blue'>["+ cardOBJ[w_SC[i][j]][2] +"]</font></b></a>";
+					if(w_SC[i][j+1] != "NULL")
+						SENstr += "+";
+				}
+				else{
+					SENstr += "["+ cardOBJ[w_SC[i][j]][2] +" Card]";
+					if(w_SC[i][j+1] != "NULL")
+						SENstr += "+";
+				}
 			}
 			return SENstr;
 		}
@@ -1343,7 +1350,7 @@ function SetCard()
 
 	var w_SE_num= 19;
 	var w_SE_ch = 0;
-	for(var k=0;k<=SC_MAXnum;k++){
+	for(var k=0;k<SC_MAXnum;k++){
 		for(var j=1;w_SC[k][j] != "NULL" && (w_SE_ch == 1 || (w_SE_ch == 0 && j == 1));j++){
 			w_SE_ch = 0;
 			for(var i=0;i<=19 && w_SE_ch == 0;i++){
