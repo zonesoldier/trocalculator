@@ -1,4 +1,4 @@
-debugMode = 1;
+debugMode = 0;
 n_Nitou=0;
 n_Tensei=0;
 n_Ses=0;
