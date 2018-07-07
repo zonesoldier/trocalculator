@@ -1,4 +1,7 @@
 [Update 2018-07-04]
+- Added vanilla mode [Loa]
+
+[Update 2018-07-04]
 - Completed cardID array for linking [Loa]
 - Added linking for card sets [Loa]
 - Temporarily removed PVP gears until PVP update [Loa]
