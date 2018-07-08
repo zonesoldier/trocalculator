@@ -3443,14 +3443,7 @@ with(document.calcForm){
 			myInnerHtml("nA_weapon2_c3",'<select name="A_weapon2_card3"onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
 			myInnerHtml("nA_weapon2_c4",'<select name="A_weapon2_card4"onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
 
-			for(i=0;CardSortOBJ[0][i]!="NULL";i++)
-				A_weapon2_card1.options[i] = new Option(cardOBJ[CardSortOBJ[0][i]][2],cardOBJ[CardSortOBJ[0][i]][0]);
-			for(i=0;CardSortOBJ[1][i]!="NULL";i++){
-				A_weapon2_card2.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
-				A_weapon2_card3.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
-				A_weapon2_card4.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
-			}
-			A_weapon2_card4.options[4] = new Option("Top10",106);
+			PopulateCardsLeft();
 
 			A_LEFT_DEF_PLUS.style.visibility = "hidden";
 			A_LEFT_DEF_PLUS.value = 0;
@@ -7249,3 +7242,18 @@ if(Taijin){
 		w_DMG[2] *= (wPAG /100);
 	}
 }}
+/*
+	vanilla mode switch
+		depends on restrictedItems and restrictedCards arrays in etc.js
+		works by regenerating all equippable item and card option fields
+*/
+function Vanilla(){
+	ClearCards();
+	PopulateCards();
+	WeaponSet();
+	if(n_Nitou){
+		PopulateCardsLeft();
+		WeaponSetLeft();
+	}
+	WeaponSet2();
+}

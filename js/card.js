@@ -1124,11 +1124,9 @@ function sortCards(cardArray){
 	var tempArray = [[0],[0],[0],[0],[0],[0],[0],[0]];
 	var elementalStone = [];
 	var cardSpecial = [];
-	//check if vanilla mode is on
-	var v_check = eval(document.calcForm.vanilla.checked);
 	//sort all cards into array of arrays based on location
 	for(i = 1; i < cardArray.length; i++){
-		if(v_check && restrictedCards.includes(i)){
+		if(eval(document.calcForm.vanilla.checked) && restrictedCards.includes(i)){
 			continue;
 		}
 		else if(cardArray[i][1] >= 1 && cardArray[i][1] <= 7){
@@ -1194,7 +1192,63 @@ function PopulateCards(){
 		document.calcForm.A_acces2_card.options[i] = new Option(cardOBJ[CardSortOBJ[7][i]][2],cardOBJ[CardSortOBJ[7][i]][0]);
 	}
 }
-PopulateCards();
+//populate cards for left hand weapon as assassin
+function PopulateCardsLeft(){
+	for(i=0;CardSortOBJ[0][i]!="NULL";i++)
+		document.calcForm.A_weapon2_card1.options[i] = new Option(cardOBJ[CardSortOBJ[0][i]][2],cardOBJ[CardSortOBJ[0][i]][0]);
+	for(i=0;CardSortOBJ[1][i]!="NULL";i++){
+		document.calcForm.A_weapon2_card2.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+		document.calcForm.A_weapon2_card3.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+		document.calcForm.A_weapon2_card4.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+	}
+	document.calcForm.A_weapon2_card4.options[4] = new Option("Top10",106);
+}
+//remove all card select options
+function ClearCards(){
+with(document.calcForm){
+	var len = A_weapon1_card1.length;
+	for(var i=0;i<len;i++){
+		A_weapon1_card1.options[0] = null;
+		A_weapon1_card2.options[0] = null;
+		A_weapon1_card3.options[0] = null;
+	if(n_Nitou){
+			A_weapon1_card4.options[0] = null;
+			A_weapon2_card1.options[0] = null;
+			A_weapon2_card2.options[0] = null;
+			A_weapon2_card3.options[0] = null;
+			A_weapon2_card4.options[0] = null;
+		}
+	}
+	var len = A_head1_card.length;
+	for(var i=0;i<len;i++){
+		A_head1_card.options[0] = null;
+	}
+	var len = A_head2_card.length;
+	for(i=0;i<len;i++){
+		A_head2_card.options[0] = null;
+	}
+	var len = A_left_card.length;
+	for(i=0;i<len;i++){
+		A_left_card.options[0] = null;
+	}
+	var len = A_body_card.length;
+	for(i=0;i<len;i++){
+		A_body_card.options[0] = null;
+	}
+	var len = A_shoulder_card.length;
+	for(i=0;i<len;i++){
+		A_shoulder_card.options[0] = null;
+	}
+	var len = A_shoes_card.length;
+	for(i=0;i<len;i++){
+		A_shoes_card.options[0] = null;
+	}
+	var len = A_acces1_card.length;
+	for(i=0;i<len;i++){
+		A_acces1_card.options[0] = null;
+		A_acces2_card.options[0] = null;
+	}
+}}
 
 function Click_Card(CBI)
 {
@@ -1361,3 +1415,5 @@ function SetCard()
 		}
 	}
 }
+
+PopulateCards();

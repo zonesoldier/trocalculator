@@ -4194,15 +4194,14 @@ function WeaponSet()
 	n_A_JobSet();
 	n_A_WeaponType = eval(document.calcForm.A_WeaponType.value);
 	var len = document.calcForm.A_weapon1.length;
-	//check if vanilla mode is on
-	var v_check = eval(document.calcForm.vanilla.checked);
 	for(var i=0;i<len;i++)
 		document.calcForm.A_weapon1.options[0] = null;
 
 	work = new Array();
 	j = 0;
-	for (i=0;i<=ItemMax; i++)	{
-		if(v_check && restrictedItems.includes(i)){
+	for (i=0;i<=ItemMax; i++){
+		//check for vanilla mode
+		if(eval(document.calcForm.vanilla.checked) && restrictedItems.includes(i)){
 			continue;
 		}
 		else if(ItemOBJ[i][1] == n_A_WeaponType && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || debugMode == 1)){
@@ -4246,6 +4245,10 @@ function WeaponSetLeft()
 	work = new Array();
 	j = 0;
 	for (i=0;i<=ItemMax; i++){
+		//check for vanilla mode
+		if(eval(document.calcForm.vanilla.checked) && restrictedItems.includes(i)){
+			continue;
+		}
 		if(ItemOBJ[i][1] == n_A_Weapon2Type && JobEquipItemSearch(ItemOBJ[i][2]) == 1)
 		{
 			work[j] = i;
@@ -4302,7 +4305,6 @@ with(document.calcForm){
 	}
 	first_check = 2;
 
-	var v_check = eval(document.calcForm.vanilla.checked);
 	var workB = new Array();
 	for(i=0;i<=7;i++)
 		workB[i] = new Array();
@@ -4310,7 +4312,8 @@ with(document.calcForm){
 	for(i=0;i<=7;i++)
 		wsj[i]=0;
 	for(i=0;i<=ItemMax; i++){
-		if(v_check && restrictedItems.includes(i)){
+		//check for vanilla mode
+		if(eval(document.calcForm.vanilla.checked) && restrictedItems.includes(i)){
 			continue;
 		}
 		else if(ItemOBJ[i][1] == 50 && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || SuperNoviceFullWeaponCHECK || debugMode == 1)){
@@ -6337,8 +6340,13 @@ with(document.calcForm){
 	wStr = "";
 	//clear baby job status before load - [Loa] - 2018-06-22
 	if(A_youshi.checked){
-		document.getElementById("lab1").checked = false;
+		A_youshi.checked = false;
 		BabyJobs();
+	}
+	//clear vanilla modes before load - [Loa] - 2018-07-07
+	if(vanilla.checked){
+		vanilla.checked = false;
+		Vanilla();
 	}
 
 	for(i=0;SaveData[i];i++){
