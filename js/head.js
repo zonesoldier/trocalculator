@@ -7256,4 +7256,5 @@ function Vanilla(){
 		WeaponSetLeft();
 	}
 	WeaponSet2();
+	StAllCalc();
 }
