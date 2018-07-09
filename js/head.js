@@ -3326,6 +3326,7 @@ with(document.calcForm){
 
 	ClickActiveSkill();
 	WeaponSet2();
+	VanillaArmor();
 
 	//custom TalonRO SQI Bonus interface - reset SQI-Bonus after class-change
 	SQI_Bonus_SW.checked=0;
@@ -3458,6 +3459,7 @@ with(document.calcForm){
 			myInnerHtml("nA_weapon2_c4",'<select name="A_weapon2_card4"onChange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>',0);
 
 			PopulateCardsLeft();
+			VanillaCardLeft();
 
 			A_LEFT_DEF_PLUS.style.visibility = "hidden";
 			A_LEFT_DEF_PLUS.value = 0;
@@ -6968,13 +6970,6 @@ function CastAndDelay(){
 	var strSUB2name = "";
 	var strSUB2 = "";
 
-
-
-
-
-
-
-
 	wDelay = 0;
 	var w = 0;
 	if(n_Delay[1] > wDelay){
@@ -7057,9 +7052,6 @@ function CastAndDelay(){
 	myInnerHtml("bSUB2name",strSUB2name,0);
 	myInnerHtml("bSUB2",strSUB2,0);
 }
-
-
-
 
 function tPlusDamCut(wPDC){
 	if(Taijin == 0){
@@ -7257,18 +7249,134 @@ if(Taijin){
 	}
 }}
 /*
-	vanilla mode switch
-		depends on restrictedItems and restrictedCards arrays in etc.js
-		works by regenerating all equippable item and card option fields
+	vanilla mode - [Loa] - 2018-07-09
+		remove non-vanilla select options of equips and cards and store them in arrays below
+			add back removed options when vanilla mode is turned off
+		list of non-vanilla items in restrictedEquips and restrictedCards arrays in etc.js
+		armor and cards functions dependent on armorLoc, cardLoc, and cardLocLeft arrays in foot.js and card.js
+		options of select elements for equips/cards are regenerated under different circumstances
+			therefore, each vanilla mode function is called in different ways
+			arrays below also reset to empty when respective select elements are refilled
+				code for this is found at places where options are regenerated
+		vanilla mode is turned off before loading and options refilled in LoadCookie()
 */
-function Vanilla(){
-	ClearCards();
-	PopulateCards();
-	WeaponSet();
-	if(n_Nitou){
-		PopulateCardsLeft();
-		WeaponSetLeft();
+removedWep1 = [];
+removedWep2 = [];
+removedArmor = [];
+removedCards = [];
+removedCardsLeft = [];
+//vanilla weapons function; called in StAllCalc(); options generation by WeaponSet() and WeaponSetLeft()
+function VanillaWep(){
+with(document.calcForm){
+	//remove weapons when vanilla mode
+	if(vanilla.checked){
+		for(i = 0; i < A_weapon1.length; i++){
+			if(restrictedEquips.includes(parseInt(A_weapon1[i].value))){
+				removedWep1.push([A_weapon1[i], i]);
+				A_weapon1.options.remove(i);
+				i -= 1;
+			}
+		}
 	}
-	WeaponSet2();
-	StAllCalc();
+	//add back weapons when turned off
+	else if(!vanilla.checked && removedWep1.length){
+		for(i = removedWep1.length - 1; i >= 0; i--){
+			removedWep1[i][0].selected = false;
+			A_weapon1.add(removedWep1[i][0], removedWep1[i][1]);
+			removedWep1.splice(i,1);
+		}
+	}
+	if(n_Nitou){
+		//remove left weapons when vanilla mode
+		if(vanilla.checked){
+			for(i = 0; i < A_weapon2.length; i++){
+				if(restrictedEquips.includes(Number(A_weapon2[i].value))){
+					removedWep2.push([A_weapon2[i], i]);
+					A_weapon2.remove(i);
+					i -= 1;
+				}
+			}
+		}
+		//add back left weapons when turned off
+		else if(!vanilla.checked && removedWep2.length){
+			for(i = removedWep2.length - 1; i >= 0; i--){
+				removedWep2[i][0].selected = false;
+				A_weapon2.add(removedWep2[i][0], removedWep2[i][1]);
+				removedWep2.splice(i,1);
+			}
+		}
+	}
+}}
+//vanilla armors; called in ClickJob(), FirstNovis(), and index.html; options generation by WeaponSet2()
+function VanillaArmor(){
+	//remove armors when vanilla mode
+	if(document.calcForm.vanilla.checked){
+		for(i = 0; i < armorLoc.length; i++){
+			for(j = 0; j < armorLoc[i].length; j++){
+				if(restrictedEquips.includes(parseInt(armorLoc[i][j].value))){
+					removedArmor.push([armorLoc[i][j], j, i])
+					armorLoc[i].remove(j);
+					j -= 1;
+				}
+			}
+		}
+	}
+	//add back armors when turned off
+	else if(!document.calcForm.vanilla.checked && removedArmor.length){
+		for(i = removedArmor.length - 1; i >= 0; i--){
+			removedArmor[i][0].selected = false;
+			armorLoc[removedArmor[i][2]].add(removedArmor[i][0], removedArmor[i][1]);
+			removedArmor.splice(i,1);
+		}
+	}
+}
+//vanilla cards; called in index.html; options generation by PopulateCards()
+function VanillaCard(){
+	//remove cards when vanilla mode
+	if(document.calcForm.vanilla.checked){
+		for(i = 0; i < cardLoc.length; i++){
+			for(j = 0; j < cardLoc[i].length; j++){
+				if(restrictedCards.includes(parseInt(cardLoc[i][j].value))){
+					removedCards.push([cardLoc[i][j], j, i]);
+					cardLoc[i].remove(j);
+					j -= 1;
+				}
+			}
+		}
+	}
+	//add back cards when turned off
+	else if(!document.calcForm.vanilla.checked && removedCards.length){
+		for(i = removedCards.length - 1; i >= 0; i--){
+			removedCards[i][0].selected = false;
+			cardLoc[removedCards[i][2]].add(removedCards[i][0], removedCards[i][1]);
+			removedCards.splice(i,1);
+		}
+	}
+	//trigger filter for left weapon cards when dual wielding
+	if(n_Nitou){
+		VanillaCardLeft();
+	}
+}
+//vanilla cards left weapon; called in index.html through VanillaCard() and in ClickWeaponType2(); options generation by PopulateCardsLeft()
+function VanillaCardLeft(){
+	//remove left weapon cards when vanilla mode
+	if(document.calcForm.vanilla.checked){
+		for(i = 0; i < cardLocLeft.length; i++){
+			for(j = 0; j < cardLocLeft[i].length; j++){
+				if(restrictedCards.includes(parseInt(cardLocLeft[i][j].value))){
+					removedCardsLeft.push([cardLocLeft[i][j], j, i]);
+					cardLocLeft[i].remove(j);
+					j -= 1;
+				}
+			}
+		}
+	}
+	//add back left weapon cards when turned off
+	else if(!document.calcForm.vanilla.checked && removedCardsLeft.length){
+		for(i = removedCardsLeft.length - 1; i >= 0; i--){
+			removedCardsLeft[i][0].selected = false;
+			cardLocLeft[removedCardsLeft[i][2]].add(removedCardsLeft[i][0], removedCardsLeft[i][1]);
+			removedCardsLeft.splice(i,1);
+		}
+	}
 }
