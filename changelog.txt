@@ -1,9 +1,7 @@
-[Update 2018-07-07]
+[Update 2018-07-09]
 - Issue #238: Added vanilla mode [Loa]
-	Moved left hand weapon card option generation to new function PopulateCardsLeft() in card.js
-	Added new function ClearCards() in card.js that removes all card select options
-	Added new function Vanilla() in head.js that switches between vanilla and non-vanilla mode
-		Dependent upon restrictedItems and restrictedCards arrays in etc.js
+	Main functions at bottom of head.js
+	Vanilla mode saving is not implemented
 
 [Update 2018-07-04]
 - Completed cardID array for linking [Loa]
