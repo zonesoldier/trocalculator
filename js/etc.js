@@ -742,6 +742,7 @@ KRIS_ENCHANTMENT = [
  ,[21,"HP+100"]
  ,[22,"HP+200"]
  ,[23,"HP+300"]
+ ,[24,"HP+400"]
  ,[31,"SP+50"]
  ,[41,"VIT+1"]
  ,[42,"VIT+2"]
@@ -1004,6 +1005,105 @@ ME_ENCHANTABLE = [
 	,[1454,0] //Stem Whip [1]
 	,[1622,0] //Rosevine
 ];
+
+BIOLAB_ENCHANTS_WEAPON = [
+		 [11, "STR+1"]
+		,[12, "STR+2"]
+		,[21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[31, "VIT+1"]
+		,[32, "VIT+2"]
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+		,[51, "DEX+1"]
+		,[52, "DEX+2"]
+		,[61, "LUK+1"]
+		,[62, "LUK+2"]
+		,[1781,"Fighting Spirit 1"]
+		,[1782,"Fighting Spirit 2"]
+		,[1783,"Fighting Spirit 3"]
+		,[1081,"Sharp 1"]
+		,[1082,"Sharp 2"]
+		,[1083,"Sharp 3"]
+		,[251,"Expert Archer 1"]
+		,[252,"Expert Archer 2"]
+		,[253,"Expert Archer 3"]
+		,[261,"Spell 1"]
+		,[262,"Spell 2"]
+		,[263,"Spell 3"]
+		,[264,"Spell 4"]
+		,[123, "ASPD+3%"]
+];
+
+BIOLAB_ENCHANTS_ARMOR = [
+		 [11, "STR+1"]
+		,[12, "STR+2"]
+		,[21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[31, "VIT+1"]
+		,[32, "VIT+2"]
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+		,[51, "DEX+1"]
+		,[61, "LUK+1"]
+		,[62, "LUK+2"]
+		,[101,"DEF+1"]
+		,[102,"DEF+2"]
+		//,[111,"MDEF+1"]
+		,[112,"MDEF+2"]
+		,[113,"MDEF+3"]
+		,[114,"MDEF+4"]
+		,[121,"FLEE+1"]
+		,[122,"FLEE+2"]
+		,[123,"FLEE+3"]
+		,[124,"FLEE+4"]
+		,[131, "MHP +100"]
+		,[132, "MHP +200"]
+		,[133, "MHP +300"]
+		,[141, "MSP +50"]
+];
+
+BE_ENCHANTABLE_WEAPON = [
+/* [Daggers] */
+	 [1625,0] //Aztoe Nail
+	,[1624,0] //Scarletto Nail
+/* [Katars] */
+	,[1627,0] //Agent Katar
+	,[1549,0] //Guillotine Katar
+/* [Two Handed Axes] */
+	,[1617,0] //Ygnus Stale
+	,[1616,0] //End Sektura
+/* [One Handed Spears] */
+	,[1516,0] //Cannon Spear
+/* [Two Handed Spears] */
+	,[1315,0] //Gigantic Lance
+/* [One Handed Staves] */
+	,[1511,0] //Recovery Light
+/* [Maces] */
+	,[1499,0] //Bloody Cross
+/* [Books] */
+	,[1653,0] //Chilly Spell Book
+/* [Bows] */
+	,[1515,0] //Catapult
+	,[1045,0] //Giant Crossbow
+	,[1506,0] //Creeper Bow
+];
+
+BE_ENCHANTABLE_ARMOR = [
+/* [Shields] */
+	 [1500,0] //Giant Shield
+	,[1520,0] //Geffenia Water Book
+	,[1507,0] //Bible of Promise(2nd Vol.)
+/* [Garments] */
+	,[1498,0] //Salvage Cape
+/* [Armors] */
+	,[1517,0] //Assassin's Glove
+/* [Accessory] */
+	,[1513,0] //Green Surgical Gown
+/* [Upper Headgear] */
+	//,[18570,0] //Ancient Gold Ornament
+];
+
 //exceptions list for items and cards disabled in vanilla
 restrictedItems = [319,347,348,444,576,603,604,605,606,1320,1329,1334,1336,1339,1340,1344,1348,1354,1356,1365,1371,1375,1376,1377,1378,1379,1380,1381,1382,1383,1384,1385,1386,1387,1388,1389,1390,1391,1393,1491,1492,1493,1522,1526,1548,1560,1607,1608,1609,1610,1615];
 restrictedCards = [32,42,44,45,47,52,95,119,120,126,127,134,136,138,140,141,152,161,162,166,178,219,255,256,277,284,310,312,313,320,322,323,332,338,349,357,361,363,374,375,392,394,404,409,420,421,423,424,425,463,475,478,486,492,515,521,526,529,532];

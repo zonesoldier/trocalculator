@@ -777,6 +777,13 @@ function StAllCalc()
 	if(EquipNumSearch(1312)){
 		w += n_A_ATK*.05;}
 
+	//[Custom TalonRO - 2018-07-09 Ancient Gold Adornment - ATK%] [NattWara]
+	if(EquipNumSearch(1663)){
+		var wHPVS = n_A_JobSearch();
+		if(wHPVS==1 || wHPVS==2 || wHPVS==6){
+			w += n_A_ATK*.04;
+		}
+	}
 	//custom TalonRO Chewing Bubblegum +1% atk
 	if(EquipNumSearch(1395))
 		w += n_A_ATK*.01;
@@ -2259,6 +2266,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//sag diadem
 	if(n_A_HEAD_DEF_PLUS == 10 && EquipNumSearch(1289)){
 		w += 4;}
+		//[Custom TalonRO - 2018-07-09 Ancient Gold Adornment - MATK%] [NattWara]
+	if(EquipNumSearch(1663)){
+		var wHPVS = n_A_JobSearch();
+		if(wHPVS==3 || wHPVS==5){
+			w += 4;
+		}
+	}
 	//Entweihen Hairband - zonesoldier - 6/2/2018
 	//Increase MATK + 1% per upgrade past 5th upgrade
 	if(n_A_HEAD_DEF_PLUS > 4 && EquipNumSearch(1620))
@@ -2780,7 +2794,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_JobSearch()==5 && CardNumSearch(454))
 		w -= 15;
 	if((n_A_JOB==18 || n_A_JOB==32) && CardNumSearch(460))
-		w -= 15;
+		w -= 20;
 	if(EquipNumSearch(750))
 		w -= n_A_Weapon_ATKplus;
 	if(n_A_card[8]==177)
@@ -3026,6 +3040,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//custom TalonRO Evil Marching Hat: if refine rate >=9 +5% ranged damage
 	if(n_A_HEAD_DEF_PLUS >= 9 &&EquipNumSearch(1539)){
 		n_tok[25] += 5;}
+		
+	//[Custom TalonRO - 2018-07-09 Ancient Gold Adornment 5% Range Physical Damage] [NattWara]
+	if(EquipNumSearch(1663)){
+		var wHPVS = n_A_JobSearch();
+		if(wHPVS==4){
+			n_tok[25] += 5;
+		}
+	}
 
 	//[Custom TalonRO - 2018-06-01 - Palace Guard if refine rate >=7 add -1% ranged reduction] [Kato]
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1545)){
@@ -3177,6 +3199,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
 		n_tok[91] += n_A_HEAD_DEF_PLUS - 6;
 		n_tok[94] += n_A_HEAD_DEF_PLUS - 6;
+	}
+	
+	//[Custom TalonRO - 2018-07-09 Ancient Gold Adornment - Inrease Heal Effectiveness by 7% (Exclude Sanctuary)] [NattWara]
+	if(EquipNumSearch(1663)){
+		var wHPVS = n_A_JobSearch();
+		if(wHPVS==3 || wHPVS==5){
+			n_tok[91] += 7;
+		}
 	}
 
 	if(EquipNumSearch(1085)){
@@ -3570,6 +3600,22 @@ function StPlusCalc()
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1293)){wSPC_DEX += 1;}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1294)){n_tok[62] += 5;}
 
+	//[Custom TalonRO - 2018-07-09 Ancient Gold Adornment - Stats] [NattWara]
+	if(EquipNumSearch(1663)){
+		if(n_A_JobLV == 70){
+			wSPC_STR += 1;
+			wSPC_AGI += 1;
+			wSPC_VIT += 1;
+			wSPC_INT += 1;
+			wSPC_DEX += 1;
+			wSPC_LUK += 1;
+		}
+		var wHPVS = n_A_JobSearch();
+		if(wHPVS==4){
+			wSPC_DEX += 1;
+		}
+	}
+	
 	//custom TalonRO Giant Shield +5% resistance against Large sized monster if refined +9-10
 	if(n_A_LEFT_DEF_PLUS >= 9 && EquipNumSearch(1500))
 		n_tok[192] +=5;

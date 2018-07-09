@@ -1744,7 +1744,10 @@ function BattleCalc999()
 			wbairitu += 8 + (n_A_MaxSP-1) /10;
 
 		//custom TalonRO fix (checked rAthena calculation)
-		wbairitu += 1;
+		//wbairitu += 1;
+		
+		//[Custom TalonRO - 2018-07-09 fix asura damage] [NattWara/Loa]
+		wbairitu = Math.ceil(wbairitu);
 
 		wASYU = 250 + n_A_ActiveSkillLV * 150;
 
@@ -1766,6 +1769,17 @@ function BattleCalc999()
 				w_DMG[b] = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*w_DMG[b]/200);
 
 			Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b] + EDP_DMG(b);
+			
+			//[Custom TalonRO - 2018-07-09 Soft-Cap Asura damage above 200k] [NattWara/Loa]
+			//100% accurate for below 200k damage.
+			//~1% error for 200k-400k damage.
+			//No data available for above 400k damage.
+			if(Last_DMG_A[b] > 200000){
+				var AsuraExcessD = Last_DMG_A[b] - 200000;
+				var AsuraNerfD = (0.5963 - 0.1471) * Math.exp(-0.000002230 * AsuraExcessD) + 0.1471;
+				Last_DMG_A[b] = Last_DMG_B[b] = 200000 + (AsuraExcessD * AsuraNerfD);
+			}
+			
 			InnStr[b] += Last_DMG_A[b];
 		}
 

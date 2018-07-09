@@ -1705,6 +1705,7 @@ ItemOBJ = [
 ,[1660,52,0,0,0,0,10,0,"Blue Pencil In Mouth","","A blue pencil full of teeth marks due to holding it in your mouth all the time.",8,3,0]
 ,[1661,50,0,2,0,0,0,10,"Party Member Hat","","A helm with a Party Member wanted ad on it. Let's level up together!!",0]
 ,[1662,8,0,88,1,3,70,0,"Cat Club","","Has a chance of casting [Wink of Charm] while physically attacking.",32,15,0]
+,[1663,50,1000,1,0,1,40,99,"Ancient Gold Adornment","","A fancy golden decoration enchanted with ancient magic.<br>Changes ones abilities according to their class.<br><br>If Job Level is 70, All Stats + 1<br><br><b>[Swordman, Merchant, Thief Class]</b><br>ATK + 4%<br><b>[Mage, Acolyte Class]</b><br>MATK + 4%<br>Increases effectiveness of your Heal by 7%<br><b>[Archer Class]</b><br>DEX + 1<br>Increase physical damage with bow by 5%",0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
@@ -3401,6 +3402,7 @@ ItemID = [
 ,[1660,1,18819]
 ,[1661,1,5337]
 ,[1662,1,16015]
+,[1663,1,18570]
 ];
 
 ItemMax = ItemOBJ.length -1;
