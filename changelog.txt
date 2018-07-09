@@ -1,18 +1,244 @@
+[Update 2018-07-04]
+- Completed cardID array for linking [Loa]
+- Added linking for card sets [Loa]
+- Temporarily removed PVP gears until PVP update [Loa]
+	IDs 958-984
+- Added a thing for Beer Hat recuperative skills in Extended Info [Loa]
+- Removed items [Loa]:
+	Frist Hat
+	Frist Sword
+	Frist Hat + Sword
+	Frist Sword + Odin's Blessing
+	Ice Hat
+	Eddga Hat
+	Red Beret
+	Hukke's Blackcat Ears
+	Fairy Ears [bRO]
+	Sphinx Hat //duplicate
+	Large Bapho Horns [DEF Version]
+	AFK Hat
+	Afro Wig
+	Angry Mouth
+	Anniversary Hat
+	Bf Recruiter Hat
+	Blue Night Cap
+- Added items [Loa]:
+	Sakura Coronet
+	Sakura Coronet + Romantic Flower
+	Sakura Coronet + White Petal
+	Sakura Coronet + Romantic Leaf
+	Pirates Red Hood
+	Sakura Hairband
+	Koneko Hat
+	White Deviruchi Hat
+	White Feather
+	White Feather + Pipe
+	White Mage Hat
+	White Musang Hat
+	White Snake Hat
+	White School Hat
+	Indonesia Beret
+	Injured Eyepatch
+	Little Red Riding Hood Scarf
+- Issue #149: Proofreading [Loa]
+	Rabbit Earplugs
+	Lyria Doll Hat
+	Drooping Morroc Minion
+	Sakura Bells
+	White Piggy Bank
+	Poring Letter
+	Imp Hat
+	Beer Hat
+	Noah's Hat
+	Anniversary Star Hat
+	Monocle + Anniversary Star Hat
+	Jasper Crest
+	Flying Evil Wing
+	Cancer Crown
+	Cancer Diadem
+	Capricorn Crown
+	Capricorn Diadem
+	Gemini Crown
+	Gemini Diadem
+	Leo Crown
+	Leo Diadem
+	Libra Crown
+	Libra Diadem
+	Pisces Crown
+	Pisces Diadem
+	Sagittarius Crown
+	Sagittarius Diadem
+	Scorpio Crown
+	Taurus Crown
+	Taurus Diadem
+	Bandit Hat
+	Black Ribbon
+	Dark Knight Mask B
+	Dark Knight Belt B
+	Dark Knight Glove B
+	I LOVE CHINA
+
+[Update 2018-07-03]
+- Removed negative hit correction [Loa]
+- Removed items [Loa]:
+	Pirate Dagger //duplicate
+	Novice Cutter
+	Novice Main-Gauche[3]
+	Novice Falchion
+	Novice Mace
+	Novice Battle Axe
+	Novice Composite Bow
+	Novice Rod
+	Fisherman's Scarf
+	Fishing Boots
+	Lure
+	Red Nose
+	Horn Helmet
+	Corona Torch
+	True Love
+	Burnt Rod
+	Large Orc Hero Helm
+	Box of Fun [A]
+	Box of Fun [B]
+	Stick Candy?
+	Small Fishing..?
+	Jaguar Face
+	Darkness Helm
+	Dark Angel Wings + Ear
+	Dark Devil Wings + Ear
+	Awfully Dark Wings + Ear
+	Dark + Glasses
+	Dark + Darkness Ice
+	Red Marcher Hat
+	Captain's Pipe
+	Captains's Hat + Pipe
+	Lady Tanee Hat
+- Added items [Loa]:
+	Evolved Demon Student Hat
+	Evolved Demon Student Hat + Blue Pencil in Mouth set
+	Red Wing Hat
+	Shinny Wig
+	Antler Gentleman Hat
+	Camp Fire Hat
+	Red Minstrel Hat
+	Tucano Hat
+	Blazing Sun
+	Orc Hero Headdress
+	Aladdin Prince Hat
+	Desert Prince
+	Boiled Rice Hat
+	Dice Hat
+	Blue Hippo Hat
+	Pagdayaw [1]
+	Hungry Big Fish Hat
+	Jolly Roger Hat
+	Rain Cloud
+	Ring of Water
+	Light of El Dicastes
+	Cashmere Hat
+	Falcon Mask
+	King Prawn Hat
+	Navy Hat
+	Shower Cap
+	Watermelon Hat
+	Scuba Mask
+	White King Tiger Doll Hat
+	Gentleman's Hat
+	Brazil National Flag Hat
+	Brazilian Flag Hat
+- Issue #149: Proofreading [Loa]
+	Hermose Cap
+	RJC Katyusha Flower
+	Purple Cowboy Hat (ID:5816)
+	Purple Cowboy Hat (ID:5409)
+	Kwati Hat
+	Veteran Hammer
+	Erde Mace
+	Berchel Axe
+	Veteran Axe
+	Bradium Stone Hammer
+	Withered Branch Staff
+	Krishna
+	Cat's Footprint Hairpin
+	Bride's Flower Crown
+	Heaven Maiden's Flower
+	Cherub Hat
+	Life Tree Wooden Shoes
+	Ring Of Wisdom
+	Eye Ring
+	Necromancer Hood
+	Frog King Hat
+	Jade Rabbit Hat
+
+[Update 2018-07-02]
+- All PVP items have been temporarily removed until PVP update [Loa]
+	IDs: 897-931, 1076-1115
+- Removed items [Loa]:
+	Pumpkin Hat 2008
+	Cute Santa Hat
+	Louise's Santa Hat
+	Fanta Zero Lemon Can
+	Fantastic Wig
+	Cruiser Cap
+- Added items [Loa]:
+	Green Apple Hat
+	Observer
+	Violet Sheila Hairnet
+	Fanta Can Hats
+	Yellow Sheila Hairnet
+	Silver Sheila Hairnet
+- Issue #149: Proofreading [Loa]
+	Wind Milestone
+	Parade Hat
+	Hairband  of Reginleif
+	Kerchief
+	Poporing Hat
+	Tiraya Bonnet
+	Dark Knight Mask A
+	Dark Knight Belt A
+	Dark Knight Glove A
+	Feather Of Bizofnil
+	Shaman's Coif
+	Shaman Ring
+	Shaman Set
+	Poring Cake Hat
+	Fish Head Hat
+	Diadem
+	Yoyo Hat
+	Grand Peco Hairband
+	Helm Of Abyss
+	Sky Hat
+	Sakura Mist Hat
+	Sakura Milk Tea Hat
+	Novice Figure
+	Swordsman Figure
+	Acolyte Figure
+	Magician Figure
+	Archer Figure
+	Thief Figure
+	Merchant Figure
+	Crown Parrots
+	Red Hat
+	Nipper Crab Hairpin
+	Emperor's Laurel Crown
+	Lion Mask
+	Fox Hat
+
 [Update 2018-06-30]
-- Removed items [Slap]:
+- Removed items [Loa]:
 	Shiny Wig
-- Added items [Slap]:
+- Added items [Loa]:
 	Giant Crossbow
 - Updated index.html to the release; [Kato]
 
 [Update 2018-06-29]
-- Added debugMode that removes class restrictions for all items [Slap]
+- Added debugMode that removes class restrictions for all items [Loa]
 	Value can be edited in line 1 of head.js
 
 		***MAKE SURE IT'S SET TO 0 BEFORE PUSHING***
 
-- Shield slot now resets and hides when two-handed weapon types are chosen [Slap]
-- Removed items [Slap]:
+- Shield slot now resets and hides when two-handed weapon types are chosen [Loa]
+- Removed items [Loa]:
 	Her National Treasury
 	Fanta Orange Can
 	Fanta Grape Can
@@ -23,7 +249,7 @@
 	Pumpkin Hat2007
 	Reindeer Nose
 	Santa's Beard
-- Added items [Slap]:
+- Added items [Loa]:
 	Buwaya Skin Clothes
 	Kalasag
 	Nightmare Bangungot Boots
@@ -34,7 +260,7 @@
 	Orange Sheila Hairnet
 	Blue Sheila Hairnet
 	Pink Sheila Hairnet
-- Issue #149: Proofreading [Slap]
+- Issue #149: Proofreading [Loa]
 	Naga Scale Armor
 	Refined Tights
 	Naga Scale Shield
@@ -58,16 +284,16 @@
 	Dokebi's Wig
 
 [Update 2018-06-28]
-- Wrote function to sort cards automatically [Slap]
+- Wrote function to sort cards automatically [Loa]
 	Outputs an array in the same format as CardSortOBJ used previously, so no need to change anything that calls the array
-- Used script to automatically fill array cardID based on game files [Slap]
+- Used script to automatically fill array cardID based on game files [Loa]
 	Incomplete since not all names match perfectly
-- Added linking to item database based on array cardID [Slap]
+- Added linking to item database based on array cardID [Loa]
 
 [Update 2018-06-27]
-- Completed ItemID links for every single gear (not cards) currently in calc [Slap]
-- Removed some left over stuff in foot.js for removed items [Slap]
-- Removed items [Slap]:
+- Completed ItemID links for every single gear (not cards) currently in calc [Loa]
+- Removed some left over stuff in foot.js for removed items [Loa]
+- Removed items [Loa]:
 	+1 DEF
 	Blue Poring Clip
 	Green Poring Clip
@@ -80,7 +306,7 @@
 	Death Loop
 	Rune Spellstone
 	Asprika
-- Added items [Slap]:
+- Added items [Loa]:
 	Phoenix Crown [0]
 	Satanic Ring [Rental]
 	Satanic Bone Helm
@@ -93,7 +319,7 @@
 	Devil Whisper + Heart Hairpin set
 	Devil Whisper + Crescent Hairpin set
 	Tendrillion Hat
-- Issue #149: Proofreading [Slap]
+- Issue #149: Proofreading [Loa]
 	Combat Knife [Rental]
 	Kaiser Knuckle [Rental]
 	Mace of Madness [Rental]
@@ -137,9 +363,9 @@
 	Sprint Mail
 
 [Update 2018-06-26]
-- Fixed Nagan/Nagan [Renta] Double Attack rates [Slap]
-- Fixed Sonic Blow bonus on some items to affect soul-linked version [Slap]
-- Issue #149: Proofreading [Slap]
+- Fixed Nagan/Nagan [Renta] Double Attack rates [Loa]
+- Fixed Sonic Blow bonus on some items to affect soul-linked version [Loa]
+- Issue #149: Proofreading [Loa]
 	Pink Pajamas Hat
 	Blue Pajamas Hat
 	Red Square Bag
@@ -156,22 +382,22 @@
 	Salvage Cape
 
 [Update 2018-06-25]
-- Added calculations for n_tok[340-349] [Slap]
-- Removed Items [Slap]:
+- Added calculations for n_tok[340-349] [Loa]
+- Removed Items [Loa]:
 	Marvelous Pendant
 	Brynhild
 	Ring of Money Spirit
 	Resurrecting Soul
 	True Love
 	Mask of the Goddess
-- Added Items [Slap]:
+- Added Items [Loa]:
 	Clamorous Ring [Rental]
 	Decussate Ring [Rental]
 	Dragon Ring [Rental]
 	Fischer Ring [Rental]
 	Hallow Ring [Rental]
 	Insecticide Ring [Rental]
-- Issue #149: Proofreading [Slap] //list of items that were changed
+- Issue #149: Proofreading [Loa] //list of items that were changed
 	Phrygian Cap: name
 	Diablos Robe: name, lvl req
 	Diablos Armor: name, effect
@@ -227,9 +453,9 @@
 	Eden Group Boots IV
 
 [Update 2018-06-24]
-- Changed description for 1000+skillid to 1000+mobid [Slap]
-- Added exceptions list for item set linking for items where only one of its slotted versions is active in the item set [Slap]
-- Removed Items [Slap]:
+- Changed description for 1000+skillid to 1000+mobid [Loa]
+- Added exceptions list for item set linking for items where only one of its slotted versions is active in the item set [Loa]
+- Removed Items [Loa]:
 	Balmung
 	Wing of Diablo
 	Aniversary Ring
@@ -241,7 +467,7 @@
 	Quill Pen Ring set
 	Pointed Hat (White)
 	The Magic Ring Exit
-- Added Items [Slap]:
+- Added Items [Loa]:
 	Drooping Domovoi
 	9th Anniversary Celebration Hat
 	Baseball Cap [0]
@@ -253,7 +479,7 @@
 	Beholder Ring [Rental]
 	Bloody Ring [Rental]
 	Chemical Ring [Rental]
-- Issue #149: Proofreading [Slap]
+- Issue #149: Proofreading [Loa]
 	Deviling Hat: weight, description
 	Baseball Cap [1]: name, weight
 	Drooping Ninetail: name, autospell
@@ -279,13 +505,13 @@
 	Ixion's Wings: name, description
 
 [Update 2018-06-23]
-- Removed Items [Slap]:
+- Removed Items [Loa]:
 	Sniping Suit R
 	RAKUMA //don't google "RAKUMA ragnarok online"
-- Added Items [Slap]:
+- Added Items [Loa]:
 	Drooping Cat Crew
 	Elephant Hat (ID:5259)
-- Issue #149: Proofreading [Slap]
+- Issue #149: Proofreading [Loa]
 	Morrigane's Belt: fixed atk stacking
 	Morpheus set: added description
 	Spiritual Ring + Clip/Rosary set: removed sanctuary bonus
@@ -304,12 +530,12 @@
 - Added Kishna combo [Kato]
 - Fixed Malangdo URL loading [Kato]
 - Fixed pet Ferus [Kato]
-- Fixed Malangdo spell type enchants for non-element spells [Slap]
-- Removed Earth Spike from Taekwon classes [Slap]
+- Fixed Malangdo spell type enchants for non-element spells [Loa]
+- Removed Earth Spike from Taekwon classes [Loa]
 
 [Update 2018-06-21]
-- Issue #207: Improve calc functionality for baby jobs [Slap]
-- Issue #206: Updated items [Slap]
+- Issue #207: Improve calc functionality for baby jobs [Loa]
+- Issue #206: Updated items [Loa]
 - Issue #189: Removed 3% Neutral reduction from proxy skin fragment [NattWara]
 - Issue #195: Removed duplicate Detale/Detardeurus Card [NattWara]
 - Issue #191: [Missing Item] Cat Club [NattWara]
@@ -321,15 +547,15 @@
 - Fixed Nokrah Shadow [Dragon] & Halion (Manuk Seal) to ranged mob. [NattWara]
 
 [Update 2018-06-19]
-- Issue #200: Fixed scrollbar jumping when changing items with item data shown [Slap]
-- Issue #199: Removed gym pass from weight limit calculations [Slap]
-- Fixed strip chance interaction with cards for rogues/stalkers in extend info [Slap]
-- Fixed extended info not clearing properly after changing info displayed [Slap]
+- Issue #200: Fixed scrollbar jumping when changing items with item data shown [Loa]
+- Issue #199: Removed gym pass from weight limit calculations [Loa]
+- Fixed strip chance interaction with cards for rogues/stalkers in extend info [Loa]
+- Fixed extended info not clearing properly after changing info displayed [Loa]
 
 [Update 2018-06-18]
-- Issue #183: Changed items set links [Kato/Slap]
+- Issue #183: Changed items set links [Kato/Loa]
 	Now done through SetEquipName Function
-- Issue #149: Proofreading [Slap]
+- Issue #149: Proofreading [Loa]
 	Falcon Muffler: name
 	Crest of the Rider: name
 	Wolfheiden: description
@@ -342,15 +568,15 @@
 	Horn of the Buffalo: name
 
 [Update 2018-06-17]
-- Issue #193: Fixed Marionette Contro [Slap]
+- Issue #193: Fixed Marionette Contro [Loa]
 	Stat compensation should now cap based on base stat
-- Issue #5: Corrected brewing formula [Slap]
+- Issue #5: Corrected brewing formula [Loa]
 	0.05% lower than iRO due to custom homunculus bonus
-- Issue #113: Thanatos cards now stack [Slap]
+- Issue #113: Thanatos cards now stack [Loa]
 
 [Update 2018-06-16]
-- Issue #188: Added Dolor Hat [Slap]
-- Issue #149: Proofreading [Slap]
+- Issue #188: Added Dolor Hat [Loa]
+- Issue #149: Proofreading [Loa]
 	Carrot Whip: added description
 	Western Outlaw: added description
 	Jungle Carbine: added description
@@ -368,9 +594,9 @@
 	Morrigane's Manteau: name
 
 [Update 2018-06-15]
-- Corrected negative hit [Slap]
-- Added links for 601-650 [Slap]
-- Issue #149: Proofreading [Slap] //For the sake of my sanity proofreading notes will not be as detailed as before; will only indicate what has been modified, not how
+- Corrected negative hit [Loa]
+- Added links for 601-650 [Loa]
+- Issue #149: Proofreading [Loa] //For the sake of my sanity proofreading notes will not be as detailed as before; will only indicate what has been modified, not how
 	Vacation Hat: name, type
 	Water Lily Crown: name
 	Lucius's Fierce Armor of Volcano: name
@@ -401,15 +627,15 @@
 - Added ItemIDs from 1496 to 1526; [Kato]
 
 [Update 2018-06-12]
-- Removed extra comma in Eden Group Huuma Shuriken I that currently breaks the page [Slap]
-- Removed Items [Slap]:
+- Removed extra comma in Eden Group Huuma Shuriken I that currently breaks the page [Loa]
+- Removed Items [Loa]:
 	Pumpkin Hat
 	Dress Hat
 	Bunny Band (ID 568)
 	Flapping Angel Wings
 	Steel Flower [Rental]
 	Breeze Whip
-- Added Items [Slap]:
+- Added Items [Loa]:
 	Tanigumi Girl Doll
 	King Tiger Doll Hat
 	Drooping Bunny
@@ -420,10 +646,10 @@
 - Issue #172: Fixed some descriptions and other were OK; [Kato]
 - Issue #171: Added the ItemIDs, also added from 1527 to 1661; [Kato]
 - Issue #170: Added Party Member Hat ; [Kato]
-- Fixed potion success rate in etc.js [Slap]
-- Added items 501-600 to ItemID [Slap]
-- Clarified rental item names (Ballista R -> Ballista [Rental]) [Slap]
-- Issue #149: Proofreading [Slap]
+- Fixed potion success rate in etc.js [Loa]
+- Added items 501-600 to ItemID [Loa]
+- Clarified rental item names (Ballista R -> Ballista [Rental]) [Loa]
+- Issue #149: Proofreading [Loa]
 	Renown Detective's Cap: name (Renown Detective Cap -> Renown Detective's Cap)
 	Banana Hat: autospell level (1 -> 3)
 	Zherlthsh Mask: name (Zealotus Mask -> Zherlthsh Mask)
@@ -480,7 +706,7 @@
 	Holy Marcher Hat: effect (removed 151,10)
 
 [Update 2018-06-11]
-- Changed format of the ItemID array in item.js [Slap]
+- Changed format of the ItemID array in item.js [Loa]
 	Work in progress ItemID table. Currently proofreading and adding to this array.
 	Format: [ItemOBJ index, type, item IDs...]
 	type:
@@ -490,10 +716,10 @@
 		3 = Unknown
 		4 = Not yet proofread/Placeholder
 - Added items 0-500 to ItemID
-- Fixed Thief Ring attack bonus [Slap]
-- Fixed Bloody Roar effect [Slap]
-- Added Drooping Maya [Slap]
-- Issue #149: Proofreading [Slap]
+- Fixed Thief Ring attack bonus [Loa]
+- Fixed Bloody Roar effect [Loa]
+- Added Drooping Maya [Loa]
+- Issue #149: Proofreading [Loa]
 	Byeollungum: effect (26,50 -> 26,5)
 	Schweizersabel: name (Schweizer Sabel -> Schweizersabel)
 	Brocca: effect (22,10 -> 22,1)
@@ -555,10 +781,10 @@
 	・Lord of the Dead Helm
 	And Chilly Spell Book have "Test Item ID Display - Chilly Spell Book" in place of Item ID
 	Everything else have "###" as Item ID placeholder for now.
-	Added item links to TalonRO item database calculator [Kato/Slap]
-	Added first 251 items from ItemOBJ to ItemID as test [Slap]
+	Added item links to TalonRO item database calculator [Kato/Loa]
+	Added first 251 items from ItemOBJ to ItemID as test [Loa]
 - Fixed EXP [Kato/NattWara]
-- Issue #149: Proofreading [Slap]
+- Issue #149: Proofreading [Loa]
 	Machoman's Glasses: name (Machoman's Classes -> Machoman's Glasses)
 	Opera Masque: name (Opera Mask -> Opera Masque)
 	Jacket: name (Leather Jacket -> Jacket)
@@ -601,7 +827,7 @@
 - Issue #154: Card set selector not working properly [NattWara]
 - Issue #156: Added Missing Monster, Port Malaya Instance Monsters [NattWara]
 - Issue #157: Added Shadow Bullet [NattWara]
-- Issue #149: Proofreading [Slap]
+- Issue #149: Proofreading [Loa]
 	Glave: name (Glave -> Glaive)
 	Sword Mace: name (Swordmace -> Sword Mace)
 	Evil Bone Wand: name (Bone Wand -> Evil Bone Wand)
@@ -658,25 +884,25 @@
 - Issue #84: Fixed Wrong Effect/Status - Chameleon Armor [NattWara]
 - Issue #148: Lacrima Stick wrong effect in calculator [NattWara]
 - Issue #150: Wrong weight and level requirement for Sleipnir - ID # 8049 [NattWara]
-- Issue #73: Added Gigantic Lance [Slap]
-- Issue #77: Added Dance Shoes [Slap]
-- Issue #137: Replaced duplicate Axe and Orcish Axe in ItemOBJ [Slap]
-- Issue #76: Added Staff of Thea [Slap]
-- Issue #58: Added Advanced Binoculars [Slap]
-- Issue #59: Added Advanced Assassin Mask [Slap]
-- Issue #60: Added Advanced Welding Mask [Slap]
-- Issue #61: Added Advanced Safety Ring [Slap]
-- Issue #90: Added Miming Card [Slap]
-- Issue #91: Added Mini Octopus Card [Slap]
-- Issue #92: Added Pom Spider Card [Slap]
-- Issue #50: Added Improved Mage Hat [Slap]
-- Issue #51: Added Improved Magician Hat [Slap]
-- Issue #52: Added Improved Joker Jester [Slap]
-- Issue #53: Added Improved Bunny Band [Slap]
-- Issue #54: Added Improved Munak Hat [Slap]
-- Issue #55: Added Improved Bongun Hat [Slap]
-- Issue #56: Added Improved Opera Phantom Mask [Slap]
-- Issue #57: Added Improved Kitsune Mask [Slap]
+- Issue #73: Added Gigantic Lance [Loa]
+- Issue #77: Added Dance Shoes [Loa]
+- Issue #137: Replaced duplicate Axe and Orcish Axe in ItemOBJ [Loa]
+- Issue #76: Added Staff of Thea [Loa]
+- Issue #58: Added Advanced Binoculars [Loa]
+- Issue #59: Added Advanced Assassin Mask [Loa]
+- Issue #60: Added Advanced Welding Mask [Loa]
+- Issue #61: Added Advanced Safety Ring [Loa]
+- Issue #90: Added Miming Card [Loa]
+- Issue #91: Added Mini Octopus Card [Loa]
+- Issue #92: Added Pom Spider Card [Loa]
+- Issue #50: Added Improved Mage Hat [Loa]
+- Issue #51: Added Improved Magician Hat [Loa]
+- Issue #52: Added Improved Joker Jester [Loa]
+- Issue #53: Added Improved Bunny Band [Loa]
+- Issue #54: Added Improved Munak Hat [Loa]
+- Issue #55: Added Improved Bongun Hat [Loa]
+- Issue #56: Added Improved Opera Phantom Mask [Loa]
+- Issue #57: Added Improved Kitsune Mask [Loa]
 - Issue #109: Added Blue Pencil In Mouth; [ZoneSoldier]
 - Issue #110: Added Cheer Whistle; [ZoneSoldier]
 - Updated Hakujin item description and AutoSpellSKill % modifier and comments; [ZoneSoldier]
@@ -696,7 +922,7 @@
 - Issue #128: Added GMC Bosses; [Natwarra/Kato]
 - Issue #123: Added Valhalla Seal; [Kato]
 - Added new 2 Regions for mobs, Seals and GMC; [Kato]
-- Issue #135: Proofreading [Slap]
+- Issue #135: Proofreading [Loa]
 	Jeweled Sword: updated item description
 	Gaia Sword: updated item description
 	Saber: name (Sabre -> Saber)

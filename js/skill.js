@@ -597,7 +597,8 @@ InsertSkill = [
 [53,1,173,3],//custom TalonRO SQI Bonus - Tome of Ymir = Strip Shield lv 3
 [54,0,171,1],//custom TalonRO Kraken Card = Raid lv 1
 [55,1,130,1],
-[56,1,132,3]
+[56,1,132,3],
+[57,1,6,1]
 ];
 
 
@@ -702,17 +703,17 @@ AutoSpellSkill = [
 [94,1,54,2,0,1],
 [95,1,162,5,0,1],
 [96,1,76,5,0,1],
-[97,0,231,1,0,1],
+[97,0,231,1,0.5,1],
 [98,0,90,3,0,1],
 [99,0,27,5,0,6],
 [100,0,209,5,0,6],
 [101,0,42,2,0,2],
 [102,0,25,1,1,6],
-[103,1,51,1,0,1],
-[104,1,54,1,0,1],
-[105,1,56,1,0,1],
+[103,1,51,1,1,1],
+[104,1,54,1,1,1],
+[105,1,56,1,1,1],
 [106,0,101,1,0,1],
-[107,0,209,1,0,6],
+[107,0,209,1,5,1],
 [108,1,193,5,0,1],
 [109,1,51,3,0,1],
 [110,1,54,3,0,1],
@@ -740,7 +741,12 @@ AutoSpellSkill = [
 [131,1,267,2,3,6,0], //When recieving ATK based damage, there's a low chance to cast the skill [Assumptio]Lv 2
 [132,1,131,2,1,1], //custom TalonRO Chilly Spell Book lv 2 Storm Gust (1%) on physical attack [NattWara]
 [133,1,51,3,3,1],
-[134,1,261,1,10,1]
+[134,1,261,1,10,1],
+[135,1,54,1,10,6],
+[136,1,51,5,1,6],
+[137,1,130,1,1,6],
+[138,0,209,1,5,6],
+[139,1,76,5,1,1]
 ];
 //ID - Gets called in second spot(221(effect),1(ID)), autocast id = 1 by default, skill Id,Skill Lvl, chance %, attacktype(1atkbased,2shortrange,3longrange,4magical,5attacking,6receivingATKbased,0 by default, 0=low chance, 1=medium chance, 2=high chance)
 
