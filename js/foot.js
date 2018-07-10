@@ -269,6 +269,9 @@ function StAllCalc()
 
 	//[Custom TalonRO 2018-06-14 - Malangdo Enchantment] [Kato]
 	tRO_Click_MalangdoEnchantment(n_A_Equip[0],n_A_Equip[1]);
+	
+	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment] [NattWara]
+	Click_BiolabWeaponEnchantment(n_A_Equip[0],n_A_Equip[1]);
 
 	if(n_Nitou){
 		W_REF2 = 0;
@@ -694,7 +697,16 @@ function StAllCalc()
 		for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
 			var vME = tRO_MalangdoEnchantment[i];
 			if(vME >= 1781 && vME <= 1788) {
-					w += (4 + (2 * (parseInt(vME.substr(-1)) - 1)));
+				w += (4 + (2 * (parseInt(vME.substr(-1)) - 1)));
+			}
+		}
+	
+	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for Fighting Spirit - ATK] [NattWara]
+	// Actual damage part.
+		for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
+			var vBE = tRO_BiolabWeaponEnchantment[i];
+			if(vBE >= 1781 && vBE <= 1788) {
+				w += (4 + (2 * (parseInt(vBE.substr(-1)) - 1)));
 			}
 		}
 		
@@ -1672,7 +1684,21 @@ n_A_MaxHP += SkillSearch(156) * 200;
 				n_A_HIT += 1 + parseInt(vME.substr(-1));
 			}
 		}
+		
+	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for Fighting Spirit/Sharp - HIT] [NattWara]
+		for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
+			var vBE = tRO_BiolabWeaponEnchantment[i];
+			if(vBE >= 1781 && vBE <= 1788) { //FS
+				if(vBE.substr(-1) <= 4)
+					n_A_HIT += 1 + parseInt(vBE.substr(-1));
+				 else
+					n_A_HIT += 5;
+			}
 
+			if(vBE >= 1081 && vBE <= 1085) { //Sharp
+				n_A_HIT += 1 + parseInt(vBE.substr(-1));
+			}
+		}
 
 	myInnerHtml("A_HIT",n_A_HIT,0);
 
@@ -1949,6 +1975,17 @@ n_A_MaxHP += SkillSearch(156) * 200;
 						n_A_CRI += 3;
 					 else
 						n_A_CRI += 3 + parseInt(vME.substr(-1));
+				}
+			}
+			
+		//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for Sharp - CRIT [NattWara]
+			for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
+				var vBE = tRO_BiolabWeaponEnchantment[i];
+				if(vBE >= 1081 && vBE <= 1085) {
+					if(vBE.substr(-1) == 1)
+						n_A_CRI += 3;
+					 else
+						n_A_CRI += 3 + parseInt(vBE.substr(-1));
 				}
 			}
 
@@ -2731,6 +2768,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 		if(vME == 123) w += parseInt(vME.substr(-1));
 	}
+	
+	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for ASPD] [NattWara]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+
+		if(vME == 123) w += parseInt(vME.substr(-1));
+	}
 
 	if(EquipNumSearch(1045) && SU_AGI >= 90){
 		w += 2;
@@ -3065,6 +3109,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 				n_tok[25] += 2 * parseInt(vME.substr(-1));
 		}
 	}
+	
+	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for Expert Archer] [NattWara]
+	for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
+		var vBE = tRO_BiolabWeaponEnchantment[i];
+		if(vBE >= 251 && vBE <= 256) {
+				n_tok[25] += 2 * parseInt(vBE.substr(-1));
+		}
+	}
 
 	//Custom TalonRO - 2018-06-07 - Lord of the Dead Helm [1] + Abysmal Knight Card - +5% damage on boss monsters  [Nattwara]
 	if(EquipNumSearch(1658) && CardNumSearch(31))
@@ -3373,6 +3425,33 @@ n_A_MaxHP += SkillSearch(156) * 200;
 				case '5' : eTypes[3] += 4; break;
 				case '6' : eTypes[1] += 5; break;
 				case '7' : eTypes[4] += 6; break;
+			}
+
+			for(k=1; k<5; k++) {
+				if(TRO_MAGICALSKILL_ELEMENTS[k].indexOf(n_A_ActiveSkill) != -1){
+					for(j=0; j<10; j++) {
+						n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[k]) / 100) - 100; // ***
+					}
+				}
+			}
+			if(aMSnoEle.indexOf(n_A_ActiveSkill) != -1 && n_A_Weapon_zokusei <= 5){
+				for(j=0; j<10; j++) {
+					n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + eTypes[n_A_Weapon_zokusei]) / 100) - 100; // ***
+				}
+			}
+		}
+	}
+	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for Spell Element] [NattWara]
+	var eTypes = [0,0,0,0,0]; // 0 Neural, 1 Water, 2 Earth, 3 Fire, 4 Wind
+	var aMSnoEle = [373,374,375]; // Magical skills without proper element (will change depending on n_A_Weapon_zokusei)
+	for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
+		var vBE = tRO_BiolabWeaponEnchantment[i];
+		if(vBE >= 261 && vBE <= 267) {
+			switch(vBE.substr(-1)){
+				case '1' : eTypes[3] += 2; break;
+				case '2' : eTypes[1] += 2; break;
+				case '3' : eTypes[4] += 2; break;
+				case '4' : eTypes[2] += 2; break;
 			}
 
 			for(k=1; k<5; k++) {
@@ -3834,6 +3913,25 @@ function StPlusCalc()
 
 		var op = vME.substr(0,1);
 		var val = parseInt(vME.substr(-1));
+
+		switch(op) {
+				case '1': wSPC_STR += val; break;
+				case '2': wSPC_AGI += val; break;
+				case '3': wSPC_VIT += val; break;
+				case '4': wSPC_INT += val; break;
+				case '5': wSPC_DEX += val; break;
+				case '6': wSPC_LUK += val; break;
+		}
+	}
+	
+	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for STR/AGI/VIT/INT/DEX/LUK] [NattWara]
+	for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
+		var vBE = tRO_BiolabWeaponEnchantment[i];
+
+		if(vBE == 0 || vBE.length > 2) continue;
+
+		var op = vBE.substr(0,1);
+		var val = parseInt(vBE.substr(-1));
 
 		switch(op) {
 				case '1': wSPC_STR += val; break;
@@ -6343,11 +6441,24 @@ with(document.calcForm){
 			SaveData[99] = 0;
 			SaveData[100] = 0;
 	}
+	
+	//[Custom TalonRO 2018-07-10 - Save Cookie for Biolab Weapon] [NattWara]
+	SaveData[101] = ((A_BE11.value) ? eval(A_BE11.value) : 0);
+	SaveData[102] = ((A_BE12.value) ? eval(A_BE12.value) : 0);
+
+
+	if (typeof(A_weapon2) != "undefined"){
+			SaveData[103] = ((A_BE21.value) ? eval(A_BE21.value) : 0);
+			SaveData[104] = ((A_BE22.value) ? eval(A_BE22.value) : 0);
+	}else{
+			SaveData[103] = 0;
+			SaveData[104] = 0;
+	}
 
 	//wak1="";
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
-	for(i=0;i<=100;i++)
+	for(i=0;i<=104;i++)
 		SaveData[i] = NtoS(SaveData[i],SaveStr1[i]);
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
@@ -6444,13 +6555,19 @@ with(document.calcForm){
 		}
 	}
 
-	for(i=97;i<=100;i++){
+	for(i=97;i<=100;i++){ // Malangdo
+		if (typeof(SaveData[i]) == "undefined"){
+			SaveData[i] = 0;
+		}
+	}
+	
+	for(i=101;i<=104;i++){ // Biolab Weapon
 		if (typeof(SaveData[i]) == "undefined"){
 			SaveData[i] = 0;
 		}
 	}
 
-	for(i=0;i<=100;i++)
+	for(i=0;i<=104;i++)
 			SaveData[i] = eval(SaveData[i]);
 
 	if(eval(SaveData[0]) == 20 && eval(SaveData[54]) == 1)
@@ -6604,6 +6721,12 @@ with(document.calcForm){
 	A_ME12.value = SaveData[98];
 	A_ME21.value = SaveData[99];
 	A_ME22.value = SaveData[100];
+	
+	// [Custom TalonRO - 2018-07-10 - Load Cookie for Biolab Weapon Enchants] [NattWara]
+	A_BE11.value = SaveData[101];
+	A_BE12.value = SaveData[102];
+	A_BE21.value = SaveData[103];
+	A_BE22.value = SaveData[104];
 
 	Click_SQI_Bonus(0);
 

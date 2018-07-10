@@ -64,6 +64,12 @@ IgnoreEffectOnLeftHand = 0;
 //[Custom TalonRO 2018-06-15 - Global for Malangdo Enchants values] [Kato]
 tRO_MalangdoEnchantment = [0,0,0,0];
 
+//[Custom TalonRO 2018-07-10 - Global for Biolab Weapon Enchants values] [NattWara]
+tRO_BiolabWeaponEnchantment = [0,0,0,0];
+
+//[Custom TalonRO 2018-07-10 - Global for Biolab Armor Enchants values] [NattWara]
+tRO_BiolabArmorEnchantment = [0,0];
+
 function myInnerHtml(wIH1,wIH2,wIH3)
 {
 	if(wIH3 == 0){
@@ -3388,7 +3394,6 @@ with(document.calcForm){
 	}
 	WeaponSet();
 
-
 	if(n == 0){
 		myInnerHtml("A_seirenchi_name","",0);
 		A_Weapon_ATKplus.style.visibility = "hidden";
@@ -3400,9 +3405,11 @@ with(document.calcForm){
 	}
 
 	n_A_JobSet();
+
 	if((n_A_JOB == 8 || n_A_JOB == 22) && n != 11){
-		if(n_Nitou == 0)
-			myInnerHtml("A_SobWeaponName","Left Hand: "+'<select name="A_Weapon2Type" onChange = "ClickWeaponType2(this[this.selectedIndex].value) | StAllCalc()">	<option value="0">Fist or Shield<option value="1">Dagger<option value="2">Sword<option value="6">Axe</select>',0);
+		if(n_Nitou == 0){
+			myInnerHtml("A_SobWeaponName","Left Hand: "+'<select name="A_Weapon2Type" onChange = "ClickWeaponType2(this[this.selectedIndex].value) | StAllCalc()">	<option value="0">Fist or Shield<option value="1">Dagger<option value="2">Sword<option value="6">Axe</select>',0);	
+		}
 	}
 	else{
 		myInnerHtml("A_SobWeaponName","",0);
@@ -3445,6 +3452,12 @@ function ClickWeaponType2(n){
 with(document.calcForm){
 
 	n_A_JobSet();
+	//document.getElementById("T_WDiv2").style.display = ((n != 0) ? "" : "none");
+	document.getElementById("T_W2").style.display = ((n != 0) ? "" : "none");
+	document.getElementById("T_WC2").style.display = ((n != 0) ? "" : "none");
+	console.log("n : " + n);
+	console.log("n_Nitou : " + n_Nitou);
+	
 	if(n != 0){
 		if(n_Nitou == 0){
 			myInnerHtml("spanA_weapon2",'Left hand: <select name="A_weapon2"onChange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>',0);
@@ -4745,6 +4758,12 @@ function Click_SQI_Bonus(n){
 //custom TalonRO add Kris Enchantment
 function Click_KrisEnchantment(){
 with(document.calcForm){
+	
+	document.getElementById("T_KE1").style.display = ((A_weapon1.value == 1472) ? "" : "none");
+	if (typeof(A_weapon2) != "undefined"){
+		document.getElementById("T_KE2").style.display = ((A_weapon2.value == 1472) ? "" : "none");
+	}
+	/*
 	if(A_weapon1.value == 1472){
 		myInnerHtml("A_KEText11","Kris Enchantment 1",0);
 		A_KE11.style.visibility = "visible";
@@ -4774,6 +4793,7 @@ with(document.calcForm){
 		A_KE22.style.visibility = "hidden";
 		A_KE22.value = 0;
 	}
+	*/
 }}
 /*[Custom TalonRO - 2018-06-03
 Function to populate combos by using definitions from etc.js;
@@ -4793,9 +4813,18 @@ function tRO_PopulateCombos() {
 			A_SHOES_DEF_PLUS.options[i] = new Option("+"+i,i);
 		}
 
+		//Cards
+		
 		for(i=0; i<CARD_SHORTCUT.length; i++) {
 			A_cardshort.options[i] = new Option(CARD_SHORTCUT[i][1],CARD_SHORTCUT[i][0]);
 		}
+		
+		//Kris
+
+		myInnerHtml("A_KEText11","Kris Enchantment 1",0);
+		myInnerHtml("A_KEText12","Kris Enchantment 2",0);
+		myInnerHtml("A_KEText21","Kris Enchantment 1",0);
+		myInnerHtml("A_KEText22","Kris Enchantment 2",0);
 
 		A_KE11.options[0] = new Option("(Kris Enchantment "+ A_KE11.name.substr(-1) +")",0);
 		A_KE12.options[0] = new Option("(Kris Enchantment "+ A_KE12.name.substr(-1) +")",0);
@@ -4808,11 +4837,13 @@ function tRO_PopulateCombos() {
 				A_KE21.options[i+1] = new Option(KRIS_ENCHANTMENT[i][1],KRIS_ENCHANTMENT[i][0]);
 				A_KE22.options[i+1] = new Option(KRIS_ENCHANTMENT[i][1],KRIS_ENCHANTMENT[i][0]);
 		}
+		
+		//Malangdo
 
-			myInnerHtml("A_METext11","Malangdo 1: ",0);
-			myInnerHtml("A_METext12","Malangdo 2: ",0);
-			myInnerHtml("A_METext21","Malangdo 1: ",0);
-			myInnerHtml("A_METext22","Malangdo 2: ",0);
+		myInnerHtml("A_METext11","Malangdo 1: ",0);
+		myInnerHtml("A_METext12","Malangdo 2: ",0);
+		myInnerHtml("A_METext21","Malangdo 1: ",0);
+		myInnerHtml("A_METext22","Malangdo 2: ",0);
 
 		A_ME11.options[0] = new Option("(Malangdo Enchant "+ A_ME11.name.substr(-1) +")",0);
 		A_ME12.options[0] = new Option("(Malangdo Enchant "+ A_ME12.name.substr(-1) +")",0);
@@ -4820,11 +4851,32 @@ function tRO_PopulateCombos() {
 		A_ME22.options[0] = new Option("(Malangdo Enchant 2-"+ A_ME22.name.substr(-1) +")",0);
 
 		for(i=0; i<MALANGDO_ENCHANTS.length; i++) {
-				A_ME11.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
-				A_ME12.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
-				A_ME21.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
-				A_ME22.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+			A_ME11.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+			A_ME12.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+			A_ME21.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+			A_ME22.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
 		}
+		
+		//Biolab (Weapon)
+
+		myInnerHtml("A_BEText11","Biolab 1: ",0);
+		myInnerHtml("A_BEText12","Biolab 2: ",0);
+		myInnerHtml("A_BEText21","Biolab 1: ",0);
+		myInnerHtml("A_BEText22","Biolab 2: ",0);
+
+		A_BE11.options[0] = new Option("(Biolab Enchant "+ A_BE11.name.substr(-1) +")",0);
+		A_BE12.options[0] = new Option("(Biolab Enchant "+ A_BE12.name.substr(-1) +")",0);
+		A_BE21.options[0] = new Option("(Biolab Enchant 2-"+ A_BE21.name.substr(-1) +")",0);
+		A_BE22.options[0] = new Option("(Biolab Enchant 2-"+ A_BE22.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_WEAPON.length; i++) {
+			A_BE11.options[i+1] = new Option(BIOLAB_ENCHANTS_WEAPON[i][1],BIOLAB_ENCHANTS_WEAPON[i][0]);
+			A_BE12.options[i+1] = new Option(BIOLAB_ENCHANTS_WEAPON[i][1],BIOLAB_ENCHANTS_WEAPON[i][0]);
+			A_BE21.options[i+1] = new Option(BIOLAB_ENCHANTS_WEAPON[i][1],BIOLAB_ENCHANTS_WEAPON[i][0]);
+			A_BE22.options[i+1] = new Option(BIOLAB_ENCHANTS_WEAPON[i][1],BIOLAB_ENCHANTS_WEAPON[i][0]);
+		}
+		
+		//Hidden Slot Enchant (Armor)
 
 		for(var i=0; i<HS_ENCHANTS.length; i++) {
 			A_HSE.options[i] = new Option(HS_ENCHANTS[i][1],HS_ENCHANTS[i][0]);
@@ -4872,7 +4924,7 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 		document.calcForm.A_ME21.value = 0;
 		document.calcForm.A_ME22.value = 0;
 	}
-
+	
 	with(document.calcForm){
 			if(ME_ENCHANTABLE[kID1][1] != 0) {
 				var arEx = [];
@@ -4934,6 +4986,45 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 	}
 	tRO_MalangdoEnchantment = [document.calcForm.A_ME11.value,document.calcForm.A_ME12.value,document.calcForm.A_ME21.value,document.calcForm.A_ME22.value];
 }
+
+//custom TalonRO add Biolab Weapon Enchantment
+function Click_BiolabWeaponEnchantment(w1, w2){
+with(document.calcForm){
+	var bEnchant1 = bEnchant2 = false;
+	var kID1 = kID2 = 0;
+	if(w1) {
+			for(i=0; i<BE_ENCHANTABLE_WEAPON.length; i++) {
+				if(BE_ENCHANTABLE_WEAPON[i][0] == w1) {
+					bEnchant1 = true;
+					kID1 = i;
+					break;
+				}
+			}
+	}
+	if(w2) {
+			for(i=0;i<BE_ENCHANTABLE_WEAPON.length;i++) {
+				if(BE_ENCHANTABLE_WEAPON[i][0] == w2) {
+					bEnchant2 = true;
+					kID2 = i;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_BE1").style.display = ((bEnchant1) ? "" : "none");
+	document.getElementById("T_BE2").style.display = ((bEnchant2) ? "" : "none");
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_BE11.value = 0;
+		document.calcForm.A_BE12.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_BE21.value = 0;
+		document.calcForm.A_BE22.value = 0;
+	}
+	
+	tRO_BiolabWeaponEnchantment = [document.calcForm.A_BE11.value,document.calcForm.A_BE12.value,document.calcForm.A_BE21.value,document.calcForm.A_BE22.value];
+}}
 
 function Click_Skill9SW(){
 with(document.calcForm){

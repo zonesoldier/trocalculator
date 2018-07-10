@@ -1101,7 +1101,7 @@ BE_ENCHANTABLE_ARMOR = [
 /* [Accessory] */
 	,[1513,0] //Green Surgical Gown
 /* [Upper Headgear] */
-	//,[18570,0] //Ancient Gold Ornament
+	,[1663,0] //Ancient Gold Ornament
 ];
 
 //exceptions list for items and cards disabled in vanilla
