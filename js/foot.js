@@ -1,5 +1,9 @@
 myInnerHtml("PR1","",0);
 myInnerHtml("DELHTML",' <Font size=2><A Href="del.html">[delete saved data]</A></Font>',0);
+//array of armor select elements
+armorLoc = [document.calcForm.A_head1, document.calcForm.A_head2, document.calcForm.A_head3, document.calcForm.A_body, document.calcForm.A_left, document.calcForm.A_shoulder, document.calcForm.A_shoes, document.calcForm.A_acces1, document.calcForm.A_acces2];
+//array of card select elements not including left weapon cards
+cardLoc = [document.calcForm.A_weapon1_card1, document.calcForm.A_weapon1_card2, document.calcForm.A_weapon1_card3, document.calcForm.A_weapon1_card4, document.calcForm.A_head1_card, document.calcForm.A_head2_card, document.calcForm.A_left_card, document.calcForm.A_body_card, document.calcForm.A_shoulder_card, document.calcForm.A_shoes_card, document.calcForm.A_acces1_card, document.calcForm.A_acces2_card];
 
 for(var i=1;i<=99;i++){
 with(document.calcForm){
@@ -110,10 +114,10 @@ function SuperNoviceFullWeapon(nSNFW)
 		A_acces2.value = n_A_Equip[10];
 	}
 }
-
+//stat cap and rebirth job removal for baby classes - [Loa] - 2018-06-21
 function BabyJobs(){
 with(document.calcForm){
-	//Remove rebirth classes when adopted is checked - [Loa] - 2018-06-21
+	//Remove rebirth classes when adopted is checked
 	var adopted = eval(A_youshi.checked);
 	if(adopted && A_JOB.options.length > 26){
 		var jobJump = 0;
@@ -130,13 +134,13 @@ with(document.calcForm){
 	//Add rebirth classes when adopted unchecked
 	else if(!adopted && A_JOB.options.length < 47){
 		for(i = 21; i < 41; i++){
-			option = document.createElement("option");
+			var option = document.createElement("option");
 			option.value = (i);
 			option.text = (JobName[i]);
 			A_JOB.add(option,i);
 		}
 	}
-	//Cap stats at 80 when adopted is checked - [Loa] - 2018-06-21
+	//Cap stats at 80 when adopted is checked
 	if(adopted && A_STR.options.length > 79){
 		for(i = A_STR.options.length - 1; i > 79; i--){
 			A_STR.remove(i);
@@ -159,13 +163,13 @@ with(document.calcForm){
 			A_LUK.options[i-1] = new Option(i,i);
 		}
 	}
-}
-}
+}}
 
 function StAllCalc()
 {with(document.calcForm){
 	BabyJobs();
 	n_A_JobSet();
+	VanillaWep();
 	if(n_A_JOB == 20){
 		if(SuperNoviceFullWeaponCHECK == 0 && eval(A_skill9.value) == 1)
 			SuperNoviceFullWeapon(1);
@@ -4199,11 +4203,10 @@ function WeaponSet()
 
 	work = new Array();
 	j = 0;
-	for (i=0;i<=ItemMax; i++)	{
+	for (i=0;i<=ItemMax; i++){
 		if(ItemOBJ[i][1] == n_A_WeaponType && (JobEquipItemSearch(ItemOBJ[i][2]) == 1 || debugMode == 1)){
 			work[j] = i;
 			j++;
-
 		}
 		//custom TalonRO fix showing lv 4 weapon on active Super Novice Link
 		//old stuff showed much more than lv 4 weaps only, like Stunner (lv 3)
@@ -4226,11 +4229,10 @@ function WeaponSet()
 	}
 	work[j] = "EOF";
 
-
 	work = sort(work);
 	for (i=0;i<j; i++)
 		document.calcForm.A_weapon1.options[i] = new Option(ItemOBJ[work[i]][8],ItemOBJ[work[i]][0]);
-
+	removedWep1 = [];
 }
 
 function WeaponSetLeft()
@@ -4253,6 +4255,7 @@ function WeaponSetLeft()
 	work = sort(work);
 	for (i=0;i<j; i++)
 		document.calcForm.A_weapon2.options[i] = new Option(ItemOBJ[work[i]][8],ItemOBJ[work[i]][0]);
+	removedWep2 = [];
 }
 
 function WeaponSet2(){
@@ -4346,7 +4349,6 @@ with(document.calcForm){
 		workB[m] = sort(workB[m]);
 
 	var z = 0;
-
 	//custom TalonRO so LKH appears as the first option on the Headgear list
 	//old:
 	for(i=0;i<wsj[0];i++){
@@ -4392,12 +4394,14 @@ with(document.calcForm){
 		A_acces1.options[i] = new Option(ItemOBJ[z][8],ItemOBJ[z][0]);
 		A_acces2.options[i] = new Option(ItemOBJ[z][8],ItemOBJ[z][0]);
 	}
+	removedArmor = [];
 }}
 
 function FirstNovis(){
 	if(first_check == 1){
 		first_check = 2;
 		WeaponSet2();
+		VanillaArmor();
 	}
 }
 
@@ -6331,8 +6335,15 @@ with(document.calcForm){
 	wStr = "";
 	//clear baby job status before load - [Loa] - 2018-06-22
 	if(A_youshi.checked){
-		document.getElementById("lab1").checked = false;
+		A_youshi.checked = false;
 		BabyJobs();
+	}
+	//clear vanilla modes and refill items before load - [Loa] - 2018-07-09
+	if(vanilla.checked){
+		vanilla.checked = false;
+		VanillaWep();
+		VanillaArmor();
+		VanillaCard();
 	}
 
 	for(i=0;SaveData[i];i++){
