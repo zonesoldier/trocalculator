@@ -68,7 +68,8 @@ tRO_MalangdoEnchantment = [0,0,0,0];
 tRO_BiolabWeaponEnchantment = [0,0,0,0];
 
 //[Custom TalonRO 2018-07-10 - Global for Biolab Armor Enchants values] [NattWara]
-tRO_BiolabArmorEnchantment = [0,0];
+//[Headgear1,Headgear2,Armor1,Armor2,Shield1,Shield2,Garment1,Garment2,Acc1_1,Acc1_2,Acc2_1,Acc2_2]
+tRO_BiolabArmorEnchantment = [0,0,0,0,0,0,0,0,0,0,0,0];
 
 function myInnerHtml(wIH1,wIH2,wIH3)
 {
@@ -4758,42 +4759,29 @@ function Click_SQI_Bonus(n){
 //custom TalonRO add Kris Enchantment
 function Click_KrisEnchantment(){
 with(document.calcForm){
-	
-	document.getElementById("T_KE1").style.display = ((A_weapon1.value == 1472) ? "" : "none");
-	if (typeof(A_weapon2) != "undefined"){
-		document.getElementById("T_KE2").style.display = ((A_weapon2.value == 1472) ? "" : "none");
-	}
-	/*
 	if(A_weapon1.value == 1472){
-		myInnerHtml("A_KEText11","Kris Enchantment 1",0);
-		A_KE11.style.visibility = "visible";
-		myInnerHtml("A_KEText12","Kris Enchantment 2",0);
-		A_KE12.style.visibility = "visible";
+		document.getElementById("T_KE1").style.display = "";
 	}
 	else{
-		myInnerHtml("A_KEText11","",0);
-		A_KE11.style.visibility = "hidden";
+		document.getElementById("T_KE1").style.display = "none";
 		A_KE11.value = 0;
-		myInnerHtml("A_KEText12","",0);
-		A_KE12.style.visibility = "hidden";
 		A_KE12.value = 0;
 	}
 	if (typeof(A_weapon2) != "undefined"){
 		if(A_weapon2.value == 1472){
-			myInnerHtml("A_KEText21","Kris Enchantment 1",0);
-			A_KE21.style.visibility = "visible";
-			myInnerHtml("A_KEText22","Kris Enchantment 2",0);
-			A_KE22.style.visibility = "visible";
+			document.getElementById("T_KE2").style.display = "";
+		}
+		else
+		{
+			document.getElementById("T_KE2").style.display = "none";
+			A_KE21.value = 0;
+			A_KE22.value = 0;
 		}
 	}else{
-		myInnerHtml("A_KEText21","",0);
-		A_KE21.style.visibility = "hidden";
+		document.getElementById("T_KE2").style.display = "none";
 		A_KE21.value = 0;
-		myInnerHtml("A_KEText22","",0);
-		A_KE22.style.visibility = "hidden";
 		A_KE22.value = 0;
 	}
-	*/
 }}
 /*[Custom TalonRO - 2018-06-03
 Function to populate combos by using definitions from etc.js;
@@ -4876,6 +4864,84 @@ function tRO_PopulateCombos() {
 			A_BE22.options[i+1] = new Option(BIOLAB_ENCHANTS_WEAPON[i][1],BIOLAB_ENCHANTS_WEAPON[i][0]);
 		}
 		
+		//Biolab (Headgear)
+		
+		myInnerHtml("A_BETextH1","Biolab 1: ",0);
+		myInnerHtml("A_BETextH2","Biolab 2: ",0);
+
+		A_BEH1.options[0] = new Option("(Biolab Headgear Enchant "+ A_BEH1.name.substr(-1) +")",0);
+		A_BEH2.options[0] = new Option("(Biolab Headgear Enchant "+ A_BEH2.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BEH1.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEH2.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Biolab (Armor)
+		
+		myInnerHtml("A_BETextA1","Biolab 1: ",0);
+		myInnerHtml("A_BETextA2","Biolab 2: ",0);
+
+		A_BEA1.options[0] = new Option("(Biolab Armor Enchant "+ A_BEA1.name.substr(-1) +")",0);
+		A_BEA2.options[0] = new Option("(Biolab Armor Enchant "+ A_BEA2.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BEA1.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEA2.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Biolab (Shield)
+		
+		myInnerHtml("A_BETextS1","Biolab 1: ",0);
+		myInnerHtml("A_BETextS2","Biolab 2: ",0);
+
+		A_BES1.options[0] = new Option("(Biolab Shield Enchant "+ A_BES1.name.substr(-1) +")",0);
+		A_BES2.options[0] = new Option("(Biolab Shield Enchant "+ A_BES2.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BES1.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BES2.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Biolab (Garment)
+		
+		myInnerHtml("A_BETextG1","Biolab 1: ",0);
+		myInnerHtml("A_BETextG2","Biolab 2: ",0);
+
+		A_BEG1.options[0] = new Option("(Biolab Garment Enchant "+ A_BEG1.name.substr(-1) +")",0);
+		A_BEG2.options[0] = new Option("(Biolab Garment Enchant "+ A_BEG2.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BEG1.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEG2.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Biolab (Accessory 1)
+		
+		myInnerHtml("A_BETextAC11","Biolab 1: ",0);
+		myInnerHtml("A_BETextAC12","Biolab 2: ",0);
+
+		A_BEAC11.options[0] = new Option("(Biolab Accessory Enchant "+ A_BEAC11.name.substr(-1) +")",0);
+		A_BEAC12.options[0] = new Option("(Biolab Accessory Enchant "+ A_BEAC12.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BEAC11.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEAC12.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Biolab (Accessory 2)
+		
+		myInnerHtml("A_BETextAC21","Biolab 1: ",0);
+		myInnerHtml("A_BETextAC22","Biolab 2: ",0);
+
+		A_BEAC21.options[0] = new Option("(Biolab Accessory Enchant "+ A_BEAC21.name.substr(-1) +")",0);
+		A_BEAC22.options[0] = new Option("(Biolab Accessory Enchant "+ A_BEAC22.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BEAC21.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEAC22.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+
 		//Hidden Slot Enchant (Armor)
 
 		for(var i=0; i<HS_ENCHANTS.length; i++) {
@@ -4888,7 +4954,7 @@ function tRO_PopulateCombos() {
 	[Custom TalonRO 2018-06-14 - Function to perform the click changes,
 	it's responsible for elements displays changes and enchant removal exceptions
 	Requires etc.js->arrays: ME_ENCHANTABLE and MALANGDO_ENCHANTS, index.html->select: A_ME11, A_ME12, A_ME21, A_ME22
-] [Kato]
+	] [Kato]
 */
 function tRO_Click_MalangdoEnchantment(w1,w2){
 
@@ -5024,6 +5090,203 @@ with(document.calcForm){
 	}
 	
 	tRO_BiolabWeaponEnchantment = [document.calcForm.A_BE11.value,document.calcForm.A_BE12.value,document.calcForm.A_BE21.value,document.calcForm.A_BE22.value];
+}}
+
+//custom TalonRO add Biolab Headgear Enchantment
+function Click_BiolabHeadgearEnchantment(h){
+with(document.calcForm){
+	var bEnchant = false;
+	var kID = 0;
+	if(h) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == h) {
+					bEnchant = true;
+					kID = i;
+					break;
+				}
+			}
+	}
+
+	if (bEnchant) {
+		document.getElementById("T_BEH1").style.display = "";
+		document.getElementById("T_BEH2").style.display = "";
+		document.getElementById("T_BEH1_TEMP").style.display = "none";
+		document.getElementById("T_BEH2_TEMP").style.display = "none";
+	} else {
+		document.getElementById("T_BEH1").style.display = "none";
+		document.getElementById("T_BEH2").style.display = "none";
+		document.getElementById("T_BEH1_TEMP").style.display = "";
+		document.getElementById("T_BEH2_TEMP").style.display = "";
+	}
+
+	if(bEnchant == false) {
+		document.calcForm.A_BEH1.value = 0;
+		document.calcForm.A_BEH2.value = 0;
+	}
+	
+	tRO_BiolabArmorEnchantment[0] = document.calcForm.A_BEH1.value;
+	tRO_BiolabArmorEnchantment[1] = document.calcForm.A_BEH2.value;
+}}
+
+//custom TalonRO add Biolab Armor Enchantment
+function Click_BiolabArmorEnchantment(a){
+with(document.calcForm){
+	var bEnchant = false;
+	var kID = 0;
+	if(a) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == a) {
+					bEnchant = true;
+					kID = i;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_BEA").style.display = ((bEnchant) ? "" : "none");
+
+	if(bEnchant == false) {
+		document.calcForm.A_BEA1.value = 0;
+		document.calcForm.A_BEA2.value = 0;
+	}
+
+	tRO_BiolabArmorEnchantment[2] = document.calcForm.A_BEA1.value;
+	tRO_BiolabArmorEnchantment[3] = document.calcForm.A_BEA2.value;
+}}
+
+//custom TalonRO add Biolab Shield Enchantment
+function Click_BiolabShieldEnchantment(s){
+with(document.calcForm){
+	var bEnchant = false;
+	var kID = 0;
+	if(s) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == s) {
+					bEnchant = true;
+					kID = i;
+					break;
+				}
+			}
+	}
+
+	if (bEnchant) {
+		document.getElementById("T_BES1").style.display = "";
+		document.getElementById("T_BES2").style.display = "";
+		document.getElementById("T_BES1_TEMP").style.display = "none";
+		document.getElementById("T_BES2_TEMP").style.display = "none";
+	} else {
+		document.getElementById("T_BES1").style.display = "none";
+		document.getElementById("T_BES2").style.display = "none";
+		document.getElementById("T_BES1_TEMP").style.display = "";
+		document.getElementById("T_BES2_TEMP").style.display = "";
+	}
+
+	if(bEnchant == false) {
+		document.calcForm.A_BES1.value = 0;
+		document.calcForm.A_BES2.value = 0;
+	}
+
+	tRO_BiolabArmorEnchantment[4] = document.calcForm.A_BES1.value;
+	tRO_BiolabArmorEnchantment[5] = document.calcForm.A_BES2.value;
+}}
+
+//custom TalonRO add Biolab Garment Enchantment
+function Click_BiolabGarmentEnchantment(g){
+with(document.calcForm){
+	var bEnchant = false;
+	var kID = 0;
+	if(g) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == g) {
+					bEnchant = true;
+					kID = i;
+					break;
+				}
+			}
+	}
+
+	if (bEnchant) {
+		document.getElementById("T_BEG1").style.display = "";
+		document.getElementById("T_BEG2").style.display = "";
+		document.getElementById("T_BEG1_TEMP").style.display = "none";
+		document.getElementById("T_BEG2_TEMP").style.display = "none";
+	} else {
+		document.getElementById("T_BEG1").style.display = "none";
+		document.getElementById("T_BEG2").style.display = "none";
+		document.getElementById("T_BEG1_TEMP").style.display = "";
+		document.getElementById("T_BEG2_TEMP").style.display = "";
+	}
+
+	if(bEnchant == false) {
+		document.calcForm.A_BEG1.value = 0;
+		document.calcForm.A_BEG2.value = 0;
+	}
+
+	tRO_BiolabArmorEnchantment[6] = document.calcForm.A_BEG1.value;
+	tRO_BiolabArmorEnchantment[7] = document.calcForm.A_BEG2.value;
+}}
+
+//custom TalonRO add Biolab Accessory Enchantment
+function Click_BiolabAccessoryEnchantment(a1, a2){
+with(document.calcForm){
+	var bEnchant1 = bEnchant2 = false;
+	var kID1 = kID2 = 0;
+	if(a1) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == a1) {
+					bEnchant1 = true;
+					kID1 = i;
+					break;
+				}
+			}
+	}
+	if(a2) {
+			for(i=0;i<BE_ENCHANTABLE_ARMOR.length;i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == a2) {
+					bEnchant2 = true;
+					kID2 = i;
+					break;
+				}
+			}
+	}
+
+	if (bEnchant1) {
+		document.getElementById("T_BEAC11").style.display = "";
+		document.getElementById("T_BEAC12").style.display = "";
+		document.getElementById("T_BEAC11_TEMP").style.display = "none";
+		document.getElementById("T_BEAC12_TEMP").style.display = "none";
+	} else {
+		document.getElementById("T_BEAC11").style.display = "none";
+		document.getElementById("T_BEAC12").style.display = "none";
+		document.getElementById("T_BEAC11_TEMP").style.display = "";
+		document.getElementById("T_BEAC12_TEMP").style.display = "";
+	}
+	
+	if (bEnchant2) {
+		document.getElementById("T_BEAC21").style.display = "";
+		document.getElementById("T_BEAC22").style.display = "";
+		document.getElementById("T_BEAC21_TEMP").style.display = "none";
+		document.getElementById("T_BEAC22_TEMP").style.display = "none";
+	} else {
+		document.getElementById("T_BEAC21").style.display = "none";
+		document.getElementById("T_BEAC22").style.display = "none";
+		document.getElementById("T_BEAC21_TEMP").style.display = "";
+		document.getElementById("T_BEAC22_TEMP").style.display = "";
+	}
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_BEAC11.value = 0;
+		document.calcForm.A_BEAC12.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_BEAC21.value = 0;
+		document.calcForm.A_BEAC22.value = 0;
+	}
+
+	tRO_BiolabArmorEnchantment[8] = document.calcForm.A_BEAC11.value;
+	tRO_BiolabArmorEnchantment[9] = document.calcForm.A_BEAC12.value;
+	tRO_BiolabArmorEnchantment[10] = document.calcForm.A_BEAC21.value;
+	tRO_BiolabArmorEnchantment[11] = document.calcForm.A_BEAC22.value;
 }}
 
 function Click_Skill9SW(){

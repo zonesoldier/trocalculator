@@ -1090,18 +1090,100 @@ BE_ENCHANTABLE_WEAPON = [
 ];
 
 BE_ENCHANTABLE_ARMOR = [
+/* [Upper Headgear] */
+	 [1663,0] //Ancient Gold Ornament
+/* [Armors] */
+	,[1513,0] //Green Surgical Gown
 /* [Shields] */
-	 [1500,0] //Giant Shield
+	,[1500,0] //Giant Shield
 	,[1520,0] //Geffenia Water Book
 	,[1507,0] //Bible of Promise(2nd Vol.)
 /* [Garments] */
 	,[1498,0] //Salvage Cape
-/* [Armors] */
-	,[1517,0] //Assassin's Glove
 /* [Accessory] */
-	,[1513,0] //Green Surgical Gown
-/* [Upper Headgear] */
-	,[1663,0] //Ancient Gold Ornament
+	,[1517,0] //Assassin's Glove
+];
+
+EDEN_ENCHANTS_HAT = [
+		 [11, "STR+1"]
+		,[12, "STR+2"]
+		,[21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[31, "VIT+1"]
+		,[32, "VIT+2"]
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+		,[51, "DEX+1"]
+		,[61, "LUK+1"]
+		,[62, "LUK+2"]
+];
+
+EDEN_ENCHANTS_ARMOR_FIRST = [
+		 [11, "STR+1"]
+		,[12, "STR+2"]
+		,[21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[31, "VIT+1"]
+		,[32, "VIT+2"]
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+		,[61, "LUK+1"]
+		,[62, "LUK+2"]
+		,[111,"MDEF+1"]
+		,[112,"MDEF+2"]
+		,[113,"MDEF+3"]
+		,[122,"FLEE+2"]
+];
+
+EDEN_ENCHANTS_ARMOR_SECOND = [
+		 [11, "STR+1"]
+		,[12, "STR+2"]
+		,[21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[31, "VIT+1"]
+		,[32, "VIT+2"]
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+		,[51, "DEX+1"]
+		,[61, "LUK+1"]
+		,[62, "LUK+2"]
+		,[111,"MDEF+1"]
+		,[112,"MDEF+2"]
+		,[113,"MDEF+3"]
+		,[114,"MDEF+4"]
+		,[122,"FLEE+2"]
+		,[123,"FLEE+3"]
+		,[124,"FLEE+4"]
+		,[301,"CRIT+1"]
+		,[302,"CRIT+2"]
+		,[303,"CRIT+3"]
+		,[304,"CRIT+4"]
+];
+
+EDEN_ENCHANTABLE_ARMOR = [
+	 [1576,0] //Eden Group Hat
+	,[1577,0] //Eden Group Hat II
+	,[1603,0] //Eden Group Uniform IV
+	,[1585,0] //Eden Group Manteau II
+	,[1567,0] //Eden Group Boots IV
+];
+
+EDEN_ENCHANTABLE_WEAPON = [
+	 [1570,0] //Eden Group Bow III
+	,[1573,0] //Eden Group Dagger III
+	,[1574,0] //Eden Group Dictonary I
+	,[1575,0] //Eden Group Guitar I
+	,[1578,0] //Eden Group Huuma Shuriken I
+	,[1579,0] //Eden Group Katar I
+	,[1580,0] //Eden Group Knuckle I
+	,[1583,0] //Eden Group Mace III
+	,[1588,0] //Eden Group Revolver III
+	,[1591,0] //Eden Group Saber III
+	,[1594,0] //Eden Group Slayer III
+	,[1595,0] //Eden Group Spear I
+	,[1598,0] //Eden Group Staff III
+	,[1599,0] //Eden Group Two Handed Axe I
+	,[1604,0] //Eden Group Whip I
 ];
 
 //exceptions list for items and cards disabled in vanilla

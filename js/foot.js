@@ -272,6 +272,13 @@ function StAllCalc()
 	
 	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment] [NattWara]
 	Click_BiolabWeaponEnchantment(n_A_Equip[0],n_A_Equip[1]);
+	
+	//[Custom TalonRO 2018-07-10 - Biolab Armor Enchantment] [NattWara]
+	Click_BiolabHeadgearEnchantment(n_A_Equip[2]);
+	Click_BiolabArmorEnchantment(n_A_Equip[6]);
+	Click_BiolabShieldEnchantment(n_A_Equip[5]);
+	Click_BiolabGarmentEnchantment(n_A_Equip[7]);
+	Click_BiolabAccessoryEnchantment(n_A_Equip[9],n_A_Equip[10]);
 
 	if(n_Nitou){
 		W_REF2 = 0;
@@ -973,6 +980,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 					w += parseInt(vME.substr(-1)) * 100;
 			}
 	}
+	
+	//[Custom TalonRO 2018-07-10 - Biolab Armor Enchantment for MaxHP] [NattWara]
+	for(i=0;i<tRO_BiolabArmorEnchantment.length;i++) {
+		var vBE = tRO_BiolabArmorEnchantment[i];
+			if(vBE >= 131 && vBE <= 133) {
+					w += parseInt(vBE.substr(-1)) * 100;
+			}
+	}
 
 	n_A_MaxHP += w;
 
@@ -1215,6 +1230,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 					w += parseInt(vME.substr(-1)) * 50;
 			}
 	}
+	//[Custom TalonRO 2018-07-10 - Biolab Armor Enchantment for MaxSP] [NattWara]
+	for(i=0;i<tRO_BiolabArmorEnchantment.length;i++) {
+		var vBE = tRO_BiolabArmorEnchantment[i];
+			if(vBE == 141) {
+					w += 50;
+			}
+	}
 	n_A_MaxSP += w;
 
 	if(n_A_MaxSP < 0)
@@ -1340,6 +1362,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(1 <= wKE && wKE <= 9)
 				n_A_DEF += w_enchant+1;
 		}
+	}
+	//[Custom TalonRO 2018-07-10 - Biolab Armor Enchantment for DEF] [NattWara]
+	for(i=0;i<tRO_BiolabArmorEnchantment.length;i++) {
+		var vBE = tRO_BiolabArmorEnchantment[i];
+			if(vBE >= 101 && vBE <= 102) {
+					n_A_DEF += parseInt(vBE.substr(-1));
+			}
 	}
 
 	n_A_totalDEF = n_A_DEF + Math.round(n_A_DEFplus * 7 / 10);
@@ -1546,6 +1575,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(11 <= wKE && wKE <= 19)
 				n_A_MDEF += w_enchant+1;
 		}
+	}
+	//[Custom TalonRO 2018-07-10 - Biolab Armor Enchantment for MDEF] [NattWara]
+	for(i=0;i<tRO_BiolabArmorEnchantment.length;i++) {
+		var vBE = tRO_BiolabArmorEnchantment[i];
+			if(vBE >= 111 && vBE <= 114) {
+					n_A_MDEF += parseInt(vBE.substr(-1));
+			}
 	}
 
 	//custom TalonRO Nightmare Bangungot Boots
@@ -1795,6 +1831,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		var w_enchant = wHSE % 10;
 		if(101 <= wHSE && wHSE <= 109)
 			n_A_FLEE += w_enchant*2;
+	}
+	//[Custom TalonRO 2018-07-10 - Biolab Armor Enchantment for FLEE] [NattWara]
+	for(i=0;i<tRO_BiolabArmorEnchantment.length;i++) {
+		var vBE = tRO_BiolabArmorEnchantment[i];
+			if(vBE >= 121 && vBE <= 124) {
+					n_A_FLEE += parseInt(vBE.substr(-1));
+			}
 	}
 	//custom TalonRO Sedora Card (fixed (2015-12-21),(fixed (2016-11-02))
 	if(n_A_JobSearch()==2 && CardNumSearch(524))
@@ -2770,8 +2813,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	}
 	
 	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for ASPD] [NattWara]
-	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
-		var vME = tRO_MalangdoEnchantment[i];
+	for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
+		var vME = tRO_BiolabWeaponEnchantment[i];
 
 		if(vME == 123) w += parseInt(vME.substr(-1));
 	}
@@ -3927,6 +3970,25 @@ function StPlusCalc()
 	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for STR/AGI/VIT/INT/DEX/LUK] [NattWara]
 	for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
 		var vBE = tRO_BiolabWeaponEnchantment[i];
+
+		if(vBE == 0 || vBE.length > 2) continue;
+
+		var op = vBE.substr(0,1);
+		var val = parseInt(vBE.substr(-1));
+
+		switch(op) {
+				case '1': wSPC_STR += val; break;
+				case '2': wSPC_AGI += val; break;
+				case '3': wSPC_VIT += val; break;
+				case '4': wSPC_INT += val; break;
+				case '5': wSPC_DEX += val; break;
+				case '6': wSPC_LUK += val; break;
+		}
+	}
+	
+	//[Custom TalonRO 2018-07-10 - Biolab Armor Enchantment for STR/AGI/VIT/INT/DEX/LUK] [NattWara]
+	for(i=0; i < tRO_BiolabArmorEnchantment.length; i++) {
+		var vBE = tRO_BiolabArmorEnchantment[i];
 
 		if(vBE == 0 || vBE.length > 2) continue;
 

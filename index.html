@@ -84,6 +84,7 @@
 					</div>
 	</div>
 </div>
+
 <div class="topic" style="margin-left: 6.5px;">
 <h3 style="font-size:15px">Character Simulator</h3>
 <table><tbody>
@@ -410,9 +411,22 @@
 			<td class="calc">
 				<select name="A_head1_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
 			</td>
-			<td class="calc"></td>
-			<td class="calc"></td>
+
+			<td class="calc" style="display: none" id="T_BEH1">
+				<span id="A_BETextH1"></span>
+				<select name="A_BEH1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BEH1_TEMP"></td>
+			<td class="calc" style="display: none" id="T_BEH2">
+				<span id="A_BETextH2"></span>
+				<select name="A_BEH2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BEH2_TEMP"></td>
+			
 		</tr>
+		
+
+
 		<tr>
 			<td class="calc">
 				<select style="margin-left: 51px" name="A_head2" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
@@ -447,6 +461,19 @@
 				<select name="A_HSE_HEAD1" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
+		<tr id="T_BEA" style="display: none">
+			<td class="calc">
+				<span id="A_BETextA1"></span>
+				<select name="A_BEA1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_BETextA2"></span>
+				<select name="A_BEA2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+
 		<tr>
 			<td class="calc">
 				<select style="visibility: visible;" name="A_LEFT_DEF_PLUS" onchange="StAllCalc()"></select>
@@ -455,9 +482,19 @@
 			<td class="calc" id="ID_C4">
 				<select style="visibility: visible;" name="A_left_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
 			</td>
-			<td class="calc"></td>
-			<td class="calc"></td>
+		
+			<td class="calc" style="display: none" id="T_BES1">
+				<span id="A_BETextS1"></span>
+				<select name="A_BES1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BES1_TEMP"></td>
+			<td class="calc" style="display: none" id="T_BES2">
+				<span id="A_BETextS2"></span>
+				<select name="A_BES2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BES2_TEMP"></td>
 		</tr>
+
 		<tr>
 			<td class="calc">
 				<select name="A_SHOULDER_DEF_PLUS" onchange="StAllCalc()"></select>
@@ -473,6 +510,31 @@
 				<select name="A_acces1_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
 			</td>
 		</tr>
+		
+		<tr>
+			<td class="calc" style="display: none" id="T_BEG1">
+				<span id="A_BETextG1"></span>
+				<select name="A_BEG1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BEG1_TEMP"></td>
+			<td class="calc" style="display: none" id="T_BEG2">
+				<span id="A_BETextG2"></span>
+				<select name="A_BEG2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BEG2_TEMP"></td>
+
+			<td class="calc" style="display: none" id="T_BEAC11">
+				<span id="A_BETextAC11"></span>
+				<select name="A_BEAC11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BEAC11_TEMP"></td>
+			<td class="calc" style="display: none" id="T_BEAC12">
+				<span id="A_BETextAC12"></span>
+				<select name="A_BEAC12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BEAC12_TEMP"></td>
+		</tr>
+		
 		<tr>
 			<td class="calc">
 				<select name="A_SHOES_DEF_PLUS" onchange="StAllCalc()"></select>
@@ -487,6 +549,22 @@
 			<td class="calc">
 				<select name="A_acces2_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
 			</td>
+		</tr>
+		
+		<tr>
+			<td class="calc" id="T_BEF1_TEMP"></td>
+			<td class="calc" id="T_BEF2_TEMP"></td>
+
+			<td class="calc" style="display: none" id="T_BEAC21">
+				<span id="A_BETextAC21"></span>
+				<select name="A_BEAC21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BEAC21_TEMP"></td>
+			<td class="calc" style="display: none" id="T_BEAC22">
+				<span id="A_BETextAC22"></span>
+				<select name="A_BEAC22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BEAC22_TEMP"></td>
 		</tr>
 	</tbody>
 </table>
