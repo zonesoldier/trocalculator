@@ -1,6 +1,11 @@
 [Update 2018-07-10]
 - Added Biolab Enchants [NattWara]
 
+[Update 2018-07-09]
+- Issue #238: Added vanilla mode [Loa]
+	Main functions at bottom of head.js
+	Vanilla mode saving is not implemented
+
 [Update 2018-07-07]
 - Issue #238: Added vanilla mode [Loa]
 	Moved left hand weapon card option generation to new function PopulateCardsLeft() in card.js
