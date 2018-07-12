@@ -830,13 +830,6 @@ function StAllCalc()
 	if(EquipNumSearch(1312)){
 		w += n_A_ATK*.05;}
 
-	//[Custom TalonRO - 2018-07-09 Ancient Gold Adornment - ATK%] [NattWara]
-	if(EquipNumSearch(1663)){
-		var wHPVS = n_A_JobSearch();
-		if(wHPVS==1 || wHPVS==2 || wHPVS==6){
-			w += n_A_ATK*.04;
-		}
-	}
 	//custom TalonRO Chewing Bubblegum +1% atk
 	if(EquipNumSearch(1395))
 		w += n_A_ATK*.01;
@@ -2440,13 +2433,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//sag diadem
 	if(n_A_HEAD_DEF_PLUS == 10 && EquipNumSearch(1289)){
 		w += 4;}
-	//[Custom TalonRO - 2018-07-09 Ancient Gold Adornment - MATK%] [NattWara]
-	if(EquipNumSearch(1663)){
-		var wHPVS = n_A_JobSearch();
-		if(wHPVS==3 || wHPVS==5){
-			w += 4;
-		}
-	}
+		
 	//Entweihen Hairband - zonesoldier - 6/2/2018
 	//Increase MATK + 1% per upgrade past 5th upgrade
 	if(n_A_HEAD_DEF_PLUS > 4 && EquipNumSearch(1620))
@@ -2497,6 +2484,17 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		like Turtle General Card.
 		so I'm using n_tok[80] for +ATK%
 	*/
+	
+	//[Custom TalonRO - 2018-07-09 Ancient Gold Adornment - ATK% & MATK%] [NattWara]
+	if(EquipNumSearch(1663)){
+		var wHPVS = n_A_JobSearch();
+		if(wHPVS==1 || wHPVS==2 || wHPVS==6){
+			n_tok[80] += 4;
+		}
+		if(wHPVS==3 || wHPVS==5){
+			w += 4;
+		}
+	}
 	
 	//[Custom TalonRO 2018-06-16 - Malangdo Enchantment for ATK%] [Kato]
 	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
