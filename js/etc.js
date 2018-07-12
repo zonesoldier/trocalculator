@@ -733,54 +733,72 @@ CARD_SHORTCUT = [
 ];
 
 KRIS_ENCHANTMENT = [
-  [1,"DEF+2"]
- ,[2,"DEF+3"]
- ,[3,"DEF+4"]
- ,[11,"MDEF+2"]
- ,[12,"MDEF+3"]
- ,[13,"MDEF+4"]
- ,[21,"HP+100"]
- ,[22,"HP+200"]
- ,[23,"HP+300"]
- ,[24,"HP+400"]
- ,[31,"SP+50"]
- ,[41,"VIT+1"]
- ,[42,"VIT+2"]
- ,[43,"VIT+3"]
- ,[51,"INT+1"]
- ,[52,"INT+2"]
- ,[53,"INT+3"]
- ,[61,"DEX+1"]
- ,[62,"DEX+2"]
- ,[63,"DEX+3"]
- ,[71,"LUK+1"]
- ,[72,"LUK+2"]
- ,[73,"LUK+3"]
- ,[81,"MATK+1%"]
- ,[82,"MATK+2%"]
- ,[91,"ATK+3%"]
+  [102,"DEF+2"]
+ ,[103,"DEF+3"]
+ ,[104,"DEF+4"]
+ ,[112,"MDEF+2"]
+ ,[113,"MDEF+3"]
+ ,[114,"MDEF+4"]
+ ,[131,"HP+100"]
+ ,[132,"HP+200"]
+ ,[133,"HP+300"]
+ ,[134,"HP+400"]
+ ,[141,"SP+50"]
+ ,[31,"VIT+1"]
+ ,[32,"VIT+2"]
+ ,[33,"VIT+3"]
+ ,[41,"INT+1"]
+ ,[42,"INT+2"]
+ ,[43,"INT+3"]
+ ,[51,"DEX+1"]
+ ,[52,"DEX+2"]
+ ,[53,"DEX+3"]
+ ,[61,"LUK+1"]
+ ,[62,"LUK+2"]
+ ,[63,"LUK+3"]
+ ,[891,"MATK+1%"]
+ ,[892,"MATK+2%"]
+ ,[173,"ATK+3%"]
 ];
 
 HS_ENCHANTS = [
-	[0,"(Hidden Slot Enchant, Armor)"]
- ,[1,"STR+1"]
- ,[2,"STR+2"]
- ,[3,"STR+3"]
- ,[11,"AGI+1"]
- ,[12,"AGI+2"]
- ,[13,"AGI+3"]
- ,[21,"VIT+1"]
- ,[22,"VIT+2"]
- ,[23,"VIT+3"]
- ,[31,"INT+1"]
- ,[32,"INT+2"]
- ,[33,"INT+3"]
- ,[41,"DEX+1"]
- ,[42,"DEX+2"]
- ,[43,"DEX+3"]
- ,[51,"LUK+1"]
- ,[52,"LUK+2"]
- ,[53,"LUK+3"]
+	//[0,"(Hidden Slot Enchant, Armor)"]
+  [11,"STR+1"]
+ ,[12,"STR+2"]
+ ,[13,"STR+3"]
+ ,[21,"AGI+1"]
+ ,[22,"AGI+2"]
+ ,[23,"AGI+3"]
+ ,[31,"VIT+1"]
+ ,[32,"VIT+2"]
+ ,[33,"VIT+3"]
+ ,[41,"INT+1"]
+ ,[42,"INT+2"]
+ ,[43,"INT+3"]
+ ,[51,"DEX+1"]
+ ,[52,"DEX+2"]
+ ,[53,"DEX+3"]
+ ,[61,"LUK+1"]
+ ,[62,"LUK+2"]
+ ,[63,"LUK+3"]
+ ,[102,"DEF+2"]
+ ,[103,"DEF+3"]
+ ,[104,"DEF+4"]
+ ,[112,"MDEF+2"]
+ ,[113,"MDEF+3"]
+ ,[114,"MDEF+4"]
+ ,[152,"CRIT+2"]
+ ,[153,"CRIT+3"]
+ ,[154,"CRIT+4"]
+ ,[121,"ASPD+1%"]
+ ,[122,"ASPD+2%"]
+ ,[123,"ASPD+3%"]
+ ,[302,"FLEE+2"]
+ ,[304,"FLEE+4"]
+ ,[306,"FLEE+6"]
+ ,[311,"HIT+4"]
+ ,[312,"HIT+8"]
+ ,[313,"HIT+12"]
 ];
 
 MALANGDO_ENCHANTS = [
@@ -803,6 +821,8 @@ MALANGDO_ENCHANTS = [
 		,[52, "DEX+2"]
 		,[53, "DEX+3"]
 		,[61, "LUK+1"]
+		//,[301, "ASPD+1%"]
+		//,[302, "ASPD+2%"]
 		,[123, "ASPD+3%"]
 		,[171, "ATK 1%"]
 		,[891, "MATK 1%"]
@@ -815,7 +835,9 @@ MALANGDO_ENCHANTS = [
 		,[1786,"Fighting Spirit 6"]
 		,[1787,"Fighting Spirit 7"]
 		,[1788,"Fighting Spirit 8"]
-	//	,[1081,"Sharp 1"]
+		//,[1789,"Fighting Spirit 9"]
+		//,[1790,"Fighting Spirit 10"]
+		//,[1081,"Sharp 1"]
 		,[1082,"Sharp 2"]
 		,[1083,"Sharp 3"]
 		,[1084,"Sharp 4"]
@@ -1053,10 +1075,10 @@ BIOLAB_ENCHANTS_ARMOR = [
 		,[112,"MDEF+2"]
 		,[113,"MDEF+3"]
 		,[114,"MDEF+4"]
-		,[121,"FLEE+1"]
-		,[122,"FLEE+2"]
-		,[123,"FLEE+3"]
-		,[124,"FLEE+4"]
+		,[301,"FLEE+1"]
+		,[302,"FLEE+2"]
+		,[303,"FLEE+3"]
+		,[304,"FLEE+4"]
 		,[131, "MHP +100"]
 		,[132, "MHP +200"]
 		,[133, "MHP +300"]
@@ -1104,12 +1126,6 @@ BE_ENCHANTABLE_ARMOR = [
 	,[1517,0] //Assassin's Glove
 ];
 
-/*
-EDEN_ENCHANTS_WEAPON = [
-
-];
-*/
-
 EDEN_ENCHANTS_HAT = [
 		 [11, "STR+1"]
 		,[12, "STR+2"]
@@ -1138,7 +1154,7 @@ EDEN_ENCHANTS_ARMOR_FIRST = [
 		,[111,"MDEF+1"]
 		,[112,"MDEF+2"]
 		,[113,"MDEF+3"]
-		,[122,"FLEE+2"]
+		,[302,"FLEE+2"]
 ];
 
 EDEN_ENCHANTS_ARMOR_SECOND = [
@@ -1157,14 +1173,47 @@ EDEN_ENCHANTS_ARMOR_SECOND = [
 		,[112,"MDEF+2"]
 		,[113,"MDEF+3"]
 		,[114,"MDEF+4"]
-		,[122,"FLEE+2"]
-		,[123,"FLEE+3"]
-		,[124,"FLEE+4"]
-		,[301,"CRIT+1"]
-		,[302,"CRIT+2"]
-		,[303,"CRIT+3"]
-		,[304,"CRIT+4"]
+		,[302,"FLEE+2"]
+		,[303,"FLEE+3"]
+		,[304,"FLEE+4"]
+		,[151,"CRIT+1"]
+		,[152,"CRIT+2"]
+		,[153,"CRIT+3"]
+		,[154,"CRIT+4"]
 ];
+
+EDEN_ENCHANTS_WEAPON_FIRST = [
+		 [172, "ATK+2%"]
+		,[892, "MATK+2%"]
+];
+
+EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL = [
+		 [2030, "Physical Damage vs Formless + 10%"]
+		,[2031, "Physical Damage vs Undead + 10%"]
+		,[2032, "Physical Damage vs Brute + 10%"]
+		,[2033, "Physical Damage vs Plant + 10%"]
+		,[2034, "Physical Damage vs Insect + 10%"]
+		,[2035, "Physical Damage vs Fish + 10%"]
+		,[2036, "Physical Damage vs Demon + 10%"]
+		,[2037, "Physical Damage vs Demi-Human + 10%"]
+		,[2038, "Physical Damage vs Angel + 10%"]
+		,[2039, "Physical Damage vs Dragon + 10%"]
+];
+
+EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL = [
+		 [2170, "Magical Damage vs Formless + 5%"]
+		,[2171, "Magical Damage vs Undead + 5%"]
+		,[2172, "Magical Damage vs Brute + 5%"]
+		,[2173, "Magical Damage vs Plant + 5%"]
+		,[2174, "Magical Damage vs Insect + 5%"]
+		,[2175, "Magical Damage vs Fish + 5%"]
+		,[2176, "Magical Damage vs Demon + 5%"]
+		,[2177, "Magical Damage vs Demi-Human + 5%"]
+		,[2178, "Magical Damage vs Angel + 5%"]
+		,[2179, "Magical Damage vs Dragon + 5%"]
+];
+
+//EDEN_ENCHANTS_WEAPON_FIRST = FIRST + SECOND, depends on former choice.
 
 EDEN_ENCHANTABLE_HAT = [
 	 [1576,0] //Eden Group Hat
@@ -1197,14 +1246,14 @@ EDEN_ENCHANTABLE_WEAPON = [
 
 //El Dicaste Enchants slot 1
 ED_ENCHANTS_SLOT_ONE = [
-		 [402, "ATK+2%"]
-		,[403, "ATK+3%"]
-		,[501, "MATK+1%"]
-		,[502, "MATK+2%"]
-		,[605, "CRIT+5"]
-		,[607, "CRIT+7"]
-		,[701, "FLEE+6"]
-		,[702, "FLEE+12"]
+		 [172, "ATK+2%"]
+		,[173, "ATK+3%"]
+		,[891, "MATK+1%"]
+		,[892, "MATK+2%"]
+		,[155, "CRIT+5"]
+		,[157, "CRIT+7"]
+		,[303, "FLEE+6"]
+		,[306, "FLEE+12"]
 ];
 //El Dicaste Enchants slot 2 for equipment
 ED_ENCHANTS_SLOT_TWO = [
@@ -1228,11 +1277,11 @@ ED_ENCHANTS_LIGHT_SLOT_TWO_THREE = [
 ED_ENCHANTS_SLOT_THREE = [
 		 [21, "AGI+1"]
 		,[22, "AGI+2"]
-		,[23, "AGI+3"] // Feral Boots and Feral Tails only
-		,[33, "VIT+3"] // Feral Boots and Feral Tails only
+		,[23, "AGI+3"]
+		,[33, "VIT+3"]
 		,[41, "INT+1"]
 		,[42, "INT+2"]
-		,[43, "INT+3"] // Feral Boots and Feral Tails only
+		,[43, "INT+3"]
 		,[51, "DEX+1"]
 		,[52, "DEX+2"]
 ];
@@ -1244,19 +1293,19 @@ ED_LIGHT_OF_EL_DICASTE = [
 ED_ENCHANTABLE = [
 	 [446,0] //Feral Tail
 	,[448,0] //Feral Boots
-	,[449,23,33,43,0] //Golden Trickle ("Golden Bell" in wiki)
+	,[449,23,33,43,0] //Golden Trickle ("Golden Bell" in wiki), Exclude AGI+3, VIT+3, and INT+3
 ];
 
 //Mora Enchants
 MORA_ENCHANTS_SLOT_ONE = [
-		 [402, "ATK+2%"]
-		,[403, "ATK+3%"]
-		,[501, "MATK+1%"]
-		,[502, "MATK+2%"]
-		,[605, "CRIT+5"]
-		,[607, "CRIT+7"]
-		,[701, "FLEE+6"]
-		,[702, "FLEE+12"]
+		 [172, "ATK+2%"]
+		,[173, "ATK+3%"]
+		,[891, "MATK+1%"]
+		,[892, "MATK+2%"]
+		,[155, "CRIT+5"]
+		,[157, "CRIT+7"]
+		,[303, "FLEE+6"]
+		,[306, "FLEE+12"]
 ];
 MORA_ENCHANTS_SLOT_TWO = [
 		 [41, "INT+1"]

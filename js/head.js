@@ -67,6 +67,9 @@ tRO_MalangdoEnchantment = [0,0,0,0];
 //[Custom TalonRO 2018-07-10 - Global for Biolab Weapon Enchants values] [NattWara]
 tRO_BiolabWeaponEnchantment = [0,0,0,0];
 
+//[Custom TalonRO 2018-07-12 - Global for Eden Weapon Enchants values] [NattWara]
+tRO_EdenWeaponEnchantment = [0,0,0,0,0,0];
+
 //[Custom TalonRO 2018-07-10 - Global for Biolab Armor Enchants values] [NattWara]
 //[Headgear1,Headgear2,Armor1,Armor2,Shield1,Shield2,Garment1,Garment2,Acc1_1,Acc1_2,Acc2_1,Acc2_2]
 tRO_BiolabArmorEnchantment = [0,0,0,0,0,0,0,0,0,0,0,0];
@@ -2545,16 +2548,19 @@ function ATKbai01()
 			wA01 += 10;
 		if(StPlusCalc2(87))
 			wA01 += StPlusCalc2(87);
-		//custom TalonRO Kris enchant %-ATK
+		
+		//Note - Issue#252
+		//custom TalonRO Kris enchant ATK%
 		var KEbonus = [document.calcForm.A_KE11.value,document.calcForm.A_KE12.value,document.calcForm.A_KE21.value,document.calcForm.A_KE22.value];
-		for (i=0;i<4;i++){
+		for (i=0;i<KEbonus.length;i++){
 			var wKE = KEbonus[i];
 			if(wKE){
-				var w_enchant = wKE % 10;
-				if(81 <= wKE && wKE <= 89)
-					wA01 += w_enchant*3;
+				if(171 <= wKE && wKE <= 179)
+					wA01 += parseInt(wKE.substr(-1));
 			}
 		}
+		
+		//Note - Issue#252
 		//custom TalonRO Evil Marching Hat: if refine rate >=9 +5% ATK
 		if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 9)
 			wA01 += 5;
@@ -4939,6 +4945,26 @@ function tRO_PopulateCombos() {
 			A_BEAC22.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
 		}
 		
+		//Eden (Weapon)
+		myInnerHtml("A_EEText11","Eden 1: ",0);
+		myInnerHtml("A_EEText12","Eden 2: ",0);
+		myInnerHtml("A_EEText13","Eden 3: ",0);
+		myInnerHtml("A_EEText21","Eden 1: ",0);
+		myInnerHtml("A_EEText22","Eden 2: ",0);
+		myInnerHtml("A_EEText23","Eden 3: ",0);
+
+		A_EE11.options[0] = new Option("(Eden Enchant "+ A_EE11.name.substr(-1) +")",0);
+		A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+		A_EE13.options[0] = new Option("(Eden Enchant "+ A_EE13.name.substr(-1) +")",0);
+		A_EE21.options[0] = new Option("(Eden Enchant 2-"+ A_EE21.name.substr(-1) +")",0);
+		A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+		A_EE23.options[0] = new Option("(Eden Enchant 2-"+ A_EE23.name.substr(-1) +")",0);
+
+		for(i=0; i<EDEN_ENCHANTS_WEAPON_FIRST.length; i++) {
+			A_EE11.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_FIRST[i][1],EDEN_ENCHANTS_WEAPON_FIRST[i][0]);
+			A_EE21.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_FIRST[i][1],EDEN_ENCHANTS_WEAPON_FIRST[i][0]);
+		}
+		
 		//Eden (Headgear)
 		myInnerHtml("A_EETextH1","Eden 1: ",0);
 		myInnerHtml("A_EETextH2","Eden 2: ",0);
@@ -5154,8 +5180,9 @@ function tRO_PopulateCombos() {
 		}
 
 		//Hidden Slot Enchant (Armor)
+		A_HSE.options[0] = new Option("(Hidden Slot Enchant, Armor)",0);
 		for(var i=0; i<HS_ENCHANTS.length; i++) {
-			A_HSE.options[i] = new Option(HS_ENCHANTS[i][1],HS_ENCHANTS[i][0]);
+			A_HSE.options[i+1] = new Option(HS_ENCHANTS[i][1],HS_ENCHANTS[i][0]);
 		}
 	}
 }
@@ -5301,6 +5328,178 @@ with(document.calcForm){
 	
 	tRO_BiolabWeaponEnchantment = [document.calcForm.A_BE11.value,document.calcForm.A_BE12.value,document.calcForm.A_BE21.value,document.calcForm.A_BE22.value];
 }}
+
+function Click_EdenWeaponEnchantment(w1,w2){
+
+	var bEnchant1 = bEnchant2 = false;
+	if(w1) {
+			for(i=0; i<EDEN_ENCHANTABLE_WEAPON.length; i++) {
+				if(EDEN_ENCHANTABLE_WEAPON[i][0] == w1) {
+					bEnchant1 = true;
+					break;
+				}
+			}
+	}
+	if(w2) {
+			for(i=0;i<EDEN_ENCHANTABLE_WEAPON.length;i++) {
+				if(EDEN_ENCHANTABLE_WEAPON[i][0] == w2) {
+					bEnchant2 = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_EE1").style.display = ((bEnchant1) ? "" : "none");
+	document.getElementById("T_EE2").style.display = ((bEnchant2) ? "" : "none");
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_EE11.value = 0;
+		document.calcForm.A_EE12.value = 0;
+		document.calcForm.A_EE13.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_EE21.value = 0;
+		document.calcForm.A_EE22.value = 0;
+		document.calcForm.A_EE23.value = 0;
+	}
+	
+	with(document.calcForm){
+		
+		console.log(A_EE11.value);
+		console.log(A_EE12.value);
+		console.log(A_EE13.value);
+	
+		//Populate option for slot 2 depending on choice of slot 1
+		//Weapon 1
+		switch(A_EE11.value) {
+		case "172":
+			if (!(A_EE12.value >= 2030 && A_EE12.value <= 2039)) {
+				//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE12);
+				A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+					A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+				}
+			}
+			break;
+		case "892":
+			if (!(A_EE12.value >= 2170 && A_EE12.value <= 2179)) {
+				//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE12);
+				A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+					A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+				}
+			}
+			break;
+		default:
+			//Clear slot 2
+			removeOptions(A_EE12);
+			A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+		}
+		
+		//Weapon 2
+		switch(A_EE21.value) {
+		case "172":
+			if (!(A_EE22.value >= 2030 && A_EE22.value <= 2039)) {
+				//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE22);
+				A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+					A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+				}
+			}
+			break;
+		case "892":
+			if (!(A_EE22.value >= 2170 && A_EE22.value <= 2179)) {
+				//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE22);
+				A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+					A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+				}
+			}
+			break;
+		default:
+			//Clear slot 2
+			removeOptions(A_EE22);
+			A_EE22.options[0] = new Option("(Eden Enchant "+ A_EE22.name.substr(-1) +")",0);
+		}
+		
+		//Populate option for slot 3 depending on choice of slot 1 and slot 2
+		//Weapon 1
+		if (!(A_EE13.value == A_EE11.value || A_EE13.value == A_EE12.value)) {
+			var option1Text = option2Text = "";
+			
+			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE11.value) {
+					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+					break;
+				}
+			}
+			
+			if (A_EE12.value >= 30 && A_EE12.value <= 39) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE12.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			if (A_EE12.value >= 170 && A_EE12.value <= 179) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE12.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			removeOptions(A_EE13);
+			A_EE13.options[0] = new Option("(Eden Enchant "+ A_EE13.name.substr(-1) +")",0);
+			A_EE13.options[1] = new Option(option1Text,A_EE11.value);
+			A_EE13.options[2] = new Option(option2Text,A_EE12.value);
+		}
+		//Weapon 2
+		if (!(A_EE23.value == A_EE21.value || A_EE23.value == A_EE22.value)) {
+			var option1Text = option2Text = "";
+			
+			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE21.value) {
+					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+					break;
+				}
+			}
+			
+			if (A_EE22.value >= 30 && A_EE22.value <= 39) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE22.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			if (A_EE22.value >= 170 && A_EE22.value <= 179) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE22.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			removeOptions(A_EE23);
+			A_EE23.options[0] = new Option("(Eden Enchant 2-"+ A_EE23.name.substr(-1) +")",0);
+			A_EE23.options[1] = new Option(option1Text,A_EE21.value);
+			A_EE23.options[2] = new Option(option2Text,A_EE22.value);
+		}
+		
+	}
+
+	tRO_EdenWeaponEnchantment = [document.calcForm.A_EE11.value,document.calcForm.A_EE12.value,document.calcForm.A_EE13.value,document.calcForm.A_EE21.value,document.calcForm.A_EE22.value,document.calcForm.A_EE23.value];
+}
 
 //custom TalonRO Headgear Enchantment (Biolab & Eden)
 function Click_HeadgearEnchantment(h){
@@ -8346,4 +8545,14 @@ function VanillaCardLeft(){
 			removedCardsLeft.splice(i,1);
 		}
 	}
+}
+
+//for clearing options from select. (For Eden Weapon Enchant Slot 2 & 3)
+function removeOptions(selectbox)
+{
+    var i;
+    for(i = selectbox.options.length - 1 ; i >= 0 ; i--)
+    {
+        selectbox.remove(i);
+    }
 }

@@ -1,7 +1,7 @@
 [Update 2018-07-12]
-- Added UI For Eden Armors Enchants [NattWara]
-- Added UI For El Dicaste Enchants [NattWara]
-- Added UI For Mora Enchants [NattWara]
+- Added Eden Armors Enchants [NattWara]
+- Added El Dicaste Enchants [NattWara]
+- Added Mora Enchants [NattWara]
 
 [Update 2018-07-10]
 - Added Biolab Enchants [NattWara]
