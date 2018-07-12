@@ -1,5 +1,5 @@
 [Update 2018-07-12]
-- Added Eden Armors Enchants [NattWara]
+- Added Eden Enchants [NattWara]
 - Added El Dicaste Enchants [NattWara]
 - Added Mora Enchants [NattWara]
 
