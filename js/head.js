@@ -1791,17 +1791,26 @@ function BattleCalc999()
 			if (n_A_PassSkill3[2]>0 && n_A_PassSkill3[45]==0)
 				w_DMG[b] = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*w_DMG[b]/200);
 
-			Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b] + EDP_DMG(b);
+			//Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b] + EDP_DMG(b);
+			w_DMG[b] += EDP_DMG(b);
 			
 			//[Custom TalonRO - 2018-07-09 Soft-Cap Asura damage above 200k] [NattWara/Loa]
 			//100% accurate for below 200k damage.
 			//~1% error for 200k-400k damage.
 			//No data available for above 400k damage.
-			if(Last_DMG_A[b] > 200000){
-				var AsuraExcessD = Last_DMG_A[b] - 200000;
+			
+			if(w_DMG[b] > 200000){
+				var AsuraExcessD = w_DMG[b] - 200000;
 				var AsuraNerfD = (0.5963 - 0.1471) * Math.exp(-0.000002230 * AsuraExcessD) + 0.1471;
-				Last_DMG_A[b] = Last_DMG_B[b] = 200000 + (AsuraExcessD * AsuraNerfD);
+				w_DMG[b] = 200000 + (AsuraExcessD * AsuraNerfD);
 			}
+			
+			//Lex Aeterna for Asura Strike after soft-cap
+			if(n_B_IJYOU[6] && wLAch==0){
+				w_DMG[b] *= 2;
+			}
+
+			Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b]
 			
 			InnStr[b] += Last_DMG_A[b];
 		}
@@ -6673,7 +6682,8 @@ with(document.calcForm){
 		//check also monster.js row 686+687 (MonsterOBJ[i][23] = MonsterOBJ[i][21];)
 		//[Custom TalonRO = 2016-06-04 - Fixed the database link for Panel][Kato]
 		if (MonsterOBJ[B_Enemy.value][23]!=0){
-			document.getElementById("B_Enemy_picture").innerHTML="<img src=\"https://panel.talonro.com/images/monster/"+MonsterOBJ[B_Enemy.value][23]+".gif\" alt=\"no picture available =(\">";
+			document.getElementById("B_Enemy_picture").innerHTML="<img src=\"no picture available, I'm at office. :(\">";
+			//document.getElementById("B_Enemy_picture").innerHTML="<img src=\"https://panel.talonro.com/images/monster/"+MonsterOBJ[B_Enemy.value][23]+".gif\" alt=\"no picture available =(\">";
 			document.getElementById("B_Enemy_mobdb").innerHTML="<a href=\"https://panel.talonro.com/mobdb/"+MonsterOBJ[B_Enemy.value][23]+"/\" target=\"_blank\"><b>MobDB</b></a>";
 		} else {
 			document.getElementById("B_Enemy_picture").innerHTML="<img src=\"\" alt=\"no picture available =(\">";
@@ -8291,8 +8301,22 @@ function tPlusDamCut(wPDC){
 	}
 
 	if(wBTw1==0){
+		
+		//If Lex Aeterna DMG x2
+		//old:
+		/*
 		if(n_B_IJYOU[6] && wLAch==0)
 			wPDC *= 2;
+		*/
+		//new:
+		//Remove Lex Aeterna Calculation For Asura Strike.
+		//Moved Calculation to after Asura Soft-Cap Nerf
+		if(n_A_ActiveSkill != 197 && n_A_ActiveSkill != 321) {
+			if(n_B_IJYOU[6] && wLAch==0){
+				wPDC *= 2;
+			}
+		}
+		
 		if(n_B_IJYOU[17] && n_A_Weapon_zokusei == 3)
 			wPDC *= 2;
 		baizok = [110,114,117,119,120];
