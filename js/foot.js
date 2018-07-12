@@ -4257,8 +4257,8 @@ function StPlusCalc()
 	}
 	
 	//[Custom TalonRO 2018-07-12 - Mora Enchantment for STR/AGI/VIT/INT/DEX/LUK] [NattWara]
-	for(i=0; i < tRO_EdenArmorEnchantment.length; i++) {
-		var vMORA = tRO_EdenArmorEnchantment[i];
+	for(i=0; i < tRO_MoraEnchantment.length; i++) {
+		var vMORA = tRO_MoraEnchantment[i];
 
 		if(vMORA == 0 || vMORA.length > 2) continue;
 
