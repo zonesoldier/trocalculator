@@ -5,6 +5,7 @@
 
 [Update 2018-07-10]
 - Added Biolab Enchants [NattWara]
+- Added Ancient Gold Adornment [NattWara]
 
 [Update 2018-07-09]
 - Issue #238: Added vanilla mode [Loa]
