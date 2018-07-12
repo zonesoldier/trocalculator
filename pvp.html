@@ -374,14 +374,12 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 			<td class="calc"></td>
 		</tr>
 
-		<!--
 		<tr>
 			<td class="calc"></td>
 			<td class="calc"></td>
 			<td class="calc"></td>
 			<td class="calc"></td>
 		</tr>
-		-->
 
 		<tr>
 			<td class="calc">
@@ -392,21 +390,34 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 				<select name="A_head1_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
 			</td>
 
+			<!-- Biolab Enchant Headgear 1 -->
 			<td class="calc" style="display: none" id="T_BEH1">
 				<span id="A_BETextH1"></span>
 				<select name="A_BEH1" onchange="StAllCalc()"></select>
 			</td>
-			<td class="calc" id="T_BEH1_TEMP"></td>
+			<!-- Eden Enchant Headgear 1 -->
+			<td class="calc" style="display: none" id="T_EEH1">
+				<span id="A_EETextH1"></span>
+				<select name="A_EEH1" onchange="StAllCalc()"></select>
+			</td>
+			<!-- Placeholder 1 -->
+			<td class="calc" id="T_HEAD1_TEMP"></td>
+			
+			<!-- Biolab Enchant Headgear 2 -->
 			<td class="calc" style="display: none" id="T_BEH2">
 				<span id="A_BETextH2"></span>
 				<select name="A_BEH2" onchange="StAllCalc()"></select>
 			</td>
-			<td class="calc" id="T_BEH2_TEMP"></td>
+			<!-- Eden Enchant Headgear 2 -->
+			<td class="calc" style="display: none" id="T_EEH2">
+				<span id="A_EETextH2"></span>
+				<select name="A_EEH2" onchange="StAllCalc()"></select>
+			</td>
+			<!-- Placeholder 2 -->
+			<td class="calc" id="T_HEAD2_TEMP"></td>
 			
 		</tr>
 		
-
-
 		<tr>
 			<td class="calc">
 				<select style="margin-left: 51px" name="A_head2" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
@@ -441,6 +452,7 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 				<select name="A_HSE_HEAD1" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
+		
 		<tr id="T_BEA" style="display: none">
 			<td class="calc">
 				<span id="A_BETextA1"></span>
@@ -452,6 +464,35 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 			</td>
 			<td class="calc"></td>
 			<td class="calc"></td>
+		</tr>
+		<tr id="T_EEA" style="display: none">
+			<td class="calc">
+				<span id="A_EETextA1"></span>
+				<select name="A_EEA1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EETextA2"></span>
+				<select name="A_EEA2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+		<tr id="T_MORAEA" style="display: none">
+			<td class="calc">
+				<span id="A_MORAETextA">Mora Armor</span>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextA1"></span>
+				<select name="A_MORAEA1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextA2"></span>
+				<select name="A_MORAEA2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextA3"></span>
+				<select name="A_MORAEA3" onchange="StAllCalc()"></select>
+			</td>
 		</tr>
 
 		<tr>
@@ -496,23 +537,103 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 				<span id="A_BETextG1"></span>
 				<select name="A_BEG1" onchange="StAllCalc()"></select>
 			</td>
-			<td class="calc" id="T_BEG1_TEMP"></td>
+			<td class="calc" style="display: none" id="T_EEG1">
+				<span id="A_EETextG1"></span>
+				<select name="A_EEG1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_GAR1_TEMP"></td>
 			<td class="calc" style="display: none" id="T_BEG2">
 				<span id="A_BETextG2"></span>
 				<select name="A_BEG2" onchange="StAllCalc()"></select>
 			</td>
-			<td class="calc" id="T_BEG2_TEMP"></td>
+			<td class="calc" style="display: none" id="T_EEG2">
+				<span id="A_EETextG2"></span>
+				<select name="A_EEG2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_GAR2_TEMP"></td>
 
 			<td class="calc" style="display: none" id="T_BEAC11">
 				<span id="A_BETextAC11"></span>
 				<select name="A_BEAC11" onchange="StAllCalc()"></select>
 			</td>
-			<td class="calc" id="T_BEAC11_TEMP"></td>
+			<td class="calc" id="T_ACC11_TEMP"></td>
 			<td class="calc" style="display: none" id="T_BEAC12">
 				<span id="A_BETextAC12"></span>
 				<select name="A_BEAC12" onchange="StAllCalc()"></select>
 			</td>
-			<td class="calc" id="T_BEAC12_TEMP"></td>
+			<td class="calc" id="T_ACC12_TEMP"></td>
+		</tr>
+		
+		<tr id="T_MORAEG" style="display: none">
+			<td class="calc">
+				<span id="A_MORAETextG">Mora Garment</span>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextG1"></span>
+				<select name="A_MORAEG1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextG2"></span>
+				<select name="A_MORAEG2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextG3"></span>
+				<select name="A_MORAEG3" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDG" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextG">El Dicaste Garment</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextG1"></span>
+				<select name="A_EDG1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextG2"></span>
+				<select name="A_EDG2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextG3"></span>
+				<select name="A_EDG3" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDAC1" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextAC1">El Dicaste Accessory 1</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC11"></span>
+				<select name="A_EDAC11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC12"></span>
+				<select name="A_EDAC12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC13"></span>
+				<select name="A_EDAC13" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDLOED1" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextLOED1">Light of El Dicaste 1</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED11"></span>
+				<select name="A_EDLOED11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED12"></span>
+				<select name="A_EDLOED12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED13"></span>
+				<select name="A_EDLOED13" onchange="StAllCalc()"></select>
+			</td>
 		</tr>
 		
 		<tr>
@@ -532,20 +653,118 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 		</tr>
 		
 		<tr>
-			<td class="calc" id="T_BEF1_TEMP"></td>
-			<td class="calc" id="T_BEF2_TEMP"></td>
+			<td class="calc" style="display: none" id="T_EEF1">
+				<span id="A_EETextF1"></span>
+				<select name="A_EEF1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_FOOT1_TEMP"></td>
+			<td class="calc" style="display: none" id="T_EEF2">
+				<span id="A_EETextF2"></span>
+				<select name="A_EEF2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_FOOT2_TEMP"></td>
 
 			<td class="calc" style="display: none" id="T_BEAC21">
 				<span id="A_BETextAC21"></span>
 				<select name="A_BEAC21" onchange="StAllCalc()"></select>
 			</td>
-			<td class="calc" id="T_BEAC21_TEMP"></td>
+			<td class="calc" id="T_ACC21_TEMP"></td>
 			<td class="calc" style="display: none" id="T_BEAC22">
 				<span id="A_BETextAC22"></span>
 				<select name="A_BEAC22" onchange="StAllCalc()"></select>
 			</td>
-			<td class="calc" id="T_BEAC22_TEMP"></td>
+			<td class="calc" id="T_ACC22_TEMP"></td>
 		</tr>
+		
+		<tr id="T_EDF" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextF">El Dicaste Footgear</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextF1"></span>
+				<select name="A_EDF1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextF2"></span>
+				<select name="A_EDF2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextF3"></span>
+				<select name="A_EDF3" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDAC2" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextAC2">El Dicaste Accessory 2</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC21"></span>
+				<select name="A_EDAC21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC22"></span>
+				<select name="A_EDAC22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC23"></span>
+				<select name="A_EDAC23" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDLOED2" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextLOED2">Light of El Dicaste 2</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED21"></span>
+				<select name="A_EDLOED21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED22"></span>
+				<select name="A_EDLOED22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED23"></span>
+				<select name="A_EDLOED23" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_MORAEAC1" style="display: none">
+			<td class="calc">
+				<span id="A_MORAETextAC1">Mora Accessory 1</span>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC11"></span>
+				<select name="A_MORAEAC11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC12"></span>
+				<select name="A_MORAEAC12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC13"></span>
+				<select name="A_MORAEAC13" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		<tr id="T_MORAEAC2" style="display: none">
+			<td class="calc">
+				<span id="A_MORAETextAC2">Mora Accessory 2</span>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC21"></span>
+				<select name="A_MORAEAC21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC22"></span>
+				<select name="A_MORAEAC22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC23"></span>
+				<select name="A_MORAEAC23" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
 	</tbody>
 </table>
 <br />

@@ -945,7 +945,7 @@ ME_ENCHANTABLE = [
 	,[863,52,53,0] //Holy Stick
 	,[1168,52,53,0] //Dead Tree Staff
 	,[1508,52,53,0] //Mental Stick
-	,[936,52,53,43,0] //Dark Thorn Staff - Except also INT+3
+	,[936,52,53,0] //Dark Thorn Staff
 	,[948,52,53,0] //Eraser
 /* [Two Handed Staves] - Staves Except DEX+2/+3 */
 	,[92,52,53,0] //Wizardry Staff
@@ -1104,6 +1104,12 @@ BE_ENCHANTABLE_ARMOR = [
 	,[1517,0] //Assassin's Glove
 ];
 
+/*
+EDEN_ENCHANTS_WEAPON = [
+
+];
+*/
+
 EDEN_ENCHANTS_HAT = [
 		 [11, "STR+1"]
 		,[12, "STR+2"]
@@ -1160,10 +1166,13 @@ EDEN_ENCHANTS_ARMOR_SECOND = [
 		,[304,"CRIT+4"]
 ];
 
-EDEN_ENCHANTABLE_ARMOR = [
+EDEN_ENCHANTABLE_HAT = [
 	 [1576,0] //Eden Group Hat
 	,[1577,0] //Eden Group Hat II
-	,[1603,0] //Eden Group Uniform IV
+];
+
+EDEN_ENCHANTABLE_ARMOR = [
+	 [1603,0] //Eden Group Uniform IV
 	,[1585,0] //Eden Group Manteau II
 	,[1567,0] //Eden Group Boots IV
 ];
@@ -1184,6 +1193,92 @@ EDEN_ENCHANTABLE_WEAPON = [
 	,[1598,0] //Eden Group Staff III
 	,[1599,0] //Eden Group Two Handed Axe I
 	,[1604,0] //Eden Group Whip I
+];
+
+//El Dicaste Enchants slot 1
+ED_ENCHANTS_SLOT_ONE = [
+		 [402, "ATK+2%"]
+		,[403, "ATK+3%"]
+		,[501, "MATK+1%"]
+		,[502, "MATK+2%"]
+		,[605, "CRIT+5"]
+		,[607, "CRIT+7"]
+		,[701, "FLEE+6"]
+		,[702, "FLEE+12"]
+];
+//El Dicaste Enchants slot 2 for equipment
+ED_ENCHANTS_SLOT_TWO = [
+		 [21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[31, "VIT+1"]
+		,[32, "VIT+2"]
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+];
+//El Dicaste Enchants slot 2 & 3 for Light of El Dicaste
+ED_ENCHANTS_LIGHT_SLOT_TWO_THREE = [
+		 [21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+		,[51, "DEX+1"]
+		,[52, "DEX+2"]
+];
+//El Dicaste Enchants slot 3 for equipment
+ED_ENCHANTS_SLOT_THREE = [
+		 [21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[23, "AGI+3"] // Feral Boots and Feral Tails only
+		,[33, "VIT+3"] // Feral Boots and Feral Tails only
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+		,[43, "INT+3"] // Feral Boots and Feral Tails only
+		,[51, "DEX+1"]
+		,[52, "DEX+2"]
+];
+
+ED_LIGHT_OF_EL_DICASTE = [
+	 [1201,0] //Light of El Dicastes
+];
+
+ED_ENCHANTABLE = [
+	 [446,0] //Feral Tail
+	,[448,0] //Feral Boots
+	,[449,23,33,43,0] //Golden Trickle ("Golden Bell" in wiki)
+];
+
+//Mora Enchants
+MORA_ENCHANTS_SLOT_ONE = [
+		 [402, "ATK+2%"]
+		,[403, "ATK+3%"]
+		,[501, "MATK+1%"]
+		,[502, "MATK+2%"]
+		,[605, "CRIT+5"]
+		,[607, "CRIT+7"]
+		,[701, "FLEE+6"]
+		,[702, "FLEE+12"]
+];
+MORA_ENCHANTS_SLOT_TWO = [
+		 [41, "INT+1"]
+		,[42, "INT+2"]
+		,[51, "DEX+1"]
+		,[52, "DEX+2"]
+		,[61, "LUK+1"]
+		,[62, "LUK+2"]
+];
+MORA_ENCHANTS_SLOT_THREE = [
+		 [11, "STR+1"]
+		,[12, "STR+2"]
+		,[21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[31, "VIT+1"]
+		,[32, "VIT+2"]
+];
+
+MORA_ENCHANTABLE = [
+		//Armor: Army Padding
+		 [1605,0] //Loki's Muffler
+		//Accessory: Pendant Of Guardian
 ];
 
 //exceptions list for items and cards disabled in vanilla

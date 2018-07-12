@@ -273,13 +273,41 @@ function StAllCalc()
 	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment] [NattWara]
 	Click_BiolabWeaponEnchantment(n_A_Equip[0],n_A_Equip[1]);
 	
-	//[Custom TalonRO 2018-07-10 - Biolab Armor Enchantment] [NattWara]
-	Click_BiolabHeadgearEnchantment(n_A_Equip[2]);
-	Click_BiolabArmorEnchantment(n_A_Equip[6]);
-	Click_BiolabShieldEnchantment(n_A_Equip[5]);
-	Click_BiolabGarmentEnchantment(n_A_Equip[7]);
-	Click_BiolabAccessoryEnchantment(n_A_Equip[9],n_A_Equip[10]);
-
+	//[Custom TalonRO 2018-07-12 - Eden Weapon Enchantment] [NattWara]
+	//Click_EdenWeaponEnchantment(n_A_Equip[0],n_A_Equip[1]);
+	
+	//[Custom TalonRO 2018-07-12 - Headgear Enchantment (Biolab & Eden)] [NattWara]
+	Click_HeadgearEnchantment(n_A_Equip[2]);
+	
+	//[Custom TalonRO 2018-07-12 - Armor Enchantment (Biolab & Eden)] [NattWara]
+	Click_BiolabArmorBodyEnchantment(n_A_Equip[6]);
+	Click_EdenArmorBodyEnchantment(n_A_Equip[6]);
+	
+	//[Custom TalonRO 2018-07-12 - Shield Enchantment (Biolab)] [NattWara]
+	Click_BiolabArmorShieldEnchantment(n_A_Equip[5]);
+	
+	//[Custom TalonRO 2018-07-12 - Garment Enchantment (Biolab & Eden)] [NattWara]
+	Click_GarmentEnchantment(n_A_Equip[7]);
+	
+	//[Custom TalonRO 2018-07-12 - Footgear Enchantment (Eden)] [NattWara]
+	Click_FootgearEnchantment(n_A_Equip[8]);
+	
+	//[Custom TalonRO 2018-07-12 - Accessory Enchantment (Biolab)] [NattWara]
+	Click_AccessoryEnchantment(n_A_Equip[9],n_A_Equip[10]);
+	
+	//Mora & El Dicaste Enchant have 3 option. Can't fit that in with Biolab & Eden so I'm making new <tr> for it so different function.
+	
+	//[Custom TalonRO 2018-07-12 - El Dicaste Enchants] [NattWara]
+	Click_EDGarmentEnchantment(n_A_Equip[7]);
+	Click_EDFootgearEnchantment(n_A_Equip[8]);
+	Click_EDAccessoryEnchantment(n_A_Equip[9],n_A_Equip[10]);
+	Click_LOEDEnchantment(n_A_Equip[9],n_A_Equip[10]);
+	
+	//[Custom TalonRO 2018-07-12 - Mora Enchants] [NattWara]
+	Click_MoraArmorEnchantment(n_A_Equip[8]);
+	Click_MoraGarmentEnchantment(n_A_Equip[7]);
+	Click_MoraAccessoryEnchantment(n_A_Equip[9],n_A_Equip[10]);
+	
 	if(n_Nitou){
 		W_REF2 = 0;
 		n_A_Weapon2LV = ItemOBJ[n_A_Equip[1]][4];
