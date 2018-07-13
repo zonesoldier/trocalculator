@@ -2063,6 +2063,61 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_B[2] == 5 && EquipNumSearch(1554)){ // Race = 5 (Fish)
 		w += n_A_SHOES_DEF_PLUS * EquipNumSearch(1554);
 	}
+	
+	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Sharp - CRIT [Kato]
+	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
+		var vME = tRO_MalangdoEnchantment[i];
+		if(vME >= 1081 && vME <= 1085) {
+			if(vME.substr(-1) == 1){
+				w += 3;
+			}
+			else
+			{
+				w += 3 + parseInt(vME.substr(-1));
+			}
+		}
+	}
+			
+	//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for Sharp - CRIT [NattWara]
+	for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
+		var vBE = tRO_BiolabWeaponEnchantment[i];
+		if(vBE >= 1081 && vBE <= 1085) {
+			if(vBE.substr(-1) == 1){
+				w += 3;
+			}
+			else
+			{
+				w += 3 + parseInt(vBE.substr(-1));
+			}
+		}
+	}
+			
+	//[Custom TalonRO 2018-07-12 - Eden Armor Enchantment for CRIT] [NattWara]
+	for(i=0; i < tRO_EdenArmorEnchantment.length; i++) {
+		var vEE = tRO_EdenArmorEnchantment[i];
+		if(151 <= vEE && vEE <= 159) {
+			var val = parseInt(vEE.substr(-1));
+			w += val;
+		}
+	}
+			
+	//[Custom TalonRO 2018-07-12 - El Dicaste Enchantment for CRIT] [NattWara]
+	for(i=0; i < tRO_EDEnchantment.length; i++) {
+		var vED = tRO_EDEnchantment[i];
+		if(151 <= vED && vED <= 159) {
+			var val = parseInt(vED.substr(-1));
+			w += val;
+		}
+	}
+			
+	//[Custom TalonRO 2018-07-12 - Mora Enchantment for CRIT] [NattWara]
+	for(i=0; i < tRO_MoraEnchantment.length; i++) {
+		var vMORA = tRO_MoraEnchantment[i];
+		if(151 <= vMORA && vMORA <= 159) {
+			var val = parseInt(vMORA.substr(-1));
+			w += val;
+		}
+	}
 
 	n_A_CRI += w;
 
@@ -2079,55 +2134,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	if(n_A_PassSkill8[16])
 		n_A_CRI = 0;
-
-		//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Sharp - CRIT [Kato]
-			for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
-				var vME = tRO_MalangdoEnchantment[i];
-				if(vME >= 1081 && vME <= 1085) {
-					if(vME.substr(-1) == 1)
-						n_A_CRI += 3;
-					 else
-						n_A_CRI += 3 + parseInt(vME.substr(-1));
-				}
-			}
-			
-		//[Custom TalonRO 2018-07-10 - Biolab Weapon Enchantment for Sharp - CRIT [NattWara]
-			for(i=0; i < tRO_BiolabWeaponEnchantment.length; i++) {
-				var vBE = tRO_BiolabWeaponEnchantment[i];
-				if(vBE >= 1081 && vBE <= 1085) {
-					if(vBE.substr(-1) == 1)
-						n_A_CRI += 3;
-					 else
-						n_A_CRI += 3 + parseInt(vBE.substr(-1));
-				}
-			}
-			
-		//[Custom TalonRO 2018-07-12 - Eden Armor Enchantment for CRIT] [NattWara]
-			for(i=0; i < tRO_EdenArmorEnchantment.length; i++) {
-				var vEE = tRO_EdenArmorEnchantment[i];
-				if(151 <= vEE && vEE <= 159) {
-					var val = parseInt(vEE.substr(-1));
-					n_A_CRI += val;
-				}
-			}
-			
-		//[Custom TalonRO 2018-07-12 - El Dicaste Enchantment for CRIT] [NattWara]
-			for(i=0; i < tRO_EDEnchantment.length; i++) {
-				var vED = tRO_EDEnchantment[i];
-				if(151 <= vED && vED <= 159) {
-					var val = parseInt(vED.substr(-1));
-					n_A_CRI += val;
-				}
-			}
-			
-		//[Custom TalonRO 2018-07-12 - Mora Enchantment for CRIT] [NattWara]
-			for(i=0; i < tRO_MoraEnchantment.length; i++) {
-				var vMORA = tRO_MoraEnchantment[i];
-				if(151 <= vMORA && vMORA <= 159) {
-					var val = parseInt(vMORA.substr(-1));
-					n_A_CRI += val;
-				}
-			}
 
 	myInnerHtml("A_CRI",n_A_CRI,0);
 
