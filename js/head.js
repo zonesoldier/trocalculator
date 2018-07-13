@@ -64,6 +64,29 @@ IgnoreEffectOnLeftHand = 0;
 //[Custom TalonRO 2018-06-15 - Global for Malangdo Enchants values] [Kato]
 tRO_MalangdoEnchantment = [0,0,0,0];
 
+//[Custom TalonRO 2018-07-10 - Global for Biolab Weapon Enchants values] [NattWara]
+tRO_BiolabWeaponEnchantment = [0,0,0,0];
+
+//[Custom TalonRO 2018-07-12 - Global for Eden Weapon Enchants values] [NattWara]
+tRO_EdenWeaponEnchantment = [0,0,0,0,0,0];
+
+//[Custom TalonRO 2018-07-10 - Global for Biolab Armor Enchants values] [NattWara]
+//[Headgear1,Headgear2,Armor1,Armor2,Shield1,Shield2,Garment1,Garment2,Acc1_1,Acc1_2,Acc2_1,Acc2_2]
+tRO_BiolabArmorEnchantment = [0,0,0,0,0,0,0,0,0,0,0,0];
+
+//[Custom TalonRO 2018-07-12 - Global for Eden Armor Enchants values] [NattWara]
+//[Headgear1,Headgear2,Armor1,Armor2,Garment1,Garment2,Footgear1,Footgear2]
+tRO_EdenArmorEnchantment = [0,0,0,0,0,0,0,0];
+
+//[Custom TalonRO 2018-07-12 - Global for El Dicaste Enchants values] [NattWara]
+//[Garment1,Garment2,Garment3,Footgear1,Footgear2,Footgear3,Accessory1_1,Accessory1_2,Accessory1_3,Accessory2_1,Accessory2_2,Accessory2_3]
+//	Golden Trickle share value slot with Light of El Dicaste.
+tRO_EDEnchantment = [0,0,0,0,0,0,0,0,0,0,0,0];
+
+//[Custom TalonRO 2018-07-12 - Global for Mora Enchants values] [NattWara]
+//[Armor1,Armor2,Armor3,Garment1,Garment2,Garment3,Accessory1_1,Accessory1_2,Accessory1_3,Accessory2_1,Accessory2_2,Accessory2_3]
+tRO_MoraEnchantment = [0,0,0,0,0,0,0,0,0,0,0,0];
+
 function myInnerHtml(wIH1,wIH2,wIH3)
 {
 	if(wIH3 == 0){
@@ -1744,7 +1767,10 @@ function BattleCalc999()
 			wbairitu += 8 + (n_A_MaxSP-1) /10;
 
 		//custom TalonRO fix (checked rAthena calculation)
-		wbairitu += 1;
+		//wbairitu += 1;
+		
+		//[Custom TalonRO - 2018-07-09 fix asura damage] [NattWara/Loa]
+		wbairitu = Math.ceil(wbairitu);
 
 		wASYU = 250 + n_A_ActiveSkillLV * 150;
 
@@ -1765,7 +1791,27 @@ function BattleCalc999()
 			if (n_A_PassSkill3[2]>0 && n_A_PassSkill3[45]==0)
 				w_DMG[b] = Math.floor((200-((2*n_A_PassSkill3[2]+n_A_PassSkill3[29]/5)+2*n_A_PassSkill3[32]))*w_DMG[b]/200);
 
-			Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b] + EDP_DMG(b);
+			//Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b] + EDP_DMG(b);
+			w_DMG[b] += EDP_DMG(b);
+			
+			//[Custom TalonRO - 2018-07-09 Soft-Cap Asura damage above 200k] [NattWara/Loa]
+			//100% accurate for below 200k damage.
+			//~1% error for 200k-400k damage.
+			//No data available for above 400k damage.
+			
+			if(w_DMG[b] > 200000){
+				var AsuraExcessD = w_DMG[b] - 200000;
+				var AsuraNerfD = (0.5963 - 0.1471) * Math.exp(-0.000002230 * AsuraExcessD) + 0.1471;
+				w_DMG[b] = 200000 + (AsuraExcessD * AsuraNerfD);
+			}
+			
+			//Lex Aeterna for Asura Strike after soft-cap
+			if(n_B_IJYOU[6] && wLAch==0){
+				w_DMG[b] *= 2;
+			}
+
+			Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b]
+			
 			InnStr[b] += Last_DMG_A[b];
 		}
 
@@ -2511,20 +2557,27 @@ function ATKbai01()
 			wA01 += 10;
 		if(StPlusCalc2(87))
 			wA01 += StPlusCalc2(87);
-		//custom TalonRO Kris enchant %-ATK
+		
+		//Note - Issue#252
+		//Moved to foot.js
+		//custom TalonRO Kris enchant ATK%
+		/*
 		var KEbonus = [document.calcForm.A_KE11.value,document.calcForm.A_KE12.value,document.calcForm.A_KE21.value,document.calcForm.A_KE22.value];
-		for (i=0;i<4;i++){
+		for (i=0;i<KEbonus.length;i++){
 			var wKE = KEbonus[i];
 			if(wKE){
-				var w_enchant = wKE % 10;
-				if(81 <= wKE && wKE <= 89)
-					wA01 += w_enchant*3;
+				if(171 <= wKE && wKE <= 179)
+					wA01 += parseInt(wKE.substr(-1));
 			}
-		}
+		}*/
+		//Note - Issue#252
+		//Moved to foot.js
 		//custom TalonRO Evil Marching Hat: if refine rate >=9 +5% ATK
+		/*
 		if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 9)
 			wA01 += 5;
-
+		*/
+		
 		if(n_A_IJYOU[3])
 			wA01 -= 25;
 	}
@@ -3374,7 +3427,6 @@ with(document.calcForm){
 	}
 	WeaponSet();
 
-
 	if(n == 0){
 		myInnerHtml("A_seirenchi_name","",0);
 		A_Weapon_ATKplus.style.visibility = "hidden";
@@ -3386,9 +3438,11 @@ with(document.calcForm){
 	}
 
 	n_A_JobSet();
+
 	if((n_A_JOB == 8 || n_A_JOB == 22) && n != 11){
-		if(n_Nitou == 0)
-			myInnerHtml("A_SobWeaponName","Left Hand: "+'<select name="A_Weapon2Type" onChange = "ClickWeaponType2(this[this.selectedIndex].value) | StAllCalc()">	<option value="0">Fist or Shield<option value="1">Dagger<option value="2">Sword<option value="6">Axe</select>',0);
+		if(n_Nitou == 0){
+			myInnerHtml("A_SobWeaponName","Left Hand: "+'<select name="A_Weapon2Type" onChange = "ClickWeaponType2(this[this.selectedIndex].value) | StAllCalc()">	<option value="0">Fist or Shield<option value="1">Dagger<option value="2">Sword<option value="6">Axe</select>',0);	
+		}
 	}
 	else{
 		myInnerHtml("A_SobWeaponName","",0);
@@ -3431,6 +3485,12 @@ function ClickWeaponType2(n){
 with(document.calcForm){
 
 	n_A_JobSet();
+	//document.getElementById("T_WDiv2").style.display = ((n != 0) ? "" : "none");
+	document.getElementById("T_W2").style.display = ((n != 0) ? "" : "none");
+	document.getElementById("T_WC2").style.display = ((n != 0) ? "" : "none");
+	console.log("n : " + n);
+	console.log("n_Nitou : " + n_Nitou);
+	
 	if(n != 0){
 		if(n_Nitou == 0){
 			myInnerHtml("spanA_weapon2",'Left hand: <select name="A_weapon2"onChange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>',0);
@@ -4732,32 +4792,26 @@ function Click_SQI_Bonus(n){
 function Click_KrisEnchantment(){
 with(document.calcForm){
 	if(A_weapon1.value == 1472){
-		myInnerHtml("A_KEText11","Kris Enchantment 1",0);
-		A_KE11.style.visibility = "visible";
-		myInnerHtml("A_KEText12","Kris Enchantment 2",0);
-		A_KE12.style.visibility = "visible";
+		document.getElementById("T_KE1").style.display = "";
 	}
 	else{
-		myInnerHtml("A_KEText11","",0);
-		A_KE11.style.visibility = "hidden";
+		document.getElementById("T_KE1").style.display = "none";
 		A_KE11.value = 0;
-		myInnerHtml("A_KEText12","",0);
-		A_KE12.style.visibility = "hidden";
 		A_KE12.value = 0;
 	}
 	if (typeof(A_weapon2) != "undefined"){
 		if(A_weapon2.value == 1472){
-			myInnerHtml("A_KEText21","Kris Enchantment 1",0);
-			A_KE21.style.visibility = "visible";
-			myInnerHtml("A_KEText22","Kris Enchantment 2",0);
-			A_KE22.style.visibility = "visible";
+			document.getElementById("T_KE2").style.display = "";
+		}
+		else
+		{
+			document.getElementById("T_KE2").style.display = "none";
+			A_KE21.value = 0;
+			A_KE22.value = 0;
 		}
 	}else{
-		myInnerHtml("A_KEText21","",0);
-		A_KE21.style.visibility = "hidden";
+		document.getElementById("T_KE2").style.display = "none";
 		A_KE21.value = 0;
-		myInnerHtml("A_KEText22","",0);
-		A_KE22.style.visibility = "hidden";
 		A_KE22.value = 0;
 	}
 }}
@@ -4779,9 +4833,16 @@ function tRO_PopulateCombos() {
 			A_SHOES_DEF_PLUS.options[i] = new Option("+"+i,i);
 		}
 
+		//Cards
 		for(i=0; i<CARD_SHORTCUT.length; i++) {
 			A_cardshort.options[i] = new Option(CARD_SHORTCUT[i][1],CARD_SHORTCUT[i][0]);
 		}
+		
+		//Kris
+		myInnerHtml("A_KEText11","Kris Enchantment 1",0);
+		myInnerHtml("A_KEText12","Kris Enchantment 2",0);
+		myInnerHtml("A_KEText21","Kris Enchantment 1",0);
+		myInnerHtml("A_KEText22","Kris Enchantment 2",0);
 
 		A_KE11.options[0] = new Option("(Kris Enchantment "+ A_KE11.name.substr(-1) +")",0);
 		A_KE12.options[0] = new Option("(Kris Enchantment "+ A_KE12.name.substr(-1) +")",0);
@@ -4794,11 +4855,12 @@ function tRO_PopulateCombos() {
 				A_KE21.options[i+1] = new Option(KRIS_ENCHANTMENT[i][1],KRIS_ENCHANTMENT[i][0]);
 				A_KE22.options[i+1] = new Option(KRIS_ENCHANTMENT[i][1],KRIS_ENCHANTMENT[i][0]);
 		}
-
-			myInnerHtml("A_METext11","Malangdo 1: ",0);
-			myInnerHtml("A_METext12","Malangdo 2: ",0);
-			myInnerHtml("A_METext21","Malangdo 1: ",0);
-			myInnerHtml("A_METext22","Malangdo 2: ",0);
+		
+		//Malangdo
+		myInnerHtml("A_METext11","Malangdo 1: ",0);
+		myInnerHtml("A_METext12","Malangdo 2: ",0);
+		myInnerHtml("A_METext21","Malangdo 1: ",0);
+		myInnerHtml("A_METext22","Malangdo 2: ",0);
 
 		A_ME11.options[0] = new Option("(Malangdo Enchant "+ A_ME11.name.substr(-1) +")",0);
 		A_ME12.options[0] = new Option("(Malangdo Enchant "+ A_ME12.name.substr(-1) +")",0);
@@ -4806,14 +4868,334 @@ function tRO_PopulateCombos() {
 		A_ME22.options[0] = new Option("(Malangdo Enchant 2-"+ A_ME22.name.substr(-1) +")",0);
 
 		for(i=0; i<MALANGDO_ENCHANTS.length; i++) {
-				A_ME11.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
-				A_ME12.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
-				A_ME21.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
-				A_ME22.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+			A_ME11.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+			A_ME12.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+			A_ME21.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+			A_ME22.options[i+1] = new Option(MALANGDO_ENCHANTS[i][1],MALANGDO_ENCHANTS[i][0]);
+		}
+		
+		//Biolab (Weapon)
+		myInnerHtml("A_BEText11","Biolab 1: ",0);
+		myInnerHtml("A_BEText12","Biolab 2: ",0);
+		myInnerHtml("A_BEText21","Biolab 1: ",0);
+		myInnerHtml("A_BEText22","Biolab 2: ",0);
+
+		A_BE11.options[0] = new Option("(Biolab Enchant "+ A_BE11.name.substr(-1) +")",0);
+		A_BE12.options[0] = new Option("(Biolab Enchant "+ A_BE12.name.substr(-1) +")",0);
+		A_BE21.options[0] = new Option("(Biolab Enchant 2-"+ A_BE21.name.substr(-1) +")",0);
+		A_BE22.options[0] = new Option("(Biolab Enchant 2-"+ A_BE22.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_WEAPON.length; i++) {
+			A_BE11.options[i+1] = new Option(BIOLAB_ENCHANTS_WEAPON[i][1],BIOLAB_ENCHANTS_WEAPON[i][0]);
+			A_BE12.options[i+1] = new Option(BIOLAB_ENCHANTS_WEAPON[i][1],BIOLAB_ENCHANTS_WEAPON[i][0]);
+			A_BE21.options[i+1] = new Option(BIOLAB_ENCHANTS_WEAPON[i][1],BIOLAB_ENCHANTS_WEAPON[i][0]);
+			A_BE22.options[i+1] = new Option(BIOLAB_ENCHANTS_WEAPON[i][1],BIOLAB_ENCHANTS_WEAPON[i][0]);
+		}
+		
+		//Biolab (Headgear)
+		myInnerHtml("A_BETextH1","Biolab 1: ",0);
+		myInnerHtml("A_BETextH2","Biolab 2: ",0);
+
+		A_BEH1.options[0] = new Option("(Biolab Headgear Enchant "+ A_BEH1.name.substr(-1) +")",0);
+		A_BEH2.options[0] = new Option("(Biolab Headgear Enchant "+ A_BEH2.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BEH1.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEH2.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Biolab (Armor)
+		myInnerHtml("A_BETextA1","Biolab 1: ",0);
+		myInnerHtml("A_BETextA2","Biolab 2: ",0);
+
+		A_BEA1.options[0] = new Option("(Biolab Armor Enchant "+ A_BEA1.name.substr(-1) +")",0);
+		A_BEA2.options[0] = new Option("(Biolab Armor Enchant "+ A_BEA2.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BEA1.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEA2.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Biolab (Shield)
+		myInnerHtml("A_BETextS1","Biolab 1: ",0);
+		myInnerHtml("A_BETextS2","Biolab 2: ",0);
+
+		A_BES1.options[0] = new Option("(Biolab Shield Enchant "+ A_BES1.name.substr(-1) +")",0);
+		A_BES2.options[0] = new Option("(Biolab Shield Enchant "+ A_BES2.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BES1.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BES2.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Biolab (Garment)
+		myInnerHtml("A_BETextG1","Biolab 1: ",0);
+		myInnerHtml("A_BETextG2","Biolab 2: ",0);
+
+		A_BEG1.options[0] = new Option("(Biolab Garment Enchant "+ A_BEG1.name.substr(-1) +")",0);
+		A_BEG2.options[0] = new Option("(Biolab Garment Enchant "+ A_BEG2.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BEG1.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEG2.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Biolab (Accessory)
+		myInnerHtml("A_BETextAC11","Biolab 1: ",0);
+		myInnerHtml("A_BETextAC12","Biolab 2: ",0);
+		myInnerHtml("A_BETextAC21","Biolab 1: ",0);
+		myInnerHtml("A_BETextAC22","Biolab 2: ",0);
+
+		A_BEAC11.options[0] = new Option("(Biolab Accessory Enchant "+ A_BEAC11.name.substr(-1) +")",0);
+		A_BEAC12.options[0] = new Option("(Biolab Accessory Enchant "+ A_BEAC12.name.substr(-1) +")",0);
+		A_BEAC21.options[0] = new Option("(Biolab Accessory Enchant "+ A_BEAC21.name.substr(-1) +")",0);
+		A_BEAC22.options[0] = new Option("(Biolab Accessory Enchant "+ A_BEAC22.name.substr(-1) +")",0);
+
+		for(i=0; i<BIOLAB_ENCHANTS_ARMOR.length; i++) {
+			A_BEAC11.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEAC12.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEAC21.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+			A_BEAC22.options[i+1] = new Option(BIOLAB_ENCHANTS_ARMOR[i][1],BIOLAB_ENCHANTS_ARMOR[i][0]);
+		}
+		
+		//Eden (Weapon)
+		myInnerHtml("A_EEText11","Eden 1: ",0);
+		myInnerHtml("A_EEText12","Eden 2: ",0);
+		myInnerHtml("A_EEText13","Eden 3: ",0);
+		myInnerHtml("A_EEText21","Eden 1: ",0);
+		myInnerHtml("A_EEText22","Eden 2: ",0);
+		myInnerHtml("A_EEText23","Eden 3: ",0);
+
+		A_EE11.options[0] = new Option("(Eden Enchant "+ A_EE11.name.substr(-1) +")",0);
+		A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+		A_EE13.options[0] = new Option("(Eden Enchant "+ A_EE13.name.substr(-1) +")",0);
+		A_EE21.options[0] = new Option("(Eden Enchant 2-"+ A_EE21.name.substr(-1) +")",0);
+		A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+		A_EE23.options[0] = new Option("(Eden Enchant 2-"+ A_EE23.name.substr(-1) +")",0);
+
+		for(i=0; i<EDEN_ENCHANTS_WEAPON_FIRST.length; i++) {
+			A_EE11.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_FIRST[i][1],EDEN_ENCHANTS_WEAPON_FIRST[i][0]);
+			A_EE21.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_FIRST[i][1],EDEN_ENCHANTS_WEAPON_FIRST[i][0]);
+		}
+		
+		//Eden (Headgear)
+		myInnerHtml("A_EETextH1","Eden 1: ",0);
+		myInnerHtml("A_EETextH2","Eden 2: ",0);
+
+		A_EEH1.options[0] = new Option("(Eden Hat Enchant "+ A_BEH1.name.substr(-1) +")",0);
+		A_EEH2.options[0] = new Option("(Eden Hat Enchant "+ A_BEH2.name.substr(-1) +")",0);
+
+		for(i=0; i<EDEN_ENCHANTS_HAT.length; i++) {
+			A_EEH1.options[i+1] = new Option(EDEN_ENCHANTS_HAT[i][1],EDEN_ENCHANTS_HAT[i][0]);
+			A_EEH2.options[i+1] = new Option(EDEN_ENCHANTS_HAT[i][1],EDEN_ENCHANTS_HAT[i][0]);
+		}
+		
+		//Eden (Armor)
+		myInnerHtml("A_EETextA1","Eden 1: ",0);
+		myInnerHtml("A_EETextA2","Eden 2: ",0);
+
+		A_EEA1.options[0] = new Option("(Eden Uniform Enchant "+ A_EEA1.name.substr(-1) +")",0);
+		A_EEA2.options[0] = new Option("(Eden Uniform Enchant "+ A_EEA2.name.substr(-1) +")",0);
+
+		for(i=0; i<EDEN_ENCHANTS_ARMOR_FIRST.length; i++) {
+			A_EEA1.options[i+1] = new Option(EDEN_ENCHANTS_ARMOR_FIRST[i][1],EDEN_ENCHANTS_ARMOR_FIRST[i][0]);
+		}
+		for(i=0; i<EDEN_ENCHANTS_ARMOR_SECOND.length; i++) {
+			A_EEA2.options[i+1] = new Option(EDEN_ENCHANTS_ARMOR_SECOND[i][1],EDEN_ENCHANTS_ARMOR_SECOND[i][0]);
+		}
+		
+		//Eden (Garment)
+		myInnerHtml("A_EETextG1","Eden 1: ",0);
+		myInnerHtml("A_EETextG2","Eden 2: ",0);
+
+		A_EEG1.options[0] = new Option("(Eden Manteau Enchant "+ A_EEG1.name.substr(-1) +")",0);
+		A_EEG2.options[0] = new Option("(Eden Manteau Enchant "+ A_EEG2.name.substr(-1) +")",0);
+
+		for(i=0; i<EDEN_ENCHANTS_ARMOR_FIRST.length; i++) {
+			A_EEG1.options[i+1] = new Option(EDEN_ENCHANTS_ARMOR_FIRST[i][1],EDEN_ENCHANTS_ARMOR_FIRST[i][0]);
+		}
+		for(i=0; i<EDEN_ENCHANTS_ARMOR_SECOND.length; i++) {
+			A_EEG2.options[i+1] = new Option(EDEN_ENCHANTS_ARMOR_SECOND[i][1],EDEN_ENCHANTS_ARMOR_SECOND[i][0]);
+		}
+		
+		//Eden (Footgear)
+		myInnerHtml("A_EETextF1","Eden 1: ",0);
+		myInnerHtml("A_EETextF2","Eden 2: ",0);
+
+		A_EEF1.options[0] = new Option("(Eden Boots Enchant "+ A_EEF1.name.substr(-1) +")",0);
+		A_EEF2.options[0] = new Option("(Eden Boots Enchant "+ A_EEF2.name.substr(-1) +")",0);
+
+		for(i=0; i<EDEN_ENCHANTS_ARMOR_FIRST.length; i++) {
+			A_EEF1.options[i+1] = new Option(EDEN_ENCHANTS_ARMOR_FIRST[i][1],EDEN_ENCHANTS_ARMOR_FIRST[i][0]);
+		}
+		for(i=0; i<EDEN_ENCHANTS_ARMOR_SECOND.length; i++) {
+			A_EEF2.options[i+1] = new Option(EDEN_ENCHANTS_ARMOR_SECOND[i][1],EDEN_ENCHANTS_ARMOR_SECOND[i][0]);
+		}
+		
+		//El Dicaste (Garment)
+		myInnerHtml("A_EDTextG1","El Dicaste 1: ",0);
+		myInnerHtml("A_EDTextG2","El Dicaste 2: ",0);
+		myInnerHtml("A_EDTextG2","El Dicaste 3: ",0);
+
+		A_EDG1.options[0] = new Option("(Feral Tails Enchant "+ A_EDG1.name.substr(-1) +")",0);
+		A_EDG2.options[0] = new Option("(Feral Tails Enchant "+ A_EDG2.name.substr(-1) +")",0);
+		A_EDG3.options[0] = new Option("(Feral Tails Enchant "+ A_EDG3.name.substr(-1) +")",0);
+		
+		for(i=0; i<ED_ENCHANTS_SLOT_ONE.length; i++) {
+			A_EDG1.options[i+1] = new Option(ED_ENCHANTS_SLOT_ONE[i][1],ED_ENCHANTS_SLOT_ONE[i][0]);
+		}
+		for(i=0; i<ED_ENCHANTS_SLOT_TWO.length; i++) {
+			A_EDG2.options[i+1] = new Option(ED_ENCHANTS_SLOT_TWO[i][1],ED_ENCHANTS_SLOT_TWO[i][0]);
+		}
+		for(i=0; i<ED_ENCHANTS_SLOT_THREE.length; i++) {
+			A_EDG3.options[i+1] = new Option(ED_ENCHANTS_SLOT_THREE[i][1],ED_ENCHANTS_SLOT_THREE[i][0]);
+		}
+		
+		//El Dicaste (Footgear)
+		myInnerHtml("A_EDTextF1","El Dicaste 1: ",0);
+		myInnerHtml("A_EDTextF2","El Dicaste 2: ",0);
+		myInnerHtml("A_EDTextF2","El Dicaste 3: ",0);
+
+		A_EDF1.options[0] = new Option("(Feral Boots Enchant "+ A_EDF1.name.substr(-1) +")",0);
+		A_EDF2.options[0] = new Option("(Feral Boots Enchant "+ A_EDF2.name.substr(-1) +")",0);
+		A_EDF3.options[0] = new Option("(Feral Boots Enchant "+ A_EDF3.name.substr(-1) +")",0);
+		
+		for(i=0; i<ED_ENCHANTS_SLOT_ONE.length; i++) {
+			A_EDF1.options[i+1] = new Option(ED_ENCHANTS_SLOT_ONE[i][1],ED_ENCHANTS_SLOT_ONE[i][0]);
+		}
+		for(i=0; i<ED_ENCHANTS_SLOT_TWO.length; i++) {
+			A_EDF2.options[i+1] = new Option(ED_ENCHANTS_SLOT_TWO[i][1],ED_ENCHANTS_SLOT_TWO[i][0]);
+		}
+		for(i=0; i<ED_ENCHANTS_SLOT_THREE.length; i++) {
+			A_EDF3.options[i+1] = new Option(ED_ENCHANTS_SLOT_THREE[i][1],ED_ENCHANTS_SLOT_THREE[i][0]);
+		}
+		
+		//El Dicaste (Accessory)
+		myInnerHtml("A_EDTextAC11","El Dicaste 1: ",0);
+		myInnerHtml("A_EDTextAC12","El Dicaste 2: ",0);
+		myInnerHtml("A_EDTextAC13","El Dicaste 3: ",0);
+		myInnerHtml("A_EDTextAC21","El Dicaste 1: ",0);
+		myInnerHtml("A_EDTextAC22","El Dicaste 2: ",0);
+		myInnerHtml("A_EDTextAC23","El Dicaste 3: ",0);
+
+		A_EDAC11.options[0] = new Option("(Golden Trickle Enchant "+ A_EDAC11.name.substr(-1) +")",0);
+		A_EDAC12.options[0] = new Option("(Golden Trickle Enchant "+ A_EDAC12.name.substr(-1) +")",0);
+		A_EDAC13.options[0] = new Option("(Golden Trickle Enchant "+ A_EDAC13.name.substr(-1) +")",0);
+		A_EDAC21.options[0] = new Option("(Golden Trickle Enchant "+ A_EDAC21.name.substr(-1) +")",0);
+		A_EDAC22.options[0] = new Option("(Golden Trickle Enchant "+ A_EDAC22.name.substr(-1) +")",0);
+		A_EDAC23.options[0] = new Option("(Golden Trickle Enchant "+ A_EDAC23.name.substr(-1) +")",0);
+		
+		for(i=0; i<ED_ENCHANTS_SLOT_ONE.length; i++) {
+			A_EDAC11.options[i+1] = new Option(ED_ENCHANTS_SLOT_ONE[i][1],ED_ENCHANTS_SLOT_ONE[i][0]);
+			A_EDAC21.options[i+1] = new Option(ED_ENCHANTS_SLOT_ONE[i][1],ED_ENCHANTS_SLOT_ONE[i][0]);
+		}
+		for(i=0; i<ED_ENCHANTS_SLOT_TWO.length; i++) {
+			A_EDAC12.options[i+1] = new Option(ED_ENCHANTS_SLOT_TWO[i][1],ED_ENCHANTS_SLOT_TWO[i][0]);
+			A_EDAC22.options[i+1] = new Option(ED_ENCHANTS_SLOT_TWO[i][1],ED_ENCHANTS_SLOT_TWO[i][0]);
+		}
+		for(i=0; i<ED_ENCHANTS_SLOT_THREE.length; i++) {
+			A_EDAC13.options[i+1] = new Option(ED_ENCHANTS_SLOT_THREE[i][1],ED_ENCHANTS_SLOT_THREE[i][0]);
+			A_EDAC23.options[i+1] = new Option(ED_ENCHANTS_SLOT_THREE[i][1],ED_ENCHANTS_SLOT_THREE[i][0]);
+		}
+		
+		//El Dicaste (Light of El Dicaste)
+		myInnerHtml("A_EDTextLOED11","El Dicaste 1: ",0);
+		myInnerHtml("A_EDTextLOED12","El Dicaste 2: ",0);
+		myInnerHtml("A_EDTextLOED13","El Dicaste 3: ",0);
+		myInnerHtml("A_EDTextLOED21","El Dicaste 1: ",0);
+		myInnerHtml("A_EDTextLOED22","El Dicaste 2: ",0);
+		myInnerHtml("A_EDTextLOED23","El Dicaste 3: ",0);
+
+		A_EDLOED11.options[0] = new Option("(Light of El Dicaste Enchant "+ A_EDLOED11.name.substr(-1) +")",0);
+		A_EDLOED12.options[0] = new Option("(Light of El Dicaste Enchant "+ A_EDLOED12.name.substr(-1) +")",0);
+		A_EDLOED13.options[0] = new Option("(Light of El Dicaste Enchant "+ A_EDLOED13.name.substr(-1) +")",0);
+		A_EDLOED21.options[0] = new Option("(Light of El Dicaste Enchant "+ A_EDLOED21.name.substr(-1) +")",0);
+		A_EDLOED22.options[0] = new Option("(Light of El Dicaste Enchant "+ A_EDLOED22.name.substr(-1) +")",0);
+		A_EDLOED23.options[0] = new Option("(Light of El Dicaste Enchant "+ A_EDLOED23.name.substr(-1) +")",0);
+		
+		for(i=0; i<ED_ENCHANTS_SLOT_ONE.length; i++) {
+			A_EDLOED11.options[i+1] = new Option(ED_ENCHANTS_SLOT_ONE[i][1],ED_ENCHANTS_SLOT_ONE[i][0]);
+			A_EDLOED21.options[i+1] = new Option(ED_ENCHANTS_SLOT_ONE[i][1],ED_ENCHANTS_SLOT_ONE[i][0]);
+		}
+		for(i=0; i<ED_ENCHANTS_SLOT_TWO.length; i++) {
+			A_EDLOED12.options[i+1] = new Option(ED_ENCHANTS_SLOT_TWO[i][1],ED_ENCHANTS_SLOT_TWO[i][0]);
+			A_EDLOED22.options[i+1] = new Option(ED_ENCHANTS_SLOT_TWO[i][1],ED_ENCHANTS_SLOT_TWO[i][0]);
+		}
+		for(i=0; i<ED_ENCHANTS_LIGHT_SLOT_TWO_THREE.length; i++) {
+			A_EDLOED13.options[i+1] = new Option(ED_ENCHANTS_LIGHT_SLOT_TWO_THREE[i][1],ED_ENCHANTS_LIGHT_SLOT_TWO_THREE[i][0]);
+			A_EDLOED23.options[i+1] = new Option(ED_ENCHANTS_LIGHT_SLOT_TWO_THREE[i][1],ED_ENCHANTS_LIGHT_SLOT_TWO_THREE[i][0]);
+		}
+		
+		//Mora (Armor)
+		myInnerHtml("A_MORAETextA1","Mora 1: ",0);
+		myInnerHtml("A_MORAETextA2","Mora 2: ",0);
+		myInnerHtml("A_MORAETextA2","Mora 3: ",0);
+
+		A_MORAEA1.options[0] = new Option("(Army Padding Enchant "+ A_MORAEA1.name.substr(-1) +")",0);
+		A_MORAEA2.options[0] = new Option("(Army Padding Enchant "+ A_MORAEA2.name.substr(-1) +")",0);
+		A_MORAEA3.options[0] = new Option("(Army Padding Enchant "+ A_MORAEA3.name.substr(-1) +")",0);
+
+		for(i=0; i<MORA_ENCHANTS_SLOT_ONE.length; i++) {
+			A_MORAEA1.options[i+1] = new Option(MORA_ENCHANTS_SLOT_ONE[i][1],MORA_ENCHANTS_SLOT_ONE[i][0]);
+		}
+		for(i=0; i<MORA_ENCHANTS_SLOT_TWO.length; i++) {
+			A_MORAEA2.options[i+1] = new Option(MORA_ENCHANTS_SLOT_TWO[i][1],MORA_ENCHANTS_SLOT_TWO[i][0]);
+		}
+		for(i=0; i<MORA_ENCHANTS_SLOT_THREE.length; i++) {
+			A_MORAEA3.options[i+1] = new Option(MORA_ENCHANTS_SLOT_THREE[i][1],MORA_ENCHANTS_SLOT_THREE[i][0]);
+		}
+		
+		//Mora (Garment)
+		myInnerHtml("A_MORAETextG1","Mora 1: ",0);
+		myInnerHtml("A_MORAETextG2","Mora 2: ",0);
+		myInnerHtml("A_MORAETextG2","Mora 3: ",0);
+
+		A_MORAEG1.options[0] = new Option("(Loki's Muffler Enchant "+ A_MORAEG1.name.substr(-1) +")",0);
+		A_MORAEG2.options[0] = new Option("(Loki's Muffler Enchant "+ A_MORAEG2.name.substr(-1) +")",0);
+		A_MORAEG3.options[0] = new Option("(Loki's Muffler Enchant "+ A_MORAEG3.name.substr(-1) +")",0);
+
+		for(i=0; i<MORA_ENCHANTS_SLOT_ONE.length; i++) {
+			A_MORAEG1.options[i+1] = new Option(MORA_ENCHANTS_SLOT_ONE[i][1],MORA_ENCHANTS_SLOT_ONE[i][0]);
+		}
+		for(i=0; i<MORA_ENCHANTS_SLOT_TWO.length; i++) {
+			A_MORAEG2.options[i+1] = new Option(MORA_ENCHANTS_SLOT_TWO[i][1],MORA_ENCHANTS_SLOT_TWO[i][0]);
+		}
+		for(i=0; i<MORA_ENCHANTS_SLOT_THREE.length; i++) {
+			A_MORAEG3.options[i+1] = new Option(MORA_ENCHANTS_SLOT_THREE[i][1],MORA_ENCHANTS_SLOT_THREE[i][0]);
+		}
+		
+		//Mora (Accessory)
+		myInnerHtml("A_MORAETextAC11","Mora 1: ",0);
+		myInnerHtml("A_MORAETextAC12","Mora 2: ",0);
+		myInnerHtml("A_MORAETextAC12","Mora 3: ",0);
+		myInnerHtml("A_MORAETextAC21","Mora 1: ",0);
+		myInnerHtml("A_MORAETextAC22","Mora 2: ",0);
+		myInnerHtml("A_MORAETextAC22","Mora 3: ",0);
+
+		A_MORAEAC11.options[0] = new Option("(Pendant Of Guardian Enchant "+ A_MORAEAC11.name.substr(-1) +")",0);
+		A_MORAEAC12.options[0] = new Option("(Pendant Of Guardian Enchant "+ A_MORAEAC12.name.substr(-1) +")",0);
+		A_MORAEAC13.options[0] = new Option("(Pendant Of Guardian Enchant "+ A_MORAEAC13.name.substr(-1) +")",0);
+		A_MORAEAC21.options[0] = new Option("(Pendant Of Guardian Enchant "+ A_MORAEAC21.name.substr(-1) +")",0);
+		A_MORAEAC22.options[0] = new Option("(Pendant Of Guardian Enchant "+ A_MORAEAC22.name.substr(-1) +")",0);
+		A_MORAEAC23.options[0] = new Option("(Pendant Of Guardian Enchant "+ A_MORAEAC23.name.substr(-1) +")",0);
+
+		for(i=0; i<MORA_ENCHANTS_SLOT_ONE.length; i++) {
+			A_MORAEAC11.options[i+1] = new Option(MORA_ENCHANTS_SLOT_ONE[i][1],MORA_ENCHANTS_SLOT_ONE[i][0]);
+			A_MORAEAC21.options[i+1] = new Option(MORA_ENCHANTS_SLOT_ONE[i][1],MORA_ENCHANTS_SLOT_ONE[i][0]);
+		}
+		for(i=0; i<MORA_ENCHANTS_SLOT_TWO.length; i++) {
+			A_MORAEAC12.options[i+1] = new Option(MORA_ENCHANTS_SLOT_TWO[i][1],MORA_ENCHANTS_SLOT_TWO[i][0]);
+			A_MORAEAC22.options[i+1] = new Option(MORA_ENCHANTS_SLOT_TWO[i][1],MORA_ENCHANTS_SLOT_TWO[i][0]);
+		}
+		for(i=0; i<MORA_ENCHANTS_SLOT_THREE.length; i++) {
+			A_MORAEAC13.options[i+1] = new Option(MORA_ENCHANTS_SLOT_THREE[i][1],MORA_ENCHANTS_SLOT_THREE[i][0]);
+			A_MORAEAC23.options[i+1] = new Option(MORA_ENCHANTS_SLOT_THREE[i][1],MORA_ENCHANTS_SLOT_THREE[i][0]);
 		}
 
+		//Hidden Slot Enchant (Armor)
+		A_HSE.options[0] = new Option("(Hidden Slot Enchant, Armor)",0);
 		for(var i=0; i<HS_ENCHANTS.length; i++) {
-			A_HSE.options[i] = new Option(HS_ENCHANTS[i][1],HS_ENCHANTS[i][0]);
+			A_HSE.options[i+1] = new Option(HS_ENCHANTS[i][1],HS_ENCHANTS[i][0]);
 		}
 	}
 }
@@ -4822,7 +5204,7 @@ function tRO_PopulateCombos() {
 	[Custom TalonRO 2018-06-14 - Function to perform the click changes,
 	it's responsible for elements displays changes and enchant removal exceptions
 	Requires etc.js->arrays: ME_ENCHANTABLE and MALANGDO_ENCHANTS, index.html->select: A_ME11, A_ME12, A_ME21, A_ME22
-] [Kato]
+	] [Kato]
 */
 function tRO_Click_MalangdoEnchantment(w1,w2){
 
@@ -4858,9 +5240,9 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 		document.calcForm.A_ME21.value = 0;
 		document.calcForm.A_ME22.value = 0;
 	}
-
+	
 	with(document.calcForm){
-			if(ME_ENCHANTABLE[kID1][1] != 0) {
+		if(ME_ENCHANTABLE[kID1][1] != 0) {
 				var arEx = [];
 				for(i=1; i<ME_ENCHANTABLE[kID1].length; i++){
 					if(ME_ENCHANTABLE[kID1][i] != 0) {
@@ -4872,21 +5254,21 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 					for (j = A_ME11.length - 1; j >= 0; j--) {
 						if(parseInt(arEx.indexOf(A_ME11.options[j].value)) != -1) {
 								A_ME11.options[j].disabled = true;
-								A_ME11.options[j].classList.add('prohibted');
+								A_ME11.options[j].classList.add('prohibited');
 						}
 					}
 					for(j = A_ME12.length - 1; j >= 0; j--){
 							if(parseInt(arEx.indexOf(A_ME12.options[j].value)) != -1) {
 								A_ME12.options[j].disabled = true;
-								A_ME12.options[j].classList.add('prohibted');
+								A_ME12.options[j].classList.add('prohibited');
 							}
 					}
 				}
 		} else {
 			for(j = MALANGDO_ENCHANTS.length - 1; j >= 0; j--){
 				A_ME11.options[j].disabled = A_ME12.options[j].disabled = false;
-				A_ME11.options[j].classList.remove('prohibted');
-				A_ME12.options[j].classList.remove('prohibted');
+				A_ME11.options[j].classList.remove('prohibited');
+				A_ME12.options[j].classList.remove('prohibited');
 			}
 		}
 
@@ -4901,25 +5283,831 @@ function tRO_Click_MalangdoEnchantment(w1,w2){
 				for (j = A_ME21.length - 1; j >= 0; j--) {
 					if(arEx.indexOf(A_ME21.options[j].value) != -1) {
 						A_ME21.options[j].disabled = true;
-						A_ME21.options[j].classList.add('prohibted');
+						A_ME21.options[j].classList.add('prohibited');
 					}
 				}
 				for (j = A_ME22.length - 1; j >= 0; j--) {
 						if(arEx.indexOf(A_ME22.options[j].value) != -1) {
 							A_ME22.options[j].disabled = true;
-							A_ME22.options[j].classList.add('prohibted');
+							A_ME22.options[j].classList.add('prohibited');
 						}
 				}
 		} else {
 			for(j = MALANGDO_ENCHANTS.length - 1; j >= 0; j--){
 				A_ME21.options[j].disabled = A_ME22.options[j].disabled = false;
-				A_ME21.options[j].classList.remove('prohibted');
-				A_ME22.options[j].classList.remove('prohibted');
+				A_ME21.options[j].classList.remove('prohibited');
+				A_ME22.options[j].classList.remove('prohibited');
 			}
 		}
 	}
 	tRO_MalangdoEnchantment = [document.calcForm.A_ME11.value,document.calcForm.A_ME12.value,document.calcForm.A_ME21.value,document.calcForm.A_ME22.value];
 }
+
+//custom TalonRO Biolab Weapon Enchantment
+function Click_BiolabWeaponEnchantment(w1, w2){
+with(document.calcForm){
+	var bEnchant1 = bEnchant2 = false;
+	var kID1 = kID2 = 0;
+	if(w1) {
+			for(i=0; i<BE_ENCHANTABLE_WEAPON.length; i++) {
+				if(BE_ENCHANTABLE_WEAPON[i][0] == w1) {
+					bEnchant1 = true;
+					kID1 = i;
+					break;
+				}
+			}
+	}
+	if(w2) {
+			for(i=0;i<BE_ENCHANTABLE_WEAPON.length;i++) {
+				if(BE_ENCHANTABLE_WEAPON[i][0] == w2) {
+					bEnchant2 = true;
+					kID2 = i;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_BE1").style.display = ((bEnchant1) ? "" : "none");
+	document.getElementById("T_BE2").style.display = ((bEnchant2) ? "" : "none");
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_BE11.value = 0;
+		document.calcForm.A_BE12.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_BE21.value = 0;
+		document.calcForm.A_BE22.value = 0;
+	}
+	
+	tRO_BiolabWeaponEnchantment = [document.calcForm.A_BE11.value,document.calcForm.A_BE12.value,document.calcForm.A_BE21.value,document.calcForm.A_BE22.value];
+}}
+
+function Click_EdenWeaponEnchantment(w1,w2){
+
+	var bEnchant1 = bEnchant2 = false;
+	if(w1) {
+			for(i=0; i<EDEN_ENCHANTABLE_WEAPON.length; i++) {
+				if(EDEN_ENCHANTABLE_WEAPON[i][0] == w1) {
+					bEnchant1 = true;
+					break;
+				}
+			}
+	}
+	if(w2) {
+			for(i=0;i<EDEN_ENCHANTABLE_WEAPON.length;i++) {
+				if(EDEN_ENCHANTABLE_WEAPON[i][0] == w2) {
+					bEnchant2 = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_EE1").style.display = ((bEnchant1) ? "" : "none");
+	document.getElementById("T_EE2").style.display = ((bEnchant2) ? "" : "none");
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_EE11.value = 0;
+		document.calcForm.A_EE12.value = 0;
+		document.calcForm.A_EE13.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_EE21.value = 0;
+		document.calcForm.A_EE22.value = 0;
+		document.calcForm.A_EE23.value = 0;
+	}
+	
+	with(document.calcForm){
+		//Populate option for slot 2 depending on choice of slot 1
+		//Weapon 1
+		switch(A_EE11.value) {
+		case "172":
+			if (!(A_EE12.value >= 2030 && A_EE12.value <= 2039)) {
+				//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE12);
+				A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+					A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+				}
+			}
+			break;
+		case "892":
+			if (!(A_EE12.value >= 2170 && A_EE12.value <= 2179)) {
+				//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE12);
+				A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+					A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+				}
+			}
+			break;
+		default:
+			//Clear slot 2
+			removeOptions(A_EE12);
+			A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+		}
+		
+		//Weapon 2
+		switch(A_EE21.value) {
+		case "172":
+			if (!(A_EE22.value >= 2030 && A_EE22.value <= 2039)) {
+				//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE22);
+				A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+					A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+				}
+			}
+			break;
+		case "892":
+			if (!(A_EE22.value >= 2170 && A_EE22.value <= 2179)) {
+				//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE22);
+				A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+					A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+				}
+			}
+			break;
+		default:
+			//Clear slot 2
+			removeOptions(A_EE22);
+			A_EE22.options[0] = new Option("(Eden Enchant "+ A_EE22.name.substr(-1) +")",0);
+		}
+		
+		//Populate option for slot 3 depending on choice of slot 1 and slot 2
+		//Weapon 1
+		if (!(A_EE13.value == A_EE11.value || A_EE13.value == A_EE12.value)) {
+			var option1Text = option2Text = "";
+			
+			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE11.value) {
+					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+					break;
+				}
+			}
+			
+			if (A_EE12.value >= 30 && A_EE12.value <= 39) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE12.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			if (A_EE12.value >= 170 && A_EE12.value <= 179) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE12.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			removeOptions(A_EE13);
+			A_EE13.options[0] = new Option("(Eden Enchant "+ A_EE13.name.substr(-1) +")",0);
+			A_EE13.options[1] = new Option(option1Text,A_EE11.value);
+			A_EE13.options[2] = new Option(option2Text,A_EE12.value);
+		}
+		//Weapon 2
+		if (!(A_EE23.value == A_EE21.value || A_EE23.value == A_EE22.value)) {
+			var option1Text = option2Text = "";
+			
+			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE21.value) {
+					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+					break;
+				}
+			}
+			
+			if (A_EE22.value >= 30 && A_EE22.value <= 39) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE22.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			if (A_EE22.value >= 170 && A_EE22.value <= 179) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE22.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			removeOptions(A_EE23);
+			A_EE23.options[0] = new Option("(Eden Enchant 2-"+ A_EE23.name.substr(-1) +")",0);
+			A_EE23.options[1] = new Option(option1Text,A_EE21.value);
+			A_EE23.options[2] = new Option(option2Text,A_EE22.value);
+		}
+		
+	}
+
+	tRO_EdenWeaponEnchantment = [document.calcForm.A_EE11.value,document.calcForm.A_EE12.value,document.calcForm.A_EE13.value,document.calcForm.A_EE21.value,document.calcForm.A_EE22.value,document.calcForm.A_EE23.value];
+}
+
+//custom TalonRO Headgear Enchantment (Biolab & Eden)
+function Click_HeadgearEnchantment(h){
+with(document.calcForm){
+	var bEnchant;
+	if(h) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == h) {
+					bEnchant = "biolab";
+					break;
+				}
+			}
+	}
+	if(h) {
+			for(i=0; i<EDEN_ENCHANTABLE_HAT.length; i++) {
+				if(EDEN_ENCHANTABLE_HAT[i][0] == h) {
+					bEnchant = "eden";
+					break;
+				}
+			}
+	}
+	
+	switch(bEnchant) {
+    case "biolab":
+		//Hide other enchant options
+		document.getElementById("T_EEH1").style.display = "none";
+		document.getElementById("T_EEH2").style.display = "none";
+		document.getElementById("T_HEAD1_TEMP").style.display = "none";
+		document.getElementById("T_HEAD2_TEMP").style.display = "none";
+		//Show enchant option for Biolab
+		document.getElementById("T_BEH1").style.display = "";
+		document.getElementById("T_BEH2").style.display = "";
+		//Clear other enchant option values
+		document.calcForm.A_EEH1.value = 0;
+		document.calcForm.A_EEH2.value = 0;
+        break;
+    case "eden":
+		//Hide other enchant options
+		document.getElementById("T_BEH1").style.display = "none";
+		document.getElementById("T_BEH2").style.display = "none";
+		document.getElementById("T_HEAD1_TEMP").style.display = "none";
+		document.getElementById("T_HEAD2_TEMP").style.display = "none";
+		//Show enchant option for Eden
+		document.getElementById("T_EEH1").style.display = "";
+		document.getElementById("T_EEH2").style.display = "";
+		//Clear other enchant option values
+		document.calcForm.A_BEH1.value = 0;
+		document.calcForm.A_BEH2.value = 0;
+        break;
+    default:
+		//Hide all enchant option for headgear
+		document.getElementById("T_BEH1").style.display = "none";
+		document.getElementById("T_BEH2").style.display = "none";
+		document.getElementById("T_EEH1").style.display = "none";
+		document.getElementById("T_EEH2").style.display = "none";
+		//Show blank placeholder <td>
+		document.getElementById("T_HEAD1_TEMP").style.display = "";
+		document.getElementById("T_HEAD2_TEMP").style.display = "";
+		//Clear all enchant option for headgear
+		document.calcForm.A_BEH1.value = 0;
+		document.calcForm.A_BEH2.value = 0;
+		document.calcForm.A_EEH1.value = 0;
+		document.calcForm.A_EEH2.value = 0;
+	}
+	
+	tRO_BiolabArmorEnchantment[0] = document.calcForm.A_BEH1.value;
+	tRO_BiolabArmorEnchantment[1] = document.calcForm.A_BEH2.value;
+	tRO_EdenArmorEnchantment[0] = document.calcForm.A_EEH1.value;
+	tRO_EdenArmorEnchantment[1] = document.calcForm.A_EEH2.value;
+}}
+
+//custom TalonRO Biolab Armor Enchantment
+function Click_BiolabArmorBodyEnchantment(a){
+with(document.calcForm){
+	var bEnchant = false;
+	if(a) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == a) {
+					bEnchant = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_BEA").style.display = ((bEnchant) ? "" : "none");
+
+	if(bEnchant == false) {
+		document.calcForm.A_BEA1.value = 0;
+		document.calcForm.A_BEA2.value = 0;
+	}
+
+	tRO_BiolabArmorEnchantment[2] = document.calcForm.A_BEA1.value;
+	tRO_BiolabArmorEnchantment[3] = document.calcForm.A_BEA2.value;
+}}
+
+//custom TalonRO Eden Armor Enchantment
+function Click_EdenArmorBodyEnchantment(a){
+with(document.calcForm){
+	var bEnchant = false;
+	if(a) {
+			for(i=0; i<EDEN_ENCHANTABLE_ARMOR.length; i++) {
+				if(EDEN_ENCHANTABLE_ARMOR[i][0] == a) {
+					bEnchant = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_EEA").style.display = ((bEnchant) ? "" : "none");
+
+	if(bEnchant == false) {
+		document.calcForm.A_EEA1.value = 0;
+		document.calcForm.A_EEA2.value = 0;
+	}
+
+	tRO_EdenArmorEnchantment[2] = document.calcForm.A_EEA1.value;
+	tRO_EdenArmorEnchantment[3] = document.calcForm.A_EEA2.value;
+}}
+
+//custom TalonRO Mora Armor Enchantment
+function Click_MoraArmorEnchantment(a){
+with(document.calcForm){
+	var bEnchant = false;
+	if(a) {
+			for(i=0; i<MORA_ENCHANTABLE.length; i++) {
+				if(MORA_ENCHANTABLE[i][0] == a) {
+					bEnchant = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_MORAEA").style.display = ((bEnchant) ? "" : "none");
+
+	if(bEnchant == false) {
+		document.calcForm.A_MORAEA1.value = 0;
+		document.calcForm.A_MORAEA2.value = 0;
+		document.calcForm.A_MORAEA3.value = 0;
+	}
+
+	tRO_MoraEnchantment[0] = document.calcForm.A_MORAEA1.value;
+	tRO_MoraEnchantment[1] = document.calcForm.A_MORAEA2.value;
+	tRO_MoraEnchantment[2] = document.calcForm.A_MORAEA3.value;
+}}
+
+//custom TalonRO Biolab Shield Enchantment
+function Click_BiolabArmorShieldEnchantment(s){
+with(document.calcForm){
+	var bEnchant = false;
+	if(s) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == s) {
+					bEnchant = true;
+					break;
+				}
+			}
+	}
+
+	if (bEnchant) {
+		document.getElementById("T_BES1_TEMP").style.display = "none";
+		document.getElementById("T_BES2_TEMP").style.display = "none";
+		document.getElementById("T_BES1").style.display = "";
+		document.getElementById("T_BES2").style.display = "";
+	} else {
+		document.getElementById("T_BES1").style.display = "none";
+		document.getElementById("T_BES2").style.display = "none";
+		document.getElementById("T_BES1_TEMP").style.display = "";
+		document.getElementById("T_BES2_TEMP").style.display = "";
+	}
+
+	if(bEnchant == false) {
+		document.calcForm.A_BES1.value = 0;
+		document.calcForm.A_BES2.value = 0;
+	}
+
+	tRO_BiolabArmorEnchantment[4] = document.calcForm.A_BES1.value;
+	tRO_BiolabArmorEnchantment[5] = document.calcForm.A_BES2.value;
+}}
+
+//custom TalonRO Garment Enchantment (Biolab & Eden)
+function Click_GarmentEnchantment(g){
+with(document.calcForm){
+	var bEnchant;
+	if(g) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == g) {
+					bEnchant = "biolab";
+					break;
+				}
+			}
+	}
+	if(g) {
+			for(i=0; i<EDEN_ENCHANTABLE_ARMOR.length; i++) {
+				if(EDEN_ENCHANTABLE_ARMOR[i][0] == g) {
+					bEnchant = "eden";
+					break;
+				}
+			}
+	}
+
+	switch(bEnchant) {
+    case "biolab":
+		//Hide other enchant option for garment
+		document.getElementById("T_EEG1").style.display = "none";
+		document.getElementById("T_EEG2").style.display = "none";
+		document.getElementById("T_GAR1_TEMP").style.display = "none";
+		document.getElementById("T_GAR2_TEMP").style.display = "none";
+		//Show enchant option for Biolab garment
+		document.getElementById("T_BEG1").style.display = "";
+		document.getElementById("T_BEG2").style.display = "";
+		//Clear other enchant option values
+		document.calcForm.A_EEG1.value = 0;
+		document.calcForm.A_EEG2.value = 0;
+        break;
+    case "eden":
+		//Hide other enchant option for garment
+		document.getElementById("T_BEG1").style.display = "none";
+		document.getElementById("T_BEG2").style.display = "none";
+		document.getElementById("T_GAR1_TEMP").style.display = "none";
+		document.getElementById("T_GAR2_TEMP").style.display = "none";
+		//Show enchant option for Eden garment
+		document.getElementById("T_EEG1").style.display = "";
+		document.getElementById("T_EEG2").style.display = "";
+		//Clear other enchant option values
+		document.calcForm.A_BEG1.value = 0;
+		document.calcForm.A_BEG2.value = 0;
+        break;
+    default:
+		//Hide all enchant option for garment
+		document.getElementById("T_BEG1").style.display = "none";
+		document.getElementById("T_BEG2").style.display = "none";
+		document.getElementById("T_EEG1").style.display = "none";
+		document.getElementById("T_EEG2").style.display = "none";
+		//Show blank placeholder <td>
+		document.getElementById("T_GAR1_TEMP").style.display = "";
+		document.getElementById("T_GAR2_TEMP").style.display = "";
+		//Clear all enchant option for garment
+		document.calcForm.A_BEG1.value = 0;
+		document.calcForm.A_BEG2.value = 0;
+		document.calcForm.A_EEG1.value = 0;
+		document.calcForm.A_EEG2.value = 0;
+	}
+	
+	tRO_BiolabArmorEnchantment[6] = document.calcForm.A_BEG1.value;
+	tRO_BiolabArmorEnchantment[7] = document.calcForm.A_BEG2.value;
+	tRO_EdenArmorEnchantment[4] = document.calcForm.A_EEG1.value;
+	tRO_EdenArmorEnchantment[5] = document.calcForm.A_EEG2.value;
+}}
+
+//custom TalonRO El Dicaste Garment Enchantment
+function Click_EDGarmentEnchantment(g){
+with(document.calcForm){
+	var bEnchant = false;
+	if(g) {
+			for(i=0; i<ED_ENCHANTABLE.length; i++) {
+				if(ED_ENCHANTABLE[i][0] == g) {
+					bEnchant = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_EDG").style.display = ((bEnchant) ? "" : "none");
+
+	if(bEnchant == false) {
+		document.calcForm.A_EDG1.value = 0;
+		document.calcForm.A_EDG2.value = 0;
+		document.calcForm.A_EDG3.value = 0;
+	}
+
+	tRO_EDEnchantment[0] = document.calcForm.A_EDG1.value;
+	tRO_EDEnchantment[1] = document.calcForm.A_EDG2.value;
+	tRO_EDEnchantment[2] = document.calcForm.A_EDG3.value;
+}}
+
+//custom TalonRO Mora Garment Enchantment
+function Click_MoraGarmentEnchantment(g){
+with(document.calcForm){
+	var bEnchant = false;
+	if(g) {
+			for(i=0; i<MORA_ENCHANTABLE.length; i++) {
+				if(MORA_ENCHANTABLE[i][0] == g) {
+					bEnchant = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_MORAEG").style.display = ((bEnchant) ? "" : "none");
+
+	if(bEnchant == false) {
+		document.calcForm.A_MORAEG1.value = 0;
+		document.calcForm.A_MORAEG2.value = 0;
+		document.calcForm.A_MORAEG3.value = 0;
+	}
+
+	tRO_MoraEnchantment[3] = document.calcForm.A_MORAEG1.value;
+	tRO_MoraEnchantment[4] = document.calcForm.A_MORAEG2.value;
+	tRO_MoraEnchantment[5] = document.calcForm.A_MORAEG3.value;
+}}
+
+//custom TalonRO Eden Footgear Enchantment
+function Click_FootgearEnchantment(f) {
+with(document.calcForm){
+	var bEnchant = false;
+	if(f) {
+			for(i=0; i<EDEN_ENCHANTABLE_ARMOR.length; i++) {
+				if(EDEN_ENCHANTABLE_ARMOR[i][0] == f) {
+					bEnchant = true;
+					break;
+				}
+			}
+	}
+	
+	if (bEnchant) {
+		document.getElementById("T_FOOT1_TEMP").style.display = "none";
+		document.getElementById("T_FOOT2_TEMP").style.display = "none";
+		document.getElementById("T_EEF1").style.display = "";
+		document.getElementById("T_EEF2").style.display = "";
+	} else {
+		document.getElementById("T_EEF1").style.display = "none";
+		document.getElementById("T_EEF2").style.display = "none";
+		document.getElementById("T_FOOT1_TEMP").style.display = "";
+		document.getElementById("T_FOOT2_TEMP").style.display = "";
+	}
+	
+	if(bEnchant == false) {
+		document.calcForm.A_EEF1.value = 0;
+		document.calcForm.A_EEF2.value = 0;
+	}
+
+	tRO_EdenArmorEnchantment[6] = document.calcForm.A_EEF1.value;
+	tRO_EdenArmorEnchantment[7] = document.calcForm.A_EEF2.value;
+}}
+
+//custom TalonRO El Dicaste Footgear Enchantment
+function Click_EDFootgearEnchantment(f){
+with(document.calcForm){
+	var bEnchant = false;
+	if(f) {
+			for(i=0; i<MORA_ENCHANTABLE.length; i++) {
+				if(MORA_ENCHANTABLE[i][0] == f) {
+					bEnchant = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_EDF").style.display = ((bEnchant) ? "" : "none");
+
+	if(bEnchant == false) {
+		document.calcForm.A_EDF1.value = 0;
+		document.calcForm.A_EDF2.value = 0;
+		document.calcForm.A_EDF3.value = 0;
+	}
+
+	tRO_EDEnchantment[3] = document.calcForm.A_EDF1.value;
+	tRO_EDEnchantment[4] = document.calcForm.A_EDF2.value;
+	tRO_EDEnchantment[5] = document.calcForm.A_EDF3.value;
+}}
+
+//custom TalonRO Biolab Accessory Enchantment
+function Click_AccessoryEnchantment(a1, a2){
+with(document.calcForm){
+	var bEnchant1 = bEnchant2 = false;
+	if(a1) {
+			for(i=0; i<BE_ENCHANTABLE_ARMOR.length; i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == a1) {
+					bEnchant1 = true;
+					break;
+				}
+			}
+	}
+	if(a2) {
+			for(i=0;i<BE_ENCHANTABLE_ARMOR.length;i++) {
+				if(BE_ENCHANTABLE_ARMOR[i][0] == a2) {
+					bEnchant2 = true;
+					break;
+				}
+			}
+	}
+
+	if (bEnchant1) {
+		document.getElementById("T_BEAC11").style.display = "";
+		document.getElementById("T_BEAC12").style.display = "";
+		document.getElementById("T_ACC11_TEMP").style.display = "none";
+		document.getElementById("T_ACC12_TEMP").style.display = "none";
+	} else {
+		document.getElementById("T_BEAC11").style.display = "none";
+		document.getElementById("T_BEAC12").style.display = "none";
+		document.getElementById("T_ACC11_TEMP").style.display = "";
+		document.getElementById("T_ACC12_TEMP").style.display = "";
+	}
+	
+	if (bEnchant2) {
+		document.getElementById("T_BEAC21").style.display = "";
+		document.getElementById("T_BEAC22").style.display = "";
+		document.getElementById("T_ACC21_TEMP").style.display = "none";
+		document.getElementById("T_ACC22_TEMP").style.display = "none";
+	} else {
+		document.getElementById("T_BEAC21").style.display = "none";
+		document.getElementById("T_BEAC22").style.display = "none";
+		document.getElementById("T_ACC21_TEMP").style.display = "";
+		document.getElementById("T_ACC22_TEMP").style.display = "";
+	}
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_BEAC11.value = 0;
+		document.calcForm.A_BEAC12.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_BEAC21.value = 0;
+		document.calcForm.A_BEAC22.value = 0;
+	}
+
+	tRO_BiolabArmorEnchantment[8] = document.calcForm.A_BEAC11.value;
+	tRO_BiolabArmorEnchantment[9] = document.calcForm.A_BEAC12.value;
+	tRO_BiolabArmorEnchantment[10] = document.calcForm.A_BEAC21.value;
+	tRO_BiolabArmorEnchantment[11] = document.calcForm.A_BEAC22.value;
+}}
+
+//custom TalonRO Light of El Dicaste Enchantment
+function Click_LOEDEnchantment(ac1, ac2){
+with(document.calcForm){
+	var bEnchant1 = bEnchant2 = false;
+	if(ac1) {
+			for(i=0; i<ED_LIGHT_OF_EL_DICASTE.length; i++) {
+				if(ED_LIGHT_OF_EL_DICASTE[i][0] == ac1) {
+					bEnchant1 = true;
+					break;
+				}
+			}
+	}
+	if(ac2) {
+			for(i=0; i<ED_LIGHT_OF_EL_DICASTE.length; i++) {
+				if(ED_LIGHT_OF_EL_DICASTE[i][0] == ac2) {
+					bEnchant2 = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_EDLOED1").style.display = ((bEnchant1) ? "" : "none");
+	document.getElementById("T_EDLOED2").style.display = ((bEnchant2) ? "" : "none");
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_EDLOED11.value = 0;
+		document.calcForm.A_EDLOED12.value = 0;
+		document.calcForm.A_EDLOED13.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_EDLOED21.value = 0;
+		document.calcForm.A_EDLOED22.value = 0;
+		document.calcForm.A_EDLOED23.value = 0;
+	}
+
+	tRO_EDEnchantment[6] = document.calcForm.A_EDLOED11.value;
+	tRO_EDEnchantment[7] = document.calcForm.A_EDLOED12.value;
+	tRO_EDEnchantment[8] = document.calcForm.A_EDLOED13.value;
+	tRO_EDEnchantment[9] = document.calcForm.A_EDLOED21.value;
+	tRO_EDEnchantment[10] = document.calcForm.A_EDLOED22.value;
+	tRO_EDEnchantment[11] = document.calcForm.A_EDLOED23.value;
+}}
+
+//custom TalonRO El Dicaste Accessory Enchantment
+function Click_EDAccessoryEnchantment(ac1, ac2){
+with(document.calcForm){
+	var kID1 = kID2 = 0;
+	var bEnchant1 = bEnchant2 = false;
+	if(ac1) {
+			for(i=0; i<ED_ENCHANTABLE.length; i++) {
+				if(ED_ENCHANTABLE[i][0] == ac1) {
+					bEnchant1 = true;
+					kID1 = i;
+					break;
+				}
+			}
+	}
+	if(ac2) {
+			for(i=0; i<ED_ENCHANTABLE.length; i++) {
+				if(ED_ENCHANTABLE[i][0] == ac2) {
+					bEnchant2 = true;
+					kID2 = i;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_EDAC1").style.display = ((bEnchant1) ? "" : "none");
+	document.getElementById("T_EDAC2").style.display = ((bEnchant2) ? "" : "none");
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_EDAC11.value = 0;
+		document.calcForm.A_EDAC12.value = 0;
+		document.calcForm.A_EDAC13.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_EDAC21.value = 0;
+		document.calcForm.A_EDAC22.value = 0;
+		document.calcForm.A_EDAC23.value = 0;
+	}
+	
+	with(document.calcForm){
+		if(ED_ENCHANTABLE[kID1][1] != 0) {
+				var arEx = [];
+				for(i=1; i<ED_ENCHANTABLE[kID1].length; i++){
+					if(ED_ENCHANTABLE[kID1][i] != 0) {
+						arEx.push(ED_ENCHANTABLE[kID1][i].toString());
+					}
+					else break;
+				}
+				if(arEx.length > 0 ) {
+					for (j = A_EDAC13.length - 1; j >= 0; j--) {
+						if(parseInt(arEx.indexOf(A_EDAC13.options[j].value)) != -1) {
+								A_EDAC13.options[j].disabled = true;
+								A_EDAC13.options[j].classList.add('prohibited');
+						}
+					}
+				}
+		} else {
+			for(j = ED_ENCHANTS_SLOT_THREE.length - 1; j >= 0; j--){
+				A_EDAC13.options[j].disabled = false;
+				A_EDAC13.options[j].classList.remove('prohibited');
+			}
+		}
+		
+		if(ED_ENCHANTABLE[kID2][1] != 0) {
+				var arEx = [];
+				for(i=1; i<ED_ENCHANTABLE[kID1].length; i++){
+					if(ED_ENCHANTABLE[kID1][i] != 0) {
+						arEx.push(ED_ENCHANTABLE[kID1][i].toString());
+					}
+					else break;
+				}
+				if(arEx.length > 0 ) {
+					for (j = A_EDAC23.length - 1; j >= 0; j--) {
+						if(parseInt(arEx.indexOf(A_EDAC23.options[j].value)) != -1) {
+								A_EDAC23.options[j].disabled = true;
+								A_EDAC23.options[j].classList.add('prohibited');
+						}
+					}
+				}
+		} else {
+			for(j = ED_ENCHANTS_SLOT_THREE.length - 1; j >= 0; j--){
+				A_EDAC23.options[j].disabled = false;
+				A_EDAC23.options[j].classList.remove('prohibited');
+			}
+		}
+	}
+
+	tRO_EDEnchantment[6] = document.calcForm.A_EDAC11.value;
+	tRO_EDEnchantment[7] = document.calcForm.A_EDAC12.value;
+	tRO_EDEnchantment[8] = document.calcForm.A_EDAC13.value;
+	tRO_EDEnchantment[9] = document.calcForm.A_EDAC21.value;
+	tRO_EDEnchantment[10] = document.calcForm.A_EDAC22.value;
+	tRO_EDEnchantment[11] = document.calcForm.A_EDAC23.value;
+}}
+
+//custom TalonRO Mora Accessory Enchantment
+function Click_MoraAccessoryEnchantment(ac1, ac2){
+with(document.calcForm){
+	var bEnchant1 = bEnchant2 = false;
+	if(ac1) {
+			for(i=0; i<MORA_ENCHANTABLE.length; i++) {
+				if(MORA_ENCHANTABLE[i][0] == ac1) {
+					bEnchant1 = true;
+					break;
+				}
+			}
+	}
+	if(ac2) {
+			for(i=0; i<MORA_ENCHANTABLE.length; i++) {
+				if(MORA_ENCHANTABLE[i][0] == ac2) {
+					bEnchant2 = true;
+					break;
+				}
+			}
+	}
+
+	document.getElementById("T_MORAEAC1").style.display = ((bEnchant1) ? "" : "none");
+	document.getElementById("T_MORAEAC2").style.display = ((bEnchant2) ? "" : "none");
+
+	if(bEnchant1 == false) {
+		document.calcForm.A_MORAEAC11.value = 0;
+		document.calcForm.A_MORAEAC12.value = 0;
+		document.calcForm.A_MORAEAC13.value = 0;
+	}
+	if(bEnchant2 == false) {
+		document.calcForm.A_MORAEAC21.value = 0;
+		document.calcForm.A_MORAEAC22.value = 0;
+		document.calcForm.A_MORAEAC23.value = 0;
+	}
+
+	tRO_MoraEnchantment[6] = document.calcForm.A_MORAEAC11.value;
+	tRO_MoraEnchantment[7] = document.calcForm.A_MORAEAC12.value;
+	tRO_MoraEnchantment[8] = document.calcForm.A_MORAEAC13.value;
+	tRO_MoraEnchantment[9] = document.calcForm.A_MORAEAC21.value;
+	tRO_MoraEnchantment[10] = document.calcForm.A_MORAEAC22.value;
+	tRO_MoraEnchantment[11] = document.calcForm.A_MORAEAC23.value;
+}}
 
 function Click_Skill9SW(){
 with(document.calcForm){
@@ -7111,8 +8299,22 @@ function tPlusDamCut(wPDC){
 	}
 
 	if(wBTw1==0){
+		
+		//If Lex Aeterna DMG x2
+		//old:
+		/*
 		if(n_B_IJYOU[6] && wLAch==0)
 			wPDC *= 2;
+		*/
+		//new:
+		//Remove Lex Aeterna Calculation For Asura Strike.
+		//Moved Calculation to after Asura Soft-Cap Nerf
+		if(n_A_ActiveSkill != 197 && n_A_ActiveSkill != 321) {
+			if(n_B_IJYOU[6] && wLAch==0){
+				wPDC *= 2;
+			}
+		}
+		
 		if(n_B_IJYOU[17] && n_A_Weapon_zokusei == 3)
 			wPDC *= 2;
 		baizok = [110,114,117,119,120];
@@ -7365,4 +8567,14 @@ function VanillaCardLeft(){
 			removedCardsLeft.splice(i,1);
 		}
 	}
+}
+
+//for clearing options from select. (For Eden Weapon Enchant Slot 2 & 3)
+function removeOptions(selectbox)
+{
+    var i;
+    for(i = selectbox.options.length - 1 ; i >= 0 ; i--)
+    {
+        selectbox.remove(i);
+    }
 }

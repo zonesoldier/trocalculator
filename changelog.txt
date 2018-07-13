@@ -1,7 +1,30 @@
+[Update 2018-07-13]
+- Added Army Padding [NattWara]
+- Added Pendant of Guardian [NattWara]
+- Added Holy Kurobuku [NattWara]
+- Added Love Guard [NattWara]
+- Added Tear Drop [NattWara]
+
+[Update 2018-07-12]
+- Added Eden Enchants [NattWara]
+- Added El Dicaste Enchants [NattWara]
+- Added Mora Enchants [NattWara]
+
+[Update 2018-07-10]
+- Added Biolab Enchants [NattWara]
+
 [Update 2018-07-09]
+- Added Ancient Gold Adornment [NattWara]
 - Issue #238: Added vanilla mode [Loa]
 	Main functions at bottom of head.js
 	Vanilla mode saving is not implemented
+
+[Update 2018-07-07]
+- Issue #238: Added vanilla mode [Loa]
+	Moved left hand weapon card option generation to new function PopulateCardsLeft() in card.js
+	Added new function ClearCards() in card.js that removes all card select options
+	Added new function Vanilla() in head.js that switches between vanilla and non-vanilla mode
+		Dependent upon restrictedItems and restrictedCards arrays in etc.js
 
 [Update 2018-07-04]
 - Completed cardID array for linking [Loa]

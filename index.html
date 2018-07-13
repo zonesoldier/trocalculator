@@ -84,6 +84,7 @@
 					</div>
 	</div>
 </div>
+
 <div class="topic" style="margin-left: 6.5px;">
 <h3 style="font-size:15px">Character Simulator</h3>
 <table><tbody>
@@ -300,22 +301,24 @@
 				<select name="A_weapon1_card4" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
 			</td>
 		</tr>
-		<tr>
+		<tr style="display: none" id="T_KE1">
 			<td class="calc">
 				<span id="A_KEText11"></span>
-				<select name="A_KE11" style="visibility:hidden" onchange="StAllCalc()"></select>
+				<!-- <select name="A_KE11" style="visibility:hidden" onchange="StAllCalc()"></select> -->
+				<select name="A_KE11" onchange="StAllCalc()"></select>
 			</td>
 			<td class="calc">
 				<span id="A_KEText12"></span>
-				<select name="A_KE12" style="visibility:hidden" onchange="StAllCalc()"></select>
+				<!-- <select name="A_KE12" style="visibility:hidden" onchange="StAllCalc()"></select> -->
+				<select name="A_KE12" onchange="StAllCalc()"></select>
 			</td>
 			<td class="calc"></td>
 			<td class="calc"></td>
 		</tr>
-		<tr id="T_ME1">
+		<tr style="display: none" id="T_ME1">
 			<td class="calc">
 				<span id="A_METext11"></span>
-					<select name="A_ME11" onchange="StAllCalc()"></select>
+				<select name="A_ME11" onchange="StAllCalc()"></select>
 			</td>
 			<td class="calc">
 				<span id="A_METext12"></span>
@@ -324,135 +327,496 @@
 			<td class="calc"></td>
 			<td class="calc"></td>
 		</tr>
-		<tr>
+		
+		<tr style="display: none" id="T_BE1">
+			<td class="calc">
+				<span id="A_BEText11"></span>
+				<select name="A_BE11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_BEText12"></span>
+				<select name="A_BE12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+		<tr style="display: none" id="T_EE1">
+			<td class="calc">
+				<span id="A_EEText11"></span>
+				<select name="A_EE11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EEText12"></span>
+				<select name="A_EE12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EEText13"></span>
+				<select name="A_EE13" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc"></td>
+		</tr>
+		
+		<tr style="display: none" id="T_W2">
 			<td class="calc"><span id="spanA_weapon2"></span></td>
 			<td class="calc"><span id="spanA_weapon2seiren"></span></td>
 			<td class="calc"></td>
 			<td class="calc"><span id="spanA_weapon2_CardShort"></span></td>
 		</tr>
-		<tr>
+		<tr style="display: none" id="T_WC2">
 			<td class="calc"><span id="nA_weapon2_c1"></span></td>
 			<td class="calc"><span id="nA_weapon2_c2"></span></td>
 			<td class="calc"><span id="nA_weapon2_c3"></span></td>
 			<td class="calc"><span id="nA_weapon2_c4"></span></td>
 		</tr>
-		<tr>
+		<tr style="display: none" id="T_KE2">
 			<td class="calc">
 				<span id="A_KEText21"></span>
-					<select name="A_KE21" style="visibility:hidden" onchange="StAllCalc()"></select>
+				<!-- <select name="A_KE21" style="visibility:hidden" onchange="StAllCalc()"></select> -->
+				<select name="A_KE21" onchange="StAllCalc()"></select>
 			</td>
 			<td class="calc">
 				<span id="A_KEText22"></span>
-				<select name="A_KE22" style="visibility:hidden" onchange="StAllCalc()"></select>
+				<!-- <select name="A_KE22" style="visibility:hidden" onchange="StAllCalc()"></select> -->
+				<select name="A_KE22" onchange="StAllCalc()"></select>
 			</td>
 			<td class="calc"></td>
 			<td class="calc"></td>
-	</tr>
-	<tr style="display: none" id="T_ME2">
-		<td class="calc">
-			<span id="A_METext21"></span>
+		</tr>
+		
+		<tr style="display: none" id="T_ME2">
+			<td class="calc">
+				<span id="A_METext21"></span>
 				<select name="A_ME21" onchange="StAllCalc()"></select>
-		</td>
-		<td class="calc">
-			<span id="A_METext22"></span>
-			<select name="A_ME22" onchange="StAllCalc()"></select>
-		</td>
-		<td class="calc"></td>
-		<td class="calc"></td>
-	</tr>
-	<tr>
-		<td class="calc"></td>
-		<td class="calc"></td>
-		<td class="calc"></td>
-		<td class="calc"></td>
-</tr>
-	<tr>
-		<td class="calc">
-		<select name="A_HEAD_DEF_PLUS" onchange="StAllCalc()"></select>
-			<select name="A_head1" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_head1_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc"></td>
-		<td class="calc"></td>
-	</tr>
-	<tr>
-		<td class="calc">
-			<select style="margin-left: 51px" name="A_head2" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_head2_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc"></td>
-		<td class="calc"></td>
-	</tr>
-	<tr>
-		<td class="calc">
-			<select style="margin-left: 51px" name="A_head3" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc"></td>
-		<td class="calc"></td>
-		<td class="calc"></td>
-	</tr>
-	<tr>
-		<td class="calc">
-			<select name="A_BODY_DEF_PLUS" onchange="StAllCalc()"></select>
-			<select name="A_body" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_body_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_HSE" onchange="StAllCalc()">
-			</select>
-		</td>
-		<td style="visibility: hidden;" class="calc">
-			<select name="A_HSE_HEAD1" onchange="StAllCalc()"></select>
-		</td>
-	</tr>
-	<tr>
-		<td class="calc">
-			<select style="visibility: visible;" name="A_LEFT_DEF_PLUS" onchange="StAllCalc()"></select>
-			<select style="visibility: visible;" name="A_left" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc" id="ID_C4">
-			<select style="visibility: visible;" name="A_left_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc"></td>
-		<td class="calc"></td>
-	</tr>
-	<tr>
-		<td class="calc">
-			<select name="A_SHOULDER_DEF_PLUS" onchange="StAllCalc()"></select>
-			<select name="A_shoulder" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_shoulder_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_acces1" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_acces1_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
-		</td>
-	</tr>
-	<tr>
-		<td class="calc">
-			<select name="A_SHOES_DEF_PLUS" onchange="StAllCalc()"></select>
-			<select name="A_shoes" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_shoes_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_acces2" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
-		</td>
-		<td class="calc">
-			<select name="A_acces2_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
-		</td>
-	</tr>
-</tbody>
+			</td>
+			<td class="calc">
+				<span id="A_METext22"></span>
+				<select name="A_ME22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+		
+		<tr style="display: none" id="T_BE2">
+			<td class="calc">
+				<span id="A_BEText21"></span>
+				<select name="A_BE21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_BEText22"></span>
+				<select name="A_BE22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+		
+		<tr style="display: none" id="T_EE2">
+			<td class="calc">
+				<span id="A_EEText21"></span>
+				<select name="A_EE21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EEText22"></span>
+				<select name="A_EE22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EEText23"></span>
+				<select name="A_EE23" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc"></td>
+		</tr>
+
+		<tr>
+			<td class="calc"></td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+
+		<tr>
+			<td class="calc">
+			<select name="A_HEAD_DEF_PLUS" onchange="StAllCalc()"></select>
+				<select name="A_head1" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_head1_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
+			</td>
+
+			<!-- Biolab Enchant Headgear 1 -->
+			<td class="calc" style="display: none" id="T_BEH1">
+				<span id="A_BETextH1"></span>
+				<select name="A_BEH1" onchange="StAllCalc()"></select>
+			</td>
+			<!-- Eden Enchant Headgear 1 -->
+			<td class="calc" style="display: none" id="T_EEH1">
+				<span id="A_EETextH1"></span>
+				<select name="A_EEH1" onchange="StAllCalc()"></select>
+			</td>
+			<!-- Placeholder 1 -->
+			<td class="calc" id="T_HEAD1_TEMP"></td>
+			
+			<!-- Biolab Enchant Headgear 2 -->
+			<td class="calc" style="display: none" id="T_BEH2">
+				<span id="A_BETextH2"></span>
+				<select name="A_BEH2" onchange="StAllCalc()"></select>
+			</td>
+			<!-- Eden Enchant Headgear 2 -->
+			<td class="calc" style="display: none" id="T_EEH2">
+				<span id="A_EETextH2"></span>
+				<select name="A_EEH2" onchange="StAllCalc()"></select>
+			</td>
+			<!-- Placeholder 2 -->
+			<td class="calc" id="T_HEAD2_TEMP"></td>
+			
+		</tr>
+		
+		<tr>
+			<td class="calc">
+				<select style="margin-left: 51px" name="A_head2" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_head2_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+		<tr>
+			<td class="calc">
+				<select style="margin-left: 51px" name="A_head3" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+		<tr>
+			<td class="calc">
+				<select name="A_BODY_DEF_PLUS" onchange="StAllCalc()"></select>
+				<select name="A_body" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_body_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_HSE" onchange="StAllCalc()">
+				</select>
+			</td>
+			<td style="visibility: hidden;" class="calc">
+				<select name="A_HSE_HEAD1" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_BEA" style="display: none">
+			<td class="calc">
+				<span id="A_BETextA1"></span>
+				<select name="A_BEA1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_BETextA2"></span>
+				<select name="A_BEA2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+		<tr id="T_EEA" style="display: none">
+			<td class="calc">
+				<span id="A_EETextA1"></span>
+				<select name="A_EEA1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EETextA2"></span>
+				<select name="A_EEA2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc"></td>
+			<td class="calc"></td>
+		</tr>
+		<tr id="T_MORAEA" style="display: none">
+			<td class="calc">
+				<span id="A_MORAETextA">Mora Armor</span>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextA1"></span>
+				<select name="A_MORAEA1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextA2"></span>
+				<select name="A_MORAEA2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextA3"></span>
+				<select name="A_MORAEA3" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="calc">
+				<select style="visibility: visible;" name="A_LEFT_DEF_PLUS" onchange="StAllCalc()"></select>
+				<select style="visibility: visible;" name="A_left" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc" id="ID_C4">
+				<select style="visibility: visible;" name="A_left_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
+			</td>
+		
+			<td class="calc" style="display: none" id="T_BES1">
+				<span id="A_BETextS1"></span>
+				<select name="A_BES1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BES1_TEMP"></td>
+			<td class="calc" style="display: none" id="T_BES2">
+				<span id="A_BETextS2"></span>
+				<select name="A_BES2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_BES2_TEMP"></td>
+		</tr>
+
+		<tr>
+			<td class="calc">
+				<select name="A_SHOULDER_DEF_PLUS" onchange="StAllCalc()"></select>
+				<select name="A_shoulder" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_shoulder_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_acces1" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_acces1_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="calc" style="display: none" id="T_BEG1">
+				<span id="A_BETextG1"></span>
+				<select name="A_BEG1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" style="display: none" id="T_EEG1">
+				<span id="A_EETextG1"></span>
+				<select name="A_EEG1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_GAR1_TEMP"></td>
+			<td class="calc" style="display: none" id="T_BEG2">
+				<span id="A_BETextG2"></span>
+				<select name="A_BEG2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" style="display: none" id="T_EEG2">
+				<span id="A_EETextG2"></span>
+				<select name="A_EEG2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_GAR2_TEMP"></td>
+
+			<td class="calc" style="display: none" id="T_BEAC11">
+				<span id="A_BETextAC11"></span>
+				<select name="A_BEAC11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_ACC11_TEMP"></td>
+			<td class="calc" style="display: none" id="T_BEAC12">
+				<span id="A_BETextAC12"></span>
+				<select name="A_BEAC12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_ACC12_TEMP"></td>
+		</tr>
+		
+		<tr id="T_MORAEG" style="display: none">
+			<td class="calc">
+				<span id="A_MORAETextG">Mora Garment</span>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextG1"></span>
+				<select name="A_MORAEG1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextG2"></span>
+				<select name="A_MORAEG2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextG3"></span>
+				<select name="A_MORAEG3" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDG" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextG">El Dicaste Garment</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextG1"></span>
+				<select name="A_EDG1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextG2"></span>
+				<select name="A_EDG2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextG3"></span>
+				<select name="A_EDG3" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDAC1" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextAC1">El Dicaste Accessory 1</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC11"></span>
+				<select name="A_EDAC11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC12"></span>
+				<select name="A_EDAC12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC13"></span>
+				<select name="A_EDAC13" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDLOED1" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextLOED1">Light of El Dicaste 1</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED11"></span>
+				<select name="A_EDLOED11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED12"></span>
+				<select name="A_EDLOED12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED13"></span>
+				<select name="A_EDLOED13" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="calc">
+				<select name="A_SHOES_DEF_PLUS" onchange="StAllCalc()"></select>
+				<select name="A_shoes" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_shoes_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_acces2" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
+			</td>
+			<td class="calc">
+				<select name="A_acces2_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="calc" style="display: none" id="T_EEF1">
+				<span id="A_EETextF1"></span>
+				<select name="A_EEF1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_FOOT1_TEMP"></td>
+			<td class="calc" style="display: none" id="T_EEF2">
+				<span id="A_EETextF2"></span>
+				<select name="A_EEF2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_FOOT2_TEMP"></td>
+
+			<td class="calc" style="display: none" id="T_BEAC21">
+				<span id="A_BETextAC21"></span>
+				<select name="A_BEAC21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_ACC21_TEMP"></td>
+			<td class="calc" style="display: none" id="T_BEAC22">
+				<span id="A_BETextAC22"></span>
+				<select name="A_BEAC22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc" id="T_ACC22_TEMP"></td>
+		</tr>
+		
+		<tr id="T_EDF" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextF">El Dicaste Footgear</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextF1"></span>
+				<select name="A_EDF1" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextF2"></span>
+				<select name="A_EDF2" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextF3"></span>
+				<select name="A_EDF3" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDAC2" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextAC2">El Dicaste Accessory 2</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC21"></span>
+				<select name="A_EDAC21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC22"></span>
+				<select name="A_EDAC22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextAC23"></span>
+				<select name="A_EDAC23" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_EDLOED2" style="display: none">
+			<td class="calc">
+				<span id="A_EDTextLOED2">Light of El Dicaste 2</span>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED21"></span>
+				<select name="A_EDLOED21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED22"></span>
+				<select name="A_EDLOED22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_EDTextLOED23"></span>
+				<select name="A_EDLOED23" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+		<tr id="T_MORAEAC1" style="display: none">
+			<td class="calc">
+				<span id="A_MORAETextAC1">Mora Accessory 1</span>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC11"></span>
+				<select name="A_MORAEAC11" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC12"></span>
+				<select name="A_MORAEAC12" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC13"></span>
+				<select name="A_MORAEAC13" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		<tr id="T_MORAEAC2" style="display: none">
+			<td class="calc">
+				<span id="A_MORAETextAC2">Mora Accessory 2</span>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC21"></span>
+				<select name="A_MORAEAC21" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC22"></span>
+				<select name="A_MORAEAC22" onchange="StAllCalc()"></select>
+			</td>
+			<td class="calc">
+				<span id="A_MORAETextAC23"></span>
+				<select name="A_MORAEAC23" onchange="StAllCalc()"></select>
+			</td>
+		</tr>
+		
+	</tbody>
 </table>
 <br />
 
@@ -573,7 +937,7 @@
 											<tbody>
 												<tr>
 													<td align="center" valign="middle" height="150" id="B_Enemy_picture" >
-															<img src="https://panel.talonro.com/images/monster/1219.gif" alt="no picture available =(">
+														<img src="https://panel.talonro.com/images/monster/1219.gif" alt="no picture available =(">
 													</td>
 												</tr>
 											</tbody>
@@ -871,7 +1235,7 @@
 		<div class="topic" align="right" style="margin-left: 6.5px"><div style="margin-right: 5px;line-height: 165%;">
 			Original simulator created by <a href="http://roratorio.2-d.jp/ro/">ROratorio</a><br />
 			Translated and adapted by <a href="http://rode.doddlercon.com/">Doddler</a><br />
-			Adjusted to TalonRO by [FlynnQ, Kato, ZoneSoldier, Nattwara and Loa]
+			Adjusted to TalonRO by [FlynnQ, Kato, ZoneSoldier, NattWara and Loa]
 		</div>
 	</div>
 </div>
