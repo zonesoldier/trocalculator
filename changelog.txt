@@ -1,3 +1,7 @@
+[Update 2018-07-13]
+- Added Army Padding [NattWara]
+- Added Pendant of Guardian [NattWara]
+
 [Update 2018-07-12]
 - Added Eden Enchants [NattWara]
 - Added El Dicaste Enchants [NattWara]
