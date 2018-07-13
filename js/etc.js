@@ -1325,9 +1325,9 @@ MORA_ENCHANTS_SLOT_THREE = [
 ];
 
 MORA_ENCHANTABLE = [
-		 [1664,0] //Armor: Army Padding
+		 [1664,0] //Army Padding
 		,[1605,0] //Loki's Muffler
-		,[1665,0] //Accessory: Pendant Of Guardian
+		,[1665,0] //Pendant Of Guardian
 ];
 
 //exceptions list for items and cards disabled in vanilla
