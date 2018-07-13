@@ -2327,13 +2327,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	}else{
 		S1_A_ATK = Math.floor(n_A_STR/10) * Math.floor(n_A_STR/10);
 		S2_A_ATK = n_A_STR + Math.floor(S1_A_ATK) + Math.floor(n_A_DEX/5) + Math.floor(n_A_LUK/5);
-		console.log(I_ATK);
-		console.log(C_ATK);
-		console.log(W_ATKD);
-		console.log(S1_A_ATK);
-		console.log(S2_A_ATK);
-		console.log(W_REF);
-		console.log(W_REF2);
 		P_ATK = Math.floor(I_ATK + C_ATK + W_ATKD + S2_A_ATK);
 	}
 
