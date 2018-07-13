@@ -816,20 +816,35 @@ function StAllCalc()
 	if(SU_STR >= 80 && EquipNumSearch(1526)){
 		w += 30;
 	}
+	
+	n_A_ATK += w;
 
 	//Note - Issue#252
 	//Need checking on all of these items.
 	//ATK% stuff
-	n_A_ATK += w;
 	w= 0;
 
-	if(n_A_Equip[9] == 978 || n_A_Equip[9] == 979 || n_A_Equip[9] == 980 || n_A_Equip[9] == 981 || n_A_Equip[9] == 982 || n_A_Equip[9] == 983 || n_A_Equip[9] == 984){
-		w += n_A_ATK*.05;}
-	if(n_A_Equip[10] == 978 || n_A_Equip[10] == 979 || n_A_Equip[10] == 980 || n_A_Equip[10] == 981 || n_A_Equip[10] == 982 || n_A_Equip[10] == 983 || n_A_Equip[10] == 984){
-		w += n_A_ATK*.05;}
+	//BG Medallions
+	//Moved to "Fix for Issue#252"
+	/*
+	if(n_A_Equip[9] == 978 || n_A_Equip[9] == 979 || n_A_Equip[9] == 980 || n_A_Equip[9] == 981 || n_A_Equip[9] == 982 || n_A_Equip[9] == 983 || n_A_Equip[9] == 984)
+	{
+		w += n_A_ATK*.05;
+	}
+	if(n_A_Equip[10] == 978 || n_A_Equip[10] == 979 || n_A_Equip[10] == 980 || n_A_Equip[10] == 981 || n_A_Equip[10] == 982 || n_A_Equip[10] == 983 || n_A_Equip[10] == 984)
+	{
+		w += n_A_ATK*.05;
+	}
+	*/
+	
+	//Wrong Effect - Little Red Riding Hood Scarf
+	/*
 	if(EquipNumSearch(1312)){
 		w += n_A_ATK*.05;}
-
+	*/
+	
+	//Moved to "Fix for Issue#252"
+	/*
 	//custom TalonRO Chewing Bubblegum +1% atk
 	if(EquipNumSearch(1395))
 		w += n_A_ATK*.01;
@@ -843,6 +858,7 @@ function StAllCalc()
 	//custom TalonRO Angeling Fur Hat +1% atk
 	if(EquipNumSearch(1469))
 		w += n_A_ATK*.01;
+	*/
 	//Yellow/Green/Pink Sheila Hairnet [Refine Rate 9+] Increase ATK by 2% [Refine Rate 10] Increase ATK by 2% - [Loa] - 2016-06-29
 	if(EquipNumSearch(1022) || EquipNumSearch(1026) || EquipNumSearch(1073)){
 		if(n_A_HEAD_DEF_PLUS >= 9){
@@ -852,6 +868,7 @@ function StAllCalc()
 			w += n_A_ATK*.02;
 		}
 	}
+	
 
 	w = Math.round(w);
 
@@ -2473,17 +2490,49 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 	}
 	
-	
 	//Note 2018-07-12 [NattWara]
 	//Fix for Issue#252
 	/*
-		Those +ATK% stuff are supposed to be around here?
+		Those +ATK% stuff are supposed to be around here I supposed.
 		Because they use bonus2 bAddRace,RC_NonBoss,(ATK%);
 						 bonus2 bAddRace,RC_Boss,(ATK%);
 						 bonus2 bAddRace2,5,(ATK%);
-		like Turtle General Card.
-		so I'm using n_tok[80] for +ATK%
+		like Turtle General Card even though the description is saying +ATK%.
+		so I'm using n_tok[80] for +ATK% as I'm sticking to the script.
 	*/
+	
+	if(n_A_Equip[9] == 978 || n_A_Equip[9] == 979 || n_A_Equip[9] == 980 || n_A_Equip[9] == 981 || n_A_Equip[9] == 982 || n_A_Equip[9] == 983 || n_A_Equip[9] == 984)
+	{
+		n_tok[80] += 5;
+	}
+	if(n_A_Equip[10] == 978 || n_A_Equip[10] == 979 || n_A_Equip[10] == 980 || n_A_Equip[10] == 981 || n_A_Equip[10] == 982 || n_A_Equip[10] == 983 || n_A_Equip[10] == 984)
+	{
+		n_tok[80] += 5;
+	}
+
+	//custom TalonRO Chewing Bubblegum +1% atk
+	if(EquipNumSearch(1395)){
+		n_tok[80] += 1;
+	}
+	//custom TalonRO Choco Stick In Mouth -1% atk
+	if(EquipNumSearch(1438)){
+		n_tok[80] -= 1;
+	}
+	//custom TalonRO Rainbow Poring Hat +1% atk
+	if(EquipNumSearch(1447)){
+		if(n_A_HEAD_DEF_PLUS>=7){
+			n_tok[80] += 1;
+		}
+	}
+	//custom TalonRO Angeling Fur Hat +1% atk
+	if(EquipNumSearch(1469)){
+		n_tok[80] += 1;
+	}
+
+	//custom TalonRO Evil Marching Hat: if refine rate >=9 +5% ATK
+	if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 9){
+		n_tok[80] += 5;
+	}
 	
 	//[Custom TalonRO - 2018-07-09 Ancient Gold Adornment - ATK% & MATK%] [NattWara]
 	if(EquipNumSearch(1663)){
@@ -2493,6 +2542,28 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 		if(wHPVS==3 || wHPVS==5){
 			w += 4;
+		}
+	}
+	
+	//Red Wing Hat [Refine Rate > 6] Physical Damge + 2%, MATK + 2% [Refine Rate > 8] Physical Damge + 2%, MATK + 2% - [Loa] - 2018-07-03
+	if(EquipNumSearch(1135)){
+		if(n_A_HEAD_DEF_PLUS > 6){
+			n_tok[80] += 2;
+			w += 2;
+		}
+		if(n_A_HEAD_DEF_PLUS > 8){
+			n_tok[80] += 2;
+			w += 2;
+		}
+	}
+	
+	//custom TalonRO Kris enchant ATK%
+	var KEbonus = [document.calcForm.A_KE11.value,document.calcForm.A_KE12.value,document.calcForm.A_KE21.value,document.calcForm.A_KE22.value];
+	for (i=0;i<KEbonus.length;i++){
+		var wKE = KEbonus[i];
+		if(wKE){
+			if(171 <= wKE && wKE <= 179)
+				n_tok[80] += parseInt(wKE.substr(-1));
 		}
 	}
 	
@@ -2559,17 +2630,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 	}
 
-	//Red Wing Hat [Refine Rate > 6] Physical Damge + 2%, MATK + 2% [Refine Rate > 8] Physical Damge + 2%, MATK + 2% - [Loa] - 2018-07-03
-	if(EquipNumSearch(1135)){
-		if(n_A_HEAD_DEF_PLUS > 6){
-			n_tok[80] += 2;
-			w += 2;
-		}
-		if(n_A_HEAD_DEF_PLUS > 8){
-			n_tok[80] += 2;
-			w += 2;
-		}
-	}
 	//Custom TalonRO - 2018-06-07 - Enhanced Hat of the Sun God [1] - MATK part [Nattwara]
 	/*
 	[Refine Rate 5+]

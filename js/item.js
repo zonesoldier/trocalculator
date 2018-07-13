@@ -1165,7 +1165,7 @@ ItemOBJ = [
 ,[1142,50,0,5,0,1,90,0,"Orc Hero Headdress","","Add a 1% chance of auto casting Level 3 Weapon Perfection on the user when receives Physical Damage<br><b>[For Every 4 Refines]</b><br>STR + 1<br><b>[For Every Refine > 5]</b><br>Physical Damage against Demi-Human monsters + 1%<br>Damage from Demi-Human monsters - 2%<br><b>Upper and Middle Headgear</b>",0]
 ,[1143,50,0,1,0,0,50,50,"Aladdin Prince Hat","",0,71,1,0]
 ,[1144,51,0,3,0,0,100,60,"Tiger Face","","<b>Middle and Lower Headgear</b>",52,5,32,5,172,5,0]
-,[1145,50,0,1,0,1,100,0,"Hermose Cap","",0,12,10,80,-10,89,-20,0]
+,[1145,50,0,1,0,1,100,0,"Hermose Cap","",0,12,10,87,-10,89,-20,0]
 ,[1146,50,0,1,0,1,20,0,"RJC Katyusha Flower","","Increases damage with Heaven's Drive and Earth Spike by 1% per refine on weapon",5132,15,5133,15,0]
 ,[1147,51,1,0,0,0,0,70,"Ifrit Ear","",0,19,3,1,1,63,5,61,-5,5051,2,5125,2,5122,2,5006,2,5070,2,5007,2,0]
 ,[1148,50,0,3,0,1,10,0,"Desert Prince","",0,194,1,0]
@@ -1575,7 +1575,7 @@ ItemOBJ = [
 ,[1537,100,0,0,0,0,0,0,"Beach Manteau & Beach Sandals",0,0,9,5,0] //Beach Manteau & Beach Sandals
 ,[1538,50,0,4,0,1,40,50,"Ancient Horns","","<b>[Refine Rate 7~10]</b><br>Add a 1% chance of activating ATK + 100 for 10 seconds when hitting a monster.",0]
 //custom TalonRO [Update 2015-12-29]
-,[1539,50,0,3,0,1,50,0,"Evil Marching Hat","","<b>[Refine Rate 7~10]</b><br> Critical damage increased by 10%<br><b>[Refine Rate 9~10]</b><br>ATK + 5%<br>5% increased ranged physical damage",1,2,19,1,87,2,0]
+,[1539,50,0,3,0,1,50,0,"Evil Marching Hat","","<b>[Refine Rate 7~10]</b><br> Critical damage increased by 10%<br><b>[Refine Rate 9~10]</b><br>ATK + 5%<br>5% increased ranged physical damage",1,2,19,1,80,2,0] //Fix : Issue#252
 //custom TalonRO [Update 2016-05-05]
 ,[1540,52,0,0,0,0,30,48,"Vajra","","",25,1,0]
 //custom TalonRO [Update 2016-11-02]

@@ -2559,7 +2559,9 @@ function ATKbai01()
 			wA01 += StPlusCalc2(87);
 		
 		//Note - Issue#252
+		//Moved to foot.js
 		//custom TalonRO Kris enchant ATK%
+		/*
 		var KEbonus = [document.calcForm.A_KE11.value,document.calcForm.A_KE12.value,document.calcForm.A_KE21.value,document.calcForm.A_KE22.value];
 		for (i=0;i<KEbonus.length;i++){
 			var wKE = KEbonus[i];
@@ -2567,13 +2569,15 @@ function ATKbai01()
 				if(171 <= wKE && wKE <= 179)
 					wA01 += parseInt(wKE.substr(-1));
 			}
-		}
-		
+		}*/
 		//Note - Issue#252
+		//Moved to foot.js
 		//custom TalonRO Evil Marching Hat: if refine rate >=9 +5% ATK
+		/*
 		if(EquipNumSearch(1539) && n_A_HEAD_DEF_PLUS >= 9)
 			wA01 += 5;
-
+		*/
+		
 		if(n_A_IJYOU[3])
 			wA01 -= 25;
 	}
@@ -6682,8 +6686,7 @@ with(document.calcForm){
 		//check also monster.js row 686+687 (MonsterOBJ[i][23] = MonsterOBJ[i][21];)
 		//[Custom TalonRO = 2016-06-04 - Fixed the database link for Panel][Kato]
 		if (MonsterOBJ[B_Enemy.value][23]!=0){
-			document.getElementById("B_Enemy_picture").innerHTML="<img src=\"no picture available, I'm at office. :(\">";
-			//document.getElementById("B_Enemy_picture").innerHTML="<img src=\"https://panel.talonro.com/images/monster/"+MonsterOBJ[B_Enemy.value][23]+".gif\" alt=\"no picture available =(\">";
+			document.getElementById("B_Enemy_picture").innerHTML="<img src=\"https://panel.talonro.com/images/monster/"+MonsterOBJ[B_Enemy.value][23]+".gif\" alt=\"no picture available =(\">";
 			document.getElementById("B_Enemy_mobdb").innerHTML="<a href=\"https://panel.talonro.com/mobdb/"+MonsterOBJ[B_Enemy.value][23]+"/\" target=\"_blank\"><b>MobDB</b></a>";
 		} else {
 			document.getElementById("B_Enemy_picture").innerHTML="<img src=\"\" alt=\"no picture available =(\">";
