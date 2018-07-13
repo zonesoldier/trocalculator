@@ -2305,10 +2305,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	else{W_REF = 0;}
 
 	if(n_Nitou){
-		if(n_A_WeaponLV == 1){W_REF2 = n_A_Weapon2_ATKplus * 2;}
-		else if(n_A_WeaponLV == 2){W_REF2 = n_A_Weapon2_ATKplus * 3;}
-		else if(n_A_WeaponLV == 3){W_REF2 = n_A_Weapon2_ATKplus * 5;}
-		else if(n_A_WeaponLV == 4){W_REF2 = n_A_Weapon2_ATKplus * 7;}
+		if(n_A_Weapon2LV == 1){W_REF2 = n_A_Weapon2_ATKplus * 2;}
+		else if(n_A_Weapon2LV == 2){W_REF2 = n_A_Weapon2_ATKplus * 3;}
+		else if(n_A_Weapon2LV == 3){W_REF2 = n_A_Weapon2_ATKplus * 5;}
+		else if(n_A_Weapon2LV == 4){W_REF2 = n_A_Weapon2_ATKplus * 7;}
 	W_ATKD = n_A_Weapon_ATK + n_A_Weapon2_ATK;}
 	else{W_ATKD = n_A_Weapon_ATK;
 		 W_REF2 = 0;}
@@ -2327,6 +2327,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	}else{
 		S1_A_ATK = Math.floor(n_A_STR/10) * Math.floor(n_A_STR/10);
 		S2_A_ATK = n_A_STR + Math.floor(S1_A_ATK) + Math.floor(n_A_DEX/5) + Math.floor(n_A_LUK/5);
+		console.log(I_ATK);
+		console.log(C_ATK);
+		console.log(W_ATKD);
+		console.log(S1_A_ATK);
+		console.log(S2_A_ATK);
+		console.log(W_REF);
+		console.log(W_REF2);
 		P_ATK = Math.floor(I_ATK + C_ATK + W_ATKD + S2_A_ATK);
 	}
 
@@ -2353,6 +2360,8 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		P_ATK += 1 * (n_A_HEAD_DEF_PLUS - 6);
 	}
 
+	/*
+	//Note - Issue#252
 	//custom TalonRO Chewing Bubblegum +1% atk
 	if(EquipNumSearch(1395))
 		P_ATK += P_ATK*.01;
@@ -2363,6 +2372,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1447))
 		if(n_A_HEAD_DEF_PLUS>=7)
 			P_ATK += P_ATK*.01;
+	*/
 
 	//Note - Issue#252
 	//Moved to "Fix for Issue#252"
