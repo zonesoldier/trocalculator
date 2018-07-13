@@ -3540,6 +3540,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[91] += 7;
 		}
 	}
+	
+	//[Custom TalonRO - 2018-07-13 Love Guard - If refine 7+ Inrease Effectiveness of Heal, Potion Pitcher, and Sanctuary by 2%] [NattWara]
+	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1667)){
+		n_tok[91] += 2;
+		n_tok[94] += 2;
+	}
 
 	if(EquipNumSearch(1085)){
 		if(n_A_Weapon_ATKplus >= 6){
