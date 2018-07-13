@@ -2121,19 +2121,24 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	n_A_CRI += w;
 
-	if(n_A_PassSkill3[5])
+	if(n_A_PassSkill3[5]){
 		n_A_CRI += 10 + n_A_PassSkill3[5] + Math.floor(n_A_PassSkill3[35] /2) + Math.floor(n_A_PassSkill3[25] /10);
+	}
 
 	//custom TalonRO Gryphon Card
-	if(CardNumSearch(277)) {n_A_CRI -= Math.floor(SU_STR /11)*2*CardNumSearch(277);}
+	if(CardNumSearch(277)) {
+		n_A_CRI -= Math.floor(SU_STR /11) * 2 * CardNumSearch(277);
+	}
 
-	if(n_A_WeaponType == 11)
+	if(n_A_WeaponType == 11) {
 		n_A_CRI *= 2;
+	}
 
 	n_A_CRI = Math.round(n_A_CRI * 10) / 10;
 
-	if(n_A_PassSkill8[16])
+	if(n_A_PassSkill8[16]){
 		n_A_CRI = 0;
+	}
 
 	myInnerHtml("A_CRI",n_A_CRI,0);
 
