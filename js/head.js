@@ -5377,11 +5377,6 @@ function Click_EdenWeaponEnchantment(w1,w2){
 	}
 	
 	with(document.calcForm){
-		
-		console.log(A_EE11.value);
-		console.log(A_EE12.value);
-		console.log(A_EE13.value);
-	
 		//Populate option for slot 2 depending on choice of slot 1
 		//Weapon 1
 		switch(A_EE11.value) {
@@ -5731,8 +5726,8 @@ with(document.calcForm){
 		//Hide other enchant option for garment
 		document.getElementById("T_BEG1").style.display = "none";
 		document.getElementById("T_BEG2").style.display = "none";
-		document.getElementById("T_HEAD1_TEMP").style.display = "none";
-		document.getElementById("T_HEAD2_TEMP").style.display = "none";
+		document.getElementById("T_GAR1_TEMP").style.display = "none";
+		document.getElementById("T_GAR2_TEMP").style.display = "none";
 		//Show enchant option for Eden garment
 		document.getElementById("T_EEG1").style.display = "";
 		document.getElementById("T_EEG2").style.display = "";
