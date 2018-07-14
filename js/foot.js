@@ -7313,9 +7313,6 @@ with(document.calcForm){
 			
 		A_EE13.options[1] = new Option(option1Text,A_EE11.value);
 		A_EE13.options[2] = new Option(option2Text,A_EE12.value);
-	} else {
-		A_EE13.options[1] = 0;
-		A_EE13.options[2] = 0;
 	}
 	
 	//Weapon 2
@@ -7354,9 +7351,6 @@ with(document.calcForm){
 
 		A_EE23.options[1] = new Option(option1Text,A_EE21.value);
 		A_EE23.options[2] = new Option(option2Text,A_EE22.value);
-	} else {
-		A_EE23.options[1] = 0;
-		A_EE23.options[2] = 0;
 	}
 
 	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Weapon Enchants Slot 3] [NattWara]
@@ -8506,9 +8500,6 @@ with(document.calcForm){
 				
 			A_EE13.options[1] = new Option(option1Text,A_EE11.value);
 			A_EE13.options[2] = new Option(option2Text,A_EE12.value);
-		} else {
-			A_EE13.options[1] = 0;
-			A_EE13.options[2] = 0;
 		}
 		
 		//Weapon 2
@@ -8547,9 +8538,6 @@ with(document.calcForm){
 
 			A_EE23.options[1] = new Option(option1Text,A_EE21.value);
 			A_EE23.options[2] = new Option(option2Text,A_EE22.value);
-		} else {
-			A_EE23.options[1] = 0;
-			A_EE23.options[2] = 0;
 		}
 
 		// [Custom TalonRO - 2018-07-14 - Load URL for Eden Weapon Enchants Slot 3] [NattWara]
