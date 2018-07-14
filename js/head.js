@@ -5848,8 +5848,8 @@ function Click_EDFootgearEnchantment(f){
 with(document.calcForm){
 	var bEnchant = false;
 	if(f) {
-			for(i=0; i<MORA_ENCHANTABLE.length; i++) {
-				if(MORA_ENCHANTABLE[i][0] == f) {
+			for(i=0; i<ED_ENCHANTABLE.length; i++) {
+				if(ED_ENCHANTABLE[i][0] == f) {
 					bEnchant = true;
 					break;
 				}
