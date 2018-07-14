@@ -2327,6 +2327,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	}else{
 		S1_A_ATK = Math.floor(n_A_STR/10) * Math.floor(n_A_STR/10);
 		S2_A_ATK = n_A_STR + Math.floor(S1_A_ATK) + Math.floor(n_A_DEX/5) + Math.floor(n_A_LUK/5);
+		console.log(I_ATK);
+		console.log(C_ATK);
+		console.log(W_ATKD);
+		console.log(S1_A_ATK);
+		console.log(S2_A_ATK);
+		console.log(W_REF);
+		console.log(W_REF2);
 		P_ATK = Math.floor(I_ATK + C_ATK + W_ATKD + S2_A_ATK);
 	}
 
@@ -2355,6 +2362,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	/*
 	//Note - Issue#252
+	//Moved to "Fix for Issue#252"
 	//custom TalonRO Chewing Bubblegum +1% atk
 	if(EquipNumSearch(1395))
 		P_ATK += P_ATK*.01;
@@ -6693,14 +6701,15 @@ function StoN(n){
 }
 
 SaveStr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14, 15,16, 17, 18, 19, 20, 21,22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100];
-SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1,  3, 1,  3,  3,  3,  3,  3, 1,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3];
+SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1,  3, 1,  3,  3,  3,  3,  3, 1,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3];
 
 function SaveCookie(){
 with(document.calcForm){
 	SaveData = new Array();
 
-	for(i=0;i<=100;i++)
+	for(i=0;i<=160;i++){
 		SaveData[i]=0;
+	}
 
 	SaveData[0] = eval(A_JOB.value);
 	SaveData[1] = eval(A_BaseLV.value);
@@ -6876,7 +6885,7 @@ with(document.calcForm){
 			SaveData[109] = 0;
 			SaveData[110] = 0;
 	}
-	
+
 	//[Custom TalonRO 2018-07-13 - Save Cookie for Biolab Armor] [NattWara]
 	SaveData[111] = ((A_BEH1.value) ? eval(A_BEH1.value) : 0);
 	SaveData[112] = ((A_BEH2.value) ? eval(A_BEH2.value) : 0);
@@ -6954,7 +6963,7 @@ with(document.calcForm){
 
 	wStr = "" +SaveData[0];
 
-	for(i=1;i<=100;i++){
+	for(i=1;i<=160;i++){
 		wStr += ""+SaveData[i];
 	}
 	document.cookie = cookieNum +"="+ wStr +"; expires="+ expDay;
@@ -6990,8 +6999,9 @@ with(document.calcForm){
 		}
 	}
 
-	for(i=0;i<=160;i++)
+	for(i=0;i<=160;i++){
 		SaveData[i] = 0;
+	}
 
 	j=0;
 	for(i=0;i<=160;i++){
@@ -7209,71 +7219,207 @@ with(document.calcForm){
 	A_BE21.value = SaveData[103];
 	A_BE22.value = SaveData[104];
 	
-	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Weapon Enchants] [NattWara]
-	A_EE11 = SaveData[105];
-	A_EE12 = SaveData[106];
-	A_EE13 = SaveData[107];
-	A_EE21 = SaveData[108];
-	A_EE22 = SaveData[109];
-	A_EE23 = SaveData[110];
+	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Weapon Enchants Slot 1] [NattWara]
+	A_EE11.value = SaveData[105];
+	A_EE21.value = SaveData[108];
 	
+	with(document.calcForm){
+		//Populate option for slot 2 depending on choice of slot 1
+		//Weapon 1
+		switch(A_EE11.value) {
+		case "172":
+			if (!(A_EE12.value >= 2030 && A_EE12.value <= 2039)) {
+				//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE12);
+				A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+					A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+				}
+			}
+			break;
+		case "892":
+			if (!(A_EE12.value >= 2170 && A_EE12.value <= 2179)) {
+				//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE12);
+				A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+					A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+				}
+			}
+			break;
+		default:
+			//Clear slot 2
+			removeOptions(A_EE12);
+			A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+		}
+		
+		//Weapon 2
+		switch(A_EE21.value) {
+		case "172":
+			if (!(A_EE22.value >= 2030 && A_EE22.value <= 2039)) {
+				//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE22);
+				A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+					A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+				}
+			}
+			break;
+		case "892":
+			if (!(A_EE22.value >= 2170 && A_EE22.value <= 2179)) {
+				//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE22);
+				A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+					A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+				}
+			}
+			break;
+		default:
+			//Clear slot 2
+			removeOptions(A_EE22);
+			A_EE22.options[0] = new Option("(Eden Enchant "+ A_EE22.name.substr(-1) +")",0);
+		}	
+	}
+	
+	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Weapon Enchants Slot 2] [NattWara]
+	A_EE12.value = SaveData[106];
+	A_EE22.value = SaveData[109];
+	
+	with(document.calcForm){
+		//Populate option for slot 3 depending on choice of slot 1 and slot 2
+		//Weapon 1
+		if (!(A_EE13.value == A_EE11.value || A_EE13.value == A_EE12.value)) {
+			var option1Text = option2Text = "";
+			
+			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE11.value) {
+					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+					break;
+				}
+			}
+			
+			if (A_EE12.value >= 2030 && A_EE12.value <= 2039) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE12.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			if (A_EE12.value >= 2170 && A_EE12.value <= 2179) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE12.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			removeOptions(A_EE13);
+			A_EE13.options[0] = new Option("(Eden Enchant "+ A_EE13.name.substr(-1) +")",0);
+			A_EE13.options[1] = new Option(option1Text,A_EE11.value);
+			A_EE13.options[2] = new Option(option2Text,A_EE12.value);
+		}
+		//Weapon 2
+		if (!(A_EE23.value == A_EE21.value || A_EE23.value == A_EE22.value)) {
+			var option1Text = option2Text = "";
+			
+			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE21.value) {
+					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+					break;
+				}
+			}
+			
+			if (A_EE22.value >= 30 && A_EE22.value <= 39) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE22.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			if (A_EE22.value >= 170 && A_EE22.value <= 179) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE22.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			removeOptions(A_EE23);
+			A_EE23.options[0] = new Option("(Eden Enchant 2-"+ A_EE23.name.substr(-1) +")",0);
+			A_EE23.options[1] = new Option(option1Text,A_EE21.value);
+			A_EE23.options[2] = new Option(option2Text,A_EE22.value);
+		}
+		
+	}
+
+	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Weapon Enchants Slot 3] [NattWara]
+	A_EE13.value = SaveData[107];
+	A_EE23.value = SaveData[110];
+
 	// [Custom TalonRO - 2018-07-13 - Load Cookie for Biolab Armor Enchants] [NattWara]
-	A_BEH1 = SaveData[111];
-	A_BEH2 = SaveData[112];
-	A_BEA1 = SaveData[113];
-	A_BEA2 = SaveData[114];
-	A_BES1 = SaveData[115];
-	A_BES2 = SaveData[116];
-	A_BEG1 = SaveData[117];
-	A_BEG2 = SaveData[118];
-	A_BEAC11 = SaveData[119];
-	A_BEAC12 = SaveData[120];
-	A_BEAC21 = SaveData[121];
-	A_BEAC22 = SaveData[122];
+	A_BEH1.value = SaveData[111];
+	A_BEH2.value = SaveData[112];
+	A_BEA1.value = SaveData[113];
+	A_BEA2.value = SaveData[114];
+	A_BES1.value = SaveData[115];
+	A_BES2.value = SaveData[116];
+	A_BEG1.value = SaveData[117];
+	A_BEG2.value = SaveData[118];
+	A_BEAC11.value = SaveData[119];
+	A_BEAC12.value = SaveData[120];
+	A_BEAC21.value = SaveData[121];
+	A_BEAC22.value = SaveData[122];
 	
 	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Armor Enchants] [NattWara]
-	A_EEH1 = SaveData[123];
-	A_EEH2 = SaveData[124];
-	A_EEA1 = SaveData[125];
-	A_EEA2 = SaveData[126];
-	A_EEG1 = SaveData[127];
-	A_EEG2 = SaveData[128];
-	A_EEF1 = SaveData[129];
-	A_EEF2 = SaveData[130];
+	A_EEH1.value = SaveData[123];
+	A_EEH2.value = SaveData[124];
+	A_EEA1.value = SaveData[125];
+	A_EEA2.value = SaveData[126];
+	A_EEG1.value = SaveData[127];
+	A_EEG2.value = SaveData[128];
+	A_EEF1.value = SaveData[129];
+	A_EEF2.value = SaveData[130];
 	
 	// [Custom TalonRO - 2018-07-13 - Load Cookie for El Dicaste Enchants] [NattWara]
-	A_EDG1 = SaveData[131];
-	A_EDG2 = SaveData[132];
-	A_EDG3 = SaveData[133];
-	A_EDF1 = SaveData[134];
-	A_EDF2 = SaveData[135];
-	A_EDF3 = SaveData[136];
-	A_EDAC11 = SaveData[137];
-	A_EDAC12 = SaveData[138];
-	A_EDAC13 = SaveData[139];
-	A_EDAC21 = SaveData[140];
-	A_EDAC22 = SaveData[141];
-	A_EDAC23 = SaveData[142];
-	A_EDLOED11 = SaveData[143];
-	A_EDLOED12 = SaveData[144];
-	A_EDLOED13 = SaveData[145];
-	A_EDLOED21 = SaveData[146];
-	A_EDLOED22 = SaveData[147];
-	A_EDLOED23 = SaveData[148];
+	A_EDG1.value = SaveData[131];
+	A_EDG2.value = SaveData[132];
+	A_EDG3.value = SaveData[133];
+	A_EDF1.value = SaveData[134];
+	A_EDF2.value = SaveData[135];
+	A_EDF3.value = SaveData[136];
+	A_EDAC11.value = SaveData[137];
+	A_EDAC12.value = SaveData[138];
+	A_EDAC13.value = SaveData[139];
+	A_EDAC21.value = SaveData[140];
+	A_EDAC22.value = SaveData[141];
+	A_EDAC23.value = SaveData[142];
+	A_EDLOED11.value = SaveData[143];
+	A_EDLOED12.value = SaveData[144];
+	A_EDLOED13.value = SaveData[145];
+	A_EDLOED21.value = SaveData[146];
+	A_EDLOED22.value = SaveData[147];
+	A_EDLOED23.value = SaveData[148];
 	
 	// [Custom TalonRO - 2018-07-13 - Load Cookie for Mora Enchants] [NattWara]
-	A_MORAEA1 = SaveData[149];
-	A_MORAEA2 = SaveData[150];
-	A_MORAEA3 = SaveData[151];
-	A_MORAEG1 = SaveData[152];
-	A_MORAEG2 = SaveData[153];
-	A_MORAEG3 = SaveData[154];
-	A_MORAEAC11 = SaveData[155];
-	A_MORAEAC12 = SaveData[156];
-	A_MORAEAC13 = SaveData[157];
-	A_MORAEAC21 = SaveData[158];
-	A_MORAEAC22 = SaveData[159];
-	A_MORAEAC23 = SaveData[160];
+	A_MORAEA1.value = SaveData[149];
+	A_MORAEA2.value = SaveData[150];
+	A_MORAEA3.value = SaveData[151];
+	A_MORAEG1.value = SaveData[152];
+	A_MORAEG2.value = SaveData[153];
+	A_MORAEG3.value = SaveData[154];
+	A_MORAEAC11.value = SaveData[155];
+	A_MORAEAC12.value = SaveData[156];
+	A_MORAEAC13.value = SaveData[157];
+	A_MORAEAC21.value = SaveData[158];
+	A_MORAEAC22.value = SaveData[159];
+	A_MORAEAC23.value = SaveData[160];
 	
 	Click_SQI_Bonus(0);
 

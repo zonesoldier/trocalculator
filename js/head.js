@@ -5446,7 +5446,7 @@ function Click_EdenWeaponEnchantment(w1,w2){
 				}
 			}
 			
-			if (A_EE12.value >= 30 && A_EE12.value <= 39) {
+			if (A_EE12.value >= 2030 && A_EE12.value <= 2039) {
 				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
 					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE12.value) {
 						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
@@ -5455,7 +5455,7 @@ function Click_EdenWeaponEnchantment(w1,w2){
 				}
 			}
 			
-			if (A_EE12.value >= 170 && A_EE12.value <= 179) {
+			if (A_EE12.value >= 2170 && A_EE12.value <= 2179) {
 				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
 					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE12.value) {
 						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
