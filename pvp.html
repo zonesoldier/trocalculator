@@ -148,41 +148,41 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 </tr>
 </tbody>
 </table>
-	<br>
-		<table border="0">
-			<tbody>
-				<tr>
-						<td id="nm014" class="title" style="width: 7.5%;">Max HP</td>
-						<td id="nm015" class="title" style="width: 7.5%;">Max SP</td>
-						<td id="nm016" class="title" style="width: 7.5%;">DEF</td>
-						<td id="nm017" class="title" style="width: 7.5%;">MDEF</td>
-						<td id="nm018" class="title" style="width: 7.5%;">HIT</td>
-						<td id="nm019" class="title" style="width: 7.5%;">FLEE</td>
-						<td id="nm020" class="title" style="width: 10%;">Perfect Dodge</td>
-						<td id="nm021" class="title" style="width: 7.5%;">Critical</td>
-						<td id="nm085" class="title" style="width: 7.5%;">ATK</td>
-						<td id="nm022" class="title" style="width: 7.5%;">MATK</td>
-						<td id="nm023" class="title" style="width: 7.5%;">ASPD</td>
-						<td id="nm024" class="title" style="width: 7.5%;">HP Regen</td>
-						<td id="nm025" class="title" style="width: 7.5%;">SP Regen</td>
-			</tr>
-			<tr>
-					<td class="data" id="A_MaxHP" align="right"> 40</td>
-					<td class="data" id="A_MaxSP" align="right"> 11</td>
-					<td class="data" id="A_totalDEF" align="right">0+1</td>
-					<td class="data" id="A_MDEF" align="right">0+1<br><b>WOE: </b>0+1</td>
-					<td class="data" id="A_HIT" align="right">2</td>
-					<td class="data" id="A_FLEE" align="right">2<br><b>WOE: </b>1</td>
-					<td class="data" id="A_LUCKY" align="right">1.1</td>
-					<td class="data" id="A_CRI" align="right">1.3</td>
-					<td class="data" id="A_ATK2" align="right">1+0<br><b>WOE: </b>1+0</td>
-					<td class="data" id="A_MATK" align="right">1~1</td>
-					<td class="data" id="A_ASPD" align="right">150.2</td>
-					<td class="data" id="A_HPR" align="right">1</td>
-					<td class="data" id="A_SPR" align="right">1</td>
-			</tr>
-		</tbody>
-	</table>
+<br>
+<table border="0">
+	<tbody>
+		<tr>
+			<td id="nm014" class="title" style="width: 7.5%;">Max HP</td>
+			<td id="nm015" class="title" style="width: 7.5%;">Max SP</td>
+			<td id="nm016" class="title" style="width: 7.5%;">DEF</td>
+			<td id="nm017" class="title" style="width: 7.5%;">MDEF</td>
+			<td id="nm018" class="title" style="width: 7.5%;">HIT</td>
+			<td id="nm019" class="title" style="width: 7.5%;">FLEE</td>
+			<td id="nm020" class="title" style="width: 10%;">Perfect Dodge</td>
+			<td id="nm021" class="title" style="width: 7.5%;">Critical</td>
+			<td id="nm085" class="title" style="width: 7.5%;">ATK</td>
+			<td id="nm022" class="title" style="width: 7.5%;">MATK</td>
+			<td id="nm023" class="title" style="width: 7.5%;">ASPD</td>
+			<td id="nm024" class="title" style="width: 7.5%;">HP Regen</td>
+			<td id="nm025" class="title" style="width: 7.5%;">SP Regen</td>
+		</tr>
+		<tr>
+			<td class="data" id="A_MaxHP" align="right"> 40</td>
+			<td class="data" id="A_MaxSP" align="right"> 11</td>
+			<td class="data" id="A_totalDEF" align="right">0+1</td>
+			<td class="data" id="A_MDEF" align="right">0+1<br><b>WOE: </b>0+1</td>
+			<td class="data" id="A_HIT" align="right">2</td>
+			<td class="data" id="A_FLEE" align="right">2<br><b>WOE: </b>1</td>
+			<td class="data" id="A_LUCKY" align="right">1.1</td>
+			<td class="data" id="A_CRI" align="right">1.3</td>
+			<td class="data" id="A_ATK2" align="right">1+0<br><b>WOE: </b>1+0</td>
+			<td class="data" id="A_MATK" align="right">1~1</td>
+			<td class="data" id="A_ASPD" align="right">150.2</td>
+			<td class="data" id="A_HPR" align="right">1</td>
+			<td class="data" id="A_SPR" align="right">1</td>
+		</tr>
+	</tbody>
+</table>
 <br>
 
 <table style="border: 1px solid rgb(153, 153, 153); border-collapse: collapse; width: auto;">
@@ -426,10 +426,10 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 				<span id="A_BETextH1"></span>
 				<select name="A_BEH1" onchange="StAllCalc()"></select>
 			</td>
-			<!-- Eden Enchant Headgear 1 -->
-			<td class="calc" style="display: none" id="T_EEH1">
-				<span id="A_EETextH1"></span>
-				<select name="A_EEH1" onchange="StAllCalc()"></select>
+			<!-- Eden Enchant Headgear -->
+			<td class="calc" style="display: none" id="T_EEH">
+				<span id="A_EETextH"></span>
+				<select name="A_EEH" onchange="StAllCalc()"></select>
 			</td>
 			<!-- Placeholder 1 -->
 			<td class="calc" id="T_HEAD1_TEMP"></td>
@@ -440,10 +440,12 @@ I would like all of you to test this calc and compare it to the actual PVP damag
 				<select name="A_BEH2" onchange="StAllCalc()"></select>
 			</td>
 			<!-- Eden Enchant Headgear 2 -->
+			<!--
 			<td class="calc" style="display: none" id="T_EEH2">
 				<span id="A_EETextH2"></span>
 				<select name="A_EEH2" onchange="StAllCalc()"></select>
 			</td>
+			-->
 			<!-- Placeholder 2 -->
 			<td class="calc" id="T_HEAD2_TEMP"></td>
 			
