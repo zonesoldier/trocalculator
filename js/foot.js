@@ -6958,6 +6958,11 @@ with(document.calcForm){
 	for(i=1;i<=159;i++){
 		wStr += ""+SaveData[i];
 	}
+	
+	//Compress String
+	wStr = Base64.toBase64(RawDeflate.deflate(wStr));
+	wStr = wStr.replace(/=/g, '');
+
 	document.cookie = cookieNum +"="+ wStr +"; expires="+ expDay;
 
 	bkcN = cookieNum;
@@ -6990,6 +6995,10 @@ with(document.calcForm){
 			break;
 		}
 	}
+	
+	//Decompress String
+	wStr += '='.repeat(4 - wStr.length % 4);
+	wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
 
 	for(i=0;i<=159;i++){
 		SaveData[i] = 0;
@@ -7420,7 +7429,7 @@ with(document.calcForm){
 	StAllCalc();
 	ActiveSkillSetPlus();
 }}
-
+/*
 function LoadCookieSP(){
 with(document.calcForm){
 	var wStr = "";
@@ -7460,7 +7469,7 @@ with(document.calcForm){
 	}
 	myInnerHtml("PR1",wStr,0);
 }}
-
+*/
 function LoadCookie3(){
 
 	SaveData = new Array();
@@ -7484,6 +7493,10 @@ function LoadCookie3(){
 			}
 		}
 
+		//Decompress String
+		wStr += '='.repeat(4 - wStr.length % 4);
+		wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
+
 		if(wStr.substr(27,1) >= 1){
 			SaveData[0] = wStr.substr(0,2);
 			SaveData[0] = eval(SaveData[0]);
@@ -7505,7 +7518,7 @@ function LoadCookie3(){
 			document.calcForm.A_SaveSlot.options[k-1] = new Option("Save "+k +": No Data",cookieNum);
 	}
 }
-
+/*
 function SaveCookieConf(){
 	SaveData = new Array();
 
@@ -7515,12 +7528,12 @@ function SaveCookieConf(){
 	wCookie.setTime(wCookie.getTime()+(wDay*1000*60*60*24));
 	expDay = wCookie.toGMTString();
 
-
 	wStr = "a" + NtoS2(eval(document.calcForm.Conf01.value),2) + "00000";
 
 	document.cookie = "ConfData" +"="+ wStr +"; expires="+ expDay;
 }
-
+*/
+/*
 function LoadCookieConf(){
 
 	SaveData = new Array();
@@ -7536,17 +7549,17 @@ function LoadCookieConf(){
 		}
 	}
 
-	/*if(wLCF == 1){
-		if(wStr.substr(0,1) == "0"){
-			document.calcForm.Conf01.value = wStr.substr(1,2);
-			SaveCookieConf();
-		}else
-			document.calcForm.Conf01.value = StoN2(wStr.substr(1,2));
-	}else{
-		document.calcForm.Conf01.value = 33;
-	}*/
+	//if(wLCF == 1){
+	//	if(wStr.substr(0,1) == "0"){
+	//		document.calcForm.Conf01.value = wStr.substr(1,2);
+	//		SaveCookieConf();
+	//	}else
+	//		document.calcForm.Conf01.value = StoN2(wStr.substr(1,2));
+	//}else{
+	//	document.calcForm.Conf01.value = 33;
+	//}
 }
-
+*/
 /*
 function SaveCookieChangelogDisplay(){
 	var disp;
@@ -8009,6 +8022,11 @@ with(document.calcForm){
 	for(i=1;i<=x;i++){
 		wStr += ""+SaveData[i];
 	}
+	
+	//Compress String
+	wStr = Base64.toBase64(RawDeflate.deflate(wStr));
+	wStr = wStr.replace(/=/g, '');	
+	
 	var w = location.href.split("?");
 	URL_TEXT.value = w[0] +"?"+ wStr;
 	URL_TEXT.select();
@@ -8052,6 +8070,10 @@ with(document.calcForm){
 		var SaveData = new Array();
 		SaveData = location.href.split("?");
 		var w = SaveData[1];
+
+		//Decompress String
+		w += '='.repeat(4 - w.length % 4);
+		w = Base64.btou(RawDeflate.inflate(Base64.fromBase64(w)));
 
 		if(StoN2(w.substr(1,2)) == 20 && StoN2(w.substr(90,1)))
 			SuperNoviceFullWeaponCHECK = 1;
@@ -8879,7 +8901,7 @@ StCalc();
 calc();
 
 LoadCookie3();
-LoadCookieConf();
+//LoadCookieConf();
 //LoadCookieChangelogDisplay();
 URLIN();
 
