@@ -6959,7 +6959,7 @@ with(document.calcForm){
 		wStr += ""+SaveData[i];
 	}
 	
-	//Compress String
+	//Compress String - [NattWara] - 2018-07-15
 	wStr = Base64.toBase64(RawDeflate.deflate(wStr));
 	wStr = wStr.replace(/=/g, '');
 
@@ -6996,7 +6996,7 @@ with(document.calcForm){
 		}
 	}
 	
-	//Decompress String
+	//Decompress String - [NattWara] - 2018-07-15
 	wStr += '='.repeat(4 - wStr.length % 4);
 	wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
 
@@ -7493,7 +7493,7 @@ function LoadCookie3(){
 			}
 		}
 
-		//Decompress String
+		//Decompress String - [NattWara] - 2018-07-15
 		wStr += '='.repeat(4 - wStr.length % 4);
 		wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
 
@@ -8023,7 +8023,7 @@ with(document.calcForm){
 		wStr += ""+SaveData[i];
 	}
 	
-	//Compress String
+	//Compress String - [NattWara] - 2018-07-15
 	wStr = Base64.toBase64(RawDeflate.deflate(wStr));
 	wStr = wStr.replace(/=/g, '');	
 	
@@ -8071,7 +8071,7 @@ with(document.calcForm){
 		SaveData = location.href.split("?");
 		var w = SaveData[1];
 
-		//Decompress String
+		//Decompress String - [NattWara] - 2018-07-15
 		w += '='.repeat(4 - w.length % 4);
 		w = Base64.btou(RawDeflate.inflate(Base64.fromBase64(w)));
 
