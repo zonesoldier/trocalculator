@@ -1,5 +1,9 @@
 [Update 2018-07-15]
 - Add DEFLATE/INFLATE for string compression/decompression [NattWara]
+	Old save will not work, but this make the cookie and the URL shorter
+	To use old save data and URL, need to compress is first. Because when the calc is loaded the data is decompress.
+- Add data compressor/decompressor, deflate.html [NattWara]
+- Fix Wizard/High Wizard only equipment available for soul linker (Ex: Staff of Magi) [NattWara]
 
 [Update 2018-07-14]
 - URL Saving for Eden/Biolab/El Dicaste/Mora enchants [NattWara]
