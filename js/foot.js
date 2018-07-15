@@ -6960,8 +6960,12 @@ with(document.calcForm){
 	}
 	
 	//Compress String - [NattWara] - 2018-07-15
-	wStr = Base64.toBase64(RawDeflate.deflate(wStr));
-	wStr = wStr.replace(/=/g, '');
+	var comp_wStr = Base64.toBase64(RawDeflate.deflate(wStr));
+	comp_wStr = comp_wStr.replace(/=/g, '');
+
+	if (comp_wStr.length < wStr.length-1) {
+		wStr = '_' + comp_wStr;
+	}
 
 	document.cookie = cookieNum +"="+ wStr +"; expires="+ expDay;
 
@@ -6997,8 +7001,11 @@ with(document.calcForm){
 	}
 	
 	//Decompress String - [NattWara] - 2018-07-15
-	wStr += '='.repeat(4 - wStr.length % 4);
-	wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
+	if (wStr.substr(0,1) == '_'){
+		wStr = wStr.replace(/_/g, '');
+		wStr += '='.repeat(4 - wStr.length % 4);
+		wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
+	}
 
 	for(i=0;i<=159;i++){
 		SaveData[i] = 0;
@@ -7494,8 +7501,11 @@ function LoadCookie3(){
 		}
 
 		//Decompress String - [NattWara] - 2018-07-15
-		wStr += '='.repeat(4 - wStr.length % 4);
-		wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
+		if (wStr.substr(0,1) == '_'){
+			wStr = wStr.replace(/_/g, '');
+			wStr += '='.repeat(4 - wStr.length % 4);
+			wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
+		}
 
 		if(wStr.substr(27,1) >= 1){
 			SaveData[0] = wStr.substr(0,2);
@@ -8024,8 +8034,12 @@ with(document.calcForm){
 	}
 	
 	//Compress String - [NattWara] - 2018-07-15
-	wStr = Base64.toBase64(RawDeflate.deflate(wStr));
-	wStr = wStr.replace(/=/g, '');	
+	var comp_wStr = Base64.toBase64(RawDeflate.deflate(wStr));
+	comp_wStr = comp_wStr.replace(/=/g, '');
+	
+	if (comp_wStr.length < wStr.length-1) {
+		wStr = '_' + comp_wStr;
+	}
 	
 	var w = location.href.split("?");
 	URL_TEXT.value = w[0] +"?"+ wStr;
@@ -8072,8 +8086,11 @@ with(document.calcForm){
 		var w = SaveData[1];
 
 		//Decompress String - [NattWara] - 2018-07-15
-		w += '='.repeat(4 - w.length % 4);
-		w = Base64.btou(RawDeflate.inflate(Base64.fromBase64(w)));
+		if (w.substr(0,1) == '_'){
+			w = w.replace(/_/g, '');
+			w += '='.repeat(4 - w.length % 4);
+			w = Base64.btou(RawDeflate.inflate(Base64.fromBase64(w)));
+		}
 
 		if(StoN2(w.substr(1,2)) == 20 && StoN2(w.substr(90,1)))
 			SuperNoviceFullWeaponCHECK = 1;
