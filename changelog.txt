@@ -1,3 +1,12 @@
+[Update 2018-07-15]
+- Add DEFLATE/INFLATE for string compression/decompression [NattWara]
+- Add data compressor/decompressor, deflate.html [NattWara]
+- Fix Wizard/High Wizard only equipment available for soul linker (Ex: Staff of Magi) [NattWara]
+
+[Update 2018-07-14]
+- URL Saving for Eden/Biolab/El Dicaste/Mora enchants [NattWara]
+- Fix Eden Hat enchant [NattWara]
+
 [Update 2018-07-13]
 - Added Army Padding [NattWara]
 - Added Pendant of Guardian [NattWara]

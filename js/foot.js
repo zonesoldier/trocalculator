@@ -1604,7 +1604,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(111 <= wHSE && wHSE <= 119)
 			n_A_DEF += parseInt(wHSE.substr(-1));
 	}
-	
+
 	//custom TalonRO Kris enchant MDEF
 	var KEbonus = [document.calcForm.A_KE11.value,document.calcForm.A_KE12.value,document.calcForm.A_KE21.value,document.calcForm.A_KE22.value];
 	for (i=0;i<KEbonus.length;i++){
@@ -2305,10 +2305,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	else{W_REF = 0;}
 
 	if(n_Nitou){
-		if(n_A_WeaponLV == 1){W_REF2 = n_A_Weapon2_ATKplus * 2;}
-		else if(n_A_WeaponLV == 2){W_REF2 = n_A_Weapon2_ATKplus * 3;}
-		else if(n_A_WeaponLV == 3){W_REF2 = n_A_Weapon2_ATKplus * 5;}
-		else if(n_A_WeaponLV == 4){W_REF2 = n_A_Weapon2_ATKplus * 7;}
+		if(n_A_Weapon2LV == 1){W_REF2 = n_A_Weapon2_ATKplus * 2;}
+		else if(n_A_Weapon2LV == 2){W_REF2 = n_A_Weapon2_ATKplus * 3;}
+		else if(n_A_Weapon2LV == 3){W_REF2 = n_A_Weapon2_ATKplus * 5;}
+		else if(n_A_Weapon2LV == 4){W_REF2 = n_A_Weapon2_ATKplus * 7;}
 	W_ATKD = n_A_Weapon_ATK + n_A_Weapon2_ATK;}
 	else{W_ATKD = n_A_Weapon_ATK;
 		 W_REF2 = 0;}
@@ -2353,6 +2353,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		P_ATK += 1 * (n_A_HEAD_DEF_PLUS - 6);
 	}
 
+	/*
+	//Note - Issue#252
+	//Moved to "Fix for Issue#252"
 	//custom TalonRO Chewing Bubblegum +1% atk
 	if(EquipNumSearch(1395))
 		P_ATK += P_ATK*.01;
@@ -2363,6 +2366,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1447))
 		if(n_A_HEAD_DEF_PLUS>=7)
 			P_ATK += P_ATK*.01;
+	*/
 
 	//Note - Issue#252
 	//Moved to "Fix for Issue#252"
@@ -6689,15 +6693,16 @@ function StoN(n){
 			return i;
 }
 
-SaveStr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14, 15,16, 17, 18, 19, 20, 21,22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100];
-SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1,  3, 1,  3,  3,  3,  3,  3, 1,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3];
+SaveStr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14, 15,16, 17, 18, 19, 20, 21,22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159]; // Add to 159
+SaveStr1 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1,  3, 1,  3,  3,  3,  3,  3, 1,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3];
 
 function SaveCookie(){
 with(document.calcForm){
 	SaveData = new Array();
 
-	for(i=0;i<=100;i++)
+	for(i=0;i<=159;i++){
 		SaveData[i]=0;
+	}
 
 	SaveData[0] = eval(A_JOB.value);
 	SaveData[1] = eval(A_BaseLV.value);
@@ -6873,7 +6878,7 @@ with(document.calcForm){
 			SaveData[109] = 0;
 			SaveData[110] = 0;
 	}
-	
+
 	//[Custom TalonRO 2018-07-13 - Save Cookie for Biolab Armor] [NattWara]
 	SaveData[111] = ((A_BEH1.value) ? eval(A_BEH1.value) : 0);
 	SaveData[112] = ((A_BEH2.value) ? eval(A_BEH2.value) : 0);
@@ -6889,53 +6894,52 @@ with(document.calcForm){
 	SaveData[122] = ((A_BEAC22.value) ? eval(A_BEAC22.value) : 0);
 	
 	//[Custom TalonRO 2018-07-13 - Save Cookie for Eden Armor] [NattWara]
-	SaveData[123] = ((A_EEH1.value) ? eval(A_EEH1.value) : 0);
-	SaveData[124] = ((A_EEH2.value) ? eval(A_EEH2.value) : 0);
-	SaveData[125] = ((A_EEA1.value) ? eval(A_EEA1.value) : 0);
-	SaveData[126] = ((A_EEA2.value) ? eval(A_EEA2.value) : 0);
-	SaveData[127] = ((A_EEG1.value) ? eval(A_EEG1.value) : 0);
-	SaveData[128] = ((A_EEG2.value) ? eval(A_EEG2.value) : 0);
-	SaveData[129] = ((A_EEF1.value) ? eval(A_EEF1.value) : 0);
-	SaveData[130] = ((A_EEF2.value) ? eval(A_EEF2.value) : 0);
+	SaveData[123] = ((A_EEH.value) ? eval(A_EEH.value) : 0);
+	SaveData[124] = ((A_EEA1.value) ? eval(A_EEA1.value) : 0);
+	SaveData[125] = ((A_EEA2.value) ? eval(A_EEA2.value) : 0);
+	SaveData[126] = ((A_EEG1.value) ? eval(A_EEG1.value) : 0);
+	SaveData[127] = ((A_EEG2.value) ? eval(A_EEG2.value) : 0);
+	SaveData[128] = ((A_EEF1.value) ? eval(A_EEF1.value) : 0);
+	SaveData[129] = ((A_EEF2.value) ? eval(A_EEF2.value) : 0);
 	
 	//[Custom TalonRO 2018-07-13 - Save Cookie for El Dicaste] [NattWara]
-	SaveData[131] = ((A_EDG1.value) ? eval(A_EDG1.value) : 0);
-	SaveData[132] = ((A_EDG2.value) ? eval(A_EDG2.value) : 0);
-	SaveData[133] = ((A_EDG3.value) ? eval(A_EDG3.value) : 0);
-	SaveData[134] = ((A_EDF1.value) ? eval(A_EDF1.value) : 0);
-	SaveData[135] = ((A_EDF2.value) ? eval(A_EDF2.value) : 0);
-	SaveData[136] = ((A_EDF3.value) ? eval(A_EDF3.value) : 0);
-	SaveData[137] = ((A_EDAC11.value) ? eval(A_EDAC11.value) : 0);
-	SaveData[138] = ((A_EDAC12.value) ? eval(A_EDAC12.value) : 0);
-	SaveData[139] = ((A_EDAC13.value) ? eval(A_EDAC13.value) : 0);
-	SaveData[140] = ((A_EDAC21.value) ? eval(A_EDAC21.value) : 0);
-	SaveData[141] = ((A_EDAC22.value) ? eval(A_EDAC22.value) : 0);
-	SaveData[142] = ((A_EDAC23.value) ? eval(A_EDAC23.value) : 0);
-	SaveData[143] = ((A_EDLOED11.value) ? eval(A_EDLOED11.value) : 0);
-	SaveData[144] = ((A_EDLOED12.value) ? eval(A_EDLOED12.value) : 0);
-	SaveData[145] = ((A_EDLOED13.value) ? eval(A_EDLOED13.value) : 0);
-	SaveData[146] = ((A_EDLOED21.value) ? eval(A_EDLOED21.value) : 0);
-	SaveData[147] = ((A_EDLOED22.value) ? eval(A_EDLOED22.value) : 0);
-	SaveData[148] = ((A_EDLOED23.value) ? eval(A_EDLOED23.value) : 0);
+	SaveData[130] = ((A_EDG1.value) ? eval(A_EDG1.value) : 0);
+	SaveData[131] = ((A_EDG2.value) ? eval(A_EDG2.value) : 0);
+	SaveData[132] = ((A_EDG3.value) ? eval(A_EDG3.value) : 0);
+	SaveData[133] = ((A_EDF1.value) ? eval(A_EDF1.value) : 0);
+	SaveData[134] = ((A_EDF2.value) ? eval(A_EDF2.value) : 0);
+	SaveData[135] = ((A_EDF3.value) ? eval(A_EDF3.value) : 0);
+	SaveData[136] = ((A_EDAC11.value) ? eval(A_EDAC11.value) : 0);
+	SaveData[137] = ((A_EDAC12.value) ? eval(A_EDAC12.value) : 0);
+	SaveData[138] = ((A_EDAC13.value) ? eval(A_EDAC13.value) : 0);
+	SaveData[139] = ((A_EDAC21.value) ? eval(A_EDAC21.value) : 0);
+	SaveData[140] = ((A_EDAC22.value) ? eval(A_EDAC22.value) : 0);
+	SaveData[141] = ((A_EDAC23.value) ? eval(A_EDAC23.value) : 0);
+	SaveData[142] = ((A_EDLOED11.value) ? eval(A_EDLOED11.value) : 0);
+	SaveData[143] = ((A_EDLOED12.value) ? eval(A_EDLOED12.value) : 0);
+	SaveData[144] = ((A_EDLOED13.value) ? eval(A_EDLOED13.value) : 0);
+	SaveData[145] = ((A_EDLOED21.value) ? eval(A_EDLOED21.value) : 0);
+	SaveData[146] = ((A_EDLOED22.value) ? eval(A_EDLOED22.value) : 0);
+	SaveData[147] = ((A_EDLOED23.value) ? eval(A_EDLOED23.value) : 0);
 	
 	//[Custom TalonRO 2018-07-13 - Save Cookie for Mora] [NattWara]
-	SaveData[149] = ((A_MORAEA1.value) ? eval(A_MORAEA1.value) : 0);
-	SaveData[150] = ((A_MORAEA2.value) ? eval(A_MORAEA2.value) : 0);
-	SaveData[151] = ((A_MORAEA3.value) ? eval(A_MORAEA3.value) : 0);
-	SaveData[152] = ((A_MORAEG1.value) ? eval(A_MORAEG1.value) : 0);
-	SaveData[153] = ((A_MORAEG2.value) ? eval(A_MORAEG2.value) : 0);
-	SaveData[154] = ((A_MORAEG3.value) ? eval(A_MORAEG3.value) : 0);
-	SaveData[155] = ((A_MORAEAC11.value) ? eval(A_MORAEAC11.value) : 0);
-	SaveData[156] = ((A_MORAEAC12.value) ? eval(A_MORAEAC12.value) : 0);
-	SaveData[157] = ((A_MORAEAC13.value) ? eval(A_MORAEAC13.value) : 0);
-	SaveData[158] = ((A_MORAEAC21.value) ? eval(A_MORAEAC21.value) : 0);
-	SaveData[159] = ((A_MORAEAC22.value) ? eval(A_MORAEAC22.value) : 0);
-	SaveData[160] = ((A_MORAEAC23.value) ? eval(A_MORAEAC23.value) : 0);
+	SaveData[148] = ((A_MORAEA1.value) ? eval(A_MORAEA1.value) : 0);
+	SaveData[149] = ((A_MORAEA2.value) ? eval(A_MORAEA2.value) : 0);
+	SaveData[150] = ((A_MORAEA3.value) ? eval(A_MORAEA3.value) : 0);
+	SaveData[151] = ((A_MORAEG1.value) ? eval(A_MORAEG1.value) : 0);
+	SaveData[152] = ((A_MORAEG2.value) ? eval(A_MORAEG2.value) : 0);
+	SaveData[153] = ((A_MORAEG3.value) ? eval(A_MORAEG3.value) : 0);
+	SaveData[154] = ((A_MORAEAC11.value) ? eval(A_MORAEAC11.value) : 0);
+	SaveData[155] = ((A_MORAEAC12.value) ? eval(A_MORAEAC12.value) : 0);
+	SaveData[156] = ((A_MORAEAC13.value) ? eval(A_MORAEAC13.value) : 0);
+	SaveData[157] = ((A_MORAEAC21.value) ? eval(A_MORAEAC21.value) : 0);
+	SaveData[158] = ((A_MORAEAC22.value) ? eval(A_MORAEAC22.value) : 0);
+	SaveData[159] = ((A_MORAEAC23.value) ? eval(A_MORAEAC23.value) : 0);
 
 	//wak1="";
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
-	for(i=0;i<=160;i++)
+	for(i=0;i<=159;i++)
 		SaveData[i] = NtoS(SaveData[i],SaveStr1[i]);
 	//for(i=0;i<=96;i++)
 	//	wak1+=i+": "+SaveData[i]+"\n";
@@ -6951,9 +6955,18 @@ with(document.calcForm){
 
 	wStr = "" +SaveData[0];
 
-	for(i=1;i<=100;i++){
+	for(i=1;i<=159;i++){
 		wStr += ""+SaveData[i];
 	}
+	
+	//Compress String - [NattWara] - 2018-07-15
+	var comp_wStr = Base64.toBase64(RawDeflate.deflate(wStr));
+	comp_wStr = comp_wStr.replace(/=/g, '');
+
+	if (comp_wStr.length < wStr.length-1) {
+		wStr = '_' + comp_wStr;
+	}
+
 	document.cookie = cookieNum +"="+ wStr +"; expires="+ expDay;
 
 	bkcN = cookieNum;
@@ -6986,12 +6999,20 @@ with(document.calcForm){
 			break;
 		}
 	}
+	
+	//Decompress String - [NattWara] - 2018-07-15
+	if (wStr.substr(0,1) == '_'){
+		wStr = wStr.replace(/_/g, '');
+		wStr += '='.repeat(4 - wStr.length % 4);
+		wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
+	}
 
-	for(i=0;i<=160;i++)
+	for(i=0;i<=159;i++){
 		SaveData[i] = 0;
+	}
 
 	j=0;
-	for(i=0;i<=160;i++){
+	for(i=0;i<=159;i++){
 		if(SaveStr1[i] == 1){
 			SaveData[i] = wStr.substr(j,1);
 			j++;
@@ -7004,7 +7025,7 @@ with(document.calcForm){
 		}
 	}
 
-	for(i=0;i<=160;i++){
+	for(i=0;i<=159;i++){
 		if(SaveStr1[i] == 1)
 			SaveData[i] = StoN(SaveData[i]);
 		if(SaveStr1[i] == 2)
@@ -7013,7 +7034,7 @@ with(document.calcForm){
 			SaveData[i] = StoN(SaveData[i].substr(0,1)) + SaveData[i].substr(1,2);
 	}
 
-	for(i=0;i<=160;i++){
+	for(i=0;i<=159;i++){
 		if(SaveStr1[i] == 3 && SaveData[i].substr(0,2) == "00")
 			SaveData[i] = SaveData[i].substr(2,1);
 		else if(SaveStr1[i] == 3 && SaveData[i].substr(0,1) == "0")
@@ -7036,16 +7057,16 @@ with(document.calcForm){
 	// 101-104 Biolab Weapon
 	// 105-110 Eden Weapon
 	// 111-122 Biolab Armor
-	// 123-130 Eden Armor
-	// 131-148 El Dicaste
-	// 149-160 Mora
-	for(i=97;i<=160;i++){
+	// 123-129 Eden Armor
+	// 130-147 El Dicaste
+	// 148-159 Mora
+	for(i=97;i<=159;i++){
 		if (typeof(SaveData[i]) == "undefined"){
 			SaveData[i] = 0;
 		}
 	}
 
-	for(i=0;i<=160;i++)
+	for(i=0;i<=159;i++)
 			SaveData[i] = eval(SaveData[i]);
 
 	if(eval(SaveData[0]) == 20 && eval(SaveData[54]) == 1)
@@ -7206,71 +7227,208 @@ with(document.calcForm){
 	A_BE21.value = SaveData[103];
 	A_BE22.value = SaveData[104];
 	
-	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Weapon Enchants] [NattWara]
-	A_EE11 = SaveData[105];
-	A_EE12 = SaveData[106];
-	A_EE13 = SaveData[107];
-	A_EE21 = SaveData[108];
-	A_EE22 = SaveData[109];
-	A_EE23 = SaveData[110];
+	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Weapon Enchants Slot 1] [NattWara]
+	A_EE11.value = SaveData[105];
+	A_EE21.value = SaveData[108];
 	
+	//Populate option for slot 2 depending on choice of slot 1
+	//Weapon 1
+	switch(A_EE11.value) {
+	case "172":
+
+			//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+			removeOptions(A_EE12);
+			A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+			for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+				A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+			}
+		
+		break;
+	case "892":
+
+			//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+			removeOptions(A_EE12);
+			A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+			for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+				A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+			}
+		
+		break;
+	default:
+		//Clear weapon 1 slot 2
+		removeOptions(A_EE12);
+		A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+	}
+
+	//Weapon 2
+	switch(A_EE21.value) {
+	case "172":
+
+			//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+			removeOptions(A_EE22);
+			A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+			for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+				A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+			}
+		
+		break;
+	case "892":
+
+			//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+			removeOptions(A_EE22);
+			A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+			for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+				A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+			}
+		
+		break;
+	default:
+		//Clear weapon 2 slot 2
+		removeOptions(A_EE22);
+		A_EE22.options[0] = new Option("(Eden Enchant "+ A_EE22.name.substr(-1) +")",0);
+	}	
+
+	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Weapon Enchants Slot 2] [NattWara]
+	A_EE12.value = SaveData[106];
+	A_EE22.value = SaveData[109];
+
+	//Populate option for slot 3 depending on choice of slot 1 and slot 2
+	//Weapon 1
+	
+	//Clear weapon 1 slot 3
+	removeOptions(A_EE13);
+	A_EE13.options[0] = new Option("(Eden Enchant "+ A_EE13.name.substr(-1) +")",0);
+	
+	if (A_EE11.value != 0 && A_EE12.value != 0) {
+		var option1Text = option2Text = "";
+
+		for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+			if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE11.value) {
+				option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+				break;
+			}
+		}
+		
+		if (A_EE12.value >= 2030 && A_EE12.value <= 2039) {
+			for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE12.value) {
+					option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+					break;
+				}
+			}
+		}
+		
+		if (A_EE12.value >= 2170 && A_EE12.value <= 2179) {
+			for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE12.value) {
+					option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+					break;
+				}
+			}
+		}
+			
+		A_EE13.options[1] = new Option(option1Text,A_EE11.value);
+		A_EE13.options[2] = new Option(option2Text,A_EE12.value);
+	}
+	
+	//Weapon 2
+	
+	//Clear weapon 2 slot 3
+	removeOptions(A_EE23);
+	A_EE23.options[0] = new Option("(Eden Enchant 2-"+ A_EE23.name.substr(-1) +")",0);
+	
+	if (A_EE21.value != 0 || A_EE22.value != 0) {
+		var option1Text = option2Text = "";
+		
+		for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+			if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE21.value) {
+				option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+				break;
+			}
+		}
+		
+		if (A_EE22.value >= 2030 && A_EE22.value <= 2039) {
+			for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE22.value) {
+					option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+					break;
+				}
+			}
+		}
+		
+		if (A_EE22.value >= 2170 && A_EE22.value <= 2179) {
+			for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE22.value) {
+					option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+					break;
+				}
+			}
+		}
+
+		A_EE23.options[1] = new Option(option1Text,A_EE21.value);
+		A_EE23.options[2] = new Option(option2Text,A_EE22.value);
+	}
+
+	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Weapon Enchants Slot 3] [NattWara]
+	A_EE13.value = SaveData[107];
+	A_EE23.value = SaveData[110];
+
 	// [Custom TalonRO - 2018-07-13 - Load Cookie for Biolab Armor Enchants] [NattWara]
-	A_BEH1 = SaveData[111];
-	A_BEH2 = SaveData[112];
-	A_BEA1 = SaveData[113];
-	A_BEA2 = SaveData[114];
-	A_BES1 = SaveData[115];
-	A_BES2 = SaveData[116];
-	A_BEG1 = SaveData[117];
-	A_BEG2 = SaveData[118];
-	A_BEAC11 = SaveData[119];
-	A_BEAC12 = SaveData[120];
-	A_BEAC21 = SaveData[121];
-	A_BEAC22 = SaveData[122];
+	A_BEH1.value = SaveData[111];
+	A_BEH2.value = SaveData[112];
+	A_BEA1.value = SaveData[113];
+	A_BEA2.value = SaveData[114];
+	A_BES1.value = SaveData[115];
+	A_BES2.value = SaveData[116];
+	A_BEG1.value = SaveData[117];
+	A_BEG2.value = SaveData[118];
+	A_BEAC11.value = SaveData[119];
+	A_BEAC12.value = SaveData[120];
+	A_BEAC21.value = SaveData[121];
+	A_BEAC22.value = SaveData[122];
 	
 	// [Custom TalonRO - 2018-07-13 - Load Cookie for Eden Armor Enchants] [NattWara]
-	A_EEH1 = SaveData[123];
-	A_EEH2 = SaveData[124];
-	A_EEA1 = SaveData[125];
-	A_EEA2 = SaveData[126];
-	A_EEG1 = SaveData[127];
-	A_EEG2 = SaveData[128];
-	A_EEF1 = SaveData[129];
-	A_EEF2 = SaveData[130];
+	A_EEH.value = SaveData[123];
+	A_EEA1.value = SaveData[124];
+	A_EEA2.value = SaveData[125];
+	A_EEG1.value = SaveData[126];
+	A_EEG2.value = SaveData[127];
+	A_EEF1.value = SaveData[128];
+	A_EEF2.value = SaveData[129];
 	
 	// [Custom TalonRO - 2018-07-13 - Load Cookie for El Dicaste Enchants] [NattWara]
-	A_EDG1 = SaveData[131];
-	A_EDG2 = SaveData[132];
-	A_EDG3 = SaveData[133];
-	A_EDF1 = SaveData[134];
-	A_EDF2 = SaveData[135];
-	A_EDF3 = SaveData[136];
-	A_EDAC11 = SaveData[137];
-	A_EDAC12 = SaveData[138];
-	A_EDAC13 = SaveData[139];
-	A_EDAC21 = SaveData[140];
-	A_EDAC22 = SaveData[141];
-	A_EDAC23 = SaveData[142];
-	A_EDLOED11 = SaveData[143];
-	A_EDLOED12 = SaveData[144];
-	A_EDLOED13 = SaveData[145];
-	A_EDLOED21 = SaveData[146];
-	A_EDLOED22 = SaveData[147];
-	A_EDLOED23 = SaveData[148];
+	A_EDG1.value = SaveData[130];
+	A_EDG2.value = SaveData[131];
+	A_EDG3.value = SaveData[132];
+	A_EDF1.value = SaveData[133];
+	A_EDF2.value = SaveData[134];
+	A_EDF3.value = SaveData[135];
+	A_EDAC11.value = SaveData[136];
+	A_EDAC12.value = SaveData[137];
+	A_EDAC13.value = SaveData[138];
+	A_EDAC21.value = SaveData[139];
+	A_EDAC22.value = SaveData[140];
+	A_EDAC23.value = SaveData[141];
+	A_EDLOED11.value = SaveData[142];
+	A_EDLOED12.value = SaveData[143];
+	A_EDLOED13.value = SaveData[144];
+	A_EDLOED21.value = SaveData[145];
+	A_EDLOED22.value = SaveData[146];
+	A_EDLOED23.value = SaveData[147];
 	
 	// [Custom TalonRO - 2018-07-13 - Load Cookie for Mora Enchants] [NattWara]
-	A_MORAEA1 = SaveData[149];
-	A_MORAEA2 = SaveData[150];
-	A_MORAEA3 = SaveData[151];
-	A_MORAEG1 = SaveData[152];
-	A_MORAEG2 = SaveData[153];
-	A_MORAEG3 = SaveData[154];
-	A_MORAEAC11 = SaveData[155];
-	A_MORAEAC12 = SaveData[156];
-	A_MORAEAC13 = SaveData[157];
-	A_MORAEAC21 = SaveData[158];
-	A_MORAEAC22 = SaveData[159];
-	A_MORAEAC23 = SaveData[160];
+	A_MORAEA1.value = SaveData[148];
+	A_MORAEA2.value = SaveData[149];
+	A_MORAEA3.value = SaveData[150];
+	A_MORAEG1.value = SaveData[151];
+	A_MORAEG2.value = SaveData[152];
+	A_MORAEG3.value = SaveData[153];
+	A_MORAEAC11.value = SaveData[154];
+	A_MORAEAC12.value = SaveData[155];
+	A_MORAEAC13.value = SaveData[156];
+	A_MORAEAC21.value = SaveData[157];
+	A_MORAEAC22.value = SaveData[158];
+	A_MORAEAC23.value = SaveData[159];
 	
 	Click_SQI_Bonus(0);
 
@@ -7278,7 +7436,7 @@ with(document.calcForm){
 	StAllCalc();
 	ActiveSkillSetPlus();
 }}
-
+/*
 function LoadCookieSP(){
 with(document.calcForm){
 	var wStr = "";
@@ -7318,7 +7476,7 @@ with(document.calcForm){
 	}
 	myInnerHtml("PR1",wStr,0);
 }}
-
+*/
 function LoadCookie3(){
 
 	SaveData = new Array();
@@ -7342,6 +7500,13 @@ function LoadCookie3(){
 			}
 		}
 
+		//Decompress String - [NattWara] - 2018-07-15
+		if (wStr.substr(0,1) == '_'){
+			wStr = wStr.replace(/_/g, '');
+			wStr += '='.repeat(4 - wStr.length % 4);
+			wStr = Base64.btou(RawDeflate.inflate(Base64.fromBase64(wStr)));
+		}
+
 		if(wStr.substr(27,1) >= 1){
 			SaveData[0] = wStr.substr(0,2);
 			SaveData[0] = eval(SaveData[0]);
@@ -7363,7 +7528,7 @@ function LoadCookie3(){
 			document.calcForm.A_SaveSlot.options[k-1] = new Option("Save "+k +": No Data",cookieNum);
 	}
 }
-
+/*
 function SaveCookieConf(){
 	SaveData = new Array();
 
@@ -7373,12 +7538,12 @@ function SaveCookieConf(){
 	wCookie.setTime(wCookie.getTime()+(wDay*1000*60*60*24));
 	expDay = wCookie.toGMTString();
 
-
 	wStr = "a" + NtoS2(eval(document.calcForm.Conf01.value),2) + "00000";
 
 	document.cookie = "ConfData" +"="+ wStr +"; expires="+ expDay;
 }
-
+*/
+/*
 function LoadCookieConf(){
 
 	SaveData = new Array();
@@ -7394,17 +7559,18 @@ function LoadCookieConf(){
 		}
 	}
 
-	/*if(wLCF == 1){
-		if(wStr.substr(0,1) == "0"){
-			document.calcForm.Conf01.value = wStr.substr(1,2);
-			SaveCookieConf();
-		}else
-			document.calcForm.Conf01.value = StoN2(wStr.substr(1,2));
-	}else{
-		document.calcForm.Conf01.value = 33;
-	}*/
+	//if(wLCF == 1){
+	//	if(wStr.substr(0,1) == "0"){
+	//		document.calcForm.Conf01.value = wStr.substr(1,2);
+	//		SaveCookieConf();
+	//	}else
+	//		document.calcForm.Conf01.value = StoN2(wStr.substr(1,2));
+	//}else{
+	//	document.calcForm.Conf01.value = 33;
+	//}
 }
-
+*/
+/*
 function SaveCookieChangelogDisplay(){
 	var disp;
 	if (document.getElementById('ChangelogDisplay').style.display=='inline'){
@@ -7424,7 +7590,9 @@ function SaveCookieChangelogDisplay(){
 
 	document.cookie = "ChangelogDisplay" +"="+ disp +"; expires="+ expDay;
 }
+*/
 
+/*
 function LoadCookieChangelogDisplay(){
 
 	SaveData = new Array();
@@ -7446,6 +7614,7 @@ function LoadCookieChangelogDisplay(){
 		}
 	}
 }
+*/
 
 function NtoS2(n,keta){
 	var strX = "";
@@ -7477,7 +7646,6 @@ function NtoS01(wb,wc,wd,we,wf){
 		n += 1;
 	return NtoS2(n,1);
 }
-
 
 function NtoS05(wa,wb){
 	var n;
@@ -7727,18 +7895,26 @@ with(document.calcForm){
 	x+=1;
 
 	//custom TalonRO Kris Enchantment SAVE URL
+	/*
 	if(A_weapon1.value == 1472){
-		SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_KE11.value),2);
-		SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_KE12.value),2);
+		SaveData[x+1] = NtoS2(parseInt(A_KE11.value),2);
+		SaveData[x+2] = NtoS2(parseInt(A_KE12.value),2);
 		x+=2;
 	}
 	if (typeof(A_weapon2) != "undefined"){
 		if(A_weapon2.value == 1472){
-			SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_KE21.value),2);
-			SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_KE22.value),2);
+			SaveData[x+1] = NtoS2(parseInt(A_KE21.value),2);
+			SaveData[x+2] = NtoS2(parseInt(A_KE22.value),2);
 			x+=2;
 		}
 	}
+	*/
+	SaveData[x+1] = NtoS2(parseInt(A_KE11.value),2);
+	SaveData[x+2] = NtoS2(parseInt(A_KE12.value),2);
+	SaveData[x+3] = NtoS2(parseInt(A_KE21.value),2);
+	SaveData[x+4] = NtoS2(parseInt(A_KE22.value),2);
+	x+=4;
+	
 	//custom TalonRO SQI interface
 	x_sqibonus=0;
 	SaveData[x+1] = NtoS2(0,1);
@@ -7759,19 +7935,112 @@ with(document.calcForm){
 	}
 
 	//[Custom TalonRO 2018-06-15 - SAVE URL] [Kato]
-		SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_ME11.value),2);
-		SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_ME12.value),2);
-		x+=2;
+	/*
+	SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_ME11.value),2);
+	SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_ME12.value),2);
+	x+=2;
 	if (typeof(A_weapon2) != "undefined"){
-			SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_ME21.value),2);
-			SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_ME22.value),2);
-			x+=2;
+		SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_ME21.value),2);
+		SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_ME22.value),2);
 	}
+	x+=2;
+	*/
+	SaveData[x+1] = NtoS2(parseInt(document.calcForm.A_ME11.value),2);
+	SaveData[x+2] = NtoS2(parseInt(document.calcForm.A_ME12.value),2);
+	SaveData[x+3] = NtoS2(parseInt(document.calcForm.A_ME21.value),2);
+	SaveData[x+4] = NtoS2(parseInt(document.calcForm.A_ME22.value),2);
+	x+=4;
+
+	//[Custom TalonRO 2018-07-14 - Save URL for Biolab Weapon] [NattWara]
+	SaveData[x+1] = NtoS2(parseInt(A_BE11.value),2);
+	SaveData[x+2] = NtoS2(parseInt(A_BE12.value),2);
+	SaveData[x+3] = NtoS2(parseInt(A_BE21.value),2);
+	SaveData[x+4] = NtoS2(parseInt(A_BE22.value),2);
+	x+=4;
+
+	//[Custom TalonRO 2018-07-14 - Save URL for Eden Weapon] [NattWara]
+	SaveData[x+1] = NtoS2(parseInt(A_EE11.value),2);
+	SaveData[x+2] = NtoS2(parseInt(A_EE12.value),2);
+	SaveData[x+3] = NtoS2(parseInt(A_EE13.value),2);
+	SaveData[x+4] = NtoS2(parseInt(A_EE21.value),2);
+	SaveData[x+5] = NtoS2(parseInt(A_EE22.value),2);
+	SaveData[x+6] = NtoS2(parseInt(A_EE23.value),2);
+	x+=6;
+
+	//[Custom TalonRO 2018-07-14 - Save URL for Biolab Armor] [NattWara]
+	SaveData[x+1] = NtoS2(parseInt(A_BEH1.value),2);
+	SaveData[x+2] = NtoS2(parseInt(A_BEH2.value),2);
+	SaveData[x+3] = NtoS2(parseInt(A_BEA1.value),2);
+	SaveData[x+4] = NtoS2(parseInt(A_BEA2.value),2);
+	SaveData[x+5] = NtoS2(parseInt(A_BES1.value),2);
+	SaveData[x+6] = NtoS2(parseInt(A_BES2.value),2);
+	SaveData[x+7] = NtoS2(parseInt(A_BEG1.value),2);
+	SaveData[x+8] = NtoS2(parseInt(A_BEG2.value),2);
+	SaveData[x+9] = NtoS2(parseInt(A_BEAC11.value),2);
+	SaveData[x+10] = NtoS2(parseInt(A_BEAC12.value),2);
+	SaveData[x+11] = NtoS2(parseInt(A_BEAC21.value),2);
+	SaveData[x+12] = NtoS2(parseInt(A_BEAC22.value),2);
+	x+=12;
+	
+	//[Custom TalonRO 2018-07-14 - Save URL for Eden Armor] [NattWara]
+	SaveData[x+1] = NtoS2(parseInt(A_EEH.value),2);
+	SaveData[x+2] = NtoS2(parseInt(A_EEA1.value),2);
+	SaveData[x+3] = NtoS2(parseInt(A_EEA2.value),2);
+	SaveData[x+4] = NtoS2(parseInt(A_EEG1.value),2);
+	SaveData[x+5] = NtoS2(parseInt(A_EEG2.value),2);
+	SaveData[x+6] = NtoS2(parseInt(A_EEF1.value),2);
+	SaveData[x+7] = NtoS2(parseInt(A_EEF2.value),2);
+	x+=7;
+	
+	//[Custom TalonRO 2018-07-14 - Save URL for El Dicaste] [NattWara]
+	SaveData[x+1] = NtoS2(parseInt(A_EDG1.value),2);
+	SaveData[x+2] = NtoS2(parseInt(A_EDG2.value),2);
+	SaveData[x+3] = NtoS2(parseInt(A_EDG3.value),2);
+	SaveData[x+4] = NtoS2(parseInt(A_EDF1.value),2);
+	SaveData[x+5] = NtoS2(parseInt(A_EDF2.value),2);
+	SaveData[x+6] = NtoS2(parseInt(A_EDF3.value),2);
+	SaveData[x+7] = NtoS2(parseInt(A_EDAC11.value),2);
+	SaveData[x+8] = NtoS2(parseInt(A_EDAC12.value),2);
+	SaveData[x+9] = NtoS2(parseInt(A_EDAC13.value),2);
+	SaveData[x+10] = NtoS2(parseInt(A_EDAC21.value),2);
+	SaveData[x+11] = NtoS2(parseInt(A_EDAC22.value),2);
+	SaveData[x+12] = NtoS2(parseInt(A_EDAC23.value),2);
+	SaveData[x+13] = NtoS2(parseInt(A_EDLOED11.value),2);
+	SaveData[x+14] = NtoS2(parseInt(A_EDLOED12.value),2);
+	SaveData[x+15] = NtoS2(parseInt(A_EDLOED13.value),2);
+	SaveData[x+16] = NtoS2(parseInt(A_EDLOED21.value),2);
+	SaveData[x+17] = NtoS2(parseInt(A_EDLOED22.value),2);
+	SaveData[x+18] = NtoS2(parseInt(A_EDLOED23.value),2);
+	x+=18;
+	
+	//[Custom TalonRO 2018-07-14 - Save URL for Mora] [NattWara]
+	SaveData[x+1] = NtoS2(parseInt(A_MORAEA1.value),2);
+	SaveData[x+2] = NtoS2(parseInt(A_MORAEA2.value),2);
+	SaveData[x+3] = NtoS2(parseInt(A_MORAEA3.value),2);
+	SaveData[x+4] = NtoS2(parseInt(A_MORAEG1.value),2);
+	SaveData[x+5] = NtoS2(parseInt(A_MORAEG2.value),2);
+	SaveData[x+6] = NtoS2(parseInt(A_MORAEG3.value),2);
+	SaveData[x+7] = NtoS2(parseInt(A_MORAEAC11.value),2);
+	SaveData[x+8] = NtoS2(parseInt(A_MORAEAC12.value),2);
+	SaveData[x+9] = NtoS2(parseInt(A_MORAEAC13.value),2);
+	SaveData[x+10] = NtoS2(parseInt(A_MORAEAC21.value),2);
+	SaveData[x+11] = NtoS2(parseInt(A_MORAEAC22.value),2);
+	SaveData[x+12] = NtoS2(parseInt(A_MORAEAC23.value),2);
+	x+=12;
 
 	wStr = "" +SaveData[0];
 	for(i=1;i<=x;i++){
 		wStr += ""+SaveData[i];
 	}
+	
+	//Compress String - [NattWara] - 2018-07-15
+	var comp_wStr = Base64.toBase64(RawDeflate.deflate(wStr));
+	comp_wStr = comp_wStr.replace(/=/g, '');
+	
+	if (comp_wStr.length < wStr.length-1) {
+		wStr = '_' + comp_wStr;
+	}
+	
 	var w = location.href.split("?");
 	URL_TEXT.value = w[0] +"?"+ wStr;
 	URL_TEXT.select();
@@ -7815,6 +8084,13 @@ with(document.calcForm){
 		var SaveData = new Array();
 		SaveData = location.href.split("?");
 		var w = SaveData[1];
+
+		//Decompress String - [NattWara] - 2018-07-15
+		if (w.substr(0,1) == '_'){
+			w = w.replace(/_/g, '');
+			w += '='.repeat(4 - w.length % 4);
+			w = Base64.btou(RawDeflate.inflate(Base64.fromBase64(w)));
+		}
 
 		if(StoN2(w.substr(1,2)) == 20 && StoN2(w.substr(90,1)))
 			SuperNoviceFullWeaponCHECK = 1;
@@ -7913,7 +8189,8 @@ with(document.calcForm){
 
 
 		var BackupX = x;
-/*		A_ActiveSkill.value = StoN2(w.substr(x+1,2));
+		/*
+		A_ActiveSkill.value = StoN2(w.substr(x+1,2));
 
 		ClickActiveSkill();
 		A_ActiveSkillLV.value = StoN2(w.substr(x+3,1));
@@ -7922,8 +8199,8 @@ with(document.calcForm){
 			SkillSubNum.value = StoN2(w.substr(x+4,3));
 
 		B_Enemy.value = StoN2(w.substr(x+7,2));
-
-*/		x+=8;
+		*/
+		x+=8;
 
 		x+=1;
 		if(StoN2(w.substr(x,1)) == 1){
@@ -8090,6 +8367,7 @@ with(document.calcForm){
 			x+=2;
 		}
 		//custom TalonRO Kris Enchantment LOAD URL
+		/*
 		if(A_weapon1.value == 1472){
 			A_KE11.value = StoN2(w.substr(x+1,2));
 			A_KE12.value = StoN2(w.substr(x+3,2));
@@ -8102,6 +8380,13 @@ with(document.calcForm){
 				x+=4
 			}
 		}
+		*/
+		A_KE11.value = StoN2(w.substr(x+1,2));
+		A_KE12.value = StoN2(w.substr(x+3,2));
+		A_KE21.value = StoN2(w.substr(x+5,2));
+		A_KE22.value = StoN2(w.substr(x+7,2));
+		x+=8
+		
 		//custom TalonRO SQI interface SAVE URL
 		x_sqibonus=StoN2(w.substr(x+1,1));					//check if any sqi bonus was activated (0=none;1=activated)
 		x+=1;
@@ -8114,6 +8399,7 @@ with(document.calcForm){
 		}
 
 		//[Custom TalonRO 2018-06-15 - LOAD URL] [Kato]
+		/*
 		if((StoN2(w.substr(x+1,2)) != "undefined"))
 			A_ME11.value = StoN2(w.substr(x+1,2));
 		else
@@ -8135,8 +8421,229 @@ with(document.calcForm){
 			A_ME22.value = StoN2(w.substr(x+3,2));
 		else
 			A_ME22.value = 0;
-
+		
 		x+=4;
+		*/
+		A_ME11.value = StoN2(w.substr(x+1,2));
+		A_ME12.value = StoN2(w.substr(x+3,2));
+		A_ME21.value = StoN2(w.substr(x+5,2));
+		A_ME22.value = StoN2(w.substr(x+7,2));
+		x+=8;
+		
+		// [Custom TalonRO - 2018-07-14 - Load URL for Biolab Weapon Enchants] [NattWara]
+		A_BE11.value = StoN2(w.substr(x+1,2));
+		A_BE12.value = StoN2(w.substr(x+3,2));
+		A_BE21.value = StoN2(w.substr(x+5,2));
+		A_BE22.value = StoN2(w.substr(x+7,2));
+		x+=8;
+
+		// [Custom TalonRO - 2018-07-14 - Load URL for Eden Weapon Enchants Slot 1] [NattWara]
+		A_EE11.value = StoN2(w.substr(x+1,2));
+		A_EE21.value = StoN2(w.substr(x+7,2));
+		
+		//Populate option for slot 2 depending on choice of slot 1
+		//Weapon 1
+		switch(A_EE11.value) {
+		case "172":
+			if (!(A_EE12.value >= 2030 && A_EE12.value <= 2039)) {
+				//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE12);
+				A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+					A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+				}
+			}
+			break;
+		case "892":
+			if (!(A_EE12.value >= 2170 && A_EE12.value <= 2179)) {
+				//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE12);
+				A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+					A_EE12.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+				}
+			}
+			break;
+		default:
+			//Clear weapon 1 slot 2
+			removeOptions(A_EE12);
+			A_EE12.options[0] = new Option("(Eden Enchant "+ A_EE12.name.substr(-1) +")",0);
+		}
+
+		//Weapon 2
+		switch(A_EE21.value) {
+		case "172":
+			if (!(A_EE22.value >= 2030 && A_EE22.value <= 2039)) {
+				//Add Physical Damage 10% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE22);
+				A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length; i++) {
+					A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0]);
+				}
+			}
+			break;
+		case "892":
+			if (!(A_EE22.value >= 2170 && A_EE22.value <= 2179)) {
+				//Add Magical Damage 5% vs Race Option for Enchant slot 2.
+				removeOptions(A_EE22);
+				A_EE22.options[0] = new Option("(Eden Enchant 2-"+ A_EE22.name.substr(-1) +")",0);
+				for(i=0; i<EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length; i++) {
+					A_EE22.options[i+1] = new Option(EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1],EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0]);
+				}
+			}
+			break;
+		default:
+			//Clear weapon 2 slot 2
+			removeOptions(A_EE22);
+			A_EE22.options[0] = new Option("(Eden Enchant "+ A_EE22.name.substr(-1) +")",0);
+		}
+		
+		// [Custom TalonRO - 2018-07-14 - Load URL for Eden Weapon Enchants Slot 2] [NattWara]
+		A_EE12.value = StoN2(w.substr(x+3,2));
+		A_EE22.value = StoN2(w.substr(x+9,2));
+
+		//Populate option for slot 3 depending on choice of slot 1 and slot 2
+		//Weapon 1
+		
+		//Clear weapon 1 slot 3
+		removeOptions(A_EE13);
+		A_EE13.options[0] = new Option("(Eden Enchant "+ A_EE13.name.substr(-1) +")",0);
+		
+		if (A_EE11.value != 0 && A_EE12.value != 0) {
+			var option1Text = option2Text = "";
+
+			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE11.value) {
+					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+					break;
+				}
+			}
+			
+			if (A_EE12.value >= 2030 && A_EE12.value <= 2039) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE12.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			if (A_EE12.value >= 2170 && A_EE12.value <= 2179) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE12.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+						break;
+					}
+				}
+			}
+				
+			A_EE13.options[1] = new Option(option1Text,A_EE11.value);
+			A_EE13.options[2] = new Option(option2Text,A_EE12.value);
+		}
+		
+		//Weapon 2
+		
+		//Clear weapon 2 slot 3
+		removeOptions(A_EE23);
+		A_EE23.options[0] = new Option("(Eden Enchant 2-"+ A_EE23.name.substr(-1) +")",0);
+		
+		if (A_EE21.value != 0 || A_EE22.value != 0) {
+			var option1Text = option2Text = "";
+			
+			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE21.value) {
+					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+					break;
+				}
+			}
+			
+			if (A_EE22.value >= 2030 && A_EE22.value <= 2039) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE22.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
+						break;
+					}
+				}
+			}
+			
+			if (A_EE22.value >= 2170 && A_EE22.value <= 2179) {
+				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE22.value) {
+						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+						break;
+					}
+				}
+			}
+
+			A_EE23.options[1] = new Option(option1Text,A_EE21.value);
+			A_EE23.options[2] = new Option(option2Text,A_EE22.value);
+		}
+
+		// [Custom TalonRO - 2018-07-14 - Load URL for Eden Weapon Enchants Slot 3] [NattWara]
+		A_EE13.value = StoN2(w.substr(x+5,2));
+		A_EE23.value = StoN2(w.substr(x+11,2));
+		x+=12;
+
+		// [Custom TalonRO - 2018-07-14 - Load URL for Biolab Armor Enchants] [NattWara]
+		A_BEH1.value = StoN2(w.substr(x+1,2));
+		A_BEH2.value = StoN2(w.substr(x+3,2));
+		A_BEA1.value = StoN2(w.substr(x+5,2));
+		A_BEA2.value = StoN2(w.substr(x+7,2));
+		A_BES1.value = StoN2(w.substr(x+9,2));
+		A_BES2.value = StoN2(w.substr(x+11,2));
+		A_BEG1.value = StoN2(w.substr(x+13,2));
+		A_BEG2.value = StoN2(w.substr(x+15,2));
+		A_BEAC11.value = StoN2(w.substr(x+17,2));
+		A_BEAC12.value = StoN2(w.substr(x+19,2));
+		A_BEAC21.value = StoN2(w.substr(x+21,2));
+		A_BEAC22.value = StoN2(w.substr(x+23,2));
+		x+=24;
+
+		// [Custom TalonRO - 2018-07-14 - Load URL for Eden Armor Enchants] [NattWara]
+		A_EEH.value = StoN2(w.substr(x+1,2));
+		A_EEA1.value = StoN2(w.substr(x+3,2));
+		A_EEA2.value = StoN2(w.substr(x+5,2));
+		A_EEG1.value = StoN2(w.substr(x+7,2));
+		A_EEG2.value = StoN2(w.substr(x+9,2));
+		A_EEF1.value = StoN2(w.substr(x+11,2));
+		A_EEF2.value = StoN2(w.substr(x+13,2));
+		x+=14;
+
+		// [Custom TalonRO - 2018-07-14 - Load URL for El Dicaste Enchants] [NattWara]
+		A_EDG1.value = StoN2(w.substr(x+1,2));
+		A_EDG2.value = StoN2(w.substr(x+3,2));
+		A_EDG3.value = StoN2(w.substr(x+5,2));
+		A_EDF1.value = StoN2(w.substr(x+7,2));
+		A_EDF2.value = StoN2(w.substr(x+9,2));
+		A_EDF3.value = StoN2(w.substr(x+11,2));
+		A_EDAC11.value = StoN2(w.substr(x+13,2));
+		A_EDAC12.value = StoN2(w.substr(x+15,2));
+		A_EDAC13.value = StoN2(w.substr(x+17,2));
+		A_EDAC21.value = StoN2(w.substr(x+19,2));
+		A_EDAC22.value = StoN2(w.substr(x+21,2));
+		A_EDAC23.value = StoN2(w.substr(x+23,2));
+		A_EDLOED11.value = StoN2(w.substr(x+25,2));
+		A_EDLOED12.value = StoN2(w.substr(x+27,2));
+		A_EDLOED13.value = StoN2(w.substr(x+29,2));
+		A_EDLOED21.value = StoN2(w.substr(x+31,2));
+		A_EDLOED22.value = StoN2(w.substr(x+33,2));
+		A_EDLOED23.value = StoN2(w.substr(x+35,2));
+		x+=36;
+
+		// [Custom TalonRO - 2018-07-14 - Load URL for Mora Enchants] [NattWara]
+		A_MORAEA1.value = StoN2(w.substr(x+1,2));
+		A_MORAEA2.value = StoN2(w.substr(x+3,2));
+		A_MORAEA3.value = StoN2(w.substr(x+5,2));
+		A_MORAEG1.value = StoN2(w.substr(x+7,2));
+		A_MORAEG2.value = StoN2(w.substr(x+9,2));
+		A_MORAEG3.value = StoN2(w.substr(x+11,2));
+		A_MORAEAC11.value = StoN2(w.substr(x+13,2));
+		A_MORAEAC12.value = StoN2(w.substr(x+15,2));
+		A_MORAEAC13.value = StoN2(w.substr(x+17,2));
+		A_MORAEAC21.value = StoN2(w.substr(x+19,2));
+		A_MORAEAC22.value = StoN2(w.substr(x+21,2));
+		A_MORAEAC23.value = StoN2(w.substr(x+23,2));
+		x+=24;
 
 		calc();
 
@@ -8153,7 +8660,6 @@ with(document.calcForm){
 			SkillSubNum.value = StoN2(w.substr(x+4,3));
 
 		B_Enemy.value = StoN2(w.substr(x+7,2));
-
 
 		calc();
 	}
@@ -8412,8 +8918,8 @@ StCalc();
 calc();
 
 LoadCookie3();
-LoadCookieConf();
-LoadCookieChangelogDisplay();
+//LoadCookieConf();
+//LoadCookieChangelogDisplay();
 URLIN();
 
 Click_Skill3SW();
