@@ -1,3 +1,6 @@
+[Update 2018-07-17]
+- Added Nightmare Cards and Combos; [Kato]
+
 [Update 2018-07-15]
 - Add DEFLATE/INFLATE for string compression/decompression [NattWara]
 - Add data compressor/decompressor, deflate.html [NattWara]
