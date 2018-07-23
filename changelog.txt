@@ -4,10 +4,15 @@
 - Added IDs for Nightmare Pyramid cards [Loa]
 - Added back INT + 3 to Divine Cross and Dark Thorn Staff [Loa]
 - Fixed Nightmare Verit Card [Loa]
-- Fixed Nightmar Amon Ra Card [Loa]
+
+[Update 2018-07-19]
+- Fixed PVP page can't decompress saved data [NattWara]
 
 [Update 2018-07-17]
 - Added Nightmare Cards and Combos; [Kato]
+
+[Update 2018-07-17]
+- Fixed Bowling Bash damage when used with a Bow [NattWara]
 
 [Update 2018-07-15]
 - Add DEFLATE/INFLATE for string compression/decompression [NattWara]
