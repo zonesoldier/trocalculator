@@ -967,13 +967,13 @@ ME_ENCHANTABLE = [
 	,[863,52,53,0] //Holy Stick
 	,[1168,52,53,0] //Dead Tree Staff
 	,[1508,52,53,0] //Mental Stick
-	,[936,43,52,53,0] //Dark Thorn Staff
+	,[936,52,53,0] //Dark Thorn Staff
 	,[948,52,53,0] //Eraser
 /* [Two Handed Staves] - Staves Except DEX+2/+3 */
 	,[92,52,53,0] //Wizardry Staff
 	,[1172,52,53,0] //Chronos
 	,[1640,52,53,0] //Staff Of Thea [1]
-	,[647,43,52,53,0] //Divine Cross
+	,[647,52,53,0] //Divine Cross
 	,[646,52,53,0] //Staff of Destruction
 /* [Maces] */
 	,[81,0] //Golden Mace [1]

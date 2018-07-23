@@ -1,4 +1,4 @@
-debugMode = 0;
+debugMode = 1;
 n_Nitou=0;
 n_Tensei=0;
 n_Ses=0;
@@ -1770,7 +1770,7 @@ function BattleCalc999()
 		//wbairitu += 1;
 		
 		//[Custom TalonRO - 2018-07-09 fix asura damage] [NattWara/Loa]
-		wbairitu = Math.ceil(wbairitu);
+		wbairitu = Math.floor(wbairitu);
 
 		wASYU = 250 + n_A_ActiveSkillLV * 150;
 
@@ -1802,7 +1802,7 @@ function BattleCalc999()
 			if(w_DMG[b] > 200000){
 				var AsuraExcessD = w_DMG[b] - 200000;
 				var AsuraNerfD = (0.5963 - 0.1471) * Math.exp(-0.000002230 * AsuraExcessD) + 0.1471;
-				w_DMG[b] = 200000 + (AsuraExcessD * AsuraNerfD);
+				w_DMG[b] = Math.floor(200000 + (AsuraExcessD * AsuraNerfD));
 			}
 			
 			//Lex Aeterna for Asura Strike after soft-cap
@@ -3168,6 +3168,7 @@ function BattleMagicCalc(wBMC)
 		wBMC2 = Math.floor(wBMC2 * (1 + 0.05 * n_A_ActiveSkillLV));
 
 	var wX = n_tok[170+n_B[2]];
+	wX += n_tok[350+Math.floor(n_B[3]/10)];
 	if(n_B[2]==9  && SkillSearch(234))
 		wX += SkillSearch(234) *2;
 	wBMC2 = wBMC2 * (100 + wX) /100;

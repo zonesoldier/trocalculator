@@ -635,7 +635,7 @@ function StAllCalc()
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
 	}
-	for(i=290;i<=349;i++){
+	for(i=290;i<=359;i++){
 		n_tok[i] = 0;
 		n_tok[i] += StPlusCalc2(i);
 		n_tok[i] += StPlusCard(i);
@@ -3263,10 +3263,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1555))
 		w += 5 * n_A_SHOULDER_DEF_PLUS;
 
-	//[Custom TalonRO - 2018-07-17 - Nightmare Verit - For every 2 refines, increases the HP recovery chance by an additional 1%] [Kato]
-	if(CardNumSearch(547)) {
-			w += 1 * Math.floor(n_A_SHOES_DEF_PLUS / 2);
-	}
+	// //[Custom TalonRO - 2018-07-17 - Nightmare Verit - For every 2 refines, increases the HP recovery chance by an additional 1%] [Kato]
+	// if(CardNumSearch(547)) {
+	// 		w += 1 * Math.floor(n_A_SHOES_DEF_PLUS / 2);
+	// }
 
 	n_A_HPR = Math.floor(n_A_HPR * w /100);
 
@@ -3307,10 +3307,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1429) && SU_LUK > 55)
 		w += 10;
 
-	//[Custom TalonRO - 2018-07-17 - Nightmare Verit - For every 2 refines, increases the SP recovery chance by an additional 1%] [Kato]
-	if(CardNumSearch(547)) {
-			w += 1 * Math.floor(n_A_SHOES_DEF_PLUS / 2);
-	}
+	// //[Custom TalonRO - 2018-07-17 - Nightmare Verit - For every 2 refines, increases the SP recovery chance by an additional 1%] [Kato]
+	// if(CardNumSearch(547)) {
+	// 		w += 1 * Math.floor(n_A_SHOES_DEF_PLUS / 2);
+	// }
 
 	n_A_SPR = Math.floor(n_A_SPR * w /100);
 
