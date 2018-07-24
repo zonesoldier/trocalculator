@@ -1173,6 +1173,7 @@ EDEN_ENCHANTS_ARMOR_SECOND = [
 		,[112,"MDEF+2"]
 		,[113,"MDEF+3"]
 		,[114,"MDEF+4"]
+		,[302,"FLEE+2"]
 		,[303,"FLEE+3"]
 		,[304,"FLEE+4"]
 		,[151,"CRIT+1"]

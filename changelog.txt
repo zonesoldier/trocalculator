@@ -8,6 +8,7 @@
 - Added IDs for Nightmare Pyramid cards [Loa]
 - Added back INT + 3 to Divine Cross and Dark Thorn Staff [Loa]
 - Fixed Nightmare Verit Card [Loa]
+- Fixed FLEE for Mora enchants [Loa]
 - Fixed issues with El Dicastes enchants [Loa]
 	Light of El Dicastes 2nd enchant slot now has DEX instead of VIT
 	Fix FLEE enchants
@@ -18,9 +19,7 @@
 - Fixed PVP page can't decompress saved data [NattWara]
 
 [Update 2018-07-17]
-- Added Nightmare Cards and Combos; [Kato]
-
-[Update 2018-07-17]
+- Added Nightmare Cards and Combos [Kato]
 - Fixed Bowling Bash damage when used with a Bow [NattWara]
 
 [Update 2018-07-15]
