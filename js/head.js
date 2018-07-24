@@ -5089,9 +5089,9 @@ function tRO_PopulateCombos() {
 			A_EDAC12.options[i+1] = new Option(ED_ENCHANTS_SLOT_TWO[i][1],ED_ENCHANTS_SLOT_TWO[i][0]);
 			A_EDAC22.options[i+1] = new Option(ED_ENCHANTS_SLOT_TWO[i][1],ED_ENCHANTS_SLOT_TWO[i][0]);
 		}
-		for(i=0; i<ED_ENCHANTS_SLOT_THREE.length; i++) {
-			A_EDAC13.options[i+1] = new Option(ED_ENCHANTS_SLOT_THREE[i][1],ED_ENCHANTS_SLOT_THREE[i][0]);
-			A_EDAC23.options[i+1] = new Option(ED_ENCHANTS_SLOT_THREE[i][1],ED_ENCHANTS_SLOT_THREE[i][0]);
+		for(i=0; i<ED_ENCHANTS_GT_SLOT_THREE.length; i++) {
+			A_EDAC13.options[i+1] = new Option(ED_ENCHANTS_GT_SLOT_THREE[i][1],ED_ENCHANTS_GT_SLOT_THREE[i][0]);
+			A_EDAC23.options[i+1] = new Option(ED_ENCHANTS_GT_SLOT_THREE[i][1],ED_ENCHANTS_GT_SLOT_THREE[i][0]);
 		}
 		
 		//El Dicaste (Light of El Dicaste)
@@ -6013,53 +6013,53 @@ with(document.calcForm){
 		document.calcForm.A_EDAC23.value = 0;
 	}
 	
-	with(document.calcForm){
-		if(ED_ENCHANTABLE[kID1][1] != 0) {
-				var arEx = [];
-				for(i=1; i<ED_ENCHANTABLE[kID1].length; i++){
-					if(ED_ENCHANTABLE[kID1][i] != 0) {
-						arEx.push(ED_ENCHANTABLE[kID1][i].toString());
-					}
-					else break;
-				}
-				if(arEx.length > 0 ) {
-					for (j = A_EDAC13.length - 1; j >= 0; j--) {
-						if(parseInt(arEx.indexOf(A_EDAC13.options[j].value)) != -1) {
-								A_EDAC13.options[j].disabled = true;
-								A_EDAC13.options[j].classList.add('prohibited');
-						}
-					}
-				}
-		} else {
-			for(j = ED_ENCHANTS_SLOT_THREE.length - 1; j >= 0; j--){
-				A_EDAC13.options[j].disabled = false;
-				A_EDAC13.options[j].classList.remove('prohibited');
-			}
-		}
+	// with(document.calcForm){
+	// 	if(ED_ENCHANTABLE[kID1][1] != 0) {
+	// 			var arEx = [];
+	// 			for(i=1; i<ED_ENCHANTABLE[kID1].length; i++){
+	// 				if(ED_ENCHANTABLE[kID1][i] != 0) {
+	// 					arEx.push(ED_ENCHANTABLE[kID1][i].toString());
+	// 				}
+	// 				else break;
+	// 			}
+	// 			if(arEx.length > 0 ) {
+	// 				for (j = A_EDAC13.length - 1; j >= 0; j--) {
+	// 					if(parseInt(arEx.indexOf(A_EDAC13.options[j].value)) != -1) {
+	// 							A_EDAC13.options[j].disabled = true;
+	// 							A_EDAC13.options[j].classList.add('prohibited');
+	// 					}
+	// 				}
+	// 			}
+	// 	} else {
+	// 		for(j = ED_ENCHANTS_SLOT_THREE.length - 1; j >= 0; j--){
+	// 			A_EDAC13.options[j].disabled = false;
+	// 			A_EDAC13.options[j].classList.remove('prohibited');
+	// 		}
+	// 	}
 		
-		if(ED_ENCHANTABLE[kID2][1] != 0) {
-				var arEx = [];
-				for(i=1; i<ED_ENCHANTABLE[kID1].length; i++){
-					if(ED_ENCHANTABLE[kID1][i] != 0) {
-						arEx.push(ED_ENCHANTABLE[kID1][i].toString());
-					}
-					else break;
-				}
-				if(arEx.length > 0 ) {
-					for (j = A_EDAC23.length - 1; j >= 0; j--) {
-						if(parseInt(arEx.indexOf(A_EDAC23.options[j].value)) != -1) {
-								A_EDAC23.options[j].disabled = true;
-								A_EDAC23.options[j].classList.add('prohibited');
-						}
-					}
-				}
-		} else {
-			for(j = ED_ENCHANTS_SLOT_THREE.length - 1; j >= 0; j--){
-				A_EDAC23.options[j].disabled = false;
-				A_EDAC23.options[j].classList.remove('prohibited');
-			}
-		}
-	}
+	// 	if(ED_ENCHANTABLE[kID2][1] != 0) {
+	// 			var arEx = [];
+	// 			for(i=1; i<ED_ENCHANTABLE[kID1].length; i++){
+	// 				if(ED_ENCHANTABLE[kID1][i] != 0) {
+	// 					arEx.push(ED_ENCHANTABLE[kID1][i].toString());
+	// 				}
+	// 				else break;
+	// 			}
+	// 			if(arEx.length > 0 ) {
+	// 				for (j = A_EDAC23.length - 1; j >= 0; j--) {
+	// 					if(parseInt(arEx.indexOf(A_EDAC23.options[j].value)) != -1) {
+	// 							A_EDAC23.options[j].disabled = true;
+	// 							A_EDAC23.options[j].classList.add('prohibited');
+	// 					}
+	// 				}
+	// 			}
+	// 	} else {
+	// 		for(j = ED_ENCHANTS_SLOT_THREE.length - 1; j >= 0; j--){
+	// 			A_EDAC23.options[j].disabled = false;
+	// 			A_EDAC23.options[j].classList.remove('prohibited');
+	// 		}
+	// 	}
+	// }
 
 	tRO_EDEnchantment[12] = document.calcForm.A_EDAC11.value;
 	tRO_EDEnchantment[13] = document.calcForm.A_EDAC12.value;

@@ -1,6 +1,7 @@
 [Update 2018-07-24]
 - Fixed Eden weapon enchants 3rd slot adjustment according to 1st and 2st slot [NattWara]
 - Fixed Army Padding not showing Mora enchants [NattWara]
+- Fixed Golden Trickle 3rd enchant options not showing up correctly [Loa]
 
 [Update 2018-07-23]
 - Added n_tok for magical damage against a certain element (350-359) [Loa]

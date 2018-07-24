@@ -1285,7 +1285,15 @@ ED_ENCHANTS_SLOT_THREE = [
 		,[51, "DEX+1"]
 		,[52, "DEX+2"]
 ];
-
+//El Dicaste Enchants slot 3 for golden trickle
+ED_ENCHANTS_GT_SLOT_THREE = [
+		 [21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+		,[51, "DEX+1"]
+		,[52, "DEX+2"]
+];
 ED_LIGHT_OF_EL_DICASTE = [
 	 [1201,0] //Light of El Dicastes
 ];
@@ -1293,7 +1301,8 @@ ED_LIGHT_OF_EL_DICASTE = [
 ED_ENCHANTABLE = [
 	 [446,0] //Feral Tail
 	,[448,0] //Feral Boots
-	,[449,23,33,43,0] //Golden Trickle ("Golden Bell" in wiki), Exclude AGI+3, VIT+3, and INT+3
+	// ,[449,23,33,43,0] //Golden Trickle ("Golden Bell" in wiki), Exclude AGI+3, VIT+3, and INT+3
+	,[449,0]
 ];
 
 //Mora Enchants
