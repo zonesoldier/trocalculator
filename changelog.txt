@@ -4,6 +4,11 @@
 - Added IDs for Nightmare Pyramid cards [Loa]
 - Added back INT + 3 to Divine Cross and Dark Thorn Staff [Loa]
 - Fixed Nightmare Verit Card [Loa]
+- Fixed issues with El Dicastes enchants [Loa]
+	Light of El Dicastes 2nd enchant slot now has DEX instead of VIT
+	Fix FLEE enchants
+	Fixed Golden Trickle enchants
+	Corrected some labeling
 
 [Update 2018-07-19]
 - Fixed PVP page can't decompress saved data [NattWara]

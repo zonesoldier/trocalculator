@@ -1898,15 +1898,15 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//[Custom TalonRO 2018-07-12 - El Dicaste Enchantment for FLEE] [NattWara]
 	for(i=0; i < tRO_EDEnchantment.length; i++) {
 		var vED = tRO_EDEnchantment[i];
-		if(301 <= vED && vED <= 129) {
-			n_A_FLEE += parseInt(vED.substr(-1));
+		if(301 <= vED && vED <= 312) {
+			n_A_FLEE += parseInt(vED.substr(-2));
 		}
 	}
 	//[Custom TalonRO 2018-07-12 - Mora Enchantment for FLEE] [NattWara]
 	for(i=0; i < tRO_MoraEnchantment.length; i++) {
 		var vMORA = tRO_MoraEnchantment[i];
-		if(301 <= vMORA && vMORA <= 309) {
-			n_A_FLEE += parseInt(vMORA.substr(-1));
+		if(301 <= vMORA && vMORA <= 312) {
+			n_A_FLEE += parseInt(vMORA.substr(-2));
 		}
 	}
 	//custom TalonRO Sedora Card (fixed (2015-12-21),(fixed (2016-11-02))
