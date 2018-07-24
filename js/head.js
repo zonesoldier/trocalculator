@@ -5125,7 +5125,7 @@ function tRO_PopulateCombos() {
 		//Mora (Armor)
 		myInnerHtml("A_MORAETextA1","Mora 1: ",0);
 		myInnerHtml("A_MORAETextA2","Mora 2: ",0);
-		myInnerHtml("A_MORAETextA2","Mora 3: ",0);
+		myInnerHtml("A_MORAETextA3","Mora 3: ",0);
 
 		A_MORAEA1.options[0] = new Option("(Army Padding Enchant "+ A_MORAEA1.name.substr(-1) +")",0);
 		A_MORAEA2.options[0] = new Option("(Army Padding Enchant "+ A_MORAEA2.name.substr(-1) +")",0);
@@ -5144,7 +5144,7 @@ function tRO_PopulateCombos() {
 		//Mora (Garment)
 		myInnerHtml("A_MORAETextG1","Mora 1: ",0);
 		myInnerHtml("A_MORAETextG2","Mora 2: ",0);
-		myInnerHtml("A_MORAETextG2","Mora 3: ",0);
+		myInnerHtml("A_MORAETextG3","Mora 3: ",0);
 
 		A_MORAEG1.options[0] = new Option("(Loki's Muffler Enchant "+ A_MORAEG1.name.substr(-1) +")",0);
 		A_MORAEG2.options[0] = new Option("(Loki's Muffler Enchant "+ A_MORAEG2.name.substr(-1) +")",0);
@@ -5163,10 +5163,10 @@ function tRO_PopulateCombos() {
 		//Mora (Accessory)
 		myInnerHtml("A_MORAETextAC11","Mora 1: ",0);
 		myInnerHtml("A_MORAETextAC12","Mora 2: ",0);
-		myInnerHtml("A_MORAETextAC12","Mora 3: ",0);
+		myInnerHtml("A_MORAETextAC13","Mora 3: ",0);
 		myInnerHtml("A_MORAETextAC21","Mora 1: ",0);
 		myInnerHtml("A_MORAETextAC22","Mora 2: ",0);
-		myInnerHtml("A_MORAETextAC22","Mora 3: ",0);
+		myInnerHtml("A_MORAETextAC23","Mora 3: ",0);
 
 		A_MORAEAC11.options[0] = new Option("(Pendant Of Guardian Enchant "+ A_MORAEAC11.name.substr(-1) +")",0);
 		A_MORAEAC12.options[0] = new Option("(Pendant Of Guardian Enchant "+ A_MORAEAC12.name.substr(-1) +")",0);
@@ -5429,79 +5429,95 @@ function Click_EdenWeaponEnchantment(w1,w2){
 			removeOptions(A_EE22);
 			A_EE22.options[0] = new Option("(Eden Enchant "+ A_EE22.name.substr(-1) +")",0);
 		}
-		
+
 		//Populate option for slot 3 depending on choice of slot 1 and slot 2
 		//Weapon 1
-		if (!(A_EE13.value == A_EE11.value || A_EE13.value == A_EE12.value)) {
-			var option1Text = option2Text = "";
-			
-			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
-				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE11.value) {
-					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+		var EE13_Value = A_EE13.value;
+
+		var option1Text = option2Text = "";
+
+		for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+			if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE11.value) {
+				option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+				break;
+			}
+		}
+
+		if (A_EE12.value >= 2030 && A_EE12.value <= 2039) {
+			for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE12.value) {
+					option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
 					break;
 				}
 			}
-			
-			if (A_EE12.value >= 2030 && A_EE12.value <= 2039) {
-				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
-					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE12.value) {
-						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
-						break;
-					}
-				}
-			}
-			
-			if (A_EE12.value >= 2170 && A_EE12.value <= 2179) {
-				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
-					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE12.value) {
-						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
-						break;
-					}
-				}
-			}
-			
-			//Clear weapon 1 slot 3, populate options based on slot 1 & 2
-			removeOptions(A_EE13);
-			A_EE13.options[0] = new Option("(Eden Enchant "+ A_EE13.name.substr(-1) +")",0);
-			A_EE13.options[1] = new Option(option1Text,A_EE11.value);
-			A_EE13.options[2] = new Option(option2Text,A_EE12.value);
 		}
+
+		if (A_EE12.value >= 2170 && A_EE12.value <= 2179) {
+			for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE12.value) {
+					option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+					break;
+				}
+			}
+		}
+
+		//Clear weapon 1 slot 3, populate options based on slot 1 & 2
+		removeOptions(A_EE13);
+		A_EE13.options[0] = new Option("(Eden Enchant "+ A_EE13.name.substr(-1) +")",0);
+		A_EE13.options[1] = new Option(option1Text,A_EE11.value);
+		A_EE13.options[2] = new Option(option2Text,A_EE12.value);
+
+		A_EE13.value = 0;
+		if (EE13_Value == A_EE11.value) {
+			A_EE13.value = A_EE11.value;
+		}
+		if (EE13_Value == A_EE12.value) {
+			A_EE13.value = A_EE12.value;
+		}
+
 		//Weapon 2
-		if (!(A_EE23.value == A_EE21.value || A_EE23.value == A_EE22.value)) {
-			var option1Text = option2Text = "";
-			
-			for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
-				if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE21.value) {
-					option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+		var EE23_Value = A_EE23.value;
+
+		var option1Text = option2Text = "";
+
+		for (i = EDEN_ENCHANTS_WEAPON_FIRST.length - 1; i >= 0; i--) {
+			if (EDEN_ENCHANTS_WEAPON_FIRST[i][0] == A_EE21.value) {
+				option1Text = EDEN_ENCHANTS_WEAPON_FIRST[i][1];
+				break;
+			}
+		}
+
+		if (A_EE22.value >= 2030 && A_EE22.value <= 2039) {
+			for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE22.value) {
+					option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
 					break;
 				}
 			}
-			
-			if (A_EE22.value >= 2030 && A_EE22.value <= 2039) {
-				for (i = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL.length - 1; i >= 0; i--) {
-					if (EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][0] == A_EE22.value) {
-						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_PHYSICAL[i][1];
-						break;
-					}
-				}
-			}
-			
-			if (A_EE22.value >= 2170 && A_EE22.value <= 2179) {
-				for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
-					if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE22.value) {
-						option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
-						break;
-					}
-				}
-			}
-			
-			//Clear weapon 2 slot 3, populate options based on slot 1 & 2
-			removeOptions(A_EE23);
-			A_EE23.options[0] = new Option("(Eden Enchant 2-"+ A_EE23.name.substr(-1) +")",0);
-			A_EE23.options[1] = new Option(option1Text,A_EE21.value);
-			A_EE23.options[2] = new Option(option2Text,A_EE22.value);
 		}
-		
+
+		if (A_EE22.value >= 2170 && A_EE22.value <= 2179) {
+			for (i = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL.length - 1; i >= 0; i--) {
+				if (EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][0] == A_EE22.value) {
+					option2Text = EDEN_ENCHANTS_WEAPON_SECOND_MAGICAL[i][1];
+					break;
+				}
+			}
+		}
+
+		//Clear weapon 2 slot 3, populate options based on slot 1 & 2
+		removeOptions(A_EE23);
+		A_EE23.options[0] = new Option("(Eden Enchant 2-"+ A_EE23.name.substr(-1) +")",0);
+		A_EE23.options[1] = new Option(option1Text,A_EE21.value);
+		A_EE23.options[2] = new Option(option2Text,A_EE22.value);
+
+		A_EE23.value = 0;
+		if (EE23_Value == A_EE21.value) {
+			A_EE23.value = A_EE21.value;
+		}
+		if (EE23_Value == A_EE22.value) {
+			A_EE23.value = A_EE22.value;
+		}
 	}
 
 	tRO_EdenWeaponEnchantment = [document.calcForm.A_EE11.value,document.calcForm.A_EE12.value,document.calcForm.A_EE13.value,document.calcForm.A_EE21.value,document.calcForm.A_EE22.value,document.calcForm.A_EE23.value];
@@ -5528,6 +5544,7 @@ with(document.calcForm){
 			}
 	}
 	
+	//Hide other enchant options
 	document.getElementById("T_EEH").style.display = "none";
 	document.getElementById("T_BEH1").style.display = "none";
 	document.getElementById("T_BEH2").style.display = "none";
@@ -5536,10 +5553,6 @@ with(document.calcForm){
 	
 	switch(bEnchant) {
     case "biolab":
-		//Hide other enchant options
-		//document.getElementById("T_EEH").style.display = "none";
-		//document.getElementById("T_HEAD1_TEMP").style.display = "none";
-		//document.getElementById("T_HEAD2_TEMP").style.display = "none";
 		//Show enchant option for Biolab
 		document.getElementById("T_BEH1").style.display = "";
 		document.getElementById("T_BEH2").style.display = "";
@@ -5547,27 +5560,17 @@ with(document.calcForm){
 		document.calcForm.A_EEH.value = 0;
         break;
     case "eden":
-		//Hide other enchant options
-		//document.getElementById("T_BEH1").style.display = "none";
-		//document.getElementById("T_BEH2").style.display = "none";
-		//document.getElementById("T_HEAD1_TEMP").style.display = "none";
-		//document.getElementById("T_HEAD2_TEMP").style.display = "none"; // <-- Hide first
 		//Show enchant option for Eden
 		document.getElementById("T_EEH").style.display = "";
-		document.getElementById("T_HEAD2_TEMP").style.display = ""; // <-- Then show after the Eden Hat option is shown. So Eden is to the left, and this placeholder is to the right
+		document.getElementById("T_HEAD2_TEMP").style.display = "";
 		//Clear other enchant option values
 		document.calcForm.A_BEH1.value = 0;
 		document.calcForm.A_BEH2.value = 0;
         break;
     default:
-		//Hide all enchant option for headgear
-		//document.getElementById("T_BEH1").style.display = "none";
-		//document.getElementById("T_BEH2").style.display = "none";
-		//document.getElementById("T_EEH").style.display = "none";
-		//document.getElementById("T_HEAD2_TEMP").style.display = "none"; // <-- Hide first
 		//Show blank placeholder <td>
 		document.getElementById("T_HEAD1_TEMP").style.display = "";
-		document.getElementById("T_HEAD2_TEMP").style.display = ""; // <-- Then show later. So TEMP1 is to the left, and TEMP2 is to the right
+		document.getElementById("T_HEAD2_TEMP").style.display = "";
 		//Clear all enchant option for headgear
 		document.calcForm.A_BEH1.value = 0;
 		document.calcForm.A_BEH2.value = 0;

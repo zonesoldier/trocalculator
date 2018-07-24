@@ -3838,9 +3838,10 @@ function Item_Setumei(nC1,nC2)
    // //Recieve more Damage of [element] by % //Use 60-69 with negative values instead
    // if(350 <= nC1 && nC1 <=359)
    //    CBIstr += "Recieve "+ nC2 + "%" + " more damage from " + ZokuseiOBJ2[nC1-350] + " attacks.<BR>";
-   //Physical damage against specific monster
+   //Magical damage against element monster
    if(350 <= nC1 && nC1 <=359)
       CBIstr += "Increases magical damage against [" + ZokuseiOBJ[nC1-350] +"] element monsters by "+ nC2 +"%<BR>";
+   //Physical damage against specific monster
    if(1000 <= nC1 && nC1 <=1999)
       CBIstr += wIS + nC2 + "% Physical damage inflicted against <b>" + MonsterOBJ[nC1-1000][1] + "</b><br>";
    //Incease Damage of skill by %

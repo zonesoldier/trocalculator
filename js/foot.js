@@ -304,7 +304,7 @@ function StAllCalc()
 	Click_LOEDEnchantment(n_A_Equip[9],n_A_Equip[10]);
 
 	//[Custom TalonRO 2018-07-12 - Mora Enchants] [NattWara]
-	Click_MoraArmorEnchantment(n_A_Equip[8]);
+	Click_MoraArmorEnchantment(n_A_Equip[6]);
 	Click_MoraGarmentEnchantment(n_A_Equip[7]);
 	Click_MoraAccessoryEnchantment(n_A_Equip[9],n_A_Equip[10]);
 
