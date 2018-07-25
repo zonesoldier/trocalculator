@@ -1,9 +1,17 @@
+[Update 2018-07-25]
+- Updated Items [Loa]:
+	Brave Assaulter's Katzbalger
+	Brave Battle CrowBow
+	Brave Battle Fist
+	Brave Battle Lariat
+
+
 [Update 2018-07-24]
 - Fixed Eden weapon enchants 3rd slot adjustment according to 1st and 2st slot [NattWara]
 - Fixed Army Padding not showing Mora enchants [NattWara]
 - Fixed Golden Trickle 3rd enchant options not showing up correctly [Loa]
 - Updated DEF reduction from being attacked by multiple monsters [Loa]
-- Updated Items:
+- Updated Items [Loa]:
 	Assaulter Spear
 	Brave Assassin Damascus
 
