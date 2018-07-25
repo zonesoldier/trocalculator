@@ -1441,7 +1441,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_totalDEF -= Math.floor(n_A_totalDEF * 25 / 100);
 
 	if(n_A_PassSkill8[12] || n_A_PassSkill8[33] || n_A_PassSkill8[34]){
-		n_A_totalDEF = Math.floor(n_A_totalDEF * (100 - ((n_A_PassSkill8[12] + (n_A_PassSkill8[33] * 2) + (n_A_PassSkill8[34] * 3)) * 3)) / 100);
+		let defReduc = (n_A_PassSkill8[12] + (n_A_PassSkill8[33] * 2) + (n_A_PassSkill8[34] * 3)) * 3 / 100;
+		if(defReduc > 1){defReduc = 1;}
+		n_A_totalDEF = Math.floor(n_A_totalDEF * (1 - defReduc));
 	}
 
 	if(SkillSearch(196))

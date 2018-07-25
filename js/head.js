@@ -4596,13 +4596,13 @@ with(document.calcForm){
 		}
 		//updated def reduction based on mob number [Loa] 2018-07-24
 		myInnerHtml("EN810",'Number of Normal Enemies hitting you <select name="A8_Skill12" onChange="Click_A8(1)"></select>',0);
-		for(i=0;i<=20;i++)
+		for(i=0;i<=34;i++)
 			A8_Skill12.options[i] = new Option(i + "",i);
 		myInnerHtml("EN838",'Number of Boss Type Enemies hitting you <select name="A8_Skill33" onChange="Click_A8(1)"></select>',0);
-		for(i=0;i<=20;i++)
+		for(i=0;i<=17;i++)
 			A8_Skill33.options[i] = new Option(i + "",i);
 		myInnerHtml("EN840",'Number of MVP Enemies hitting you <select name="A8_Skill34" onChange="Click_A8(1)"></select>',0);
-		for(i=0;i<=5;i++)
+		for(i=0;i<=12;i++)
 			A8_Skill34.options[i] = new Option(i + "",i);
 
 

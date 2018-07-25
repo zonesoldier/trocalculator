@@ -1,10 +1,10 @@
 [Update 2018-07-25]
+- Fixed an issue with def reduction formula when mobbed [Loa]
 - Updated Items [Loa]:
 	Brave Assaulter's Katzbalger
 	Brave Battle CrowBow
 	Brave Battle Fist
 	Brave Battle Lariat
-
 
 [Update 2018-07-24]
 - Fixed Eden weapon enchants 3rd slot adjustment according to 1st and 2st slot [NattWara]
