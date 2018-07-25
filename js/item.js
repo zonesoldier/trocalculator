@@ -917,13 +917,13 @@ ItemOBJ = [
 ,[894,50,1,1,0,0,10,20,"Ribbon Yellow","",0,3,2,6,2,78,10,0]
 ,[895,50,0,2,0,0,0,10,"Friend Hat","",0,0]
 ,[896,50,0,2,0,0,30,10,"Squatting Poring","",0,6,1,193,1,194,1,0]
-,[897,1,999,120,3,0,0,80,"Assassin Damascus (Brave)","","<b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%",194,1,1,1,2,1,37,75,307,20,0]
+,[897,1,0,120,3,0,0,80,"Brave Assassin Damascus","","<b>[Rogue Class]</b><br>MATK + 15%<br>Add 10% more damage with [Backstab] and [Raid]<br><b>[Ninja Class]</b><br>MATK + 15%<br>CRIT + 20<br>10% more damage with Critical Hits<br><b>[Soul Linker]</b><br>CRIT + 50",1,2,2,2,37,75,307,20,194,1,0]
 ,[898,1,999,120,3,0,0,80,"Assassin Damascus (Valorous)","","When attacking, there is a chance that for 6 seconds, the weapon will be endowed with occult impaction/icepick effect<br><b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%",194,1,1,1,2,1,37,75,0]
 ,[899,2,999,115,3,0,0,80,"Gladiator Blade (Valorous)","",0,194,1,1,1,5,1,37,75,307,20,0]
 ,[900,2,999,115,3,0,0,80,"Gladiator Blade (Brave)","",0,194,1,1,1,5,1,37,75,89,10,0]
 ,[901,3,999,200,3,0,0,80,"Assaulter's Katzbalger (Valorous)","",0,194,1,1,2,37,55,307,20,0]
 ,[902,3,999,200,3,0,0,80,"Assaulter's Katzbalger (Brave)","",0,194,1,10,20,37,55,70,20,0]
-,[903,4,999,60,3,0,0,80,"Assaulter Spear","","<b>[Crusader or Paladin]</b><br>Increases attack speed by 20%",194,1,1,2,37,95,307,20,0]
+,[903,4,0,60,3,0,0,80,"Assaulter Spear","","<b>[Crusader or Paladin]</b><br>Increases attack speed by 20%",1,2,37,95,307,20,194,1,0]
 ,[904,5,999,160,3,0,0,80,"Assaulter Lance","",0,194,1,1,2,37,25,187,1,0]
 ,[905,7,999,200,3,0,0,80,"Insane Battle Axe (Valorous)","",0,194,1,1,3,37,55,307,20,0]
 ,[906,7,999,200,3,0,0,80,"Insane Battle Axe (Brave)","","When attacking, 2% chance to activate 100% chance to destroy the monster armor for 3 seconds",194,1,1,3,37,55,0]
@@ -1115,7 +1115,7 @@ ItemOBJ = [
 ,[1092,14,999,50,4,0,0,80,"Glorious Guitar",0,"<b>[Refine Rate 6~10]</b><br><font color=red>[Slaughter]Lv 1:</font> Increases physical damage bonus by (Upgrade - 4) ^ 2<br>Pierces Defense of DemiHuman monster by 5%<br><b>[Refine Rate 9~10]</b><br>Adds a 10% chance of using [Tarot Card of Fate]Lv 5 on the target when [Arrow Vulcan] is used",37,95,307,20,194,1,0]
 ,[1093,15,999,50,4,0,0,80,"Glorious Lariat",0,"<b>[Refine Rate 6~10]</b><br><font color=red>[Slaughter]Lv 1:</font> Increases physical damage bonus by (Upgrade - 4) ^ 2<br>Pierces Defense of DemiHuman monster by 5%<br><b>[Refine Rate 9~10]</b><br>Adds a 10% chance of using [Tarot Card of Fate]Lv 5 on the target when [Arrow Vulcan] is used",37,95,307,20,194,1,0]
 ,[1094,12,999,90,4,0,0,80,"Glorious Tablet",0,"<b>[Refine 6~10]</b><br><font color=red>[Slaughter]Lv 1:</font> Increases physical damage bonus by (Upgrade - 4) ^ 2<br>Pierces Defense of DemiHuman monster by 5%<br><b>[Refine 9~10]</b><br>Adds a 3% chance for when dealing physical damage, the user will gain Atk +200 for 3 seconds",89,15,37,80,307,25,194,1,0]
-,[1095,12,999,90,4,0,0,80,"Glorious Apocalypse",0,"<b>[Refine 6~10]</b><br><font color=red>[Slaughter]Lv 1:</font> Increases physical damage bonus by (Upgrade - 4) ^ 2<br>Pierces Defense of DemiHuman monster by 5%<br><b>[Refine 9~10]</b><br>MAtk +5%<br>Reduces the cast time of skills by 5%<br>Reduces the skill usage delay by 5%",89,15,37,80,317,25,194,1,0]
+,[1095,12,0,90,4,0,0,80,"Glorious Apocalipse",0,"<b>[Refine 6~10]</b><br><font color=red>[Slaughter]Lv 1:</font> Increases physical damage bonus by (Upgrade - 4) ^ 2<br>Pierces Defense of DemiHuman monster by 5%<br><b>[Refine 9~10]</b><br>MAtk +5%<br>Reduces the cast time of skills by 5%<br>Reduces the skill usage delay by 5%",89,15,37,80,317,25,194,1,0]
 ,[1096,13,999,30,4,0,0,80,"Glorious Claw",0,"<b>[Refine Rate 6~10]</b><br><font color=red>[Slaughter]Lv 1:</font> Increases physical damage bonus by (Upgrade - 4) ^ 2<br>Pierces Defense of DemiHuman monster by 5%<br><b>[Refine Rate 9~10]</b><br>Adds a (Upgrade*10 - 50)% chance of auto casting Level 1 Occult Impact when dealing physical damage<br>Adds a (Upgrade*10 - 50)% chance of auto casting Level 1 Decrease Agility when dealing physical damage",37,95,307,25,194,1,0]
 ,[1097,13,999,30,4,0,0,80,"Glorious Fist",0,"<b>[Refine 6~10]</b><br><font color=red>[Slaughter]Lv 1:</font> Increases physical damage bonus by (Upgrade - 4) ^ 2<br>Pierces Defense of DemiHuman monster by 5%<br><b>[Refine Rate 9~10]</b><br>Removes the cast time for [Asura Strike]<br>Automaticly casts [Dangerous Soul Collect] when [Critical Explosion] is used",37,95,307,20,194,1,0]
 ,[1098,16,999,55,4,0,0,80,"Glorious Shuriken",0,"Adds a 5% chance for when performing a ATK based attack, the user will deal doubled damage with [Throw Huuma Shuriken] and [Killing Stroke] for 10 seconds<br><b>[Refine Rate 6~10]</b><br>Pierces Defense of DemiHuman monster by 5%<br><font color=red>[Slaughter]Lv 2:</font> Increases physical damage bonus by (Upgrade - 3) ^ 2<br><b>[Refine Rate 9~10]</b><br>Adds a 20% chance of using [Fatal Wound] Lv 2 on the target when [Throw Huuma Shuriken] is used<br>Casts [Heal] Lv 10 on the user after [Killing Stroke] is used",37,95,307,20,89,15,194,1,0]
@@ -1713,6 +1713,8 @@ ItemOBJ = [
 ,[1668,50,0,1,0,0,10,0,"Tear Drop","","The last tears of Princess Adelaide became crystal before she fell in the darkness.",89,3,91,1,94,1,0]
 ,[1669,100,0,0,0,0,0,0,"Love Guard + Staff of Recovery","","",91,1,94,1,0]
 ,[1670,100,0,0,0,0,0,0,"Love Guard + Holy Stick","","",91,2,94,2,0]
+,[1671,100,0,0,0,0,0,0,"Assaulter Spear + Aegis Shield","",0,37,-30,0]
+,[1672,100,0,0,0,0,0,0,"Brave Assassin Damascus + Aegis Shield","",0,37,-20,0]
 ];
 
 //Test code for finding the values in Skill.js AutoSpellSkill
@@ -1736,7 +1738,7 @@ ItemOBJ = [
 
 /*
 	[Loa] - 2018-06-11
-	Work in progress ItemID table. Currently proofreading and adding to this array.
+	ItemID table
 	Format: [ItemOBJ index, type, item IDs...]
 	type:
 		0 = Unequipped
@@ -3417,6 +3419,8 @@ ItemID = [
 ,[1668,1,18606]
 ,[1669,2,18542,1625]
 ,[1670,2,18542,1631]
+,[1671,2,0]
+,[1672,2,0]
 ];
 
 /*
@@ -3610,8 +3614,14 @@ function Item_Setumei(nC1,nC2)
       38 = Angel
       39 = Dragon
     */
-	if(30 <= nC1 && nC1 <=39)
-		CBIstr += "Increases physical damage against [" + SyuzokuOBJ[nC1-30] +"] race monsters by "+ nC2 +"%<BR>";
+   if(30 <= nC1 && nC1 <=39){
+      let tempStr = "Increases";
+      if(nC2 < 0){
+         tempStr = "Decreases";
+         nC2 = Math.abs(nC2);
+      }
+      CBIstr += tempStr + " physical damage against [" + SyuzokuOBJ[nC1-30] +"] race monsters by "+ nC2 +"%<BR>";
+   }
 /*
       [Kato] - 6/4/2018
       Increase damage from element: 40,5 = Increase damage from [Neural] + 5%
@@ -3985,6 +3995,8 @@ w_SE = [[737,436,475,"NULL"]
 ,[1639,1633,1630,1632,1631,1629,"NULL"] //Custom TalonRO - 2018-06-06 - Advanced Angelic Protection, Advanced Angel's Reincarnation, Advanced Angelic Guard, Advanced Angelic Cardigan & Advanced Angel's Kiss [ZoneSoldier]
 ,[1669,1667,644,"NULL"] //Custom TalonRO - 2018-07-13 - Love Guard + Staff of Recovery [NattWara]
 ,[1670,1667,863,"NULL"] //Custom TalonRO - 2018-07-13 - Love Guard + Holy Stick [NattWara]
+,[1671,903,1376,"NULL"]
+,[1672,897,1376,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;
 for(var i=0;i<=SE_MAXnum;i++){

@@ -527,6 +527,8 @@ function StAllCalc()
 		n_A_PassSkill8[10] = eval(A8_Skill10.value);
 		n_A_PassSkill8[11] = eval(A8_Skill11.value);
 		n_A_PassSkill8[12] = eval(A8_Skill12.value);
+		n_A_PassSkill8[33] = eval(A8_Skill33.value);
+		n_A_PassSkill8[34] = eval(A8_Skill34.value);
 
 		n_A_PassSkill8[14] = eval(A8_Skill14.value);
 		n_A_PassSkill8[15] = eval(A8_Skill15.value);
@@ -707,6 +709,21 @@ function StAllCalc()
 		if(n_A_HEAD_DEF_PLUS >= 9){
 			n_tok[8] += 1;
 			n_tok[15] += 2;
+		}
+	}
+	//brave assassin damacus [Loa] 2018-07-24
+	if(EquipNumSearch(897)){
+		if(n_A_JobSearch2() == 14){
+			n_tok[89] += 15;
+			//skill damage in head.js
+		}
+		else if(n_A_JOB == 44){
+			n_tok[89] += 15;
+			n_tok[10] += 20;
+			n_tok[70] += 10;
+		}
+		else if(n_A_JOB == 43){
+			n_tok[10] += 50;
 		}
 	}
 	w=n_tok[17];
@@ -1423,8 +1440,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_IJYOU[2])
 		n_A_totalDEF -= Math.floor(n_A_totalDEF * 25 / 100);
 
-	if(n_A_PassSkill8[12] >= 3)
-		n_A_totalDEF -= Math.floor(n_A_totalDEF * (n_A_PassSkill8[12] - 2) * 5 / 100);
+	if(n_A_PassSkill8[12] || n_A_PassSkill8[33] || n_A_PassSkill8[34]){
+		n_A_totalDEF = Math.floor(n_A_totalDEF * (100 - ((n_A_PassSkill8[12] + (n_A_PassSkill8[33] * 2) + (n_A_PassSkill8[34] * 3)) * 3)) / 100);
+	}
 
 	if(SkillSearch(196))
 		n_A_totalDEF = 90;
@@ -2430,8 +2448,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += n_A_HEAD_DEF_PLUS - 5;
 	if(n_A_PassSkill6[2])
 		w += 10;
-	if(EquipNumSearch(897) && (n_A_JobSearch2() == 14 || n_A_JOB == 44))
-		w += 15 * EquipNumSearch(897);
 	if(EquipNumSearch(898) && (n_A_JobSearch2() == 14 || n_A_JOB == 44))
 		w += 15 * EquipNumSearch(898);
 	if(EquipNumSearch(1083))
@@ -8700,9 +8716,52 @@ with(document.calcForm){
 }}
 
 JobName =
-["Novice","Swordsman","Thief","Acolyte","Archer","Magician","Merchant","Knight","Assassin","Priest","Hunter","Wizard","Blacksmith","Crusader","Rogue","Monk","Bard","Dancer","Sage","Alchemist",
-"Super Novice","Lord Knight","Assassin Cross","High Priest","Sniper","High Wizard","Whitesmith","Paladin","Stalker","Champion","Clown","Gypsy","Professor","Creator",
-"High Novice","High Swordsman","High Thief","High Acolyte","High Archer","High Magician","High Merchant","Taekwon Kid","Star Gladiator","Soul Linker","Ninja","Gunslinger"];
+["Novice", //0
+"Swordsman", //1
+"Thief", //2
+"Acolyte", //3
+"Archer", //4
+"Magician", //5
+"Merchant", //6
+"Knight", //7
+"Assassin", //8
+"Priest", //9
+"Hunter", //10
+"Wizard", //11
+"Blacksmith", //12
+"Crusader", //13
+"Rogue", //14
+"Monk", //15
+"Bard", //16
+"Dancer", //17
+"Sage", //18
+"Alchemist", //19
+"Super Novice", //20
+"Lord Knight", //21
+"Assassin Cross", //22
+"High Priest", //23
+"Sniper", //24
+"High Wizard", //25
+"Whitesmith", //26
+"Paladin", //27
+"Stalker", //28
+"Champion", //29
+"Clown", //30
+"Gypsy", //31
+"Professor", //32
+"Creator", //33
+"High Novice", //34
+"High Swordsman", //35
+"High Thief", //36
+"High Acolyte", //37
+"High Archer", //38
+"High Magician", //39
+"High Merchant", //40
+"Taekwon Kid", //41
+"Star Gladiator", //42
+"Soul Linker", //43
+"Ninja", //44
+"Gunslinger"]; //45
 
 for (i=0;i<=45;i++)
 	document.calcForm.A_JOB.options[i] = new Option(JobName[i],i);
@@ -8889,8 +8948,12 @@ n_A_PassSkill8 = new Array();
 for(i=0;i<=27;i++)
 	n_A_PassSkill8[i] = 0;
 
-	n_A_PassSkill8[3] = 7; //[Custom TalonRO - 6/4/2018 - Fixed the default value for BaseEXP to 8x] [Kato]
-	n_A_PassSkill8[7] = 7; //[Custom TalonRO - 6/4/2018 - Fixed the default value for JobEXP to 8x] [Kato]
+n_A_PassSkill8[3] = 7; //[Custom TalonRO - 6/4/2018 - Fixed the default value for BaseEXP to 8x] [Kato]
+n_A_PassSkill8[7] = 7; //[Custom TalonRO - 6/4/2018 - Fixed the default value for JobEXP to 8x] [Kato]
+
+//updated def reduction based on mob number [Loa] 2018-07-24
+n_A_PassSkill8[33] = 0;
+n_A_PassSkill8[34] = 0;
 
 n_A_PassSkill9 = new Array();
 for(i=0;i<=52;i++)

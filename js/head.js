@@ -4504,6 +4504,8 @@ with(document.calcForm){
 		str += '<TR><TD colspan="2" id="EN809"></TD></TR>';
 		str += '<TR><TD colspan="2"><Font size=2 color=black><B>Other Stuff</B></Font></TD></TR>';
 		str += '<TR><TD id="EN810"></TD><TD id="EN811"></TD></TR>';
+		str += '<TR><TD id="EN838"></TD><TD id="EN839"></TD></TR>';
+		str += '<TR><TD id="EN840"></TD><TD id="EN841"></TD></TR>';
 		str += '<TR><TD id="EN812"></TD><TD id="EN813"></TD></TR>';
 		str += '<TR><TD id="EN814"></TD><TD id="EN815"></TD></TR>';
 		str += '<TR><TD id="EN807"></TD></TR>';
@@ -4592,9 +4594,16 @@ with(document.calcForm){
 			A8_Skill10.options[i] = new Option(ITEM_SP_TIME_OBJ_copy[i][1] +" ["+ ITEM_SP_TIME_OBJ_copy[i][2] +"]",ITEM_SP_TIME_OBJ_copy[i][0]);
 			A8_Skill11.options[i] = new Option(ITEM_SP_TIME_OBJ_copy[i][1] +" ["+ ITEM_SP_TIME_OBJ_copy[i][2] +"]",ITEM_SP_TIME_OBJ_copy[i][0]);
 		}
-		myInnerHtml("EN810",'Number of Enemies hitting you <select name="A8_Skill12" onChange="Click_A8(1)"></select>',0);
-		for(i=0;i<=22;i++)
+		//updated def reduction based on mob number [Loa] 2018-07-24
+		myInnerHtml("EN810",'Number of Normal Enemies hitting you <select name="A8_Skill12" onChange="Click_A8(1)"></select>',0);
+		for(i=0;i<=10;i++)
 			A8_Skill12.options[i] = new Option(i + "",i);
+		myInnerHtml("EN838",'Number of Boss Type Enemies hitting you <select name="A8_Skill33" onChange="Click_A8(1)"></select>',0);
+		for(i=0;i<=10;i++)
+			A8_Skill33.options[i] = new Option(i + "",i);
+		myInnerHtml("EN840",'Number of MVP Enemies hitting you <select name="A8_Skill34" onChange="Click_A8(1)"></select>',0);
+		for(i=0;i<=3;i++)
+			A8_Skill34.options[i] = new Option(i + "",i);
 
 
 		myInnerHtml("EN812",'Special Environment <select name="A8_Skill14" onChange="Click_A8(1)"></select>',0);
@@ -4656,6 +4665,8 @@ with(document.calcForm){
 		A8_Skill10.value = n_A_PassSkill8[10];
 		A8_Skill11.value = n_A_PassSkill8[11];
 		A8_Skill12.value = n_A_PassSkill8[12];
+		A8_Skill33.value = n_A_PassSkill8[33];
+		A8_Skill34.value = n_A_PassSkill8[34];
 
 		A8_Skill14.value = n_A_PassSkill8[14];
 		A8_Skill15.value = n_A_PassSkill8[15];
@@ -7896,10 +7907,22 @@ function BaiCI(wBaiCI)
 		if(EquipNumSearch(1459))
 			if(n_A_LEFT_DEF_PLUS > 6)
 				w1 += 2*(n_A_LEFT_DEF_PLUS-6);
-	//custom TalonRO Black Wing: Back Stab damage +2% each refine
-	if(n_A_ActiveSkill == 169)
-		if(EquipNumSearch(1463))
+	if(n_A_ActiveSkill == 169){ //backstab
+		//custom TalonRO Black Wing: Back Stab damage +2% each refine
+		if(EquipNumSearch(1463)){
 			w1 += 2*n_A_Weapon_ATKplus;
+		}
+		//brave assassin damascus [Loa] 2018-07-24
+		if(EquipNumSearch(897) && n_A_JobSearch2() == 14){
+			w1 += 10;
+		}
+	}
+	if(n_A_ActiveSkill == 171){ //raid
+		//brave assassin damascus [Loa] 2018-07-24
+		if(EquipNumSearch(897) && n_A_JobSearch2() == 14){
+			w1 += 10;
+		}
+	}
 	//custom TalonRO Cannon Spear: Head Crush damage +5% each 3rd refine
 	if(n_A_ActiveSkill == 260)
 		if(EquipNumSearch(1516))
