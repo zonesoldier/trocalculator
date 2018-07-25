@@ -967,13 +967,13 @@ ME_ENCHANTABLE = [
 	,[863,52,53,0] //Holy Stick
 	,[1168,52,53,0] //Dead Tree Staff
 	,[1508,52,53,0] //Mental Stick
-	,[936,43,52,53,0] //Dark Thorn Staff
+	,[936,52,53,0] //Dark Thorn Staff
 	,[948,52,53,0] //Eraser
 /* [Two Handed Staves] - Staves Except DEX+2/+3 */
 	,[92,52,53,0] //Wizardry Staff
 	,[1172,52,53,0] //Chronos
 	,[1640,52,53,0] //Staff Of Thea [1]
-	,[647,43,52,53,0] //Divine Cross
+	,[647,52,53,0] //Divine Cross
 	,[646,52,53,0] //Staff of Destruction
 /* [Maces] */
 	,[81,0] //Golden Mace [1]
@@ -1252,8 +1252,8 @@ ED_ENCHANTS_SLOT_ONE = [
 		,[892, "MATK+2%"]
 		,[155, "CRIT+5"]
 		,[157, "CRIT+7"]
-		,[303, "FLEE+6"]
-		,[306, "FLEE+12"]
+		,[306, "FLEE+6"]
+		,[312, "FLEE+12"]
 ];
 //El Dicaste Enchants slot 2 for equipment
 ED_ENCHANTS_SLOT_TWO = [
@@ -1285,7 +1285,15 @@ ED_ENCHANTS_SLOT_THREE = [
 		,[51, "DEX+1"]
 		,[52, "DEX+2"]
 ];
-
+//El Dicaste Enchants slot 3 for golden trickle
+ED_ENCHANTS_GT_SLOT_THREE = [
+		 [21, "AGI+1"]
+		,[22, "AGI+2"]
+		,[41, "INT+1"]
+		,[42, "INT+2"]
+		,[51, "DEX+1"]
+		,[52, "DEX+2"]
+];
 ED_LIGHT_OF_EL_DICASTE = [
 	 [1201,0] //Light of El Dicastes
 ];
@@ -1293,7 +1301,8 @@ ED_LIGHT_OF_EL_DICASTE = [
 ED_ENCHANTABLE = [
 	 [446,0] //Feral Tail
 	,[448,0] //Feral Boots
-	,[449,23,33,43,0] //Golden Trickle ("Golden Bell" in wiki), Exclude AGI+3, VIT+3, and INT+3
+	// ,[449,23,33,43,0] //Golden Trickle ("Golden Bell" in wiki), Exclude AGI+3, VIT+3, and INT+3
+	,[449,0]
 ];
 
 //Mora Enchants
@@ -1304,8 +1313,8 @@ MORA_ENCHANTS_SLOT_ONE = [
 		,[892, "MATK+2%"]
 		,[155, "CRIT+5"]
 		,[157, "CRIT+7"]
-		,[303, "FLEE+6"]
-		,[306, "FLEE+12"]
+		,[306, "FLEE+6"]
+		,[312, "FLEE+12"]
 ];
 MORA_ENCHANTS_SLOT_TWO = [
 		 [41, "INT+1"]
