@@ -5,6 +5,19 @@
 	Brave Battle CrowBow
 	Brave Battle Fist
 	Brave Battle Lariat
+- Updated Battlegrounds Items [Amor]:
+	Brave Battle Strategy Book
+	Brave Battle Fist
+  Brave Battlefield Guitar
+  Brave Battlefield Morning Star
+  Brave Carnage Katar
+  Brave Gladiator Blade
+  Brave Huuma Front Shuriken
+  Brave Insane Battle Axe
+  Soldier Gatling Gun
+  Strong Recovery Wand
+  Warlock's Magic Wand
+	Assaulter Lance
 
 [Update 2018-07-24]
 - Fixed Eden weapon enchants 3rd slot adjustment according to 1st and 2st slot [NattWara]

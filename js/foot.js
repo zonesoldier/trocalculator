@@ -726,6 +726,15 @@ function StAllCalc()
 			n_tok[10] += 50;
 		}
 	}
+
+//[TalonRO Custom 2018-07-25 - Brave Gladiator Blade + 5% MATK for Rogue/Stalker or Crusader/Paladin] [Amor]
+if(EquipNumSearch(900)){
+		if(n_A_JobSearch2() == 14 || n_A_JobSearch2() == 13) {
+			n_tok[89] += 5;
+		}
+}
+
+
 	w=n_tok[17];
 
 	if(SU_STR >= 80 && CardNumSearch(267))
@@ -2139,6 +2148,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 	}
 
+	//[TalonRO Custom 2018-07-25 - Assaulter Lance +30 CRIT Crusader/Paladin] [Amor]
+	if(EquipNumSearch(904) && n_A_JobSearch2() == 13){
+		w += 30;
+	}
+
 	n_A_CRI += w;
 
 	if(n_A_PassSkill3[5]){
@@ -3472,6 +3486,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1647) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[70] += 5;
 	}
+  //[TalonRO Custom 2018-07-25 - Assaulter Lance + 20% Critical Damage for Crusader/Paladin] [Amor]
+	if(EquipNumSearch(904) && n_A_JobSearch2() == 13){
+		n_tok[70] += 20;
+	}
 
 	if(EquipNumSearch(1083)){
 		if(n_A_Weapon_ATKplus >= 6)
@@ -3729,6 +3747,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//[Custom TalonRO = 2018-06-05 - Parus Card adds 2% for Acolyte-based jobs] [Kato]
 	if(CardNumSearch(536) && (n_A_JOB == 3 || n_A_JOB == 9 || n_A_JOB == 23 || n_A_JOB == 15 || n_A_JOB == 33)) {
 		n_tok[91] += 1 * Math.floor(n_A_HEAD_DEF_PLUS/2);
+	}
+	//[TalonRO Custom - Assaulter Lance  + 25% DEF Bypass for Knight/ Lord Knight] [Amor]
+	if(EquipNumSearch(904) && n_A_JobSearch2() == 7){
+		n_tok[307] += 25;
 	}
 
 
