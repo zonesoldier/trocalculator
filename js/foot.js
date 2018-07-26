@@ -733,6 +733,12 @@ if(EquipNumSearch(900)){
 			n_tok[89] += 5;
 		}
 }
+//[TalonRO Custom 2018-07-26 - Valorous Assassin Damascus + 15% MATK for Rogue/Stalker or Ninja] [Amor]
+if(EquipNumSearch(898)){
+		if(n_A_JobSearch2() == 14 || n_A_JOB == 44) {
+			n_tok[89] += 15;
+		}
+}
 
 
 	w=n_tok[17];
@@ -2076,6 +2082,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill8[21])
 		w += 7;
 
+	//[TalonRO Custom - 2018-07-26 - Valorous Battle CrossBow +25 CRIT for Archer Classes] [Amor]
+	if(EquipNumSearch(913) && n_A_JobSearch() == 4) {
+		w +=25;
+	}
+
 	//custom TalonRO Armor enchant CRIT
 	var wHSE = document.calcForm.A_HSE.value;
 	if(wHSE){
@@ -2536,6 +2547,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[73] -= 10;
 		}
 	}
+
+//[TalonRO Custom - 2018-07-26 - Valorous Battle Strategy Book - Sage/Professor, Decrease [Fire Bolt], [Cold Bolt], and [Lightning Bolt] cast times by 15%.] [Amor]
+if(EquipNumSearch(912) && (n_A_JobSearch2() == 18) && (n_A_ActiveSkill == 56 || n_A_ActiveSkill == 51 || n_A_ActiveSkill == 54 )){
+		n_tok[73] -= 15;
+}
+
 
 	//Note 2018-07-12 [NattWara]
 	//Fix for Issue#252
@@ -3079,6 +3096,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(SU_AGI >= 80 && EquipNumSearch(1526))
 		w += 5;
 
+	//[TalonRO Custom - 2018-07-26 - Valorous Battle CrossBow - + 10% ASPD for Thief Class] [Amor]
+	if(EquipNumSearch(913) && n_A_JobSearch() == 2) {
+		w +=25;
+	}
+
 	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for ASPD] [Kato]
 	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
 		var vME = tRO_MalangdoEnchantment[i];
@@ -3523,6 +3545,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[37] += n_A_HEAD_DEF_PLUS - 5;
 		n_tok[57] += (n_A_HEAD_DEF_PLUS - 5) * 2;
 	}
+
+	//[TalonRO Custom - 2018-07-26 - Valorous Battlefield Morning Star - [+Aegis Shield or Monk/Champion] Reduces physical attack against Demi-human monster by 20%] [Amor]
+	if(EquipNumSearch(907) && ((EquipNumSearch(1376) || n_A_JobSearch2() == 15))) {
+		n_tok[37] -= 20;
+	}
+
 	//[Custom TalonRO - 2018-06-02 - Aegir Helm + Armor Combo - 1% less damage from Fish race monster for each refine] [Kato/Nattwara]
 	if(EquipNumSearch(1556))
 		n_tok[55] += n_A_BODY_DEF_PLUS;
@@ -4557,6 +4585,11 @@ function StPlusCalc()
 				wSPC_LUK += Math.max((99 - n_A_LUK - w2[5]), 0);
 			}
 	}
+
+		//[Custom TalonRO - 2018-07-26 - Speedy Recovery Wand +3 INT to Acolyte/Priest/High Priest] [Amor]
+		if(EquipNumSearch(920) && (n_A_JOB == 3 || n_A_JOB == 9 || n_A_JOB == 23)){
+			wSPC_INT += 3;
+		}
 
 	//CUSTOM (1st Transcendent Spirit)
 	if(SkillSearch(392) && (n_Tensei == 1) && (n_A_BaseLV > 10) && (n_A_BaseLV < 70)){
