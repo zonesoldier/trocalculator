@@ -353,7 +353,7 @@ ITEM_SP_TIME_OBJ =[
 ,[11,"Glorious Grenade Launcher","ASPD + 20%",1,1103,12,20,0]
 ,[12,"Glorious Jamadhar[+9]","ASPD + 100%",1,1091,12,100,0]
 ,[13,"Glorious Tablet","ATK + 200",1,1094,17,200,0]
-,[14,"Glorious Shuriken","Throw Fuuma Shuriken/Final Strike Damage + 100%",1,1098,5396,100,5405,100,5438,100,0]
+,[14,"Glorious Shuriken","Throw Fuuma Shuriken/Final Strike Damage + 100%",0,0,0] //,1,1098,5396,100,5405,100,5438,100,0
 ,[15,"Glorious Bloody Roar[+9]","ASPD + 100%",1,1090,12,100,0]
 ,[16,"Naght Sieger Twin-Blade [Red]","Ignore [Non-Boss] Monster Defense",1,933,22,1,0]
 ,[17,"Her National Treasury","none",0,0,0] //replace me

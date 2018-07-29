@@ -1,3 +1,34 @@
+[Update 2018-07-27]
+- BG Items [Amor]
+	Elite Engineer Armor
+	Assassin Robe
+	Warlock's Battle Robe
+	Medic's Robe
+	Elite Archer Suit
+	Elite Shooter Suit
+	Medalion [Merchant]
+	Medalion [Acolyte]
+	Medalion [Swordsman]
+	Sheriff Badge
+	Medalion [Mage/SL]
+	Medalion [Thief]
+	Medalion [Archer]
+	Glorious Apocalipse
+	Glorious Arc Wand
+	Glorious Bloody Roar
+	Glorious Claw
+	Glorious Claymore
+	Glorious Cleaver
+	Glorious Fist
+	Glorious Flamberge
+	Glorious Gatiling Gun
+  Glorious Gladius
+  Glorious Grenade Launcher
+	Glorious Guitar
+	Glorious Holy Avenger
+	Glorious Hunter Bow
+	Glorious Huuma Shuriken
+
 [Update 2018-07-26]
 - BG Items [Amor]
 	Soldier Grenade Launcher
@@ -24,7 +55,7 @@
 	Combat Boots
 	Battle Boots
 	Assaulter Plate
-	
+
 [Update 2018-07-25]
 - Fixed an issue with def reduction formula when mobbed [Loa]
 - Updated Items [Loa]:
