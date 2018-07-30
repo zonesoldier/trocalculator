@@ -2419,6 +2419,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 					C_ATK += (4 + (2 * (parseInt(vME.substr(-1)) - 1)));
 			}
 		}
+		//[Custom TalonRO 2018-07-30 - Glorious Two-handed Axe - 100+ ATK for merchant class] [Amor...]
+		if(EquipNumSearch(1087) && n_A_JobSearch() == 6) {
+				C_ATK += 100;
+		}
 
 	//refines das armas
 	if(n_A_WeaponLV == 1){W_REF = n_A_Weapon_ATKplus * 2;}
