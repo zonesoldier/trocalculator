@@ -726,6 +726,28 @@ function StAllCalc()
 			n_tok[10] += 50;
 		}
 	}
+
+//[TalonRO Custom 2018-07-25 - Brave Gladiator Blade + 5% MATK for Rogue/Stalker or Crusader/Paladin] [Amor]
+if(EquipNumSearch(900)){
+		if(n_A_JobSearch2() == 14 || n_A_JobSearch2() == 13) {
+			n_tok[89] += 5;
+		}
+}
+//[TalonRO Custom 2018-07-26 - Valorous Assassin Damascus + 15% MATK for Rogue/Stalker or Ninja] [Amor]
+if(EquipNumSearch(898)){
+		if(n_A_JobSearch2() == 14 || n_A_JOB == 44) {
+			n_tok[89] += 15;
+		}
+}
+//[TalonRO Custom 2018-07-29 - Glorious Staff of Recovery + 15% MATK for Priest/HP] [Amor]
+if(EquipNumSearch(1085)){
+		if(n_A_JobSearch2() == 9) {
+			n_tok[89] += 15;
+		}
+}
+
+
+
 	w=n_tok[17];
 
 	if(SU_STR >= 80 && CardNumSearch(267))
@@ -885,6 +907,59 @@ function StAllCalc()
 			w += n_A_ATK*.02;
 		}
 	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Claw - +5% per refine more, damage when usng Triple Attack, Chain Combo, and Combo Finish] [Amor]
+	if(EquipNumSearch(1096) && (n_A_ActiveSkill >= 187 || n_A_ActiveSkill <= 189)){
+		w += n_A_Weapon_ATKplus * (n_A_ATK*.05);
+	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Claw - +5% per 6+ refine, more damage when usng Tiger Knuckle Fist and Chain Crush Combo] [Amor]
+	if(EquipNumSearch(1096) && (n_A_ActiveSkill == 289 || n_A_ActiveSkill == 290)){
+		if(n_A_Weapon_ATKplus >= 6)
+			w += (n_A_Weapon_ATKplus - 5) * (n_A_ATK*.05);
+	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Claymore - +1% more damage when [Bowling Bash] and [Charge Attack]] [Amor]
+	if(EquipNumSearch(1080) && (n_A_ActiveSkill == 76 || n_A_ActiveSkill == 308)){
+		w += n_A_Weapon_ATKplus * (n_A_ATK*.01);
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Cleaver - +1% more damage when [Mammonite]] [Amor]
+	if(EquipNumSearch(1088) && (n_A_ActiveSkill == 65)){
+		w += n_A_Weapon_ATKplus * (n_A_ATK*.01);
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Flamberge - +2% more damage when [Bash] , [Mammonite], [Back Stab]] [Amor]
+	if(EquipNumSearch(1077) && (n_A_ActiveSkill == 65 || n_A_ActiveSkill == 6 || n_A_ActiveSkill == 169)){
+		w += n_A_Weapon_ATKplus * (n_A_ATK*.02);
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Grenade Launcher - +2% more damage with [Ground Drift]] [Amor]
+	if(EquipNumSearch(1103) && n_A_ActiveSkill == 437){
+		w += n_A_ATK*.02;
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Grenade Launcher - +1% more damage with [Triple Action]] [Amor]
+	if(EquipNumSearch(1103) && n_A_ActiveSkill == 418){
+		w += n_A_ATK*.01;
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Huuma Shuriken - +3% more damage with [Throw Huuma Shuriken]] [Amor]
+	if(EquipNumSearch(1098) && n_A_ActiveSkill == 396){
+		w += n_A_ATK*.03;
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Revolver - +1% more damage with [Rapid Shower]] [Amor]
+	if(EquipNumSearch(1099) && n_A_ActiveSkill == 428){
+		w += n_A_ATK*.01;
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Rifle - +3% more damage with [Tracking] and [Piercing Shot]] [Amor]
+	if(EquipNumSearch(1100) && (n_A_ActiveSkill == 430 || n_A_ActiveSkill == 432)){
+		w += n_A_ATK*.03;
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Grenade Launcher/Glorious Rifle/Glorious Shotgun - +30% more damage with [Triple Action] if not wearing Scouter] [Amor]
+	if(!EquipNumSearch(1387) && (EquipNumSearch(1103) || EquipNumSearch(1100) || EquipNumSearch(1102)) && n_A_ActiveSkill == 418){
+		w += n_A_ATK*.30;
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Shotgun - +2% more damage with [Spread Attack]] [Amor]
+	if(EquipNumSearch(1102) && n_A_ActiveSkill == 436){
+		w += n_A_ATK*.02;
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Two Handed Axe - +2% more damage with [Mammonite]] [Amor]
+	if(EquipNumSearch(1087) && n_A_ActiveSkill == 65){
+		w += n_A_ATK*.02;
+	}
 
 
 	w = Math.round(w);
@@ -1029,6 +1104,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//tiraya bonnet + 20hp per refine - [Loa] 2018-07-02
 	if(EquipNumSearch(1048)){
 		w += n_A_HEAD_DEF_PLUS * 20;
+	}
+  //[TalonRO Custom - Glorious Huuma Shuriken - + 150 HP per refine level] [Amor]
+	if(EquipNumSearch(1098)) {
+		w += (150 * n_A_Weapon_ATKplus);
 	}
 	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for MaxHP] [Kato]
 	for(i=0;i<tRO_MalangdoEnchantment.length;i++) {
@@ -1767,6 +1846,15 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill3[4])
 		n_A_HIT += 10 + n_A_PassSkill3[4] * 2 + n_A_PassSkill3[34] + Math.floor(n_A_PassSkill3[24] /10);
 
+	//[TalonRO Custom - 2018-07-28 - Glorious Cleaver  +2HIT per refne] [Amor]
+	if(EquipNumSearch(1088)) {
+		n_A_HIT += (2 * n_A_Weapon_ATKplus);
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Gladius  +2HIT per refne to [Rogue/Stalker or Ninja]] [Amor]
+	if(EquipNumSearch(1076) && (n_A_JobSearch2() == 14 || n_A_JOB == 44)) {
+		n_A_HIT += (2 * n_A_Weapon_ATKplus);
+	}
+
 	//custom TalonRO Armor enchant HIT
 	var wHSE = document.calcForm.A_HSE.value;
 	if(wHSE){
@@ -2035,8 +2123,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += n_A_Weapon_ATKplus;
 	if(EquipNumSearch(1122) && n_A_JobSearch()==6)
 		w += 5;
-	if(n_A_Weapon_ATKplus >= 6 && n_B[2]==7 && EquipNumSearch(1091))
-		w += 5;
 	if(EquipNumSearch(1161))
 		w += (2 * SkillSearch(89));
 	if(SU_DEX >= 90 && EquipNumSearch(1164))
@@ -2067,6 +2153,18 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_PassSkill8[21])
 		w += 7;
 
+	//[TalonRO Custom - 2018-07-26 - Valorous Battle CrossBow +25 CRIT for Archer Classes] [Amor]
+	if(EquipNumSearch(913) && n_A_JobSearch() == 4) {
+		w +=25;
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Gatiling Gun +3 CRIT per refine] [Amor]
+	if(EquipNumSearch(1101)) {
+		w += (3 * n_A_Weapon_ATKplus);
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Gladious +10 CRIT per refine for Soul Linker] [Amor]
+	if(EquipNumSearch(1076) && n_A_JOB == 43) {
+		w += (10 * n_A_Weapon_ATKplus);
+	}
 	//custom TalonRO Armor enchant CRIT
 	var wHSE = document.calcForm.A_HSE.value;
 	if(wHSE){
@@ -2137,6 +2235,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			var val = parseInt(vMORA.substr(-1));
 			w += val;
 		}
+	}
+
+	//[TalonRO Custom 2018-07-25 - Assaulter Lance +30 CRIT Crusader/Paladin] [Amor]
+	if(EquipNumSearch(904) && n_A_JobSearch2() == 13){
+		w += 30;
 	}
 
 	n_A_CRI += w;
@@ -2260,7 +2363,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	for(var i=8;i<12;i++){
 		if(n_A_PassSkill8[i] == 30 && EquipNumSearch(819)){C_ATK += 50;}
-		if(n_A_PassSkill8[i] == 13 && EquipNumSearch(1094)){C_ATK += 200;}
+		//if(n_A_PassSkill8[i] == 13 && EquipNumSearch(1094)){C_ATK += 200;}
 		if(n_A_PassSkill8[i] == 40 && EquipNumSearch(820)){	C_ATK += 50;}
 		if(n_A_PassSkill8[i] == 22 && EquipNumSearch(927)){C_ATK += 80;}
 		if(n_A_PassSkill8[i] == 36 && EquipNumSearch(928)){C_ATK += 80;}
@@ -2315,6 +2418,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			if(vME >= 1781 && vME <= 1788) {
 					C_ATK += (4 + (2 * (parseInt(vME.substr(-1)) - 1)));
 			}
+		}
+		//[Custom TalonRO 2018-07-30 - Glorious Two-handed Axe - 100+ ATK for merchant class] [Amor...]
+		if(EquipNumSearch(1087) && n_A_JobSearch() == 6) {
+				C_ATK += 100;
 		}
 
 	//refines das armas
@@ -2452,12 +2559,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 10;
 	if(EquipNumSearch(898) && (n_A_JobSearch2() == 14 || n_A_JOB == 44))
 		w += 15 * EquipNumSearch(898);
-	if(EquipNumSearch(1083))
-		w += n_A_Weapon_ATKplus;
-	if(n_A_Weapon_ATKplus >= 9 && EquipNumSearch(1084))
-		w += 5;
-	if(n_A_Weapon_ATKplus >= 9 && EquipNumSearch(1095))
-		w += 5;
 	if(n_A_JobSearch()==5 && CardNumSearch(454))
 		w +=3;
 	if(n_A_HEAD_DEF_PLUS >= 9 && n_A_card[8]==177)
@@ -2522,6 +2623,62 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[73] -= 10;
 		}
 	}
+	//[TalonRO Custom - 2018-07-26 - Valorous Battle Strategy Book - Sage/Professor, Decrease [Fire Bolt], [Cold Bolt], and [Lightning Bolt] cast times by 15%.] [Amor]
+	if(EquipNumSearch(912) && (n_A_JobSearch2() == 18) && (n_A_ActiveSkill == 56 || n_A_ActiveSkill == 51 || n_A_ActiveSkill == 54 )){
+		n_tok[73] -= 15;
+	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Apocalipse- Sage/Professor, Decrease [Fire Bolt], [Cold Bolt], and [Lightning Bolt] cast times by 15%.] [Amor]
+	if(EquipNumSearch(1095) && (n_A_JobSearch2() == 18) && (n_A_ActiveSkill == 56 || n_A_ActiveSkill == 51 || n_A_ActiveSkill == 54 )){
+		n_tok[73] -= 25;
+	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Apocalipse/Glorious Arc Wand  - Every Refine Level gives -1% Casting Time] [Amor]
+	if(EquipNumSearch(1095) || EquipNumSearch(1084)){
+		n_tok[73] -= n_A_Weapon_ATKplus;
+	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Bloody Roar - Gives -10% [Soul Breaker] Casting Time] [Amor]
+	if(EquipNumSearch(1090) && n_A_ActiveSkill == 263){
+		n_tok[73] -= 10;
+	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Claymore - Gives -3% [Charge Attack] Casting Time] [Amor]
+	if(EquipNumSearch(1080) && n_A_ActiveSkill == 308){
+		n_tok[73] -= 3 * n_A_Weapon_ATKplus;
+	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Claymore - Refine +6 > Gives -10% [Bowling Bash] Casting Time] [Amor]
+	if(EquipNumSearch(1080) && n_A_ActiveSkill == 76){
+		if(n_A_Weapon_ATKplus >= 6) {
+				n_tok[73] -= 10 * (n_A_Weapon_ATKplus - 5);
+		}
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Fists - Gives -5% less casting time for [Asura Stike] per refine] [Amor]
+	if(EquipNumSearch(1097) && n_A_ActiveSkill == 197){
+				n_tok[73] -= 5 * (n_A_Weapon_ATKplus);
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Holy Avenger - -5% [Grand Cross] cast time used with Aegis] [Amor]
+	if(EquipNumSearch(1079) && EquipNumSearch(1376) && n_A_ActiveSkill == 162) {
+			n_tok[73] -= 5;
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Holy Avenger - [Grand Cross] -1% cast time per refine] [Amor]
+	if(EquipNumSearch(1079) && n_A_ActiveSkill == 162) {
+			n_tok[73] -= n_A_Weapon_ATKplus;
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Rifle - [Tracking] -1% cast time per refine] [Amor]
+	if(EquipNumSearch(1100) && n_A_ActiveSkill == 430) {
+			n_tok[73] -= n_A_Weapon_ATKplus;
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Staff of Destruction - Every Refine Level gives -2% Casting Time] [Amor]
+	if(EquipNumSearch(1083)){
+		n_tok[73] -= (2 * n_A_Weapon_ATKplus);
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Jamadhar - +1 CRIT in demi-human per refine] [Amor]
+	if(EquipNumSearch(1091) && n_B[2] == 7) {
+			n_tok[117] -= n_A_Weapon_ATKplus;
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Shotgun - +10% Blind Resistence per refine] [Amor]
+	if(EquipNumSearch(1102)) {
+			n_tok[154] += (10 * n_A_Weapon_ATKplus);
+			if(n_tok[154] > 100) n_tok[154] = 100;
+	}
+
 
 	//Note 2018-07-12 [NattWara]
 	//Fix for Issue#252
@@ -2718,6 +2875,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 				w += parseInt(wKE.substr(-1));
 			}
 		}
+	}
+
+	//[TalonRO Custom - 2018-07-28 - Glorious Holy Avenger - 5% MATK used with Aegis] [Amor]
+	if(EquipNumSearch(1079) && EquipNumSearch(1376)) {
+			w += 5;
 	}
 
 	// [Custom TalonRO 2018-06-16 - Malangdo Enchantment for MATK%] [Kato]
@@ -2926,28 +3088,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 20;
 	if(SU_STR >= 77 && EquipNumSearch(944))
 		w += 4;
-	if(n_A_Weapon_ATKplus >= 7 && n_A_Equip[0] == 1077){
-		w += 5;
-		if(n_A_Weapon_ATKplus >= 9)
-			w += 5;
-	}
-	if(n_A_Weapon2_ATKplus >= 7 && n_A_Equip[1] == 1077){
-		w += 5;
-		if(n_A_Weapon2_ATKplus >= 9)
-			w += 5;
-	}
-	if(n_A_Weapon_ATKplus >= 6 && EquipNumSearch(1081))
-		w += 10;
-	if(n_A_Weapon_ATKplus >= 6 && EquipNumSearch(1086)){
-		w += 5;
-		if(n_A_Weapon_ATKplus >= 9)
-			w += 5;
-	}
-	if(n_A_Weapon_ATKplus >= 6 && EquipNumSearch(1088)){
-		w += 5;
-		if(n_A_Weapon_ATKplus >= 9)
-			w += 5;
-	}
 	if(n_A_JOB == 21 && EquipNumSearch(855))
 		w -= 5;
 	if(EquipNumSearch(1121) && n_A_JobSearch()==2)
@@ -3065,6 +3205,39 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(SU_AGI >= 80 && EquipNumSearch(1526))
 		w += 5;
 
+	//[TalonRO Custom - 2018-07-26 - Valorous Battle CrossBow - + 10% ASPD for Thief Class] [Amor]
+	if(EquipNumSearch(913) && n_A_JobSearch() == 2) {
+		w += 10;
+	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Apocalipse 1095/Glorious Cleaver 1088/Glorious Flamberge 1077/Glorious Guitar 1092/Glorious Jamadhar 1091/Glorious Lariat 1093/Glorious Morning Star 1086/Glorious Spear 1081/Glorious Two Handed Axe 1087 - Every Refine Level gives APSD + 1%][Amor]
+	if(EquipNumSearch(1095) || EquipNumSearch(1088) || EquipNumSearch(1077) || EquipNumSearch(1092) || EquipNumSearch(1091) || EquipNumSearch(1093) || EquipNumSearch(1086) || EquipNumSearch(1081) || EquipNumSearch(1087)){
+			w += n_A_Weapon_ATKplus;
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Gladius - 5% ASPD for Rogue/Stalker/Ninja/SL][Amor]
+	if(EquipNumSearch(1076) && (n_A_JobSearch2() == 14 || n_A_JOB== 43 || n_A_JOB == 44)){
+			w += 5;
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Gladius  +1% ASPD per refine to [SL/Ninja]] [Amor]
+	if(EquipNumSearch(1076) && (n_A_JOB== 43 || n_A_JOB == 44)) {
+			w += n_A_Weapon_ATKplus;
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Holy Avenger - 5% ASPD + 2% ASPD per refine used with Aegis] [Amor]
+	if(EquipNumSearch(1079) && EquipNumSearch(1376)) {
+			w += 5 + (2 * n_A_Weapon_ATKplus);
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Hunter Bow - 5% ASPD for Rogue Class] [Amor]
+	if(EquipNumSearch(1089) && n_A_JobSearch2() == 14) {
+			w += 5 + (2 * n_A_Weapon_ATKplus);
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Hunter Bow - 5% ASPD for Rogue Class] [Amor]
+	if(EquipNumSearch(1089) && n_A_JobSearch2() == 14) {
+			w += 5 + (2 * n_A_Weapon_ATKplus);
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Two Handed Axe - 1% ASPD more if refine 6>] [Amor]
+	if(EquipNumSearch(1087) && n_A_Weapon_ATKplus >= 6){
+			w += (n_A_Weapon_ATKplus - 5);
+	}
+
 	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for ASPD] [Kato]
 	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
 		var vME = tRO_MalangdoEnchantment[i];
@@ -3156,8 +3329,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w -= n_A_Weapon_ATKplus;
 	if(n_A_card[8]==177)
 		w -= n_A_HEAD_DEF_PLUS;
-	if(n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1084))
-		w -= 5;
 	if(n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1095))
 		w -= 5;
 	if(n_A_PassSkill3[2] != 0)
@@ -3210,9 +3381,9 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w -= StPlusCalc2(7000+n_A_ActiveSkill);
 	if(StPlusCard(7000+n_A_ActiveSkill) != 0)
 		w -= StPlusCard(7000+n_A_ActiveSkill);
-	if(n_A_ActiveSkill==321 || n_A_ActiveSkill==197)
+	/*if(n_A_ActiveSkill==321 || n_A_ActiveSkill==197)
 		if(SkillSearch(195) && n_A_Weapon_ATKplus >= 9 && EquipNumSearch(1097))
-			w -= 100;
+			w -= 100;*/
 	if(w < 0)
 		w = 0;
 	n_A_CAST *= w /100;
@@ -3224,8 +3395,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 
 	if(n_A_Weapon_ATKplus >= 9 && EquipNumSearch(934))
 		n_tok[74] += 20;
-	if(n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1084))
-		n_tok[74] += 5;
 	if(n_A_Weapon_ATKplus >= 9 &&EquipNumSearch(1095))
 		n_tok[74] += 5;
 	if(EquipNumSearch(936))
@@ -3236,6 +3405,16 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			n_tok[74] += 10;
 		}
 	}
+
+	//[TalonRO Custom - 2018-07-27 - Glorious Apocalipse/Glorious Arc Wand - Every /2 upgrade gives after-cast delay -1%] [Amor]
+	if(EquipNumSearch(1095) || EquipNumSearch(1095) ){
+		n_tok[74] += (1 * Math.floor(n_A_Weapon2_ATKplus / 2));
+	}
+	//[TalonRO Custom - 2018-07-27 - Glorious Bloody Roar/Glorious Guitar/Glorious Lariat - Every Upgrade gives after-cast delay -1%] [Amor]
+	if(EquipNumSearch(1090) || EquipNumSearch(1092) || EquipNumSearch(1093)){
+		n_tok[74] += n_A_Weapon2_ATKplus;
+	}
+
 	var w = n_A_PassSkill3[2];
 	if(w){
 		// custom TalonRO Poem of Bragi after cast delay
@@ -3345,34 +3524,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(SkillSearch(234))
 		n_tok[39] += SkillSearch(234) *4;
 
-	if(n_A_Weapon_ATKplus >= 6){
-		if(n_A_Equip[0] == 1076 || n_A_Equip[0] == 1077 || n_A_Equip[0] == 1081 || n_A_Equip[0] == 1082 || n_A_Equip[0] == 1086 || (1088 <= n_A_Equip[0] && n_A_Equip[0] <= 1094) || n_A_Equip[0] == 1096 || n_A_Equip[0] == 1097 || (1099 <= n_A_Equip[0] && n_A_Equip[0] <= 1103)){
-			if(n_A_Weapon_ATKplus == 6)
-				n_tok[37] += 4;
-			if(n_A_Weapon_ATKplus == 7)
-				n_tok[37] += 9;
-			if(n_A_Weapon_ATKplus == 8)
-				n_tok[37] += 16;
-			if(n_A_Weapon_ATKplus == 9)
-				n_tok[37] += 25;
-			if(n_A_Weapon_ATKplus >= 10)
-				n_tok[37] += 36;
-		}
-
-		if(n_A_Equip[0] == 1080 || n_A_Equip[0] == 1087 || n_A_Equip[0] == 1098){
-			if(n_A_Weapon_ATKplus == 6)
-				n_tok[37] += 9;
-			if(n_A_Weapon_ATKplus == 7)
-				n_tok[37] += 16;
-			if(n_A_Weapon_ATKplus == 8)
-				n_tok[37] += 25;
-			if(n_A_Weapon_ATKplus == 9)
-				n_tok[37] += 36;
-			if(n_A_Weapon_ATKplus >= 10)
-				n_tok[37] += 49;
-		}
-
-	}
 	if(EquipNumSearch(1428) && n_A_HEAD_DEF_PLUS > 5)
 		n_tok[37] += 2*(n_A_HEAD_DEF_PLUS-5);
 
@@ -3420,6 +3571,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1545)){
 		n_tok[25] -= (n_A_HEAD_DEF_PLUS - 5);
 	}
+	//[Custom TalonRO - 2018-07-28 - Glorious Hunter Bow - 2% DS damage (added here as ranged damage)] [Kato]
+	if(EquipNumSearch(1089)){
+		n_tok[25] += 2;
+	}
 
 	//[Custom TalonRO 2018-06-15 - Malandgo Enchantment for Expert Archer] [Kato]
 	for(i=0; i < tRO_MalangdoEnchantment.length; i++) {
@@ -3449,15 +3604,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[80] += 3;}//libra diadem
 	if(n_A_JOB==14 || n_A_JOB==28)
 		n_tok[80] += 10 * CardNumSearch(479);
-	if(n_A_Weapon_ATKplus >= 9 && EquipNumSearch(1101))
-		n_tok[80] += n_A_Weapon_ATKplus;
 
 	//custom TalonRO Lady Tanee Card: +1% ATK per 8 base VIT
 	if(CardNumSearch(409))
 		n_tok[80] += Math.floor(SU_VIT / 8);
 
-	if(EquipNumSearch(1089))
-		n_tok[70] += (2 * n_A_Weapon_ATKplus);
 	//custom TalonRO Little Feather Hat: if combined with Sharp Arrow +5% critical damage
 	if(EquipNumSearch(1488) && n_A_Arrow==15)
 		n_tok[70] += 5;
@@ -3472,11 +3623,15 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1647) && n_A_HEAD_DEF_PLUS > 6){
 		n_tok[70] += 5;
 	}
+  //[TalonRO Custom 2018-07-25 - Assaulter Lance + 20% Critical Damage for Crusader/Paladin] [Amor]
+	if(EquipNumSearch(904) && n_A_JobSearch2() == 13){
+		n_tok[70] += 20;
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Hunter Bow - 2% Critical Damge for Hunter Class] [Amor]
+	if(EquipNumSearch(1089) && n_A_JobSearch2() == 10) {
+			w += (2 * n_A_Weapon_ATKplus);
+	}
 
-	if(EquipNumSearch(1083)){
-		if(n_A_Weapon_ATKplus >= 6)
-			n_tok[177] += 2 * (n_A_Weapon_ATKplus - 5);
-		}
 	if(CardNumSearch(452) && n_A_JobSearch()==3){
 		n_tok[51] += 30;
 		n_tok[56] += 30;
@@ -3505,6 +3660,33 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[37] += n_A_HEAD_DEF_PLUS - 5;
 		n_tok[57] += (n_A_HEAD_DEF_PLUS - 5) * 2;
 	}
+
+	//[TalonRO Custom - 2018-07-26 - Valorous Battlefield Morning Star/Glorious Morning Star - [+Aegis Shield or Monk/Champion] Reduces physical attack against Demi-human monster by 20%] [Amor]
+	if((EquipNumSearch(907) || EquipNumSearch(1086)) && ((EquipNumSearch(1376) || n_A_JobSearch2() == 15))) {
+		n_tok[37] -= 20;
+	}
+	//[TalonRO Custom - 2018-07-26 - Glorious Cleaver/Glorious Flamberge/Glorious Gladius - [+Aegis Shield] Reduces physical attack against Demi-human monster by 20%] [Amor]
+	if((EquipNumSearch(1088) || EquipNumSearch(1077) || EquipNumSearch(1076)) && EquipNumSearch(1376)) {
+		n_tok[37] -= 20;
+	}
+	//[TalonRO Custom - 2018-07-28 - Glorious Lance - Job Crusader/Paladin Reduces physical attack against Demi-human monster by 30%] [Amor]
+	if(EquipNumSearch(1082) && n_A_JobSearch2() == 13) {
+		n_tok[37] -= 30;
+	}
+	//[TalonRO Custom - 2018-07-26 - Glorious Claymore/Glorious Cleaver/Glorious Flamberge/Glorious Gladius/Glorious Grenade Launcher/ Glorious Tablet - +1% Inceases physical attack Demi-human damage per refine] [Amor]
+	if(EquipNumSearch(1080) || EquipNumSearch(1088) || EquipNumSearch(1077) || EquipNumSearch(1076) || EquipNumSearch(1103) || EquipNumSearch(1094)) {
+		n_tok[37] += n_A_Weapon_ATKplus;
+	}
+	//[TalonRO Custom - 2018-07-26 - Glorious Gatiling Gun/Glorious Grenade Launcher/Glorious Lance/Glorious Rifle/Glorious Shotgun - +2% Inceases physical attack Demi-human damage per refine] [Amor]
+	if(EquipNumSearch(1101) || EquipNumSearch(1103) || EquipNumSearch(1082) || EquipNumSearch(1100) || EquipNumSearch(1102)) {
+		n_tok[37] += (2 * n_A_Weapon_ATKplus);
+	}
+	//[TalonRO Custom - 2018-07-26 -  Glorious Spear - [+Aegis Shield] Reduces physical attack against Demi-human monster by 20%] [Amor]
+	if(EquipNumSearch(1081) && EquipNumSearch(1376)) {
+		n_tok[37] -= 30;
+	}
+
+
 	//[Custom TalonRO - 2018-06-02 - Aegir Helm + Armor Combo - 1% less damage from Fish race monster for each refine] [Kato/Nattwara]
 	if(EquipNumSearch(1556))
 		n_tok[55] += n_A_BODY_DEF_PLUS;
@@ -3590,16 +3772,30 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[94] += 2;
 	}
 
-	if(EquipNumSearch(1085)){
-		if(n_A_Weapon_ATKplus >= 6){
-				n_tok[91] += 5 + (2 * (n_A_Weapon_ATKplus - 5));
-				n_tok[94] += 5 + (2 * (n_A_Weapon_ATKplus - 5));
-		}
-		if(n_A_Weapon_ATKplus >= 10){
-			n_tok[91] += 10;
-			n_tok[94] += 10;
-		}
+	//[Custom TalonRO - 2018-07-27 Elite Engineer Armor - Effectiviness of Potion Pitcher 10%] [Amor]
+	if(EquipNumSearch(973)){
+		n_tok[94] += 10;
 	}
+	//[Custom TalonRO - 2018-07-29 Glorious Staff of Recovery - Effectiviness of Potion Pitcher/Heal 1% per refine] [Amor]
+	if(EquipNumSearch(1085)){
+		n_tok[91] += n_A_Weapon_ATKplus;
+		n_tok[94] += n_A_Weapon_ATKplus;
+	}
+
+	//[Custom TalonRO - 2018-07-27 Glorious Arc Wand - Every 2 refine 1% MATK for demi-human] [Amor]
+	if(EquipNumSearch(1084)) {
+		n_tok[177] += (1 * Math.floor(n_A_Weapon_ATKplus/2));
+	}
+	//[Custom TalonRO - 2018-07-28 Glorious Gladius - Every 2 refine 1% MATK for demi-human for 6+ >] [Amor]
+	if(EquipNumSearch(1076)) {
+		if(n_A_Weapon_ATKplus >= 6)
+				n_tok[177] += (n_A_Weapon_ATKplus - 5);
+	}
+	//[Custom TalonRO - 2018-07-29 Glorious Staff of Destruction - +1% MATK every refine for demi-human] [Amor]
+	if(EquipNumSearch(1083)) {
+		n_tok[177] += n_A_Weapon_ATKplus
+	}
+
 	if(EquipNumSearch(1161))
 		n_tok[91] += SkillSearch(23);
 		n_tok[94] += SkillSearch(23);
@@ -3647,19 +3843,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_A_zokusei[i] = zokusei[n_A_BodyZokusei * 10 +1][i] * 100;
 		n_A_zokusei[i] = n_A_zokusei[i] - Math.floor(n_A_zokusei[i] * n_tok[60+i]) / 100;
 	}
-
-	if(n_A_Equip[1] == 1076 || n_A_Equip[1] == 1077){
-		if(n_A_Weapon2_ATKplus >= 6)
-			n_tok[307] += 5;
-	}
-	if(n_A_Equip[0] == 1076 || n_A_Equip[0] == 1077 || n_A_Equip[0] == 1080 || n_A_Equip[0] == 1081 || n_A_Equip[0] == 1086 || (1088 <= n_A_Equip[0] && n_A_Equip[0] <= 1090) || n_A_Equip[0] == 1092 || n_A_Equip[0] == 1093 || (1097 <= n_A_Equip[0]  && n_A_Equip[0] <= 1103)){
-		if(n_A_Weapon_ATKplus >= 6)
-			n_tok[307] += 5;
-	}
-	if(n_A_Equip[0] == 1082 || n_A_Equip[0] == 1087 || n_A_Equip[0] == 1094 || n_A_Equip[0] == 1096){
-		if(n_A_Weapon_ATKplus >= 6)
-			n_tok[307] += 5;
-	}
 	if(EquipNumSearch(645))
 		n_tok[295] += 10 + n_A_Weapon_ATKplus;
 	if(n_A_WeaponType==9)
@@ -3691,24 +3874,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_B[19] == 1)
 		n_tok[295] += n_tok[297];
 
-	if(EquipNumSearch(1084) || EquipNumSearch(1095)){
-		if(n_A_Weapon_ATKplus >= 6)
-			n_tok[317] += 5;
-	}
-	if(EquipNumSearch(1085)){
-		if(n_A_Weapon_ATKplus >= 6)
-			n_tok[317] += 5;
-	}
 	// //Maiden Hat - ZoneSoldier - 6/6/2018
 	// //Additional Heal effectiveness + 1% per upgrade past 7.
 	// if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1628)){
 	// 	n_tok[317] =+ 1 * (n_A_HEAD_DEF_PLUS - 7);
 	// }
-
-	if(EquipNumSearch(1083)){
-		if(n_A_Weapon_ATKplus >= 6)
-			n_tok[317] += 5 + (2 * (n_A_Weapon_ATKplus - 5));
-	}
 
 
 	n_tok[70] += n_tok[320+n_B[2]];
@@ -3730,7 +3900,23 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(CardNumSearch(536) && (n_A_JOB == 3 || n_A_JOB == 9 || n_A_JOB == 23 || n_A_JOB == 15 || n_A_JOB == 33)) {
 		n_tok[91] += 1 * Math.floor(n_A_HEAD_DEF_PLUS/2);
 	}
+	//[TalonRO Custom - Assaulter Lance  + 25% DEF Bypass for Knight/ Lord Knight] [Amor]
+	if(EquipNumSearch(904) && n_A_JobSearch2() == 7){
+		n_tok[307] += 25;
+	}
+	//[TalonRO Custom - Glorious Cleaver 1088/Glorious Flamberge 1077/Glorious Gatiling Gun 1101/Glorious Guitar 1092/Glorious Lariat 1093/Glorious Rifle 1100/Glorious Shotgun 1102/Glorious Spear 1081/Glorious Tablet 1094/Glorious Two Handed Axe 1087 + 1% DEF Bypass for every upgrade] [Amor]
+	if(EquipNumSearch(1088) || EquipNumSearch(1077) || EquipNumSearch(1101) || EquipNumSearch(1092) || EquipNumSearch(1093) || EquipNumSearch(1100) || EquipNumSearch(1102) || EquipNumSearch(1081) || EquipNumSearch(1094) || EquipNumSearch(1087)){
+		n_tok[307] += n_A_Weapon_ATKplus;
+	}
+	//[TalonRO Custom - Glorious Lance - +1% DEF Bypass if Knight/Lord Knight] [Amor]
+	if(EquipNumSearch(1082) && n_A_JobSearch2() == 7){
+		n_tok[307] += n_A_Weapon_ATKplus;
+	}
 
+	//[TalonRO Custom - Glorious Lance - 100% DEF Bypass if Crusader/Palladin] [Amor]
+	if(EquipNumSearch(1082)){
+		n_tok[307] = 100;
+	}
 
 	/*[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Spell Element] [Kato]
 		Well I couldn't find a n_tok for magical damage based on element.
@@ -3923,24 +4109,7 @@ function StPlusCalc()
 		wSPC_INT += 3;
 	if(EquipNumSearch(1172))
 		wSPC_INT += Math.floor(n_A_Weapon_ATKplus / 2);
-	if(n_A_Equip[0]==1078 || n_A_Equip[0]==1079){
-		wSPC_INT += (n_A_Weapon_ATKplus -5);
-		if(n_A_Equip[0]==1078)
-			if(n_A_Weapon_ATKplus >= 9)
-				wSPC_INT += 5;
-		if(n_A_Equip[0]==1079)
-			if(n_A_Weapon_ATKplus >= 10)
-				wSPC_INT += 5;
-	}
-	if(n_A_Equip[1]==1078 || n_A_Equip[1]==1079){
-		wSPC_INT += (n_A_Weapon2_ATKplus -5);
-		if(n_A_Equip[1]==1078)
-			if(n_A_Weapon2_ATKplus >= 9)
-				wSPC_INT += 5;
-		if(n_A_Equip[1]==1079)
-			if(n_A_Weapon2_ATKplus >= 10)
-				wSPC_INT += 3;
-	}
+
 	if(EquipNumSearch(649))
 		wSPC_DEX -= SU_DEX;
 
@@ -4003,6 +4172,21 @@ function StPlusCalc()
 			wSPC_LUK += 1;
 		}
 	}
+
+	//[TalonRO Custom - 2018-07-27 - Glorious Bloody Roar - Every Upgrade gives + 1 INT] [Amor]
+	if(EquipNumSearch(1090)){
+		wSPC_INT += n_A_Weapon2_ATKplus;
+	}
+
+	//[TalonRO Custom - 2018-07-28 - Glorious Gladius - +5 DEX for Rogue/Stalker/Ninja/SL][Amor]
+	if(EquipNumSearch(1076) && (n_A_JobSearch2() == 14 || n_A_JOB== 43 || n_A_JOB == 44)){
+			wSPC_DEX += 5;
+	}
+	//[TalonRO Custom - 2018-07-29 - Glorious Rapier - +1 INT per Refine][Amor]
+	if(EquipNumSearch(1078)){
+			wSPC_INT += n_A_Weapon_ATKplus;
+	}
+
 
 	wSPC_STR += StPlusCard(1) + wSPCall;
 	wSPC_AGI += StPlusCard(2) + wSPCall;
@@ -4535,6 +4719,11 @@ function StPlusCalc()
 				wSPC_LUK += Math.max((99 - n_A_LUK - w2[5]), 0);
 			}
 	}
+
+		//[Custom TalonRO - 2018-07-26 - Speedy Recovery Wand +3 INT to Acolyte/Priest/High Priest] [Amor]
+		if(EquipNumSearch(920) && (n_A_JOB == 3 || n_A_JOB == 9 || n_A_JOB == 23)){
+			wSPC_INT += 3;
+		}
 
 	//CUSTOM (1st Transcendent Spirit)
 	if(SkillSearch(392) && (n_Tensei == 1) && (n_A_BaseLV > 10) && (n_A_BaseLV < 70)){
@@ -5211,11 +5400,11 @@ function ActiveSkillSetPlus()
 		w_ASSP9[j] = 2096;
 		j++;
 	}
-	if(EquipNumSearch(1096) && n_A_JobSearch2() != 9){
+	/*if(EquipNumSearch(1096) && n_A_JobSearch2() != 9){
 		w_ASSP0[j] = 193;
 		w_ASSP9[j] = 2108;
 		j++;
-	}
+	}*/
 	if(n_A_PassSkill7[15]){
 		var wSC = [33,34,35,36,13,37,38,39,7];
 		for(var i=0;i<=8;i++){

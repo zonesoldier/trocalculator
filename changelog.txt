@@ -1,3 +1,78 @@
+[Update 2018-07-27]
+- BG Items [Amor]
+		Elite Engineer Armor
+		Assassin Robe
+		Warlock's Battle Robe
+		Medic's Robe
+		Elite Archer Suit
+		Elite Shooter Suit
+		Medalion [Merchant]
+		Medalion [Acolyte]
+		Medalion [Swordsman]
+		Sheriff Badge
+		Medalion [Mage/SL]
+		Medalion [Thief]
+		Medalion [Archer]
+		Glorious Apocalipse
+		Glorious Arc Wand
+		Glorious Bloody Roar
+		Glorious Claw
+		Glorious Claymore
+		Glorious Cleaver
+		Glorious Fist
+		Glorious Flamberge
+		Glorious Gatiling Gun
+		Glorious Gladius
+		Glorious Grenade Launcher
+		Glorious Guitar
+		Glorious Holy Avenger
+		Glorious Hunter Bow
+		Glorious Huuma Shuriken
+		Glorious Jamadhar
+		Glorious Lance
+		Glorious Lariat
+		Glorious Morning Star
+		Glorious Rapier
+		Glorious Revolver
+		Glorious Rifle
+		Glorious Shotgun
+		Glorious Spear
+		Glorious Staff of Destruction
+		Glorious Staff of Recovery
+		Glorious Tablet
+		Glorious Two Handed Axe
+		Glorious Suit
+		Glorious Shoes
+		Glorious Muffler
+		Glorious Ring
+
+[Update 2018-07-26]
+- BG Items [Amor]
+	Soldier Grenade Launcher
+	Soldier Rifle
+	Soldier Shotgun
+	Speedy Recovery Wand
+	Valorous Assassin Damascus
+	Valorous Assaulter's Katzbalger
+	Valorous Battle CrossBow
+	Valorous Battle Fist
+	Valorous Battle Lariat
+	Valorous Battle Strategy Book
+	Valorous Battlefield Guitar
+	Valorous Battlefield Morning Star
+	Valorous Carnage Katar
+	Valorous Gladiator Blade
+	Valorous Huuma Front Shuriken
+	Valorous Insane Battle Axe
+	Warlock's Battle Wand
+	Captain's Manteau
+	Commander's Manteau
+	Sheriff's Manteau
+	Battle Greave
+	Combat Boots
+	Battle Boots
+	Assaulter Plate
+
 [Update 2018-07-25]
 - Fixed an issue with def reduction formula when mobbed [Loa]
 - Updated Items [Loa]:
@@ -5,6 +80,19 @@
 	Brave Battle CrowBow
 	Brave Battle Fist
 	Brave Battle Lariat
+- Updated Battlegrounds Items [Amor]:
+	Brave Battle Strategy Book
+	Brave Battle Fist
+	Brave Battlefield Guitar
+	Brave Battlefield Morning Star
+	Brave Carnage Katar
+	Brave Gladiator Blade
+	Brave Huuma Front Shuriken
+	Brave Insane Battle Axe
+	Soldier Gatling Gun
+	Strong Recovery Wand
+	Warlock's Magic Wand
+	Assaulter Lance
 
 [Update 2018-07-24]
 - Fixed Eden weapon enchants 3rd slot adjustment according to 1st and 2st slot [NattWara]
