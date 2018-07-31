@@ -345,21 +345,21 @@ ITEM_SP_TIME_OBJ =[
 ,[3,"Atroce Card","ASPD+100%",2,463,12,100,0]
 ,[4,"Anolian Card","Improve Concentration Lv1",2,224,0]
 ,[5,"Alchemist Card Set","Adrenaline Rush",2,461,0]
-,[6,"Assassin Damascus (Valorous)","Ice Pick Effect",1,898,23,1,0]
+,[6,"Valorous Assassin Damascus","MATK + 10% and ASPD + 20%",4,898,73,20,89,10,0]
 ,[7,"Ixion Wings","ASPD + 7%",1,821,12,7,0]
 ,[8,"Vanberk Card","CRIT + 100",2,471,10,100,0]
 ,[9,"Wolfheiden","Receive -20% Physical Damage, +20% Magical Damage[Stone Skin Lv6]",1,708,0]
 ,[10,"Angelic Ring","Heal/Sanctuary/Potion Pitcher Effectiveness + 20%",1,1000,91,20,94,20,0]
 ,[11,"Glorious Grenade Launcher","ASPD + 20%",1,1103,12,20,0]
-,[12,"Glorious Jamadhar[+9]","ASPD + 100%",1,1091,12,100,0]
-,[13,"Glorious Tablet","ATK + 200",1,1094,17,200,0]
-,[14,"Glorious Shuriken","Throw Fuuma Shuriken/Final Strike Damage + 100%",1,1098,5396,100,5405,100,5438,100,0]
+,[12,"Glorious Jamadhar[+9]","ASPD + 100%",0,0,0] //1,1091,12,100,0
+,[13,"Glorious Tablet","ATK + 20",1,1094,17,20,0] //1,1094,17,200,0
+,[14,"Glorious Shuriken","Throw Fuuma Shuriken/Final Strike Damage + 100%",0,0,0] //,1,1098,5396,100,5405,100,5438,100,0
 ,[15,"Glorious Bloody Roar[+9]","ASPD + 100%",1,1090,12,100,0]
 ,[16,"Naght Sieger Twin-Blade [Red]","Ignore [Non-Boss] Monster Defense",1,933,22,1,0]
 ,[17,"Her National Treasury","none",0,0,0] //replace me
 ,[18,"Desert Twilight + Desert Wind","190 ASPD",1,818,12,100,0]
 ,[19,"Shadow Guard Set [Shadow Walk + Shadow Guard]","FLEE + 20",1,995,9,20,0]
-,[20,"Huuma Front Shuriken (Valorous)","Throw Fuuma Shuriken/Final Strike Damage + 100%",1,931,5396,100,5405,100,5438,100,0]
+,[20,"Huuma Front Shuriken (Valorous)","Throw Fuuma Shuriken/Final Strike Damage + 100%",0,0,0] //1,931,5396,100,5405,100,5438,100,0
 ,[21,"Naght Sieger Twin-Blade [Blue]","Ignore [Non-Boss] Monster Defense",1,932,22,1,0]
 ,[22,"Soldier Gatling Gun","ATK + 80",1,927,17,80,0]
 ,[23,"Soldier Grenade Launcher","ATK + 300",1,929,17,300,0]

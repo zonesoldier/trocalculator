@@ -34,15 +34,29 @@
 <div class="topic">
 	<h3>CHANGELOG</h3>
 	<div class="pad">
-		<span><b>2018-06-30</b></span>
-									<ul>
-										<li>Added Malangdo Enchantable Weapons plus restrictions;</li>
-										<li>Added Items/Combo Link to the tRO's database;</li>
-										<li>Various items fix (stats, jobs and descriptions);</li>
-										<li>Fixed Brewing formula;</li>
-										<li>Fixed Baby jobs stats and rebirths;</li>
-										<li>Fixed Steel Body and Marionette Control;</li>
-									</ul>
+		<span><b>2018-07-29</b></span>
+			<div id="changelog20180729">
+					<ul>
+						<li>Added Eden/Mora/El Discates/Biolab Enchants;</li>
+						<li>Added Battleground Items;</li>
+						<li>Added Vanilla Flag;</li>
+						<li>Fixed many old items descriptions and status;</li>
+						<li>Added linking for card sets;</li>
+						<li>Fixed Def reduction while tanking more mobs;</li>
+					</ul>
+			</div>
+			<br>
+		<span><b>2018-06-30</b> [<a href="javascript: void(0)" onclick="Toogle('changelog20180630',this)">Show</a>]</span>
+			<div style="display: none" id="changelog20180630">
+					<ul>
+						<li>Added Malangdo Enchantable Weapons plus restrictions;</li>
+						<li>Added Items/Combo Link to the tRO's database;</li>
+						<li>Various items fix (stats, jobs and descriptions);</li>
+						<li>Fixed Brewing formula;</li>
+						<li>Fixed Baby jobs stats and rebirths;</li>
+						<li>Fixed Steel Body and Marionette Control;</li>
+					</ul>
+			</div>
 									<br />
 		<span><b>2018-06-08</b> [<a href="javascript: void(0)" onclick="Toogle('changelog20180608',this)">Show</a>]</span>
 		<div style="display: none" id="changelog20180608">
@@ -111,9 +125,9 @@
 								</div>
 								<div style="float: right; padding-right: 3px;">
 									<input id="lab0" name="vanilla" onclick="VanillaCard()|VanillaArmor()|StAllCalc()" type="checkbox">
-									<label for="lab0"><span id="nm079">Vanilla</span></label> / 
+									<label for="lab0"><span id="nm079">Vanilla</span></label> /
 									<input id="lab1" name="A_youshi" onclick="calc()" type="checkbox">
-									<label for="lab1"><span id="nm078">Adopted</span></label> / 
+									<label for="lab1"><span id="nm078">Adopted</span></label> /
 									<input id="lab2" name="BLVauto" checked="checked" type="checkbox">
 									<label for="lab2"><span id="nm02">Auto Adjust Base Level</span></label>
 								</div>
@@ -330,7 +344,7 @@
 			<td class="calc"></td>
 			<td class="calc"></td>
 		</tr>
-		
+
 		<tr style="display: none" id="T_BE1">
 			<td class="calc">
 				<span id="A_BEText11"></span>
@@ -358,7 +372,7 @@
 			</td>
 			<td class="calc"></td>
 		</tr>
-		
+
 		<tr style="display: none" id="T_W2">
 			<td class="calc"><span id="spanA_weapon2"></span></td>
 			<td class="calc"><span id="spanA_weapon2seiren"></span></td>
@@ -385,7 +399,7 @@
 			<td class="calc"></td>
 			<td class="calc"></td>
 		</tr>
-		
+
 		<tr style="display: none" id="T_ME2">
 			<td class="calc">
 				<span id="A_METext21"></span>
@@ -398,7 +412,7 @@
 			<td class="calc"></td>
 			<td class="calc"></td>
 		</tr>
-		
+
 		<tr style="display: none" id="T_BE2">
 			<td class="calc">
 				<span id="A_BEText21"></span>
@@ -411,7 +425,7 @@
 			<td class="calc"></td>
 			<td class="calc"></td>
 		</tr>
-		
+
 		<tr style="display: none" id="T_EE2">
 			<td class="calc">
 				<span id="A_EEText21"></span>
@@ -456,7 +470,7 @@
 			</td>
 			<!-- Placeholder 1 -->
 			<td class="calc" id="T_HEAD1_TEMP"></td>
-			
+
 			<!-- Biolab Enchant Headgear 2 -->
 			<td class="calc" style="display: none" id="T_BEH2">
 				<span id="A_BETextH2"></span>
@@ -471,9 +485,9 @@
 			-->
 			<!-- Placeholder 2 -->
 			<td class="calc" id="T_HEAD2_TEMP"></td>
-			
+
 		</tr>
-		
+
 		<tr>
 			<td class="calc">
 				<select style="margin-left: 51px" name="A_head2" onchange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value)"></select>
@@ -508,7 +522,7 @@
 				<select name="A_HSE_HEAD1" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
-		
+
 		<tr id="T_BEA" style="display: none">
 			<td class="calc">
 				<span id="A_BETextA1"></span>
@@ -559,7 +573,7 @@
 			<td class="calc" id="ID_C4">
 				<select style="visibility: visible;" name="A_left_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
 			</td>
-		
+
 			<td class="calc" style="display: none" id="T_BES1">
 				<span id="A_BETextS1"></span>
 				<select name="A_BES1" onchange="StAllCalc()"></select>
@@ -587,7 +601,7 @@
 				<select name="A_acces1_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td class="calc" style="display: none" id="T_BEG1">
 				<span id="A_BETextG1"></span>
@@ -619,7 +633,7 @@
 			</td>
 			<td class="calc" id="T_ACC12_TEMP"></td>
 		</tr>
-		
+
 		<tr id="T_MORAEG" style="display: none">
 			<td class="calc">
 				<span id="A_MORAETextG">Mora Garment</span>
@@ -637,7 +651,7 @@
 				<select name="A_MORAEG3" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
-		
+
 		<tr id="T_EDG" style="display: none">
 			<td class="calc">
 				<span id="A_EDTextG">El Dicaste Garment</span>
@@ -655,7 +669,7 @@
 				<select name="A_EDG3" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
-		
+
 		<tr id="T_EDAC1" style="display: none">
 			<td class="calc">
 				<span id="A_EDTextAC1">El Dicaste Accessory 1</span>
@@ -673,7 +687,7 @@
 				<select name="A_EDAC13" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
-		
+
 		<tr id="T_EDLOED1" style="display: none">
 			<td class="calc">
 				<span id="A_EDTextLOED1">Light of El Dicaste 1</span>
@@ -691,7 +705,7 @@
 				<select name="A_EDLOED13" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td class="calc">
 				<select name="A_SHOES_DEF_PLUS" onchange="StAllCalc()"></select>
@@ -707,7 +721,7 @@
 				<select name="A_acces2_card" onchange="StAllCalc()|Click_Card(this[this.selectedIndex].value)"></select>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td class="calc" style="display: none" id="T_EEF1">
 				<span id="A_EETextF1"></span>
@@ -731,7 +745,7 @@
 			</td>
 			<td class="calc" id="T_ACC22_TEMP"></td>
 		</tr>
-		
+
 		<tr id="T_EDF" style="display: none">
 			<td class="calc">
 				<span id="A_EDTextF">El Dicaste Footgear</span>
@@ -749,7 +763,7 @@
 				<select name="A_EDF3" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
-		
+
 		<tr id="T_EDAC2" style="display: none">
 			<td class="calc">
 				<span id="A_EDTextAC2">El Dicaste Accessory 2</span>
@@ -767,7 +781,7 @@
 				<select name="A_EDAC23" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
-		
+
 		<tr id="T_EDLOED2" style="display: none">
 			<td class="calc">
 				<span id="A_EDTextLOED2">Light of El Dicaste 2</span>
@@ -785,7 +799,7 @@
 				<select name="A_EDLOED23" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
-		
+
 		<tr id="T_MORAEAC1" style="display: none">
 			<td class="calc">
 				<span id="A_MORAETextAC1">Mora Accessory 1</span>
@@ -820,7 +834,7 @@
 				<select name="A_MORAEAC23" onchange="StAllCalc()"></select>
 			</td>
 		</tr>
-		
+
 	</tbody>
 </table>
 <br />
@@ -1248,19 +1262,7 @@
 <script type="text/javascript" src="js/card.js"></script>
 <script type="text/javascript" src="js/foot.js"></script>
 </form>
-		<!-- Piwik -->
 		<script type="text/javascript">
-		  var _paq = _paq || [];
-		  _paq.push(['trackPageView']);
-		  _paq.push(['enableLinkTracking']);
-		  (function() {
-			var u="//analytics.talonro.com/";
-			_paq.push(['setTrackerUrl', u+'piwik.php']);
-			_paq.push(['setSiteId', 5]);
-			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-		  })();
-
 			function Toogle(x,t){
 				if (document.getElementById(x).style.display === "none") {
         	document.getElementById(x).style.display = "block";
@@ -1271,5 +1273,4 @@
 		    }
 			}
 		</script>
-		<!-- End Piwik Code -->
 </body></html>
