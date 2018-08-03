@@ -173,19 +173,19 @@ KunaiOBJ = [
 JobEquipItemOBJ = [
 [0,50,90,100,999], //Novice
 [0, 1, 51,101, 70, 71, 72, 74, 75,78,83,84,85,86,87,90,91,999], //Swordman
-[0, 1, 52,102, 72, 74, 75,78, 80,83,84,85,90,91,92,999], //Thief
+[0, 1, 52,102, 72, 74, 75,78, 80,83,84,85,90,91,999], //Thief
 [0, 1, 53,103, 71, 73, 74, 77,78,85,89,152,999], //Acolyte
 [0, 1, 54,104, 75, 76,83,89,999], //Archer
 [0, 1, 55,105, 71, 77,89,152,999], //Mage
 [0, 1, 56,106, 70, 71, 72, 73, 74, 75,78,83,84,85,86,90,91,999], //Merchant
 [0, 1, 51, 61,107, 70, 71, 72, 74, 75,78,79,83,84,85,86,87,90,91,999], //Knight
-[0, 1, 52, 62,108, 72, 74, 75,78,79,81,83,84,85,90,91,92,999], //Assassin
+[0, 1, 52, 62,108, 72, 74, 75,78,79,81,83,84,85,90,91,999], //Assassin
 [0, 1, 53, 63,109, 71, 73, 74, 77,78,79,81,85,89,999], //Priest
 [0, 1, 54, 64,110, 75, 76,79,80,83,88,89,999], //Hunter
 [0, 1, 55, 65,111, 71, 77,79,89,999], //Wizard
 [0, 1, 56, 66,112, 70, 71, 72, 73, 74, 75,78,79,83,84,85,86,90,91,999], //Blacksmith
 [0, 1, 51, 61,113, 70, 71, 72, 74, 75,78,79,83,84,85,86,87,90,91,999], //Crusader
-[0, 1, 52, 62,114, 72, 74, 75, 76,78,79,80,83,84,85,88,91,92,999], //Rogue
+[0, 1, 52, 62,114, 72, 74, 75, 76,78,79,80,83,84,85,88,91,999], //Rogue
 [0, 1, 53, 63,115, 71, 73, 74, 77,78,79,85,89,999], //Monk
 [0, 1, 54, 64,116, 74, 75, 76,79,83,89,999], //Bard
 [0, 1, 54, 64,117, 74, 75, 76,79,83,89,999], //Dancer
@@ -193,13 +193,13 @@ JobEquipItemOBJ = [
 [0, 1, 56, 66,119, 70, 71, 72, 73, 74, 75,78,79,83,84,85,86,90,91,999], //Alchemist
 [0,50,90,120,999], //High Novice
 [0, 1, 51, 61,107,121, 70, 71, 72, 74, 75,78,79,82,83,84,85,86,87,90,91,999], //Lord Knight
-[0, 1, 52, 62,108,122, 72, 74, 75,78,79,81,82,83,84,85,90,91,92,999], //Assassin Cross
+[0, 1, 52, 62,108,122, 72, 74, 75,78,79,81,82,83,84,85,90,91,999], //Assassin Cross
 [0, 1, 53, 63,109,123, 71, 73, 74, 77,78,79,81,82,85,89,151,152,999], //High Priest
 [0, 1, 54, 64,110,124, 75, 76,79,80,82,83,88,89,999], //Sniper
 [0, 1, 55, 65,111,125, 71, 77,79,82,89,151,152,999], //High Wizard
 [0, 1, 56, 66,112,126, 70, 71, 72, 73, 74, 75,78,79,82,83,84,85,86,90,91,999], //Whitesmith
 [0, 1, 51, 61,113,127, 70, 71, 72, 74, 75,78,79,82,83,84,85,86,87,90,91,999], //Paladin
-[0, 1, 52, 62,114,128, 72, 74, 75, 76,78,79,80,82,83,84,85,88,91,92,999], //Stalker
+[0, 1, 52, 62,114,128, 72, 74, 75, 76,78,79,80,82,83,84,85,88,91,999], //Stalker
 [0, 1, 53, 63,115,129, 71, 73, 74,77,78,79,82,85,89,152,999], //Champion
 [0, 1, 54, 64,116,130, 74, 75, 76,79,82,83,89,153,999], //Clown
 [0, 1, 54, 64,117,131, 74, 75, 76,79,82,83,89,153,999], //Gypsy
@@ -264,7 +264,6 @@ JobEquipItemOBJ = [
 		89 = mage class, acolyte class, archer class, soul linker
 		90 = novice, swordman class, merchant class, thief, assassin
 		91 = swordman class, merchant class, thief class, star gladiator, ninja
-		92 = thief classes ONLY
 
 		100 = novice ONLY
 		101 = swordman ONLY
@@ -4597,13 +4596,13 @@ with(document.calcForm){
 		}
 		//updated def reduction based on mob number [Loa] 2018-07-24
 		myInnerHtml("EN810",'Number of Normal Enemies hitting you <select name="A8_Skill12" onChange="Click_A8(1)"></select>',0);
-		for(i=0;i<=34;i++)
+		for(i=0;i<=10;i++)
 			A8_Skill12.options[i] = new Option(i + "",i);
 		myInnerHtml("EN838",'Number of Boss Type Enemies hitting you <select name="A8_Skill33" onChange="Click_A8(1)"></select>',0);
-		for(i=0;i<=17;i++)
+		for(i=0;i<=10;i++)
 			A8_Skill33.options[i] = new Option(i + "",i);
 		myInnerHtml("EN840",'Number of MVP Enemies hitting you <select name="A8_Skill34" onChange="Click_A8(1)"></select>',0);
-		for(i=0;i<=12;i++)
+		for(i=0;i<=3;i++)
 			A8_Skill34.options[i] = new Option(i + "",i);
 
 
@@ -6575,7 +6574,7 @@ with(document.calcForm){
 		html_SKILL[2] = '<input type="checkbox" name="B_KYOUKA2"onClick="calc()|Click_AK(1)">';
 		html_SKILL[3] = '<input type="checkbox" name="B_KYOUKA3"onClick="calc()|Click_AK(1)">';
 		html_SKILL[4] = '<input type="checkbox" name="B_KYOUKA4"onClick="calc()|Click_AK(1)">';
-		html_SKILL[5] = '<input type="checkbox" name="B_KYOUKA5"onClick="calc()|Click_AK(1)">';
+		html_SKILL[5] = '<select name="B_KYOUKA5"onChange="calc()|Click_AK(1)"></select>';
 		html_SKILL[6] = '<select name="B_KYOUKA6"onChange="calc()|Click_AK(1)"></select>';
 		html_SKILL[7] = '<select name="B_KYOUKA7"onChange="calc()|Click_AK(1)"></select>';
 		html_SKILL[8] = '<select name="B_KYOUKA8"onChange="calc()|Click_AK(1)"></select>';
@@ -6595,6 +6594,7 @@ with(document.calcForm){
 			for(i=2;i<=9;i++)
 				myInnerHtml("ID_Kb"+i,html_SKILL[i],0);
 			for(i=0;i<=5;i++){
+				B_KYOUKA5.options[i] = new Option(i,i);
 				B_KYOUKA7.options[i] = new Option(i,i);
 				B_KYOUKA8.options[i] = new Option(i,i);
 			}
@@ -6605,7 +6605,7 @@ with(document.calcForm){
 			B_KYOUKA2.checked = n_B_KYOUKA[2];
 			B_KYOUKA3.checked = n_B_KYOUKA[3];
 			B_KYOUKA4.checked = n_B_KYOUKA[4];
-			B_KYOUKA5.checked = n_B_KYOUKA[5];
+			B_KYOUKA5.value = n_B_KYOUKA[5];
 			B_KYOUKA6.value = n_B_KYOUKA[6];
 			B_KYOUKA7.value = n_B_KYOUKA[7];
 			B_KYOUKA8.value = n_B_KYOUKA[8];
@@ -6752,7 +6752,7 @@ with(document.calcForm){
 			n_B_KYOUKA[2] = B_KYOUKA2.checked;
 			n_B_KYOUKA[3] = B_KYOUKA3.checked;
 			n_B_KYOUKA[4] = B_KYOUKA4.checked;
-			n_B_KYOUKA[5] = B_KYOUKA5.checked;
+			n_B_KYOUKA[5] = eval(B_KYOUKA5.value);
 			n_B_KYOUKA[6] = eval(B_KYOUKA6.value);
 			n_B_KYOUKA[7] = eval(B_KYOUKA7.value);
 			n_B_KYOUKA[8] = eval(B_KYOUKA8.value);
@@ -6811,6 +6811,10 @@ with(document.calcForm){
 
 	if(n_B_KYOUKA[0])
 		n_B[8] += 2 + n_B_KYOUKA[0];
+	
+	//[2018-08-03 - Fix NPC Flee Up to pre-renewal mechanic] [NattWara]
+	if(n_B_KYOUKA[5])
+		n_B[8] = n_B[8] * (2 + (0.2 * n_B_KYOUKA[5]));
 
 	if(n_B_IJYOU[1]){
 		var w;
@@ -6922,7 +6926,6 @@ if(n_B_IJYOU[1]){
 			n_B[14] -= Math.floor(n_B[14] * 25 / 100);
 	}
 
-
 	var w = 0;
 	w += n_tok[290];
 	w += n_tok[300+n_B[2]];
@@ -6992,8 +6995,6 @@ if(n_B_IJYOU[1]){
 		n_B[24] = 0;
 	}
 
-
-
 	var w = 0;
 	w += n_tok[295];
 	w += n_tok[310+n_B[2]];
@@ -7040,13 +7041,17 @@ if(n_B_IJYOU[1]){
 
 	/* Truncate calculation speed enhancement after dark (FLEE * 2) in planning */
 	if(n_B[19] == 0){
-		if(n_B_IJYOU[3])
+		if(n_B_IJYOU[3]){
 			n_B[27] -= Math.floor(n_B[27] * 25 / 100);
+		}
 	}
-
+	
+	//[2018-08-03 - Fix NPC Flee Up to pre-renewal mechanic] [NattWara]
+	/*
 	if(n_B_KYOUKA[5])
 		n_B[27] = n_B[27] * 2;
-
+	*/
+	
 	if(n_B_IJYOU[17]){
 		n_B[27] -= 50;
 		if(n_B[27] < 0)
