@@ -726,6 +726,10 @@ function StAllCalc()
 			n_tok[10] += 50;
 		}
 	}
+	//angra mantis [Loa] 2018-08-05
+	if(CardNumSearch(422) && n_A_JobSearch() == 2){
+		n_tok[70] += Math.floor(n_A_HEAD_DEF_PLUS / 2);
+	}
 
 //[TalonRO Custom 2018-07-25 - Brave Gladiator Blade + 5% MATK for Rogue/Stalker or Crusader/Paladin] [Amor]
 if(EquipNumSearch(900)){
@@ -5231,21 +5235,21 @@ function n_A_JobSearch(){
 	if(n_A_JOB <= 6)
 		return n_A_JOB;
 	if(n_A_JOB == 20)
-		return 0;
+		return 0; //super novice
 	if(n_A_JOB == 7 || n_A_JOB == 13 || n_A_JOB == 21 || n_A_JOB == 27)
-		return 1;
+		return 1; //swordman classes
 	if(n_A_JOB == 8 || n_A_JOB == 14 || n_A_JOB == 22 || n_A_JOB == 28)
-		return 2;
+		return 2; //thief classes
 	if(n_A_JOB == 9 || n_A_JOB == 15 || n_A_JOB == 23 || n_A_JOB == 29)
-		return 3;
+		return 3; //acolyte classes
 	if(n_A_JOB == 10 || n_A_JOB == 16 || n_A_JOB == 17 || n_A_JOB == 24 || n_A_JOB == 30 || n_A_JOB == 31)
-		return 4;
+		return 4; //archer classes
 	if(n_A_JOB == 11 || n_A_JOB == 18 || n_A_JOB == 25 || n_A_JOB == 32)
-		return 5;
+		return 5; //mage classes
 	if(n_A_JOB == 12 || n_A_JOB == 19 || n_A_JOB == 26 || n_A_JOB == 33)
-		return 6;
+		return 6; //merchant classes
 	if(n_A_JOB == 41 || n_A_JOB == 42 || n_A_JOB == 43)
-		return 41;
+		return 41; //taekwon classes
 	return 7;
 }
 

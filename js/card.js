@@ -436,7 +436,7 @@ cardOBJ = [
 ,[419,7,"Hydro",0,221,82,0]
 ,[420,4,"RSX 0806","Skills cannot push or move the user",3,3,0] //custom TalonRO not unbreakable anymore
 ,[421,7,"High Priest",0,221,83,0] //custom TalonRO diff position
-,[422,999,"Detardeurus",0,19,-20,221,84,0] //replace me
+,[422,2,"Angra Mantis","<b>[Thief Class]</b><br>Every 2 refine adds 1% critical damage",70,2,0]
 ,[423,6,"General Egnigem Cenia","Regain 100 HP and 100 SP every 10 seconds",15,20,16,20,0] //custom TalonRO better regenaration; +20% instead of +10% hp, +20% sp
 ,[424,2,"High Wizard","Ignore 20% MDEF of non-boss targets<BR>Drains 2000 SP when the headgear is unequipped",0] //custom TalonRO ignore 20% mdef of non-boss; removed cast-time and spregen stuff
 ,[425,2,"Vesper","Magical attacks ignore the magical defenses by 20% on boss type monsters",0] //custom TalonRO ignores 20% instead of 30%
@@ -1007,7 +1007,7 @@ cardID = [
 ,[419,1,4384]
 ,[420,1,4342]
 ,[421,1,4363]
-,[422,3,0]
+,[422,1,4513]
 ,[423,1,4352]
 ,[424,1,4365]
 ,[425,1,4374]

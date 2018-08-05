@@ -1,3 +1,6 @@
+[2018-08-05]
+-Added Angra Mantis Card [Loa]
+
 [Update 2018-07-27]
 - BG Items [Amor]
 		Elite Engineer Armor
