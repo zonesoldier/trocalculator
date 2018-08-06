@@ -2561,8 +2561,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += n_A_HEAD_DEF_PLUS - 5;
 	if(n_A_PassSkill6[2])
 		w += 10;
-	if(EquipNumSearch(898) && (n_A_JobSearch2() == 14 || n_A_JOB == 44))
-		w += 15 * EquipNumSearch(898);
 	if(n_A_JobSearch()==5 && CardNumSearch(454))
 		w +=3;
 	if(n_A_HEAD_DEF_PLUS >= 9 && n_A_card[8]==177)

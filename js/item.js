@@ -918,29 +918,29 @@ ItemOBJ = [
 ,[895,50,0,2,0,0,0,10,"Friend Hat","",0,0]
 ,[896,50,0,2,0,0,30,10,"Squatting Poring","",0,6,1,193,1,194,1,0]
 ,[897,1,0,120,3,0,0,80,"Brave Assassin Damascus","","<b>[Rogue Class]</b><br>MATK + 15%<br>Add 10% more damage with [Backstab] and [Raid]<br><b>[Ninja Class]</b><br>MATK + 15%<br>CRIT + 20<br>10% more damage with Critical Hits<br><b>[Soul Linker]</b><br>CRIT + 50",1,2,2,2,37,75,307,20,194,1,0]
-,[898,1,0,120,3,0,0,80,"Valorous Assassin Damascus","","<b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%<br/>When using magic, there is a 3% chance that you will add MATK + 10% and ASPD + 20% for 6 seconds.",1,2,2,3,12,5,8,15,37,75,73,5,194,1,0]
-,[899,2,0,115,3,0,0,80,"Valorous Gladiator Blade","",0,1,1,5,1,37,75,307,20,194,1,0]
+,[898,1,0,120,3,0,0,80,"Valorous Assassin Damascus","","<b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%<br/>When using magic, there is a 3% chance that you will add MATK + 10% and ASPD + 20% for 6 seconds.",1,2,2,3,12,5,8,15,37,75,73,-5,194,1,0]
+,[899,2,0,115,3,0,0,80,"Valorous Gladiator Blade","",0,1,3,5,1,37,75,307,20,194,1,0]
 ,[900,2,0,140,3,0,0,80,"Brave Gladiator Blade","","[Rogue/Stalker or Crusader/Paladin] MATK + 5%.",1,1,5,3,37,75,89,15,194,1,0]
 ,[901,3,0,230,3,0,0,80,"Valorous Assaulter's Katzbalger","",0,10,25,37,80,70,20,194,1,0]
 ,[902,3,0,230,3,0,0,80,"Brave Assaulter's Katzbalger","","2% chance on physical attacks to cast [Concentration] or [Aura Blade] Lv 1 or highest level learned",1,2,37,80,307,20,194,1,0]
 ,[903,4,0,60,3,0,0,80,"Assaulter Spear","","<b>[Crusader or Paladin]</b><br>Increases attack speed by 20%",1,2,37,95,307,20,194,1,0]
-,[904,5,0,180,3,0,0,80,"Assaulter Lance","","<b>[Crusader/Paladin]</b> CRIT + 30, 20% more damage with Critical Hits.<br><b>[Knight/Lord Knight] </b>Adds 25% defense bypassing on Demi-human monster. ",1,2,57,-20,37,95,194,1,0]
+,[904,5,0,180,3,0,0,80,"Assaulter Lance","","<b>[Crusader/Paladin]</b> CRIT + 30, 20% more damage with Critical Hits.<br><b>[Knight/Lord Knight] </b>Adds 25% defense bypassing on Demi-human monster. ",1,2,57,20,37,95,194,1,0]
 ,[905,7,0,230,3,0,0,80,"Valorous Insane Battle Axe","","Spend 20% less Zeny with all zeny based skills.",1,3,37,80,57,20,307,25,194,1,0]
 ,[906,7,0,200,3,0,0,80,"Brave Insane Battle Axe","","When attacking, 2% chance to activate 100% chance to destroy the monster armor for 3 seconds",1,3,37,55,194,1,0]
 ,[907,8,0,120,3,0,0,80,"Valorous Battlefield Morning Star","","There is a 2% chance to add ASPD + 10% when attacking normally for 20 seconds.<br/><b>[+Aegis Shield or Monk/Champion]</b><br/>Increases physical attack against Demi-human monster by 55% instead of 75%.",1,1,5,1,37,75,307,25,194,1,0]
 ,[908,8,0,105,3,0,0,80,"Brave Battlefield Morning Star","","Adds a 5% chance to inflict the Stun status when attacking.",1,1,5,1,37,75,194,1,0]
 ,[909,11,0,130,3,0,0,80,"Brave Carnage Katar","",0,1,1,5,1,4,2,37,70,307,20,7263,-15,194,1,0]
 ,[910,11,0,130,3,0,0,80,"Valorous Carnage Katar","",0,1,1,5,1,6,3,37,50,70,20,12,5,10,5,194,1,0]
-,[911,12,0,100,3,0,0,80,"Brave Battle Strategy Book","",0,1,2,4,1,10,20,8,15,89,15,0]
+,[911,12,0,100,3,0,0,80,"Brave Battle Strategy Book","",0,1,2,4,1,10,20,8,15,89,15,37,75,307,20,194,1,0]
 ,[912,12,0,90,3,0,0,80,"Valorous Battle Strategy Book","","<b>[Sage/Professor]</b><br>Decrease [Fire Bolt], [Cold Bolt], and [Lightning Bolt] cast times by 15%. ",1,1,4,2,89,15,12,10,317,25,194,1,0]
 ,[913,10,0,100,3,0,0,80,"Valorous Battle Crossbow","","<b>[Archer Class]</b><br/>CRIT + 25<br/>Adds a 5% chance to inflict the Curse status when attacking.<br/><b>[Thief Class]</b><br/>ASPD + 10%.<br/>Adds a 5% chance to auto-cast level 1 [Critical Wounds] when using ranged attack.",5,2,70,10,37,55,307,20,194,1,0]
 ,[914,10,0,100,3,0,0,80,"Brave Battle CrossBow","","2% chance on normal or skill attack to activate ASPD + 15% for 20 seconds<br>Reduces SP consumption of skills by 10%",5,2,4,10,37,55,194,1,0]
-,[915,13,0,30,3,0,0,80,"Valorous Battle Fist","","There is a 2% chance to add ASPD +10% for 20 seconds when attacking normally.",1,2,2,3,37,95,221,140,5187,25,5188,25,5189,25,0]
-,[916,13,0,30,3,0,0,80,"Brave Battle Fist","","When attacking, there is a chance to activate for 6 seconds an effect that completely negates the cast time on [Asura Strike].",1,2,4,1,37,95,7197,25,7321,25,0]
+,[915,13,0,30,3,0,0,80,"Valorous Battle Fist","","There is a 2% chance to add ASPD +10% for 20 seconds when attacking normally.",1,2,2,3,37,95,221,140,5187,25,5188,25,5189,25,194,1,0]
+,[916,13,0,30,3,0,0,80,"Brave Battle Fist","","When attacking, there is a chance to completely negate the cast time on [Asura Strike] for 6 seconds.<br>When casting [Critical Explosion], there is a 10% chance to also cast [Dangerous Soul Collect]",1,2,4,1,37,95,7197,25,7321,25,0]
 ,[917,9,0,70,3,0,0,80,"Warlock's Magic Wand","","Adds a 5% chance to Stun opponents with your magic",89,15,4,4,5,3,317,25,194,1,0]
 ,[918,9,0,70,3,0,0,80,"Warlock's Battle Wand","",0,89,15,4,3,5,5,177,10,317,10,194,1,0]
 ,[919,9,0,70,3,0,0,80,"Strong Recovery Wand","","Recover 5 SP every 10 seconds",89,15,91,14,94,14,194,1,0]
-,[920,9,0,70,3,0,0,80,"Speedy Recovery Wand","","Recover 25 HP and 10 SP every 10 seconds.<br />Gain 2 SP from every attack.<br/><b>[Acolyte/Priest/High Priest]</b><br/> INT + 3. ",89,15,4,2,5,2,74,10,194,1,0]
+,[920,9,0,70,3,0,0,80,"Speedy Recovery Wand","","Recover 25 HP and 10 SP every 10 seconds.<br />Gain 2 SP from every attack.<br/><b>[Acolyte/Priest/High Priest]</b><br/> INT + 3.",4,2,5,2,74,10,194,1,0]
 ,[921,14,0,50,3,0,0,80,"Valorous Battlefield Guitar","",0,5,2,37,95,307,20,194,1,0]
 ,[922,14,0,50,3,0,0,80,"Brave Battlefield Guitar","",0,5,2,37,95,5292,20,194,1,0]
 ,[923,15,0,50,3,0,0,80,"Valorous Battle Lariat","",0,5,2,37,95,307,20,194,1,0]
@@ -3505,8 +3505,12 @@ function ClickB_Item(CBI)
 	CBIstr = "";
 	for(i=11;ItemOBJ[CBI][i] != 0;i+=2)
 		Item_Setumei(ItemOBJ[CBI][i],ItemOBJ[CBI][i+1]);
-	if(ItemOBJ[CBI][10] != 0)
+	if(ItemOBJ[CBI][10] != 0){
 		CBIstr += ItemOBJ[CBI][10] +"<BR>";
+   }
+   if(debugMode){
+      CBIstr += `ItemOBJ index: ${String(CBI)}<br>`;
+   }
 
 	var check = 0;
 	for(var i=11;ItemOBJ[CBI][i] != 0;i+=2){
