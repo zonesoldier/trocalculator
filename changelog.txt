@@ -1,5 +1,9 @@
+[2018-08-06]
+- Fixed Medal of Honor (Thief) [Loa]
+- Fixed Brave Gladiator Blade description [Loa]
+
 [2018-08-05]
--Added Angra Mantis Card [Loa]
+- Added Angra Mantis Card [Loa]
 
 [Update 2018-07-27]
 - BG Items [Amor]
