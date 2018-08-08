@@ -1,4 +1,4 @@
-debugMode = 1;
+debugMode = 0;
 n_Nitou=0;
 n_Tensei=0;
 n_Ses=0;
@@ -102,7 +102,7 @@ function myInnerHtml(wIH1,wIH2,wIH3)
 	}
 }
 
-WeaponName = ["Unarmed","Dagger","Sword","Two-handed Sword","Spear","Two-handed Spear","Axe","Two-handed Axe","Mace","Rod","Bow","Katar","Book","Knuckle","Instrument","Whip","Huuma Shuriken","Handgun","Rifle","Shotgun","Gatling Gun","Grenade Launcher"];
+WeaponName = ["Unarmed","Dagger","Sword","Two-handed Sword","Spear","Two-handed Spear","Axe","Two-handed Axe","Mace","Staff","Bow","Katar","Book","Knuckle","Instrument","Whip","Huuma Shuriken","Revolver","Rifle","Shotgun","Gatling Gun","Grenade Launcher"];
 
 ArrowOBJ = [
 [25,0,"Arrow"],//0

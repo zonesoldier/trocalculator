@@ -9,7 +9,11 @@
 	Valorous Assassin Damascus
 	Valorous Battle Fist
 	Valorous Gladiator Blade
-
+	Various set effects
+	All Medal of Honor items
+	Glorious Claymore
+	Glorious Gladius
+	
 [2018-08-05]
 - Added Angra Mantis Card [Loa]
 

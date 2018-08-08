@@ -730,6 +730,10 @@ function StAllCalc()
 	if(CardNumSearch(422) && n_A_JobSearch() == 2){
 		n_tok[70] += Math.floor(n_A_HEAD_DEF_PLUS / 2);
 	}
+	//elite engineer armor set potion pitcher bonus
+	if(EquipNumSearch(972)){
+		n_tok[94] += 10;
+	}
 
 //[TalonRO Custom 2018-07-25 - Brave Gladiator Blade + 5% MATK for Rogue/Stalker or Crusader/Paladin] [Amor]
 if(EquipNumSearch(900)){
