@@ -1354,7 +1354,7 @@ ItemOBJ = [
 ,[1329,8,53,175,3,0,0,0,"Stunner [Rental]","",0,131,10,27,40,28,40,29,40,193,1,0] //custom TalonRO rental
 ,[1330,7,0,205,4,0,0,0,"Bloody Axe [Rental]","","Movement speed +25% (non-stacking)",1,20,12,5,193,1,0] //custom TalonRO rental
 ,[1331,11,0,148,4,0,0,0,"Bloody Roar [Rental]","","Recovery 3 HP every 5 seconds",187,1,193,1,0] //custom TalonRO rental
-,[1332,10,80,170,4,0,0,0,"Bow of Evil [Rental]","","[Double Strafe] damage +25%",5,2,193,1,0] //custom TalonRO rental
+,[1332,10,92,170,4,0,0,0,"Bow of Evil [Rental]","","[Double Strafe] damage +25%",5,2,193,1,0] //custom TalonRO rental
 ,[1333,4,1,149,4,0,0,0,"Brocca [Rental]","",0,28,20,22,1,193,1,0] //custom TalonRO rental //fixed 2016-05-05
 ,[1334,1,1,129,4,0,0,0,"Combat Knife [Rental]","","Drain 3SP from enemy per hit",57,10,56,-10,187,1,16,10,193,1,0] //custom TalonRO rental
 ,[1335,2,1,199,4,0,0,0,"Excalibur [Rental]","",0,20,6,4,10,6,10,193,1,0] //custom TalonRO rental

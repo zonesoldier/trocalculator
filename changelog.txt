@@ -1,19 +1,22 @@
+[2018-08-09]
+- Fixed Bow of Evil jobid
+
 [2018-08-06]
 - BG Item Proofreads [Loa]
-	Medal of Honor (Thief)
-	Brave Gladiator Blade
-	Brave Battle Fist
-	Brave Battle Strategy Book
-	Assaulter Lance
-	Speedy Recovery Wand
-	Valorous Assassin Damascus
-	Valorous Battle Fist
-	Valorous Gladiator Blade
-	Various set effects
-	All Medal of Honor items
-	Glorious Claymore
-	Glorious Gladius
-	
+		Medal of Honor (Thief)
+		Brave Gladiator Blade
+		Brave Battle Fist
+		Brave Battle Strategy Book
+		Assaulter Lance
+		Speedy Recovery Wand
+		Valorous Assassin Damascus
+		Valorous Battle Fist
+		Valorous Gladiator Blade
+		Various set effects
+		All Medal of Honor items
+		Glorious Claymore
+		Glorious Gladius
+
 [2018-08-05]
 - Added Angra Mantis Card [Loa]
 
