@@ -7,6 +7,9 @@
 [2018-08-09]
 - Fixed Bow of Evil jobid [Loa]
 
+[2018-08-08]
+- Removed Piwik [Amor]
+
 [2018-08-06]
 - BG Item Proofreads [Loa]
 		Medal of Honor (Thief)
@@ -25,6 +28,11 @@
 
 [2018-08-05]
 - Added Angra Mantis Card [Loa]
+- Fixed Drake Card skill [NattWara]
+
+[2018-08-02]
+- Fixed Sniper Cecil stats [NattWara]
+- Fixed Monster FLEE up formula [NattWara]
 
 [Update 2018-07-27]
 - BG Items [Amor]
