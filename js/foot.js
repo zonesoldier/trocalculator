@@ -1524,17 +1524,19 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(SkillSearch(256))
 			n_A_totalDEF = Math.floor(n_A_totalDEF * (1 - 0.05 * SkillSearch(256)));
 
-	if(n_A_IJYOU[2])
+	if(n_A_IJYOU[2]){
 		n_A_totalDEF -= Math.floor(n_A_totalDEF * 25 / 100);
-
-	if(n_A_PassSkill8[12] || n_A_PassSkill8[33] || n_A_PassSkill8[34]){
-		let defReduc = (n_A_PassSkill8[12] + (n_A_PassSkill8[33] * 2) + (n_A_PassSkill8[34] * 3)) * 3 / 100;
-		if(defReduc > 1){defReduc = 1;}
+	}
+	//def reduction when mobbed updated [Loa] 2018-07-24
+	let defReduc = (n_A_PassSkill8[12] + (n_A_PassSkill8[33] * 2) + (n_A_PassSkill8[34] * 3)) * 3 / 100;
+	if(defReduc > 1){defReduc = 1;}
+	if(defReduc){
 		n_A_totalDEF = Math.floor(n_A_totalDEF * (1 - defReduc));
 	}
 
-	if(SkillSearch(196))
+	if(SkillSearch(196)){
 		n_A_totalDEF = 90;
+	}
 
 	/*if(n_A_totalDEF >= 100)
 		n_A_totalDEF = 99;*/
@@ -1640,11 +1642,11 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		for(i=0;i<=2;i++)
 			n_A_VITDEF[i] = 0;
 	}
-
-	if(n_A_PassSkill8[12] >= 3){
-		for(i=0;i<=2;i++)
-			n_A_VITDEF[i] -= Math.floor(n_A_VITDEF[i] * (n_A_PassSkill8[12] - 2) * 5 / 100);
-	}
+	//soft def reduction when mobbed updated [Loa] 2081-08-11
+	if(defReduc){
+		for(i=0;i<=2;i++){
+			n_A_VITDEF[i] = Math.floor(n_A_VITDEF[i] * (1 - defReduc));
+	}}
 
 	n_A_MDEF = n_tok[19];
 
@@ -1903,92 +1905,64 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	myInnerHtml("A_HIT",n_A_HIT,0);
 
 	n_A_FLEE = n_A_BaseLV + n_A_AGI;
-
 	n_A_FLEE += n_tok[9];
 
-	if(n_A_JobSearch()==2 && CardNumSearch(295))
+	if(n_A_JobSearch()==2 && CardNumSearch(295)){
 		n_A_FLEE += 20;
-	if(n_A_SHOULDER_DEF_PLUS >= 9 && CardNumSearch(271))
+	}
+	if(n_A_SHOULDER_DEF_PLUS >= 9 && CardNumSearch(271)){
 		n_A_FLEE += 20;
-	if(n_A_SHOULDER_DEF_PLUS <= 4 && CardNumSearch(401))
+	}
+	if(n_A_SHOULDER_DEF_PLUS <= 4 && CardNumSearch(401)){
 		n_A_FLEE += 10;
-	if(n_A_SHOULDER_DEF_PLUS >= 9 && CardNumSearch(403))
+	}
+	if(n_A_SHOULDER_DEF_PLUS >= 9 && CardNumSearch(403)){
 		n_A_FLEE += 5;
-	if(SU_STR >= 90 && EquipNumSearch(442))
+	}
+	if(SU_STR >= 90 && EquipNumSearch(442)){
 		n_A_FLEE += 10 * EquipNumSearch(442);
-	if(n_A_PassSkill6[0] == 2 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==4)
+	}
+	if(n_A_PassSkill6[0] == 2 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==4){
 		n_A_FLEE += n_A_PassSkill6[1] *3;
-
+	}
 	//Bloody Roar FLEE -160 - [Loa] - 2018-06-11
 	if(EquipNumSearch(483)){
-		// if(n_A_FLEE < 160){
-		// 	n_A_FLEE -= n_A_FLEE;
-		// }
-		// else{
 			n_A_FLEE -= 160;
-		// }
 	}
 
-	if(n_A_JOB==8||n_A_JOB==14||n_A_JOB==22||n_A_JOB==28)
-		n_A_FLEE += 4 * SkillSearch(14);
-	else
-		n_A_FLEE += 3 * SkillSearch(14);
-
-	if(SkillSearch(421))
-		n_A_FLEE += 30;
-	if(SkillSearch(433)){
-		if(n_A_WeaponType==20 || n_A_WeaponType==0)
-			n_A_FLEE -= 5 * SkillSearch(433);
-	}
-	Mikiri = new Array(0,1,3,4,6,7,9,10,12,13,15);
-	n_A_FLEE += Mikiri[SkillSearch(191)];
-
-
-	if(n_A_JOB == 24)
+	if(n_A_JOB == 24){
 		n_A_FLEE += Math.round(SkillSearch(273) /2);
-	if(n_A_PassSkill2[9] && SkillSearch(273)==0)
+	}
+	if(n_A_PassSkill2[9] && SkillSearch(273)==0){
 		n_A_FLEE += Math.round(n_A_PassSkill2[9] /2);
-
-
-	if(SkillSearch(383))
-		n_A_FLEE += 10;
-
-
-	if(SkillSearch(356))
-		n_A_FLEE += Math.floor((n_A_BaseLV + n_A_LUK + n_A_DEX) / 10);
-
-	if(n_A_PassSkill5[4])
+	}
+	if(n_A_PassSkill5[4]){
 		n_A_FLEE += 50;
-
-	if(n_A_PassSkill7[1])
+	}
+	if(n_A_PassSkill7[1]){
 		n_A_FLEE += 30;
-
+	}
 	if(n_A_PassSkill8[30]){
-		n_A_FLEE += 33;}//BGFOOD DE FLEE
-
-	if(n_A_PassSkill3[0])
+		n_A_FLEE += 33;
+	}
+	if(n_A_PassSkill3[0]){
 		n_A_FLEE += n_A_PassSkill3[0] + Math.floor(n_A_PassSkill3[30] /2) + Math.floor(n_A_PassSkill3[20] /10);
-
-	if(SkillSearch(258))
-		n_A_FLEE /= 2;
-
-	if(n_A_PassSkill8[12] >= 3){
-		var w = n_A_PassSkill8[12] - 2;
-		if(w > 10)
-			w = 10;
-		n_A_FLEE -= Math.floor(n_A_FLEE * w * 10 / 100);
 	}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1276)){
-		n_A_FLEE += 10;}
+		n_A_FLEE += 10;
+	}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1280)){
-		n_A_FLEE += 10;}
+		n_A_FLEE += 10;
+	}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1282)){
-		n_A_FLEE += 10;}
+		n_A_FLEE += 10;
+	}
 	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1283)){
-		n_A_FLEE += 10;}
+		n_A_FLEE += 10;
+	}
 	if(n_A_HEAD_DEF_PLUS >= 9 && EquipNumSearch(1285)){
-		w += 5;}
-
+		w += 5;
+	}
 	//custom TalonRO Armor enchant FLEE
 	var wHSE = document.calcForm.A_HSE.value;
 	if(wHSE){
@@ -1996,7 +1970,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		if(301 <= wHSE && wHSE <= 309)
 			n_A_FLEE += parseInt(wHSE.substr(-1));
 	}
-
 	//[Custom TalonRO 2018-07-10 - Biolab Armor Enchantment for FLEE] [NattWara]
 	for(i=0;i<tRO_BiolabArmorEnchantment.length;i++) {
 		var vBE = tRO_BiolabArmorEnchantment[i];
@@ -2026,14 +1999,47 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		}
 	}
 	//custom TalonRO Sedora Card (fixed (2015-12-21),(fixed (2016-11-02))
-	if(n_A_JobSearch()==2 && CardNumSearch(524))
+	if(n_A_JobSearch()==2 && CardNumSearch(524)){
 		n_A_FLEE += 4*CardNumSearch(524);
+	}
+	//flee reduction when mobbed updated [Loa] 2018-08-11
+	let fleeReduc = n_A_PassSkill8[12] + n_A_PassSkill8[33] + n_A_PassSkill8[34]
+	if(fleeReduc > 2){
+		n_A_FLEE -= Math.floor(n_A_FLEE * ((fleeReduc - 2) * 0.1));
+	}
+	/*****BELOW HERE SHOULD ONLY BE DIRECT SKILL BONUSES TO FLEE*****/
+	//dodge
+	monkDodge = new Array(0,1,3,4,6,7,9,10,12,13,15);
+	n_A_FLEE += monkDodge[SkillSearch(191)];
+	//close confine
+	if(SkillSearch(383)){
+		n_A_FLEE += 10;}
+	//comfort of the moon
+	if(SkillSearch(356)){
+		n_A_FLEE += Math.floor((n_A_BaseLV + n_A_LUK + n_A_DEX) / 10);}
+	//improve dodge
+	if(n_A_JOB==8||n_A_JOB==14||n_A_JOB==22||n_A_JOB==28){
+		n_A_FLEE += 4 * SkillSearch(14);
+	}else{
+		n_A_FLEE += 3 * SkillSearch(14);}
+	//adjustment
+	if(SkillSearch(421)){
+		n_A_FLEE += 30;}
+	//gatling fever
+	if(SkillSearch(433)){
+		if(n_A_WeaponType==20 || n_A_WeaponType==0){
+			n_A_FLEE -= 5 * SkillSearch(433);
+	}}
+	//berserk
+	if(SkillSearch(258)){
+		n_A_FLEE /= 2;}
+	//negative flee
+	if (n_A_FLEE < 0){
+		n_A_FLEE = 0;}
 
 	myInnerHtml("A_FLEE",n_A_FLEE + "<br><b>WOE: </b>" + Math.floor(n_A_FLEE*.8),0);
 
 	n_A_LUCKY = 1 + n_A_LUK * 0.1;
-
-
 	n_A_LUCKY += n_tok[11];
 
 	//A Whistle Skill - bugado, falta ver que variavel usar em vez de n_A_PassSkill3[20]
@@ -9148,7 +9154,7 @@ for(i=0;i<=27;i++)
 n_A_PassSkill8[3] = 7; //[Custom TalonRO - 6/4/2018 - Fixed the default value for BaseEXP to 8x] [Kato]
 n_A_PassSkill8[7] = 7; //[Custom TalonRO - 6/4/2018 - Fixed the default value for JobEXP to 8x] [Kato]
 
-//updated def reduction based on mob number [Loa] 2018-07-24
+//updated def reduction when mobbed [Loa] 2018-07-24
 n_A_PassSkill8[33] = 0;
 n_A_PassSkill8[34] = 0;
 
