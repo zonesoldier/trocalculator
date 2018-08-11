@@ -1,9 +1,11 @@
 [2018-08-11]
 - Fixed Poison Knife itemid [Loa]
 - Fixed FLEE reduction when mobbed [Loa]
+- Fixed soft DEF reduction when mobbed [Loa]
+		Combat calculations only, not display
 
 [2018-08-09]
-- Fixed Bow of Evil jobid
+- Fixed Bow of Evil jobid [Loa]
 
 [2018-08-06]
 - BG Item Proofreads [Loa]
