@@ -918,29 +918,29 @@ ItemOBJ = [
 ,[895,50,0,2,0,0,0,10,"Friend Hat","",0,0]
 ,[896,50,0,2,0,0,30,10,"Squatting Poring","",0,6,1,193,1,194,1,0]
 ,[897,1,0,120,3,0,0,80,"Brave Assassin Damascus","","<b>[Rogue Class]</b><br>MATK + 15%<br>Add 10% more damage with [Backstab] and [Raid]<br><b>[Ninja Class]</b><br>MATK + 15%<br>CRIT + 20<br>10% more damage with Critical Hits<br><b>[Soul Linker]</b><br>CRIT + 50",1,2,2,2,37,75,307,20,194,1,0]
-,[898,1,0,120,3,0,0,80,"Valorous Assassin Damascus","","<b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%<br/>When using magic, there is a 3% chance that you will add MATK + 10% and ASPD + 20% for 6 seconds.",1,2,2,3,12,5,8,15,37,75,73,5,194,1,0]
-,[899,2,0,115,3,0,0,80,"Valorous Gladiator Blade","",0,1,1,5,1,37,75,307,20,194,1,0]
-,[900,2,0,140,3,0,0,80,"Brave Gladiator Blade","[Rogue/Stalker or Crusader/Paladin] MATK + 5%.",0,1,1,5,3,37,75,89,15,194,1,0]
+,[898,1,0,120,3,0,0,80,"Valorous Assassin Damascus","","<b>[Ninja Class, Rogue or Stalker]</b><br>MATK + 15%<br/>When using magic, there is a 3% chance that you will add MATK + 10% and ASPD + 20% for 6 seconds.",1,2,2,3,12,5,8,15,37,75,73,-5,194,1,0]
+,[899,2,0,115,3,0,0,80,"Valorous Gladiator Blade","",0,1,3,5,1,37,75,307,20,194,1,0]
+,[900,2,0,140,3,0,0,80,"Brave Gladiator Blade","","[Rogue/Stalker or Crusader/Paladin] MATK + 5%.",1,1,5,3,37,75,89,15,194,1,0]
 ,[901,3,0,230,3,0,0,80,"Valorous Assaulter's Katzbalger","",0,10,25,37,80,70,20,194,1,0]
 ,[902,3,0,230,3,0,0,80,"Brave Assaulter's Katzbalger","","2% chance on physical attacks to cast [Concentration] or [Aura Blade] Lv 1 or highest level learned",1,2,37,80,307,20,194,1,0]
 ,[903,4,0,60,3,0,0,80,"Assaulter Spear","","<b>[Crusader or Paladin]</b><br>Increases attack speed by 20%",1,2,37,95,307,20,194,1,0]
-,[904,5,0,180,3,0,0,80,"Assaulter Lance","","<b>[Crusader/Paladin]</b> CRIT + 30, 20% more damage with Critical Hits.<br><b>[Knight/Lord Knight] </b>Adds 25% defense bypassing on Demi-human monster. ",1,2,57,-20,37,95,194,1,0]
+,[904,5,0,180,3,0,0,80,"Assaulter Lance","","<b>[Crusader/Paladin]</b> CRIT + 30, 20% more damage with Critical Hits.<br><b>[Knight/Lord Knight] </b>Adds 25% defense bypassing on Demi-human monster. ",1,2,57,20,37,95,194,1,0]
 ,[905,7,0,230,3,0,0,80,"Valorous Insane Battle Axe","","Spend 20% less Zeny with all zeny based skills.",1,3,37,80,57,20,307,25,194,1,0]
 ,[906,7,0,200,3,0,0,80,"Brave Insane Battle Axe","","When attacking, 2% chance to activate 100% chance to destroy the monster armor for 3 seconds",1,3,37,55,194,1,0]
 ,[907,8,0,120,3,0,0,80,"Valorous Battlefield Morning Star","","There is a 2% chance to add ASPD + 10% when attacking normally for 20 seconds.<br/><b>[+Aegis Shield or Monk/Champion]</b><br/>Increases physical attack against Demi-human monster by 55% instead of 75%.",1,1,5,1,37,75,307,25,194,1,0]
 ,[908,8,0,105,3,0,0,80,"Brave Battlefield Morning Star","","Adds a 5% chance to inflict the Stun status when attacking.",1,1,5,1,37,75,194,1,0]
 ,[909,11,0,130,3,0,0,80,"Brave Carnage Katar","",0,1,1,5,1,4,2,37,70,307,20,7263,-15,194,1,0]
 ,[910,11,0,130,3,0,0,80,"Valorous Carnage Katar","",0,1,1,5,1,6,3,37,50,70,20,12,5,10,5,194,1,0]
-,[911,12,0,100,3,0,0,80,"Brave Battle Strategy Book","",0,1,2,4,1,10,20,8,15,89,15,0]
+,[911,12,0,100,3,0,0,80,"Brave Battle Strategy Book","",0,1,2,4,1,10,20,8,15,89,15,37,75,307,20,194,1,0]
 ,[912,12,0,90,3,0,0,80,"Valorous Battle Strategy Book","","<b>[Sage/Professor]</b><br>Decrease [Fire Bolt], [Cold Bolt], and [Lightning Bolt] cast times by 15%. ",1,1,4,2,89,15,12,10,317,25,194,1,0]
 ,[913,10,0,100,3,0,0,80,"Valorous Battle Crossbow","","<b>[Archer Class]</b><br/>CRIT + 25<br/>Adds a 5% chance to inflict the Curse status when attacking.<br/><b>[Thief Class]</b><br/>ASPD + 10%.<br/>Adds a 5% chance to auto-cast level 1 [Critical Wounds] when using ranged attack.",5,2,70,10,37,55,307,20,194,1,0]
 ,[914,10,0,100,3,0,0,80,"Brave Battle CrossBow","","2% chance on normal or skill attack to activate ASPD + 15% for 20 seconds<br>Reduces SP consumption of skills by 10%",5,2,4,10,37,55,194,1,0]
-,[915,13,0,30,3,0,0,80,"Valorous Battle Fist","","There is a 2% chance to add ASPD +10% for 20 seconds when attacking normally.",1,2,2,3,37,95,221,140,5187,25,5188,25,5189,25,0]
-,[916,13,0,30,3,0,0,80,"Brave Battle Fist","","When attacking, there is a chance to activate for 6 seconds an effect that completely negates the cast time on [Asura Strike].",1,2,4,1,37,95,7197,25,7321,25,0]
+,[915,13,0,30,3,0,0,80,"Valorous Battle Fist","","There is a 2% chance to add ASPD +10% for 20 seconds when attacking normally.",1,2,2,3,37,95,221,140,5187,25,5188,25,5189,25,194,1,0]
+,[916,13,0,30,3,0,0,80,"Brave Battle Fist","","When attacking, there is a chance to completely negate the cast time on [Asura Strike] for 6 seconds.<br>When casting [Critical Explosion], there is a 10% chance to also cast [Dangerous Soul Collect]",1,2,4,1,37,95,7197,25,7321,25,0]
 ,[917,9,0,70,3,0,0,80,"Warlock's Magic Wand","","Adds a 5% chance to Stun opponents with your magic",89,15,4,4,5,3,317,25,194,1,0]
 ,[918,9,0,70,3,0,0,80,"Warlock's Battle Wand","",0,89,15,4,3,5,5,177,10,317,10,194,1,0]
 ,[919,9,0,70,3,0,0,80,"Strong Recovery Wand","","Recover 5 SP every 10 seconds",89,15,91,14,94,14,194,1,0]
-,[920,9,0,70,3,0,0,80,"Speedy Recovery Wand","","Recover 25 HP and 10 SP every 10 seconds.<br />Gain 2 SP from every attack.<br/><b>[Acolyte/Priest/High Priest]</b><br/> INT + 3. ",89,15,4,2,5,2,74,10,194,1,0]
+,[920,9,0,70,3,0,0,80,"Speedy Recovery Wand","","Recover 25 HP and 10 SP every 10 seconds.<br />Gain 2 SP from every attack.<br/><b>[Acolyte/Priest/High Priest]</b><br/> INT + 3.",4,2,5,2,74,10,194,1,0]
 ,[921,14,0,50,3,0,0,80,"Valorous Battlefield Guitar","",0,5,2,37,95,307,20,194,1,0]
 ,[922,14,0,50,3,0,0,80,"Brave Battlefield Guitar","",0,5,2,37,95,5292,20,194,1,0]
 ,[923,15,0,50,3,0,0,80,"Valorous Battle Lariat","",0,5,2,37,95,307,20,194,1,0]
@@ -988,23 +988,23 @@ ItemOBJ = [
 ,[965,62,91,4,0,1,0,80,"Captain's Manteau","",0,13,50,19,1,57,1,0]
 ,[966,62,89,3,0,1,0,80,"Commander's Manteau","",0,13,50,19,1,57,1,0]
 ,[967,62,145,3,0,1,0,80,"Sheriff's Manteau","",0,13,50,19,1,57,1,0]
-,[968,63,91,4,0,1,0,80,"Battle Greave","",0,13,100,19,1,57,1,0]
+,[968,63,91,4,0,1,0,80,"Battle Greaves","",0,13,100,19,1,57,1,0]
 ,[969,63,89,3,0,1,0,80,"Combat Boots","",0,13,100,19,1,57,1,0]
 ,[970,63,145,3,0,1,0,80,"Battle Boots","",0,13,100,19,1,57,1,0]
-,[971,100,0,0,0,0,0,0,"[Battle Greaves & Captain's Manteau Equip Set]",0,"Increases HP Item Recovery by 10%.<br>When attacking physically, there is a chance to recover 6000HP over 10 seconds.",3,3,15,12,91,10,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
-,[972,100,0,0,0,0,0,0,"[Battle Greaves & Captain's Manteau Equip Set]",0,"Increases the effectiveness of [Potion Pitcher] used on you by 10%.<br/>When attacking physically, there is a chance to recover 6000HP over 10 seconds.",1,3,15,12,91,10,94,10,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
-,[973,100,0,0,0,0,0,0,"[Battle Greaves & Captain's Manteau Equip Set]",0,"When attacking physically, small chance to recover 3000HP over per 10 seconds",2,3,15,12,12,5,10,5,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
-,[974,100,0,0,0,0,0,0,"[Combat Boots & Commander's Manteau Equip Set]",0,"When receiving physical damage, there is a chance that for 10 seconds, your armor will become ghost property.",4,3,15,12,151,20,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
-,[975,100,0,0,0,0,0,0,"[Combat Boots & Commander's Manteau Equip Set]",0,"When receiving physical damage, there is a chance that for 10 seconds, your armor will become ghost property.",4,3,15,12,7037,50,91,10,94,10,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
-,[976,100,0,0,0,0,0,0,"[Combat Boots & Commander's Manteau Equip Set]",0,"",5,3,15,12,78,10,74,25,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
+,[971,100,0,0,0,0,0,0,"[Assaulter Plate & Battle Greaves & Captain's Manteau Equip Set]",0,"Increases Healing received from skills and items by 10%.<br>When attacking physically, there is a chance to recover 6000HP over 10 seconds.",3,3,15,12,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
+,[972,100,0,0,0,0,0,0,"[Elite Engineer Armor & Battle Greaves & Captain's Manteau Equip Set]",0,"Increases effectiveness of your [Potion Pitcher] by 10%.<br>Increases the effectiveness of [Heal] and [Potion Pitcher] used on you by 10%.",1,3,15,12,5065,20,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,194,1,0]
+,[973,100,0,0,0,0,0,0,"[Assassin Robe & Battle Greaves & Captain's Manteau Equip Set]",0,"When attacking physically, small chance to recover 3000HP over per 10 seconds",2,3,15,12,12,5,10,5,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
+,[974,100,0,0,0,0,0,0,"[Warlock's Battle Robe & Combat Boots & Commander's Manteau Equip Set]",0,"When receiving physical damage, there is a chance that for 10 seconds, your armor will become ghost property.",4,3,15,12,151,20,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
+,[975,100,0,0,0,0,0,0,"[Medic's Robe & Combat Boots & Commander's Manteau Equip Set]",0,"When receiving physical damage, there is a chance that for 10 seconds, your armor will become ghost property.",4,3,15,12,7037,50,91,10,94,10,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
+,[976,100,0,0,0,0,0,0,"[Elite Archer Suit & Combat Boots & Commander's Manteau Equip Set]",0,"",5,3,15,12,78,10,74,25,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
 ,[977,100,0,0,0,0,0,0,"[Combat Boots & Commander's Manteau Equip Set]",0,"",5,3,15,12,78,10,74,25,50,-300,51,-300,52,-300,53,-300,54,-300,55,-300,56,-300,58,-300,59,-300,0]
-,[978,64,87,1,0,0,0,70,"Medal of Honor (Swordman)","","Add 1% chance of auto casting Stun on the enemy when attacking",89,5,8,10,13,500,14,50,0]
-,[979,64,92,1,0,0,0,70,"Medal of Honor (Thief)","","Add 1% chance of auto casting Poison on the enemy when attacking.",87,5,89,5,9,10,13,300,14,80,0]
-,[980,64,53,1,0,0,0,70,"Medal of Honor (Acolyte)","","Add 1% chance of auto casting Silence on the enemy when attacking",87,5,89,5,19,6,13,600,0]
-,[981,64,55,1,0,0,0,70,"Medal of Honor (Mage)","","Add 1% chance of auto casting Stone on the enemy when attacking.",87,5,89,5,19,6,13,600,0]
-,[982,64,54,1,0,0,0,70,"Medal of Honor (Archer)","","Add 1% chance of auto casting Blind on the enemy when attacking.",87,5,89,5,10,10,13,300,14,80,0]
-,[983,64,56,1,0,0,0,70,"Medal of Honor (Merchant)","","Add 1% chance of auto casting Curse on the enemy when attacking.",87,5,89,5,12,10,13,500,14,50,0]
-,[984,64,59,1,0,0,0,70,"Sheriff Badge","","Add 10% chance of auto casting Blind on the enemy with long-range attacks.",87,5,89,5,10,10,13,300,14,80,0]
+,[978,64,87,1,0,0,0,70,"Medal of Honor (Swordman)","","Add 1% chance of auto casting Stun on the enemy when attacking",80,5,89,5,8,10,13,500,14,50,0]
+,[979,64,52,1,0,0,0,70,"Medal of Honor (Thief)","","Add 1% chance of auto casting Poison on the enemy when attacking.",80,5,89,5,9,10,13,300,14,80,0]
+,[980,64,53,1,0,0,0,70,"Medal of Honor (Acolyte)","","Add 1% chance of auto casting Silence on the enemy when attacking",80,5,89,5,19,6,13,600,0]
+,[981,64,55,1,0,0,0,70,"Medal of Honor (Mage)","","Add 1% chance of auto casting Stone on the enemy when attacking.",80,5,89,5,19,6,13,600,0]
+,[982,64,54,1,0,0,0,70,"Medal of Honor (Archer)","","Add 1% chance of auto casting Blind on the enemy when attacking.",80,5,89,5,10,10,13,300,14,80,0]
+,[983,64,56,1,0,0,0,70,"Medal of Honor (Merchant)","","Add 1% chance of auto casting Curse on the enemy when attacking.",80,5,89,5,12,10,13,500,14,50,0]
+,[984,64,59,1,0,0,0,70,"Sheriff Badge","","Add 10% chance of auto casting Blind on the enemy with long-range attacks.",80,5,89,5,10,10,13,300,14,80,0]
 ,[985,62,1001,4,0,1,70,70,"Naght Seiger Flame Manteau","",0,15,5,89,1,19,2,43,2,0]
 ,[986,60,1079,5,0,0,170,70,"Chameleon Armor","","Increases HP and SP depending by base level.<br>Adds a chance immune from all magic skill for 2 sec When receiving magical attack.<br><b>[Swordman, Merchant, Thief Class]</b><br>DEF + 3<br><b>[Mage, Archer, Acolyte Class]</b><br>MDEF + 5",0]
 ,[987,60,1079,3,0,1,100,70,"Sprint Mail","",0,3,1,75,5,91,3,92,3,0]
@@ -1096,11 +1096,11 @@ ItemOBJ = [
 ,[1073,50,0,0,0,1,20,0,"Yellow Sheila Hairnet","","Your sexyness increases to 100%<br><b>[Refine Rate 9+]</b><br>ATK + 2%<br>MATK + 2%<br><b>[Refine Rate 10]</b><br>ATK + 2%<br>MATK + 2%",1,1,4,1,5,2,0]
 ,[1074,50,0,0,0,1,1,0,"Silver Sheila Hairnet","","Your sexyness increases to 100%<br><b>[Refine Rate 9+]</b><br>Physical Damge + 2%<br>MATK + 2%<br><b>[Refine Rate 10]</b><br>Cast Time - 10%",3,1,4,3,1,2,0]
 ,[1075,50,0,2,0,1,10,0,"Flower Hat","",0,13,80,14,20,0]
-,[1076,1,0,120,4,0,0,80,"Glorious Gladius","","<span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br><b style='color:#ff0000;'>[+Aegis Shield]</b><br>Increases physical attack against Demi-human monster by 55% instead of 75%.<br><b style='color:#333399'>[Rogue/Stalker, Soul Linker, or Ninja]</b><br>ASPD + 5%.<br>DEX + 5<br><b>[Every Refine Level]</b><br>Increases physical attack against Demi-human monster by 1%.<br><b style='color:#333399'>[Rogue/Stalker or Ninja]</b><br>HIT + 2<br><b style='color:#333399'>[Ninja or Soul Linker]</b><br>ASPD + 1%.<br><b style='color:#333399'>[Soul Linker]</b><br>CRIT + 10<br><b>[Refine Rate 6~10]</b><br>Every Refine Level +6 and higher adds a 1% chance to inflict the bleeding status when attacking.<br><b style='color:#333399'>[Ninja]</b><br>Every Refine level +6 and higher increases MATK against Demi-human monsters by 1%.<br><b>[Refine Rate 8~10]</b><br>When using [Back Stab] or [Raid], there is a 10% chance to auto cast level 1 [Wide Bleeding].",37,75,307,20,221,106,317,15,194,1,0]
+,[1076,1,0,120,4,0,0,80,"Glorious Gladius","","Add a 2% chance of auto-casting level 1 [Lex Divina] when attacking normally or when using [Throw Shuriken].<br><span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br><b style='color:#ff0000;'>[+Aegis Shield]</b><br>Increases physical attack against Demi-human monster by 55% instead of 75%.<br><b style='color:#333399'>[Rogue/Stalker, Soul Linker, or Ninja]</b><br>ASPD + 5%.<br>DEX + 5<br><b>[Every Refine Level]</b><br>Increases physical attack against Demi-human monster by 1%.<br><b style='color:#333399'>[Rogue/Stalker or Ninja]</b><br>HIT + 2<br><b style='color:#333399'>[Ninja or Soul Linker]</b><br>ASPD + 1%.<br><b style='color:#333399'>[Soul Linker]</b><br>CRIT + 10<br><b>[Refine Rate 6~10]</b><br>Every Refine Level +6 and higher adds a 1% chance to inflict the bleeding status when attacking.<br><b style='color:#333399'>[Ninja]</b><br>Every Refine level +6 and higher increases MATK against Demi-human monsters by 1%.<br><b>[Refine Rate 8~10]</b><br>When using [Back Stab] or [Raid], there is a 10% chance to auto cast level 1 [Wide Bleeding].",37,75,307,20,317,15,194,1,0]
 ,[1077,2,0,140,4,0,0,80,"Glorious Flamberge","","<span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br><b style='color:#ff0000;'>[+Aegis Shield]</b><br>Increases physical attack against Demi-human monster by 55% instead of 75%.<br><b>[Every Refine Level]</b><br>Increases physical attack against Demi-human monster by 1%.<br>Adds 1% Defense Pierce to the Demi-human monster.<br>ASPD + 1%.<br>Increases damage done with [Bash], [Mammonite], and [Back Stab] by 2%.<br><b>[Refine Rate 6~10]</b><br><b style='color:#333399'>[Swordsman Class]</b><br>Add a chance of auto-casting level 1 [Critical Wounds] when using [Bash]. Every refine level +5 and over adds a 1% chance.<br><b style='color:#333399'>[Merchant Class]</b><br>Add a chance of auto-casting level 1 [Critical Wounds] when using [Mammonite]. Every refine level +5 and over adds a 1% chance.<br><b style='color:#333399'>[Rogue Class]</b><br>Add a chance of auto-casting level 1 [Critical Wounds] when using [Back Stab]. Every refine level +5 and over adds a 1% chance.<br><b>[Refine Rate 9~10]</b><br>[Critical Wounds] on [Bash], [Mammonite], or [Back Stab] level becomes 2.",37,75,307,20,194,1,0]
 ,[1078,2,0,130,4,0,0,80,"Glorious Rapier","","<span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br>Every time you attack you gain 3 SP.<br><b>[Every Refine Level]</b><br>INT + 1<br><b>[Refine Rate 7~10]</b><br>Reduces SP consumption of skills by 10%.",89,10,194,1,0]
 ,[1079,2,113,150,4,0,0,80,"Glorious Holy Avenger","","<span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br><b style='color: #333399;'>Crusader ONLY</b><br><b style='color:#ff0000;'>[+Aegis Shield]</b><br>MATK + 5%<br>ASPD + 5%<br>ASPD + 2% per refine level<br>Double the effects of [Grand Cross] cast time reduction on this weapon.<br><b>[Every Refine Level]</b><br>Decrease [Grand Cross] cast time by 1%.<br>Adds a 1% chance of auto-casting Level 1 [Lex Divina] when using [Pressure].<br><b>[Refine Rate 7~10]</b><br>Reduces SP consumption of skills by 10%.",4,5,89,15,7162,5,194,1,0]
-,[1080,3,0,230,4,0,0,80,"Glorious Claymore","","<span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br><b>[Every Refine Level]</b><br>Adds 1% defense bypassing on Demi-human monster.<br>Adds 1% more damage with [Bowling Bash] and [Charge Attack].<br>Adds 3% less cast time with [Charge Attack].<br><b>[Refine Rate 6~10]</b><br>Every refine level +6 and over adds 10% less cast time with [Bowling Bash].",37,80,307,25,194,1,0]
+,[1080,3,0,230,4,0,0,80,"Glorious Claymore","","<span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br><b>[Every Refine Level]</b><br>Adds 1% defense bypassing on Demi-human monster.<br>Adds 1% more damage with [Bowling Bash] and [Charge Attack].<br>Adds 3% less cast time with [Charge Attack].<br><b>[Refine Rate 6~10]</b><br>Every refine level +6 and over adds 10% less cast time with [Bowling Bash].",37,80,307,20,194,1,0]
 ,[1081,4,0,90,4,0,0,80,"Glorious Spear","","<span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br><b style='color:#ff0000;'>[+Aegis Shield]</b><br>Increases physical attack against Demi-human monster by 65% instead of 95%.<br><b>[Every Refine Level]</b><br>Adds 1% defense bypassing on Demi-human monster.<br>ASPD + 1%.<br><b style='color: #333399;'>[Knight/Lord Knight]</b><br>Add a 1% chance to auto-cast to auto-cast level 1 [Critical Wounds] after using [Pierce].<br><b style='color: #333399;'>[Crusader/Paladin]</b><br>Add a 1% chance to auto-cast [Heal] at the level learned after using [Shield Chain]. If not learned, level 1 is used.",37,95,307,20,12,5,194,1,0]
 ,[1082,5,0,220,4,0,0,80,"Glorious Lance","","<span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br><b style='color:#333399'>[Crusader/Paladin]</b><br>Increases physical attack against Demi-human monster by 65% instead of 95%.<br>Pierce all defense of Demi-human monster instead of 20% defense bypass.<br><b>[Every Refine Level]</b><br>ASPD + 1%.<br><b style='color:#333399'>[Knight/Lord Knight]</b><br>Adds 1% defense bypassing on Demi-human monster.<br>Adds a 1% chance to auto-cast level 2 [Critical Wounds] after using [Pierce].<br><b style='color:#333399'>[Crusader/Paladin]</b><br>Increases physical attack against Demi-human monster by 2%.<br>Adds a 1% chance to auto-cast level 1 [Pressure] when attacking normally.",37,95,307,20,57,20,194,1,0]
 ,[1083,9,0,70,4,0,0,80,"Glorious Staff Of Destruction","","<span style='font-size: 14px;color:#ff0000;font-weight: bold'>[ONLY PvP/BG/WoE]</span><br><b>[Every Refine Level]</b><br>Adds 1% magical defense bypassing on Demi-human monster.<br>Decrease Cast Time by 2%.<br>There is a 1% chance to auto-cast [Amplify Magic Attack] when using magic attacks. For Wizard Class, it uses the level learned. Otherwise, it uses the refine rate as level.<br><b>[Refine Rate 5~10]</b><br>There is a 5% chance to add ASPD + 50% after using [Jupitel Thunder] for 5 seconds. Every refine level past +5 adds an additional 1% chance.<br><b>[Refine Rate 7~10]</b><br>Add a 5% chance to gain Uninterruptible Casting for 10 seconds when being attacked.",5,5,89,15,177,10,317,20,194,1,195,1,0]
@@ -1354,7 +1354,7 @@ ItemOBJ = [
 ,[1329,8,53,175,3,0,0,0,"Stunner [Rental]","",0,131,10,27,40,28,40,29,40,193,1,0] //custom TalonRO rental
 ,[1330,7,0,205,4,0,0,0,"Bloody Axe [Rental]","","Movement speed +25% (non-stacking)",1,20,12,5,193,1,0] //custom TalonRO rental
 ,[1331,11,0,148,4,0,0,0,"Bloody Roar [Rental]","","Recovery 3 HP every 5 seconds",187,1,193,1,0] //custom TalonRO rental
-,[1332,10,80,170,4,0,0,0,"Bow of Evil [Rental]","","[Double Strafe] damage +25%",5,2,193,1,0] //custom TalonRO rental
+,[1332,10,92,170,4,0,0,0,"Bow of Evil [Rental]","","[Double Strafe] damage +25%",5,2,193,1,0] //custom TalonRO rental
 ,[1333,4,1,149,4,0,0,0,"Brocca [Rental]","",0,28,20,22,1,193,1,0] //custom TalonRO rental //fixed 2016-05-05
 ,[1334,1,1,129,4,0,0,0,"Combat Knife [Rental]","","Drain 3SP from enemy per hit",57,10,56,-10,187,1,16,10,193,1,0] //custom TalonRO rental
 ,[1335,2,1,199,4,0,0,0,"Excalibur [Rental]","",0,20,6,4,10,6,10,193,1,0] //custom TalonRO rental
@@ -1758,7 +1758,7 @@ ItemID = [
 ,[5,1,1213,1214]
 ,[6,1,1216,1217]
 ,[7,1,1238]
-,[8,1,1239]
+,[8,1,1239,13016]
 ,[9,1,1219,1220]
 ,[10,1,1222,1226]
 ,[11,1,1234]
@@ -3505,8 +3505,12 @@ function ClickB_Item(CBI)
 	CBIstr = "";
 	for(i=11;ItemOBJ[CBI][i] != 0;i+=2)
 		Item_Setumei(ItemOBJ[CBI][i],ItemOBJ[CBI][i+1]);
-	if(ItemOBJ[CBI][10] != 0)
+	if(ItemOBJ[CBI][10] != 0){
 		CBIstr += ItemOBJ[CBI][10] +"<BR>";
+   }
+   if(debugMode){
+      CBIstr += `ItemOBJ index: ${String(CBI)}<br>`;
+   }
 
 	var check = 0;
 	for(var i=11;ItemOBJ[CBI][i] != 0;i+=2){
@@ -3719,9 +3723,9 @@ function Item_Setumei(nC1,nC2)
 	if(77 == nC1)
 		CBIstr += "Bosstype monster resistance " + wIS + nC2 +"%<BR>";
 	if(78 == nC1)
-		CBIstr += "Adjusts your resistance to ranged attacks by "+ wIS + nC2 +"%<BR>";
+		CBIstr += "Resistance against ranged attacks" + wIS + nC2 +"%<BR>";
 	if(79 == nC1)
-		CBIstr += "Adjusts your resistance to normal monsters by "+ wIS + nC2 +"%<BR>";
+		CBIstr += "Resistance against normal monsters" + wIS + nC2 +"%<BR>";
     /*ZoneSoldier - 6/3/2018
       Increase Damage on all monsters Boss/NonBoss by %
     */
@@ -3753,7 +3757,7 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Healing received increased by "+ wIS + nC2 +"%<BR>";
 	if(93 == nC1)
 		CBIstr += "Heal damage increase on undead by "+ wIS + nC2 +"%<BR>";
-	if(94 == nC1 || 95 == nC1)
+	if(94 == nC1)
 		CBIstr += "Sanctuary effectiveness increased by "+ wIS + nC2 +"%<BR>";
 	if(96 == nC1)
 		CBIstr += "Sanctuary damage effectiveness against Demon increased by "+ wIS + nC2 +"%<BR>";
@@ -3780,7 +3784,7 @@ function Item_Setumei(nC1,nC2)
 	if(194 == nC1)
 		CBIstr += "Cannot be broken<BR>";
 	if(195 == nC1)
-		CBIstr += "Two-Handed Staff<BR>";
+		CBIstr += "<b>Two-Handed Staff</b><BR>";
 	if(198 == nC1)
 		CBIstr += "Armor becomes "+ ZokuseiOBJ[nC2] +" element<BR>";
 	if(212 <= nC1 && nC1 <= 215)
