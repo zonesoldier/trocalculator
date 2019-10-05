@@ -659,6 +659,7 @@ function StAllCalc()
 		n_tok[62] += Math.floor(n_A_HEAD_DEF_PLUS/2);
 		n_tok[63] += Math.floor(n_A_HEAD_DEF_PLUS/2);
 	}
+
 	//Jolly Roger Hat -[Loa] - 2018-07-03
 	if(EquipNumSearch(1186)){
 		if(n_A_HEAD_DEF_PLUS > 7){
@@ -754,9 +755,24 @@ if(EquipNumSearch(1085)){
 		}
 }
 
-
+/*
+Player Stats - n_tok[]
+n_tok[13] = Max HP
+n_tok[14] = Max SP
+n_tok[15] = Max %HP
+n_tok[16] = Max %SP
+n_tok[17] = ATK
+n_tok[18] = DEF
+n_tok[19] = MDEF
+*/
+if(CardNumSearch(561)){
+	n_tok[13] += 200*Math.floor(SU_VIT/10);
+	console.log(n_tok[13]);
+}
 
 	w=n_tok[17];
+	//Jejeling CARD
+	//For every 10 Base Vit, HP + 200
 
 	if(SU_STR >= 80 && CardNumSearch(267))
 		w += 20;
@@ -791,78 +807,6 @@ if(EquipNumSearch(1085)){
 				w += (4 + (2 * (parseInt(vBE.substr(-1)) - 1)));
 			}
 		}
-
-	//Custom TalonRO - 2018-06-07 - Enhanced Hat of the Sun God [1] - ATK part [Nattwara]
-	/*
-	[Refine Rate 5+]
-	ATK + 4, MATK + 1%
-	[Refine Rate 6+]
-	ATK + 4, MATK + 1%
-	[Refine Rate 7+]
-	ATK + 6, MATK + 1%
-	[Refine Rate 8+]
-	ATK + 6, MATK + 2%
-	*/
-	if(EquipNumSearch(1654)){
-		if(n_A_HEAD_DEF_PLUS>4)
-			w += 4;
-
-		if(n_A_HEAD_DEF_PLUS>5)
-			w += 4;
-
-		if(n_A_HEAD_DEF_PLUS>6)
-			w += 6;
-
-		if(n_A_HEAD_DEF_PLUS>7)
-			w += 6;
-	}
-
-	if(EquipNumSearch(1120) && n_A_JobSearch()==4)
-		w += 10;
-	if(EquipNumSearch(1165))
-		w += 10 * SkillSearch(311);
-	if(n_A_PassSkill6[0] == 0 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==3)
-		w += n_A_PassSkill6[1] * 10;
-
-	if(n_A_PassSkill7[2])
-		w += 10;
-	if(n_A_PassSkill7[9])
-		w += 20;
-	if(n_A_PassSkill8[19])
-		w += 5;
-
-	if(SkillSearch(420))
-		w += 100;
-	if(SkillSearch(433)){
-		if(n_A_WeaponType==20 || n_A_WeaponType==0)
-			w += 20 + 10 * SkillSearch(433);
-	}
-
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1274)){
-		w += 15;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1275)){
-		w += 15;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1276)){
-		w += 15;}
-	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1291)){
-		w += 5;}
-	if(n_A_HEAD_DEF_PLUS == 10 && EquipNumSearch(1290)){
-		w += 5;}
-
-
-	//custom TalonRO Imperial Spear: ATK +2 each 2 refine levels
-	if(EquipNumSearch(1460))
-		w += 2*Math.floor(n_A_Weapon_ATKplus/2)
-	//custom TalonRO Imperial Spear: ATK +2 each Spear Mastery level
-	if(SkillSearch(69) && EquipNumSearch(1460))
-		w += 2*SkillSearch(69);
-	//custom TalonRO Gold Scaraba Card
-	if(CardNumSearch(528))
-		w += Math.floor(n_A_JobLV /5) * CardNumSearch(528);
-	//custom TalonRO Halloween Midas Whisper
-	if(SU_STR >= 80 && EquipNumSearch(1526)){
-		w += 30;
-	}
 
 	n_A_ATK += w;
 
@@ -969,7 +913,6 @@ if(EquipNumSearch(1085)){
 		w += n_A_ATK*.02;
 	}
 
-
 	w = Math.round(w);
 
 	n_A_ATK += w;
@@ -1057,6 +1000,13 @@ if(EquipNumSearch(1561)) {
 	n_A_MaxHP += 6 * n_A_BaseLV;
 }
 
+
+//Bungisngis Card - hp 1% after lvl 5 refine
+if(CardNumSearch(554)){
+	if(n_A_HEAD_DEF_PLUS > 5){
+		n_A_MaxHP += 1*(n_A_HEAD_DEF_PLUS-5);
+	}
+}
 
 n_A_MaxHP += SkillSearch(156) * 200;
 
@@ -1193,6 +1143,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 					w += 20;
 				break;
 			}
+
 	//custom TalonRO Lady Tanee Card: +1% HP per 8 base AGI
 	if(CardNumSearch(409))
 		w += Math.floor(SU_AGI / 8);
@@ -1243,6 +1194,14 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	}
 
 	n_A_MaxSP = 10 + n_A_BaseLV * JobSP_A[n_A_JOB] - wSPSL;//tirei math.floor para acertar sp values
+
+	//Bungisngis Card - sp 1% after lvl 5 refine
+	if(CardNumSearch(554)){
+		if(n_A_HEAD_DEF_PLUS > 5){
+			//n_A_MaxHP += 1*(n_A_HEAD_DEF_PLUS-5);
+			n_A_MaxSP += 1*(n_A_HEAD_DEF_PLUS-5);
+		}
+	}
 
 	if(n_A_JOB == 44){
 		if(n_A_BaseLV <= 20) n_A_MaxSP = 11 + n_A_BaseLV * 3;
@@ -2126,6 +2085,40 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 5;
 	}
 
+	/*Element - n_B[3] = elementID - example n_B[3] = 4, Neutral4(on site)
+	Neutral - 1 - 4
+	Water - 11 - 14
+	Earth - 21 - 24
+	Fire - 31 - 34
+	Wind - 41 - 44
+	Poison - 51 - 54
+	Holy - 61 - 64
+	Shadow - 71 - 74
+	Ghost - 81 - 84
+	Undead - 91 - 94
+	*/
+	/*
+	Race - n_B[2] = raceID - example n_B[2] = 3, Plant
+	0 - Formless
+	1 - Undead
+	2 - Brute
+	3 - Plant
+	4 - Insect
+	5 - fish
+	6 - Demon
+	7 - Demi-Human
+	8 - Angel
+	9 - Dragon
+	*/
+
+	//Tiyanak Card
+	//CRIT + 7 against DemiHuman, Brute and Fish Race monsters.
+	if(CardNumSearch(559)){
+		if(n_B[2] == 7 || n_B[2] == 2 || n_B[2] == 5){
+			w += 7;
+		}
+	}
+
 	if(EquipNumSearch(689))
 		w += Math.floor(SU_LUK / 10);
 	if(SU_AGI >= 90 && EquipNumSearch(442))
@@ -2424,6 +2417,84 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if (SkillSearch(146)){C_ATK +=3;}
 	if(n_A_PassSkill3[9]){C_ATK += 50+(25*(n_A_PassSkill3[9]-1));}
 	if(n_A_PassSkill6[0] == 0 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==3){C_ATK += n_A_PassSkill6[1] *10;}
+
+	//Wakwak Card
+	//For every 10 Base STR, ATK + 5
+	if(CardNumSearch(560)){
+		C_ATK += 5*Math.floor(SU_STR / 10);
+		console.log(C_ATK);
+	}
+
+	//Custom TalonRO - 2018-06-07 - Enhanced Hat of the Sun God [1] - ATK part [Nattwara]
+	/*
+	[Refine Rate 5+]
+	ATK + 4, MATK + 1%
+	[Refine Rate 6+]
+	ATK + 4, MATK + 1%
+	[Refine Rate 7+]
+	ATK + 6, MATK + 1%
+	[Refine Rate 8+]
+	ATK + 6, MATK + 2%
+	*/
+	if(EquipNumSearch(1654)){
+		if(n_A_HEAD_DEF_PLUS>4)
+			C_ATK += 4;
+
+		if(n_A_HEAD_DEF_PLUS>5)
+			C_ATK += 4;
+
+		if(n_A_HEAD_DEF_PLUS>6)
+			C_ATK += 6;
+
+		if(n_A_HEAD_DEF_PLUS>7)
+			C_ATK += 6;
+	}
+
+	if(EquipNumSearch(1120) && n_A_JobSearch()==4)
+		C_ATK += 10;
+	if(EquipNumSearch(1165))
+		C_ATK += 10 * SkillSearch(311);
+	if(n_A_PassSkill6[0] == 0 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==3)
+		C_ATK += n_A_PassSkill6[1] * 10;
+
+	if(n_A_PassSkill7[2])
+		C_ATK += 10;
+	if(n_A_PassSkill7[9])
+		C_ATK += 20;
+	if(n_A_PassSkill8[19])
+		C_ATK += 5;
+
+	if(SkillSearch(420))
+		C_ATK += 100;
+	if(SkillSearch(433)){
+		if(n_A_WeaponType==20 || n_A_WeaponType==0)
+			C_ATK += 20 + 10 * SkillSearch(433);
+	}
+
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1274)){
+		C_ATK += 15;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1275)){
+		C_ATK += 15;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1276)){
+		C_ATK += 15;}
+	if(n_A_HEAD_DEF_PLUS >= 7 && EquipNumSearch(1291)){
+		C_ATK += 5;}
+	if(n_A_HEAD_DEF_PLUS == 10 && EquipNumSearch(1290)){
+		C_ATK += 5;}
+
+	//custom TalonRO Imperial Spear: ATK +2 each 2 refine levels
+	if(EquipNumSearch(1460))
+		C_ATK += 2*Math.floor(n_A_Weapon_ATKplus/2)
+	//custom TalonRO Imperial Spear: ATK +2 each Spear Mastery level
+	if(SkillSearch(69) && EquipNumSearch(1460))
+		C_ATK += 2*SkillSearch(69);
+	//custom TalonRO Gold Scaraba Card
+	if(CardNumSearch(528))
+		C_ATK += Math.floor(n_A_JobLV /5) * CardNumSearch(528);
+	//custom TalonRO Halloween Midas Whisper
+	if(SU_STR >= 80 && EquipNumSearch(1526)){
+		C_ATK += 30;
+	}
 
 	//[Custom TalonRO 2018-06-15 - Malangdo Enchantment for Fighting Spirit - ATK] [Kato]
 	// ATK status part.
@@ -3784,6 +3855,12 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[94] += 2;
 	}
 
+	//[Custom TalonRO - Manananggal Card - Receive 3% more healing when someone uses Heal or Sanctuary on you.
+	if(CardNumSearch(556)){
+		n_tok[91] += 3;
+		n_tok[94] += 3;
+	}
+
 	//[Custom TalonRO - 2018-07-27 Elite Engineer Armor - Effectiviness of Potion Pitcher 10%] [Amor]
 	if(EquipNumSearch(973)){
 		n_tok[94] += 10;
@@ -4005,6 +4082,27 @@ if(CardNumSearch(546)) {
 	if(TRO_MAGICALSKILL_ELEMENTS[3].indexOf(n_A_ActiveSkill) != -1){
 		for(j=0; j<10; j++) {
 			n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + 	4 * Math.floor(n_A_SHOULDER_DEF_PLUS/3)) / 100) - 100; // ***
+		}
+	}
+}
+
+/*
+Tikbalang Card
+Increases the damage of Wind property magical attacks on targets by 5%.
+[Refine Rate +7 or higher]
+Add another 5% damage with Wind Magic.
+[Refine Rate +9 or higher]
+Add another 5% damage with Wind Magic.
+*/
+if(CardNumSearch(558)) {
+	var iMDMG = 5;
+	if(n_A_HEAD_DEF_PLUS >= 7) iMDMG = iMDMG + 5; // Refine >=7 +5%
+	if(n_A_HEAD_DEF_PLUS >= 9) iMDMG = iMDMG + 5; // Refine >=9 +5%
+	for(i=0;i<TRO_MAGICALSKILL_ELEMENTS.length;i++){
+		if(TRO_MAGICALSKILL_ELEMENTS[i].indexOf(n_A_ActiveSkill) != -1){
+			for(j=0; j<10; j++) {
+				n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + iMDMG) / 100) - 100;
+			}
 		}
 	}
 }

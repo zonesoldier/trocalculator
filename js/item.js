@@ -1718,7 +1718,6 @@ ItemOBJ = [
 ,[1673,100,0,0,0,0,0,0,"Valorous Gladiator Blade + Aegis Shield","",0,37,-20,0]
 ];
 
-
 //Test code for finding the values in Skill.js AutoSpellSkill
 //,[1620,64,0,1,0,1,10,93,"AAt","","This shit is a test for developing comments for skills.js",221,17,0]
 
