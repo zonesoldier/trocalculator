@@ -767,7 +767,6 @@ n_tok[19] = MDEF
 */
 if(CardNumSearch(561)){
 	n_tok[13] += 200*Math.floor(SU_VIT/10);
-	console.log(n_tok[13]);
 }
 
 	w=n_tok[17];
@@ -2422,7 +2421,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	//For every 10 Base STR, ATK + 5
 	if(CardNumSearch(560)){
 		C_ATK += 5*Math.floor(SU_STR / 10);
-		console.log(C_ATK);
 	}
 
 	//Custom TalonRO - 2018-06-07 - Enhanced Hat of the Sun God [1] - ATK part [Nattwara]
