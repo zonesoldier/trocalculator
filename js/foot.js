@@ -765,13 +765,13 @@ n_tok[17] = ATK
 n_tok[18] = DEF
 n_tok[19] = MDEF
 */
+//Jejeling CARD
+//For every 10 Base Vit, HP + 200
 if(CardNumSearch(561)){
 	n_tok[13] += 200*Math.floor(SU_VIT/10);
 }
 
 	w=n_tok[17];
-	//Jejeling CARD
-	//For every 10 Base Vit, HP + 200
 
 	if(SU_STR >= 80 && CardNumSearch(267))
 		w += 20;
@@ -2677,6 +2677,10 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1628)){
 		w += 1 * (n_A_HEAD_DEF_PLUS - 6);
 	}
+	//Buwaya Card - Matk + 7% against boss.
+	if(n_B[19] == 1){
+		w += 7
+	}
 	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Loa] - 2016-06-07
 	if(EquipNumSearch(1640)){
 		w += Math.floor(n_A_Weapon_ATKplus / 2);
@@ -4294,8 +4298,13 @@ function StPlusCalc()
 	if(EquipNumSearch(1078)){
 			wSPC_INT += n_A_Weapon_ATKplus;
 	}
-
-
+	// custom TalonRO Bakonawa Card
+	if (CardNumSearch(552)) {
+		if (n_A_JobSearch2() == 15)
+			n_tok[26] += 10
+		else
+			n_tok[26] += 15
+	}
 	wSPC_STR += StPlusCard(1) + wSPCall;
 	wSPC_AGI += StPlusCard(2) + wSPCall;
 	wSPC_VIT += StPlusCard(3) + wSPCall;

@@ -6714,41 +6714,7 @@ with(document.calcForm){
 			myInnerHtml("B_26","non-Boss",0);
 	}
 
-	/*Bangungot Card MVP - Custom TalonRo Card
-	  Receive 20% less damage from Boss monster.
-	  Receive 15% less damage from Non-Boss monster.
-	*/
-	if(CardNumSearch(551)){
-		//If enemy is boss (1 = true)
-		if(n_B[19] == 1){
-		n_B[12] = Math.round(n_B[12]/100*(100-20*CardNumSearch(551)));
-		n_B[13] = Math.round(n_B[13]/100*(100-20*CardNumSearch(551)));
-	}
-		else {
-		n_B[12] = Math.round(n_B[12]/100*(100-15*CardNumSearch(551)));
-		n_B[13] = Math.round(n_B[13]/100*(100-15*CardNumSearch(551)));
-	}
-}
-//Bakonawa Card MVP
-if(CardNumSearch(552)){
-	//If enemy is boss (1 = true)
-	if(n_B[19] == 1){
-	n_B[12] = Math.round(n_B[12]/100*(100-20*CardNumSearch(552)));
-	n_B[13] = Math.round(n_B[13]/100*(100-20*CardNumSearch(552)));
-	//if job is monk
-	if(n_A_JobSearch2()==15){
-		n_B[14] = Math.round(n_B[14]/100*(100-10*CardNumSearch(552)));
-	}
-  else {
-		n_B[14] = Math.round(n_B[14]/100*(100-15*CardNumSearch(552)));
-	}
-}
-else {
-	n_B[12] = Math.round(n_B[12]/100*(100+35*CardNumSearch(552)));
-	n_B[13] = Math.round(n_B[13]/100*(100+35*CardNumSearch(552)));
-}
-}
-
+/*
 //Buwaya Card
 if(CardNumSearch(553)){
 	//If enemy is boss (1 = true)
@@ -6761,7 +6727,7 @@ else {
 	n_B[12] = Math.round(n_B[12]/100*(100+35*CardNumSearch(553)));
 	n_B[13] = Math.round(n_B[13]/100*(100+35*CardNumSearch(553)));
 }
-}
+} */
 
 /*Element - n_B[3] = elementID - example n_B[3] = 4, Neutral4(on site)
 Neutral - 1 - 4
@@ -6806,7 +6772,6 @@ if(CardNumSearch(555)){
 if(CardNumSearch(556)){
 	if(n_B[2] == 1){
 		if(n_A_ActiveSkill == 25){
-			//console.out(n_A_ActiveSkill);
 			n_B[14] = Math.round(n_B[14]/100*(100-20*CardNumSearch(556)));
 			n_B[15] = Math.round(n_B[14]/100*(100-20*CardNumSearch(556)));
 			}
