@@ -3763,6 +3763,18 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Sanctuary damage effectiveness against Demon increased by "+ wIS + nC2 +"%<BR>";
   if(97 == nC1)
     CBIstr += "Increases magical damage against bosstype monsters by "+ nC2 +"%<BR>";
+    /*Decrease damage from race: 50,5 = Decrease damage from [Formless] + 5%
+      110 = Formless
+      111 = Undead
+      112 = Brute
+      113 = Plant
+      114 = Insect
+      115 = Fish
+      116 = Demon
+      117 = Demi-Human
+      118 = Angel
+      119 = Dragon
+    */
 	if(110 <= nC1 && nC1 <=119)
 		CBIstr += "Increases the critical rate on [" + SyuzokuOBJ[nC1-110] +"] race monsters by "+ wIS + nC2 +"<BR>";
 	if(120 <= nC1 && nC1 <=129)

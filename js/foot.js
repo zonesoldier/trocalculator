@@ -2108,14 +2108,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	9 - Dragon
 	*/
 
-	//Tiyanak Card
-	//CRIT + 7 against DemiHuman, Brute and Fish Race monsters.
-	if(CardNumSearch(559)){
-		if(n_B[2] == 7 || n_B[2] == 2 || n_B[2] == 5){
-			w += 7;
-		}
-	}
-
 	if(EquipNumSearch(689))
 		w += Math.floor(SU_LUK / 10);
 	if(SU_AGI >= 90 && EquipNumSearch(442))
