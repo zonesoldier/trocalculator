@@ -999,14 +999,6 @@ if(EquipNumSearch(1561)) {
 	n_A_MaxHP += 6 * n_A_BaseLV;
 }
 
-
-//Bungisngis Card - hp 1% after lvl 5 refine
-if(CardNumSearch(554)){
-	if(n_A_HEAD_DEF_PLUS > 5){
-		n_A_MaxHP += 1*(n_A_HEAD_DEF_PLUS-5);
-	}
-}
-
 n_A_MaxHP += SkillSearch(156) * 200;
 
 	w=0;
@@ -1124,6 +1116,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 			w += 2;
 	}
 
+	//Bungisngis Card - hp 1% after lvl 5 refine
+	if(CardNumSearch(554)){
+		if(n_A_HEAD_DEF_PLUS > 5){
+			w += 1*(n_A_HEAD_DEF_PLUS-5);
+		}
+	}
+
 	//custom TalonRO SQI Eversong Greaves: [Taekwon] +10% MaxHP; [Taekwon Master] +20% MaxHP (the item itself)
 	if(EquipNumSearch(1383))
 		//alert(n_A_JOB+","+n_A_JobSearch());
@@ -1193,14 +1192,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	}
 
 	n_A_MaxSP = 10 + n_A_BaseLV * JobSP_A[n_A_JOB] - wSPSL;//tirei math.floor para acertar sp values
-
-	//Bungisngis Card - sp 1% after lvl 5 refine
-	if(CardNumSearch(554)){
-		if(n_A_HEAD_DEF_PLUS > 5){
-			//n_A_MaxHP += 1*(n_A_HEAD_DEF_PLUS-5);
-			n_A_MaxSP += 1*(n_A_HEAD_DEF_PLUS-5);
-		}
-	}
 
 	if(n_A_JOB == 44){
 		if(n_A_BaseLV <= 20) n_A_MaxSP = 11 + n_A_BaseLV * 3;
@@ -1351,6 +1342,13 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		w += 10;
 	if(n_A_SHOES_DEF_PLUS <= 4 && CardNumSearch(407))
 		w += 4;
+
+		//Bungisngis Card - sp 1% after lvl 5 refine
+		if(CardNumSearch(554)){
+			if(n_A_HEAD_DEF_PLUS > 5){
+				w += 1*(n_A_HEAD_DEF_PLUS-5);
+			}
+		}
 
 	if(CardNumSearch(405)){
 		if(n_A_JobSearch()==3 || n_A_JobSearch()==4 || n_A_JobSearch()==5)
