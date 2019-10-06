@@ -3170,6 +3170,12 @@ function BattleMagicCalc(wBMC)
 		wBMC2 = Math.floor(wBMC2 * (1 + 0.05 * n_A_ActiveSkillLV));
 
 	var wX = n_tok[170+n_B[2]];
+
+	// Increases magical damage against bosstype monsters
+	if (n_B[19] == 1) {
+		wX += n_tok[97];
+	}
+
 	wX += n_tok[350+Math.floor(n_B[3]/10)];
 	if(n_B[2]==9  && SkillSearch(234))
 		wX += SkillSearch(234) *2;
@@ -6713,21 +6719,6 @@ with(document.calcForm){
 		else
 			myInnerHtml("B_26","non-Boss",0);
 	}
-
-/*
-//Buwaya Card
-if(CardNumSearch(553)){
-	//If enemy is boss (1 = true)
-	if(n_B[19] == 1){
-	n_B[12] = Math.round(n_B[12]/100*(100-20*CardNumSearch(553)));
-	n_B[13] = Math.round(n_B[13]/100*(100-20*CardNumSearch(553)));
-	n_B[15] = Math.round(n_B[15]/100*(100-07*CardNumSearch(553)));
-}
-else {
-	n_B[12] = Math.round(n_B[12]/100*(100+35*CardNumSearch(553)));
-	n_B[13] = Math.round(n_B[13]/100*(100+35*CardNumSearch(553)));
-}
-} */
 
 /*Element - n_B[3] = elementID - example n_B[3] = 4, Neutral4(on site)
 Neutral - 1 - 4
