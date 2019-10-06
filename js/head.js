@@ -6756,27 +6756,12 @@ Race - n_B[2] = raceID - example n_B[2] = 3, Plant
 */
 //Engkanto card
 if(CardNumSearch(555)){
-	if(n_B[3] > 50 && n_B[3] < 55) {
-		n_B[14] = Math.round(n_B[14]/100*(100-25*CardNumSearch(555)));
-		n_B[15] = Math.round(n_B[14]/100*(100-25*CardNumSearch(555)));
-	}
-	//
+	//Ignore 25% Plant monster defense
 	if(n_B[2] == 3){
 		n_B[14] = Math.round(n_B[14]/100*(100-25*CardNumSearch(555)));
 		n_B[15] = Math.round(n_B[14]/100*(100-25*CardNumSearch(555)));
 	}
 }
-
-//Manananggal Card
-//If  race equals to undead, and skill heal is active do more dmg(20%) to undead with heal.
-if(CardNumSearch(556)){
-	if(n_B[2] == 1){
-		if(n_A_ActiveSkill == 25){
-			n_B[14] = Math.round(n_B[14]/100*(100-20*CardNumSearch(556)));
-			n_B[15] = Math.round(n_B[14]/100*(100-20*CardNumSearch(556)));
-			}
-		}
-	}
 
 	//custom TalonRO Thanatos Card
 	if(CardNumSearch(166)){

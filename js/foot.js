@@ -2679,7 +2679,7 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	}
 	//Buwaya Card - Matk + 7% against boss.
 	if(n_B[19] == 1){
-		w += 7
+		w += 7;
 	}
 	//custom TalonRO Staff of Thea: Increase MATK by 1% for every 2 upgrades - [Loa] - 2016-06-07
 	if(EquipNumSearch(1640)){
@@ -3771,6 +3771,23 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[37] -= 30;
 	}
 
+	//Engkanto card
+	//Increase damage inflicted upon Poison Property enemies by 25%.
+	if(CardNumSearch(555)){
+		if(n_B[3] >= 50 && n_B[3] <= 55) {
+			n_tok[45] += 25;
+		}
+	}
+
+		//Manananggal Card
+		//If race equals to undead, and skill heal is active do more dmg(20%) to undead with heal.
+		if(CardNumSearch(556)){
+			if(n_B[2] == 1){
+				if(n_A_ActiveSkill == 25){
+					n_tok[49] += 20;
+					}
+				}
+			}
 
 	//[Custom TalonRO - 2018-06-02 - Aegir Helm + Armor Combo - 1% less damage from Fish race monster for each refine] [Kato/Nattwara]
 	if(EquipNumSearch(1556))
@@ -4300,11 +4317,13 @@ function StPlusCalc()
 	}
 	// custom TalonRO Bakonawa Card
 	if (CardNumSearch(552)) {
-		if (n_A_JobSearch2() == 15)
-			n_tok[26] += 10
+		if (n_A_JobSearch2() == 15){
+			n_tok[26] += 10;
+		}
 		else
-			n_tok[26] += 15
+			n_tok[26] += 15;
 	}
+
 	wSPC_STR += StPlusCard(1) + wSPCall;
 	wSPC_AGI += StPlusCard(2) + wSPCall;
 	wSPC_VIT += StPlusCard(3) + wSPCall;
