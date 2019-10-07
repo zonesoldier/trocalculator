@@ -2099,10 +2099,17 @@ function BattleCalc999()
 		if(n_A_ActiveSkillLV <= 6)
 			w_DMG[2] = 100 * n_A_ActiveSkillLV;
 		else
-			w_DMG[2] = 777;
+		w_DMG[2] = 777;
 
-		w_HEAL_BAI = 100 + n_tok[94];
-		w_DMG[2] = Math.floor(w_DMG[2] * w_HEAL_BAI / 100);
+		//Mangkukulam Card -
+		//Retain the heal bonus 3%, and no incease dmg.
+		if(CardNumSearch(556)){
+			w_HEAL_BAI = 100 + n_tok[94];
+		}
+		else{
+			w_HEAL_BAI = 100 + n_tok[94];
+			w_DMG[2] = Math.floor(w_DMG[2] * w_HEAL_BAI / 100);
+		}
 
 		w_DMG[2] = Math.floor(Math.floor(w_DMG[2] / 2) * zokusei[n_B[3]][6]);
 		if(n_B[3] < 90 && n_B[2] != 6)

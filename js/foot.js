@@ -3757,24 +3757,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 		n_tok[37] -= 30;
 	}
 
-	//Engkanto card
-	//Increase damage inflicted upon Poison Property enemies by 25%.
-	if(CardNumSearch(555)){
-		if(n_B[3] >= 50 && n_B[3] <= 55) {
-			n_tok[45] += 25;
-		}
-	}
-
-		//Manananggal Card
-		//If race equals to undead, and skill heal is active do more dmg(20%) to undead with heal.
-		if(CardNumSearch(556)){
-			if(n_B[2] == 1){
-				if(n_A_ActiveSkill == 25){
-					n_tok[49] += 20;
-					}
-				}
-			}
-
 	//[Custom TalonRO - 2018-06-02 - Aegir Helm + Armor Combo - 1% less damage from Fish race monster for each refine] [Kato/Nattwara]
 	if(EquipNumSearch(1556))
 		n_tok[55] += n_A_BODY_DEF_PLUS;
@@ -3858,12 +3840,6 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(n_A_HEAD_DEF_PLUS > 6 && EquipNumSearch(1667)){
 		n_tok[91] += 2;
 		n_tok[94] += 2;
-	}
-
-	//[Custom TalonRO - Manananggal Card - Receive 3% more healing when someone uses Heal or Sanctuary on you.
-	if(CardNumSearch(556)){
-		n_tok[91] += 3;
-		n_tok[94] += 3;
 	}
 
 	//[Custom TalonRO - 2018-07-27 Elite Engineer Armor - Effectiviness of Potion Pitcher 10%] [Amor]
@@ -4103,13 +4079,11 @@ if(CardNumSearch(558)) {
 	var iMDMG = 5;
 	if(n_A_HEAD_DEF_PLUS >= 7) iMDMG = iMDMG + 5; // Refine >=7 +5%
 	if(n_A_HEAD_DEF_PLUS >= 9) iMDMG = iMDMG + 5; // Refine >=9 +5%
-	for(i=0;i<TRO_MAGICALSKILL_ELEMENTS.length;i++){
-		if(TRO_MAGICALSKILL_ELEMENTS[i].indexOf(n_A_ActiveSkill) != -1){
+		if(TRO_MAGICALSKILL_ELEMENTS[4].indexOf(n_A_ActiveSkill) != -1){
 			for(j=0; j<10; j++) {
-				n_tok[170 + j] = ((n_tok[170 + j] + 100) * (100 + iMDMG) / 100) - 100;
+				n_tok[170 + j] = ((n_tok[344 + j] + 100) * (100 + iMDMG) / 100) - 100;
 			}
 		}
-	}
 }
 
 //[TalonRO Custom 2018-07-17 - Add 3% Magical damage boost Nightmare Verit] [Kato]
@@ -4125,7 +4099,6 @@ if(CardNumSearch(547)) {
 		}
 	}
 }
-
 
 	ClickB_Enemy();
 	KakutyouKansuu();

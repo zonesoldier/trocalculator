@@ -3763,7 +3763,7 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Sanctuary damage effectiveness against Demon increased by "+ wIS + nC2 +"%<BR>";
   if(97 == nC1)
     CBIstr += "Increases magical damage against bosstype monsters by "+ nC2 +"%<BR>";
-    /*Decrease damage from race: 50,5 = Decrease damage from [Formless] + 5%
+    /*Increase Crital Rate on race by an amount.
       110 = Formless
       111 = Undead
       112 = Brute
@@ -3796,13 +3796,6 @@ function Item_Setumei(nC1,nC2)
   160 - Weapon Break
   161 - Armor Break
   162 - Undefined
-  163 -
-  164 -
-  165 -
-  166 -
-  167 -
-  168 -
-  169 -
   */
 	if(150 <= nC1 && nC1 <=169)
 		CBIstr += "Status effect ["+ IjyouOBJ[nC1-150] +"] resistance +"+ nC2 +"%<BR>";
