@@ -4076,9 +4076,11 @@ Add another 5% damage with Wind Magic.
 Add another 5% damage with Wind Magic.
 */
 if(CardNumSearch(558)) {
-	var iMDMG = 5;
-	if(n_A_HEAD_DEF_PLUS >= 7) iMDMG = iMDMG + 5; // Refine >=7 +5%
-	if(n_A_HEAD_DEF_PLUS >= 9) iMDMG = iMDMG + 5; // Refine >=9 +5%
+	var iMDMG = 5 * CardNumSearch(558);
+	if(n_A_card[8] == 558) {
+		if(n_A_HEAD_DEF_PLUS >= 7) iMDMG = iMDMG + 5; // Refine >=7 +5%
+		if(n_A_HEAD_DEF_PLUS >= 9) iMDMG = iMDMG + 5; // Refine >=9 +5%
+	}
 		if(TRO_MAGICALSKILL_ELEMENTS[4].indexOf(n_A_ActiveSkill) != -1){
 			for(j=0; j<10; j++) {
 				n_tok[170 + j] = ((n_tok[344 + j] + 100) * (100 + iMDMG) / 100) - 100;

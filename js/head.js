@@ -6757,7 +6757,6 @@ if(CardNumSearch(555)){
 	//Ignore 25% Plant monster defense
 	if(n_B[2] == 3){
 		n_B[14] = Math.round(n_B[14]/100*(100-25*CardNumSearch(555)));
-		n_B[15] = Math.round(n_B[14]/100*(100-25*CardNumSearch(555)));
 	}
 }
 
