@@ -1,5 +1,10 @@
 //497 = berz npc card
 /*
+ID, Location, description, 0 - default - 220 - InsertSkill(skill.js), stat, value added/subtracted
+
+Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
+After description values: info*0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP,14 MSP,15 MHP%,16 MSP%,17 ATK,18 DEF,19 MDEF
+
 	location number:
 		0 = unequipped
 		1 = weapon
@@ -570,7 +575,37 @@ cardOBJ = [
 ,[548,100,0,0,52,5,51,5,312,20,311,20,0]
 ,[549,100,0,0,52,5,51,5,302,30,301,30,0]
 ,[550,100,0,"Increase the probability of causing Sleep by an additional 2%.",155,10,60,5,0]
+,[551,3,"Bangungot",0,77,20,79,15,151,30,153,30,154,30,159,30,0]
+,[552,3,"Bakonawa","For Non-Monk classes, increase physical damage against Boss monsters by 15%.<br/>For Monk classes, increase physical damage against Boss monsters by 10%.",77,20,79,-35,0]
+,[553,3,"Buwaya",0,77,20,79,-35,97,7,0]
+,[554,2,"Bungisngis","For every refine after +5, MaxHP + 1%, MaxSP + 1%.",15,5,16,5,0]
+,[555,2,"Engkanto","Ignore 25% of Plant monster defense.",45,25,0]
+,[556,1,"Manananggal",0,93,20,92,3,94,3,0]
+,[557,4,"Mangkukulam",0,16,10,0]
+,[558,2,"Tikbalang","MATK + 10.<br/><BR><b>*Warning*</b>MATK Bonus not implemented yet<b>*Warning*</b><br>[Refine Rate +7 or higher]<br/>Add another 5% damage with Wind Magic.<br/>[Refine Rate +9 or higher]<br/>Add another 5% damage with Wind Magic.",344,5,0]
+,[559,7,"Tiyanak",0,117,7,112,7,115,7,0]
+,[560,5,"Wakwak","For every 10 Base STR, ATK + 5.",0]
+,[561,5,"Jejeling","For every 10 Base VIT, HP + 200",0]
 ];
+/*
+ID, Location, description, 0 - seperator, stat, value added/subtracted
+
+Digits after description. Each digit after description can mean different values: Example(1,1 = Str + 1, 4,1 = Int + 1)
+After description values: info*0 NONE,1 STR,2 AGI,3 VIT,4 INT,5 DEX,6 LUK,7 ALL STATS,8 HIT,9 FLEE,10 CRIT,11 Perfect Dodge,12 ASPD,13 MHP,14 MSP,15 MHP%,16 MSP%,17 ATK,18 DEF,19 MDEF
+
+	location number:
+		0 = unequipped
+		1 = weapon
+		2 = headgear
+		3 = shield
+		4 = armor
+		5 = garment
+		6 = shoes
+		7 = accessory
+		10 = weapon elemental stone
+		11 = weapon special
+		999 = unused
+*/
 
 /*
 	array for card ID linking  - [Loa] - 2018-06-28
@@ -1136,6 +1171,17 @@ cardID = [
 ,[548,2,0]
 ,[549,2,0]
 ,[550,2,0]
+,[551,1,4590]
+,[552,1,4591]
+,[553,1,4592]
+,[554,1,4582]
+,[555,1,4583]
+,[556,1,4584]
+,[557,1,4585]
+,[558,1,4586]
+,[559,1,4587]
+,[560,1,4588]
+,[561,1,4589]
 ];
 
 CardNum = cardOBJ.length -1;

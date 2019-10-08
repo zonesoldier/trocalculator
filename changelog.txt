@@ -1,3 +1,8 @@
+[2019-10-06]
+- Added - Maylaya Cards [Hatfun] & [ZoneSoldier]
+- Fixed - Imperial Spear add's 2 + atk per level of spear mastery now.[ZoneSoldier]
+- Added - Increases magical damage against bosstype monsters [Hatfun]
+
 [2018-08-11]
 - Fixed Poison Knife itemid [Loa]
 - Fixed FLEE reduction when mobbed [Loa]

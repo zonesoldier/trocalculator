@@ -2099,10 +2099,17 @@ function BattleCalc999()
 		if(n_A_ActiveSkillLV <= 6)
 			w_DMG[2] = 100 * n_A_ActiveSkillLV;
 		else
-			w_DMG[2] = 777;
+		w_DMG[2] = 777;
 
-		w_HEAL_BAI = 100 + n_tok[94];
-		w_DMG[2] = Math.floor(w_DMG[2] * w_HEAL_BAI / 100);
+		//Mangkukulam Card -
+		//Retain the heal bonus 3%, and no incease dmg.
+		if(CardNumSearch(556)){
+			w_HEAL_BAI = 100 + n_tok[94];
+		}
+		else{
+			w_HEAL_BAI = 100 + n_tok[94];
+			w_DMG[2] = Math.floor(w_DMG[2] * w_HEAL_BAI / 100);
+		}
 
 		w_DMG[2] = Math.floor(Math.floor(w_DMG[2] / 2) * zokusei[n_B[3]][6]);
 		if(n_B[3] < 90 && n_B[2] != 6)
@@ -2896,6 +2903,7 @@ function BattleCalc998()
 
 	if(EQ_ST == 0){EQ_POWER = "Not Available";}
 	if(EQ_ST == 1){
+		//Golden Thief Bug Card - reducing earth quack damage to 0
 		if(CardNumSearch(126)){EQ_POWER = 0;}
 		else{
 			if(n_A_PassSkill2[5]){EQ_ASS = 0.5;}else{EQ_ASS = 1;} // assumpt on ou off
@@ -3169,6 +3177,12 @@ function BattleMagicCalc(wBMC)
 		wBMC2 = Math.floor(wBMC2 * (1 + 0.05 * n_A_ActiveSkillLV));
 
 	var wX = n_tok[170+n_B[2]];
+
+	// Increases magical damage against bosstype monsters
+	if (n_B[19] == 1) {
+		wX += n_tok[97];
+	}
+
 	wX += n_tok[350+Math.floor(n_B[3]/10)];
 	if(n_B[2]==9  && SkillSearch(234))
 		wX += SkillSearch(234) *2;
@@ -6420,7 +6434,7 @@ with(document.calcForm){
 		str += '<TD id="BI24_1"></TD><TD id="BI24_2"></TD></TR></TABLE>';
 		myInnerHtml("MONSTER_IJYOU",str,0);
 		B_IJYOUSW.checked = 1;
-
+    //Skill Array
 		var name_SKILL = ["Provoke (Non Undead)","Quagmire","Poison","Blind","Frozen (Non Undead)","Blessing (Demon/Undead)","Lex Aeterna","Stun","Sleep","Stone","Curse","Agility Down","Signum Crucis","Strip Weapon","Strip Shield","Strip Armor","Strip Helm","Spider Web","Mind Breaker","Slow Grace","Down Tempo","Eska","Eske","Elemental Change (Sage Skill)","Flying"];
 		var html_SKILL = new Array();
 		for(i=0;i<=20;i++)
@@ -6599,6 +6613,7 @@ with(document.calcForm){
 				B_KYOUKA7.options[i] = new Option(i,i);
 				B_KYOUKA8.options[i] = new Option(i,i);
 			}
+			//Element List ID
 			var ZoHe =[["None","Neutral 1","Neutral 2","Neutral 3","Neutral 4","Water 1","Water 2","Water 3","Water 4","Earth 1","Earth 2","Earth 3","Earth 4","Fire 1","Fire 2","Fire 3","Fire 4","Wind 1","Wind 2","Wind 3","Wind 4","Poison 1","Poison 2","Poison 3","Poison 4","Holy 1","Holy 2","Holy 3","Holy 4","Shadow 1","Shadow 2","Shadow 3","Shadow 4","Ghost 1","Ghost 2","Ghost 3","Ghost 4","Undead 1","Undead 2","Undead 3","Undead 4"],
 				[0,1,2,3,4,11,12,13,14,21,22,23,24,31,32,33,34,41,42,43,44,51,52,53,54,61,62,63,64,71,72,73,74,81,82,83,84,91,92,93,94]];
 			for(i=0;i<=40;i++)
@@ -6647,10 +6662,11 @@ with(document.calcForm){
 	n_B = new Array();
 	n_B2 = new Array();
 	for(i=0;i<=22;i++){
+		//Oragnizing the boss stats bassed off the
 		n_B[i] = MonsterOBJ[B_Enemy.value][i];
 		n_B2[i] = n_B[i];
 	}
-
+//Boss Stats - zonesoldier
 	if(Taijin){
 		n_B[3] = eval(B_ZOKUSEI.value);
 		n_B[5] = eval(B_LV.value);
@@ -6706,13 +6722,51 @@ with(document.calcForm){
 		//custom TalonRO show boss/non-boss
 		if (MonsterOBJ[B_Enemy.value][19]==1)
 			myInnerHtml("B_26","Boss",0);
+
 		else
 			myInnerHtml("B_26","non-Boss",0);
 	}
+
+/*Element - n_B[3] = elementID - example n_B[3] = 4, Neutral4(on site)
+Neutral - 1 - 4
+Water - 11 - 14
+Earth - 21 - 24
+Fire - 31 - 34
+Wind - 41 - 44
+Poison - 51 - 54
+Holy - 61 - 64
+Shadow - 71 - 74
+Ghost - 81 - 84
+Undead - 91 - 94
+*/
+/*
+Race - n_B[2] = raceID - example n_B[2] = 3, Plant
+0 - Formless
+1 - Undead
+2 - Brute
+3 - Plant
+4 - Insect
+5 - fish
+6 - Demon
+7 - Demi-Human
+8 - Angel
+9 - Dragon
+*/
+//Engkanto card
+if(CardNumSearch(555)){
+	//Ignore 25% Plant monster defense
+	if(n_B[2] == 3){
+		n_B[14] = Math.round(n_B[14]/100*(100-25*CardNumSearch(555)));
+	}
+}
+
 	//custom TalonRO Thanatos Card
 	if(CardNumSearch(166)){
+		//Boss def /100 * (100 - 30*(if card exist/true = 1)
+		//Example - Arc angeling, 54 / 100 * (100 - 30 * 1) = 37.8, math.round = 38
 		n_B[14] = Math.round(n_B[14]/100*(100-30*CardNumSearch(166)));
 	}
+
 	n_B2[25] = Math.floor(n_B[7] / 2) + n_B[9];
 	n_B2[26] = n_B[5] + n_B[10];
 	n_B2[27] = n_B[5] + n_B[8];
@@ -7186,7 +7240,8 @@ if(n_B_IJYOU[1]){
 
 	n_B_DEF2 = [0,0,0];
 	n_B_DEF2[2] = n_B[23];
-	n_B_DEF2[0] = n_B[24];
+	n_B_DEF2[0] = n_B[24]; //
+
 	n_B_DEF2[1] = Math.floor((n_B_DEF2[2] + n_B_DEF2[0]) /2);
 	n_B_MDEF2 = n_B[25];
 	n_B_HIT = n_B[26];

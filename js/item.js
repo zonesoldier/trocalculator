@@ -3761,12 +3761,42 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Sanctuary effectiveness increased by "+ wIS + nC2 +"%<BR>";
 	if(96 == nC1)
 		CBIstr += "Sanctuary damage effectiveness against Demon increased by "+ wIS + nC2 +"%<BR>";
+  if(97 == nC1)
+    CBIstr += "Increases magical damage against bosstype monsters by "+ nC2 +"%<BR>";
+    /*Increase Crital Rate on race by an amount.
+      110 = Formless
+      111 = Undead
+      112 = Brute
+      113 = Plant
+      114 = Insect
+      115 = Fish
+      116 = Demon
+      117 = Demi-Human
+      118 = Angel
+      119 = Dragon
+    */
 	if(110 <= nC1 && nC1 <=119)
 		CBIstr += "Increases the critical rate on [" + SyuzokuOBJ[nC1-110] +"] race monsters by "+ wIS + nC2 +"<BR>";
 	if(120 <= nC1 && nC1 <=129)
 		CBIstr += "Experience gained from [" + SyuzokuOBJ[nC1-120] +"] race monsters "+ wIS + nC2 +"%<BR>";
 	if(130 <= nC1 && nC1 <=149)
 		CBIstr += "When attacking, adds a "+ nC2 +"% chance to inflict ["+ IjyouOBJ[nC1-130] +"] on the enemy<BR>";
+  //Status Effect ID info
+  /*
+  150 - Poison
+  151 - Stun
+  152 - Freeze
+  153 - Curse
+  154 - Blind
+  155 - Sleep
+  156 - Silence
+  157 - Chaos
+  158 - Bleeding
+  159 - Stone
+  160 - Weapon Break
+  161 - Armor Break
+  162 - Undefined
+  */
 	if(150 <= nC1 && nC1 <=169)
 		CBIstr += "Status effect ["+ IjyouOBJ[nC1-150] +"] resistance +"+ nC2 +"%<BR>";
 	if(170 <= nC1 && nC1 <=179)
