@@ -1,3 +1,6 @@
+[2019-10-12]
+- Added - Ribbon Magician Hat
+
 [2019-10-06]
 - Added - Maylaya Cards [Hatfun] & [ZoneSoldier]
 - Fixed - Imperial Spear add's 2 + atk per level of spear mastery now.[ZoneSoldier]
