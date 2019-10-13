@@ -4282,9 +4282,9 @@ function StPlusCalc()
 	}
 	// custom TalonRO Bakonawa Card
 	if (CardNumSearch(552)) {
-		if (n_A_JobSearch2() == 15){
+		// If job is Monk or Champion
+		if (n_A_JobSearch2() == 15)
 			n_tok[26] += 10;
-		}
 		else
 			n_tok[26] += 15;
 	}
@@ -5739,10 +5739,10 @@ function KakutyouKansuu(){
 		TU_MOD = 0; //[Custom TalonRO - 2018-06-02 - New Attack Modifier for Turtles] [Kato]
 
 		B_MOD += n_tok[80];
+		B_MOD += n_tok[26];
 
 		for(var i=0;i<=7;i++){
 			if(n_A_card[i] == 244){G_MOD += 40;}
-			if(n_A_card[i] == 31){B_MOD += 25;}
 		}
 		if(EquipNumSearch(835)){SM_MOD += 10;}//Diabolus Manteau
 		if(n_A_Equip[9] == 844){SM_MOD += 10;}//1º Diabolus Ring
