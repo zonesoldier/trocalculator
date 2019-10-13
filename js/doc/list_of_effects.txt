@@ -513,7 +513,7 @@ Effect list:
 	354: Increases magical damage against [Wind] element monsters by [value]%
 	355: Increases magical damage against [Poison] element monsters by [value]%
 	356: Increases magical damage against [Holy] element monsters by [value]%
-	357 Increases magical damage against [Shadow] element monsters by [value]%
+	357: Increases magical damage against [Shadow] element monsters by [value]%
 	358: Increases magical damage against [Ghost] element monsters by [value]%
 	359: Increases magical damage against [Undead] element monsters by [value]%
 	360-999: (unused)
