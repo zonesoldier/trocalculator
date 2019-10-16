@@ -623,10 +623,10 @@ ItemOBJ = [
 ,[600,50,0,2,0,1,20,10,"Holy Marcher Hat","","A hat, when equipped, that plays holy music and refresh its wearer.<br>The wearer of this holy hat is guarded by an angel.",19,2,1,2,221,19,0]
 ,[601,50,0,1,0,1,20,30,"Vacation Hat","",0,193,1,3,1,0]
 ,[602,50,0,0,0,1,20,30,"Water Lily Crown","",0,2,1,5,1,75,5,76,3,19,3,193,1,0]
-,[603,60,1,4,0,1,220,45,"Claytos Cracking Earth Armor [1]","",0,198,2,0]
-,[604,60,1,4,0,1,220,45,"Lucius's Fierce Armor of Volcano [1]","",0,198,3,0]
-,[605,60,1,4,0,1,220,45,"Saphien's Armor of Ocean [1]","",0,198,1,0]
-,[606,60,1,4,0,1,220,45,"Aebecee's Raging Typhoon Armor [1]","",0,198,4,0]
+,[603,60,0,4,0,1,220,45,"Claytos Cracking Earth Armor [1]","",0,198,2,0]
+,[604,60,0,4,0,1,220,45,"Lucius's Fierce Armor of Volcano [1]","",0,198,3,0]
+,[605,60,0,4,0,1,220,45,"Saphien's Armor of Ocean [1]","",0,198,1,0]
+,[606,60,0,4,0,1,220,45,"Aebecee's Raging Typhoon Armor [1]","",0,198,4,0]
 ,[607,1,1,70,4,1,60,36,"Ice Pick [1]","",0,23,1,37,-30,1044,-30,1547,-30,1548,-30,1063,-30,1064,-30,1065,-30,1575,-30,1576,-30,0]
 ,[608,50,1,4,0,1,40,45,"Crown [1]","",0,4,1,0]
 ,[609,50,1,4,0,1,40,45,"Tiara [1]","",0,4,1,0]
@@ -1716,6 +1716,7 @@ ItemOBJ = [
 ,[1671,100,0,0,0,0,0,0,"Assaulter Spear + Aegis Shield","",0,37,-30,0]
 ,[1672,100,0,0,0,0,0,0,"Brave Assassin Damascus + Aegis Shield","",0,37,-20,0]
 ,[1673,100,0,0,0,0,0,0,"Valorous Gladiator Blade + Aegis Shield","",0,37,-20,0]
+,[1674,50,0,2,1,1,20,1,"Ribbon Magician Hat","","A decorated magician hat.",4,3,89,5,14,50,0]
 ];
 
 
@@ -3424,6 +3425,7 @@ ItemID = [
 ,[1671,2,0]
 ,[1672,2,0]
 ,[1673,2,0]
+,[1674,1,18641]
 ];
 
 /*

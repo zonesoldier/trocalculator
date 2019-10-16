@@ -678,6 +678,10 @@ function StAllCalc()
 		n_tok[17] += n_A_HEAD_DEF_PLUS - 4;
 		n_tok[89] += n_A_HEAD_DEF_PLUS - 4;
 	}
+	//Wakwak Card - For every 10 Base STR, ATK + 5
+	if(CardNumSearch(560)){
+		n_tok[17] += 5 * Math.floor(SU_STR / 10);
+	}
 	//Sakura Coronet + Romantic Flower - [Loa] - 2018-07-04
 	if(EquipNumSearch(1236) && n_A_HEAD_DEF_PLUS > 7){
 		n_tok[16] += n_A_HEAD_DEF_PLUS;
@@ -2402,15 +2406,15 @@ n_A_MaxHP += SkillSearch(156) * 200;
 	if(EquipNumSearch(1218)){C_ATK += 5};
 	//Jade Rabbit Hat -[Loa] - 2017-07-03
 	if(EquipNumSearch(1218) && n_A_HEAD_DEF_PLUS > 4){C_ATK += n_A_HEAD_DEF_PLUS - 4;}
+
 	//skils que dão atk[parte 1]
 	if (SkillSearch(146)){C_ATK +=3;}
 	if(n_A_PassSkill3[9]){C_ATK += 50+(25*(n_A_PassSkill3[9]-1));}
 	if(n_A_PassSkill6[0] == 0 && n_A_PassSkill6[1] >= 1 && n_A_BodyZokusei==3){C_ATK += n_A_PassSkill6[1] *10;}
 
-	//Wakwak Card
-	//For every 10 Base STR, ATK + 5
+	//Wakwak Card - For every 10 Base STR, ATK + 5
 	if(CardNumSearch(560)){
-		C_ATK += 5*Math.floor(SU_STR / 10);
+		C_ATK += 5 * Math.floor(SU_STR / 10);
 	}
 
 	//Custom TalonRO - 2018-06-07 - Enhanced Hat of the Sun God [1] - ATK part [Nattwara]
@@ -4278,9 +4282,9 @@ function StPlusCalc()
 	}
 	// custom TalonRO Bakonawa Card
 	if (CardNumSearch(552)) {
-		if (n_A_JobSearch2() == 15){
+		// If job is Monk or Champion
+		if (n_A_JobSearch2() == 15)
 			n_tok[26] += 10;
-		}
 		else
 			n_tok[26] += 15;
 	}
@@ -5735,10 +5739,10 @@ function KakutyouKansuu(){
 		TU_MOD = 0; //[Custom TalonRO - 2018-06-02 - New Attack Modifier for Turtles] [Kato]
 
 		B_MOD += n_tok[80];
+		B_MOD += n_tok[26];
 
 		for(var i=0;i<=7;i++){
 			if(n_A_card[i] == 244){G_MOD += 40;}
-			if(n_A_card[i] == 31){B_MOD += 25;}
 		}
 		if(EquipNumSearch(835)){SM_MOD += 10;}//Diabolus Manteau
 		if(n_A_Equip[9] == 844){SM_MOD += 10;}//1º Diabolus Ring
